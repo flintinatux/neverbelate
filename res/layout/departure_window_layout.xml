@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	
+	<TextView
+		android:id="@+id/warning_text"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:paddingBottom="10dip"
+		android:paddingLeft="10dip"
+		android:paddingRight="10dip"
+		android:paddingTop="10dip"
+		android:text="@string/warning_text"
+		android:textColor="@color/black"
+		android:textSize="15sp" />
+	
+	<TextView
+		android:id="@+id/departure_window"
+		android:gravity="center"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:paddingBottom="10dip"
+		android:text="@string/default_departure_window"
+		android:textColor="@color/red_dark"
+		android:textSize="20sp"
+		android:textStyle="bold"  />
+		
+	<FrameLayout
+		android:isScrollContainer="true"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:layout_width="fill_parent" >
+				
+		<Button
+			android:background="@drawable/btn_default_green"
+			android:id="@+id/traffic_button"
+			android:layout_gravity="center|top"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:text="@string/traffic_button_text" />
+			
+		
+	</FrameLayout>
+  
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:key="base_settings"
+	android:orderingFromXml="true" >
+	
+	<CheckBoxPreference
+		android:key="neverlate_enabled"
+		android:title="Enable NeverLate service"
+		android:summaryOn="NeverLate is enabled and will start at boot time"
+		android:summaryOff="NeverLate is currently disabled"
+		android:defaultValue="true" />
+		
+	<PreferenceCategory android:title="Performance Settings" >
+		<ListPreference
+			android:key="location_freq"
+			android:title="Location polling"
+			android:summary="How often to poll for your current location"
+			android:dependency="neverlate_enabled"
+			android:entries="@array/freq_entries_5"
+			android:entryValues="@array/freq_values"
+			android:defaultValue="@string/default_location_freq" />
+		<ListPreference
+			android:key="traveltime_freq"
+			android:title="Travel time lookup"
+			android:summary="How often to determine the travel time from your current location to your next event"
+			android:dependency="neverlate_enabled"
+			android:entries="@array/freq_entries_15"
+			android:entryValues="@array/freq_values"
+			android:defaultValue="@string/default_traveltime_freq" />
+		<ListPreference
+			android:key="advance_warning"
+			android:title="Advance warning"
+			android:summary="How long in advance you wish to be notified of your required departure"
+			android:dependency="neverlate_enabled"
+			android:entries="@array/freq_entries_15"
+			android:entryValues="@array/freq_values"
+			android:defaultValue="@string/default_advance_warning" />
+		<CheckBoxPreference
+			android:key="fine_required"
+			android:title="Require fine location"
+			android:summaryOn="All notifications are disabled if fine location not available\n(Not Recommended!)"
+			android:summaryOff="Will default to coarse or last known location if fine location not available"
+			android:dependency="neverlate_enabled"
+			android:defaultValue="@bool/default_fine_required" />
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="Calendar Settings">
+		<ListPreference
+			android:key="lookahead_window"
+			android:title="Look-ahead window"
+			android:summary="Should be further than your average travel time, but eats battery if too long"
+			android:dependency="neverlate_enabled"
+			android:entries="@array/lookahead_entries"
+			android:entryValues="@array/lookahead_values"
+			android:defaultValue="@string/default_lookahead_window" />
+		<CheckBoxPreference
+			android:key="warn_no_location"
+			android:title="Warn location not found"
+			android:summaryOn="You may then add a valid location or disable notifications for that event"
+			android:summaryOff="Will fail quietly if event location is missing or invalid\n(Not Recommended!)"
+			android:dependency="neverlate_enabled"
+			android:defaultValue="@bool/default_warn_no_location" />
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="Travel Settings">
+		<ListPreference
+			android:key="travel_mode"
+			android:title="Mode of travel"
+			android:summary="Driving, biking, or walking"
+			android:dependency="neverlate_enabled"
+			android:entries="@array/travel_mode_entries"
+			android:entryValues="@array/travel_mode_values"
+			android:defaultValue="@string/default_travel_mode" />
+		<CheckBoxPreference
+			android:key="avoid_highways"
+			android:title="Avoid highways"
+			android:dependency="neverlate_enabled"
+			android:defaultValue="@bool/default_avoid_highways" />
+		<CheckBoxPreference
+			android:key="avoid_tolls"
+			android:title="Avoid tolls"
+			android:dependency="neverlate_enabled"
+			android:defaultValue="@bool/default_avoid_tolls" />
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="Notification Settings">
+		<ListPreference
+			android:key="notification_method"
+			android:title="Notification method"
+			android:summary="Notify with an alert dialog screen or with a status bar notification"
+			android:dependency="neverlate_enabled"
+			android:entries="@array/notify_entries"
+			android:entryValues="@array/notify_values"
+			android:defaultValue="@string/default_notification_method" />
+		<ListPreference
+			android:defaultValue="@string/default_snooze_duration"
+			android:dependency="neverlate_enabled"
+			android:entries="@array/snooze_entries"
+			android:entryValues="@array/snooze_values"
+			android:key="snooze_duration"
+			android:summary="Select your preferred snooze duration"
+			android:title="Snooze duration"  />
+		<RingtonePreference
+			android:key="ringtone"
+			android:title="Select ringtone"
+			android:dependency="neverlate_enabled"
+			android:ringtoneType="alarm"
+			android:showDefault="true"
+			android:showSilent="true" />
+		<CheckBoxPreference
+			android:key="vibrate"
+			android:title="Vibrate"
+			android:dependency="neverlate_enabled"
+			android:defaultValue="@bool/default_vibrate" />
+		<CheckBoxPreference
+			android:key="insistent"
+			android:title="Insistent Alarm"
+			android:summaryOn="Will ring and/or vibrate until noticed"
+			android:summaryOff="Will ring and/or vibrate only once"
+			android:dependency="neverlate_enabled"
+			android:defaultValue="@bool/default_insistent" />
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="About NeverLate">
+<!--		<ListPreference-->
+<!--			android:key="version history"-->
+<!--			android:title="Version history"-->
+<!--			android:dialogTitle="Version History"-->
+<!--			android:dialogMessage="This is the version history.  In the future, will be filled with actual version history."-->
+<!--			android:positiveButtonText="Done" />-->
+<!--		<ListPreference-->
+<!--			android:key="terms and privacy"-->
+<!--			android:title="Terms and privacy"-->
+<!--			android:dialogTitle="Terms and privacy"-->
+<!--			android:dialogMessage="This is the terms of service and privacy notice."-->
+<!--			android:positiveButtonText="Done" />-->
+	</PreferenceCategory>
+	
+</PreferenceScreen>

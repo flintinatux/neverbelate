@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<bool name="default_neverlate_enabled">false</bool>
+	<bool name="default_fine_required">false</bool>
+	<bool name="default_warn_no_location">true</bool>
+	<bool name="default_avoid_highways">false</bool>
+	<bool name="default_avoid_tolls">false</bool>
+	<bool name="default_vibrate">true</bool>
+	<bool name="default_insistent">false</bool>
+	<bool name="default_tos_accepted">false</bool>
+</resources>

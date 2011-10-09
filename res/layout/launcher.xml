@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/res/com.madhackerdesigns.neverlate"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical" >
+
+	<View
+		android:id="@+id/logo"
+		android:layout_gravity="center|top"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:paddingTop="10dip" />
+		
+	<ViewSwitcher
+		android:id="@+id/launcher_switcher"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:layout_width="fill_parent" />
+		
+	<com.google.ads.AdView
+		android:id="@+id/ad_view"
+		android:layout_gravity="center|bottom"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		ads:adUnitId="a14d952e8939105"
+        ads:adSize="BANNER"   />
+  
+</LinearLayout>

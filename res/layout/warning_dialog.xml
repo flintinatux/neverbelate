@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/res/com.madhackerdesigns.neverlate"
+    android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical" >
+	
+	<ViewSwitcher
+		android:id="@+id/view_switcher"
+		android:isScrollContainer="true"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:layout_width="fill_parent" />
+				
+	<View
+		android:background="@color/grey_light"
+		android:layout_height="1px"
+		android:layout_width="fill_parent"  />
+	
+	<TextView
+		android:id="@+id/copyright_text"
+		android:gravity="center"
+		android:layout_gravity="center|bottom"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:paddingBottom="5dip"
+		android:paddingLeft="10dip"
+		android:paddingRight="10dip"
+		android:paddingTop="5dip"
+		android:text="@string/default_copyright_text"
+		android:textSize="11sp"  />
+		
+	<com.google.ads.AdView
+		android:id="@+id/ad_view"
+		android:layout_gravity="center|bottom"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		ads:adUnitId="a14d952e8939105"
+        ads:adSize="BANNER"   />
+	
+	<LinearLayout
+		android:orientation="horizontal"
+		style="@style/ButtonBar" >
+		
+		<Button
+			android:id="@+id/snooze_button"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_width="wrap_content"
+			android:text="@string/snooze_button_text" />
+		<Button
+			android:id="@+id/dismiss_button"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_width="wrap_content"
+			android:text="@string/dismiss_button_text" />
+		
+	</LinearLayout>
+	
+</LinearLayout>

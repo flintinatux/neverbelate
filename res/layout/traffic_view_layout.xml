@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<com.google.android.maps.MapView
+		android:id="@+id/mapview"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:layout_width="fill_parent"
+		android:clickable="true"
+		android:apiKey="0b1Uwa6nKqgt89lpDk406_oY0IGZotdhDjhvqRQ" />
+
+	<Button
+		android:id="@+id/back_button"
+		android:layout_gravity="bottom|left"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:padding="4dip"
+		android:text="@string/back_button_text"  />
+	
+</FrameLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="beta_code">Beta code (?)</string>
+	<string name="beta_code_hint">ABCD1234</string>
+	<string name="birthdate">Birthdate</string>
+	<string name="btn_birthdate_text">Click to select date</string>
+	<string name="decline_text">I\'ll do it later.</string>
+	<string name="email">Email</string>
+	<string name="email_hint">john.doe@example.com</string>
+	<string name="female">female</string>
+	<string name="first_name">First name</string>
+	<string name="first_name_hint">John</string>
+	<string name="gender">Gender</string>
+	<string name="last_name">Last name</string>
+	<string name="last_name_hint">Doe</string>
+	<string name="male">male</string>
+	<string name="no_code">(I don\'t have one...)</string>
+	<string name="privacy_link_text">(Privacy Policy)</string>
+	<string name="reg_copy_default">Complete the 23-second registration below to activate your beta account!</string>
+	<string name="register">Register now!</string>
+	<string name="reg_form_title">Register for NeverLate</string>
+	<string name="signup_copy">Oops! Did you forget to signup for a beta account on the NeverLate 
+		website? You will need to do that first before completing this registration. Signup takes 
+		less than 30 seconds and only requires a valid email address at which you can receive your 
+		beta account code. Click the button below to go directly to the signup page!</string>
+	<string name="zip_code">Zip code</string>
+	<string name="zip_code_hint">90210</string>
+	
+<!--DIALOG VALUES-->
+
+	<string name="dialog_decline_title">Wait!</string>
+	<string name="dialog_decline_message">Participation in the NeverLate beta program requires a completed
+		registration. If you leave the registration form now, you can still come back and complete it later
+		to unlock this beta version. Are you sure you want to leave now?</string>
+	<string name="dialog_decline_btn_no">No, I want to register now.</string>
+	<string name="dialog_decline_btn_yes">Yes, but I\'ll come back later.</string>
+	
+	<string name="dialog_incomplete_title">Oops!</string>
+	<string name="dialog_incomplete_message">All fields of the form must be complete to register for the 
+		NeverLate beta program.</string>
+	<string name="dialog_incomplete_btn_ok">Go back</string>
+	
+	<string name="dialog_thanks_title">Thanks!</string>
+	<string name="dialog_thanks_message">You have successfully registered for the NeverLate beta program! 
+		You are now a part of an exclusive team dedicated to making the most out of NeverLate\'s simple but
+		powerful features. Your thoughtful reviews and input will ensure that future users of this app will
+		enjoy a (hopefully!) bug-free user experience. Thanks in advance for your time and effort!\n\n
+		TIP #1: I recommend checking out the Quick Tutorial on the main screen to help you get started.</string>
+	<string name="dialog_thanks_btn_ok">Let\'s get started!</string>
+	
+<!--STYLES-->
+	
+	<style name="GenderButton" parent="@android:style/Widget.CompoundButton.RadioButton" >
+		<item name="android:drawablePadding">10dip</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:paddingRight">16dip</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+	
+	<style name="RegLabelFont">
+		<item name="android:layout_gravity">center_vertical</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:padding">10dip</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+	
+	<style name="RegEditText" parent="@android:style/Widget.EditText">
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:padding">10dip</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+
+</resources>

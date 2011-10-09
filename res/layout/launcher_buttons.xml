@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical" >
+	
+	<Button
+		android:id="@+id/btn_tutorial"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="@string/btn_tutorial_text" />
+		
+	<Button
+		android:id="@+id/btn_configure"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="@string/btn_configure_text" />
+		
+	<Button
+		android:id="@+id/btn_share"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="@string/btn_share_text" />
+		
+	<Button
+		android:id="@+id/btn_tips"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="@string/btn_tips_text" />
+	
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="black">#000000</color>
+	<color name="blue">#0055D4</color>
+	<color name="blue_light">#AACCFF</color>
+	<color name="red_dark">#D40000</color>
+	<color name="grey_dark">#333333</color>
+	<color name="grey_light">#AAAAAA</color>
+	<color name="white">#FFFFFF</color>
+	
+	<style name="SmallBlackText" parent="@android:style/TextAppearance.Small" >
+		<item name="android:textColor">@color/black</item>
+	</style>
+	
+	<style name="MediumBlackText" parent="@android:style/TextAppearance.Medium" >
+		<item name="android:textColor">@color/black</item>
+	</style>
+	
+	<style name="LargeBlackText" parent="@android:style/TextAppearance.Large" >
+		<item name="android:textColor">@color/black</item>
+	</style>
+	
+	<style name="ButtonBar">
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:paddingTop">5dip</item>
+		<item name="android:paddingLeft">4dip</item>
+ 		<item name="android:paddingRight">4dip</item>
+ 		<item name="android:paddingBottom">1dip</item>
+ 		<item name="android:background">@android:drawable/bottom_bar</item>
+	</style>
+</resources>

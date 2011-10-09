@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	
+	<ListView
+		android:id="@+id/list_view"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent" />
+	
+	<View
+		android:background="@color/grey_light"
+		android:layout_height="1px"
+		android:layout_width="fill_parent"  />
+
+	<TextView
+		android:id="@+id/warning_text"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:paddingBottom="10dip"
+		android:paddingLeft="10dip"
+		android:paddingRight="10dip"
+		android:paddingTop="10dip"
+		android:text="@string/warning_text"
+		android:textColor="@color/black"
+		android:textSize="15sp" />
+	
+	<TextView
+		android:id="@+id/departure_window"
+		android:gravity="center"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:text="@string/default_departure_window"
+		android:textColor="@color/red_dark"
+		android:textSize="20sp"
+		android:textStyle="bold"  />
+	
+	<FrameLayout
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:layout_width="fill_parent" >
+			
+		<Button
+			android:background="@drawable/btn_default_green"
+			android:id="@+id/traffic_button"
+			android:layout_gravity="center|center"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:padding="20dip"
+			android:text="@string/traffic_button_text"
+			android:textColor="@color/white"
+			android:textSize="20sp"
+			android:textStyle="bold" />
+			
+	</FrameLayout>
+  
+</LinearLayout>

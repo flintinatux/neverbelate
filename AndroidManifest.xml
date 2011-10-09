@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.madhackerdesigns.neverlate"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    
+    <application android:label="@string/app_name" android:debuggable="true" android:icon="@drawable/ic_launcher_rabbit3">
+    
+    	<meta-data android:value="507f773330a246a0aede2710bf1ced96" android:name="ADWHIRL_KEY"/>
+    	
+		<activity android:name="NeverLateSettings">
+			
+		</activity>
+	<receiver android:name="StartupReceiver" android:process=":remote"><intent-filter><action android:name="android.intent.action.BOOT_COMPLETED"></action>
+<category android:name="android.intent.category.HOME"></category>
+</intent-filter>
+
+</receiver>
+<receiver android:name="LocationReceiver" android:process=":remote">
+</receiver>
+
+<receiver android:name="TravelTimeReceiver" android:process=":remote">
+
+</receiver>
+<uses-library android:name="com.google.android.maps"></uses-library>
+
+<service android:name="NeverLateService">
+</service>
+<activity android:name="TestActivity" android:finishOnTaskLaunch="false"><intent-filter><action android:name="android.intent.action.MAIN"></action>
+<category android:name="android.intent.category.LAUNCHER"></category>
+</intent-filter>
+</activity>
+<activity android:name="WarningDialog" android:theme="@android:style/Theme.Light" android:excludeFromRecents="true" android:screenOrientation="portrait" android:stateNotNeeded="true" android:noHistory="false" android:launchMode="singleTop" android:allowTaskReparenting="false" android:taskAffinity="">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN"></action>
+    </intent-filter>
+</activity>
+<receiver android:name="WakefulServiceReceiver"></receiver>
+<provider android:exported="false" android:name="AlertsProvider" android:authorities="@string/alerts_contract_authority"></provider>
+<activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation"></activity>
+<activity android:name="com.pontiflex.mobile.sdk.activities.MultiOfferActivity" android:taskAffinity="" android:excludeFromRecents="true"/>
+<activity android:name="com.pontiflex.mobile.sdk.activities.MissingInfoActivity" android:configChanges="keyboardHidden" />
+<activity android:name="com.pontiflex.mobile.sdk.activities.OfferConfirmationActivity" android:configChanges="keyboardHidden" />
+<activity android:name="com.pontiflex.mobile.sdk.activities.RegistrationActivity" android:configChanges="keyboardHidden" />
+<activity android:name="com.pontiflex.mobile.sdk.activities.PrivacyPolicyActivity" />
+<activity android:name="com.pontiflex.mobile.sdk.activities.PrivacyPolicyListActivity" />
+</application>
+    
+    <uses-sdk android:minSdkVersion="7" />
+
+
+
+
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission><uses-permission android:name="android.permission.INTERNET"></uses-permission>
+<uses-permission android:name="android.permission.READ_CALENDAR"></uses-permission>
+<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission><uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+
+<uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+
+
+</manifest> 
