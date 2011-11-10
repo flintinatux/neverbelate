@@ -60,7 +60,6 @@ public class RegistrationForm extends Activity {
 		mBirthdateButton = (Button) findViewById(R.id.btn_birthdate);
 		mBirthdateButton.setOnClickListener(new OnClickListener() {
 
-			@Override
 			public void onClick(View arg0) {
 				showDialog(DIALOG_DATE);
 			}
@@ -70,7 +69,6 @@ public class RegistrationForm extends Activity {
 		// Initialize the OnDateSetListener
 		mDateSetListener = new DatePickerDialog.OnDateSetListener() {
 
-			@Override
 			public void onDateSet(DatePicker view, int year, int monthOfYear,
 					int dayOfMonth) {
 				mYear = year;
@@ -85,7 +83,6 @@ public class RegistrationForm extends Activity {
 		// Set the OnClick behavior of the gender radio buttons
 		OnClickListener genderListener = new OnClickListener() {
 
-			@Override
 			public void onClick(View v) {
 				mGender = (String) ((RadioButton) v).getText();
 			}
@@ -100,7 +97,6 @@ public class RegistrationForm extends Activity {
 		TextView declineText = (TextView) findViewById(R.id.decline_text);
 		declineText.setOnClickListener(new OnClickListener() {
 
-			@Override
 			public void onClick(View v) {
 				showDialog(DIALOG_DECLINE);
 			}
@@ -111,7 +107,6 @@ public class RegistrationForm extends Activity {
 		Button regButton = (Button) findViewById(R.id.btn_register);
 		regButton.setOnClickListener(new OnClickListener() {
 
-			@Override
 			public void onClick(View v) {
 				registerUser();
 			}
@@ -198,7 +193,6 @@ public class RegistrationForm extends Activity {
 	    		.setMessage(R.string.dialog_decline_message)
 	    		.setPositiveButton(R.string.dialog_decline_btn_yes, new DialogInterface.OnClickListener() {
 					
-					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						RegistrationForm.this.finish();
 					}
@@ -206,7 +200,6 @@ public class RegistrationForm extends Activity {
 				})
 	    		.setNegativeButton(R.string.dialog_decline_btn_no, new DialogInterface.OnClickListener() {
 					
-					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						dialog.cancel();
 					}
@@ -219,7 +212,6 @@ public class RegistrationForm extends Activity {
 	    		.setMessage(R.string.dialog_incomplete_message)
 	    		.setNeutralButton(R.string.dialog_incomplete_btn_ok, new DialogInterface.OnClickListener() {
 					
-					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						dialog.cancel();
 					}
@@ -232,7 +224,6 @@ public class RegistrationForm extends Activity {
 	    		.setMessage(R.string.dialog_thanks_message)
 	    		.setNeutralButton(R.string.dialog_thanks_btn_ok, new DialogInterface.OnClickListener() {
 					
-					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						Intent i = new Intent(getApplicationContext(), LauncherActivity.class);
 						startActivity(i);

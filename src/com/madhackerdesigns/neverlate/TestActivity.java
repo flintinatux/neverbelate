@@ -39,7 +39,6 @@ public class TestActivity extends Activity {
 		Button testButton = (Button) findViewById(R.id.test_button);
 		testButton.setOnClickListener(new OnClickListener() {
 
-			@Override
 			public void onClick(View v) {
 				// Tell NeverLateService to check for travel times
 				Context context = getApplicationContext();
@@ -54,7 +53,6 @@ public class TestActivity extends Activity {
 		Button settingsButton = (Button) findViewById(R.id.settings_button);
 		settingsButton.setOnClickListener(new OnClickListener() {
 
-			@Override
 			public void onClick(View v) {
 				// Send user to the Settings menu
 				Intent intent = new Intent(getApplicationContext(), NeverLateSettings.class);
@@ -67,7 +65,6 @@ public class TestActivity extends Activity {
 		Button resetAlertListButton = (Button) findViewById(R.id.reset_alert_list_button);
 		resetAlertListButton.setOnClickListener(new OnClickListener() {
 
-			@Override
 			public void onClick(View v) {
 				// Delete all AlertsProvider entries
 				getContentResolver().delete(AlertsContract.Alerts.CONTENT_URI, null, null);
@@ -79,7 +76,6 @@ public class TestActivity extends Activity {
 		Button resetAdHelperButton = (Button) findViewById(R.id.reset_ad_helper_button);
 		resetAdHelperButton.setOnClickListener(new OnClickListener() {
 
-			@Override
 			public void onClick(View v) {
 				// Reset the AdHelper values
 				mAdHelper.initFirstTimeUser();

@@ -112,7 +112,6 @@ public class WarningDialog extends MapActivity {
 		Button trafficButton = (Button) findViewById(R.id.traffic_button);
 		trafficButton.setOnClickListener(new OnClickListener() {
 
-			@Override
 			public void onClick(View v) {
 				// Switch to the traffic view and setup the MapView
 				Log.d(LOG_TAG, "'View Traffic' button clicked, switching to traffic view...");
@@ -226,7 +225,6 @@ public class WarningDialog extends MapActivity {
 			}
 			snoozeButton.setOnClickListener(new OnClickListener() {
 
-				@Override
 				public void onClick(View v) {
 					// Snooze the alert, and finish the activity
 					snoozeAlert();
@@ -248,7 +246,6 @@ public class WarningDialog extends MapActivity {
 				/* (non-Javadoc)
 				 * @see android.view.View.OnClickListener#onClick(android.view.View)
 				 */
-				@Override
 				public void onClick(View v) {
 					// For now, to dismiss, cancel notification and finish
 					dismissAlert();
@@ -328,7 +325,6 @@ public class WarningDialog extends MapActivity {
 		Button backButton = (Button) findViewById(R.id.back_button);
 		backButton.setOnClickListener(new OnClickListener() {
 
-			@Override
 			public void onClick(View v) {
 				switchToAlertListView();
 			}
