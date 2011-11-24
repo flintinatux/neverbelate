@@ -39,8 +39,8 @@ import com.google.android.maps.MapView;
 import com.google.android.maps.MyLocationOverlay;
 import com.google.android.maps.Overlay;
 import com.google.android.maps.OverlayItem;
-import com.pontiflex.mobile.sdk.AdManagerFactory;
-import com.pontiflex.mobile.sdk.IAdManager;
+import com.pontiflex.mobile.webview.sdk.AdManagerFactory;
+import com.pontiflex.mobile.webview.sdk.IAdManager;
 
 /**
  * @author flintinatux
@@ -316,7 +316,7 @@ public class WarningDialog extends MapActivity {
 	private void loadTrafficView() {
 		// Get mapview and add zoom controls
 		MapView mapView = (MapView) findViewById(R.id.mapview);
-		mapView.setBuiltInZoomControls(true);		// TODO:  Do we always want zoom controls?
+		mapView.setBuiltInZoomControls(true);		
 		
 		// Turn on the traffic (as early as possible)
 		mapView.setTraffic(true);

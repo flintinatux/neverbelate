@@ -2,10 +2,10 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
+	<classpathentry exported="true" kind="lib" path="/home/flintinatux/Documents/workspace/NeverLate/lib/pontiflex_sdk.jar"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="lib" path="lib/CWAC-WakefulIntentService.jar"/>
 	<classpathentry kind="lib" path="lib/GoogleAdMobAdsSdk-4.0.4.jar"/>
-	<classpathentry kind="lib" path="assets/pontiflex_sdk.jar"/>
 	<classpathentry kind="lib" path="/home/flintinatux/Documents/workspace/common"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="output" path="bin/classes"/>

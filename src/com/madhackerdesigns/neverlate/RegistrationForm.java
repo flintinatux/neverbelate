@@ -113,7 +113,7 @@ public class RegistrationForm extends Activity {
 			
 		});
 		
-	}
+	} 
 
 	private void registerUser() {
 		// Pull registration data from form

@@ -5,6 +5,7 @@
       android:versionName="1.0">
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
     
     <application android:label="@string/app_name" android:debuggable="true" android:icon="@drawable/ic_launcher_rabbit3">
     
@@ -40,12 +41,8 @@
 <receiver android:name="WakefulServiceReceiver"></receiver>
 <provider android:exported="false" android:name="AlertsProvider" android:authorities="@string/alerts_contract_authority"></provider>
 <activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation"></activity>
-<activity android:name="com.pontiflex.mobile.sdk.activities.MultiOfferActivity" android:taskAffinity="" android:excludeFromRecents="true"/>
-<activity android:name="com.pontiflex.mobile.sdk.activities.MissingInfoActivity" android:configChanges="keyboardHidden" />
-<activity android:name="com.pontiflex.mobile.sdk.activities.OfferConfirmationActivity" android:configChanges="keyboardHidden" />
-<activity android:name="com.pontiflex.mobile.sdk.activities.RegistrationActivity" android:configChanges="keyboardHidden" />
-<activity android:name="com.pontiflex.mobile.sdk.activities.PrivacyPolicyActivity" />
-<activity android:name="com.pontiflex.mobile.sdk.activities.PrivacyPolicyListActivity" />
+<activity android:name="com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity"/>
+<activity android:name="com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity" android:configChanges="keyboardHidden"/>
 </application>
     
     <uses-sdk android:minSdkVersion="7" />
