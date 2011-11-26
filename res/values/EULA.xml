@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+<!-- Strings for TOS and EULA Dialog -->
+	<string name="eula_accept">Accept</string>
+	<string name="eula_refuse">Refuse</string>
+	<string name="eula_title">TOS and EULA</string>
+	
+	<string name="eula_text">In a nutshell, the creator of this software is not responsible for any harm
+	    that may come to you while operating this software. Or for the software functioning as intended.
+	    You do not own this software. Rather, instead, by installing this software, and by agreeing to 
+	    this End User License Agreement, you agree not to do anything stupid with it, or hold the creator 
+	    of this software responsible for anything bad that happens, anywhere.</string>
+    
+</resources>

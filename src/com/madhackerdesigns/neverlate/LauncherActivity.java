@@ -5,8 +5,12 @@ package com.madhackerdesigns.neverlate;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ViewSwitcher;
 
 import com.pontiflex.mobile.webview.sdk.AdManagerFactory;
@@ -27,6 +31,7 @@ public class LauncherActivity extends Activity {
 	// Private fields
 	private AdHelper mAdHelper;
 	private PreferenceHelper mPrefs;
+	private Resources mRes;
 	private ViewSwitcher mSwitcher;
 	
 	/* (non-Javadoc)
@@ -45,23 +50,53 @@ public class LauncherActivity extends Activity {
 		// TODO: Present registration letter if first use.
 		// (Letter dialog will start registration activity.)
 				
-		// Show registration if first time
+		// Show registration if time
 		IAdManager adManager = AdManagerFactory.createInstance(getApplication());
 		adManager.setRegistrationInterval(LAUNCH_INTERVAL);
 		adManager.setRegistrationMode(IAdManager.RegistrationMode.RegistrationAfterIntervalInLaunches);
 		
-		// Set content view to launcher layout
+		// Set content view to launcher layout and load application resources
 		setContentView(R.layout.launcher);
+		mRes = getResources();
 		
 		// Load the app logo at the top.
-		View logo = (View) findViewById(R.id.logo);
+		ImageView logo = (ImageView) findViewById(R.id.logo);
+		// TODO: Create new large format logo for launcher
+		logo.setImageResource(R.drawable.ic_launcher_rabbit3);
 		
-		// Load up the view switcher between the loading view and the button view.
-		ViewSwitcher switcher = (ViewSwitcher) findViewById(R.id.launcher_switcher);
-		switcher.addView(View.inflate(this, R.layout.launcher_loading, null));
-		switcher.addView(View.inflate(this, R.layout.launcher_buttons, null));
+		// Load the config button
+		Button configBtn = (Button) findViewById(R.id.btn_configure);
+		configBtn.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				// Send user to the Settings menu
+				Intent intent = new Intent(getApplicationContext(), NeverLateSettings.class);
+	        	startActivity(intent);
+			}
+			
+		});
 		
-		// TODO: Switch view to buttons
+		// Load the share button
+		Button shareBtn = (Button) findViewById(R.id.btn_share);
+		shareBtn.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				shareNeverLate();
+			}
+			
+		});
+		
+		// TODO: Create a coming soon dialog for features not yet implemented
+	}
+
+	protected void shareNeverLate() {
+		// Send out a share intent for the this app's URI in the market
+		Resources res = mRes;
+		Intent i = new Intent(Intent.ACTION_SEND);
+		i.setType("text/plain");
+		i.putExtra(Intent.EXTRA_SUBJECT, res.getString(R.string.share_subject));
+		i.putExtra(Intent.EXTRA_TEXT, res.getString(R.string.share_message));
+		startActivity(Intent.createChooser(i, res.getString(R.string.share_menu_title)));
 	}
 
 	/* (non-Javadoc)

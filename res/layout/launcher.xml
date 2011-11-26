@@ -6,18 +6,37 @@
 	android:layout_height="fill_parent"
 	android:orientation="vertical" >
 
-	<View
+	<ImageView
 		android:id="@+id/logo"
 		android:layout_gravity="center|top"
 		android:layout_height="wrap_content"
 		android:layout_width="fill_parent"
-		android:paddingTop="10dip" />
+		android:paddingTop="10dip"
+		android:scaleType="fitCenter" />
 		
-	<ViewSwitcher
-		android:id="@+id/launcher_switcher"
+	<Button
+		android:id="@+id/btn_tutorial"
 		android:layout_height="wrap_content"
-		android:layout_weight="1"
-		android:layout_width="fill_parent" />
+		android:layout_width="wrap_content"
+		android:text="@string/btn_tutorial_text" />
+		
+	<Button
+		android:id="@+id/btn_configure"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="@string/btn_configure_text" />
+		
+	<Button
+		android:id="@+id/btn_share"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="@string/btn_share_text" />
+		
+	<Button
+		android:id="@+id/btn_tips"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="@string/btn_tips_text" />
 		
 	<com.google.ads.AdView
 		android:id="@+id/ad_view"

@@ -98,17 +98,17 @@ public class AdHelper {
 	}
 	
 	public boolean isTimeToShowAd() {
-		// For now, quit showing ads we don't need
-		return false;
+		// Uncomment to quit showing ads we don't need
+//		return false;
 		
-//		// Pull latest values
-//		SharedPreferences settings = mSettings;
-//		long current = settings.getLong(CURRENT, DEF_CURRENT);
-//		long adLast = settings.getLong(AD_LAST, DEF_AD_LAST);
-//		long adNext = settings.getLong(AD_NEXT, DEF_AD_NEXT);
-//		
-//		// Return true if current warning is next time to show add
-//		return (current >= adNext && (adNext == 0 || current != adLast));
+		// Pull latest values
+		SharedPreferences settings = mSettings;
+		long current = settings.getLong(CURRENT, DEF_CURRENT);
+		long adLast = settings.getLong(AD_LAST, DEF_AD_LAST);
+		long adNext = settings.getLong(AD_NEXT, DEF_AD_NEXT);
+		
+		// Return true if current warning is next time to show add
+		return (current >= adNext && (adNext == 0 || current != adLast));
 	}
 	
 	public void setAdShown(boolean adShown) {

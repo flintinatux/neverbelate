@@ -29,7 +29,7 @@
 
 <service android:name="NeverLateService">
 </service>
-<activity android:name="TestActivity" android:finishOnTaskLaunch="false"><intent-filter><action android:name="android.intent.action.MAIN"></action>
+<activity android:name="TestActivity" android:finishOnTaskLaunch="false" android:label="NeverTest"><intent-filter><action android:name="android.intent.action.MAIN"></action>
 <category android:name="android.intent.category.LAUNCHER"></category>
 </intent-filter>
 </activity>
@@ -38,11 +38,17 @@
         <action android:name="android.intent.action.MAIN"></action>
     </intent-filter>
 </activity>
-<receiver android:name="WakefulServiceReceiver"></receiver>
+<activity android:name="LauncherActivity">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+    </intent-filter>
+</activity><receiver android:name="WakefulServiceReceiver"></receiver>
 <provider android:exported="false" android:name="AlertsProvider" android:authorities="@string/alerts_contract_authority"></provider>
 <activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation"></activity>
 <activity android:name="com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity"/>
 <activity android:name="com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity" android:configChanges="keyboardHidden"/>
+
 </application>
     
     <uses-sdk android:minSdkVersion="7" />

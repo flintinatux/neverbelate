@@ -81,7 +81,8 @@ class Eula {
                     refuse(activity);
                 }
             });
-            builder.setMessage(readEula(activity));
+//            builder.setMessage(readEula(activity));
+            builder.setMessage(R.string.eula_text);
             builder.create().show();
             return false;
         }
