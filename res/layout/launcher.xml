@@ -16,24 +16,28 @@
 		
 	<Button
 		android:id="@+id/btn_tutorial"
+		android:drawableLeft="@drawable/ic_menu_help"
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
 		android:text="@string/btn_tutorial_text" />
 		
 	<Button
 		android:id="@+id/btn_configure"
+		android:drawableLeft="@drawable/ic_menu_preferences"
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
 		android:text="@string/btn_configure_text" />
 		
 	<Button
 		android:id="@+id/btn_share"
+		android:drawableLeft="@drawable/ic_menu_share"
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
 		android:text="@string/btn_share_text" />
 		
 	<Button
 		android:id="@+id/btn_tips"
+		android:drawableLeft="@drawable/ic_menu_notifications"
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
 		android:text="@string/btn_tips_text" />
