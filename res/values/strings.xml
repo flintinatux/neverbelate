@@ -10,6 +10,7 @@
 	<string name="admob_id">a14d952e8939105</string>
 	
 <!-- Strings for Launcher Activity -->
+	<string name="btn_enable_text">Enable NeverLate</string>
 	<string name="btn_tutorial_text">Quick Tutorial</string>
 	<string name="btn_configure_text">Configure Settings</string>
 	<string name="btn_share_text">Share with a Friend</string>
