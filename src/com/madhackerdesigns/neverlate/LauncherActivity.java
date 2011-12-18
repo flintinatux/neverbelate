@@ -4,13 +4,18 @@
 package com.madhackerdesigns.neverlate;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ViewSwitcher;
 
 import com.pontiflex.mobile.webview.sdk.AdManagerFactory;
@@ -27,12 +32,11 @@ public class LauncherActivity extends Activity {
 	
 	// Registration settings
 	private static final int LAUNCH_INTERVAL = 3;
+
+	private static final int DLG_COMING_SOON = 0;
 	
 	// Private fields
-	private AdHelper mAdHelper;
 	private PreferenceHelper mPrefs;
-	private Resources mRes;
-	private ViewSwitcher mSwitcher;
 	
 	/* (non-Javadoc)
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
@@ -57,12 +61,21 @@ public class LauncherActivity extends Activity {
 		
 		// Set content view to launcher layout and load application resources
 		setContentView(R.layout.launcher);
-		mRes = getResources();
 		
-		// Load the app logo at the top.
-		ImageView logo = (ImageView) findViewById(R.id.logo);
-		// TODO: Create new large format logo for launcher
-		logo.setImageResource(R.drawable.ic_launcher_rabbit3);
+		// Setup the Enable checkbox
+		mPrefs = new PreferenceHelper(this);
+		CheckBox enableBtn = (CheckBox) findViewById(R.id.btn_enable);
+		enableBtn.setChecked(mPrefs.mNeverLateEnabled);
+		enableBtn.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+
+			public void onCheckedChanged(CompoundButton buttonView,
+					boolean isChecked) {
+				// Change the enabled state and enforce the change
+				mPrefs.mNeverLateEnabled = isChecked;
+				sendBroadcast(new Intent(LauncherActivity.this, StartupReceiver.class));
+			}
+			
+		});
 		
 		// Load the config button
 		Button configBtn = (Button) findViewById(R.id.btn_configure);
@@ -86,7 +99,17 @@ public class LauncherActivity extends Activity {
 			
 		});
 		
-		// TODO: Create a coming soon dialog for features not yet implemented
+		// Create a coming soon dialog for features not yet implemented
+		OnClickListener comingSoonListener = new OnClickListener() {
+
+			public void onClick(View v) {
+				showDialog(DLG_COMING_SOON);
+			}
+			
+		};
+		((Button) findViewById(R.id.btn_tips)).setOnClickListener(comingSoonListener);
+		((Button) findViewById(R.id.btn_tutorial)).setOnClickListener(comingSoonListener);
+		
 	}
 
 	protected void shareNeverLate() {
@@ -97,6 +120,29 @@ public class LauncherActivity extends Activity {
 		i.putExtra(Intent.EXTRA_SUBJECT, res.getString(R.string.share_subject));
 		i.putExtra(Intent.EXTRA_TEXT, res.getString(R.string.share_message));
 		startActivity(Intent.createChooser(i, res.getString(R.string.share_menu_title)));
+	}
+	
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreateDialog(int)
+	 */
+	@Override
+	protected Dialog onCreateDialog(int id) {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		
+		switch (id) {
+		case DLG_COMING_SOON:
+			builder.setTitle(R.string.dlg_coming_soon_title)
+				   .setMessage(R.string.dlg_coming_soon_msg)
+			       .setCancelable(true)
+			       .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+			           public void onClick(DialogInterface dialog, int id) {
+			                dialog.cancel();
+			           }
+			       });
+			break;
+		}
+		
+		return builder.create();
 	}
 
 	/* (non-Javadoc)

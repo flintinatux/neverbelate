@@ -15,7 +15,10 @@
 	<string name="btn_configure_text">Configure Settings</string>
 	<string name="btn_share_text">Share with a Friend</string>
 	<string name="btn_tips_text">Tips and Tricks</string>
+	<string name="dlg_coming_soon_msg">This feature is coming soon, so be sure check back later in the Android Market for updates!</string>
+	<string name="dlg_coming_soon_title">Coming soon</string>
 	<string name="loading_text">Loading...</string>
+	<string name="ok">OK</string>
 	<string name="share_menu_title">Share NeverLate</string>
 	<string name="share_message">Dear friend -\n
 	\n
