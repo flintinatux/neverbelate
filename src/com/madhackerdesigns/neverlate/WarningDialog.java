@@ -334,7 +334,7 @@ public class WarningDialog extends MapActivity {
 		// Generate the map overlays
 		List<Overlay> mapOverlays = mapView.getOverlays();
 		mapOverlays.clear();
-		Drawable markerDrawable = this.getResources().getDrawable(R.drawable.ic_stat_notify_rabbit2);
+		Drawable markerDrawable = this.getResources().getDrawable(R.drawable.flag_red);
 		MapOverlay markerOverlay = new MapOverlay(getApplicationContext(), markerDrawable);
 
 		// Parse the json directions data

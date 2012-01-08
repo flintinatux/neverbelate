@@ -8,7 +8,7 @@
 		android:layout_weight="1"
 		android:layout_width="fill_parent"
 		android:clickable="true"
-		android:apiKey="0b1Uwa6nKqgt89lpDk406_oY0IGZotdhDjhvqRQ" />
+		android:apiKey="09UCTg-5fHNGM1co-a60SYy42aJanoXio4xB0oQ" />
 
 	<Button
 		android:id="@+id/back_button"

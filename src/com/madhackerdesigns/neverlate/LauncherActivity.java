@@ -114,7 +114,7 @@ public class LauncherActivity extends Activity {
 
 	protected void shareNeverLate() {
 		// Send out a share intent for the this app's URI in the market
-		Resources res = mRes;
+		Resources res = getResources();
 		Intent i = new Intent(Intent.ACTION_SEND);
 		i.setType("text/plain");
 		i.putExtra(Intent.EXTRA_SUBJECT, res.getString(R.string.share_subject));
