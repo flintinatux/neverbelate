@@ -4,8 +4,7 @@
 
 	<com.google.android.maps.MapView
 		android:id="@+id/mapview"
-		android:layout_height="wrap_content"
-		android:layout_weight="1"
+		android:layout_height="fill_parent"
 		android:layout_width="fill_parent"
 		android:clickable="true"
 		android:apiKey="09UCTg-5fHNGM1co-a60SYy42aJanoXio4xB0oQ" />
