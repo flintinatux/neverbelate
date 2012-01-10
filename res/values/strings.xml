@@ -46,7 +46,7 @@
 <!-- Strings for WarningDialog -->
     <string name="advance_warning_title">NeverLate Advance Warning</string>
     <string name="away_text">away</string>
-    <string name="back_button_text">Back</string>
+    <string name="departure_time">Departure time</string>
     <string name="dismiss_button_text">Dismiss</string>
     <string name="dismiss_all_button_text">Dismiss all</string>
     <string name="default_copyright_text">Map data from Google</string>
