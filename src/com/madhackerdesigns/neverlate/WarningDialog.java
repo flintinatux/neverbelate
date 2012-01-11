@@ -446,7 +446,10 @@ public class WarningDialog extends MapActivity {
 	protected void onPause() {
 		super.onPause();
 		// Disable the user location
-		if (mUserLocationOverlay != null) { mUserLocationOverlay.disableMyLocation(); }
+		if (mUserLocationOverlay != null) { 
+			mUserLocationOverlay.disableMyLocation();
+			mUserLocationOverlay.disableCompass();
+		}
 	}
 
 	/* (non-Javadoc)
@@ -456,7 +459,10 @@ public class WarningDialog extends MapActivity {
 	protected void onResume() {
 		super.onResume();
 		// Re-enable the user location
-		if (mUserLocationOverlay != null) { mUserLocationOverlay.enableMyLocation(); }
+		if (mUserLocationOverlay != null) { 
+			mUserLocationOverlay.enableMyLocation();
+			mUserLocationOverlay.enableCompass();
+		}
 		
 		// Switch to the traffic view if an ad was just shown
 		if (mAdJustShown) {

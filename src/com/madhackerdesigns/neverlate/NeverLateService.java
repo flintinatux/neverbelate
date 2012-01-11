@@ -118,23 +118,6 @@ public class NeverLateService extends WakefulIntentService {
 		}
 	}
 
-	// Load (or reload) shared preferences and system services
-	private void loadPrefsAndServices() {
-		if (mContentResolver == null) {
-			mContentResolver = getContentResolver();
-		}
-		if (mLocationManager == null) {
-			mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-		}
-		if (mNotificationManager == null) {
-			mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-		}
-		if (mPrefs == null) {
-			mPrefs = new PreferenceHelper(getApplicationContext());
-		} else {
-			mPrefs.reloadPreferences();
-		}
-	}
 	private void dismissAllAlerts() {
 		ContentValues values = new ContentValues();
 		values.put(AlertsContract.Alerts.DISMISSED, 1);
@@ -369,9 +352,8 @@ public class NeverLateService extends WakefulIntentService {
 			} while (instance.moveToNext());
 		} else {
 			// no calendar entries in the next lookaheadWindow, so wait til next time
-			return;
 		}
-		
+		releasePrefsAndServices();
 	}
 	
 	private void notifyUserLater(long warnTime) {
@@ -567,6 +549,32 @@ public class NeverLateService extends WakefulIntentService {
 	
 	public static String FullDateTime(Long time) {
 		return DateFormat.getDateTimeInstance(DateFormat.FULL, DateFormat.FULL).format(new Date(time));
+	}
+	
+	// Load (or reload) shared preferences and system services
+	private void loadPrefsAndServices() {
+		if (mContentResolver == null) {
+			mContentResolver = getContentResolver();
+		}
+		if (mLocationManager == null) {
+			mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		}
+		if (mNotificationManager == null) {
+			mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+		}
+		if (mPrefs == null) {
+			mPrefs = new PreferenceHelper(getApplicationContext());
+		} else {
+			mPrefs.reloadPreferences();
+		}
+	}
+	
+	// Release the shared preferences and system services to avoid battery drain
+	public void releasePrefsAndServices() {
+		mContentResolver = null;
+		mLocationManager = null;
+		mNotificationManager = null;
+		mPrefs = null;
 	}
 	
 	/* (non-Javadoc)

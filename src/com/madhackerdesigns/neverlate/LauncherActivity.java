@@ -16,7 +16,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.ViewSwitcher;
 
 import com.pontiflex.mobile.webview.sdk.AdManagerFactory;
 import com.pontiflex.mobile.webview.sdk.IAdManager;
@@ -36,6 +35,7 @@ public class LauncherActivity extends Activity {
 	private static final int DLG_COMING_SOON = 0;
 	
 	// Private fields
+	private CheckBox mEnableBtn;
 	private PreferenceHelper mPrefs;
 	
 	/* (non-Javadoc)
@@ -63,15 +63,15 @@ public class LauncherActivity extends Activity {
 		setContentView(R.layout.launcher);
 		
 		// Setup the Enable checkbox
-		mPrefs = new PreferenceHelper(this);
-		CheckBox enableBtn = (CheckBox) findViewById(R.id.btn_enable);
-		enableBtn.setChecked(mPrefs.mNeverLateEnabled);
-		enableBtn.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+		if (mPrefs == null) { mPrefs = new PreferenceHelper(this); }
+		mEnableBtn = (CheckBox) findViewById(R.id.btn_enable);
+		mEnableBtn.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 			public void onCheckedChanged(CompoundButton buttonView,
 					boolean isChecked) {
 				// Change the enabled state and enforce the change
 				mPrefs.mNeverLateEnabled = isChecked;
+				
 				sendBroadcast(new Intent(LauncherActivity.this, StartupReceiver.class));
 			}
 			
@@ -161,12 +161,26 @@ public class LauncherActivity extends Activity {
 	}
 
 	/* (non-Javadoc)
+	 * @see android.app.Activity#onPause()
+	 */
+	@Override
+	protected void onPause() {
+		super.onPause();
+		
+		// Release the preference helper resources
+		mPrefs = null;
+	}
+
+	/* (non-Javadoc)
 	 * @see android.app.Activity#onResume()
 	 */
 	@Override
 	protected void onResume() {
 		super.onResume();
 		
+		// Load up the preference helper and set the checked state
+		if (mPrefs == null) { mPrefs = new PreferenceHelper(this); }
+		mEnableBtn.setChecked(mPrefs.mNeverLateEnabled);
 	}
 	
 	
