@@ -71,8 +71,6 @@ public class LauncherActivity extends Activity {
 					boolean isChecked) {
 				// Change the enabled state and enforce the change
 				mPrefs.setNeverLateEnabled(isChecked);
-				mPrefs.commit();
-				
 				sendBroadcast(new Intent(LauncherActivity.this, StartupReceiver.class));
 			}
 			
@@ -181,6 +179,7 @@ public class LauncherActivity extends Activity {
 		
 		// Load up the preference helper and set the checked state
 		if (mPrefs == null) { mPrefs = new PreferenceHelper(this); }
+		if (mEnableBtn == null) { mEnableBtn = (CheckBox) findViewById(R.id.btn_enable); }
 		mEnableBtn.setChecked(mPrefs.isNeverLateEnabled());
 	}
 	
