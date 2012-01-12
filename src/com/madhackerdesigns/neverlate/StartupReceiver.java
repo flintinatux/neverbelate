@@ -44,10 +44,10 @@ public class StartupReceiver extends BroadcastReceiver {
 		// if NeverLate is enabled, set new alarms to run at the appointed times
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.MINUTE, 1);
-		if (mPrefs.mNeverLateEnabled) {
+		if (mPrefs.isNeverLateEnabled()) {
 			Toast.makeText(context, "NeverLate is enabled", Toast.LENGTH_SHORT).show();
 			alarm.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),
-					mPrefs.mTraveltimeFreq, travelTimePending);
+					mPrefs.getTraveltimeFreq(), travelTimePending);
 //			alarm.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),
 //					locationFreq, locationPending);
 		} else {

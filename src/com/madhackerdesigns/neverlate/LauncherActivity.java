@@ -70,7 +70,8 @@ public class LauncherActivity extends Activity {
 			public void onCheckedChanged(CompoundButton buttonView,
 					boolean isChecked) {
 				// Change the enabled state and enforce the change
-				mPrefs.mNeverLateEnabled = isChecked;
+				mPrefs.setNeverLateEnabled(isChecked);
+				mPrefs.commit();
 				
 				sendBroadcast(new Intent(LauncherActivity.this, StartupReceiver.class));
 			}
@@ -180,7 +181,7 @@ public class LauncherActivity extends Activity {
 		
 		// Load up the preference helper and set the checked state
 		if (mPrefs == null) { mPrefs = new PreferenceHelper(this); }
-		mEnableBtn.setChecked(mPrefs.mNeverLateEnabled);
+		mEnableBtn.setChecked(mPrefs.isNeverLateEnabled());
 	}
 	
 	

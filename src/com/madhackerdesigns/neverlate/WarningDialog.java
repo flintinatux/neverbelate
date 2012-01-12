@@ -267,7 +267,7 @@ public class WarningDialog extends MapActivity {
 		// Set a new alarm to notify for this same event instance
 		Log.d(LOG_TAG, "'Snooze' button clicked.");
 		long now = new Date().getTime();
-		long warnTime = now + mPrefs.mSnoozeDuration;
+		long warnTime = now + mPrefs.getSnoozeDuration();
 		String warnTimeString = NeverLateService.FullDateTime(warnTime);
 		Log.d(LOG_TAG, "Alarm will be set to warn user again at " + warnTimeString);
 		Context context = getApplicationContext();

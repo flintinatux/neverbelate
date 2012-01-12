@@ -133,7 +133,7 @@ public class NeverLateService extends WakefulIntentService {
 	private void checkTravelTimes() {
 		// Start off by clearing old alerts that are past their expiration date.
 		// Don't want the database to get too big and eat up the user's precious storage space.
-		long expiration = new Date().getTime() - mPrefs.mLookaheadWindow;
+		long expiration = new Date().getTime() - mPrefs.getLookaheadWindow();
 		int rowsDeleted = mContentResolver.delete(
 				AlertsContract.Alerts.CONTENT_URI, 
 				AlertsContract.Alerts.BEGIN + "<?", 
@@ -185,7 +185,7 @@ public class NeverLateService extends WakefulIntentService {
 				int calendarColor = instance.getInt(CalendarHelper.PROJ_COLOR);
 				
 				// ignore event if not in window
-				if (instanceBegin < mNow || instanceBegin > (mNow + mPrefs.mLookaheadWindow)) {
+				if (instanceBegin < mNow || instanceBegin > (mNow + mPrefs.getLookaheadWindow())) {
 					Log.d(LOG_TAG, "Event " + eventID + " not in window.");
 					continue;
 				}
@@ -226,9 +226,9 @@ public class NeverLateService extends WakefulIntentService {
 				b.appendQueryParameter("origin", String.valueOf(currentBestLocation.getLatitude()) + "," 
 						+ String.valueOf(currentBestLocation.getLongitude()));
 				b.appendQueryParameter("destination", eventLocation);
-				b.appendQueryParameter("mode", mPrefs.mTravelMode);
-				if (mPrefs.mAvoidHighways) { b.appendQueryParameter("avoid", "highways"); }
-				if (mPrefs.mAvoidTolls) { b.appendQueryParameter("avoid", "tolls"); }
+				b.appendQueryParameter("mode", mPrefs.getTravelMode());
+				if (mPrefs.isAvoidHighways()) { b.appendQueryParameter("avoid", "highways"); }
+				if (mPrefs.isAvoidTolls()) { b.appendQueryParameter("avoid", "tolls"); }
 				b.appendQueryParameter("sensor", "true");
 				String url = b.build().toString();
 				
@@ -270,7 +270,7 @@ public class NeverLateService extends WakefulIntentService {
 						JSONObject leg = route.getJSONArray("legs").getJSONObject(0);
 						long duration = leg.getJSONObject("duration").getLong("value") * 1000;   // in ms
 						Log.d(LOG_TAG, "Duration: " + String.valueOf(duration/60000) + " min");
-						long warnTime = instanceBegin - duration - mPrefs.mAdvanceWarning;
+						long warnTime = instanceBegin - duration - mPrefs.getAdvanceWarning();
 						Log.d(LOG_TAG, "Warn time: " + FullDateTime(warnTime));
 						String copyrights = route.getString("copyrights");
 						
@@ -299,7 +299,7 @@ public class NeverLateService extends WakefulIntentService {
 						}
 						
 						// Issue a notification if warning is required before the next check
-						if (warnTime <= (mNow + mPrefs.mTraveltimeFreq)) {
+						if (warnTime <= (mNow + mPrefs.getTraveltimeFreq())) {
 							// Whether we alert user now or later, consider alert as FIRED.
 							Log.d(LOG_TAG, "Marking event " + eventID + " as FIRED.");
 							ContentValues firedValues = new ContentValues();
@@ -397,7 +397,7 @@ public class NeverLateService extends WakefulIntentService {
 		alertIntent.setFlags(flags);
 		
 		// Then notify user by their preferred method
-		switch(mPrefs.mNotificationMethod) {
+		switch(mPrefs.getNotificationMethod()) {
 		case ALERT:
 			// Notify user with alert dialog. Note that this will interrupt the user's current task.
 			startActivity(alertIntent);
@@ -432,8 +432,8 @@ public class NeverLateService extends WakefulIntentService {
 			notification.flags |= Notification.FLAG_SHOW_LIGHTS;
 			notification.defaults |= Notification.DEFAULT_LIGHTS;
 //			notification.number = total;
-			if (mPrefs.mVibrate) { notification.vibrate = new long[] {0, 250, 250, 250}; }
-			if (mPrefs.mInsistent) { notification.flags |= Notification.FLAG_INSISTENT; }
+			if (mPrefs.isVibrate()) { notification.vibrate = new long[] {0, 250, 250, 250}; }
+			if (mPrefs.isInsistent()) { notification.flags |= Notification.FLAG_INSISTENT; }
 			mNotificationManager.notify(NOTIFICATION_ID, notification);
 			return;
 		}
