@@ -46,7 +46,7 @@ import com.pontiflex.mobile.webview.sdk.IAdManager;
  * @author flintinatux
  *
  */
-public class WarningDialog extends MapActivity {
+public class WarningDialog extends MapActivity implements ServiceCommander {
 
 	// private static tokens
 	private static final int ALERT_TOKEN = 1;
@@ -273,14 +273,14 @@ public class WarningDialog extends MapActivity {
 		Context context = getApplicationContext();
 		AlarmManager alarm = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 		Intent intent = new Intent(context, WakefulServiceReceiver.class);
-		intent.putExtra(NeverLateService.EXTRA_TASK, "NOTIFY");
+		intent.putExtra(EXTRA_SERVICE_COMMAND, NOTIFY);
 		PendingIntent alarmIntent = PendingIntent.getBroadcast(context, 0, intent, 
 				PendingIntent.FLAG_UPDATE_CURRENT);
 		alarm.set(AlarmManager.RTC_WAKEUP, warnTime, alarmIntent);
 		
 		// Ask the Service to just SNOOZE the event, which just clears the notification
 		intent = new Intent(context, NeverLateService.class);
-		intent.putExtra(NeverLateService.EXTRA_TASK, "SNOOZE");
+		intent.putExtra(EXTRA_SERVICE_COMMAND, SNOOZE);
 		WakefulIntentService.sendWakefulWork(context, intent);
 	}
 	
@@ -294,7 +294,7 @@ public class WarningDialog extends MapActivity {
 		// Ask the Service to just DISMISS the alert, which marks the alert as DISMISSED. Duh.
 		Context context = getApplicationContext();
 		Intent cancelIntent = new Intent(context, NeverLateService.class);
-		cancelIntent.putExtra(NeverLateService.EXTRA_TASK, "DISMISS");
+		cancelIntent.putExtra(EXTRA_SERVICE_COMMAND, DISMISS);
 		WakefulIntentService.sendWakefulWork(context, cancelIntent);
 	}
 

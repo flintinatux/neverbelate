@@ -10,10 +10,8 @@ import android.content.Intent;
 import android.widget.Toast;
 
 public class StartupReceiver extends BroadcastReceiver {
-//	private static final String DEFAULT_LOCATION_FREQ = "300000";
-	private static final String DEFAULT_TRAVELTIME_FREQ = "900000";
-	private static final int REQUEST_CODE = 19327;
 	
+	private static final int REQUEST_CODE = 19327;
 	private PreferenceHelper mPrefs;
 	
 	@Override

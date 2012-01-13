@@ -18,10 +18,8 @@ import com.commonsware.cwac.wakeful.WakefulIntentService;
  * @author flintinatux
  *
  */
-public class TestActivity extends Activity {
+public class TestActivity extends Activity implements ServiceCommander {
 
-//	private static final int MENU_SETTINGS = Menu.FIRST;
-	
 	private AdHelper mAdHelper;
 	
 	/* (non-Javadoc)
@@ -43,7 +41,7 @@ public class TestActivity extends Activity {
 				// Tell NeverLateService to check for travel times
 				Context context = getApplicationContext();
 				Intent serviceIntent = new Intent(context, NeverLateService.class);
-				serviceIntent.putExtra(NeverLateService.EXTRA_TASK, "CHECK_TRAVEL_TIMES");
+				serviceIntent.putExtra(EXTRA_SERVICE_COMMAND, CHECK_TRAVEL_TIMES);
 				WakefulIntentService.sendWakefulWork(context, serviceIntent);
 			}
 			
@@ -88,30 +86,5 @@ public class TestActivity extends Activity {
 		
 		
 	}
-
-//	/* (non-Javadoc)
-//	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
-//	 */
-//	@Override
-//	public boolean onCreateOptionsMenu(Menu menu) {
-//		boolean result = super.onCreateOptionsMenu(menu);
-//		menu.add(0, MENU_SETTINGS, 0, "Settings");
-//		return result;
-//	}
-//	
-//	/* (non-Javadoc)
-//	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
-//	 */
-//	@Override
-//	public boolean onOptionsItemSelected(MenuItem item) {
-//		switch (item.getItemId()) {
-//        case MENU_SETTINGS:
-//        	Intent intent = new Intent(this, NeverLateSettings.class);
-//        	startActivity(intent);
-//            return true;
-//        }
-//		
-//		return super.onOptionsItemSelected(item);
-//	}
 
 }

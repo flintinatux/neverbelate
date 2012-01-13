@@ -38,15 +38,10 @@ import com.commonsware.cwac.wakeful.WakefulIntentService;
  * @author flintinatux
  *
  */
-public class NeverLateService extends WakefulIntentService {
-	
-	// Static strings for intent extra keys
-	private static final String PACKAGE_NAME = "com.madhackerdesigns.neverlate";
-	public static final String EXTRA_TASK = PACKAGE_NAME + ".task";
+public class NeverLateService extends WakefulIntentService implements ServiceCommander {
 	
 	// static numbers and such
 	private static final long DELTA = 5*60*1000;				// age delta = 5 minutes
-//	private static final int INSTANCE_QUERY_TOKEN = 0;
 	private static final float MARGIN = (float) 1.25;			// accuracy margin = 25%
 	private static final int NOTIFICATION_ID = 1;
 
@@ -56,18 +51,14 @@ public class NeverLateService extends WakefulIntentService {
 	private enum DirectionsApiStatus { OK, NOT_FOUND, ZERO_RESULTS, MAX_WAYPOINTS_EXCEEDED, INVALID_REQUEST, 
 		OVER_QUERY_LIMIT, REQUEST_DENIED, UNKNOWN_ERROR }
 	
-	// enum to delineate which task the service needs to handle when startService called
-	public enum ServiceTask { CHECK_TRAVEL_TIMES, CLEAR_ALL, DISMISS, SNOOZE, NOTIFY, STARTUP }
-	
 	// field to hold shared preferences
-	private PreferenceHelper mPrefs;
 	
 	// private member fields
 	private ContentResolver mContentResolver;
 	private LocationManager mLocationManager;
 	private NotificationManager mNotificationManager;
 	private long mNow;
-//	private QueryHandler mQueryHandler;
+	private PreferenceHelper mPrefs;
 	
 	public NeverLateService() {
 		super("NeverLateService");
@@ -84,7 +75,7 @@ public class NeverLateService extends WakefulIntentService {
 		
 		// pull instructions from the intent
 		Bundle extras = (Bundle) intent.getExtras();
-		ServiceTask task = Enum.valueOf(ServiceTask.class, extras.getString(EXTRA_TASK));
+		int task = extras.getInt(EXTRA_SERVICE_COMMAND);
 		Log.d(LOG_TAG, "NeverLateService received an intent with task '" + task + "'.");
 		
 		// delegate task based on ServiceTask chosen, if any
@@ -361,7 +352,7 @@ public class NeverLateService extends WakefulIntentService {
 		Context context = getApplicationContext();
 		AlarmManager alarm = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 		Intent intent = new Intent(context, WakefulServiceReceiver.class);
-		intent.putExtra(EXTRA_TASK, "NOTIFY");
+		intent.putExtra(EXTRA_SERVICE_COMMAND, NOTIFY);
 		PendingIntent alarmIntent = PendingIntent.getBroadcast(context, 0, intent, 
 				PendingIntent.FLAG_UPDATE_CURRENT);
 		alarm.set(AlarmManager.RTC_WAKEUP, warnTime, alarmIntent);
@@ -424,7 +415,7 @@ public class NeverLateService extends WakefulIntentService {
 			
 			// Build pending intent for "Clear All" action
 			Intent i = new Intent(getApplicationContext(), WakefulServiceReceiver.class);
-			i.putExtra(EXTRA_TASK, "CLEAR_ALL");
+			i.putExtra(EXTRA_SERVICE_COMMAND, CLEAR_ALL);
 			PendingIntent deleteIntent = PendingIntent.getBroadcast(context, 0, i, 0);
 			
 			// Push notification to NotificationManager

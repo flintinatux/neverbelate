@@ -84,17 +84,17 @@
     	<item>30 minutes</item>
     	<item>60 minutes</item>
     </string-array>
-    <string-array name="freq_values">
+    <integer-array name="freq_values">
     	<item>60000</item>
     	<item>300000</item>
     	<item>600000</item>
     	<item>900000</item>
     	<item>1800000</item>
     	<item>3600000</item>
-    </string-array>
-    <string name="default_location_freq">300000</string>
-    <string name="default_traveltime_freq">900000</string>
-    <string name="default_advance_warning">900000</string>
+    </integer-array>
+    <integer name="default_location_freq">300000</integer>
+    <integer name="default_traveltime_freq">900000</integer>
+    <integer name="default_advance_warning">900000</integer>
         
     <string-array name="lookahead_entries">
     	<item>1 hour</item>
@@ -103,14 +103,14 @@
     	<item>6 hours</item>
     	<item>12 hours</item>
     </string-array>
-    <string-array name="lookahead_values">
+    <integer-array name="lookahead_values">
     	<item>3600000</item>
     	<item>7200000</item>
     	<item>10800000</item>
     	<item>21600000</item>
     	<item>43200000</item>
-    </string-array>
-    <string name="default_lookahead_window">7200000</string>
+    </integer-array>
+    <integer name="default_lookahead_window">7200000</integer>
         
     <string-array name="travel_mode_entries">
     	<item>Driving (default)</item>
@@ -142,13 +142,13 @@
     	<item>30 minutes</item>
     	<item>60 minutes</item>
     </string-array>
-    <string-array name="snooze_values">
+    <integer-array name="snooze_values">
     	<item>60000</item>
     	<item>300000</item>
     	<item>600000</item>
     	<item>900000</item>
     	<item>1800000</item>
     	<item>3600000</item>
-    </string-array>
-    <string name="default_snooze_duration">300000</string>
+    </integer-array>
+    <integer name="default_snooze_duration">300000</integer>
 </resources>
