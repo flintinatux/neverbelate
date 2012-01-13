@@ -17,19 +17,19 @@ public class PreferenceHelper {
 	protected enum NotificationMethod { ALERT, STATUS_BAR_ONLY }
 	
 	// Default preference values
-	private static final long 		DEFAULT_ADVANCE_WARNING = 900000;
+	private static final String 	DEFAULT_ADVANCE_WARNING = "900000";
 	private static final boolean 	DEFAULT_AVOID_HIGHWAYS = false;
 	private static final boolean	DEFAULT_AVOID_TOLLS = false;
 	private static final boolean 	DEFAULT_FINE_REQUIRED = false;
 	private static final boolean 	DEFAULT_INSISTENT = false;
-	private static final long 		DEFAULT_LOCATION_FREQ = 300000;
-	private static final long	 	DEFAULT_LOOKAHEAD_WINDOW = 7200000;
+	private static final String 	DEFAULT_LOCATION_FREQ = "300000";
+	private static final String	 	DEFAULT_LOOKAHEAD_WINDOW = "7200000";
 	private static final boolean 	DEFAULT_NEVERLATE_ENABLED = false;
 	private static final String	 	DEFAULT_NOTIFICATION_METHOD = "ALERT";
-	private static final long 		DEFAULT_SNOOZE_DURATION = 300000;
+	private static final String 	DEFAULT_SNOOZE_DURATION = "300000";
 	private static final boolean 	DEFAULT_TOS_ACCEPTED = false;
 	private static final String 	DEFAULT_TRAVEL_MODE = "driving";
-	private static final long 		DEFAULT_TRAVELTIME_FREQ = 90000;
+	private static final String 	DEFAULT_TRAVELTIME_FREQ = "90000";
 	private static final boolean	DEFAULT_VIBRATE = true;
 	private static final boolean 	DEFAULT_WARN_NO_LOCATION = false;
 	
@@ -58,65 +58,65 @@ public class PreferenceHelper {
 	}
 
 	/**
-	 * @return the avoidHighways
+	 * @return True if the user wishes to avoid highways.
 	 */
 	public boolean isAvoidHighways() {
 		return mPrefs.getBoolean(KEY_AVOID_HIGHWAYS, DEFAULT_AVOID_HIGHWAYS);
 	}
 
 	/**
-	 * @return the avoidTolls
+	 * @return True if the user wishes to avoid toll roads.
 	 */
 	public boolean isAvoidTolls() {
 		return mPrefs.getBoolean(KEY_AVOID_TOLLS, DEFAULT_AVOID_TOLLS);
 	}
 
 	/**
-	 * @return the advanceWarning
+	 * @return How long in advance to warn the user to leave, in milliseconds.
 	 */
 	public long getAdvanceWarning() {
-		return mPrefs.getLong(KEY_ADVANCE_WARNING, DEFAULT_ADVANCE_WARNING);
+		return Long.valueOf(mPrefs.getString(KEY_ADVANCE_WARNING, DEFAULT_ADVANCE_WARNING));
 	}
 
 	/**
-	 * @return the fineRequired
+	 * @return True if the user wishes only to use FINE_LOCATION sources.
 	 */
 	public boolean isFineRequired() {
 		return mPrefs.getBoolean(KEY_FINE_REQUIRED, DEFAULT_FINE_REQUIRED);
 	}
 
 	/**
-	 * @return the insistent
+	 * @return True if the users wishes to be pestered until they pay attention.
 	 */
 	public boolean isInsistent() {
 		return mPrefs.getBoolean(KEY_INSISTENT, DEFAULT_INSISTENT);
 	}
 	
 	/**
-	 * @return the location polling frequency
+	 * @return The location polling frequency, in milliseconds.
 	 */
 	public long getLocationFreq() {
-		return mPrefs.getLong(KEY_LOCATION_FREQ, DEFAULT_LOCATION_FREQ);
+		return Long.valueOf(mPrefs.getString(KEY_LOCATION_FREQ, DEFAULT_LOCATION_FREQ));
 	}
 
 	/**
-	 * @return the lookaheadWindow
+	 * @return How far ahead to search in the calendar for events, in milliseconds.
 	 */
 	public long getLookaheadWindow() {
-		return  mPrefs.getLong(KEY_LOOKAHEAD_WINDOW, DEFAULT_LOOKAHEAD_WINDOW);
+		return  Long.valueOf(mPrefs.getString(KEY_LOOKAHEAD_WINDOW, DEFAULT_LOOKAHEAD_WINDOW));
 	}
 
 	/**
-	 * @return the neverLateEnabled
+	 * @return True if NeverLate is enabled.
 	 */
 	public boolean isNeverLateEnabled() {
 		return mPrefs.getBoolean(KEY_NEVERLATE_ENABLED, DEFAULT_NEVERLATE_ENABLED);
 	}
 
 	/**
-	 * @param neverLateEnabled the neverLateEnabled to set
+	 * @param neverLateEnabled True to enable NeverLate, false to disable
 	 * 
-	 * @return true if NeverLate successfully enabled or disabled
+	 * @return True if NeverLate successfully enabled or disabled
 	 */
 	public boolean setNeverLateEnabled(boolean neverLateEnabled) {
 		SharedPreferences.Editor editor = mPrefs.edit();
@@ -124,7 +124,7 @@ public class PreferenceHelper {
 	}
 
 	/**
-	 * @return the notificationMethod
+	 * @return The preferred notification method, either with an ALERT, or by STATUS_BAR_ONLY.
 	 */
 	public NotificationMethod getNotificationMethod() {
 		return Enum.valueOf(NotificationMethod.class, 
@@ -132,23 +132,23 @@ public class PreferenceHelper {
 	}
 
 	/**
-	 * @return the snoozeDuration
+	 * @return How long to snooze before warning the user again, in milliseconds.
 	 */
 	public long getSnoozeDuration() {
-		return mPrefs.getLong(KEY_SNOOZE_DURATION, DEFAULT_SNOOZE_DURATION);
+		return Long.valueOf(mPrefs.getString(KEY_SNOOZE_DURATION, DEFAULT_SNOOZE_DURATION));
 	}
 
 	/**
-	 * @return the tosAccepted
+	 * @return True if the TOS have been accepted by the user.
 	 */
 	public boolean isTosAccepted() {
 		return mPrefs.getBoolean(KEY_TOS_ACCEPTED, DEFAULT_TOS_ACCEPTED);
 	}
 
 	/**
-	 * @param tosAccepted the tosAccepted to set
+	 * @param tosAccepted True to accept the TOS, false to reject.
 	 * 
-	 * @return true if the TOS Accepted flag is successfully set
+	 * @return True if the TOS Accepted flag is successfully set.
 	 */
 	public boolean setTosAccepted(boolean tosAccepted) {
 		SharedPreferences.Editor editor = mPrefs.edit();
@@ -156,28 +156,28 @@ public class PreferenceHelper {
 	}
 
 	/**
-	 * @return the travelMode
+	 * @return The preferred mode of travel, either "driving", "walking", or "bicycling".
 	 */
 	public String getTravelMode() {
 		return mPrefs.getString(KEY_TRAVEL_MODE, DEFAULT_TRAVEL_MODE);
 	}
 
 	/**
-	 * @return the traveltimeFreq
+	 * @return How frequently to check the next travel times, in milliseconds.
 	 */
 	public long getTraveltimeFreq() {
-		return mPrefs.getLong(KEY_TRAVELTIME_FREQ, DEFAULT_TRAVELTIME_FREQ);
+		return Long.valueOf(mPrefs.getString(KEY_TRAVELTIME_FREQ, DEFAULT_TRAVELTIME_FREQ));
 	}
 
 	/**
-	 * @return the vibrate
+	 * @return True if vibrate is enabled.
 	 */
 	public boolean isVibrate() {
 		return mPrefs.getBoolean(KEY_VIBRATE, DEFAULT_VIBRATE);
 	}
 
 	/**
-	 * @return the warnNoLocation
+	 * @return True if the user wishes to be warned when an upcoming event has no location specified.
 	 */
 	public boolean isWarnNoLocation() {
 		return mPrefs.getBoolean(KEY_WARN_NO_LOCATION, DEFAULT_WARN_NO_LOCATION);

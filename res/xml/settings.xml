@@ -19,7 +19,7 @@
 			android:dependency="neverlate_enabled"
 			android:entries="@array/freq_entries_5"
 			android:entryValues="@array/freq_values"
-			android:defaultValue="@integer/default_location_freq" />
+			android:defaultValue="@string/default_location_freq" />
 		<ListPreference
 			android:key="traveltime_freq"
 			android:title="Travel time lookup"
@@ -27,7 +27,7 @@
 			android:dependency="neverlate_enabled"
 			android:entries="@array/freq_entries_15"
 			android:entryValues="@array/freq_values"
-			android:defaultValue="@integer/default_traveltime_freq" />
+			android:defaultValue="@string/default_traveltime_freq" />
 		<ListPreference
 			android:key="advance_warning"
 			android:title="Advance warning"
@@ -35,7 +35,7 @@
 			android:dependency="neverlate_enabled"
 			android:entries="@array/freq_entries_15"
 			android:entryValues="@array/freq_values"
-			android:defaultValue="@integer/default_advance_warning" />
+			android:defaultValue="@string/default_advance_warning" />
 		<CheckBoxPreference
 			android:key="fine_required"
 			android:title="Require fine location"
@@ -53,7 +53,7 @@
 			android:dependency="neverlate_enabled"
 			android:entries="@array/lookahead_entries"
 			android:entryValues="@array/lookahead_values"
-			android:defaultValue="@integer/default_lookahead_window" />
+			android:defaultValue="@string/default_lookahead_window" />
 		<CheckBoxPreference
 			android:key="warn_no_location"
 			android:title="Warn location not found"
@@ -94,7 +94,7 @@
 			android:entryValues="@array/notify_values"
 			android:defaultValue="@string/default_notification_method" />
 		<ListPreference
-			android:defaultValue="@integer/default_snooze_duration"
+			android:defaultValue="@string/default_snooze_duration"
 			android:dependency="neverlate_enabled"
 			android:entries="@array/snooze_entries"
 			android:entryValues="@array/snooze_values"
