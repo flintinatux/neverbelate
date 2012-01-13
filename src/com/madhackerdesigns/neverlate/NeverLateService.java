@@ -389,10 +389,10 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 		
 		// Then notify user by their preferred method
 		switch(mPrefs.getNotificationMethod()) {
-		case PreferenceHelper.NOTIFY_BY_ALERT:
+		case ALERT:
 			// Notify user with alert dialog. Note that this will interrupt the user's current task.
 			startActivity(alertIntent);
-		case PreferenceHelper.NOTIFY_IN_STATUS_BAR:
+		case STATUS_BAR_ONLY:
 			// Build status bar notification to notify user immediately
 			Resources res = getResources();
 			int icon = R.drawable.ic_stat_notify_rabbit3;

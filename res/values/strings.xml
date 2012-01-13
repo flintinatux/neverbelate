@@ -130,7 +130,7 @@
     </string-array>
     <string-array name="notify_values">
     	<item>ALERT</item>
-    	<item>NOTIFICATION</item>
+    	<item>STATUS_BAR_ONLY</item>
     </string-array>
     <string name="default_notification_method">ALERT</string>
     

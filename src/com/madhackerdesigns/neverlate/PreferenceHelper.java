@@ -14,8 +14,7 @@ import android.preference.PreferenceManager;
 public class PreferenceHelper {
 
 	// Notification methods
-	protected final static int NOTIFY_BY_ALERT = 0;
-	protected final static int NOTIFY_IN_STATUS_BAR = 1;
+	protected enum NotificationMethod { ALERT, STATUS_BAR_ONLY }
 	
 	// Default preference values
 	private static final long 		DEFAULT_ADVANCE_WARNING = 900000;
@@ -26,7 +25,7 @@ public class PreferenceHelper {
 	private static final long 		DEFAULT_LOCATION_FREQ = 300000;
 	private static final long	 	DEFAULT_LOOKAHEAD_WINDOW = 7200000;
 	private static final boolean 	DEFAULT_NEVERLATE_ENABLED = false;
-	private static final int	 	DEFAULT_NOTIFICATION_METHOD = NOTIFY_BY_ALERT;
+	private static final String	 	DEFAULT_NOTIFICATION_METHOD = "ALERT";
 	private static final long 		DEFAULT_SNOOZE_DURATION = 300000;
 	private static final boolean 	DEFAULT_TOS_ACCEPTED = false;
 	private static final String 	DEFAULT_TRAVEL_MODE = "driving";
@@ -127,8 +126,9 @@ public class PreferenceHelper {
 	/**
 	 * @return the notificationMethod
 	 */
-	public int getNotificationMethod() {
-		return mPrefs.getInt(KEY_NOTIFICATION_METHOD, DEFAULT_NOTIFICATION_METHOD);
+	public NotificationMethod getNotificationMethod() {
+		return Enum.valueOf(NotificationMethod.class, 
+				mPrefs.getString(KEY_NOTIFICATION_METHOD, DEFAULT_NOTIFICATION_METHOD));
 	}
 
 	/**
