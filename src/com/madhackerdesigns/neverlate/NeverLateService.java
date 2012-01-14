@@ -181,6 +181,12 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 					continue;
 				}
 				
+				// TODO:  in the future, ask user if they want to add a location
+				if (eventLocation == null || eventLocation == "") { 
+					Log.d(LOG_TAG, "Event " + eventID + " does not have a location specified.");
+					continue; 
+				}
+				
 				// Query for existing alert entry
 				String selection = AlertsContract.Alerts.EVENT_ID + "=? AND " + 
 					AlertsContract.Alerts.BEGIN + "=?";
@@ -208,9 +214,6 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 				// Talk to me, baby!
 				Log.d(LOG_TAG, "Event location: " + eventLocation);
 				Log.d(LOG_TAG, "Begin time: " + FullDateTime(instanceBegin));
-				
-				// TODO:  in the future, ask user if they want to add a location
-				if (eventLocation == null || eventLocation == "") { continue; }
 				
 				// Build url to pull down directions from Google Directions API
 				Uri.Builder b = Uri.parse(DIRECTIONS_API_URL).buildUpon();
