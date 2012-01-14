@@ -344,6 +344,7 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 		} else {
 			// no calendar entries in the next lookaheadWindow, so wait til next time
 		}
+		instance.close();
 		releasePrefsAndServices();
 	}
 	

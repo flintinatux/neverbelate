@@ -4,7 +4,8 @@
 	android:key="base_settings"
 	android:orderingFromXml="true" >
 	
-	<CheckBoxPreference
+	<com.madhackerdesigns.neverlate.EnablePreference
+		android:id="@+id/btn_enable"
 		android:key="neverlate_enabled"
 		android:title="Enable NeverLate service"
 		android:summaryOn="NeverLate is enabled and will start at boot time"

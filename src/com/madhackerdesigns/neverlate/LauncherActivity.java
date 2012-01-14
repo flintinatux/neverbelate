@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.ImageView;
 
 import com.pontiflex.mobile.webview.sdk.AdManagerFactory;
 import com.pontiflex.mobile.webview.sdk.IAdManager;
@@ -82,7 +83,7 @@ public class LauncherActivity extends Activity {
 
 			public void onClick(View v) {
 				// Send user to the Settings menu
-				Intent intent = new Intent(getApplicationContext(), NeverLateSettings.class);
+				Intent intent = new Intent(LauncherActivity.this, NeverLateSettings.class);
 	        	startActivity(intent);
 			}
 			
@@ -109,6 +110,17 @@ public class LauncherActivity extends Activity {
 		((Button) findViewById(R.id.btn_tips)).setOnClickListener(comingSoonListener);
 		((Button) findViewById(R.id.btn_tutorial)).setOnClickListener(comingSoonListener);
 		
+		// TODO: Set the NeverLate logo to launch the testing activity, REMOVE BEFORE PUBLISHING!
+		ImageView logo = (ImageView) findViewById(R.id.logo);
+		logo.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				// Launch the testing activity
+				Intent i = new Intent(LauncherActivity.this, TestActivity.class);
+				startActivity(i);
+			}
+			
+		});
 	}
 
 	protected void shareNeverLate() {

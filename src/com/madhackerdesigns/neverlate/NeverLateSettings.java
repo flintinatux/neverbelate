@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
-import android.widget.Toast;
 
 /**
  * @author flintinatux
@@ -25,6 +24,7 @@ public class NeverLateSettings extends PreferenceActivity {
 		// pull preferences from prefs file
 		addPreferencesFromResource(R.xml.settings);
 		setTitle(R.string.app_title);
+		
 	}
 
 	/* (non-Javadoc)
