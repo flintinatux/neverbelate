@@ -67,7 +67,10 @@
     <string name="content_text">Click for traffic/event details!</string>
     <string name="more_text">more</string>
     <string name="ticker_text">You must leave soon to arrive on time at your next event!</string>
-    
+  
+<!-- NeverLateSettings -->
+	<string name="settings_instructions">Each setting below has a recommended value to balance battery life with performance, but feel free to change them to fit your schedule needs and transportation style.</string>
+    <string name="settings_instructions_title">Instructions</string>
     <string-array name="freq_entries_15">
     	<item>1 minute (dev only)</item>
     	<item>5 minutes</item>

@@ -38,4 +38,9 @@
 		<item name="android:layout_marginRight">5dip</item>
 		<item name="android:textSize">12sp</item>
 	</style>
+	
+	<style name="SettingsInstructions">
+	    <item name="android:layout_margin">10dip</item>
+	    <item name="android:textSize">12sp</item>
+	</style>
 </resources>
