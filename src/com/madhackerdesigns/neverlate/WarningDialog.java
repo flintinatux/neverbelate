@@ -66,7 +66,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	private Cursor mCursor;
 	private AlertQueryHandler mHandler;
 	private ViewSwitcher mSwitcher;
-	private boolean mTrafficViewOn = false;
+//	private boolean mTrafficViewOn = false;
 	private MyLocationOverlay mUserLocationOverlay;
 	
 	/* (non-Javadoc)
@@ -300,13 +300,13 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 
 	private void switchToAlertListView() {
 		mSwitcher.showPrevious();
-		mTrafficViewOn = false;
+//		mTrafficViewOn = false;
 		Log.d(LOG_TAG, "Switched to alert list view.");
 	}
 	
 	private void switchToTrafficView() {
 		mSwitcher.showNext();
-		mTrafficViewOn = true;
+//		mTrafficViewOn = true;
 		Log.d(LOG_TAG, "Switched to traffic view.");
 	}
 	

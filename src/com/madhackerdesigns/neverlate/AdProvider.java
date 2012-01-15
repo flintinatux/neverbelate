@@ -23,7 +23,6 @@ import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.UriMatcher;
-import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -566,11 +565,10 @@ public class AdProvider extends ContentProvider  {
                  * ad ID.
                  */
                 finalWhere =
-                		AdContract.Ads._ID +                      		 // The ID column name
-                        " = " +                                          // test for equality
-                        uri.getPathSegments().                           // the incoming ad ID
-                            get(AdContract.Ads.AD_ID_PATH_POSITION)
-                ;
+                		AdContract.Ads._ID +      // The ID column name
+                        " = " +                   // test for equality
+                        adId;                     // the incoming ad ID
+                
 
                 // If there were additional selection criteria, append them to the final WHERE
                 // clause

@@ -385,9 +385,6 @@ public class AlertsProvider extends ContentProvider  {
         	throw new NullPointerException("ContentValues initialValues must be provided");
         }
 
-        // Gets the current system time in milliseconds
-        Long now = Long.valueOf(System.currentTimeMillis());
-
         // If the values map doesn't contain the following values, throw IllegalArgumentException:
         // --> event_id, calendar_color, begin, end, location, duration, json
         if (	values.containsKey(AlertsContract.Alerts.EVENT_ID) == false ||
@@ -584,11 +581,10 @@ public class AlertsProvider extends ContentProvider  {
                  * alert ID.
                  */
                 finalWhere =
-                		AlertsContract.Alerts._ID +                      // The ID column name
-                        " = " +                                          // test for equality
-                        uri.getPathSegments().                           // the incoming alert ID
-                            get(AlertsContract.Alerts.ALERT_ID_PATH_POSITION)
-                ;
+                		AlertsContract.Alerts._ID +        // The ID column name
+                        " = " +                            // test for equality
+                        alertId;                           // the incoming alert ID
+                        
 
                 // If there were additional selection criteria, append them to the final WHERE
                 // clause

@@ -3,11 +3,6 @@
  */
 package com.madhackerdesigns.neverlate;
 
-import java.util.Date;
-
-import android.content.ContentResolver;
-import android.content.Context;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 

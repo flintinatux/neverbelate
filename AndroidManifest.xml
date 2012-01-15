@@ -3,9 +3,16 @@
       package="com.madhackerdesigns.neverlate"
       android:versionCode="1"
       android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="7" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_CALENDAR" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
     
     <application android:label="@string/app_name" android:debuggable="true" android:icon="@drawable/ic_launcher_rabbit3">
     
@@ -49,16 +56,4 @@
 
 </application>
     
-    <uses-sdk android:minSdkVersion="7" />
-
-
-
-
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission><uses-permission android:name="android.permission.INTERNET"></uses-permission>
-<uses-permission android:name="android.permission.READ_CALENDAR"></uses-permission>
-<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission><uses-permission android:name="android.permission.VIBRATE"></uses-permission>
-
-<uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
-
-
 </manifest> 

@@ -426,6 +426,7 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 			notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
 			notification.flags |= Notification.FLAG_SHOW_LIGHTS;
 			notification.defaults |= Notification.DEFAULT_LIGHTS;
+			notification.deleteIntent = deleteIntent;
 //			notification.number = total;
 			if (mPrefs.isVibrate()) { notification.vibrate = new long[] {0, 250, 250, 250}; }
 			if (mPrefs.isInsistent()) { notification.flags |= Notification.FLAG_INSISTENT; }
