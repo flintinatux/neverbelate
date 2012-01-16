@@ -7,7 +7,6 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.widget.Toast;
 
 public class StartupReceiver extends BroadcastReceiver {
 	
@@ -43,13 +42,13 @@ public class StartupReceiver extends BroadcastReceiver {
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.MINUTE, 1);
 		if (mPrefs.isNeverLateEnabled()) {
-			Toast.makeText(context, "NeverLate is enabled", Toast.LENGTH_SHORT).show();
+//			Toast.makeText(context, "NeverLate is enabled", Toast.LENGTH_SHORT).show();
 			alarm.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),
 					mPrefs.getTraveltimeFreq(), travelTimePending);
 //			alarm.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(),
 //					locationFreq, locationPending);
 		} else {
-			Toast.makeText(context, "NeverLate is disabled", Toast.LENGTH_SHORT).show();
+//			Toast.makeText(context, "NeverLate is disabled", Toast.LENGTH_SHORT).show();
 		}
 		
 	}

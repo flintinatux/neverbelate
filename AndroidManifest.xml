@@ -51,8 +51,8 @@
 </activity><receiver android:name="WakefulServiceReceiver"></receiver>
 <provider android:exported="false" android:name="AlertsProvider" android:authorities="@string/alerts_contract_authority"></provider>
 <activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation"></activity>
-<activity android:name="com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity"/>
-<activity android:name="com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity" android:configChanges="keyboardHidden"/>
+<activity android:name="com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity" android:taskAffinity="" android:stateNotNeeded="true" android:excludeFromRecents="true"/>
+<activity android:name="com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity" android:taskAffinity="" android:configChanges="keyboardHidden" android:stateNotNeeded="true" android:excludeFromRecents="true"/>
 
 </application>
     

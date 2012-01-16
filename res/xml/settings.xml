@@ -11,13 +11,13 @@
 		android:title="@string/settings_instructions_title" />
 		
 	<PreferenceCategory android:title="Performance Settings" >
-		<ListPreference
-			android:key="location_freq"
-			android:title="Location polling"
-			android:summary="How often to poll for your current location"
-			android:entries="@array/freq_entries_5"
-			android:entryValues="@array/freq_values"
-			android:defaultValue="@string/default_location_freq" />
+<!-- 		<ListPreference -->
+<!-- 			android:key="location_freq" -->
+<!-- 			android:title="Location polling" -->
+<!-- 			android:summary="How often to poll for your current location" -->
+<!-- 			android:entries="@array/freq_entries_5" -->
+<!-- 			android:entryValues="@array/freq_values" -->
+<!-- 			android:defaultValue="@string/default_location_freq" /> -->
 		<ListPreference
 			android:key="traveltime_freq"
 			android:title="Travel time lookup"
