@@ -39,4 +39,9 @@ public interface ServiceCommander {
 	 * Command flag that instructs the NeverLateService to perform startup initialization activities.
 	 */
 	int STARTUP = 5;
+	
+	/**
+	 * Command flag that instructs the NeverLateService to stop the insistent ringing.
+	 */
+	int STOP_INSISTENT = 6;
 }

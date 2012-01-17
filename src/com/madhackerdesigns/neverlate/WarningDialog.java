@@ -115,6 +115,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 			public void onClick(View v) {
 				// Switch to the traffic view and setup the MapView
 				Log.d(LOG_TAG, "'View Traffic' button clicked, switching to traffic view...");
+				stopInsistentAlarm();
 				loadTrafficView();
 			}
 			
@@ -128,8 +129,6 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		AdView adView = (AdView) findViewById(R.id.ad_view);
 	    adView.loadAd(request);
 	    Log.d(LOG_TAG, "AdMob banner loaded.");
-	    
-
 	}
 	
 	private void loadAlertList() {
@@ -296,6 +295,13 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		Intent cancelIntent = new Intent(context, NeverLateService.class);
 		cancelIntent.putExtra(EXTRA_SERVICE_COMMAND, DISMISS);
 		WakefulIntentService.sendWakefulWork(context, cancelIntent);
+	}
+	
+	private void stopInsistentAlarm() {
+		Context context = getApplicationContext();
+		Intent i = new Intent(context, NeverLateService.class);
+		i.putExtra(EXTRA_SERVICE_COMMAND, STOP_INSISTENT);
+		WakefulIntentService.sendWakefulWork(context, i);
 	}
 
 	private void switchToAlertListView() {

@@ -20,7 +20,6 @@ import android.widget.TextView;
 public class EventListAdapter extends ResourceCursorAdapter {
 
 	private Context mContext;
-//	private LayoutInflater mInflater;
 	private int mDateTimeFlags = 0;
 	private String mMinutesAway;
 	
@@ -29,7 +28,6 @@ public class EventListAdapter extends ResourceCursorAdapter {
 		
 		// Store away the context and an inflater
 		this.mContext = context;
-//		this.mInflater = LayoutInflater.from(context);
 		
 		// Pre-load some resources to save time later
 		mDateTimeFlags |= DateUtils.FORMAT_SHOW_TIME;
@@ -53,7 +51,6 @@ public class EventListAdapter extends ResourceCursorAdapter {
 		long end = cursor.getLong(AlertsHelper.PROJ_END);
 		String location = cursor.getString(AlertsHelper.PROJ_LOCATION);
 		long duration = cursor.getLong(AlertsHelper.PROJ_DURATION);
-//		String json = cursor.getString(AlertsHelper.PROJ_JSON);
 		
 		// Set the color of the vertical stripe
 		holder.stripe.setBackgroundColor(color);
@@ -107,24 +104,6 @@ public class EventListAdapter extends ResourceCursorAdapter {
 		return view;
 	}
 
-	/* (non-Javadoc)
-	 * @see android.widget.CursorAdapter#newView(android.content.Context, android.database.Cursor, android.view.ViewGroup)
-	 */
-//	@Override
-//	public View newView(Context context, Cursor cursor, ViewGroup parent) {
-//		// Inflate a new view, attach a ViewHolder, and bind the cursor data
-//		View view = mInflater.inflate(R.layout.event_list_item, parent);
-//		ViewHolder holder = new ViewHolder();
-//		holder.stripe = (View) view.findViewById(R.id.vertical_stripe);
-//		holder.title = (TextView) view.findViewById(R.id.event_title);
-//		holder.when = (TextView) view.findViewById(R.id.event_time);
-//		holder.where = (TextView) view.findViewById(R.id.event_location);
-//		holder.travelTime = (TextView) view.findViewById(R.id.travel_time);
-//		view.setTag(holder);
-//		bindView(view, context, cursor);
-//		return view;
-//	}
-	
 	private static class ViewHolder {
 		View stripe;
 		TextView title;

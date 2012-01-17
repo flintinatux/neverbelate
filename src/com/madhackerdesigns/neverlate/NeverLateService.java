@@ -104,6 +104,9 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 		case STARTUP:
 			// TODO: Do we need to do anything here anymore?
 			break;
+		case STOP_INSISTENT:
+			// TODO: Update the notification to turn off the insistent flag
+			break;
 		default:
 			break;
 		}
@@ -211,7 +214,13 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 					alertID = alertCursor.getString(AlertsHelper.PROJ_ID);
 				}
 				
+				// Check for empty event title, and give it a default if needed
+				if (eventTitle == null || eventTitle.length() <= 0) {
+					eventTitle = getResources().getString(R.string.untitled_event);
+				}
+				
 				// Talk to me, baby!
+				Log.d(LOG_TAG, "Event title: " + eventTitle);
 				Log.d(LOG_TAG, "Event location: " + eventLocation);
 				Log.d(LOG_TAG, "Begin time: " + FullDateTime(instanceBegin));
 				

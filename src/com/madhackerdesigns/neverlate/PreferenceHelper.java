@@ -20,7 +20,7 @@ public class PreferenceHelper {
 	private static final String 	DEFAULT_ADVANCE_WARNING = "900000";
 	private static final boolean 	DEFAULT_AVOID_HIGHWAYS = false;
 	private static final boolean	DEFAULT_AVOID_TOLLS = false;
-	private static final boolean 	DEFAULT_FINE_REQUIRED = false;
+//	private static final boolean 	DEFAULT_FINE_REQUIRED = false;
 	private static final boolean 	DEFAULT_INSISTENT = false;
 	private static final String 	DEFAULT_LOCATION_FREQ = "300000";
 	private static final String	 	DEFAULT_LOOKAHEAD_WINDOW = "7200000";
@@ -37,7 +37,7 @@ public class PreferenceHelper {
 	private final static String KEY_ADVANCE_WARNING = "advance_warning";
 	private final static String KEY_AVOID_HIGHWAYS = "avoid_highways";
 	private final static String KEY_AVOID_TOLLS = "avoid_tolls";
-	private final static String KEY_FINE_REQUIRED = "fine_required";
+//	private final static String KEY_FINE_REQUIRED = "fine_required";
 	private final static String KEY_INSISTENT = "insistent";
 	private final static String KEY_LOCATION_FREQ = "location_freq";
 	private final static String KEY_LOOKAHEAD_WINDOW = "lookahead_window";
@@ -78,12 +78,12 @@ public class PreferenceHelper {
 		return Long.valueOf(mPrefs.getString(KEY_ADVANCE_WARNING, DEFAULT_ADVANCE_WARNING));
 	}
 
-	/**
-	 * @return True if the user wishes only to use FINE_LOCATION sources.
-	 */
-	public boolean isFineRequired() {
-		return mPrefs.getBoolean(KEY_FINE_REQUIRED, DEFAULT_FINE_REQUIRED);
-	}
+//	/**
+//	 * @return True if the user wishes only to use FINE_LOCATION sources.
+//	 */
+//	public boolean isFineRequired() {
+//		return mPrefs.getBoolean(KEY_FINE_REQUIRED, DEFAULT_FINE_REQUIRED);
+//	}
 
 	/**
 	 * @return True if the users wishes to be pestered until they pay attention.

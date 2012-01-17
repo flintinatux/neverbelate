@@ -21,7 +21,7 @@
 		<ListPreference
 			android:key="traveltime_freq"
 			android:title="Travel time lookup"
-			android:summary="How often to determine the travel time from your current location to your next event"
+			android:summary="How often to check the travel time from your current location to your next event"
 			android:entries="@array/freq_entries_15"
 			android:entryValues="@array/freq_values"
 			android:defaultValue="@string/default_traveltime_freq" />
@@ -32,12 +32,12 @@
 			android:entries="@array/freq_entries_15"
 			android:entryValues="@array/freq_values"
 			android:defaultValue="@string/default_advance_warning" />
-		<CheckBoxPreference
-			android:key="fine_required"
-			android:title="Require fine location"
-			android:summaryOn="All notifications are disabled if fine location not available\n(Not Recommended!)"
-			android:summaryOff="Will default to coarse or last known location if fine location not available"
-			android:defaultValue="@bool/default_fine_required" />
+<!-- 		<CheckBoxPreference -->
+<!-- 			android:key="fine_required" -->
+<!-- 			android:title="Require fine location" -->
+<!-- 			android:summaryOn="All notifications are disabled if fine location not available\n(Not Recommended!)" -->
+<!-- 			android:summaryOff="Will default to coarse or last known location if fine location not available" -->
+<!-- 			android:defaultValue="@bool/default_fine_required" /> -->
 	</PreferenceCategory>
 	
 	<PreferenceCategory android:title="Calendar Settings">
