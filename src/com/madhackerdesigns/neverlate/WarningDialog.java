@@ -323,7 +323,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 			mInsistentStopped = true;
 			Context context = getApplicationContext();
 			Intent i = new Intent(context, NeverLateService.class);
-			i.putExtra(EXTRA_SERVICE_COMMAND, STOP_INSISTENT);
+			i.putExtra(EXTRA_SERVICE_COMMAND, SILENCE);
 			WakefulIntentService.sendWakefulWork(context, i);
 		}
 	}

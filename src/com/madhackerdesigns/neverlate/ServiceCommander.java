@@ -43,5 +43,5 @@ public interface ServiceCommander {
 	/**
 	 * Command flag that instructs the NeverLateService to stop the insistent ringing.
 	 */
-	int STOP_INSISTENT = 6;
+	int SILENCE = 6;
 }

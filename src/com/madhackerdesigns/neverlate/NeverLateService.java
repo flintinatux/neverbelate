@@ -45,8 +45,8 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 	private static final float MARGIN = (float) 1.25;			// accuracy margin = 25%
 	private static final int NOTIFICATION_ID = 1;
 	
-	private static final boolean INSISTENT_ALLOWED = true;
-	private static final boolean INSISTENT_DENIED = false;
+	private static final boolean OUT_LOUD = true;
+	private static final boolean SILENTLY = false;
 
 	// url and possible return statuses for Directions API
 	private static final String DIRECTIONS_API_URL = "http://maps.googleapis.com/maps/api/directions/json";
@@ -102,14 +102,14 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 			break;
 		case NOTIFY:
 			// Use extras from intent to notify user
-			notifyUserNow(INSISTENT_ALLOWED);
+			notifyUserNow();
 			break;
 		case STARTUP:
 			// TODO: Do we need to do anything here anymore?
 			break;
-		case STOP_INSISTENT:
-			// Update the notification to turn off the insistent flag
-			notifyUserNow(INSISTENT_DENIED);
+		case SILENCE:
+			// Send new notification without ringtone, vibration, or insistence
+			notifyUser(SILENTLY);
 			break;
 		default:
 			break;
@@ -316,7 +316,7 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 							if (warnTime <= mNow) {
 								// Warn user immediately if warnTime is before now
 								Log.d(LOG_TAG, "Notify the user now about event " + eventID);
-								notifyUserNow(INSISTENT_ALLOWED);
+								notifyUserNow();
 							} else {
 								// Otherwise, set alarm to warn user at future warnTime
 								Log.d(LOG_TAG, "Notify the user later about event " + eventID);
@@ -375,7 +375,26 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 		alarm.set(AlarmManager.RTC_WAKEUP, warnTime, alarmIntent);
 	}
 	
-	private void notifyUserNow(boolean allowInsistentAlarm) {
+	private void notifyUserNow() {
+		// Notify user by their preferred method
+		switch(mPrefs.getNotificationMethod()) {
+		case ALERT:
+			// Notify user with alert dialog. Note that this will interrupt the user's current task.
+			startActivity(getWarningIntent());
+		case STATUS_BAR_ONLY:
+			// Notify user with status bar notification.
+			notifyUser(OUT_LOUD);
+		}
+	}
+	
+	private Intent getWarningIntent() {
+		Intent alertIntent = new Intent(getApplicationContext(), WarningDialog.class);
+		int flags = 0;
+		flags |= Intent.FLAG_ACTIVITY_NEW_TASK;
+		return alertIntent.setFlags(flags);
+	}
+	
+	private void notifyUser(boolean outLoud) {
 		// Get the application context first
 		Context context = getApplicationContext();
 		Log.d(LOG_TAG, "Notifying user now of upcoming events!");
@@ -398,56 +417,43 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 		}
 		cursor.close();
 		
-		// Build intent to open WarningDialog with the correct event instance info
-		Intent alertIntent = new Intent(context, WarningDialog.class);
-		int flags = 0;
-		flags |= Intent.FLAG_ACTIVITY_NEW_TASK;
-		alertIntent.setFlags(flags);
+		// Build status bar notification to notify user immediately
+		Resources res = getResources();
+		int icon = R.drawable.ic_stat_notify_rabbit3;
+		CharSequence tickerText = res.getString(R.string.ticker_text);
+		long when = System.currentTimeMillis();
+		Notification notification = new Notification(icon, tickerText, when);
 		
-		// Then notify user by their preferred method
-		switch(mPrefs.getNotificationMethod()) {
-		case ALERT:
-			// Notify user with alert dialog. Note that this will interrupt the user's current task.
-			startActivity(alertIntent);
-		case STATUS_BAR_ONLY:
-			// Build status bar notification to notify user immediately
-			Resources res = getResources();
-			int icon = R.drawable.ic_stat_notify_rabbit3;
-			CharSequence tickerText = res.getString(R.string.ticker_text);
-			long when = System.currentTimeMillis();
-			Notification notification = new Notification(icon, tickerText, when);
-			
-			// Pull application resources to fill notification fields
-			String contentTitle = res.getString(R.string.content_title);
-			contentTitle += " " + eventTitle;
-			String contentText = "";
-			if (total > 1) { 
-//				contentText += "(+" + (total-1) + " " + res.getString(R.string.more_text) + ")  ";
-				contentText += "(+" + (total-1) + ")  ";
-			}
-			contentText += res.getString(R.string.content_text);
-			
-			// Build pending intent for notification click action
-			PendingIntent contentIntent = PendingIntent.getActivity(context, 0, alertIntent, 0);
-			
-			// Build pending intent for "Clear All" action
-			Intent i = new Intent(getApplicationContext(), WakefulServiceReceiver.class);
-			i.putExtra(EXTRA_SERVICE_COMMAND, CLEAR_ALL);
-			PendingIntent deleteIntent = PendingIntent.getBroadcast(context, 0, i, 0);
-			
-			// Push notification to NotificationManager
-			notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
-			notification.flags |= Notification.FLAG_SHOW_LIGHTS;
-			notification.defaults |= Notification.DEFAULT_LIGHTS;
-			notification.deleteIntent = deleteIntent;
-			notification.sound = mPrefs.getRingtone();
-			if (mPrefs.isVibrate()) { notification.vibrate = new long[] {0, 250, 250, 250}; }
-			if (allowInsistentAlarm) {
-				if (mPrefs.isInsistent()) { notification.flags |= Notification.FLAG_INSISTENT; }
-			}
-			mNotificationManager.notify(NOTIFICATION_ID, notification);
-			return;
+		// Pull application resources to fill notification fields
+		String contentTitle = res.getString(R.string.content_title);
+		contentTitle += " " + eventTitle;
+		String contentText = "";
+		if (total > 1) { 
+//			contentText += "(+" + (total-1) + " " + res.getString(R.string.more_text) + ")  ";
+			contentText += "(+" + (total-1) + ")  ";
 		}
+		contentText += res.getString(R.string.content_text);
+		
+		// Build pending intent for notification click action
+		Intent alertIntent = getWarningIntent();
+		PendingIntent contentIntent = PendingIntent.getActivity(context, 0, alertIntent, 0);
+		
+		// Build pending intent for "Clear All" action
+		Intent i = new Intent(getApplicationContext(), WakefulServiceReceiver.class);
+		i.putExtra(EXTRA_SERVICE_COMMAND, CLEAR_ALL);
+		PendingIntent deleteIntent = PendingIntent.getBroadcast(context, 0, i, 0);
+		
+		// Push notification to NotificationManager
+		notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
+		notification.flags |= Notification.FLAG_SHOW_LIGHTS;
+		notification.defaults |= Notification.DEFAULT_LIGHTS;
+		notification.deleteIntent = deleteIntent;
+		if (outLoud) { 
+			notification.sound = mPrefs.getRingtone();
+			notification.vibrate = new long[] {0, 250, 250, 250};
+			notification.flags |= Notification.FLAG_INSISTENT;
+		}
+		mNotificationManager.notify(NOTIFICATION_ID, notification);
 	}
 
 	public Location getCurrentLocation() {
