@@ -44,6 +44,9 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 	private static final long DELTA = 5*60*1000;				// age delta = 5 minutes
 	private static final float MARGIN = (float) 1.25;			// accuracy margin = 25%
 	private static final int NOTIFICATION_ID = 1;
+	
+	private static final boolean INSISTENT_ALLOWED = true;
+	private static final boolean INSISTENT_DENIED = false;
 
 	// url and possible return statuses for Directions API
 	private static final String DIRECTIONS_API_URL = "http://maps.googleapis.com/maps/api/directions/json";
@@ -99,13 +102,14 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 			break;
 		case NOTIFY:
 			// Use extras from intent to notify user
-			notifyUserNow();
+			notifyUserNow(INSISTENT_ALLOWED);
 			break;
 		case STARTUP:
 			// TODO: Do we need to do anything here anymore?
 			break;
 		case STOP_INSISTENT:
-			// TODO: Update the notification to turn off the insistent flag
+			// Update the notification to turn off the insistent flag
+			notifyUserNow(INSISTENT_DENIED);
 			break;
 		default:
 			break;
@@ -312,7 +316,7 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 							if (warnTime <= mNow) {
 								// Warn user immediately if warnTime is before now
 								Log.d(LOG_TAG, "Notify the user now about event " + eventID);
-								notifyUserNow();
+								notifyUserNow(INSISTENT_ALLOWED);
 							} else {
 								// Otherwise, set alarm to warn user at future warnTime
 								Log.d(LOG_TAG, "Notify the user later about event " + eventID);
@@ -371,7 +375,7 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 		alarm.set(AlarmManager.RTC_WAKEUP, warnTime, alarmIntent);
 	}
 	
-	private void notifyUserNow() {
+	private void notifyUserNow(boolean allowInsistentAlarm) {
 		// Get the application context first
 		Context context = getApplicationContext();
 		Log.d(LOG_TAG, "Notifying user now of upcoming events!");
@@ -436,9 +440,11 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 			notification.flags |= Notification.FLAG_SHOW_LIGHTS;
 			notification.defaults |= Notification.DEFAULT_LIGHTS;
 			notification.deleteIntent = deleteIntent;
-//			notification.number = total;
+			notification.sound = mPrefs.getRingtone();
 			if (mPrefs.isVibrate()) { notification.vibrate = new long[] {0, 250, 250, 250}; }
-			if (mPrefs.isInsistent()) { notification.flags |= Notification.FLAG_INSISTENT; }
+			if (allowInsistentAlarm) {
+				if (mPrefs.isInsistent()) { notification.flags |= Notification.FLAG_INSISTENT; }
+			}
 			mNotificationManager.notify(NOTIFICATION_ID, notification);
 			return;
 		}

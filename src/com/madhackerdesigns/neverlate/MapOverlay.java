@@ -31,10 +31,10 @@ public class MapOverlay extends ItemizedOverlay<OverlayItem> {
 		populate();
 	}
 	
-//	public void clearOverlays() {
-//		mOverlays.clear();
-//		populate();
-//	}
+	public void clearOverlays() {
+		mOverlays.clear();
+		populate();
+	}
 
 	@Override
 	protected OverlayItem createItem(int i) {

@@ -5,7 +5,9 @@ package com.madhackerdesigns.neverlate;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 
 /**
  * @author flintinatux
@@ -26,6 +28,7 @@ public class PreferenceHelper {
 	private static final String	 	DEFAULT_LOOKAHEAD_WINDOW = "7200000";
 	private static final boolean 	DEFAULT_NEVERLATE_ENABLED = false;
 	private static final String	 	DEFAULT_NOTIFICATION_METHOD = "ALERT";
+	private static final String		DEFAULT_RINGTONE = Settings.System.DEFAULT_ALARM_ALERT_URI.toString();
 	private static final String 	DEFAULT_SNOOZE_DURATION = "300000";
 	private static final boolean 	DEFAULT_TOS_ACCEPTED = false;
 	private static final String 	DEFAULT_TRAVEL_MODE = "driving";
@@ -43,6 +46,7 @@ public class PreferenceHelper {
 	private final static String KEY_LOOKAHEAD_WINDOW = "lookahead_window";
 	private final static String KEY_NEVERLATE_ENABLED = "neverlate_enabled";
 	private final static String KEY_NOTIFICATION_METHOD = "notification_method";
+	private final static String KEY_RINGTONE = "ringtone";
 	private final static String KEY_SNOOZE_DURATION = "snooze_duration";
 	private final static String KEY_TOS_ACCEPTED = "tos_accepted";
 	private final static String KEY_TRAVEL_MODE = "travel_mode";
@@ -129,6 +133,13 @@ public class PreferenceHelper {
 	public NotificationMethod getNotificationMethod() {
 		return Enum.valueOf(NotificationMethod.class, 
 				mPrefs.getString(KEY_NOTIFICATION_METHOD, DEFAULT_NOTIFICATION_METHOD));
+	}
+	
+	/**
+	 * @return The ringtone set by the user.
+	 */
+	public Uri getRingtone() {
+		return Uri.parse(mPrefs.getString(KEY_RINGTONE, DEFAULT_RINGTONE));
 	}
 
 	/**

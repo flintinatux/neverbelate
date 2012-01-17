@@ -92,7 +92,7 @@
 		<RingtonePreference
 			android:key="ringtone"
 			android:title="Select ringtone"
-			android:ringtoneType="alarm"
+			android:ringtoneType="all"
 			android:showDefault="true"
 			android:showSilent="true" />
 		<CheckBoxPreference

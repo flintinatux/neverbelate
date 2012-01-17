@@ -24,6 +24,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -65,6 +67,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	// other fields
 	private Cursor mCursor;
 	private AlertQueryHandler mHandler;
+	private boolean mInsistentStopped;
 	private ViewSwitcher mSwitcher;
 //	private boolean mTrafficViewOn = false;
 	private MyLocationOverlay mUserLocationOverlay;
@@ -182,6 +185,14 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 						departureString = "NOW!";
 					}
 					departureWindow.setText(departureString);
+					departureWindow.setOnClickListener(new OnClickListener() {
+
+						public void onClick(View v) {
+							// Stop insistent alarm
+							stopInsistentAlarm();
+						}
+						
+					});
 					
 					// Load the copyrights
 					HashMap<String, String> hash = new HashMap<String, String>();
@@ -205,6 +216,15 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 							R.layout.event_list_item, cursor, true);
 					ListView lv = (ListView) findViewById(R.id.list_view);
 					lv.setAdapter(adapter);
+					lv.setOnItemClickListener(new OnItemClickListener() {
+
+						public void onItemClick(AdapterView<?> arg0, View arg1,
+								int arg2, long arg3) {
+							// Stop insistent alarm
+							stopInsistentAlarm();
+						}
+						
+					});
 				} else {
 					// TODO: Do something else safe.  This really shouldn't happen, though.
 				}
@@ -298,10 +318,14 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	}
 	
 	private void stopInsistentAlarm() {
-		Context context = getApplicationContext();
-		Intent i = new Intent(context, NeverLateService.class);
-		i.putExtra(EXTRA_SERVICE_COMMAND, STOP_INSISTENT);
-		WakefulIntentService.sendWakefulWork(context, i);
+		Log.d(LOG_TAG, "Stopping insistent alarm.");
+		if (!mInsistentStopped) {
+			mInsistentStopped = true;
+			Context context = getApplicationContext();
+			Intent i = new Intent(context, NeverLateService.class);
+			i.putExtra(EXTRA_SERVICE_COMMAND, STOP_INSISTENT);
+			WakefulIntentService.sendWakefulWork(context, i);
+		}
 	}
 
 	private void switchToAlertListView() {
