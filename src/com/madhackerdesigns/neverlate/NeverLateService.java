@@ -114,6 +114,7 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 		default:
 			break;
 		}
+		releasePrefsAndServices();
 	}
 
 	private void dismissAllAlerts() {
@@ -361,7 +362,6 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 			// no calendar entries in the next lookaheadWindow, so wait til next time
 		}
 		instance.close();
-		releasePrefsAndServices();
 	}
 	
 	private void notifyUserLater(long warnTime) {
@@ -453,8 +453,8 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 		notification.deleteIntent = deleteIntent;
 		if (outLoud) { 
 			notification.sound = mPrefs.getRingtone();
-			notification.vibrate = new long[] {0, 250, 250, 250};
-			notification.flags |= Notification.FLAG_INSISTENT;
+			if (mPrefs.isVibrate()) { notification.vibrate = new long[] {0, 250, 250, 250}; }
+			if (mPrefs.isInsistent()) { notification.flags |= Notification.FLAG_INSISTENT; }
 		}
 		mNotificationManager.notify(NOTIFICATION_ID, notification);
 	}

@@ -31,7 +31,7 @@ public class LauncherActivity extends Activity {
 	private static final int RESULT_TOS = 0;
 	
 	// Registration settings
-	private static final int LAUNCH_INTERVAL = 1;
+	private static final int LAUNCH_INTERVAL = 0;
 
 	private static final int DLG_COMING_SOON = 0;
 	

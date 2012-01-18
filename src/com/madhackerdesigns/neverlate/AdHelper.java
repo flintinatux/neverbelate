@@ -14,7 +14,7 @@ public class AdHelper {
 
 	// AdHelper SharedPreferences file and ad frequency
 	private static final String AD_HELPER_VALUES = "ad_helper_values";
-	private static final long AD_FREQUENCY = 1;		// show add every 4th use
+	private static final long AD_FREQUENCY = 4;		// show add every 4th use
 	
 	// Keys for AdHelper SharedPreference values
 	private static final String CURRENT = "current";				// (long) current number of warnings dismissed
@@ -30,7 +30,7 @@ public class AdHelper {
 	// Default AdHelper data values
 	private static final long DEF_CURRENT = 0;					// 0 = no warnings have been dismissed yet
 	private static final long DEF_AD_LAST = 0;					// 0 = no ads have been shown yet
-	private static final long DEF_AD_NEXT = 0;					// 4 = show first ad on 4th use
+	private static final long DEF_AD_NEXT = 2;					// 4 = show first ad on 4th use
 	private static final long DEF_FIB_LAST = 2;					// 2 = last number in fibonacci sequence
 	private static final long DEF_FIB_NEXT = 3;					// 3 = next number in fibonacci sequence
 	private static final long DEF_REGISTER_LAST = 0;			// 0 = request registration on first use

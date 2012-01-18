@@ -67,7 +67,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	// other fields
 	private Cursor mCursor;
 	private AlertQueryHandler mHandler;
-	private boolean mInsistentStopped;
+	private boolean mInsistentStopped = false;
 	private ViewSwitcher mSwitcher;
 //	private boolean mTrafficViewOn = false;
 	private MyLocationOverlay mUserLocationOverlay;
@@ -407,7 +407,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		bounds.addPoint(userLoc.getLatitudeE6(), userLoc.getLongitudeE6());
 		
 		// Create an overlay with a green flag for the user location
-		Drawable greenDrawable = this.getResources().getDrawable(R.drawable.flag_green);
+		Drawable greenDrawable = this.getResources().getDrawable(R.drawable.flag_blue);
 		MapOverlay greenOverlay = new MapOverlay(context, greenDrawable);
 		greenOverlay.addOverlay(new OverlayItem(userLoc, null, null));
 		
