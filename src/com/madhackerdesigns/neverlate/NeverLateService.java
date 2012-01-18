@@ -395,6 +395,9 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 	}
 	
 	private void notifyUser(boolean outLoud) {
+		// Cancel any existing notification first
+		mNotificationManager.cancel(NOTIFICATION_ID);
+		
 		// Get the application context first
 		Context context = getApplicationContext();
 		Log.d(LOG_TAG, "Notifying user now of upcoming events!");

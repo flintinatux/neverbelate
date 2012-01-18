@@ -344,6 +344,9 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	 * 
 	 */
 	private void loadTrafficView() {
+		// Get the application context
+		Context context = getApplicationContext();
+		
 		// Get mapview and add zoom controls
 		MapView mapView = (MapView) findViewById(R.id.mapview);
 		mapView.setBuiltInZoomControls(true);		
@@ -364,8 +367,8 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		// Generate the map overlays
 		List<Overlay> mapOverlays = mapView.getOverlays();
 		mapOverlays.clear();
-		Drawable markerDrawable = this.getResources().getDrawable(R.drawable.flag_red);
-		MapOverlay markerOverlay = new MapOverlay(getApplicationContext(), markerDrawable);
+		Drawable redDrawable = this.getResources().getDrawable(R.drawable.flag_red);
+		MapOverlay redOverlay = new MapOverlay(context, redDrawable);
 
 		// Parse the json directions data
 		Cursor cursor = mCursor;
@@ -388,7 +391,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 				String title = cursor.getString(AlertsHelper.PROJ_TITLE);
 				String location = cursor.getString(AlertsHelper.PROJ_LOCATION);
 				OverlayItem destinationItem = new OverlayItem(destPoint, title, location);
-				markerOverlay.addOverlay(destinationItem);
+				redOverlay.addOverlay(destinationItem);
 				
 				// Compare latitude and longitude to other points
 				bounds.addPoint(latDestE6, lonDestE6);
@@ -403,9 +406,17 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		GeoPoint userLoc = mUserLocationOverlay.getMyLocation();
 		bounds.addPoint(userLoc.getLatitudeE6(), userLoc.getLongitudeE6());
 		
+		// Create an overlay with a green flag for the user location
+		Drawable greenDrawable = this.getResources().getDrawable(R.drawable.flag_green);
+		MapOverlay greenOverlay = new MapOverlay(context, greenDrawable);
+		greenOverlay.addOverlay(new OverlayItem(userLoc, null, null));
+		
 		// Add the user location and destinations to the map overlays
-		mapOverlays.add(mUserLocationOverlay);
-		mapOverlays.add(markerOverlay); 
+		mapOverlays.add(greenOverlay);
+		mapOverlays.add(redOverlay); 
+		
+		// Turn off location updates
+		mUserLocationOverlay.disableMyLocation();
 		
 		// Get map controller, animate to zoom center, and set zoom span
 		MapController mapController = mapView.getController();
@@ -435,7 +446,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		private int mLatMaxE6 = 0;
 		private int mLonMinE6 = 0;
 		private int mLonMaxE6 = 0;
-		private final double RATIO = 1.05;
+		private static final double RATIO = 1.25;
 		
 		protected MapBounds() {
 			super();

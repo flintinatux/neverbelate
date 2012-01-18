@@ -49,8 +49,14 @@ public class MapOverlay extends ItemizedOverlay<OverlayItem> {
 	@Override
 	protected boolean onTap(int index) {
 		OverlayItem item = mOverlays.get(index);
-		Toast.makeText(mContext, item.getTitle(), Toast.LENGTH_SHORT).show();
-		Toast.makeText(mContext, item.getSnippet(), Toast.LENGTH_SHORT).show();
+		String title = item.getTitle();
+		String snippet = item.getSnippet();
+		if (notEmpty(title)) { Toast.makeText(mContext, title, Toast.LENGTH_SHORT).show(); }
+		if (notEmpty(snippet)) { Toast.makeText(mContext, item.getSnippet(), Toast.LENGTH_SHORT).show(); }
 		return true;
+	}
+	
+	private boolean notEmpty(String s) {
+		return (s != null && s.length() > 0);
 	}
 }
