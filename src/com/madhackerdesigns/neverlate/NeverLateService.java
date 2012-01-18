@@ -32,8 +32,6 @@ import android.os.IBinder;
 import android.text.format.DateUtils;
 import android.util.Log;
 
-import com.commonsware.cwac.wakeful.WakefulIntentService;
-
 /**
  * @author flintinatux
  *

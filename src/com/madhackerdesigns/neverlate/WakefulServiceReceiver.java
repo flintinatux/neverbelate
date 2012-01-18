@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.commonsware.cwac.wakeful.WakefulIntentService;
-
 public class WakefulServiceReceiver extends BroadcastReceiver implements ServiceCommander {
 	
 	private static final String LOG_TAG = "NeverLateService";
