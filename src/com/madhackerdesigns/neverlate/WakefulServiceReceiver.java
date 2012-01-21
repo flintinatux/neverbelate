@@ -4,7 +4,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 public class WakefulServiceReceiver extends BroadcastReceiver implements ServiceCommander {
 	
@@ -16,7 +15,7 @@ public class WakefulServiceReceiver extends BroadcastReceiver implements Service
 		// Pass the bundle of extras on through to the service
 		Bundle extras = intent.getExtras();
 		int task = extras.getInt(EXTRA_SERVICE_COMMAND);
-		Log.d(LOG_TAG, "WakefulServiceReceiver sending task '" + task + "' to NeverLateService.");
+		Logger.d(LOG_TAG, "WakefulServiceReceiver sending task '" + task + "' to NeverLateService.");
 		Intent serviceIntent = new Intent(context, NeverLateService.class);
 		serviceIntent.putExtras(extras);
 		WakefulIntentService.sendWakefulWork(context, serviceIntent);

@@ -21,7 +21,6 @@ import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -79,7 +78,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.warning_dialog);
 		setTitle(R.string.advance_warning_title);
-		Log.d(LOG_TAG, "Title is set.");
+		Logger.d(LOG_TAG, "Title is set.");
 		
 		// Load the preferences and Pontiflex IAdManager
 		Context applicationContext = getApplicationContext();
@@ -94,17 +93,17 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		switcher.addView(alertListView);
 		switcher.addView(trafficView);
 		mSwitcher = switcher;
-		Log.d(LOG_TAG, "ViewSwitcher loaded.");
+		Logger.d(LOG_TAG, "ViewSwitcher loaded.");
 		
 		// Enable the user location to the map (early, to feed the location to the AdMob banner)
 		MapView mapView = (MapView) findViewById(R.id.mapview);
 		mUserLocationOverlay = new UserLocationOverlay(this, mapView);
 		boolean providersEnabled = mUserLocationOverlay.enableMyLocation();
 		if (providersEnabled) { 
-			Log.d(LOG_TAG, "User location updates enabled."); 
+			Logger.d(LOG_TAG, "User location updates enabled."); 
 		}
 		if (mUserLocationOverlay.enableCompass()) {
-			Log.d(LOG_TAG, "User orientation updates enabled.");
+			Logger.d(LOG_TAG, "User orientation updates enabled.");
 		}
 		
 		// Load up the list of alerts
@@ -116,13 +115,13 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 
 			public void onClick(View v) {
 				// Switch to the traffic view and setup the MapView
-				Log.d(LOG_TAG, "'View Traffic' button clicked, switching to traffic view...");
+				Logger.d(LOG_TAG, "'View Traffic' button clicked, switching to traffic view...");
 				stopInsistentAlarm();
 				loadTrafficView();
 			}
 			
 		});
-		Log.d(LOG_TAG, "Traffic button added.");
+		Logger.d(LOG_TAG, "Traffic button added.");
 		
 		// Load up an AdMob banner
 		AdRequest request = new AdRequest();
@@ -130,7 +129,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		request.setTesting(true);
 		AdView adView = (AdView) findViewById(R.id.ad_view);
 	    adView.loadAd(request);
-	    Log.d(LOG_TAG, "AdMob banner loaded.");
+	    Logger.d(LOG_TAG, "AdMob banner loaded.");
 	}
 	
 	private void loadAlertList() {
@@ -145,7 +144,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		String[] selectionArgs = new String[] { "1", "0" };
 		mHandler.startQuery(ALERT_TOKEN, getApplicationContext(), 
 				contentUri, projection, selection, selectionArgs, null);
-		Log.d(LOG_TAG, "AlertProvider queried for alerts.");
+		Logger.d(LOG_TAG, "AlertProvider queried for alerts.");
 	}
 	
 	private class AlertQueryHandler extends AsyncQueryHandler {
@@ -161,7 +160,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		protected void onQueryComplete(int token, Object context, Cursor cursor) {
 			// Let the activity manage the cursor life-cycle
 			startManagingCursor(cursor);
-			Log.d(LOG_TAG, "Query returned...");
+			Logger.d(LOG_TAG, "Query returned...");
 			
 			// Now fill in the content of the WarningDialog
 			switch (token) {
@@ -250,7 +249,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 				}
 				
 			});
-			Log.d(LOG_TAG, "Snooze button added.");
+			Logger.d(LOG_TAG, "Snooze button added.");
 			
 			// Set the "Dismiss" button action
 			Button dismissButton = (Button) findViewById(R.id.dismiss_button);
@@ -271,7 +270,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 				}
 				
 			});
-			Log.d(LOG_TAG, "Dismiss button loaded.");
+			Logger.d(LOG_TAG, "Dismiss button loaded.");
 		}
 	}
 	
@@ -283,11 +282,11 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		mAdHelper.setWarningDismissed(true);
 		
 		// Set a new alarm to notify for this same event instance
-		Log.d(LOG_TAG, "'Snooze' button clicked.");
+		Logger.d(LOG_TAG, "'Snooze' button clicked.");
 		long now = new Date().getTime();
 		long warnTime = now + mPrefs.getSnoozeDuration();
 		String warnTimeString = NeverLateService.FullDateTime(warnTime);
-		Log.d(LOG_TAG, "Alarm will be set to warn user again at " + warnTimeString);
+		Logger.d(LOG_TAG, "Alarm will be set to warn user again at " + warnTimeString);
 		Context context = getApplicationContext();
 		AlarmManager alarm = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 		Intent intent = new Intent(context, WakefulServiceReceiver.class);
@@ -317,7 +316,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	}
 	
 	private void stopInsistentAlarm() {
-		Log.d(LOG_TAG, "Stopping insistent alarm.");
+		Logger.d(LOG_TAG, "Stopping insistent alarm.");
 		if (!mInsistentStopped) {
 			mInsistentStopped = true;
 			Context context = getApplicationContext();
@@ -330,13 +329,13 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	private void switchToAlertListView() {
 		mSwitcher.showPrevious();
 //		mTrafficViewOn = false;
-		Log.d(LOG_TAG, "Switched to alert list view.");
+		Logger.d(LOG_TAG, "Switched to alert list view.");
 	}
 	
 	private void switchToTrafficView() {
 		mSwitcher.showNext();
 //		mTrafficViewOn = true;
-		Log.d(LOG_TAG, "Switched to traffic view.");
+		Logger.d(LOG_TAG, "Switched to traffic view.");
 	}
 	
 	/**

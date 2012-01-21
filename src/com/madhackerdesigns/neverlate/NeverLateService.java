@@ -30,7 +30,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.text.format.DateUtils;
-import android.util.Log;
 
 /**
  * @author flintinatux
@@ -77,7 +76,7 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 		// pull instructions from the intent
 		Bundle extras = (Bundle) intent.getExtras();
 		int task = extras.getInt(EXTRA_SERVICE_COMMAND);
-		Log.d(LOG_TAG, "NeverLateService received an intent with task '" + task + "'.");
+		Logger.d(LOG_TAG, "NeverLateService received an intent with task '" + task + "'.");
 		
 		// delegate task based on ServiceTask chosen, if any
 		switch (task) {
@@ -124,7 +123,7 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 		String[] selectionArgs = new String[] { "1", "0" };
 		int rows = mContentResolver.update(AlertsContract.Alerts.CONTENT_URI, values, 
 				selection, selectionArgs);
-		Log.d(LOG_TAG, "Dismissed " + rows + " alerts.");
+		Logger.d(LOG_TAG, "Dismissed " + rows + " alerts.");
 	}
 	
 	private void checkTravelTimes() {
@@ -137,18 +136,18 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 				new String[] { String.valueOf(expiration) }
 		);
 		if (rowsDeleted > 0) {
-			Log.d(LOG_TAG, "Deleted " + rowsDeleted + " alerts from the AlertProvider database.");
+			Logger.d(LOG_TAG, "Deleted " + rowsDeleted + " alerts from the AlertProvider database.");
 		}
 		
 		// Instantiate new CalendarHelper and query for event instances within the lookahead window
 		CalendarHelper ch = new CalendarHelper();
 		mNow = new Date().getTime();
 		String currentTime = "The current time is " + FullDateTime(mNow);
-		Log.d(LOG_TAG, currentTime);
+		Logger.d(LOG_TAG, currentTime);
 		Uri.Builder instanceBuilder = ch.mInstancesUri.buildUpon();
 		ContentUris.appendId(instanceBuilder, mNow - DateUtils.DAY_IN_MILLIS);
 		ContentUris.appendId(instanceBuilder, mNow + DateUtils.DAY_IN_MILLIS);
-		Log.d(LOG_TAG, "Querying calendar...");
+		Logger.d(LOG_TAG, "Querying calendar...");
 		Cursor instance = mContentResolver.query(	
 			instanceBuilder.build(), 
 			CalendarHelper.INSTANCES_PROJECTION, 
@@ -156,7 +155,7 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 			null, 
 			null
 		);
-		Log.d(LOG_TAG, "Found " + instance.getCount() + " events!");
+		Logger.d(LOG_TAG, "Found " + instance.getCount() + " events!");
 		
 		// Get current best location
 		Location currentBestLocation = getCurrentLocation();
@@ -183,13 +182,13 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 				
 				// ignore event if not in window
 				if (instanceBegin < mNow || instanceBegin > (mNow + mPrefs.getLookaheadWindow())) {
-					Log.d(LOG_TAG, "Event " + eventID + " not in window.");
+					Logger.d(LOG_TAG, "Event " + eventID + " not in window.");
 					continue;
 				}
 				
 				// TODO:  in the future, ask user if they want to add a location
 				if (eventLocation == null || eventLocation == "") { 
-					Log.d(LOG_TAG, "Event " + eventID + " does not have a location specified.");
+					Logger.d(LOG_TAG, "Event " + eventID + " does not have a location specified.");
 					continue; 
 				}
 				
@@ -209,7 +208,7 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 				String alertID = null;
 				if (alertCursor.moveToFirst()) {
 					if (alertCursor.getInt(AlertsHelper.PROJ_FIRED) == 1) {
-						Log.d(LOG_TAG, "Alert for event " + eventID + " has already been FIRED.");
+						Logger.d(LOG_TAG, "Alert for event " + eventID + " has already been FIRED.");
 						continue;
 					}
 					
@@ -223,9 +222,9 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 				}
 				
 				// Talk to me, baby!
-				Log.d(LOG_TAG, "Event title: " + eventTitle);
-				Log.d(LOG_TAG, "Event location: " + eventLocation);
-				Log.d(LOG_TAG, "Begin time: " + FullDateTime(instanceBegin));
+				Logger.d(LOG_TAG, "Event title: " + eventTitle);
+				Logger.d(LOG_TAG, "Event location: " + eventLocation);
+				Logger.d(LOG_TAG, "Begin time: " + FullDateTime(instanceBegin));
 				
 				// Build url to pull down directions from Google Directions API
 				Uri.Builder b = Uri.parse(DIRECTIONS_API_URL).buildUpon();
@@ -244,16 +243,16 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 				ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 				NetworkInfo netInfo = cm.getActiveNetworkInfo();
 				if (netInfo != null && netInfo.isConnected()) {
-					Log.d(LOG_TAG, "Network available, attempting to download new directions.");
+					Logger.d(LOG_TAG, "Network available, attempting to download new directions.");
 					json = NetUtils.DownloadText(url);
 				} else if (alertCursor.moveToFirst()) {
-					Log.d(LOG_TAG, "Network not available, falling back to previous archived directions.");
+					Logger.d(LOG_TAG, "Network not available, falling back to previous archived directions.");
 					json = alertCursor.getString(AlertsHelper.PROJ_JSON);
 				}
 				if (json == null || json == "") { 
 					// TODO: Not sure what to do if I still pull down an empty json result
 					// (which has happened before!)
-					Log.d(LOG_TAG, "No JSON returned.  Not good.");
+					Logger.d(LOG_TAG, "No JSON returned.  Not good.");
 					continue;
 				}
 				
@@ -267,7 +266,7 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 					
 					// Check the status code of the json object and handle appropriately
 					String statusString = directions.getString("status");
-					Log.d(LOG_TAG, "JSON status: " + statusString);
+					Logger.d(LOG_TAG, "JSON status: " + statusString);
 					DirectionsApiStatus status = Enum.valueOf(DirectionsApiStatus.class, statusString);
 					switch (status) {
 					case OK:
@@ -275,9 +274,9 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 						JSONObject route = directions.getJSONArray("routes").getJSONObject(0);
 						JSONObject leg = route.getJSONArray("legs").getJSONObject(0);
 						long duration = leg.getJSONObject("duration").getLong("value") * 1000;   // in ms
-						Log.d(LOG_TAG, "Duration: " + String.valueOf(duration/60000) + " min");
+						Logger.d(LOG_TAG, "Duration: " + String.valueOf(duration/60000) + " min");
 						long warnTime = instanceBegin - duration - mPrefs.getAdvanceWarning();
-						Log.d(LOG_TAG, "Warn time: " + FullDateTime(warnTime));
+						Logger.d(LOG_TAG, "Warn time: " + FullDateTime(warnTime));
 						String copyrights = route.getString("copyrights");
 						
 						// Put together a ContentValues object of the alert data for this event instance
@@ -307,18 +306,18 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 						// Issue a notification if warning is required before the next check
 						if (warnTime <= (mNow + mPrefs.getTraveltimeFreq())) {
 							// Whether we alert user now or later, consider alert as FIRED.
-							Log.d(LOG_TAG, "Marking event " + eventID + " as FIRED.");
+							Logger.d(LOG_TAG, "Marking event " + eventID + " as FIRED.");
 							ContentValues firedValues = new ContentValues();
 							firedValues.put(AlertsContract.Alerts.FIRED, 1);
 							mContentResolver.update(alertUri, firedValues, null, null); 
 							
 							if (warnTime <= mNow) {
 								// Warn user immediately if warnTime is before now
-								Log.d(LOG_TAG, "Notify the user now about event " + eventID);
+								Logger.d(LOG_TAG, "Notify the user now about event " + eventID);
 								notifyUserNow();
 							} else {
 								// Otherwise, set alarm to warn user at future warnTime
-								Log.d(LOG_TAG, "Notify the user later about event " + eventID);
+								Logger.d(LOG_TAG, "Notify the user later about event " + eventID);
 								notifyUserLater(warnTime);
 							}
 						}
@@ -398,7 +397,7 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 		
 		// Get the application context first
 		Context context = getApplicationContext();
-		Log.d(LOG_TAG, "Notifying user now of upcoming events!");
+		Logger.d(LOG_TAG, "Notifying user now of upcoming events!");
 		
 		// Query for the total fired alerts not already dismissed
 		Uri contentUri = AlertsContract.Alerts.CONTENT_URI;
@@ -523,7 +522,7 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 		}
 		
 		if (bestLocation == null) {
-			Log.d(LOG_TAG, "Location is null!");
+			Logger.d(LOG_TAG, "Location is null!");
 			return null;
 		}
 		
