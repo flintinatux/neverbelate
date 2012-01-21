@@ -21,11 +21,6 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 
-import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.Closeable;
-
 /**
  * Displays an EULA ("End User License Agreement") that the user has to accept before
  * using the application. Your application should call {@link Eula#show(android.app.Activity)}
@@ -34,7 +29,7 @@ import java.io.Closeable;
  * on your activity.
  */
 class Eula {
-    private static final String ASSET_EULA = "EULA";
+//    private static final String ASSET_EULA = "EULA";
     private static final String PREFERENCE_EULA_ACCEPTED = "eula.accepted";
     private static final String PREFERENCES_EULA = "eula";
 
@@ -98,33 +93,33 @@ class Eula {
     }
 
     // TODO: Create ASSET_EULA file with TOS and EULA.
-    private static CharSequence readEula(Activity activity) {
-        BufferedReader in = null;
-        try {
-            in = new BufferedReader(new InputStreamReader(activity.getAssets().open(ASSET_EULA)));
-            String line;
-            StringBuilder buffer = new StringBuilder();
-            while ((line = in.readLine()) != null) buffer.append(line).append('\n');
-            return buffer;
-        } catch (IOException e) {
-            return "";
-        } finally {
-            closeStream(in);
-        }
-    }
+//    private static CharSequence readEula(Activity activity) {
+//        BufferedReader in = null;
+//        try {
+//            in = new BufferedReader(new InputStreamReader(activity.getAssets().open(ASSET_EULA)));
+//            String line;
+//            StringBuilder buffer = new StringBuilder();
+//            while ((line = in.readLine()) != null) buffer.append(line).append('\n');
+//            return buffer;
+//        } catch (IOException e) {
+//            return "";
+//        } finally {
+//            closeStream(in);
+//        }
+//    }
 
     /**
      * Closes the specified stream.
      *
      * @param stream The stream to close.
      */
-    private static void closeStream(Closeable stream) {
-        if (stream != null) {
-            try {
-                stream.close();
-            } catch (IOException e) {
-                // Ignore
-            }
-        }
-    }
+//    private static void closeStream(Closeable stream) {
+//        if (stream != null) {
+//            try {
+//                stream.close();
+//            } catch (IOException e) {
+//                // Ignore
+//            }
+//        }
+//    }
 }

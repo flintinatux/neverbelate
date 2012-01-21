@@ -51,6 +51,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	// private static tokens
 	private static final int ALERT_TOKEN = 1;
 	private static final String LOG_TAG = "NeverLateService";
+	private static final boolean ADMOB = false;
 	
 	// static strings for intent extra keys
 	private static final String PACKAGE_NAME = "com.madhackerdesigns.neverlate";
@@ -124,12 +125,14 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		Logger.d(LOG_TAG, "Traffic button added.");
 		
 		// Load up an AdMob banner
-		AdRequest request = new AdRequest();
-		if (providersEnabled) { request.setLocation(mUserLocationOverlay.getLastFix()); }
-		request.setTesting(true);
-		AdView adView = (AdView) findViewById(R.id.ad_view);
-	    adView.loadAd(request);
-	    Logger.d(LOG_TAG, "AdMob banner loaded.");
+		if (ADMOB) {
+			AdRequest request = new AdRequest();
+			if (providersEnabled) { request.setLocation(mUserLocationOverlay.getLastFix()); }
+			request.setTesting(true);
+			AdView adView = (AdView) findViewById(R.id.ad_view);
+		    adView.loadAd(request);
+		    Logger.d(LOG_TAG, "AdMob banner loaded.");
+		}
 	}
 	
 	private void loadAlertList() {
