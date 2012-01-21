@@ -14,7 +14,7 @@
 	<uses-permission android:name="android.permission.VIBRATE" />
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
     
-    <application android:label="@string/app_name" android:debuggable="true" android:icon="@drawable/ic_launcher_rabbit3">
+    <application android:label="@string/app_name" android:debuggable="false" android:icon="@drawable/ic_launcher_rabbit3">
     
     	<meta-data android:value="507f773330a246a0aede2710bf1ced96" android:name="ADWHIRL_KEY"/>
     	
