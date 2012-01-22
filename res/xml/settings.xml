@@ -5,7 +5,7 @@
 	android:orderingFromXml="true" >
 	
 	<Preference
-		android:id="@+id/tv_settings_instructions"
+		android:id="@+id/pr_settings_instructions"
 		android:selectable="false"
 		android:summary="@string/settings_instructions"
 		android:title="@string/settings_instructions_title" />
@@ -107,7 +107,13 @@
 			android:defaultValue="@bool/default_insistent" />
 	</PreferenceCategory>
 	
-	<PreferenceCategory android:title="About NeverLate">
+	<PreferenceCategory android:title="Other Settings">
+		<com.madhackerdesigns.neverlate.settings.FeedbackPreference
+			android:id="@+id/pr_send_feedback"
+			android:selectable="true"
+			android:summary="@string/send_feedback"
+			android:title="@string/send_feedback_title" />
+		
 <!--		<ListPreference-->
 <!--			android:key="version history"-->
 <!--			android:title="Version history"-->

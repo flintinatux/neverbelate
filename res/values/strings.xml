@@ -40,7 +40,7 @@
     <string name="test_button_text">Test NeverLate Warning System</string>
     
 <!-- Strings for AlertsProvider -->
-	<string name="alerts_contract_authority">com.madhackerdesigns.neverlate.AlertsContract</string>
+	<string name="alerts_contract_authority">com.madhackerdesigns.neverlate.provider.AlertsContract</string>
 	<string name="untitled_event">(No Title)</string>
 
 <!-- Strings for WarningDialog -->
@@ -69,6 +69,11 @@
     <string name="ticker_text">You must leave soon to arrive on time at your next event!</string>
   
 <!-- NeverLateSettings -->
+	<string name="feedback_address">mail@madhackerdesigns.com</string>
+	<string name="feedback_menu_title">Choose email app</string>
+	<string name="feedback_subject">[NeverLate] - Feedback</string>
+	<string name="send_feedback">Click here to send me an email with feedback, questions, or bugs you have encountered.</string>
+	<string name="send_feedback_title">Send feedback</string>
 	<string name="settings_instructions">Each setting below has a recommended value to balance battery life with performance, but feel free to change them to fit your schedule needs and transportation style.</string>
     <string name="settings_instructions_title">Instructions</string>
     <string-array name="freq_entries_15">

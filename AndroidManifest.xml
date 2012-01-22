@@ -13,41 +13,54 @@
 	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
 	<uses-permission android:name="android.permission.VIBRATE" />
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	
+	<compatible-screens>
+        <!-- all small size screens -->
+        <screen android:screenSize="small" android:screenDensity="ldpi" />
+        <screen android:screenSize="small" android:screenDensity="mdpi" />
+        <screen android:screenSize="small" android:screenDensity="hdpi" />
+        <screen android:screenSize="small" android:screenDensity="xhdpi" />
+        <!-- all normal size screens -->
+        <screen android:screenSize="normal" android:screenDensity="ldpi" />
+        <screen android:screenSize="normal" android:screenDensity="mdpi" />
+        <screen android:screenSize="normal" android:screenDensity="hdpi" />
+        <screen android:screenSize="normal" android:screenDensity="xhdpi" />
+    </compatible-screens>
     
     <application android:label="@string/app_name" android:debuggable="false" android:icon="@drawable/ic_launcher_rabbit3">
     
     	<meta-data android:value="507f773330a246a0aede2710bf1ced96" android:name="ADWHIRL_KEY"/>
     	
-		<activity android:name="NeverLateSettings">
+		<activity android:name=".settings.NeverLateSettings">
 			
 		</activity>
-	<receiver android:name="StartupReceiver" android:process=":remote"><intent-filter><action android:name="android.intent.action.BOOT_COMPLETED"></action>
+	<receiver android:name=".service.StartupReceiver" android:process=":remote"><intent-filter><action android:name="android.intent.action.BOOT_COMPLETED"></action>
 <category android:name="android.intent.category.HOME"></category>
 </intent-filter>
 
 </receiver>
 
-<receiver android:name="TravelTimeReceiver" android:process=":remote">
+<receiver android:name=".service.TravelTimeReceiver" android:process=":remote">
 
 </receiver>
 <uses-library android:name="com.google.android.maps"></uses-library>
 
-<service android:name="NeverLateService">
+<service android:name=".service.NeverLateService">
 </service>
-<activity android:name="TestActivity" android:finishOnTaskLaunch="false" android:label="NeverTest">
+<activity android:name=".ui.TestActivity" android:finishOnTaskLaunch="false" android:label="NeverTest">
 </activity>
-<activity android:name="WarningDialog" android:theme="@android:style/Theme.Light" android:excludeFromRecents="true" android:screenOrientation="portrait" android:stateNotNeeded="true" android:noHistory="false" android:launchMode="singleTop" android:allowTaskReparenting="false" android:taskAffinity="">
+<activity android:name=".ui.WarningDialog" android:theme="@android:style/Theme.Light" android:excludeFromRecents="true" android:screenOrientation="portrait" android:stateNotNeeded="true" android:noHistory="false" android:launchMode="singleTop" android:allowTaskReparenting="false" android:taskAffinity="">
     <intent-filter>
         <action android:name="android.intent.action.MAIN"></action>
     </intent-filter>
 </activity>
-<activity android:name="LauncherActivity">
+<activity android:name=".ui.LauncherActivity">
     <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
         <category android:name="android.intent.category.LAUNCHER"/>
     </intent-filter>
-</activity><receiver android:name="WakefulServiceReceiver"></receiver>
-<provider android:exported="false" android:name="AlertsProvider" android:authorities="@string/alerts_contract_authority"></provider>
+</activity><receiver android:name=".service.WakefulServiceReceiver"></receiver>
+<provider android:exported="false" android:name=".provider.AlertsProvider" android:authorities="@string/alerts_contract_authority"></provider>
 <activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation"></activity>
 <activity android:name="com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity" android:taskAffinity="" android:stateNotNeeded="true" android:excludeFromRecents="true"/>
 <activity android:name="com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity" android:taskAffinity="" android:configChanges="keyboardHidden" android:stateNotNeeded="true" android:excludeFromRecents="true"/>
