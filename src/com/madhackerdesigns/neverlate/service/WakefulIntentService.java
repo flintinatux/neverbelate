@@ -35,6 +35,7 @@ abstract public class WakefulIntentService extends IntentService {
 	
 	synchronized private static PowerManager.WakeLock getLock(Context context) {
 		if (lockStatic == null) {
+			Logger.d(LOG_TAG, "Wakelock is null, pulling new one");
 			PowerManager mgr = (PowerManager)context.getSystemService(Context.POWER_SERVICE);
 			lockStatic = mgr.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, NAME);
 			lockStatic.setReferenceCounted(true);
@@ -91,12 +92,12 @@ abstract public class WakefulIntentService extends IntentService {
 	
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
-		PowerManager.WakeLock lock = getLock(this.getApplicationContext());
+//		PowerManager.WakeLock lock = getLock(this.getApplicationContext());
 		if ((flags & START_FLAG_REDELIVERY) != 0) { // if crash restart...
 			Logger.d(LOG_TAG, "Acquiring WakeLock in onStartCommand.");
-			lock.acquire();  // ...then quick grab the lock
+			lockStatic.acquire();  // ...then quick grab the lock
 		}
-		isAcquired(lock);
+		isAcquired(lockStatic);
 		Logger.d(LOG_TAG, "Starting service from onStartCommand.");
 		super.onStartCommand(intent, flags, startId);
 		
@@ -110,9 +111,9 @@ abstract public class WakefulIntentService extends IntentService {
 		}
 		finally {
 			try {
-				PowerManager.WakeLock lock = getLock(this.getApplicationContext());
+//				PowerManager.WakeLock lock = getLock(this.getApplicationContext());
 				Logger.d(LOG_TAG, "Attempting to release wakelock.");
-				lock.release();
+				lockStatic.release();
 			} catch (RuntimeException e) {
 				Logger.d(LOG_TAG, "Caught 'WakeLock Under-lock' exception!");
 				e.printStackTrace();

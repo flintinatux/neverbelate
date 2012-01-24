@@ -5,8 +5,14 @@ import android.util.Log;
 public class Logger {
 	
 	private static final boolean LOGGING = true;
+	private static final String LOG_TAG = "NeverLate";
 	private static final int NOT_LOGGED = 0x0;
 
+	public static int d (String msg) {
+		if (LOGGING) { return Log.d(LOG_TAG, msg); }
+		else { return NOT_LOGGED; }
+	}
+	
 	public static int d (String tag, String msg) {
 		if (LOGGING) { return Log.d(tag, msg); }
 		else { return NOT_LOGGED; }

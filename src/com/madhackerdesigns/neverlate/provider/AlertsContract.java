@@ -26,7 +26,7 @@ import android.provider.BaseColumns;
  * URIs. A well-written client depends only on the constants in the contract.
  */
 public final class AlertsContract {
-    public static final String AUTHORITY = "com.madhackerdesigns.neverlate.AlertsContract";
+    public static final String AUTHORITY = "com.madhackerdesigns.neverlate.provider.AlertsContract";
 
     // This class cannot be instantiated
     private AlertsContract() {
