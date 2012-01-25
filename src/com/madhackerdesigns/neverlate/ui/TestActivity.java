@@ -11,11 +11,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.commonsware.cwac.wakeful.WakefulIntentService;
 import com.madhackerdesigns.neverlate.R;
 import com.madhackerdesigns.neverlate.provider.AlertsContract;
 import com.madhackerdesigns.neverlate.service.NeverLateService;
 import com.madhackerdesigns.neverlate.service.ServiceCommander;
-import com.madhackerdesigns.neverlate.service.WakefulIntentService;
 import com.madhackerdesigns.neverlate.settings.NeverLateSettings;
 import com.madhackerdesigns.neverlate.util.AdHelper;
 

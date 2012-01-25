@@ -1,11 +1,12 @@
 package com.madhackerdesigns.neverlate.service;
 
-import com.madhackerdesigns.neverlate.util.Logger;
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.commonsware.cwac.wakeful.WakefulIntentService;
+import com.madhackerdesigns.neverlate.util.Logger;
 
 public class WakefulServiceReceiver extends BroadcastReceiver implements ServiceCommander {
 	

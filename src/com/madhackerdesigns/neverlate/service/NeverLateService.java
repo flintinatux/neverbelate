@@ -31,6 +31,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.text.format.DateUtils;
 
+import com.commonsware.cwac.wakeful.WakefulIntentService;
 import com.madhackerdesigns.neverlate.R;
 import com.madhackerdesigns.neverlate.provider.AlertsContract;
 import com.madhackerdesigns.neverlate.provider.AlertsHelper;

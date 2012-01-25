@@ -30,6 +30,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
+import com.commonsware.cwac.wakeful.WakefulIntentService;
 import com.google.ads.AdRequest;
 import com.google.ads.AdView;
 import com.google.android.maps.GeoPoint;
@@ -44,7 +45,6 @@ import com.madhackerdesigns.neverlate.provider.AlertsContract;
 import com.madhackerdesigns.neverlate.provider.AlertsHelper;
 import com.madhackerdesigns.neverlate.service.NeverLateService;
 import com.madhackerdesigns.neverlate.service.ServiceCommander;
-import com.madhackerdesigns.neverlate.service.WakefulIntentService;
 import com.madhackerdesigns.neverlate.service.WakefulServiceReceiver;
 import com.madhackerdesigns.neverlate.settings.PreferenceHelper;
 import com.madhackerdesigns.neverlate.util.AdHelper;
