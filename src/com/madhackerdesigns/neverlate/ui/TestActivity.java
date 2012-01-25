@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-import com.commonsware.cwac.wakeful.WakefulIntentService;
 import com.madhackerdesigns.neverlate.R;
 import com.madhackerdesigns.neverlate.provider.AlertsContract;
 import com.madhackerdesigns.neverlate.service.NeverLateService;
@@ -47,7 +46,7 @@ public class TestActivity extends Activity implements ServiceCommander {
 				Context context = getApplicationContext();
 				Intent serviceIntent = new Intent(context, NeverLateService.class);
 				serviceIntent.putExtra(EXTRA_SERVICE_COMMAND, CHECK_TRAVEL_TIMES);
-				WakefulIntentService.sendWakefulWork(context, serviceIntent);
+				NeverLateService.sendWakefulWork(context, serviceIntent);
 			}
 			
 		});

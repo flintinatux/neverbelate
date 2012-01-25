@@ -11,6 +11,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.AlarmManager;
+import android.app.IntentService;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -29,9 +30,9 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.os.PowerManager;
 import android.text.format.DateUtils;
 
-import com.commonsware.cwac.wakeful.WakefulIntentService;
 import com.madhackerdesigns.neverlate.R;
 import com.madhackerdesigns.neverlate.provider.AlertsContract;
 import com.madhackerdesigns.neverlate.provider.AlertsHelper;
@@ -44,12 +45,14 @@ import com.madhackerdesigns.neverlate.util.NetUtils;
  * @author flintinatux
  *
  */
-public class NeverLateService extends WakefulIntentService implements ServiceCommander {
+public class NeverLateService extends IntentService implements ServiceCommander {
 	
 	// static numbers and such
 	private static final long DELTA = 5*60*1000;				// age delta = 5 minutes
 	private static final float MARGIN = (float) 1.25;			// accuracy margin = 25%
 	private static final int NOTIFICATION_ID = 1;
+	private static final long WAKELOCK_TIMEOUT = 30000;			// (ms) timeout = 30s
+	private static final String WAKELOCK_NAME = "com.madhackerdesigns.neverlate.service.NeverLateService";
 	
 	private static final boolean OUT_LOUD = true;
 	private static final boolean SILENTLY = false;
@@ -68,15 +71,39 @@ public class NeverLateService extends WakefulIntentService implements ServiceCom
 	private NotificationManager mNotificationManager;
 	private long mNow;
 	private PreferenceHelper mPrefs;
+	private static volatile PowerManager.WakeLock lockStatic = null;
 	
 	public NeverLateService() {
 		super("NeverLateService");
+	}
+	
+	public static void sendWakefulWork(Context ctxt, Intent i) {
+		if (lockStatic == null) {
+			PowerManager pm = (PowerManager) ctxt.getApplicationContext().getSystemService(POWER_SERVICE);
+			lockStatic = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, WAKELOCK_NAME);
+		}
+		lockStatic.acquire(WAKELOCK_TIMEOUT);
+		ctxt.startService(i);
+	}
+	
+	/* (non-Javadoc)
+	 * @see android.app.IntentService#onHandleIntent(android.content.Intent)
+	 */
+	@Override
+	protected void onHandleIntent(Intent intent) {
+		try {
+			String time = FullDateTime(new Date().getTime());
+			Logger.d("Started handling intent at: " + time);
+			doWakefulWork(intent);
+		} finally {
+			String time = FullDateTime(new Date().getTime());
+			Logger.d("Finished handling intent at: " + time);
+		}
 	}
 
 	/* (non-Javadoc)
 	 * @see android.app.Service#onStart(android.content.Intent, int)
 	 */
-	@Override
 	public void doWakefulWork(Intent intent) {
 		
 		// Load (or reload) prefs and services every time, in case the service was previous stopped

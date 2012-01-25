@@ -30,7 +30,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
-import com.commonsware.cwac.wakeful.WakefulIntentService;
 import com.google.ads.AdRequest;
 import com.google.ads.AdView;
 import com.google.android.maps.GeoPoint;
@@ -312,7 +311,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		// Ask the Service to just SNOOZE the event, which just clears the notification
 		intent = new Intent(context, NeverLateService.class);
 		intent.putExtra(EXTRA_SERVICE_COMMAND, SNOOZE);
-		WakefulIntentService.sendWakefulWork(context, intent);
+		NeverLateService.sendWakefulWork(context, intent);
 	}
 	
 	/**
@@ -326,7 +325,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		Context context = getApplicationContext();
 		Intent cancelIntent = new Intent(context, NeverLateService.class);
 		cancelIntent.putExtra(EXTRA_SERVICE_COMMAND, DISMISS);
-		WakefulIntentService.sendWakefulWork(context, cancelIntent);
+		NeverLateService.sendWakefulWork(context, cancelIntent);
 	}
 	
 	private void stopInsistentAlarm() {
@@ -336,7 +335,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 			Context context = getApplicationContext();
 			Intent i = new Intent(context, NeverLateService.class);
 			i.putExtra(EXTRA_SERVICE_COMMAND, SILENCE);
-			WakefulIntentService.sendWakefulWork(context, i);
+			NeverLateService.sendWakefulWork(context, i);
 		}
 	}
 

@@ -17,11 +17,6 @@ public class StartupReceiver extends BroadcastReceiver {
 	
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		// Un-comment the following to startup a background service at boot.
-//		Intent serviceIntent = new Intent(context, NeverLateService.class);
-//		serviceIntent.putExtra(NeverLateService.EXTRA_TASK, "STARTUP");
-//		WakefulIntentService.sendWakefulWork(context, serviceIntent);
-		
 		// first pull shared prefs and get settings
 		mPrefs = new PreferenceHelper(context);
 //		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);

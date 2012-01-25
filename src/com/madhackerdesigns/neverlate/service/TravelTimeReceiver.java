@@ -5,7 +5,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.commonsware.cwac.wakeful.WakefulIntentService;
 import com.madhackerdesigns.neverlate.util.Logger;
 
 public class TravelTimeReceiver extends BroadcastReceiver implements ServiceCommander {
@@ -17,7 +16,7 @@ public class TravelTimeReceiver extends BroadcastReceiver implements ServiceComm
 		Logger.d("Received alarm to check travel times");
 		Intent serviceIntent = new Intent(context, NeverLateService.class);
 		serviceIntent.putExtra(EXTRA_SERVICE_COMMAND, CHECK_TRAVEL_TIMES);
-		WakefulIntentService.sendWakefulWork(context, serviceIntent);
+		NeverLateService.sendWakefulWork(context, serviceIntent);
 		
 	}
 

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.commonsware.cwac.wakeful.WakefulIntentService;
 import com.madhackerdesigns.neverlate.util.Logger;
 
 public class WakefulServiceReceiver extends BroadcastReceiver implements ServiceCommander {
@@ -21,7 +20,7 @@ public class WakefulServiceReceiver extends BroadcastReceiver implements Service
 		Logger.d(LOG_TAG, "WakefulServiceReceiver sending task '" + task + "' to NeverLateService.");
 		Intent serviceIntent = new Intent(context, NeverLateService.class);
 		serviceIntent.putExtras(extras);
-		WakefulIntentService.sendWakefulWork(context, serviceIntent);
+		NeverLateService.sendWakefulWork(context, serviceIntent);
 		
 	}
 
