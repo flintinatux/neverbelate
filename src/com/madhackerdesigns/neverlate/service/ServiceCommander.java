@@ -11,11 +11,6 @@ public interface ServiceCommander {
 	String EXTRA_SERVICE_COMMAND = "com.madhackerdesigns.neverlate.task";
 	
 	/**
-	 * Command flag that instructs the NeverLateService to check the travel times to upcoming events.
-	 */
-	int CHECK_TRAVEL_TIMES = 0;
-
-	/**
 	 * Command flag that instructs the NeverLateService to clear all current alerts.
 	 */
 	int CLEAR_ALL = 1;
@@ -31,17 +26,22 @@ public interface ServiceCommander {
 	int SNOOZE = 3;
 
 	/**
+	 * Command flag that instructs the NeverLateService to check the travel times to upcoming events.
+	 */
+	int CHECK_TRAVEL_TIMES = 4;
+
+	/**
 	 * Command flag that instructs the NeverLateService to notify the user immediately of the next event.
 	 */
-	int NOTIFY = 4;
+	int NOTIFY = 5;
 
 	/**
 	 * Command flag that instructs the NeverLateService to perform startup initialization activities.
 	 */
-	int STARTUP = 5;
+	int STARTUP = 6;
 	
 	/**
 	 * Command flag that instructs the NeverLateService to stop the insistent ringing.
 	 */
-	int SILENCE = 6;
+	int SILENCE = 7;
 }

@@ -51,7 +51,7 @@ public class NeverLateService extends IntentService implements ServiceCommander 
 	private static final long DELTA = 5*60*1000;				// age delta = 5 minutes
 	private static final float MARGIN = (float) 1.25;			// accuracy margin = 25%
 	private static final int NOTIFICATION_ID = 1;
-	private static final long WAKELOCK_TIMEOUT = 30000;			// (ms) timeout = 30s
+	private static final long WAKELOCK_TIMEOUT = 10000;			// (ms) timeout = 10s
 	private static final String WAKELOCK_NAME = "com.madhackerdesigns.neverlate.service.NeverLateService";
 	
 	private static final boolean OUT_LOUD = true;
@@ -477,7 +477,7 @@ public class NeverLateService extends IntentService implements ServiceCommander 
 		// Build pending intent for "Clear All" action
 		Intent i = new Intent(getApplicationContext(), WakefulServiceReceiver.class);
 		i.putExtra(EXTRA_SERVICE_COMMAND, CLEAR_ALL);
-		PendingIntent deleteIntent = PendingIntent.getBroadcast(context, 0, i, 0);
+		PendingIntent deleteIntent = PendingIntent.getBroadcast(context, 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
 		
 		// Push notification to NotificationManager
 		notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);

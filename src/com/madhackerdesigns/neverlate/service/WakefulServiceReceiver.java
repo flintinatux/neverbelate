@@ -19,6 +19,7 @@ public class WakefulServiceReceiver extends BroadcastReceiver implements Service
 		int task = extras.getInt(EXTRA_SERVICE_COMMAND);
 		Logger.d(LOG_TAG, "WakefulServiceReceiver sending task '" + task + "' to NeverLateService.");
 		Intent serviceIntent = new Intent(context, NeverLateService.class);
+//		serviceIntent.putExtra(EXTRA_SERVICE_COMMAND, task);
 		serviceIntent.putExtras(extras);
 		NeverLateService.sendWakefulWork(context, serviceIntent);
 		

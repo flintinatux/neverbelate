@@ -59,7 +59,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 
 	// private static tokens
 	private static final int ALERT_TOKEN = 1;
-	private static final String LOG_TAG = "NeverLateService";
+	private static final String LOG_TAG = "NeverLateWarning";
 	private static final boolean ADMOB = true;
 	private static final boolean ADMOB_TEST = true;
 	
@@ -311,7 +311,8 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		// Ask the Service to just SNOOZE the event, which just clears the notification
 		intent = new Intent(context, NeverLateService.class);
 		intent.putExtra(EXTRA_SERVICE_COMMAND, SNOOZE);
-		NeverLateService.sendWakefulWork(context, intent);
+//		NeverLateService.sendWakefulWork(context, intent);
+		startService(intent);
 	}
 	
 	/**
@@ -325,7 +326,8 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		Context context = getApplicationContext();
 		Intent cancelIntent = new Intent(context, NeverLateService.class);
 		cancelIntent.putExtra(EXTRA_SERVICE_COMMAND, DISMISS);
-		NeverLateService.sendWakefulWork(context, cancelIntent);
+//		NeverLateService.sendWakefulWork(context, cancelIntent);
+		startService(cancelIntent);
 	}
 	
 	private void stopInsistentAlarm() {
@@ -335,7 +337,8 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 			Context context = getApplicationContext();
 			Intent i = new Intent(context, NeverLateService.class);
 			i.putExtra(EXTRA_SERVICE_COMMAND, SILENCE);
-			NeverLateService.sendWakefulWork(context, i);
+//			NeverLateService.sendWakefulWork(context, i);
+			startService(i);
 		}
 	}
 

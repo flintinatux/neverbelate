@@ -46,7 +46,8 @@ public class TestActivity extends Activity implements ServiceCommander {
 				Context context = getApplicationContext();
 				Intent serviceIntent = new Intent(context, NeverLateService.class);
 				serviceIntent.putExtra(EXTRA_SERVICE_COMMAND, CHECK_TRAVEL_TIMES);
-				NeverLateService.sendWakefulWork(context, serviceIntent);
+//				NeverLateService.sendWakefulWork(context, serviceIntent);
+				startService(serviceIntent);
 			}
 			
 		});
