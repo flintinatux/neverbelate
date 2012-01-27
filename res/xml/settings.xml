@@ -113,6 +113,10 @@
 			android:selectable="true"
 			android:summary="@string/send_feedback"
 			android:title="@string/send_feedback_title" />
+		<com.madhackerdesigns.neverlate.settings.EulaPreference
+			android:id="@+id/pr_eula"
+			android:selectable="true"
+			android:title="@string/eula_title" />
 		
 <!--		<ListPreference-->
 <!--			android:key="version history"-->

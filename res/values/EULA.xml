@@ -4,12 +4,39 @@
 <!-- Strings for TOS and EULA Dialog -->
 	<string name="eula_accept">Accept</string>
 	<string name="eula_refuse">Refuse</string>
-	<string name="eula_title">TOS and EULA</string>
+	<string name="eula_title">NeverBeLate™ EULA</string>
 	
-	<string name="eula_text">In a nutshell, the creator of this software is not responsible for any harm
-	    that may come to you while operating this software. Or for the software functioning as intended.
-	    You do not own this software. Rather, instead, by installing this software, and by agreeing to 
-	    this End User License Agreement, you agree not to do anything stupid with it, or hold the creator 
-	    of this software responsible for anything bad that happens, anywhere.</string>
+<!-- 	<string name="eula_text">In a nutshell, the creator of this software is not responsible for any harm -->
+<!-- 	    that may come to you while operating this software. Or for the software functioning as intended. -->
+<!-- 	    You do not own this software. Rather, instead, by installing this software, and by agreeing to  -->
+<!-- 	    this End User License Agreement, you agree not to do anything stupid with it, or hold the creator  -->
+<!-- 	    of this software responsible for anything bad that happens, anywhere.</string> -->
+    
+    <string name="eula_text"><b>END USER LICENSE AGREEMENT</b>\n
+\n
+<b>1.  LICENSE.</b>\n
+\n
+Mad Hacker Designs, LLC grants you a non-exclusive, non-transferable license to install and use the machine executable, byte-code version of NeverBeLate™ for Android, together with related documentation and updates thereto (the "Software") made available by Mad Hacker Designs, LLC solely for the purpose of using the Software in accordance with the accompanying electronic documentation.  You may use the Software for your own personal or internal business use and not in the operation of a service bureau or for the benefit of any other person or entity, including but not limited to, in connection with the development of another software program.  You may make one copy of the Software only for backup purposes, provided that all copyright and other proprietary notices are maintained on the copy of the Software.\n
+\n
+<b>2.  RESTRICTIONS.</b>\n 
+\n
+You may not use, copy, modify, or transfer the Software, or any copy thereof, in whole or in part, except as expressly provided in this Agreement.  You may not reverse engineer, disassemble, decompile, or translate the Software, attempt to create the source code from the object code for the Software, or authorize any third party to do any of the foregoing, except to the extent this prohibition is contrary to applicable law.  Any attempt to transfer any of the rights, duties or obligations hereunder is void.  You may not publish, display, disclose, modify, rent, lease, loan, resell for profit, distribute, or create derivative works based on the Software, or any part thereof.\n
+\n
+<b>3.  CONFIDENTIALITY.</b>\n 
+\n
+The Software constitutes proprietary, confidential information of Mad Hacker Designs, LLC and cannot be disclosed, distributed or displayed to any person other than you or other licensees of the Software who have accepted the terms of this Agreement and registered with Mad Hacker Designs, LLC.\n
+\n
+<b>4.  OWNERSHIP.</b>\n 
+\n
+You have no ownership rights in the Software.  Rather, the Software is licensed to you for use only under the terms of this Agreement, and Mad Hacker Designs, LLC reserves all rights not expressly granted to you.  You own the media, if any, on which the Software is recorded, but Mad Hacker Designs, LLC retains ownership of the Software, all copies of the Software itself, and all intellectual property rights therein shall remain at all times with Mad Hacker Designs, LLC.\n
+\n
+<b>5.  TERM.</b>\n
+\n
+This Agreement will terminate immediately without notice if you materially breach any term or condition of this Agreement.  You agree upon termination to promptly destroy the Software and all copies thereof.\n
+\n
+<b>6.  WARRANTY DISCLAIMER.</b>\n 
+\n
+The software is provided to you "AS IS" and Mad Hacker Designs, LLC and its suppliers EXPRESSLY DISCLAIM ALL warranties and representations, express, implied or statutory INCLUDING the implied warranties of merchantability, fitness for a particular purpose, and non-infringement.  Mad Hacker Designs, LLC DOES NOT WARRANT that the functions contained in the software will meet any requirements or needs you may have, or that the software will operate error free, or in an uninterrupted fashion, or that any defects or errors in the software will be corrected or that the software will be compatible with any particular platform.  No oral or written information or advice given by Mad Hacker Designs, LLC, its employees, distributors, dealers, or agents SHALL INCREASE the scope of the above warranties.  Some jurisdictions do not allow the disclaimer of certain implied warranties, so the above disclaimer may not apply.  Some jurisdictions do not permit the disclaimer of implied or statutory warranties, and to the extent such warranties may not be legally disclaimed, such warranties are limited to 90 days and the sole obligation of Mad Hacker Designs, LLC and your sole remedy is to return the Software to Mad Hacker Designs, LLC for a refund of any fees paid for the Software.
+</string>
     
 </resources>

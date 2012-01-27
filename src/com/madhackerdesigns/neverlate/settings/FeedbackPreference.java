@@ -38,7 +38,7 @@ public class FeedbackPreference extends Preference {
 	 */
 	public FeedbackPreference(Context context) {
 		super(context);
-		mContext = context;
+		mContext = context; 
 	}
 
 	/* (non-Javadoc)

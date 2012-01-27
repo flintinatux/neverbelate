@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.madhackerdesigns.neverlate.ui;
+package com.madhackerdesigns.neverlate;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -30,7 +30,7 @@ import com.madhackerdesigns.neverlate.R;
  * be shown again. If the user refuses, {@link android.app.Activity#finish()} is invoked
  * on your activity.
  */
-class Eula {
+public class Eula {
 //    private static final String ASSET_EULA = "EULA";
     private static final String PREFERENCE_EULA_ACCEPTED = "eula.accepted";
     private static final String PREFERENCES_EULA = "eula";
@@ -38,7 +38,7 @@ class Eula {
     /**
      * callback to let the activity know when the user has accepted the EULA.
      */
-    static interface OnEulaAgreedTo {
+    public static interface OnEulaAgreedTo {
 
         /**
          * Called when the user has accepted the eula and the dialog closes.
@@ -53,13 +53,13 @@ class Eula {
      * @param activity The Activity to finish if the user rejects the EULA.
      * @return Whether the user has agreed already.
      */
-    static boolean show(final Activity activity) {
+    public static boolean show(final Activity activity) {
         final SharedPreferences preferences = activity.getSharedPreferences(PREFERENCES_EULA,
                 Activity.MODE_PRIVATE);
         if (!preferences.getBoolean(PREFERENCE_EULA_ACCEPTED, false)) {
             final AlertDialog.Builder builder = new AlertDialog.Builder(activity);
             builder.setTitle(R.string.eula_title);
-            builder.setCancelable(true);
+            builder.setCancelable(false);
             builder.setPositiveButton(R.string.eula_accept, new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
                     accept(preferences);
@@ -68,22 +68,38 @@ class Eula {
                     }
                 }
             });
-            builder.setNegativeButton(R.string.eula_refuse, new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                    refuse(activity);
-                }
-            });
-            builder.setOnCancelListener(new DialogInterface.OnCancelListener() {
-                public void onCancel(DialogInterface dialog) {
-                    refuse(activity);
-                }
-            });
+//            builder.setNegativeButton(R.string.eula_refuse, new DialogInterface.OnClickListener() {
+//                public void onClick(DialogInterface dialog, int which) {
+//                    refuse(activity);
+//                }
+//            });
+//            builder.setOnCancelListener(new DialogInterface.OnCancelListener() {
+//                public void onCancel(DialogInterface dialog) {
+//                    refuse(activity);
+//                }
+//            });
 //            builder.setMessage(readEula(activity));
             builder.setMessage(R.string.eula_text);
             builder.create().show();
             return false;
         }
         return true;
+    }
+    
+    public static void display(final Activity activity) {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+        builder.setTitle(R.string.eula_title);
+        builder.setCancelable(false);
+        builder.setPositiveButton(R.string.eula_accept, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                if (activity instanceof OnEulaAgreedTo) {
+                    ((OnEulaAgreedTo) activity).onEulaAgreedTo();
+                }
+                dialog.dismiss();
+            }
+        });
+        builder.setMessage(R.string.eula_text);
+        builder.create().show();
     }
 
     private static void accept(SharedPreferences preferences) {

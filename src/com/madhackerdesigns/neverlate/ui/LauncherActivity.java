@@ -21,6 +21,7 @@ import android.widget.ImageView;
 
 import com.google.ads.AdRequest;
 import com.google.ads.AdView;
+import com.madhackerdesigns.neverlate.Eula;
 import com.madhackerdesigns.neverlate.R;
 import com.madhackerdesigns.neverlate.service.StartupReceiver;
 import com.madhackerdesigns.neverlate.settings.NeverLateSettings;
