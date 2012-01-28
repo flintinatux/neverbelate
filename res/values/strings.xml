@@ -3,7 +3,7 @@
 <!-- Application level strings -->
     <string name="app_name">NeverBeLate™</string>
     <string name="app_title">NeverBeLate™ Settings</string>
-    <string name="base_task">com.madhackerdesigns.neverlate.base_task</string>
+    <string name="base_task">com.madhackerdesigns.neverbelate.base_task</string>
     <string name="hello">Hello World!</string>
     
 <!-- Admob Publisher ID -->
@@ -29,7 +29,7 @@
 	if I should take another route. I know you will find NeverBeLate™ to be the most useful app on your phone!
 	Click the link below to install NeverBeLate™ for FREE!\n
 	\n
-	http://market.android.com/details?id="com.madhackerdesigns.neverlate"\n</string>
+	http://market.android.com/details?id="com.madhackerdesigns.neverbelate"\n</string>
 	<string name="share_subject">Check out NeverBeLate™ for Android!</string>
     
 <!-- Strings for Test Activity -->
@@ -40,7 +40,7 @@
     <string name="test_button_text">Test NeverBeLate™ Warning System</string>
     
 <!-- Strings for AlertsProvider -->
-	<string name="alerts_contract_authority">com.madhackerdesigns.neverlate.provider.AlertsContract</string>
+	<string name="alerts_contract_authority">com.madhackerdesigns.neverbelate.provider.AlertsContract</string>
 	<string name="untitled_event">(No Title)</string>
 
 <!-- Strings for WarningDialog -->
@@ -76,6 +76,8 @@
 	<string name="send_feedback_title">Send feedback</string>
 	<string name="settings_instructions">Each setting below has a recommended value to balance battery life with performance, but feel free to change them to fit your schedule needs and transportation style.</string>
     <string name="settings_instructions_title">Instructions</string>
+    <string name="website_title">Developer website</string>
+    
     <string-array name="freq_entries_15">
 <!--     	<item>1 minute (dev only)</item> -->
     	<item>5 minutes</item>

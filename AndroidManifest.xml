@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="com.madhackerdesigns.neverlate"
+      package="com.madhackerdesigns.neverbelate"
       android:versionCode="1"
       android:versionName="1.0">
     <uses-sdk android:minSdkVersion="7" />
@@ -31,7 +31,7 @@
     
     	<meta-data android:value="507f773330a246a0aede2710bf1ced96" android:name="ADWHIRL_KEY"/>
     	
-		<activity android:name=".settings.NeverLateSettings">
+		<activity android:name=".settings.NeverBeLateSettings">
 			
 		</activity>
 	<receiver android:name=".service.StartupReceiver" android:process=":remote"><intent-filter><action android:name="android.intent.action.BOOT_COMPLETED"></action>
@@ -45,7 +45,7 @@
 </receiver>
 <uses-library android:name="com.google.android.maps"></uses-library>
 
-<service android:name=".service.NeverLateService">
+<service android:name=".service.NeverBeLateService">
 </service>
 <activity android:name=".ui.TestActivity" android:finishOnTaskLaunch="false" android:label="NeverTest">
 </activity>
@@ -58,13 +58,13 @@
     <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
         <category android:name="android.intent.category.LAUNCHER"/>
-    </intent-filter>
-</activity><receiver android:name=".service.WakefulServiceReceiver"></receiver>
-<provider android:exported="false" android:name=".provider.AlertsProvider" android:authorities="@string/alerts_contract_authority"></provider>
+        </intent-filter>
+        </activity>
+<receiver android:name=".service.WakefulServiceReceiver" android:process=":remote"/>
+<provider android:name=".provider.AlertsProvider" android:exported="false" android:authorities="@string/alerts_contract_authority"></provider>
 <activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation"></activity>
-<activity android:name="com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity" android:taskAffinity="" android:stateNotNeeded="true" android:excludeFromRecents="true"/>
-<activity android:name="com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity" android:taskAffinity="" android:configChanges="keyboardHidden" android:stateNotNeeded="true" android:excludeFromRecents="true"/>
-
+<activity android:name="com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity" android:stateNotNeeded="true" android:excludeFromRecents="true" android:taskAffinity=""/>
+<activity android:name="com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity" android:configChanges="keyboardHidden" android:stateNotNeeded="true" android:excludeFromRecents="true" android:taskAffinity=""/>
 </application>
     
 </manifest> 
