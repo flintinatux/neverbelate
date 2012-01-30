@@ -38,10 +38,10 @@ public class LauncherActivity extends Activity {
 
 	// Static constants
 	private static final boolean ADMOB = true;
-	private static final boolean ADMOB_TEST = true;
+	private static final boolean ADMOB_TEST = false;
 	private static final int DLG_COMING_SOON = 0;
 	private static final int RESULT_TOS = 0;
-	private static final int LAUNCH_INTERVAL = 0;
+//	private static final int LAUNCH_INTERVAL = 0;
 	private static final String LOG_TAG = "NeverBeLateService";
 
 	// Private fields
@@ -66,8 +66,12 @@ public class LauncherActivity extends Activity {
 				
 		// Show registration if time
 		IAdManager adManager = AdManagerFactory.createInstance(getApplication());
-		adManager.setRegistrationInterval(LAUNCH_INTERVAL);
-		adManager.setRegistrationMode(IAdManager.RegistrationMode.RegistrationAfterIntervalInLaunches);
+		if (! adManager.hasValidRegistrationData()) {
+			adManager.startRegistrationActivity(this);
+		}
+//		adManager.setRegistrationMode(IAdManager.RegistrationMode.RegistrationAtLaunch, this);
+//		adManager.setRegistrationInterval(LAUNCH_INTERVAL);
+//		adManager.setRegistrationMode(IAdManager.RegistrationMode.RegistrationAfterIntervalInLaunches);
 		
 		// Set content view to launcher layout and load application resources
 		setContentView(R.layout.launcher);

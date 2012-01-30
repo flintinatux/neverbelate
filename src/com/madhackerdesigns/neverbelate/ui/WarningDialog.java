@@ -61,7 +61,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	private static final int ALERT_TOKEN = 1;
 	private static final String LOG_TAG = "NeverLateWarning";
 	private static final boolean ADMOB = true;
-	private static final boolean ADMOB_TEST = true;
+	private static final boolean ADMOB_TEST = false;
 	
 	// static strings for intent extra keys
 	private static final String PACKAGE_NAME = "com.madhackerdesigns.neverbelate";
