@@ -55,9 +55,6 @@ public class LauncherActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {		
 		super.onCreate(savedInstanceState);
 		
-		// Show TOS and EULA for acceptance
-		Eula.show(this);
-		
 		// TODO: If first load, download the registration letter copy.
 		// (For now, just get a static copy from the strings resources.) 
 		
@@ -211,6 +208,9 @@ public class LauncherActivity extends Activity {
 	@Override
 	protected void onResume() {
 		super.onResume();
+		
+		// Show TOS and EULA for acceptance
+		Eula.show(this);
 		
 		// Load up the preference helper and set the checked state
 		if (mPrefs == null) { mPrefs = new PreferenceHelper(this); }

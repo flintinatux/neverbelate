@@ -1,0 +1,653 @@
+com.google.ads.Ad:
+    public abstract boolean isReady()
+    public abstract void loadAd(com.google.ads.AdRequest)
+    public abstract void setAdListener(com.google.ads.AdListener)
+    public abstract void stopLoading()
+com.google.ads.AdActivity:
+    public static final java.lang.String BASE_URL_PARAM
+    public static final java.lang.String HTML_PARAM
+    public static final java.lang.String URL_PARAM
+    public static final java.lang.String INTENT_ACTION_PARAM
+    public static final java.lang.String TYPE_PARAM
+    public static final java.lang.String ORIENTATION_PARAM
+com.google.ads.AdRequest:
+    public static final java.lang.String VERSION
+    public static final java.lang.String LOGTAG
+    public void setGender(com.google.ads.AdRequest$Gender)
+    public void setBirthday(java.lang.String)
+    public void setKeywords(java.util.Set)
+    public void addKeyword(java.lang.String)
+    public void setExtras(java.util.Map)
+    public void addExtra(java.lang.String,java.lang.Object)
+com.google.ads.AdSize:
+    public AdSize(int,int)
+com.google.ads.AdView:
+    public AdView(android.app.Activity,com.google.ads.AdSize,java.lang.String)
+    public boolean isReady()
+    public void setAdListener(com.google.ads.AdListener)
+    public void stopLoading()
+com.google.ads.InterstitialAd:
+    private d a
+    public InterstitialAd(android.app.Activity,java.lang.String)
+    public boolean isReady()
+    public void loadAd(com.google.ads.AdRequest)
+    public void show()
+    public void setAdListener(com.google.ads.AdListener)
+    public void stopLoading()
+com.google.gson.FieldAttributes:
+    final void a(java.lang.Object,java.lang.Object)
+    final java.lang.reflect.Field b()
+com.google.gson.FieldNamingPolicy
+com.google.gson.FieldNamingStrategy
+com.google.gson.Gson:
+    public final com.google.gson.JsonElement toJsonTree(java.lang.Object)
+    public final void toJson(java.lang.Object,java.lang.Appendable)
+    public final java.lang.String toJson(com.google.gson.JsonElement)
+    public final java.lang.Object fromJson(java.lang.String,java.lang.Class)
+    public final java.lang.Object fromJson(java.lang.String,java.lang.reflect.Type)
+    public final java.lang.Object fromJson(java.io.Reader,java.lang.Class)
+    public final java.lang.Object fromJson(java.io.Reader,java.lang.reflect.Type)
+    public final java.lang.Object fromJson(com.google.gson.JsonElement,java.lang.Class)
+    public final java.lang.Object fromJson(com.google.gson.JsonElement,java.lang.reflect.Type)
+com.google.gson.GsonBuilder
+com.google.gson.InstanceCreator
+com.google.gson.JsonArray:
+    public final void addAll(com.google.gson.JsonArray)
+    public final int size()
+    public final com.google.gson.JsonElement get(int)
+    public final java.lang.String getAsString()
+    public final double getAsDouble()
+    public final java.math.BigDecimal getAsBigDecimal()
+    public final java.math.BigInteger getAsBigInteger()
+    public final float getAsFloat()
+    public final long getAsLong()
+    public final int getAsInt()
+    public final byte getAsByte()
+    public final char getAsCharacter()
+    public final short getAsShort()
+    public final boolean getAsBoolean()
+    final java.lang.Object a()
+com.google.gson.JsonDeserializationContext
+com.google.gson.JsonDeserializer:
+    public abstract java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.JsonElement:
+    public boolean getAsBoolean()
+    public java.lang.String getAsString()
+    public double getAsDouble()
+    public float getAsFloat()
+    public long getAsLong()
+    public int getAsInt()
+    public byte getAsByte()
+    public char getAsCharacter()
+    public java.math.BigDecimal getAsBigDecimal()
+    public java.math.BigInteger getAsBigInteger()
+    public short getAsShort()
+    java.lang.Object a()
+com.google.gson.JsonObject:
+    public final com.google.gson.JsonElement remove(java.lang.String)
+    public final void addProperty(java.lang.String,java.lang.String)
+    public final void addProperty(java.lang.String,java.lang.Boolean)
+    public final void addProperty(java.lang.String,java.lang.Character)
+    public final boolean has(java.lang.String)
+    public final com.google.gson.JsonElement get(java.lang.String)
+    public final com.google.gson.JsonPrimitive getAsJsonPrimitive(java.lang.String)
+    public final com.google.gson.JsonArray getAsJsonArray(java.lang.String)
+    public final com.google.gson.JsonObject getAsJsonObject(java.lang.String)
+com.google.gson.JsonParseException
+com.google.gson.JsonParser
+com.google.gson.JsonPrimitive:
+    public final boolean isBoolean()
+    public final boolean getAsBoolean()
+    public final boolean isNumber()
+    public final java.lang.String getAsString()
+    public final double getAsDouble()
+    public final java.math.BigDecimal getAsBigDecimal()
+    public final java.math.BigInteger getAsBigInteger()
+    public final float getAsFloat()
+    public final long getAsLong()
+    public final short getAsShort()
+    public final int getAsInt()
+    public final byte getAsByte()
+    public final char getAsCharacter()
+    final java.lang.Object a()
+com.google.gson.JsonSerializationContext:
+    public abstract com.google.gson.JsonElement serialize(java.lang.Object)
+com.google.gson.JsonStreamParser
+com.google.gson.ModifyFirstLetterNamingPolicy
+com.google.gson.ModifyFirstLetterNamingPolicy$LetterModifier
+com.google.gson.aa
+com.google.gson.ab
+com.google.gson.ab$a
+com.google.gson.ab$b
+com.google.gson.ac:
+    public final com.google.gson.JsonElement serialize(java.lang.Object)
+com.google.gson.af
+com.google.gson.ag
+com.google.gson.ai:
+    public final java.lang.Object a(java.lang.reflect.Type)
+    public final java.lang.Object a(java.lang.reflect.Type,int)
+    private static java.lang.Object b(java.lang.reflect.Type)
+com.google.gson.am
+com.google.gson.annotations.Expose
+com.google.gson.annotations.Since
+com.google.gson.annotations.Until
+com.google.gson.aq:
+    public final synchronized com.google.gson.aq b()
+com.google.gson.as
+com.google.gson.au:
+    public static boolean a(java.lang.Class)
+    public static java.lang.Class b(java.lang.Class)
+com.google.gson.ax
+com.google.gson.az
+com.google.gson.ba
+com.google.gson.bb:
+    public final boolean d()
+com.google.gson.bc:
+    public final java.lang.Class f()
+com.google.gson.bf:
+    public final java.lang.reflect.Type a()
+com.google.gson.bh
+com.google.gson.bi
+com.google.gson.c
+com.google.gson.e
+com.google.gson.f$a:
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$aa:
+    public java.lang.Object createInstance(java.lang.reflect.Type)
+com.google.gson.f$ab:
+    private static java.net.URI a(com.google.gson.JsonElement)
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$ac:
+    private static java.net.URL a(com.google.gson.JsonElement)
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$ad:
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$b:
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$c:
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$d:
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$e:
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$f:
+    public final java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+    public final java.lang.Object createInstance(java.lang.reflect.Type)
+com.google.gson.f$g:
+    f$g(java.lang.String)
+    public f$g(int,int)
+    private java.util.Date a(com.google.gson.JsonElement)
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$h:
+    private java.sql.Date a(com.google.gson.JsonElement)
+    public final java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$i:
+    private java.sql.Time a(com.google.gson.JsonElement)
+    public final java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$j:
+    public final java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$k:
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$m:
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$n:
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$p:
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$q:
+    public java.lang.Object createInstance(java.lang.reflect.Type)
+com.google.gson.f$r:
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$s:
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$t:
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$v:
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+    public java.lang.Object createInstance(java.lang.reflect.Type)
+com.google.gson.f$w:
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$x:
+    public final java.lang.Object createInstance(java.lang.reflect.Type)
+com.google.gson.f$y:
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.f$z:
+    public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.i
+com.google.gson.j
+com.google.gson.l
+com.google.gson.n
+com.google.gson.p
+com.google.gson.r
+com.google.gson.reflect.TypeToken
+com.google.gson.reflect.TypeToken$a
+com.google.gson.s
+com.google.gson.t:
+    public final java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
+com.google.gson.x
+com.google.gson.y
+com.google.gson.y$a
+com.google.gson.y$b
+com.google.gson.z
+com.madhackerdesigns.neverbelate.Eula:
+    private static final java.lang.String PREFERENCE_EULA_ACCEPTED
+    private static final java.lang.String PREFERENCES_EULA
+    108:109:private static void refuse(android.app.Activity)
+com.madhackerdesigns.neverbelate.R
+com.madhackerdesigns.neverbelate.R$anim
+com.madhackerdesigns.neverbelate.R$array
+com.madhackerdesigns.neverbelate.R$attr
+com.madhackerdesigns.neverbelate.R$bool
+com.madhackerdesigns.neverbelate.R$color
+com.madhackerdesigns.neverbelate.R$drawable
+com.madhackerdesigns.neverbelate.R$id
+com.madhackerdesigns.neverbelate.R$layout
+com.madhackerdesigns.neverbelate.R$string
+com.madhackerdesigns.neverbelate.R$style
+com.madhackerdesigns.neverbelate.R$styleable
+com.madhackerdesigns.neverbelate.R$xml
+com.madhackerdesigns.neverbelate.provider.AlertsContract:
+    public static final java.lang.String AUTHORITY
+com.madhackerdesigns.neverbelate.provider.AlertsContract$Alerts:
+    public static final java.lang.String TABLE_NAME
+    private static final java.lang.String SCHEME
+    private static final java.lang.String PATH_ALERTS
+    private static final java.lang.String PATH_ALERT_ID
+    public static final int ALERT_ID_PATH_POSITION
+    public static final java.lang.String CONTENT_TYPE
+    public static final java.lang.String CONTENT_ITEM_TYPE
+    public static final java.lang.String DEFAULT_SORT_ORDER
+    public static final java.lang.String EVENT_ID
+    public static final java.lang.String CALENDAR_COLOR
+    public static final java.lang.String TITLE
+    public static final java.lang.String BEGIN
+    public static final java.lang.String END
+    public static final java.lang.String LOCATION
+    public static final java.lang.String DESCRIPTION
+    public static final java.lang.String DURATION
+    public static final java.lang.String COPYRIGHTS
+    public static final java.lang.String JSON
+    public static final java.lang.String FIRED
+    public static final java.lang.String DISMISSED
+com.madhackerdesigns.neverbelate.provider.AlertsHelper:
+    public static final int PROJ_ID
+    public static final int PROJ_EVENT_ID
+    public static final int PROJ_CALENDAR_COLOR
+    public static final int PROJ_TITLE
+    public static final int PROJ_BEGIN
+    public static final int PROJ_END
+    public static final int PROJ_LOCATION
+    public static final int PROJ_DESCRIPTION
+    public static final int PROJ_DURATION
+    public static final int PROJ_COPYRIGHTS
+    public static final int PROJ_JSON
+    public static final int PROJ_FIRED
+    public static final int PROJ_DISMISSED
+com.madhackerdesigns.neverbelate.provider.AlertsProvider:
+    private static final java.lang.String TAG
+    private static final java.lang.String DATABASE_NAME
+    private static final int DATABASE_VERSION
+    private static final int ALERTS
+    private static final int ALERT_ID
+    632:632:com.madhackerdesigns.neverbelate.provider.AlertsProvider$DatabaseHelper getOpenHelperForTest()
+com.madhackerdesigns.neverbelate.service.CalendarHelper:
+    public static final java.lang.String CALENDAR_DEFAULT_SORT_ORDER
+    public static final java.lang.String DISPLAY_NAME
+    public static final java.lang.String HIDDEN
+    public static final java.lang.String LOCATION
+    public static final java.lang.String CALENDAR_NAME
+    public static final java.lang.String URL
+    public static final java.lang.String ACCESS_LEVEL
+    public static final java.lang.String COLOR
+    public static final int CONTRIBUTOR_ACCESS
+    public static final int EDITOR_ACCESS
+    public static final int FREEBUSY_ACCESS
+    public static final int NO_ACCESS
+    public static final int OVERRIDE_ACCESS
+    public static final int OWNER_ACCESS
+    public static final int READ_ACCESS
+    public static final int RESPOND_ACCESS
+    public static final int ROOT_ACCESS
+    public static final java.lang.String SELECTED
+    public static final java.lang.String SYNC_EVENTS
+    public static final java.lang.String TIMEZONE
+    public static final java.lang.String ALL_DAY
+    public static final java.lang.String CALENDAR_ID
+    public static final java.lang.String COMMENTS_URI
+    public static final java.lang.String DESCRIPTION
+    public static final java.lang.String DTEND
+    public static final java.lang.String DTSTART
+    public static final java.lang.String DURATION
+    public static final java.lang.String EVENT_LOCATION
+    public static final java.lang.String EVENT_TIMEZONE
+    public static final java.lang.String EXDATE
+    public static final java.lang.String EXRULE
+    public static final java.lang.String HAS_ALARM
+    public static final java.lang.String HAS_EXTENDED_PROPERTIES
+    public static final java.lang.String HTML_URI
+    public static final java.lang.String LAST_DATE
+    public static final java.lang.String ORIGINAL_ALL_DAY
+    public static final java.lang.String ORIGINAL_EVENT
+    public static final java.lang.String ORIGINAL_INSTANCE_TIME
+    public static final java.lang.String RDATE
+    public static final java.lang.String RRULE
+    public static final java.lang.String SELF_ATTENDEE_STATUS
+    public static final java.lang.String STATUS
+    public static final int STATUS_CANCELED
+    public static final int STATUS_CONFIRMED
+    public static final int STATUS_TENTATIVE
+    public static final java.lang.String TITLE
+    public static final java.lang.String TRANSPARENCY
+    public static final int TRANSPARENCY_OPAQUE
+    public static final int TRANSPARENCY_TRANSPARENT
+    public static final java.lang.String VISIBILITY
+    public static final int VISIBILITY_CONFIDENTIAL
+    public static final int VISIBILITY_DEFAULT
+    public static final int VISIBILITY_PRIVATE
+    public static final int VISIBILITY_PUBLIC
+    public static final java.lang.String EVENT_ID
+    public static final java.lang.String EVENT_NAME
+    public static final java.lang.String VALUE
+    public static final java.lang.String BEGIN
+    public static final java.lang.String INSTANCE_DEFAULT_SORT_ORDER
+    public static final java.lang.String END
+    public static final java.lang.String END_DAY
+    public static final java.lang.String END_MINUTE
+    public static final java.lang.String SORT_CALENDAR_VIEW
+    public static final java.lang.String START_DAY
+    public static final java.lang.String START_MINUTE
+    public static final int PROJ_EVENT_ID
+    public static final int PROJ_TITLE
+    public static final int PROJ_ALL_DAY
+    public static final int PROJ_BEGIN
+    public static final int PROJ_END
+    public static final int PROJ_EVENT_LOCATION
+    public static final int PROJ_DESCRIPTION
+    public static final int PROJ_COLOR
+com.madhackerdesigns.neverbelate.service.NeverBeLateService:
+    private static final long DELTA
+    private static final float MARGIN
+    private static final int NOTIFICATION_ID
+    private static final long WAKELOCK_TIMEOUT
+    private static final java.lang.String WAKELOCK_NAME
+    private static final boolean OUT_LOUD
+    private static final boolean SILENTLY
+    private static final java.lang.String DIRECTIONS_API_URL
+    private static final java.lang.String LOG_TAG
+com.madhackerdesigns.neverbelate.service.ServiceCommander
+com.madhackerdesigns.neverbelate.service.StartupReceiver:
+    private static final int REQUEST_CODE
+com.madhackerdesigns.neverbelate.service.WakefulServiceReceiver:
+    private static final java.lang.String LOG_TAG
+com.madhackerdesigns.neverbelate.settings.PreferenceHelper:
+    private static final java.lang.String DEFAULT_ADVANCE_WARNING
+    private static final boolean DEFAULT_AVOID_HIGHWAYS
+    private static final boolean DEFAULT_AVOID_TOLLS
+    private static final boolean DEFAULT_INSISTENT
+    private static final java.lang.String DEFAULT_LOCATION_FREQ
+    private static final java.lang.String DEFAULT_LOOKAHEAD_WINDOW
+    private static final boolean DEFAULT_NEVERLATE_ENABLED
+    private static final java.lang.String DEFAULT_NOTIFICATION_METHOD
+    private static final java.lang.String DEFAULT_SNOOZE_DURATION
+    private static final boolean DEFAULT_TOS_ACCEPTED
+    private static final java.lang.String DEFAULT_TRAVEL_MODE
+    private static final java.lang.String DEFAULT_TRAVELTIME_FREQ
+    private static final boolean DEFAULT_VIBRATE
+    private static final boolean DEFAULT_WARN_NO_LOCATION
+    private static final java.lang.String KEY_ADVANCE_WARNING
+    private static final java.lang.String KEY_AVOID_HIGHWAYS
+    private static final java.lang.String KEY_AVOID_TOLLS
+    private static final java.lang.String KEY_INSISTENT
+    private static final java.lang.String KEY_LOCATION_FREQ
+    private static final java.lang.String KEY_LOOKAHEAD_WINDOW
+    private static final java.lang.String KEY_NEVERLATE_ENABLED
+    private static final java.lang.String KEY_NOTIFICATION_METHOD
+    private static final java.lang.String KEY_RINGTONE
+    private static final java.lang.String KEY_SNOOZE_DURATION
+    private static final java.lang.String KEY_TOS_ACCEPTED
+    private static final java.lang.String KEY_TRAVEL_MODE
+    private static final java.lang.String KEY_TRAVELTIME_FREQ
+    private static final java.lang.String KEY_VIBRATE
+    private static final java.lang.String KEY_WARN_NO_LOCATION
+    103:103:public long getLocationFreq()
+    156:156:public boolean isTosAccepted()
+    165:166:public boolean setTosAccepted(boolean)
+    194:194:public boolean isWarnNoLocation()
+com.madhackerdesigns.neverbelate.ui.LauncherActivity:
+    private static final boolean ADMOB
+    private static final boolean ADMOB_TEST
+    private static final int DLG_COMING_SOON
+    private static final int RESULT_TOS
+    private static final java.lang.String LOG_TAG
+com.madhackerdesigns.neverbelate.ui.MapOverlay:
+    35:37:public void clearOverlays()
+com.madhackerdesigns.neverbelate.ui.Registration:
+    private java.lang.String email
+    private static final java.lang.String BETA_CODE
+    private static final java.lang.String BIRTHDATE
+    private static final java.lang.String GENDER
+    private static final java.lang.String FIRST_NAME
+    private static final java.lang.String LAST_NAME
+    private static final java.lang.String PROMO_CODE
+    private static final java.lang.String REGISTERED
+    private static final java.lang.String ZIP_CODE
+    protected static final int GENDER_MALE
+    protected static final int GENDER_FEMALE
+    protected static final int GENDER_UNKNOWN
+    private static final java.lang.String REGISTRATION_DATA
+    86:86:protected java.lang.String getBetaCode()
+    100:100:protected long getBirthdate()
+    114:115:public void setEmail(java.lang.String)
+    121:121:public java.lang.String getEmail()
+    128:128:protected int getGender()
+    142:142:protected java.lang.String getFirstName()
+    156:156:protected java.lang.String getLastName()
+    170:170:protected java.lang.String getPromoCode()
+    177:178:protected void setPromoCode(java.lang.String)
+    184:184:protected int getZipCode()
+com.madhackerdesigns.neverbelate.ui.RegistrationForm:
+    private static final int DIALOG_DATE
+    private static final int DIALOG_DECLINE
+    private static final int DIALOG_INCOMPLETE
+    private static final int DIALOG_THANKS
+com.madhackerdesigns.neverbelate.ui.UserLocationOverlay:
+    private static final java.lang.String TOAST_MESSAGE
+com.madhackerdesigns.neverbelate.ui.WarningDialog:
+    private static final int ALERT_TOKEN
+    private static final java.lang.String LOG_TAG
+    private static final boolean ADMOB
+    private static final boolean ADMOB_TEST
+    private static final java.lang.String PACKAGE_NAME
+    public static final java.lang.String EXTRA_URI
+com.madhackerdesigns.neverbelate.ui.WarningDialog$MapBounds:
+    private static final double RATIO
+com.madhackerdesigns.neverbelate.util.AdHelper:
+    private static final java.lang.String AD_HELPER_VALUES
+    private static final long AD_FREQUENCY
+    private static final java.lang.String CURRENT
+    private static final java.lang.String AD_LAST
+    private static final java.lang.String AD_NEXT
+    private static final java.lang.String FIB_LAST
+    private static final java.lang.String FIB_NEXT
+    private static final java.lang.String REGISTER_LAST
+    private static final java.lang.String REGISTER_NEXT
+    private static final java.lang.String IS_REGISTERED
+    private static final java.lang.String REQUEST_NEXT
+    private static final long DEF_CURRENT
+    private static final long DEF_AD_LAST
+    private static final long DEF_AD_NEXT
+    private static final long DEF_FIB_LAST
+    private static final long DEF_FIB_NEXT
+    private static final long DEF_REGISTER_LAST
+    private static final long DEF_REGISTER_NEXT
+    private static final boolean DEF_IS_REGISTERED
+    private static final long DEF_REQUEST_NEXT
+    66:66:public java.lang.String getNextRegRequest()
+    86:86:public boolean isRegistered()
+    91:97:public boolean isTimeToRegister()
+    129:133:public void setRegistered(boolean)
+    137:150:public void setRegistrationRequested(boolean)
+com.madhackerdesigns.neverbelate.util.Logger:
+    private static final boolean LOGGING
+    private static final java.lang.String LOG_TAG
+    private static final int NOT_LOGGED
+    22:22:public static int d(java.lang.String,java.lang.String,java.lang.Throwable)
+    27:27:public static int e(java.lang.String,java.lang.String)
+    32:32:public static int e(java.lang.String,java.lang.String,java.lang.Throwable)
+    37:37:public static java.lang.String getStackTraceString(java.lang.Throwable)
+    41:41:public static int i(java.lang.String,java.lang.String)
+    46:46:public static int i(java.lang.String,java.lang.String,java.lang.Throwable)
+    51:51:public static boolean isLoggable(java.lang.String,int)
+    55:55:public static int println(int,java.lang.String,java.lang.String)
+    59:59:public static int v(java.lang.String,java.lang.String)
+    64:64:public static int v(java.lang.String,java.lang.String,java.lang.Throwable)
+    69:69:public static int w(java.lang.String,java.lang.String)
+    74:74:public static int w(java.lang.String,java.lang.Throwable)
+    79:79:public static int w(java.lang.String,java.lang.String,java.lang.Throwable)
+com.pontiflex.mobile.webview.models.ResourceData:
+    private static final java.lang.String defaultFileName
+    34:35:public void removeResourceData(java.lang.String)
+com.pontiflex.mobile.webview.sdk.AdManager:
+    public static final int DefaultAdRefreshIntervalMs
+    public static final int DefaultRegistrationInterval
+    public static final boolean DefaultRegistrationRequired
+    public static final boolean DefaultShowingMultiAdView
+    public static final boolean DefaultAllowReadDeviceData
+    public static final java.lang.String DefautlDefaultLocale
+    public static final java.lang.String LeadPostUrlStringKey
+    private static final java.lang.String AppInfoPflxAdUrl
+    private static final java.lang.String AppInfoPid
+    private static final java.lang.String AppInfoSubSourceId
+    private static final java.lang.String AdPath
+    private static final java.lang.String JsonPath
+    private static final java.lang.String DefaultAppInfoName
+    private static final java.lang.String KeystoreFilename
+    121:128:public static com.pontiflex.mobile.webview.sdk.IAdManager createInstance(android.app.Application,java.lang.String)
+    132:144:protected static com.pontiflex.mobile.webview.sdk.IAdManager createInstance(android.app.Application,com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment,boolean)
+    286:286:public com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode getRegistrationMode()
+    303:312:public void setRegistrationInterval(int)
+    315:318:public int getRegistrationInterval()
+    338:364:public boolean setRegistrationData(java.util.Map)
+    426:427:public void startRegistrationActivity()
+    498:498:public com.pontiflex.mobile.webview.utilities.PackageHelper getPkgHelper()
+    529:529:public boolean isOffline()
+    533:533:public int getRefreshIntervalMillis()
+    569:571:public java.lang.String getAdHostString()
+    575:575:public java.lang.String getAdUrl()
+    579:592:public java.lang.String getAdUrl(int)
+    602:602:public java.util.Iterator getRegistrationKeysIterator()
+    633:634:public void setEnvironment(com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment)
+    637:637:public com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment getEnvironment()
+    641:641:public static java.lang.String getKeystoreFilename()
+    645:645:public static java.lang.String getDefaultAppInfoName()
+    649:649:public com.pontiflex.mobile.webview.utilities.VersionHelper getVersionHelper()
+    662:662:public java.lang.String getSdkVersionCode()
+    667:667:public java.lang.String getSdkVersionName()
+    675:675:public boolean showAd()
+    683:683:public boolean showAd(int)
+    691:691:public boolean showAd(boolean)
+    699:699:public boolean showAd(int,boolean,boolean)
+    707:707:public boolean showAd(android.app.Activity)
+    715:715:public boolean showAd(int,android.app.Activity)
+    723:723:public boolean showAd(boolean,android.app.Activity)
+    732:752:public boolean showAd(int,boolean,boolean,android.app.Activity)
+com.pontiflex.mobile.webview.sdk.AdManagerFactory:
+    13:13:public static com.pontiflex.mobile.webview.sdk.IAdManager createInstance(android.app.Application,com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment)
+com.pontiflex.mobile.webview.sdk.IAdManager:
+    public static final int SHOW_AD_REQUEST
+    public abstract com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode getRegistrationMode()
+    public abstract void setRegistrationMode(com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode,android.app.Activity)
+    public abstract void setRegistrationRequired(boolean)
+    public abstract boolean isRegistrationRequired()
+    public abstract void setRegistrationInterval(int)
+    public abstract int getRegistrationInterval()
+    public abstract void setShowingMultiAdView(boolean)
+    public abstract boolean isShowingMultiAdView()
+    public abstract boolean setRegistrationData(java.util.Map)
+    public abstract void startRegistrationActivity()
+    public abstract boolean showAd()
+    public abstract boolean showAd(int)
+    public abstract boolean showAd(boolean)
+    public abstract boolean showAd(int,boolean,boolean)
+    public abstract boolean showAd(android.app.Activity)
+    public abstract boolean showAd(int,android.app.Activity)
+    public abstract boolean showAd(boolean,android.app.Activity)
+    public abstract boolean showAd(int,boolean,boolean,android.app.Activity)
+    public abstract java.lang.String getSdkVersionCode()
+    public abstract java.lang.String getSdkVersionName()
+    public abstract boolean isInitialized()
+    public abstract void setAllowReadDeviceData(boolean)
+    public abstract void setDefaultLocale(java.lang.String)
+com.pontiflex.mobile.webview.sdk.activities.BaseActivity:
+    private static final long PROGRESS_DIALOG_TIMEOUT_MILLIS
+    private static final java.lang.String StateKeystoreFilename
+    private static final java.lang.String AdditionalDataStorageFileName
+    131:134:protected void setProgressDialogProgress(int)
+    187:189:public void clearAdditionalData(java.lang.String)
+com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity:
+    61:63:private void startRegistrationAfterLaunchCount(int)
+    67:68:private void startRegistrationAtLaunch()
+    112:112:public com.pontiflex.mobile.webview.sdk.IAdManager getAdManager()
+com.pontiflex.mobile.webview.utilities.AppInfo:
+    private static final java.lang.String AppInfoFileName
+    117:121:public java.lang.String getSubSourceId()
+    126:130:public java.lang.Integer getPid()
+    134:138:public int getFieldCount()
+    153:160:public java.lang.String getOfferString(java.lang.String)
+    174:180:public org.json.JSONObject getRegistrationOffer()
+    184:191:public java.lang.String getDisplayNameForFieldNamed(java.lang.String)
+    211:229:public org.json.JSONObject findOrderedField(int)
+    235:253:public java.lang.String getNameOfOrderedField(int)
+com.pontiflex.mobile.webview.utilities.FieldValidator:
+    private static final java.lang.String ValidationRequired
+    private static final java.lang.String ValidationPostalCode
+    private static final java.lang.String ValidationEmail
+    private static final java.lang.String ValidationCountry
+    79:79:public boolean hasErrors()
+    83:85:public java.util.List getErrors()
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry:
+    86:103:private java.lang.String getHtml(java.io.InputStream)
+    117:117:public java.lang.String getRegistrationHtml(android.app.Activity,boolean)
+    130:130:public java.lang.String getMultiOfferHtml(android.app.Activity,boolean)
+    143:143:public java.lang.String getPrivacyHtml(android.app.Activity,boolean)
+    156:156:public java.lang.String getPrivacyListHtml(android.app.Activity,boolean)
+    196:196:public java.lang.String getPrivacyHtmlPath(android.app.Activity,boolean)
+    210:210:public java.lang.String getPrivacyListHtmlPath(android.app.Activity,boolean)
+    215:223:protected java.lang.String getHtml(android.app.Activity,boolean,com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page)
+    452:455:protected void clearRegistry()
+com.pontiflex.mobile.webview.utilities.PackageHelper:
+    private static final int BUFFERED_READER_SIZE
+    private static final java.lang.String PontiflexSdkVersionBasename
+    private static final java.lang.String RES_PATH
+    private static final java.lang.String OLD_RES_PATH
+    private static final java.lang.String RES_JS_CLIENT
+    60:60:public int getLayoutId(java.lang.String,android.content.Context)
+    64:64:public int getDrawableId(java.lang.String,android.content.Context)
+    68:68:public int getItemId(java.lang.String,android.content.Context)
+    72:75:public int getIdentifier(java.lang.String,java.lang.String,android.content.Context)
+    79:84:public java.util.jar.JarInputStream getJarInputStream(android.content.Context)
+    152:164:public java.io.InputStream getHtmlResource(java.lang.String,android.content.Context)
+    168:180:private java.io.InputStream getJarResource(java.util.jar.JarInputStream,java.lang.String)
+    212:225:public java.util.Properties loadPontiflexSdkVersion(android.content.Context)
+com.pontiflex.mobile.webview.utilities.RegistrationStorage:
+    public static final java.lang.String DefaultKeystoreFilename
+    private static final java.lang.String HEX
+    77:77:public boolean isEmpty()
+com.pontiflex.mobile.webview.utilities.UpdateResourceUtil:
+    static final java.lang.String RES_PATH
+    static final java.lang.String TEMP_RES_PATH
+    static final java.lang.String PontiflexSdkVersionBasename
+    static final java.lang.String versionCodeSuffix
+    static final java.lang.String lastUpdatedDateSuffix
+    private static final java.lang.String RES_JS_CLIENT
+com.pontiflex.mobile.webview.utilities.VersionHelper:
+    45:52:private java.lang.String getFromStringCache(android.content.Context,java.lang.String)
+    63:67:public java.lang.String getPflxAdVersion(android.content.Context)
+    76:80:public java.lang.String getPflxAdSdkVersion(android.content.Context)
+    90:94:public java.lang.String getPflxSdkVersionCode(android.content.Context)
+    103:106:public java.lang.String getPflxSdkVersionName(android.content.Context)
+    179:183:public java.lang.String getAppUri(android.content.Context)
+d:
+    public final synchronized boolean l()
+    public final synchronized void a(com.google.ads.AdListener)
+    public final synchronized void t()

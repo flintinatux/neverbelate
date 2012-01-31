@@ -1,0 +1,1481 @@
+a -> g:
+    java.util.Map a -> a
+    java.util.Map b -> b
+    void a(d,a$a,android.net.Uri,android.webkit.WebView) -> a
+    boolean a(android.net.Uri) -> a
+    boolean b(android.net.Uri) -> b
+    boolean c(android.net.Uri) -> c
+    void a(android.webkit.WebView) -> a
+    void b(android.webkit.WebView) -> b
+a$1 -> af:
+    int[] a -> a
+a$a -> ac:
+    a$a a -> a
+    a$a b -> b
+    a$a[] c -> c
+    a$a[] values() -> values
+    a$a valueOf(java.lang.String) -> valueOf
+b -> e:
+    c a -> a
+    d b -> b
+    java.lang.String c -> c
+    void a(java.net.HttpURLConnection) -> a
+    void b(java.net.HttpURLConnection) -> b
+    void c(java.net.HttpURLConnection) -> c
+    void d(java.net.HttpURLConnection) -> d
+    java.lang.Void a(java.lang.String[]) -> a
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+c -> f:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.Object c -> c
+    long d -> d
+    java.lang.String e -> e
+    java.lang.String f -> f
+    b g -> g
+    d h -> h
+    android.webkit.WebView i -> i
+    java.lang.String j -> j
+    com.google.ads.AdRequest$ErrorCode k -> k
+    boolean l -> l
+    boolean m -> m
+    void a(long) -> a
+    com.google.ads.AdRequest$ErrorCode a(com.google.ads.AdRequest[]) -> a
+    long b() -> b
+    void onCancelled() -> onCancelled
+    void a(java.lang.String,java.lang.String) -> a
+    void a(java.lang.String) -> a
+    void a(com.google.ads.AdRequest$ErrorCode) -> a
+    void a() -> a
+    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+c$a -> z:
+    c a -> a
+com.google.ads.Ad -> com.google.ads.a:
+com.google.ads.AdActivity -> com.google.ads.AdActivity:
+    java.lang.Object a -> a
+    com.google.ads.AdActivity b -> b
+    d c -> c
+    com.google.ads.AdActivity d -> d
+    g e -> e
+    long f -> f
+    android.widget.RelativeLayout g -> g
+    boolean h -> h
+    android.widget.VideoView i -> i
+    void a(java.lang.String) -> a
+    android.widget.VideoView getVideoView() -> a
+    void launchAdActivity(d,e) -> a
+    void onClick(android.view.View) -> onClick
+    void onCreate(android.os.Bundle) -> onCreate
+    void a(g,boolean,int) -> a
+    void showVideo(android.widget.VideoView) -> a
+    void onCompletion(android.media.MediaPlayer) -> onCompletion
+    void onDestroy() -> onDestroy
+    void onPrepared(android.media.MediaPlayer) -> onPrepared
+    void onWindowFocusChanged(boolean) -> onWindowFocusChanged
+com.google.ads.AdListener -> com.google.ads.d:
+com.google.ads.AdRequest -> com.google.ads.c:
+    com.google.ads.AdRequest$Gender a -> a
+    java.lang.String b -> b
+    java.util.Set c -> c
+    java.util.Map d -> d
+    android.location.Location e -> e
+    boolean f -> f
+    void setLocation(android.location.Location) -> a
+    void setTesting$1385ff() -> a
+    java.util.Map getRequestMap() -> b
+com.google.ads.AdRequest$ErrorCode -> com.google.ads.b:
+    com.google.ads.AdRequest$ErrorCode INVALID_REQUEST -> a
+    com.google.ads.AdRequest$ErrorCode NO_FILL -> b
+    com.google.ads.AdRequest$ErrorCode NETWORK_ERROR -> c
+    com.google.ads.AdRequest$ErrorCode INTERNAL_ERROR -> d
+    java.lang.String a -> e
+    com.google.ads.AdRequest$ErrorCode[] b -> f
+    com.google.ads.AdRequest$ErrorCode[] values() -> values
+    com.google.ads.AdRequest$ErrorCode valueOf(java.lang.String) -> valueOf
+    java.lang.String toString() -> toString
+com.google.ads.AdRequest$Gender -> com.google.ads.g:
+    com.google.ads.AdRequest$Gender MALE -> a
+    com.google.ads.AdRequest$Gender FEMALE -> b
+    java.lang.String a -> c
+    com.google.ads.AdRequest$Gender[] b -> d
+    com.google.ads.AdRequest$Gender[] values() -> values
+    com.google.ads.AdRequest$Gender valueOf(java.lang.String) -> valueOf
+    java.lang.String toString() -> toString
+com.google.ads.AdSize -> com.google.ads.f:
+    com.google.ads.AdSize BANNER -> a
+    com.google.ads.AdSize IAB_MRECT -> b
+    com.google.ads.AdSize IAB_BANNER -> c
+    com.google.ads.AdSize IAB_LEADERBOARD -> d
+    int a -> e
+    int b -> f
+    java.lang.String c -> g
+    int getWidth() -> a
+    int getHeight() -> b
+    java.lang.String toString() -> toString
+com.google.ads.AdView -> com.google.ads.AdView:
+    d a -> a
+    void loadAd(com.google.ads.AdRequest) -> a
+com.google.ads.InstallReceiver -> com.google.ads.InstallReceiver:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+    java.lang.String a(java.lang.String,java.lang.String,java.lang.String) -> a
+    void a(android.content.Context,android.content.Intent) -> a
+com.google.ads.InterstitialAd -> com.google.ads.e:
+com.google.gson.ExclusionStrategy -> com.google.a.j:
+    boolean shouldSkipField(com.google.gson.FieldAttributes) -> a
+    boolean shouldSkipClass(java.lang.Class) -> a
+com.google.gson.FieldAttributes -> com.google.a.z:
+    com.google.gson.b a -> a
+    java.lang.Class b -> b
+    java.lang.reflect.Field c -> c
+    java.lang.Class d -> d
+    boolean e -> e
+    int f -> f
+    java.lang.String g -> g
+    java.lang.reflect.Type h -> h
+    java.util.Collection i -> i
+    int c() -> f
+    java.lang.String getName() -> a
+    java.lang.reflect.Type getDeclaredType() -> b
+    java.lang.Class getDeclaredClass() -> c
+    java.lang.annotation.Annotation getAnnotation(java.lang.Class) -> a
+    java.util.Collection getAnnotations() -> d
+    boolean hasModifier(int) -> a
+    java.lang.Object a(java.lang.Object) -> a
+    boolean a() -> e
+com.google.gson.Gson -> com.google.a.al:
+    com.google.gson.a a -> a
+    com.google.gson.ay b -> b
+    com.google.gson.ak c -> c
+    com.google.gson.w d -> d
+    com.google.gson.k e -> e
+    com.google.gson.ExclusionStrategy f -> f
+    com.google.gson.ExclusionStrategy g -> g
+    com.google.gson.ExclusionStrategy h -> h
+    com.google.gson.k i -> i
+    com.google.gson.ai j -> j
+    com.google.gson.aq k -> k
+    com.google.gson.aq l -> l
+    com.google.gson.w m -> m
+    boolean n -> n
+    boolean o -> o
+    java.lang.String toJson(java.lang.Object) -> a
+    java.lang.String toString() -> toString
+com.google.gson.JsonArray -> com.google.a.a:
+    java.util.List a -> a
+    void add(com.google.gson.JsonElement) -> a
+    java.util.Iterator iterator() -> iterator
+    void a(java.lang.Appendable,com.google.gson.h) -> a
+com.google.gson.JsonDeserializer -> com.google.a.i:
+com.google.gson.JsonElement -> com.google.a.ak:
+    com.google.gson.h a -> a
+    boolean isJsonArray() -> b
+    boolean isJsonObject() -> c
+    boolean isJsonNull() -> d
+    com.google.gson.JsonObject getAsJsonObject() -> e
+    com.google.gson.JsonArray getAsJsonArray() -> f
+    com.google.gson.JsonPrimitive getAsJsonPrimitive() -> g
+    com.google.gson.JsonNull getAsJsonNull() -> h
+    java.lang.String toString() -> toString
+    void a(java.lang.Appendable,com.google.gson.h) -> a
+com.google.gson.JsonNull -> com.google.a.ah:
+    com.google.gson.JsonNull a -> a
+    void a(java.lang.Appendable,com.google.gson.h) -> a
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    com.google.gson.JsonNull b() -> a
+com.google.gson.JsonObject -> com.google.a.ai:
+    java.util.Map a -> a
+    void add(java.lang.String,com.google.gson.JsonElement) -> a
+    void addProperty(java.lang.String,java.lang.Number) -> a
+    java.util.Set entrySet() -> a
+    void a(java.lang.Appendable,com.google.gson.h) -> a
+com.google.gson.JsonPrimitive -> com.google.a.aj:
+    java.lang.Class[] a -> a
+    java.math.BigInteger b -> b
+    java.math.BigInteger c -> c
+    java.lang.Object d -> d
+    void a(java.lang.Object) -> a
+    void a(java.lang.Appendable,com.google.gson.h) -> a
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    boolean a(com.google.gson.JsonPrimitive) -> a
+    boolean b(com.google.gson.JsonPrimitive) -> b
+com.google.gson.JsonSerializationContext -> com.google.a.ca:
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type) -> a
+com.google.gson.JsonSerializer -> com.google.a.y:
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.LongSerializationPolicy -> com.google.a.f:
+    com.google.gson.LongSerializationPolicy DEFAULT -> a
+    com.google.gson.LongSerializationPolicy STRING -> b
+    com.google.gson.LongSerializationPolicy$b a -> c
+    com.google.gson.LongSerializationPolicy[] b -> d
+    com.google.gson.LongSerializationPolicy[] values() -> values
+    com.google.gson.LongSerializationPolicy valueOf(java.lang.String) -> valueOf
+    com.google.gson.JsonElement serialize(java.lang.Long) -> a
+com.google.gson.LongSerializationPolicy$a -> com.google.a.d:
+    com.google.gson.JsonElement a(java.lang.Long) -> a
+com.google.gson.LongSerializationPolicy$b -> com.google.a.c:
+    com.google.gson.JsonElement a(java.lang.Long) -> a
+com.google.gson.LongSerializationPolicy$c -> com.google.a.b:
+    com.google.gson.JsonElement a(java.lang.Long) -> a
+com.google.gson.ObjectNavigator -> com.google.a.e:
+    com.google.gson.ExclusionStrategy a -> a
+    com.google.gson.ao b -> b
+    void a(com.google.gson.ObjectNavigator$Visitor) -> a
+com.google.gson.ObjectNavigator$Visitor -> com.google.a.g:
+    void start(com.google.gson.ao) -> a
+    void end(com.google.gson.ao) -> b
+    void startVisitingObject$5d527811() -> a
+    void visitArray(java.lang.Object,java.lang.reflect.Type) -> a
+    void visitObjectField(com.google.gson.FieldAttributes,java.lang.reflect.Type,java.lang.Object) -> a
+    void visitArrayField(com.google.gson.FieldAttributes,java.lang.reflect.Type,java.lang.Object) -> b
+    boolean visitUsingCustomHandler(com.google.gson.ao) -> c
+    boolean visitFieldUsingCustomHandler(com.google.gson.FieldAttributes,java.lang.reflect.Type,java.lang.Object) -> c
+    void visitPrimitive(java.lang.Object) -> a
+com.google.gson.a -> com.google.a.w:
+    boolean shouldSkipField(com.google.gson.FieldAttributes) -> a
+    boolean shouldSkipClass(java.lang.Class) -> a
+    boolean a(java.lang.Class) -> b
+com.google.gson.ac -> com.google.a.an:
+    com.google.gson.an a -> a
+    com.google.gson.aq b -> b
+    boolean c -> c
+    com.google.gson.aj d -> d
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type) -> a
+    com.google.gson.JsonElement a(java.lang.Object,java.lang.reflect.Type) -> b
+com.google.gson.ad -> com.google.a.am:
+    com.google.gson.an a -> a
+    com.google.gson.aq b -> b
+    boolean c -> c
+    com.google.gson.JsonSerializationContext d -> d
+    com.google.gson.aj e -> e
+    com.google.gson.JsonElement f -> f
+    void start(com.google.gson.ao) -> a
+    void end(com.google.gson.ao) -> b
+    void startVisitingObject$5d527811() -> a
+    void visitArray(java.lang.Object,java.lang.reflect.Type) -> a
+    void visitArrayField(com.google.gson.FieldAttributes,java.lang.reflect.Type,java.lang.Object) -> b
+    void visitObjectField(com.google.gson.FieldAttributes,java.lang.reflect.Type,java.lang.Object) -> a
+    void visitPrimitive(java.lang.Object) -> a
+    void a(com.google.gson.FieldAttributes,com.google.gson.ao) -> a
+    void a(com.google.gson.FieldAttributes,com.google.gson.JsonElement) -> a
+    com.google.gson.JsonElement a(com.google.gson.ao) -> d
+    boolean visitUsingCustomHandler(com.google.gson.ao) -> c
+    com.google.gson.JsonElement b(com.google.gson.ao) -> e
+    boolean visitFieldUsingCustomHandler(com.google.gson.FieldAttributes,java.lang.reflect.Type,java.lang.Object) -> c
+    void a(com.google.gson.JsonElement) -> a
+    boolean a(com.google.gson.FieldAttributes,java.lang.Object) -> a
+    java.lang.Object b(com.google.gson.FieldAttributes,java.lang.Object) -> b
+    com.google.gson.JsonElement a() -> b
+com.google.gson.ae -> com.google.a.bh:
+    com.google.gson.u a -> a
+    boolean b -> b
+    void a(com.google.gson.JsonElement) -> a
+com.google.gson.ah -> com.google.a.bi:
+    int a -> a
+    void a(java.lang.Object,java.lang.Object) -> a
+    void clear() -> clear
+    java.lang.Object a(java.lang.Object) -> a
+    int size() -> size
+    boolean removeEldestEntry(java.util.Map$Entry) -> removeEldestEntry
+com.google.gson.ai -> com.google.a.bc:
+    java.util.logging.Logger a -> a
+    com.google.gson.aq b -> b
+    java.lang.String toString() -> toString
+com.google.gson.aj -> com.google.a.be:
+    java.util.Stack a -> a
+    com.google.gson.ao a(com.google.gson.ao) -> a
+    com.google.gson.ao a() -> a
+    boolean b(com.google.gson.ao) -> b
+com.google.gson.ak -> com.google.a.bf:
+    java.util.Collection a -> a
+    boolean shouldSkipField(com.google.gson.FieldAttributes) -> a
+    boolean shouldSkipClass(java.lang.Class) -> a
+com.google.gson.al -> com.google.a.bg:
+    boolean shouldSkipField(com.google.gson.FieldAttributes) -> a
+    boolean shouldSkipClass(java.lang.Class) -> a
+com.google.gson.an -> com.google.a.ax:
+    com.google.gson.ExclusionStrategy a -> a
+    com.google.gson.k b -> b
+    com.google.gson.ObjectNavigator a(com.google.gson.ao) -> a
+    com.google.gson.k a() -> a
+com.google.gson.annotations.SerializedName -> com.google.a.a.a:
+    java.lang.String value() -> a
+com.google.gson.ao -> com.google.a.az:
+    java.lang.Object b -> b
+    java.lang.reflect.Type a -> a
+    boolean c -> c
+    java.lang.Object a() -> a
+    void a(java.lang.Object) -> a
+    com.google.gson.ap a(com.google.gson.aq) -> a
+    com.google.gson.ao b() -> b
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+com.google.gson.ap -> com.google.a.bb:
+    java.lang.Object a -> a
+    java.lang.Object b -> b
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    boolean a(java.lang.Object,java.lang.Object) -> a
+    java.lang.String toString() -> toString
+com.google.gson.aq -> com.google.a.ao:
+    java.util.logging.Logger a -> a
+    java.util.Map b -> b
+    java.util.List c -> c
+    boolean d -> d
+    void a(java.lang.Class,java.lang.Object) -> a
+    void a(com.google.gson.ap) -> a
+    int a(java.lang.Class) -> a
+    void a(java.lang.reflect.Type,java.lang.Object) -> a
+    void a(com.google.gson.aq) -> a
+    void b(java.lang.reflect.Type,java.lang.Object) -> b
+    void a() -> a
+    java.lang.Object a(java.lang.reflect.Type) -> a
+    boolean b(java.lang.reflect.Type) -> b
+    int b(java.lang.Class) -> b
+    java.lang.String toString() -> toString
+com.google.gson.ar -> com.google.a.ar:
+    java.lang.reflect.Type a -> a
+    java.lang.reflect.Type[] b -> b
+    java.lang.reflect.Type c -> c
+    java.lang.reflect.Type getRawType() -> getRawType
+    java.lang.reflect.Type[] getActualTypeArguments() -> getActualTypeArguments
+    java.lang.reflect.Type getOwnerType() -> getOwnerType
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+com.google.gson.at -> com.google.a.au:
+    void a(java.lang.Object) -> a
+    void a(boolean) -> a
+com.google.gson.au -> com.google.a.cd:
+    java.util.Map a -> a
+    java.util.Map b -> b
+    void a(java.util.Map,java.util.Map,java.lang.Class,java.lang.Class) -> a
+    java.lang.Class c(java.lang.Class) -> a
+com.google.gson.av -> com.google.a.cb:
+    java.lang.String a(com.google.gson.FieldAttributes) -> a
+    java.lang.String a$252cc7e1(java.lang.String) -> a
+com.google.gson.aw -> com.google.a.cg:
+    com.google.gson.v a -> a
+    com.google.gson.k b -> b
+    java.lang.String a(com.google.gson.FieldAttributes) -> a
+com.google.gson.ay -> com.google.a.bw:
+    boolean a -> a
+    boolean shouldSkipClass(java.lang.Class) -> a
+    boolean shouldSkipField(com.google.gson.FieldAttributes) -> a
+com.google.gson.b -> com.google.a.x:
+    void a(java.lang.Object,java.lang.Object) -> a
+    java.lang.Object a(java.lang.Object) -> a
+com.google.gson.bb -> com.google.a.bm:
+    java.lang.reflect.Type a -> a
+    java.lang.Class b -> b
+    java.lang.reflect.Type a() -> b
+    java.lang.Class b() -> c
+    boolean c() -> d
+com.google.gson.bc -> com.google.a.bj:
+    java.lang.Class c -> c
+    java.lang.reflect.Type d -> d
+    java.lang.reflect.Type e() -> a
+com.google.gson.bd -> com.google.a.bq:
+    java.lang.reflect.ParameterizedType a -> a
+    java.lang.reflect.Type a() -> a
+com.google.gson.be -> com.google.a.bo:
+    com.google.gson.bb a(java.lang.reflect.Field,java.lang.reflect.Type) -> a
+    java.lang.reflect.Type a(java.lang.reflect.Type,java.lang.reflect.Type,java.lang.Class) -> a
+com.google.gson.bf -> com.google.a.ab:
+    java.lang.reflect.Type a -> a
+    java.lang.reflect.Type b -> b
+    java.lang.reflect.Type b() -> a
+com.google.gson.bg -> com.google.a.aa:
+    boolean a(java.lang.reflect.Type) -> a
+    java.lang.Class b(java.lang.reflect.Type) -> b
+    java.lang.Class a(java.lang.Class) -> a
+com.google.gson.d -> com.google.a.t:
+    java.lang.Object a -> a
+    java.lang.IllegalStateException a(com.google.gson.FieldAttributes) -> a
+com.google.gson.f -> com.google.a.v:
+    com.google.gson.f$g a -> a
+    com.google.gson.f$h b -> b
+    com.google.gson.f$i c -> c
+    com.google.gson.f$j d -> d
+    com.google.gson.f$m e -> e
+    com.google.gson.f$ac f -> f
+    com.google.gson.f$ab g -> g
+    com.google.gson.f$ad h -> h
+    com.google.gson.f$s i -> i
+    com.google.gson.f$f j -> j
+    com.google.gson.f$v k -> k
+    com.google.gson.f$a l -> l
+    com.google.gson.f$b m -> m
+    com.google.gson.f$c n -> n
+    com.google.gson.f$d o -> o
+    com.google.gson.f$e p -> p
+    com.google.gson.f$k q -> q
+    com.google.gson.f$n r -> r
+    com.google.gson.f$r s -> s
+    com.google.gson.f$t t -> t
+    com.google.gson.f$w u -> u
+    com.google.gson.f$y v -> v
+    com.google.gson.f$z w -> w
+    com.google.gson.f$x x -> x
+    com.google.gson.f$aa y -> y
+    com.google.gson.f$q z -> z
+    com.google.gson.f$p A -> A
+    com.google.gson.aq B -> B
+    com.google.gson.aq C -> C
+    com.google.gson.aq D -> D
+    com.google.gson.JsonDeserializer a(com.google.gson.JsonDeserializer) -> a
+    com.google.gson.aq a() -> a
+    com.google.gson.aq b() -> b
+    com.google.gson.aq c() -> c
+com.google.gson.f$a -> com.google.a.bd:
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$aa -> com.google.a.ae:
+    java.lang.String toString() -> toString
+com.google.gson.f$ab -> com.google.a.af:
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$ac -> com.google.a.ac:
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$ad -> com.google.a.ad:
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$b -> com.google.a.ay:
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$c -> com.google.a.ba:
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$d -> com.google.a.av:
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$e -> com.google.a.aw:
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$f -> com.google.a.as:
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$g -> com.google.a.at:
+    java.text.DateFormat a -> a
+    com.google.gson.JsonElement a(java.util.Date) -> a
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$h -> com.google.a.ap:
+    java.text.DateFormat a -> a
+    com.google.gson.JsonElement a(java.sql.Date) -> a
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$i -> com.google.a.aq:
+    java.text.DateFormat a -> a
+    com.google.gson.JsonElement a(java.sql.Time) -> a
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$j -> com.google.a.ch:
+com.google.gson.f$k -> com.google.a.cf:
+    java.lang.String toString() -> toString
+com.google.gson.f$l -> com.google.a.ce:
+    boolean a -> a
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$m -> com.google.a.cc:
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$n -> com.google.a.bz:
+    java.lang.String toString() -> toString
+com.google.gson.f$o -> com.google.a.by:
+    boolean a -> a
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$p -> com.google.a.bx:
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$q -> com.google.a.bv:
+    java.lang.String toString() -> toString
+com.google.gson.f$r -> com.google.a.bu:
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$s -> com.google.a.bt:
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$t -> com.google.a.bs:
+    java.lang.String toString() -> toString
+com.google.gson.f$u -> com.google.a.br:
+    com.google.gson.LongSerializationPolicy a -> a
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$v -> com.google.a.bp:
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$w -> com.google.a.bn:
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$x -> com.google.a.bl:
+com.google.gson.f$y -> com.google.a.bk:
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.f$z -> com.google.a.h:
+    java.lang.String toString() -> toString
+    com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
+com.google.gson.g -> com.google.a.u:
+    java.util.Collection a -> a
+    boolean shouldSkipField(com.google.gson.FieldAttributes) -> a
+    boolean shouldSkipClass(java.lang.Class) -> a
+com.google.gson.h -> com.google.a.r:
+    char[] a -> a
+    java.util.Set b -> b
+    java.util.Set c -> c
+    boolean d -> d
+    java.lang.String a(java.lang.CharSequence) -> a
+    void a(java.lang.CharSequence,java.lang.StringBuffer) -> a
+    void a(int,java.lang.Appendable) -> a
+com.google.gson.k -> com.google.a.s:
+    java.lang.String a(com.google.gson.FieldAttributes) -> a
+com.google.gson.m -> com.google.a.p:
+    java.lang.reflect.Type a -> a
+    java.lang.reflect.Type getGenericComponentType() -> getGenericComponentType
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+com.google.gson.o -> com.google.a.q:
+    java.lang.String a$252cc7e1(java.lang.String) -> a
+com.google.gson.q -> com.google.a.o:
+    boolean a -> a
+    void a(com.google.gson.JsonElement,java.lang.Appendable,boolean) -> a
+com.google.gson.q$a -> com.google.a.ag:
+    java.lang.Appendable a -> a
+    com.google.gson.h b -> b
+    boolean c -> c
+    void a(com.google.gson.JsonPrimitive) -> a
+    void a() -> a
+    void b() -> b
+    void a(com.google.gson.JsonPrimitive,boolean) -> a
+    void a(boolean) -> a
+    void b(boolean) -> b
+    void c(boolean) -> c
+    void c() -> c
+    void d() -> d
+    void a(java.lang.String,com.google.gson.JsonPrimitive,boolean) -> a
+    void a(java.lang.String,boolean) -> a
+    void b(java.lang.String,boolean) -> b
+    void c(java.lang.String,boolean) -> c
+    void e() -> e
+com.google.gson.t -> com.google.a.k:
+    com.google.gson.JsonDeserializer a -> a
+    java.lang.String toString() -> toString
+com.google.gson.u -> com.google.a.l:
+    void a(com.google.gson.JsonPrimitive) -> a
+    void a() -> a
+    void b() -> b
+    void a(com.google.gson.JsonPrimitive,boolean) -> a
+    void a(boolean) -> a
+    void b(boolean) -> b
+    void c(boolean) -> c
+    void c() -> c
+    void d() -> d
+    void a(java.lang.String,com.google.gson.JsonPrimitive,boolean) -> a
+    void a(java.lang.String,boolean) -> a
+    void b(java.lang.String,boolean) -> b
+    void c(java.lang.String,boolean) -> c
+    void e() -> e
+com.google.gson.v -> com.google.a.m:
+    java.util.regex.Pattern a -> a
+    java.lang.String a(java.lang.String) -> a
+com.google.gson.w -> com.google.a.n:
+    void a(com.google.gson.JsonElement,java.lang.Appendable,boolean) -> a
+com.madhackerdesigns.neverbelate.Eula -> com.madhackerdesigns.neverbelate.c:
+    boolean show(android.app.Activity) -> a
+    void display(android.app.Activity) -> b
+com.madhackerdesigns.neverbelate.Eula$1 -> com.madhackerdesigns.neverbelate.b:
+    android.content.SharedPreferences val$preferences -> a
+    android.app.Activity val$activity -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.madhackerdesigns.neverbelate.Eula$2 -> com.madhackerdesigns.neverbelate.a:
+    android.app.Activity val$activity -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.madhackerdesigns.neverbelate.provider.AlertsContract -> com.madhackerdesigns.neverbelate.provider.b:
+com.madhackerdesigns.neverbelate.provider.AlertsContract$Alerts -> com.madhackerdesigns.neverbelate.provider.a:
+    android.net.Uri CONTENT_URI -> a
+    android.net.Uri CONTENT_ID_URI_BASE -> b
+    android.net.Uri CONTENT_ID_URI_PATTERN -> c
+com.madhackerdesigns.neverbelate.provider.AlertsHelper -> com.madhackerdesigns.neverbelate.provider.c:
+    java.lang.String[] ALERT_PROJECTION -> a
+com.madhackerdesigns.neverbelate.provider.AlertsProvider -> com.madhackerdesigns.neverbelate.provider.AlertsProvider:
+    java.util.HashMap sAlertsProjectionMap -> a
+    android.content.UriMatcher sUriMatcher -> b
+    com.madhackerdesigns.neverbelate.provider.AlertsProvider$DatabaseHelper mOpenHelper -> c
+    boolean onCreate() -> onCreate
+    android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String) -> query
+    java.lang.String getType(android.net.Uri) -> getType
+    android.net.Uri insert(android.net.Uri,android.content.ContentValues) -> insert
+    int delete(android.net.Uri,java.lang.String,java.lang.String[]) -> delete
+    int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) -> update
+com.madhackerdesigns.neverbelate.provider.AlertsProvider$DatabaseHelper -> com.madhackerdesigns.neverbelate.provider.d:
+    void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
+    void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
+com.madhackerdesigns.neverbelate.service.CalendarHelper -> com.madhackerdesigns.neverbelate.service.CalendarHelper:
+    java.lang.String[] INSTANCES_PROJECTION -> a
+    android.net.Uri mRemindersUri -> c
+    android.net.Uri mEventsUri -> d
+    android.net.Uri mCalendarsUri -> e
+    android.net.Uri mInstancesUri -> b
+com.madhackerdesigns.neverbelate.service.LocationReceiver -> com.madhackerdesigns.neverbelate.service.LocationReceiver:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.madhackerdesigns.neverbelate.service.NeverBeLateService -> com.madhackerdesigns.neverbelate.service.NeverBeLateService:
+    long[] VIBRATE_PATTERN -> a
+    android.content.ContentResolver mContentResolver -> b
+    android.location.LocationManager mLocationManager -> c
+    android.app.NotificationManager mNotificationManager -> d
+    long mNow -> e
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> f
+    android.os.PowerManager$WakeLock lockStatic -> g
+    int[] $SWITCH_TABLE$com$madhackerdesigns$neverbelate$service$NeverBeLateService$DirectionsApiStatus -> h
+    int[] $SWITCH_TABLE$com$madhackerdesigns$neverbelate$settings$PreferenceHelper$NotificationMethod -> i
+    void sendWakefulWork(android.content.Context,android.content.Intent) -> a
+    void onHandleIntent(android.content.Intent) -> onHandleIntent
+    void checkTravelTimes() -> a
+    void notifyUserNow() -> b
+    android.content.Intent getWarningIntent() -> c
+    void notifyUser(boolean) -> a
+    android.location.Location getCurrentLocation() -> d
+    int compareLocationAge(android.location.Location,android.location.Location,long) -> a
+    java.lang.String FullDateTime(java.lang.Long) -> a
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+    int[] $SWITCH_TABLE$com$madhackerdesigns$neverbelate$service$NeverBeLateService$DirectionsApiStatus() -> e
+    int[] $SWITCH_TABLE$com$madhackerdesigns$neverbelate$settings$PreferenceHelper$NotificationMethod() -> f
+com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus -> com.madhackerdesigns.neverbelate.service.a:
+    com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus OK -> a
+    com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus NOT_FOUND -> b
+    com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus ZERO_RESULTS -> c
+    com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus MAX_WAYPOINTS_EXCEEDED -> d
+    com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus INVALID_REQUEST -> e
+    com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus OVER_QUERY_LIMIT -> f
+    com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus REQUEST_DENIED -> g
+    com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus UNKNOWN_ERROR -> h
+    com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus[] ENUM$VALUES -> i
+    com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus[] values() -> values
+    com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus valueOf(java.lang.String) -> valueOf
+com.madhackerdesigns.neverbelate.service.StartupReceiver -> com.madhackerdesigns.neverbelate.service.StartupReceiver:
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.madhackerdesigns.neverbelate.service.TravelTimeReceiver -> com.madhackerdesigns.neverbelate.service.TravelTimeReceiver:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.madhackerdesigns.neverbelate.service.WakefulServiceReceiver -> com.madhackerdesigns.neverbelate.service.WakefulServiceReceiver:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.madhackerdesigns.neverbelate.settings.EulaPreference -> com.madhackerdesigns.neverbelate.settings.EulaPreference:
+    android.content.Context mContext -> a
+    void onClick() -> onClick
+com.madhackerdesigns.neverbelate.settings.FeedbackPreference -> com.madhackerdesigns.neverbelate.settings.FeedbackPreference:
+    android.content.Context mContext -> a
+    void onClick() -> onClick
+com.madhackerdesigns.neverbelate.settings.NeverBeLateSettings -> com.madhackerdesigns.neverbelate.settings.NeverBeLateSettings:
+    void onCreate(android.os.Bundle) -> onCreate
+com.madhackerdesigns.neverbelate.settings.PreferenceHelper -> com.madhackerdesigns.neverbelate.settings.PreferenceHelper:
+    java.lang.String DEFAULT_RINGTONE -> a
+    android.content.SharedPreferences mPrefs -> b
+    boolean isAvoidHighways() -> a
+    boolean isAvoidTolls() -> b
+    long getAdvanceWarning() -> c
+    boolean isInsistent() -> d
+    long getLookaheadWindow() -> e
+    boolean isNeverLateEnabled() -> f
+    boolean setNeverLateEnabled(boolean) -> a
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod getNotificationMethod() -> g
+    android.net.Uri getRingtone() -> h
+    long getSnoozeDuration() -> i
+    java.lang.String getTravelMode() -> j
+    long getTraveltimeFreq() -> k
+    boolean isVibrate() -> l
+com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod -> com.madhackerdesigns.neverbelate.settings.a:
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod ALERT -> a
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod STATUS_BAR_ONLY -> b
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod[] ENUM$VALUES -> c
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod[] values() -> values
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod valueOf(java.lang.String) -> valueOf
+com.madhackerdesigns.neverbelate.settings.WebsitePreference -> com.madhackerdesigns.neverbelate.settings.WebsitePreference:
+    android.net.Uri WESBITE_URI -> a
+    android.content.Context mContext -> b
+    void onClick() -> onClick
+com.madhackerdesigns.neverbelate.ui.EventListAdapter -> com.madhackerdesigns.neverbelate.ui.f:
+    android.content.Context mContext -> a
+    int mDateTimeFlags -> b
+    java.lang.String mMinutesAway -> c
+    void bindView(android.view.View,android.content.Context,android.database.Cursor) -> bindView
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.madhackerdesigns.neverbelate.ui.EventListAdapter$ViewHolder -> com.madhackerdesigns.neverbelate.ui.m:
+    android.view.View stripe -> a
+    android.widget.TextView title -> b
+    android.widget.TextView when -> c
+    android.widget.TextView where -> d
+    android.widget.TextView travelTime -> e
+com.madhackerdesigns.neverbelate.ui.LauncherActivity -> com.madhackerdesigns.neverbelate.ui.LauncherActivity:
+    android.widget.CheckBox mEnableBtn -> a
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> b
+    void onCreate(android.os.Bundle) -> onCreate
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onPause() -> onPause
+    void onResume() -> onResume
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper access$0(com.madhackerdesigns.neverbelate.ui.LauncherActivity) -> a
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$1 -> com.madhackerdesigns.neverbelate.ui.g:
+    com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
+    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$2 -> com.madhackerdesigns.neverbelate.ui.k:
+    com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$3 -> com.madhackerdesigns.neverbelate.ui.j:
+    com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$4 -> com.madhackerdesigns.neverbelate.ui.i:
+    com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$5 -> com.madhackerdesigns.neverbelate.ui.h:
+    com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
+    boolean onLongClick(android.view.View) -> onLongClick
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$6 -> com.madhackerdesigns.neverbelate.ui.l:
+    com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.madhackerdesigns.neverbelate.ui.MapOverlay -> com.madhackerdesigns.neverbelate.ui.MapOverlay:
+    java.util.ArrayList mOverlays -> a
+    android.content.Context mContext -> b
+    void addOverlay(com.google.android.maps.OverlayItem) -> a
+    com.google.android.maps.OverlayItem createItem(int) -> createItem
+    int size() -> size
+    boolean onTap(int) -> onTap
+    boolean notEmpty(java.lang.String) -> a
+com.madhackerdesigns.neverbelate.ui.Registration -> com.madhackerdesigns.neverbelate.ui.Registration:
+    java.lang.String betaCode -> a
+    long birthdate -> b
+    int gender -> c
+    java.lang.String firstName -> d
+    java.lang.String lastName -> e
+    java.lang.String promoCode -> f
+    boolean registered -> g
+    int zipCode -> h
+    android.content.SharedPreferences mSettings -> i
+    android.content.SharedPreferences$Editor mEditor -> j
+    void commit() -> a
+    void setBetaCode(java.lang.String) -> a
+    void setBirthdate(long) -> a
+    void setGender(int) -> a
+    void setFirstName(java.lang.String) -> b
+    void setLastName(java.lang.String) -> c
+    void setZipCode(int) -> b
+com.madhackerdesigns.neverbelate.ui.RegistrationForm -> com.madhackerdesigns.neverbelate.ui.RegistrationForm:
+    android.widget.Button mBirthdateButton -> a
+    boolean mBirthdateSet -> b
+    int mYear -> c
+    int mMonth -> d
+    int mDay -> e
+    android.app.DatePickerDialog$OnDateSetListener mDateSetListener -> f
+    com.madhackerdesigns.neverbelate.ui.Registration mRegistration -> g
+    java.lang.String mGender -> h
+    void onCreate(android.os.Bundle) -> onCreate
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
+    void access$0(com.madhackerdesigns.neverbelate.ui.RegistrationForm,int) -> a
+    void access$1(com.madhackerdesigns.neverbelate.ui.RegistrationForm,int) -> b
+    void access$2(com.madhackerdesigns.neverbelate.ui.RegistrationForm,int) -> c
+    void access$3$796f51fc(com.madhackerdesigns.neverbelate.ui.RegistrationForm) -> a
+    void access$4(com.madhackerdesigns.neverbelate.ui.RegistrationForm) -> b
+    void access$5(com.madhackerdesigns.neverbelate.ui.RegistrationForm,java.lang.String) -> a
+    void access$6(com.madhackerdesigns.neverbelate.ui.RegistrationForm) -> c
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$1 -> com.madhackerdesigns.neverbelate.ui.w:
+    com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$2 -> com.madhackerdesigns.neverbelate.ui.y:
+    com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
+    void onDateSet(android.widget.DatePicker,int,int,int) -> onDateSet
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$3 -> com.madhackerdesigns.neverbelate.ui.x:
+    com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$4 -> com.madhackerdesigns.neverbelate.ui.aa:
+    com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$5 -> com.madhackerdesigns.neverbelate.ui.z:
+    com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$6 -> com.madhackerdesigns.neverbelate.ui.ac:
+    com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$7 -> com.madhackerdesigns.neverbelate.ui.ab:
+    com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$8 -> com.madhackerdesigns.neverbelate.ui.v:
+    com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$9 -> com.madhackerdesigns.neverbelate.ui.u:
+    com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.madhackerdesigns.neverbelate.ui.TestActivity -> com.madhackerdesigns.neverbelate.ui.TestActivity:
+    com.madhackerdesigns.neverbelate.util.AdHelper mAdHelper -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    com.madhackerdesigns.neverbelate.util.AdHelper access$0(com.madhackerdesigns.neverbelate.ui.TestActivity) -> a
+com.madhackerdesigns.neverbelate.ui.TestActivity$1 -> com.madhackerdesigns.neverbelate.ui.r:
+    com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.madhackerdesigns.neverbelate.ui.TestActivity$2 -> com.madhackerdesigns.neverbelate.ui.p:
+    com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.madhackerdesigns.neverbelate.ui.TestActivity$3 -> com.madhackerdesigns.neverbelate.ui.q:
+    com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.madhackerdesigns.neverbelate.ui.TestActivity$4 -> com.madhackerdesigns.neverbelate.ui.s:
+    com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.madhackerdesigns.neverbelate.ui.UserLocationOverlay -> com.madhackerdesigns.neverbelate.ui.UserLocationOverlay:
+    android.content.Context mContext -> a
+    boolean onTap(com.google.android.maps.GeoPoint,com.google.android.maps.MapView) -> onTap
+com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverbelate.ui.WarningDialog:
+    com.madhackerdesigns.neverbelate.util.AdHelper mAdHelper -> a
+    com.pontiflex.mobile.webview.sdk.IAdManager mAdManager -> b
+    boolean mAdJustShown -> c
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> d
+    android.database.Cursor mCursor -> e
+    com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler mHandler -> f
+    boolean mInsistentStopped -> g
+    android.widget.ViewSwitcher mSwitcher -> h
+    com.google.android.maps.MyLocationOverlay mUserLocationOverlay -> i
+    void onCreate(android.os.Bundle) -> onCreate
+    void switchToTrafficView() -> a
+    void onPause() -> onPause
+    void onResume() -> onResume
+    boolean isRouteDisplayed() -> isRouteDisplayed
+    void access$0(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> a
+    void access$1(com.madhackerdesigns.neverbelate.ui.WarningDialog,android.database.Cursor) -> a
+    void access$2(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> b
+    void access$3(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> c
+    void access$4(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> d
+    void access$5(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> e
+com.madhackerdesigns.neverbelate.ui.WarningDialog$1 -> com.madhackerdesigns.neverbelate.ui.n:
+    com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.madhackerdesigns.neverbelate.ui.WarningDialog$2 -> com.madhackerdesigns.neverbelate.ui.o:
+    com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler -> com.madhackerdesigns.neverbelate.ui.a:
+    com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
+    void onQueryComplete(int,java.lang.Object,android.database.Cursor) -> onQueryComplete
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$1 -> com.madhackerdesigns.neverbelate.ui.e:
+    com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
+    void onClick(android.view.View) -> onClick
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$2 -> com.madhackerdesigns.neverbelate.ui.d:
+    com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$3 -> com.madhackerdesigns.neverbelate.ui.c:
+    com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
+    void onClick(android.view.View) -> onClick
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$4 -> com.madhackerdesigns.neverbelate.ui.b:
+    com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
+    void onClick(android.view.View) -> onClick
+com.madhackerdesigns.neverbelate.ui.WarningDialog$MapBounds -> com.madhackerdesigns.neverbelate.ui.t:
+    int mLatMinE6 -> a
+    int mLatMaxE6 -> b
+    int mLonMinE6 -> c
+    int mLonMaxE6 -> d
+    com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> e
+    void addPoint(int,int) -> a
+    int getLatSpanE6() -> a
+    int getLonSpanE6() -> b
+    int getLatCenterE6() -> c
+    int getLonCenterE6() -> d
+com.madhackerdesigns.neverbelate.util.AdHelper -> com.madhackerdesigns.neverbelate.util.AdHelper:
+    android.content.SharedPreferences mSettings -> a
+    android.content.SharedPreferences$Editor mEditor -> b
+    void initFirstTimeUser() -> a
+    boolean isTimeToShowAd() -> b
+    void setAdShown$1385ff() -> c
+    void setWarningDismissed$1385ff() -> d
+com.madhackerdesigns.neverbelate.util.Logger -> com.madhackerdesigns.neverbelate.util.Logger:
+com.madhackerdesigns.neverbelate.util.NetUtils -> com.madhackerdesigns.neverbelate.util.NetUtils:
+    java.io.InputStream OpenHttpConnection(java.lang.String) -> b
+    java.lang.String DownloadText(java.lang.String) -> a
+com.pontiflex.mobile.webview.models.ResourceData -> com.pontiflex.mobile.webview.models.ResourceData:
+com.pontiflex.mobile.webview.sdk.AdManager -> com.pontiflex.mobile.webview.sdk.b:
+    com.pontiflex.mobile.webview.sdk.AdManager instance -> a
+    com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment environment -> b
+    com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode DefaultRegistrationMode -> c
+    int refreshIntervalMs -> d
+    int registrationInterval -> e
+    com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode registrationMode -> f
+    boolean isRegistrationRequired -> g
+    boolean isShowingMultiAdView -> h
+    boolean allowReadDeviceData -> i
+    java.lang.String defaultLocale -> j
+    android.app.Application application -> k
+    com.pontiflex.mobile.webview.utilities.PackageHelper pkgHelper -> l
+    com.pontiflex.mobile.webview.utilities.VersionHelper versionHelper -> m
+    com.pontiflex.mobile.webview.utilities.RegistrationStorage registrationStorage -> n
+    com.pontiflex.mobile.webview.utilities.AppInfo appInfo -> o
+    boolean resourceInitializationInProgress -> p
+    boolean initialized -> q
+    com.pontiflex.mobile.webview.sdk.IAdManager getInstance(android.app.Application) -> a
+    com.pontiflex.mobile.webview.sdk.IAdManager createInstance(android.app.Application) -> b
+    com.pontiflex.mobile.webview.sdk.AdManager getAdManagerInstance(android.app.Application) -> c
+    boolean isAllowReadDeviceData() -> a
+    java.lang.String getDefaultLocale() -> b
+    boolean isValid(java.util.Locale) -> a
+    void setRegistrationMode(com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode) -> a
+    boolean isRegistrationRequired() -> c
+    boolean isShowingMultiAdView() -> d
+    boolean setRegistrationData(java.lang.String,java.lang.String) -> a
+    void commitStorageChanges(com.pontiflex.mobile.webview.utilities.RegistrationStorage) -> a
+    java.lang.String getRegistrationData(java.lang.String) -> a
+    void clearRegistrationStorage() -> e
+    boolean hasValidRegistrationData() -> f
+    void startMultiOfferActivity() -> g
+    void startRegistrationActivity(android.app.Activity) -> a
+    void startMultiOfferActivity(android.app.Activity) -> b
+    android.content.Context getContext() -> h
+    void launchActivityAfterMillis$70a4cbd4$63a22f9() -> m
+    int getLaunchCount() -> n
+    com.pontiflex.mobile.webview.utilities.RegistrationStorage getRegistrationStorage() -> i
+    android.content.SharedPreferences getSharedPreferences() -> o
+    android.content.SharedPreferences$Editor getSharedPreferencesEditor() -> p
+    com.pontiflex.mobile.webview.utilities.AppInfo getAppInfo() -> j
+    void setAppInfo(com.pontiflex.mobile.webview.utilities.AppInfo) -> a
+    void setResourceInitializationInProgress(boolean) -> a
+    boolean isInitialized() -> k
+    boolean checkInitializationSuccess() -> l
+    boolean access$002$44c29966(com.pontiflex.mobile.webview.sdk.AdManager) -> a
+com.pontiflex.mobile.webview.sdk.AdManager$1 -> com.pontiflex.mobile.webview.sdk.f:
+    com.pontiflex.mobile.webview.sdk.AdManager this$0 -> a
+    void run() -> run
+com.pontiflex.mobile.webview.sdk.AdManager$2 -> com.pontiflex.mobile.webview.sdk.e:
+    boolean val$isRegistration -> a
+    android.app.Activity val$context -> b
+    com.pontiflex.mobile.webview.sdk.AdManager this$0 -> c
+    void run() -> run
+com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment -> com.pontiflex.mobile.webview.sdk.d:
+    com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment DevelopmentEnvironment -> a
+    com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment StagingEnvironment -> b
+    com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment PreproductionEnvironment -> c
+    com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment ProductionEnvironment -> d
+    com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment[] $VALUES -> e
+    com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment[] values() -> values
+    com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment valueOf(java.lang.String) -> valueOf
+com.pontiflex.mobile.webview.sdk.IAdManager -> com.pontiflex.mobile.webview.sdk.c:
+    void setRegistrationMode(com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode) -> a
+    boolean setRegistrationData(java.lang.String,java.lang.String) -> a
+    java.lang.String getRegistrationData(java.lang.String) -> a
+    void clearRegistrationStorage() -> e
+    boolean hasValidRegistrationData() -> f
+    void startMultiOfferActivity() -> g
+    void startRegistrationActivity(android.app.Activity) -> a
+    void startMultiOfferActivity(android.app.Activity) -> b
+com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode -> com.pontiflex.mobile.webview.sdk.a:
+    com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode RegistrationAtLaunch -> a
+    com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode RegistrationAfterIntervalInLaunches -> b
+    com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode RegistrationAdHoc -> c
+    com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode[] $VALUES -> d
+    com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode[] values() -> values
+    com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode valueOf(java.lang.String) -> valueOf
+com.pontiflex.mobile.webview.sdk.IPflexJSInterface -> com.pontiflex.mobile.webview.sdk.IPflexJSInterface:
+com.pontiflex.mobile.webview.sdk.activities.BaseActivity -> com.pontiflex.mobile.webview.sdk.activities.BaseActivity:
+    android.webkit.WebView webView -> a
+    com.pontiflex.mobile.webview.utilities.PackageHelper helper -> d
+    com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface jsStorageInterface -> e
+    android.app.ProgressDialog progressDialog -> f
+    android.app.AlertDialog jsConfirmAlertDialog -> b
+    android.webkit.JsResult jsResult -> c
+    com.pontiflex.mobile.webview.utilities.RegistrationStorage stateStorage -> g
+    com.pontiflex.mobile.webview.utilities.RegistrationStorage additionalDataStorage -> h
+    com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface resourceInterface -> i
+    void onCreate(android.os.Bundle) -> onCreate
+    void startProgressDialog() -> b
+    void cancelProgressDialog() -> c
+    void cancelAlertDialog() -> d
+    void setUpViews() -> a
+    com.pontiflex.mobile.webview.utilities.RegistrationStorage getStateStorage() -> e
+    com.pontiflex.mobile.webview.utilities.RegistrationStorage getAdditionalDataStorage() -> f
+    com.pontiflex.mobile.webview.models.ResourceData getResourceDataStorage(java.lang.String) -> a
+    void commitSateStorageChanges(com.pontiflex.mobile.webview.utilities.RegistrationStorage) -> a
+    java.lang.String getAllRegistrationData() -> g
+    void onDestroy() -> onDestroy
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    java.lang.String getAppInfoJsonContent() -> h
+    void setUpWebview() -> i
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void doUpdateResourcesCallBack(java.lang.String,boolean,java.lang.String) -> a
+    java.lang.String getResourceData(java.lang.String,java.lang.String) -> a
+    void setResourceData(java.lang.String,java.lang.String,java.lang.String) -> a
+    java.lang.String getResourceContent(java.lang.String,boolean,java.lang.String) -> b
+com.pontiflex.mobile.webview.sdk.activities.BaseActivity$1 -> com.pontiflex.mobile.webview.sdk.activities.s:
+    com.pontiflex.mobile.webview.sdk.activities.BaseActivity this$0 -> a
+    void run() -> run
+com.pontiflex.mobile.webview.sdk.activities.BaseActivity$2 -> com.pontiflex.mobile.webview.sdk.activities.t:
+    com.pontiflex.mobile.webview.sdk.activities.BaseActivity this$0 -> a
+    void run() -> run
+com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity -> com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity:
+    void setUpViews() -> a
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface -> com.pontiflex.mobile.webview.sdk.activities.a:
+    com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
+    java.lang.String getDeviceData(java.lang.String) -> getDeviceData
+    java.lang.String getAllDeviceData() -> getAllDeviceData
+    int getScreenOrientation() -> getScreenOrientation
+    int getScreenWidth() -> getScreenWidth
+    int getScreenHeight() -> getScreenHeight
+    int getScreenDensity() -> getScreenDensity
+    int getScreenSize() -> getScreenSize
+    java.lang.String getDeviceConfig() -> getDeviceConfig
+com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface -> com.pontiflex.mobile.webview.sdk.activities.r:
+    com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
+    android.webkit.WebView innerWebView -> b
+    void showKeyboard() -> showKeyboard
+    void finishActivity() -> finishActivity
+    void logMessage(java.lang.String) -> logMessage
+    boolean isOnline() -> isOnline
+    java.lang.String initializeData() -> initializeData
+    java.lang.String getAppInfoJsonContent() -> getAppInfoJsonContent
+    java.lang.String getLocale() -> getLocale
+    void startProgressDialog() -> startProgressDialog
+    void cancelProgressDialog() -> cancelProgressDialog
+    java.lang.String getBasePath() -> getBasePath
+    void asyncHttpRequest(java.lang.String,boolean,java.lang.String) -> asyncHttpRequest
+com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface -> com.pontiflex.mobile.webview.sdk.activities.c:
+    com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
+    java.lang.String getResourceData(java.lang.String,java.lang.String) -> getResourceData
+    void setResourceData(java.lang.String,java.lang.String,java.lang.String) -> setResourceData
+    java.lang.String getResourceContent(java.lang.String,java.lang.String,java.lang.String) -> getResourceContent
+    void updateResource(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> updateResource
+    void updateResourceCallback(java.lang.String,boolean,java.lang.String) -> updateResourceCallback
+    com.pontiflex.mobile.webview.sdk.activities.BaseActivity access$000(com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface) -> access$000
+com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface$UpdateResourceRunnable -> com.pontiflex.mobile.webview.sdk.activities.q:
+    java.lang.String resourceKey -> a
+    boolean updateSuccessful -> b
+    java.lang.String newVersionCode -> c
+    com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface this$0 -> d
+    void run() -> run
+com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface -> com.pontiflex.mobile.webview.sdk.activities.p:
+    com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
+    android.webkit.WebView innerWebView -> b
+    boolean hasValidRegistrationData() -> hasValidRegistrationData
+    void addRegistrationData(java.lang.String,java.lang.String) -> addRegistrationData
+    void addAllRegistrationData(java.lang.String) -> addAllRegistrationData
+    java.lang.String getRegistrationData(java.lang.String) -> getRegistrationData
+    java.lang.String getAllRegistrationData() -> getAllRegistrationData
+    void clearRegistrationData() -> clearRegistrationData
+    void saveState() -> saveState
+    void clearState() -> clearState
+    java.lang.String getItem(java.lang.String) -> getItem
+    void removeItem(java.lang.String) -> removeItem
+    void setItem(java.lang.String,java.lang.String) -> setItem
+    java.lang.String getAdditionalData(java.lang.String) -> getAdditionalData
+    void setAdditionalData(java.lang.String,java.lang.String) -> setAdditionalData
+com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface -> com.pontiflex.mobile.webview.sdk.activities.o:
+    com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
+    java.lang.String getAppName() -> getAppName
+    java.lang.String getAppVersionCode() -> getAppVersionCode
+    java.lang.String getAppVersionName() -> getAppVersionName
+    java.lang.String getOsVersion() -> getOsVersion
+    java.lang.String getUserAgent() -> getUserAgent
+    java.lang.String getLocale() -> getLocale
+    java.lang.String getPostalCode() -> getPostalCode
+    int getOsVersionCode() -> getOsVersionCode
+    java.lang.String getNativeVersionConfig() -> getNativeVersionConfig
+com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient -> com.pontiflex.mobile.webview.sdk.activities.b:
+    com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
+    boolean onJsAlert(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsResult) -> onJsAlert
+    boolean onJsConfirm(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsResult) -> onJsConfirm
+    boolean onJsPrompt(android.webkit.WebView,java.lang.String,java.lang.String,java.lang.String,android.webkit.JsPromptResult) -> onJsPrompt
+    void onProgressChanged(android.webkit.WebView,int) -> onProgressChanged
+    void onReceivedTitle(android.webkit.WebView,java.lang.String) -> onReceivedTitle
+    void onConsoleMessage(java.lang.String,int,java.lang.String) -> onConsoleMessage
+com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$1 -> com.pontiflex.mobile.webview.sdk.activities.k:
+    android.webkit.JsResult val$result -> a
+    com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient this$0 -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$2 -> com.pontiflex.mobile.webview.sdk.activities.g:
+    com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient this$0 -> a
+    boolean onKey(android.content.DialogInterface,int,android.view.KeyEvent) -> onKey
+com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$3 -> com.pontiflex.mobile.webview.sdk.activities.h:
+    android.webkit.JsResult val$result -> a
+    com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient this$0 -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$4 -> com.pontiflex.mobile.webview.sdk.activities.e:
+    com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient this$0 -> a
+    boolean onKey(android.content.DialogInterface,int,android.view.KeyEvent) -> onKey
+com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$5 -> com.pontiflex.mobile.webview.sdk.activities.f:
+    android.webkit.JsPromptResult val$result -> a
+    com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient this$0 -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$6 -> com.pontiflex.mobile.webview.sdk.activities.i:
+    android.webkit.JsPromptResult val$result -> a
+    com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient this$0 -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$7 -> com.pontiflex.mobile.webview.sdk.activities.j:
+    com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient this$0 -> a
+    boolean onKey(android.content.DialogInterface,int,android.view.KeyEvent) -> onKey
+com.pontiflex.mobile.webview.sdk.activities.PflexWebViewClient -> com.pontiflex.mobile.webview.sdk.activities.d:
+    com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
+    boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
+    void onReceivedError(android.webkit.WebView,int,java.lang.String,java.lang.String) -> onReceivedError
+com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity -> com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity:
+    com.pontiflex.mobile.webview.sdk.IAdManager adManager -> a
+    android.widget.Button registrationButton -> b
+    android.widget.Button multiAdButton -> c
+    android.widget.Button clearButton -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    void startRegistrationActivity() -> a
+    void startMultiOfferActivity() -> b
+    void clearRegistrationData() -> c
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$1 -> com.pontiflex.mobile.webview.sdk.activities.n:
+    com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$2 -> com.pontiflex.mobile.webview.sdk.activities.m:
+    com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$3 -> com.pontiflex.mobile.webview.sdk.activities.l:
+    com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity -> com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity:
+    void setUpViews() -> a
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+com.pontiflex.mobile.webview.sdk.activities.SignUpActivity -> com.pontiflex.mobile.webview.sdk.activities.SignUpActivity:
+com.pontiflex.mobile.webview.utilities.AppInfo -> com.pontiflex.mobile.webview.utilities.n:
+    java.util.Comparator fieldsComparator -> a
+    com.pontiflex.mobile.webview.utilities.AppInfo createAppInfo(android.content.Context) -> a
+    com.pontiflex.mobile.webview.utilities.AppInfo createAppInfo(android.content.Context,java.lang.String) -> a
+    org.json.JSONObject getField(java.lang.String) -> b
+    org.json.JSONObject getRegistrationFields() -> d
+    java.lang.String[] getValidationsForFieldNamed(java.lang.String) -> a
+    java.util.Collection getOrderedFieldNames() -> a
+    java.lang.String getPostalCodeFieldName() -> b
+    java.lang.String getCountryFieldName() -> c
+com.pontiflex.mobile.webview.utilities.AppInfo$1 -> com.pontiflex.mobile.webview.utilities.j:
+    int compare(org.json.JSONObject,org.json.JSONObject) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+com.pontiflex.mobile.webview.utilities.DeviceHelper -> com.pontiflex.mobile.webview.utilities.e:
+    java.lang.String getAllDeviceData(android.content.Context) -> a
+    java.lang.String getDeviceData(android.content.Context,java.lang.String) -> a
+    java.lang.String getDeviceSetupPhone(android.content.Context) -> b
+    java.lang.String getDeviceSetupEmail(android.content.Context) -> c
+    java.lang.String getDeviceCountry(android.content.Context) -> d
+    int getScreenOrientation(android.app.Activity) -> a
+    int getScreenWidth(android.app.Activity) -> b
+    int getScreenHeight(android.app.Activity) -> c
+    int getScreenDensity(android.app.Activity) -> d
+    int getScreenSize(android.app.Activity) -> e
+    java.lang.String getDeviceConfig(android.app.Activity) -> f
+com.pontiflex.mobile.webview.utilities.FieldValidator -> com.pontiflex.mobile.webview.utilities.f:
+    java.util.ArrayList errors -> a
+    boolean validate(java.lang.String,java.lang.String,java.lang.String[],java.util.Map,android.content.Context) -> a
+    void addError(java.lang.String) -> a
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry -> com.pontiflex.mobile.webview.utilities.b:
+    java.util.List registry -> a
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry _instance -> b
+    java.lang.String baseHtmlResourcesPath -> c
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry getInstance(android.content.Context) -> a
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry createInstance(android.content.Context) -> b
+    void initializeRegistry(android.content.Context) -> c
+    java.lang.String getRegistrationHtmlPath$29d40d93(android.app.Activity) -> a
+    java.lang.String getMultiOfferHtmlPath$29d40d93(android.app.Activity) -> b
+    java.lang.String getHtmlPath$7d5425f8(android.app.Activity,com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page) -> a
+    java.lang.String getKeyPath(com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page,com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation,com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity) -> a
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize getScreenSize(android.app.Activity) -> c
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity getScreenDensity(android.app.Activity) -> d
+    boolean isRegistryEmpty() -> a
+    java.lang.String getBaseHtmlResourcesPath() -> b
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page -> com.pontiflex.mobile.webview.utilities.a:
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page registration -> a
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page multioffer -> b
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page privacy -> c
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page privacylist -> d
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page[] $VALUES -> e
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page[] values() -> values
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page valueOf(java.lang.String) -> valueOf
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity -> com.pontiflex.mobile.webview.utilities.o:
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity ldpi -> a
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity mdpi -> b
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity hdpi -> c
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity xhdpi -> d
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity DEFAULT -> e
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity[] $VALUES -> f
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity[] values() -> values
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity valueOf(java.lang.String) -> valueOf
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation -> com.pontiflex.mobile.webview.utilities.i:
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation portrait -> a
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation landscape -> b
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation DEFAULT -> c
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation[] $VALUES -> d
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation[] values() -> values
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation valueOf(java.lang.String) -> valueOf
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize -> com.pontiflex.mobile.webview.utilities.p:
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize small -> a
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize normal -> b
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize large -> c
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize xlarge -> d
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize DEFAULT -> e
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize[] $VALUES -> f
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize[] values() -> values
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize valueOf(java.lang.String) -> valueOf
+com.pontiflex.mobile.webview.utilities.HttpAsyncTask -> com.pontiflex.mobile.webview.utilities.q:
+    com.pontiflex.mobile.webview.utilities.HttpAsyncTask$HttpAsyncTaskDelegate delegate -> a
+    void onCancelled() -> onCancelled
+    void onPreExecute() -> onPreExecute
+    java.lang.Integer doInBackground(java.lang.Object[]) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+com.pontiflex.mobile.webview.utilities.HttpAsyncTask$HttpAsyncTaskDelegate -> com.pontiflex.mobile.webview.utilities.h:
+com.pontiflex.mobile.webview.utilities.PackageHelper -> com.pontiflex.mobile.webview.utilities.m:
+    com.pontiflex.mobile.webview.utilities.PackageHelper instance -> a
+    java.lang.String baseHtmlResourcesPath -> b
+    com.pontiflex.mobile.webview.utilities.PackageHelper getInstance$6d2771a6() -> a
+    com.pontiflex.mobile.webview.utilities.PackageHelper createInstance$6d2771a6() -> b
+    java.lang.String getBaseHtmlResourcesPath() -> c
+    java.util.List getHtmlPaths(android.content.Context) -> a
+    void fillPaths(java.io.File,java.lang.String,java.util.List) -> a
+    java.lang.String convertStreamToString(java.io.InputStream) -> a
+    java.util.Properties parsePontiflexStrings(java.io.InputStream,java.util.Properties) -> a
+com.pontiflex.mobile.webview.utilities.PontiflexStringsHandler -> com.pontiflex.mobile.webview.utilities.k:
+    java.lang.String currentString -> a
+    java.lang.StringBuffer currentValue -> b
+    java.util.Properties props -> c
+    java.util.Properties getProperties() -> a
+    void characters(char[],int,int) -> characters
+    void endElement(java.lang.String,java.lang.String,java.lang.String) -> endElement
+    void startElement(java.lang.String,java.lang.String,java.lang.String,org.xml.sax.Attributes) -> startElement
+com.pontiflex.mobile.webview.utilities.RegistrationStorage -> com.pontiflex.mobile.webview.utilities.RegistrationStorage:
+    java.lang.String keystoreFilename -> a
+    java.util.Properties keystore -> b
+    java.lang.String seed -> c
+    void put(java.lang.String,java.lang.String) -> a
+    java.lang.String get(java.lang.String) -> a
+    void remove(java.lang.String) -> b
+    java.util.Set keys() -> a
+    void clear(android.content.Context) -> a
+    boolean commit(android.content.Context) -> b
+    void setupKeystore(android.content.Context) -> c
+    void initializeKeystore() -> b
+    boolean writeKeystore(android.content.Context) -> d
+    java.lang.String encrypt(java.lang.String) -> c
+    java.lang.String decrypt(java.lang.String) -> d
+    java.lang.String xxcrypt(java.lang.String,boolean) -> a
+    byte[] toByte(java.lang.String) -> e
+    java.lang.String toHex(byte[]) -> a
+com.pontiflex.mobile.webview.utilities.UpdateResourceTask -> com.pontiflex.mobile.webview.utilities.c:
+    com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
+    java.lang.Boolean doInBackground(java.lang.Object[]) -> a
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+com.pontiflex.mobile.webview.utilities.UpdateResourceUtil -> com.pontiflex.mobile.webview.utilities.g:
+    java.util.HashMap RESOURCES_MAP -> a
+    java.util.List RESOURCES_INSIDE_JAR -> b
+    java.util.List VERSIONED_RESOURCES -> c
+    boolean downloadResource(java.lang.String,java.util.Map,java.lang.String) -> a
+    boolean copyResource(java.lang.String,java.lang.String) -> a
+    boolean moveResource(java.lang.String,java.lang.String) -> b
+    java.lang.String calculateChecksum(java.lang.String) -> a
+    boolean extractResource(java.lang.String) -> b
+    boolean deleteDir(java.io.File) -> a
+    boolean validateExtractedResources(java.util.Map,java.lang.String) -> a
+    void initializeResources(android.content.Context) -> a
+    boolean copyResourceFromAsset(java.lang.String,java.lang.String,android.content.Context) -> a
+    boolean extractResourceFromJarAndCopy(java.lang.String,android.content.Context,java.lang.String) -> a
+    boolean copyResourceFromZipFile(java.lang.String,java.lang.String,java.lang.String) -> a
+    boolean checkNonVersionResource(android.content.Context,java.lang.String) -> a
+    boolean checkVersion(android.content.Context,java.lang.String) -> b
+    boolean compareVersion(java.lang.String,java.lang.String) -> c
+    void closeStreams(java.io.InputStream,java.io.FileOutputStream,java.io.FileWriter) -> a
+com.pontiflex.mobile.webview.utilities.UpdateResourceUtil$1 -> com.pontiflex.mobile.webview.utilities.l:
+com.pontiflex.mobile.webview.utilities.VersionHelper -> com.pontiflex.mobile.webview.utilities.d:
+    com.pontiflex.mobile.webview.utilities.VersionHelper instance -> a
+    java.util.Properties stringCache -> b
+    com.pontiflex.mobile.webview.utilities.VersionHelper getInstance$784e20d4() -> a
+    com.pontiflex.mobile.webview.utilities.VersionHelper createInstance$784e20d4() -> b
+    java.lang.String getAppName(android.content.Context) -> a
+    int getAppVersionCode(android.content.Context) -> b
+    java.lang.String getAppVersionName(android.content.Context) -> c
+    java.lang.String getUserAgent(android.content.Context) -> d
+    java.lang.String getAndroidOsSdkVersionCode() -> c
+    java.lang.String getLocale(android.content.Context) -> e
+    java.lang.String getPostalCode(android.content.Context) -> f
+    java.lang.String urlEncode(java.lang.String) -> a
+    void resetCache() -> d
+    java.lang.String getNativeVersionConfig(android.content.Context) -> g
+d -> c:
+    java.lang.ref.WeakReference a -> a
+    com.google.ads.Ad b -> b
+    com.google.ads.AdListener c -> c
+    c d -> d
+    com.google.ads.AdRequest e -> e
+    com.google.ads.AdSize f -> f
+    f g -> g
+    java.lang.String h -> h
+    g i -> i
+    h j -> j
+    android.os.Handler k -> k
+    boolean l -> l
+    boolean m -> m
+    long n -> n
+    x o -> o
+    java.util.LinkedList p -> p
+    int q -> q
+    void a(java.lang.String) -> a
+    void a() -> a
+    void b() -> b
+    android.app.Activity c() -> c
+    com.google.ads.Ad d() -> d
+    c e() -> e
+    java.lang.String f() -> f
+    g g() -> g
+    h h() -> h
+    com.google.ads.AdSize i() -> i
+    f j() -> j
+    void a(int) -> a
+    int k() -> k
+    boolean u() -> r
+    boolean m() -> l
+    void a(com.google.ads.AdRequest) -> a
+    void a(com.google.ads.AdRequest$ErrorCode) -> a
+    void n() -> m
+    void o() -> n
+    void p() -> o
+    void q() -> p
+    void r() -> s
+    void s() -> q
+    void a(float) -> a
+e -> d:
+    java.lang.String a -> a
+    java.util.HashMap b -> b
+    android.os.Bundle a() -> a
+    java.lang.String b() -> b
+    java.util.HashMap c() -> c
+f -> a:
+    java.util.LinkedList a -> a
+    long b -> b
+    long c -> c
+    java.util.LinkedList d -> d
+    long e -> e
+    java.lang.String f -> f
+    boolean g -> g
+    boolean h -> h
+    java.lang.String i -> i
+    void a() -> a
+    void b() -> b
+    void c() -> c
+    void d() -> d
+    long e() -> e
+    java.lang.String f() -> f
+    java.lang.String g() -> g
+    long h() -> h
+    long i() -> i
+    java.lang.String j() -> j
+    void a(java.lang.String) -> a
+    boolean k() -> k
+    void l() -> l
+    boolean m() -> m
+    void n() -> n
+    void o() -> o
+    java.lang.String p() -> p
+    void b(java.lang.String) -> b
+g -> b:
+    com.google.ads.AdActivity a -> a
+    com.google.ads.AdSize b -> b
+    void a() -> a
+    com.google.ads.AdActivity b() -> b
+    void a(com.google.ads.AdActivity) -> a
+    void onMeasure(int,int) -> onMeasure
+h -> n:
+    d a -> a
+    a$a b -> b
+    boolean c -> c
+    boolean d -> d
+    boolean e -> e
+    boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
+    void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
+    void a() -> a
+    void b() -> b
+h$a -> y:
+    d a -> a
+    java.lang.Void a(java.lang.String[]) -> a
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+i -> o:
+    void a(d,java.util.HashMap,android.webkit.WebView) -> a
+j -> l:
+    void a(d,java.util.HashMap,android.webkit.WebView) -> a
+k -> m:
+    void a(d,java.util.HashMap,android.webkit.WebView) -> a
+l -> j:
+    void a(d,java.util.HashMap,android.webkit.WebView) -> a
+m -> k:
+    void a(d,java.util.HashMap,android.webkit.WebView) -> a
+n -> h:
+    void a(d,java.util.HashMap,android.webkit.WebView) -> a
+o -> i:
+    void a(d,java.util.HashMap,android.webkit.WebView) -> a
+p -> w:
+    void a(d,java.util.HashMap,android.webkit.WebView) -> a
+q -> v:
+    void a(d,java.util.HashMap,android.webkit.WebView) -> a
+r -> u:
+    void a(d,java.util.HashMap,android.webkit.WebView) -> a
+s -> t:
+    void a(d,java.util.HashMap,android.webkit.WebView) -> a
+t -> s:
+    void a(java.lang.String) -> a
+    void b(java.lang.String) -> b
+    void a(java.lang.String,java.lang.Throwable) -> a
+    void c(java.lang.String) -> c
+    void d(java.lang.String) -> d
+    void e(java.lang.String) -> e
+    void b(java.lang.String,java.lang.Throwable) -> b
+    boolean a(java.lang.String,int) -> a
+u -> r:
+    java.lang.Boolean a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    android.media.AudioManager d -> d
+    android.util.DisplayMetrics e -> e
+    boolean f -> f
+    boolean g -> g
+    java.lang.String h -> h
+    java.lang.String a(android.content.Context) -> a
+    boolean b(android.content.Context) -> b
+    boolean a() -> a
+    java.lang.String a(java.lang.String) -> a
+    java.lang.String c(android.content.Context) -> c
+    java.lang.String d(android.content.Context) -> d
+    u$a e(android.content.Context) -> e
+    java.lang.String f(android.content.Context) -> f
+    android.util.DisplayMetrics a(android.app.Activity) -> a
+    java.lang.String a(android.location.Location) -> a
+    java.lang.String b(java.lang.String) -> b
+    java.util.HashMap a(android.net.Uri) -> a
+    boolean b() -> b
+    void a(boolean) -> a
+    void g(android.content.Context) -> g
+    java.lang.String a(android.webkit.WebView) -> a
+    void b(android.webkit.WebView) -> b
+u$a -> aa:
+    u$a a -> d
+    u$a b -> a
+    u$a c -> e
+    u$a d -> b
+    u$a e -> c
+    u$a f -> f
+    u$a[] g -> g
+    u$a[] values() -> values
+    u$a valueOf(java.lang.String) -> valueOf
+u$b -> ab:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+v -> q:
+    boolean a -> a
+    java.lang.String a(byte[]) -> a
+v$a -> ae:
+    byte[] a -> d
+    int b -> e
+v$b -> ad:
+    byte[] h -> f
+    byte[] i -> g
+    byte[] j -> h
+    int c -> i
+    int k -> j
+    boolean d -> a
+    boolean e -> b
+    boolean f -> c
+    byte[] l -> k
+    boolean g -> l
+    boolean a(byte[],int) -> a
+w -> p:
+    java.lang.Void a(java.lang.String[]) -> a
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+x -> x:
+    java.lang.ref.WeakReference a -> a
+    void run() -> run

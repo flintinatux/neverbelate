@@ -22,14 +22,9 @@
 	<string name="share_menu_title">Share NeverBeLate™</string>
 	<string name="share_message">Dear friend -\n
 	\n
-	I just installed the new NeverBeLate™ app for Android, and I
-	am amazed at how easily it keeps me on time to all of my events! It checks the upcoming events in my
-	Android calendar, and then warns me when I need to get in the car to beat the traffic to my next appointment.
-	I can even use it to check the traffic between my current location and my destination, so that I can decide
-	if I should take another route. I know you will find NeverBeLate™ to be the most useful app on your phone!
-	Click the link below to install NeverBeLate™ for FREE!\n
+	I just installed the new NeverBeLate™ app for Android, and I am amazed at how easily it keeps me on time to all of my events! It checks the upcoming events in my Android calendar, and then warns me when I need to get in the car to beat the traffic to my next appointment. I can even use it to check the traffic between my current location and my destination, so that I can decide if I should take another route. I know you will find NeverBeLate™ to be the most useful app on your phone! Click the link below to install NeverBeLate™ for FREE!\n
 	\n
-	http://market.android.com/details?id="com.madhackerdesigns.neverbelate"\n</string>
+	http://bit.ly/install-never-be-late-1\n</string>
 	<string name="share_subject">Check out NeverBeLate™ for Android!</string>
     
 <!-- Strings for Test Activity -->
