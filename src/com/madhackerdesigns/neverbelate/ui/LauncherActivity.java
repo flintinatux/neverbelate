@@ -138,8 +138,10 @@ public class LauncherActivity extends Activity {
 			AdRequest request = new AdRequest();
 			request.setTesting(ADMOB_TEST);
 			AdView adView = (AdView) findViewById(R.id.ad_view);
-		    adView.loadAd(request);
-		    Logger.d(LOG_TAG, "AdMob banner loaded.");
+		    if (adView != null) {
+		    	adView.loadAd(request);
+		    	Logger.d(LOG_TAG, "AdMob banner loaded.");
+		    }
 		}
 	}
 

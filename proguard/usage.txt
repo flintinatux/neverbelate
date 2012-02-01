@@ -232,7 +232,6 @@ com.google.gson.z
 com.madhackerdesigns.neverbelate.Eula:
     private static final java.lang.String PREFERENCE_EULA_ACCEPTED
     private static final java.lang.String PREFERENCES_EULA
-    108:109:private static void refuse(android.app.Activity)
 com.madhackerdesigns.neverbelate.R
 com.madhackerdesigns.neverbelate.R$anim
 com.madhackerdesigns.neverbelate.R$array

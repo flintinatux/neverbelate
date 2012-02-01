@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res/com.madhackerdesigns.neverbelate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_tutorial"
+            style="@style/LauncherButton"
+            android:drawableTop="@drawable/ic_menu_help"
+            android:text="@string/btn_tutorial_text" />
+
+        <Button
+            android:id="@+id/btn_configure"
+            style="@style/LauncherButton"
+            android:drawableTop="@drawable/ic_menu_preferences"
+            android:text="@string/btn_configure_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_share"
+            style="@style/LauncherButton"
+            android:drawableTop="@drawable/ic_menu_share"
+            android:text="@string/btn_share_text" />
+
+        <Button
+            android:id="@+id/btn_tips"
+            style="@style/LauncherButton"
+            android:drawableTop="@drawable/ic_menu_notifications"
+            android:text="@string/btn_tips_text" />
+    </LinearLayout>
+
+</LinearLayout>

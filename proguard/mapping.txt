@@ -589,12 +589,12 @@ com.madhackerdesigns.neverbelate.Eula$1 -> com.madhackerdesigns.neverbelate.b:
 com.madhackerdesigns.neverbelate.Eula$2 -> com.madhackerdesigns.neverbelate.a:
     android.app.Activity val$activity -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.provider.AlertsContract -> com.madhackerdesigns.neverbelate.provider.b:
+com.madhackerdesigns.neverbelate.provider.AlertsContract -> com.madhackerdesigns.neverbelate.provider.AlertsContract:
 com.madhackerdesigns.neverbelate.provider.AlertsContract$Alerts -> com.madhackerdesigns.neverbelate.provider.a:
     android.net.Uri CONTENT_URI -> a
     android.net.Uri CONTENT_ID_URI_BASE -> b
     android.net.Uri CONTENT_ID_URI_PATTERN -> c
-com.madhackerdesigns.neverbelate.provider.AlertsHelper -> com.madhackerdesigns.neverbelate.provider.c:
+com.madhackerdesigns.neverbelate.provider.AlertsHelper -> com.madhackerdesigns.neverbelate.provider.b:
     java.lang.String[] ALERT_PROJECTION -> a
 com.madhackerdesigns.neverbelate.provider.AlertsProvider -> com.madhackerdesigns.neverbelate.provider.AlertsProvider:
     java.util.HashMap sAlertsProjectionMap -> a
@@ -606,7 +606,7 @@ com.madhackerdesigns.neverbelate.provider.AlertsProvider -> com.madhackerdesigns
     android.net.Uri insert(android.net.Uri,android.content.ContentValues) -> insert
     int delete(android.net.Uri,java.lang.String,java.lang.String[]) -> delete
     int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) -> update
-com.madhackerdesigns.neverbelate.provider.AlertsProvider$DatabaseHelper -> com.madhackerdesigns.neverbelate.provider.d:
+com.madhackerdesigns.neverbelate.provider.AlertsProvider$DatabaseHelper -> com.madhackerdesigns.neverbelate.provider.c:
     void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
     void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
 com.madhackerdesigns.neverbelate.service.CalendarHelper -> com.madhackerdesigns.neverbelate.service.CalendarHelper:

@@ -594,9 +594,9 @@ Interfaces (count = 0):
 
 Constant Pool (count = 181):
   - Integer [2130903043]
-  - Integer [2131099662]
   - Integer [2131099663]
-  - Integer [2131099665]
+  - Integer [2131099664]
+  - Integer [2131099666]
   - Integer [2131165198]
   - Integer [2131165199]
   - Integer [2131165200]
@@ -798,7 +798,7 @@ Methods (count = 7):
     Access flags: 0x4
       = protected void onCreate(android.os.Bundle)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 211, locals = 2, stack = 4):
+    + Code attribute instructions (code length = 217, locals = 3, stack = 4):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] invokespecial #44
@@ -837,8 +837,8 @@ Methods (count = 7):
         - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
       [54] aload_0 v0
       [55] aload_0 v0
-      [56] ldc #6
-        - Integer [2131165199]
+      [56] ldc #11
+        - Integer [2131165204]
       [58] invokevirtual #64
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
       [61] checkcast #24
@@ -857,8 +857,8 @@ Methods (count = 7):
       [79] invokevirtual #56
         - Methodref [android/widget/CheckBox.setOnCheckedChangeListener (Landroid/widget/CompoundButton$OnCheckedChangeListener;)V]
       [82] aload_0 v0
-      [83] ldc #8
-        - Integer [2131165201]
+      [83] ldc #7
+        - Integer [2131165200]
       [85] invokevirtual #64
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
       [88] checkcast #23
@@ -872,8 +872,8 @@ Methods (count = 7):
       [99] invokevirtual #54
         - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
       [102] aload_0 v0
-      [103] ldc #9
-        - Integer [2131165202]
+      [103] ldc #8
+        - Integer [2131165201]
       [105] invokevirtual #64
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
       [108] checkcast #23
@@ -894,8 +894,8 @@ Methods (count = 7):
         - Methodref [com/madhackerdesigns/neverbelate/ui/i.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
       [130] astore_1 v1
       [131] aload_0 v0
-      [132] ldc #10
-        - Integer [2131165203]
+      [132] ldc #9
+        - Integer [2131165202]
       [134] invokevirtual #64
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
       [137] checkcast #23
@@ -904,8 +904,8 @@ Methods (count = 7):
       [141] invokevirtual #54
         - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
       [144] aload_0 v0
-      [145] ldc #7
-        - Integer [2131165200]
+      [145] ldc #6
+        - Integer [2131165199]
       [147] invokevirtual #64
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
       [150] checkcast #23
@@ -914,8 +914,8 @@ Methods (count = 7):
       [154] invokevirtual #54
         - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
       [157] aload_0 v0
-      [158] ldc #5
-        - Integer [2131165198]
+      [158] ldc #10
+        - Integer [2131165203]
       [160] invokevirtual #64
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
       [163] checkcast #27
@@ -938,23 +938,27 @@ Methods (count = 7):
       [186] invokevirtual #60
         - Methodref [com/google/ads/c.a ()V]
       [189] aload_0 v0
-      [190] ldc #11
-        - Integer [2131165204]
+      [190] ldc #5
+        - Integer [2131165198]
       [192] invokevirtual #64
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
       [195] checkcast #28
         - Class [com/google/ads/AdView]
-      [198] aload_1 v1
-      [199] invokevirtual #58
+      [198] dup
+      [199] astore_2 v2
+      [200] ifnull +16 (target=216)
+      [203] aload_2 v2
+      [204] aload_1 v1
+      [205] invokevirtual #58
         - Methodref [com/google/ads/AdView.a (Lcom/google/ads/c;)V]
-      [202] ldc #13
+      [208] ldc #13
         - String [NeverBeLateService]
-      [204] ldc #12
+      [210] ldc #12
         - String [AdMob banner loaded.]
-      [206] invokestatic #53
+      [212] invokestatic #53
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [209] pop
-      [210] return
+      [215] pop
+      [216] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       onCreateDialog(I)Landroid/app/Dialog;
@@ -975,18 +979,18 @@ Methods (count = 7):
         default: offset = 47, target = 57
       [28] aload_2 v2
       [29] ldc #3
-        - Integer [2131099663]
+        - Integer [2131099664]
       [31] invokevirtual #52
         - Methodref [android/app/AlertDialog$Builder.setTitle (I)Landroid/app/AlertDialog$Builder;]
       [34] ldc #2
-        - Integer [2131099662]
+        - Integer [2131099663]
       [36] invokevirtual #50
         - Methodref [android/app/AlertDialog$Builder.setMessage (I)Landroid/app/AlertDialog$Builder;]
       [39] iconst_1
       [40] invokevirtual #49
         - Methodref [android/app/AlertDialog$Builder.setCancelable (Z)Landroid/app/AlertDialog$Builder;]
       [43] ldc #4
-        - Integer [2131099665]
+        - Integer [2131099666]
       [45] new #38
         - Class [com/madhackerdesigns/neverbelate/ui/l]
       [48] dup
@@ -1056,8 +1060,8 @@ Methods (count = 7):
       [32] ifnonnull +16 (target=48)
       [35] aload_0 v0
       [36] aload_0 v0
-      [37] ldc #6
-        - Integer [2131165199]
+      [37] ldc #11
+        - Integer [2131165204]
       [39] invokevirtual #64
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
       [42] checkcast #24
@@ -9011,11 +9015,11 @@ _____________________________________________________________________
 Interfaces (count = 0):
 
 Constant Pool (count = 194):
-  - Integer [2131099679]
   - Integer [2131099680]
-  - Integer [2131099688]
+  - Integer [2131099681]
   - Integer [2131099689]
-  - Integer [2131099691]
+  - Integer [2131099690]
+  - Integer [2131099692]
   - Integer [2131165188]
   - Integer [2131165190]
   - Integer [2131165224]
@@ -9290,7 +9294,7 @@ Methods (count = 2):
       [100] invokevirtual #58
         - Methodref [com/madhackerdesigns/neverbelate/ui/WarningDialog.getResources ()Landroid/content/res/Resources;]
       [103] ldc #5
-        - Integer [2131099691]
+        - Integer [2131099692]
       [105] invokevirtual #48
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [108] astore v4
@@ -9492,7 +9496,7 @@ Methods (count = 2):
       [404] aload v5
       [406] aload v4
       [408] ldc #4
-        - Integer [2131099689]
+        - Integer [2131099690]
       [410] invokevirtual #48
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [413] invokevirtual #51
@@ -9501,7 +9505,7 @@ Methods (count = 2):
       [419] aload v5
       [421] aload v4
       [423] ldc #3
-        - Integer [2131099688]
+        - Integer [2131099689]
       [425] invokevirtual #48
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [428] invokevirtual #51
@@ -9538,7 +9542,7 @@ Methods (count = 2):
       [472] aload v7
       [474] aload v4
       [476] ldc #2
-        - Integer [2131099680]
+        - Integer [2131099681]
       [478] invokevirtual #48
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [481] invokevirtual #51
@@ -9547,7 +9551,7 @@ Methods (count = 2):
       [487] aload v7
       [489] aload v4
       [491] ldc #1
-        - Integer [2131099679]
+        - Integer [2131099680]
       [493] invokevirtual #48
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [496] invokevirtual #51
@@ -28511,8 +28515,8 @@ Interfaces (count = 0):
 
 Constant Pool (count = 169):
   - Integer [2130903042]
-  - Integer [2131099677]
-  - Integer [2131099691]
+  - Integer [2131099678]
+  - Integer [2131099692]
   - Integer [2131165192]
   - Integer [2131165193]
   - Integer [2131165195]
@@ -28739,7 +28743,7 @@ Methods (count = 3):
       [49] dup
       [50] aload_1 v1
       [51] ldc #3
-        - Integer [2131099691]
+        - Integer [2131099692]
       [53] invokevirtual #37
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [56] invokestatic #54
@@ -28753,7 +28757,7 @@ Methods (count = 3):
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [67] aload_1 v1
       [68] ldc #2
-        - Integer [2131099677]
+        - Integer [2131099678]
       [70] invokevirtual #37
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [73] invokevirtual #56
@@ -34235,11 +34239,11 @@ Constant Pool (count = 456):
   - Integer [2130837510]
   - Integer [2130837511]
   - Integer [2130903040]
-  - Integer [2130903047]
   - Integer [2130903048]
-  - Integer [2131099676]
+  - Integer [2130903049]
+  - Integer [2131099677]
   - Integer [2131165191]
-  - Integer [2131165204]
+  - Integer [2131165198]
   - Integer [2131165221]
   - Integer [2131165222]
   - Integer [2131165223]
@@ -34284,9 +34288,9 @@ Constant Pool (count = 456):
   - Class [com/google/android/maps/MapView]
   - Class [com/google/android/maps/MyLocationOverlay]
   - Class [com/google/android/maps/OverlayItem]
+  - Class [com/madhackerdesigns/neverbelate/provider/AlertsContract]
   - Class [com/madhackerdesigns/neverbelate/provider/a]
   - Class [com/madhackerdesigns/neverbelate/provider/b]
-  - Class [com/madhackerdesigns/neverbelate/provider/c]
   - Class [com/madhackerdesigns/neverbelate/service/NeverBeLateService]
   - Class [com/madhackerdesigns/neverbelate/service/WakefulServiceReceiver]
   - Class [com/madhackerdesigns/neverbelate/settings/PreferenceHelper]
@@ -34311,7 +34315,7 @@ Constant Pool (count = 456):
   - Class [org/json/JSONObject]
   - Double [1000000.0]
   - Fieldref [com/madhackerdesigns/neverbelate/provider/a.a Landroid/net/Uri;]
-  - Fieldref [com/madhackerdesigns/neverbelate/provider/c.a [Ljava/lang/String;]
+  - Fieldref [com/madhackerdesigns/neverbelate/provider/b.a [Ljava/lang/String;]
   - Fieldref [com/madhackerdesigns/neverbelate/ui/WarningDialog.a Lcom/madhackerdesigns/neverbelate/util/AdHelper;]
   - Fieldref [com/madhackerdesigns/neverbelate/ui/WarningDialog.b Lcom/pontiflex/mobile/webview/sdk/c;]
   - Fieldref [com/madhackerdesigns/neverbelate/ui/WarningDialog.c Z]
@@ -34603,9 +34607,9 @@ Constant Pool (count = 456):
   + Utf8 [com/google/android/maps/MapView]
   + Utf8 [com/google/android/maps/MyLocationOverlay]
   + Utf8 [com/google/android/maps/OverlayItem]
+  + Utf8 [com/madhackerdesigns/neverbelate/provider/AlertsContract]
   + Utf8 [com/madhackerdesigns/neverbelate/provider/a]
   + Utf8 [com/madhackerdesigns/neverbelate/provider/b]
-  + Utf8 [com/madhackerdesigns/neverbelate/provider/c]
   + Utf8 [com/madhackerdesigns/neverbelate/service/NeverBeLateService]
   + Utf8 [com/madhackerdesigns/neverbelate/service/WakefulServiceReceiver]
   + Utf8 [com/madhackerdesigns/neverbelate/settings/PreferenceHelper]
@@ -34746,12 +34750,12 @@ Methods (count = 12):
         - Methodref [com/google/android/maps/MapActivity.onCreate (Landroid/os/Bundle;)V]
       [5] aload_0 v0
       [6] ldc #6
-        - Integer [2130903048]
+        - Integer [2130903049]
       [8] invokevirtual #140
         - Methodref [com/madhackerdesigns/neverbelate/ui/WarningDialog.setContentView (I)V]
       [11] aload_0 v0
       [12] ldc #7
-        - Integer [2131099676]
+        - Integer [2131099677]
       [14] invokevirtual #141
         - Methodref [com/madhackerdesigns/neverbelate/ui/WarningDialog.setTitle (I)V]
       [17] ldc #19
@@ -34808,7 +34812,7 @@ Methods (count = 12):
       [82] astore_2 v2
       [83] aload_0 v0
       [84] ldc #5
-        - Integer [2130903047]
+        - Integer [2130903048]
       [86] aconst_null
       [87] invokestatic #98
         - Methodref [android/view/View.inflate (Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;]
@@ -34902,7 +34906,7 @@ Methods (count = 12):
         - Fieldref [com/madhackerdesigns/neverbelate/provider/a.a Landroid/net/Uri;]
       [205] astore_3 v3
       [206] getstatic #82
-        - Fieldref [com/madhackerdesigns/neverbelate/provider/c.a [Ljava/lang/String;]
+        - Fieldref [com/madhackerdesigns/neverbelate/provider/b.a [Ljava/lang/String;]
       [209] astore v4
       [211] ldc #31
         - String [fired=? AND dismissed=?]
@@ -34985,7 +34989,7 @@ Methods (count = 12):
         - Methodref [com/google/ads/c.a ()V]
       [314] aload_0 v0
       [315] ldc #9
-        - Integer [2131165204]
+        - Integer [2131165198]
       [317] invokevirtual #134
         - Methodref [com/madhackerdesigns/neverbelate/ui/WarningDialog.findViewById (I)Landroid/view/View;]
       [320] checkcast #46
@@ -37559,8 +37563,8 @@ Constant Pool (count = 37):
   - String [content://com.madhackerdesigns.neverbelate.provider.AlertsContract/alerts//#]
   - Class [android/net/Uri]
   - Class [android/provider/BaseColumns]
+  - Class [com/madhackerdesigns/neverbelate/provider/AlertsContract]
   - Class [com/madhackerdesigns/neverbelate/provider/a]
-  - Class [com/madhackerdesigns/neverbelate/provider/b]
   - Class [java/lang/Object]
   - Fieldref [com/madhackerdesigns/neverbelate/provider/a.a Landroid/net/Uri;]
   - Fieldref [com/madhackerdesigns/neverbelate/provider/a.b Landroid/net/Uri;]
@@ -37583,8 +37587,8 @@ Constant Pool (count = 37):
   + Utf8 [android/provider/BaseColumns]
   + Utf8 [b]
   + Utf8 [c]
+  + Utf8 [com/madhackerdesigns/neverbelate/provider/AlertsContract]
   + Utf8 [com/madhackerdesigns/neverbelate/provider/a]
-  + Utf8 [com/madhackerdesigns/neverbelate/provider/b]
   + Utf8 [content://com.madhackerdesigns.neverbelate.provider.AlertsContract/alerts]
   + Utf8 [content://com.madhackerdesigns.neverbelate.provider.AlertsContract/alerts/]
   + Utf8 [content://com.madhackerdesigns.neverbelate.provider.AlertsContract/alerts//#]
@@ -40958,7 +40962,7 @@ _____________________________________________________________________
 Interfaces (count = 0):
 
 Constant Pool (count = 268):
-  - Integer [2131099675]
+  - Integer [2131099676]
   - String []
   - String [ AND ]
   - String [ContentValues initialValues must be provided]
@@ -40999,10 +41003,10 @@ Constant Pool (count = 268):
   - Class [android/database/sqlite/SQLiteQueryBuilder]
   - Class [android/net/Uri]
   - Class [android/text/TextUtils]
+  - Class [com/madhackerdesigns/neverbelate/provider/AlertsContract]
   - Class [com/madhackerdesigns/neverbelate/provider/AlertsProvider]
   - Class [com/madhackerdesigns/neverbelate/provider/a]
-  - Class [com/madhackerdesigns/neverbelate/provider/b]
-  - Class [com/madhackerdesigns/neverbelate/provider/d]
+  - Class [com/madhackerdesigns/neverbelate/provider/c]
   - Class [java/lang/IllegalArgumentException]
   - Class [java/lang/Integer]
   - Class [java/lang/NullPointerException]
@@ -41012,7 +41016,7 @@ Constant Pool (count = 268):
   - Class [java/util/List]
   - Fieldref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.a Ljava/util/HashMap;]
   - Fieldref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.b Landroid/content/UriMatcher;]
-  - Fieldref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.c Lcom/madhackerdesigns/neverbelate/provider/d;]
+  - Fieldref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.c Lcom/madhackerdesigns/neverbelate/provider/c;]
   - Fieldref [com/madhackerdesigns/neverbelate/provider/a.b Landroid/net/Uri;]
   - Methodref [android/content/ContentProvider.<init> ()V]
   - Methodref [android/content/ContentResolver.notifyChange (Landroid/net/Uri;Landroid/database/ContentObserver;)V]
@@ -41040,9 +41044,9 @@ Constant Pool (count = 268):
   - Methodref [android/net/Uri.getPathSegments ()Ljava/util/List;]
   - Methodref [android/text/TextUtils.isEmpty (Ljava/lang/CharSequence;)Z]
   - Methodref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.getContext ()Landroid/content/Context;]
-  - Methodref [com/madhackerdesigns/neverbelate/provider/d.<init> (Landroid/content/Context;)V]
-  - Methodref [com/madhackerdesigns/neverbelate/provider/d.getReadableDatabase ()Landroid/database/sqlite/SQLiteDatabase;]
-  - Methodref [com/madhackerdesigns/neverbelate/provider/d.getWritableDatabase ()Landroid/database/sqlite/SQLiteDatabase;]
+  - Methodref [com/madhackerdesigns/neverbelate/provider/c.<init> (Landroid/content/Context;)V]
+  - Methodref [com/madhackerdesigns/neverbelate/provider/c.getReadableDatabase ()Landroid/database/sqlite/SQLiteDatabase;]
+  - Methodref [com/madhackerdesigns/neverbelate/provider/c.getWritableDatabase ()Landroid/database/sqlite/SQLiteDatabase;]
   - Methodref [java/lang/IllegalArgumentException.<init> (Ljava/lang/String;)V]
   - Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
   - Methodref [java/lang/NullPointerException.<init> (Ljava/lang/String;)V]
@@ -41067,7 +41071,7 @@ Constant Pool (count = 268):
   + NameAndType [appendWhere (Ljava/lang/CharSequence;)V]
   + NameAndType [b Landroid/content/UriMatcher;]
   + NameAndType [b Landroid/net/Uri;]
-  + NameAndType [c Lcom/madhackerdesigns/neverbelate/provider/d;]
+  + NameAndType [c Lcom/madhackerdesigns/neverbelate/provider/c;]
   + NameAndType [containsKey (Ljava/lang/String;)Z]
   + NameAndType [delete (Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I]
   + NameAndType [get (I)Ljava/lang/Object;]
@@ -41145,7 +41149,7 @@ Constant Pool (count = 268):
   + Utf8 [Insert statement must include the following columns: EVENT_ID, CALENDAR_COLOR, BEGIN, END, LOCATION, DURATION, JSON]
   + Utf8 [Landroid/content/UriMatcher;]
   + Utf8 [Landroid/net/Uri;]
-  + Utf8 [Lcom/madhackerdesigns/neverbelate/provider/d;]
+  + Utf8 [Lcom/madhackerdesigns/neverbelate/provider/c;]
   + Utf8 [Ljava/util/HashMap;]
   + Utf8 [Unknown URI ]
   + Utf8 [_id]
@@ -41176,10 +41180,10 @@ Constant Pool (count = 268):
   + Utf8 [c]
   + Utf8 [calendar_color]
   + Utf8 [com.madhackerdesigns.neverbelate.provider.AlertsContract]
+  + Utf8 [com/madhackerdesigns/neverbelate/provider/AlertsContract]
   + Utf8 [com/madhackerdesigns/neverbelate/provider/AlertsProvider]
   + Utf8 [com/madhackerdesigns/neverbelate/provider/a]
-  + Utf8 [com/madhackerdesigns/neverbelate/provider/b]
-  + Utf8 [com/madhackerdesigns/neverbelate/provider/d]
+  + Utf8 [com/madhackerdesigns/neverbelate/provider/c]
   + Utf8 [containsKey]
   + Utf8 [copyrights]
   + Utf8 [delete]
@@ -41233,9 +41237,9 @@ Fields (count = 3):
   + Field:        b Landroid/content/UriMatcher;
     Access flags: 0x1a
       = private static final android.content.UriMatcher b
-  + Field:        c Lcom/madhackerdesigns/neverbelate/provider/d;
+  + Field:        c Lcom/madhackerdesigns/neverbelate/provider/c;
     Access flags: 0x2
-      = private com.madhackerdesigns.neverbelate.provider.d c
+      = private com.madhackerdesigns.neverbelate.provider.c c
 
 Methods (count = 8):
   - Method:       <clinit>()V
@@ -41412,15 +41416,15 @@ Methods (count = 8):
     + Code attribute instructions (code length = 17, locals = 1, stack = 4):
       [0] aload_0 v0
       [1] new #45
-        - Class [com/madhackerdesigns/neverbelate/provider/d]
+        - Class [com/madhackerdesigns/neverbelate/provider/c]
       [4] dup
       [5] aload_0 v0
       [6] invokevirtual #82
         - Methodref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.getContext ()Landroid/content/Context;]
       [9] invokespecial #83
-        - Methodref [com/madhackerdesigns/neverbelate/provider/d.<init> (Landroid/content/Context;)V]
+        - Methodref [com/madhackerdesigns/neverbelate/provider/c.<init> (Landroid/content/Context;)V]
       [12] putfield #55
-        - Fieldref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.c Lcom/madhackerdesigns/neverbelate/provider/d;]
+        - Fieldref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.c Lcom/madhackerdesigns/neverbelate/provider/c;]
       [15] iconst_1
       [16] ireturn
       Code attribute exceptions (count = 0):
@@ -41514,9 +41518,9 @@ Methods (count = 8):
       [140] astore v5
       [142] aload_0 v0
       [143] getfield #55
-        - Fieldref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.c Lcom/madhackerdesigns/neverbelate/provider/d;]
+        - Fieldref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.c Lcom/madhackerdesigns/neverbelate/provider/c;]
       [146] invokevirtual #84
-        - Methodref [com/madhackerdesigns/neverbelate/provider/d.getReadableDatabase ()Landroid/database/sqlite/SQLiteDatabase;]
+        - Methodref [com/madhackerdesigns/neverbelate/provider/c.getReadableDatabase ()Landroid/database/sqlite/SQLiteDatabase;]
       [149] astore v7
       [151] aload v6
       [153] aload v7
@@ -41705,7 +41709,7 @@ Methods (count = 8):
         - String [title]
       [165] aload_3 v3
       [166] ldc #1
-        - Integer [2131099675]
+        - Integer [2131099676]
       [168] invokevirtual #70
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [171] invokevirtual #64
@@ -41753,9 +41757,9 @@ Methods (count = 8):
         - Methodref [android/content/ContentValues.put (Ljava/lang/String;Ljava/lang/Integer;)V]
       [229] aload_0 v0
       [230] getfield #55
-        - Fieldref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.c Lcom/madhackerdesigns/neverbelate/provider/d;]
+        - Fieldref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.c Lcom/madhackerdesigns/neverbelate/provider/c;]
       [233] invokevirtual #85
-        - Methodref [com/madhackerdesigns/neverbelate/provider/d.getWritableDatabase ()Landroid/database/sqlite/SQLiteDatabase;]
+        - Methodref [com/madhackerdesigns/neverbelate/provider/c.getWritableDatabase ()Landroid/database/sqlite/SQLiteDatabase;]
       [236] ldc #11
         - String [alerts]
       [238] ldc #22
@@ -41812,9 +41816,9 @@ Methods (count = 8):
     + Code attribute instructions (code length = 165, locals = 6, stack = 5):
       [0] aload_0 v0
       [1] getfield #55
-        - Fieldref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.c Lcom/madhackerdesigns/neverbelate/provider/d;]
+        - Fieldref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.c Lcom/madhackerdesigns/neverbelate/provider/c;]
       [4] invokevirtual #85
-        - Methodref [com/madhackerdesigns/neverbelate/provider/d.getWritableDatabase ()Landroid/database/sqlite/SQLiteDatabase;]
+        - Methodref [com/madhackerdesigns/neverbelate/provider/c.getWritableDatabase ()Landroid/database/sqlite/SQLiteDatabase;]
       [7] astore v4
       [9] getstatic #54
         - Fieldref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.b Landroid/content/UriMatcher;]
@@ -41921,9 +41925,9 @@ Methods (count = 8):
     + Code attribute instructions (code length = 173, locals = 7, stack = 5):
       [0] aload_0 v0
       [1] getfield #55
-        - Fieldref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.c Lcom/madhackerdesigns/neverbelate/provider/d;]
+        - Fieldref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.c Lcom/madhackerdesigns/neverbelate/provider/c;]
       [4] invokevirtual #85
-        - Methodref [com/madhackerdesigns/neverbelate/provider/d.getWritableDatabase ()Landroid/database/sqlite/SQLiteDatabase;]
+        - Methodref [com/madhackerdesigns/neverbelate/provider/c.getWritableDatabase ()Landroid/database/sqlite/SQLiteDatabase;]
       [7] astore v5
       [9] getstatic #54
         - Fieldref [com/madhackerdesigns/neverbelate/provider/AlertsProvider.b Landroid/content/UriMatcher;]
@@ -42634,9 +42638,9 @@ Interfaces (count = 1):
   - Class [android/view/View$OnClickListener]
 
 Constant Pool (count = 65):
-  - Integer [2131099666]
   - Integer [2131099667]
   - Integer [2131099668]
+  - Integer [2131099669]
   - String [android.intent.action.SEND]
   - String [android.intent.extra.SUBJECT]
   - String [android.intent.extra.TEXT]
@@ -42752,7 +42756,7 @@ Methods (count = 2):
         - String [android.intent.extra.SUBJECT]
       [30] aload_2 v2
       [31] ldc #3
-        - Integer [2131099668]
+        - Integer [2131099669]
       [33] invokevirtual #20
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [36] invokevirtual #18
@@ -42763,7 +42767,7 @@ Methods (count = 2):
         - String [android.intent.extra.TEXT]
       [43] aload_2 v2
       [44] ldc #2
-        - Integer [2131099667]
+        - Integer [2131099668]
       [46] invokevirtual #20
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [49] invokevirtual #18
@@ -42773,7 +42777,7 @@ Methods (count = 2):
       [54] aload_3 v3
       [55] aload_2 v2
       [56] ldc #1
-        - Integer [2131099666]
+        - Integer [2131099667]
       [58] invokevirtual #20
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [61] invokestatic #17
@@ -43155,9 +43159,9 @@ _____________________________________________________________________
 Interfaces (count = 0):
 
 Constant Pool (count = 99):
-  - Integer [2131099697]
   - Integer [2131099698]
   - Integer [2131099699]
+  - Integer [2131099700]
   - String [ - ]
   - String [android.intent.action.SEND]
   - String [android.intent.extra.EMAIL]
@@ -43346,7 +43350,7 @@ Methods (count = 4):
       [33] iconst_0
       [34] aload_1 v1
       [35] ldc #1
-        - Integer [2131099697]
+        - Integer [2131099698]
       [37] invokevirtual #25
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [40] aastore
@@ -43358,7 +43362,7 @@ Methods (count = 4):
       [48] dup
       [49] aload_1 v1
       [50] ldc #3
-        - Integer [2131099699]
+        - Integer [2131099700]
       [52] invokevirtual #25
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [55] invokestatic #29
@@ -43394,7 +43398,7 @@ Methods (count = 4):
       [95] aload_2 v2
       [96] aload_1 v1
       [97] ldc #2
-        - Integer [2131099698]
+        - Integer [2131099699]
       [99] invokevirtual #25
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [102] invokestatic #21
@@ -46704,11 +46708,10 @@ _____________________________________________________________________
 Interfaces (count = 0):
 
 Constant Pool (count = 263):
-  - Integer [2130903045]
-  - Integer [2131099719]
-  - Integer [2131099725]
-  - Integer [2131099730]
-  - Integer [2131099734]
+  - Integer [2130903046]
+  - Integer [2131099720]
+  - Integer [2131099726]
+  - Integer [2131099731]
   - Integer [2131099735]
   - Integer [2131099736]
   - Integer [2131099737]
@@ -46718,6 +46721,7 @@ Constant Pool (count = 263):
   - Integer [2131099741]
   - Integer [2131099742]
   - Integer [2131099743]
+  - Integer [2131099744]
   - Integer [2131165206]
   - Integer [2131165207]
   - Integer [2131165208]
@@ -47032,12 +47036,12 @@ Methods (count = 10):
         - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
       [5] aload_0 v0
       [6] ldc #1
-        - Integer [2130903045]
+        - Integer [2130903046]
       [8] invokevirtual #93
         - Methodref [com/madhackerdesigns/neverbelate/ui/RegistrationForm.setContentView (I)V]
       [11] aload_0 v0
       [12] ldc #4
-        - Integer [2131099730]
+        - Integer [2131099731]
       [14] invokevirtual #94
         - Methodref [com/madhackerdesigns/neverbelate/ui/RegistrationForm.setTitle (I)V]
       [17] aload_0 v0
@@ -47185,15 +47189,15 @@ Methods (count = 10):
       [64] areturn
       [65] aload_2 v2
       [66] ldc #5
-        - Integer [2131099734]
+        - Integer [2131099735]
       [68] invokevirtual #73
         - Methodref [android/app/AlertDialog$Builder.setTitle (I)Landroid/app/AlertDialog$Builder;]
       [71] ldc #6
-        - Integer [2131099735]
+        - Integer [2131099736]
       [73] invokevirtual #69
         - Methodref [android/app/AlertDialog$Builder.setMessage (I)Landroid/app/AlertDialog$Builder;]
       [76] ldc #8
-        - Integer [2131099737]
+        - Integer [2131099738]
       [78] new #45
         - Class [com/madhackerdesigns/neverbelate/ui/ac]
       [81] dup
@@ -47203,7 +47207,7 @@ Methods (count = 10):
       [86] invokevirtual #72
         - Methodref [android/app/AlertDialog$Builder.setPositiveButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [89] ldc #7
-        - Integer [2131099736]
+        - Integer [2131099737]
       [91] new #44
         - Class [com/madhackerdesigns/neverbelate/ui/ab]
       [94] dup
@@ -47219,15 +47223,15 @@ Methods (count = 10):
       [107] areturn
       [108] aload_2 v2
       [109] ldc #9
-        - Integer [2131099738]
+        - Integer [2131099739]
       [111] invokevirtual #73
         - Methodref [android/app/AlertDialog$Builder.setTitle (I)Landroid/app/AlertDialog$Builder;]
       [114] ldc #10
-        - Integer [2131099739]
+        - Integer [2131099740]
       [116] invokevirtual #69
         - Methodref [android/app/AlertDialog$Builder.setMessage (I)Landroid/app/AlertDialog$Builder;]
       [119] ldc #11
-        - Integer [2131099740]
+        - Integer [2131099741]
       [121] new #47
         - Class [com/madhackerdesigns/neverbelate/ui/v]
       [124] dup
@@ -47243,15 +47247,15 @@ Methods (count = 10):
       [137] areturn
       [138] aload_2 v2
       [139] ldc #12
-        - Integer [2131099741]
+        - Integer [2131099742]
       [141] invokevirtual #73
         - Methodref [android/app/AlertDialog$Builder.setTitle (I)Landroid/app/AlertDialog$Builder;]
       [144] ldc #13
-        - Integer [2131099742]
+        - Integer [2131099743]
       [146] invokevirtual #69
         - Methodref [android/app/AlertDialog$Builder.setMessage (I)Landroid/app/AlertDialog$Builder;]
       [149] ldc #14
-        - Integer [2131099743]
+        - Integer [2131099744]
       [151] new #46
         - Class [com/madhackerdesigns/neverbelate/ui/u]
       [154] dup
@@ -47463,13 +47467,13 @@ Methods (count = 10):
       [105] dup
       [106] astore v7
       [108] ldc #3
-        - Integer [2131099725]
+        - Integer [2131099726]
       [110] invokevirtual #75
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [113] astore v8
       [115] aload v7
       [117] ldc #2
-        - Integer [2131099719]
+        - Integer [2131099720]
       [119] invokevirtual #75
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [122] astore v7
@@ -49010,26 +49014,26 @@ Methods (count = 11):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-+ Program class: com/madhackerdesigns/neverbelate/provider/b
++ Program class: com/madhackerdesigns/neverbelate/provider/AlertsContract
   Superclass:    java/lang/Object
   Major version: 0x31
   Minor version: 0x0
   Access flags:  0x31
-    = public final class com.madhackerdesigns.neverbelate.provider.b extends java.lang.Object
+    = public final class com.madhackerdesigns.neverbelate.provider.AlertsContract extends java.lang.Object
 
 Interfaces (count = 0):
 
 Constant Pool (count = 12):
+  - Class [com/madhackerdesigns/neverbelate/provider/AlertsContract]
   - Class [com/madhackerdesigns/neverbelate/provider/a]
-  - Class [com/madhackerdesigns/neverbelate/provider/b]
   - Class [java/lang/Object]
   - Methodref [java/lang/Object.<init> ()V]
   + NameAndType [<init> ()V]
   + Utf8 [()V]
   + Utf8 [<init>]
   + Utf8 [Code]
+  + Utf8 [com/madhackerdesigns/neverbelate/provider/AlertsContract]
   + Utf8 [com/madhackerdesigns/neverbelate/provider/a]
-  + Utf8 [com/madhackerdesigns/neverbelate/provider/b]
   + Utf8 [java/lang/Object]
 
 Fields (count = 0):
@@ -49037,7 +49041,7 @@ Fields (count = 0):
 Methods (count = 1):
   - Method:       <init>()V
     Access flags: 0x2
-      = private b()
+      = private AlertsContract()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
@@ -50715,8 +50719,8 @@ Constant Pool (count = 40):
   - Class [android/content/ContentResolver]
   - Class [android/view/View]
   - Class [android/view/View$OnClickListener]
+  - Class [com/madhackerdesigns/neverbelate/provider/AlertsContract]
   - Class [com/madhackerdesigns/neverbelate/provider/a]
-  - Class [com/madhackerdesigns/neverbelate/provider/b]
   - Class [com/madhackerdesigns/neverbelate/ui/TestActivity]
   - Class [com/madhackerdesigns/neverbelate/ui/q]
   - Class [java/lang/Object]
@@ -50743,8 +50747,8 @@ Constant Pool (count = 40):
   + Utf8 [android/content/ContentResolver]
   + Utf8 [android/view/View]
   + Utf8 [android/view/View$OnClickListener]
+  + Utf8 [com/madhackerdesigns/neverbelate/provider/AlertsContract]
   + Utf8 [com/madhackerdesigns/neverbelate/provider/a]
-  + Utf8 [com/madhackerdesigns/neverbelate/provider/b]
   + Utf8 [com/madhackerdesigns/neverbelate/ui/TestActivity]
   + Utf8 [com/madhackerdesigns/neverbelate/ui/q]
   + Utf8 [delete]
@@ -51345,12 +51349,12 @@ Methods (count = 4):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-+ Program class: com/madhackerdesigns/neverbelate/provider/c
++ Program class: com/madhackerdesigns/neverbelate/provider/b
   Superclass:    java/lang/Object
   Major version: 0x31
   Minor version: 0x0
   Access flags:  0x31
-    = public final class com.madhackerdesigns.neverbelate.provider.c extends java.lang.Object
+    = public final class com.madhackerdesigns.neverbelate.provider.b extends java.lang.Object
 
 Interfaces (count = 0):
 
@@ -51368,10 +51372,10 @@ Constant Pool (count = 43):
   - String [json]
   - String [location]
   - String [title]
-  - Class [com/madhackerdesigns/neverbelate/provider/c]
+  - Class [com/madhackerdesigns/neverbelate/provider/b]
   - Class [java/lang/Object]
   - Class [java/lang/String]
-  - Fieldref [com/madhackerdesigns/neverbelate/provider/c.a [Ljava/lang/String;]
+  - Fieldref [com/madhackerdesigns/neverbelate/provider/b.a [Ljava/lang/String;]
   - Methodref [java/lang/Object.<init> ()V]
   + NameAndType [<init> ()V]
   + NameAndType [a [Ljava/lang/String;]
@@ -51384,7 +51388,7 @@ Constant Pool (count = 43):
   + Utf8 [a]
   + Utf8 [begin]
   + Utf8 [calendar_color]
-  + Utf8 [com/madhackerdesigns/neverbelate/provider/c]
+  + Utf8 [com/madhackerdesigns/neverbelate/provider/b]
   + Utf8 [copyrights]
   + Utf8 [description]
   + Utf8 [dismissed]
@@ -51478,13 +51482,13 @@ Methods (count = 2):
         - String [dismissed]
       [76] aastore
       [77] putstatic #17
-        - Fieldref [com/madhackerdesigns/neverbelate/provider/c.a [Ljava/lang/String;]
+        - Fieldref [com/madhackerdesigns/neverbelate/provider/b.a [Ljava/lang/String;]
       [80] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   - Method:       <init>()V
     Access flags: 0x1
-      = public c()
+      = public b()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
@@ -54940,12 +54944,12 @@ Methods (count = 3):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-+ Program class: com/madhackerdesigns/neverbelate/provider/d
++ Program class: com/madhackerdesigns/neverbelate/provider/c
   Superclass:    android/database/sqlite/SQLiteOpenHelper
   Major version: 0x31
   Minor version: 0x0
   Access flags:  0x30
-    = final class com.madhackerdesigns.neverbelate.provider.d extends android.database.sqlite.SQLiteOpenHelper
+    = final class com.madhackerdesigns.neverbelate.provider.c extends android.database.sqlite.SQLiteOpenHelper
 
 Interfaces (count = 0):
 
@@ -54962,12 +54966,12 @@ Constant Pool (count = 62):
   - Class [android/database/sqlite/SQLiteOpenHelper]
   - Class [android/util/Log]
   - Class [com/madhackerdesigns/neverbelate/provider/AlertsProvider]
-  - Class [com/madhackerdesigns/neverbelate/provider/d]
+  - Class [com/madhackerdesigns/neverbelate/provider/c]
   - Class [java/lang/StringBuilder]
   - Methodref [android/database/sqlite/SQLiteDatabase.execSQL (Ljava/lang/String;)V]
   - Methodref [android/database/sqlite/SQLiteOpenHelper.<init> (Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V]
   - Methodref [android/util/Log.w (Ljava/lang/String;Ljava/lang/String;)I]
-  - Methodref [com/madhackerdesigns/neverbelate/provider/d.onCreate (Landroid/database/sqlite/SQLiteDatabase;)V]
+  - Methodref [com/madhackerdesigns/neverbelate/provider/c.onCreate (Landroid/database/sqlite/SQLiteDatabase;)V]
   - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
   - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
   - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
@@ -55004,7 +55008,7 @@ Constant Pool (count = 62):
   + Utf8 [android/util/Log]
   + Utf8 [append]
   + Utf8 [com/madhackerdesigns/neverbelate/provider/AlertsProvider]
-  + Utf8 [com/madhackerdesigns/neverbelate/provider/d]
+  + Utf8 [com/madhackerdesigns/neverbelate/provider/c]
   + Utf8 [execSQL]
   + Utf8 [java/lang/StringBuilder]
   + Utf8 [onCreate]
@@ -55017,7 +55021,7 @@ Fields (count = 0):
 Methods (count = 3):
   - Method:       <init>(Landroid/content/Context;)V
     Access flags: 0x0
-      = d(android.content.Context)
+      = c(android.content.Context)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 10, locals = 2, stack = 5):
       [0] aload_0 v0
@@ -55085,7 +55089,7 @@ Methods (count = 3):
       [42] aload_0 v0
       [43] aload_1 v1
       [44] invokevirtual #18
-        - Methodref [com/madhackerdesigns/neverbelate/provider/d.onCreate (Landroid/database/sqlite/SQLiteDatabase;)V]
+        - Methodref [com/madhackerdesigns/neverbelate/provider/c.onCreate (Landroid/database/sqlite/SQLiteDatabase;)V]
       [47] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -55973,7 +55977,7 @@ _____________________________________________________________________
 Interfaces (count = 0):
 
 Constant Pool (count = 65):
-  - Integer [2130903046]
+  - Integer [2130903047]
   - Integer [2131165217]
   - Integer [2131165218]
   - Integer [2131165219]
@@ -56066,7 +56070,7 @@ Methods (count = 3):
         - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
       [5] aload_0 v0
       [6] ldc #1
-        - Integer [2130903046]
+        - Integer [2130903047]
       [8] invokevirtual #22
         - Methodref [com/madhackerdesigns/neverbelate/ui/TestActivity.setContentView (I)V]
       [11] aload_0 v0
@@ -60813,10 +60817,10 @@ Constant Pool (count = 752):
   - Integer [134217728]
   - Integer [268435456]
   - Integer [2130837518]
-  - Integer [2131099675]
-  - Integer [2131099693]
+  - Integer [2131099676]
   - Integer [2131099694]
-  - Integer [2131099696]
+  - Integer [2131099695]
+  - Integer [2131099697]
   - Float [1.25]
   - String []
   - String [ ]
@@ -60919,9 +60923,9 @@ Constant Pool (count = 752):
   - Class [android/os/PowerManager]
   - Class [android/os/PowerManager$WakeLock]
   - Class [android/util/Log]
+  - Class [com/madhackerdesigns/neverbelate/provider/AlertsContract]
   - Class [com/madhackerdesigns/neverbelate/provider/a]
   - Class [com/madhackerdesigns/neverbelate/provider/b]
-  - Class [com/madhackerdesigns/neverbelate/provider/c]
   - Class [com/madhackerdesigns/neverbelate/service/CalendarHelper]
   - Class [com/madhackerdesigns/neverbelate/service/NeverBeLateService]
   - Class [com/madhackerdesigns/neverbelate/service/WakefulServiceReceiver]
@@ -60962,7 +60966,7 @@ Constant Pool (count = 752):
   - Fieldref [android/app/Notification.vibrate [J]
   - Fieldref [android/os/Build$VERSION.SDK_INT I]
   - Fieldref [com/madhackerdesigns/neverbelate/provider/a.a Landroid/net/Uri;]
-  - Fieldref [com/madhackerdesigns/neverbelate/provider/c.a [Ljava/lang/String;]
+  - Fieldref [com/madhackerdesigns/neverbelate/provider/b.a [Ljava/lang/String;]
   - Fieldref [com/madhackerdesigns/neverbelate/service/CalendarHelper.a [Ljava/lang/String;]
   - Fieldref [com/madhackerdesigns/neverbelate/service/CalendarHelper.b Landroid/net/Uri;]
   - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.a [J]
@@ -61427,9 +61431,9 @@ Constant Pool (count = 752):
   + Utf8 [close]
   + Utf8 [com.madhackerdesigns.neverbelate.service.NeverBeLateService]
   + Utf8 [com.madhackerdesigns.neverbelate.task]
+  + Utf8 [com/madhackerdesigns/neverbelate/provider/AlertsContract]
   + Utf8 [com/madhackerdesigns/neverbelate/provider/a]
   + Utf8 [com/madhackerdesigns/neverbelate/provider/b]
-  + Utf8 [com/madhackerdesigns/neverbelate/provider/c]
   + Utf8 [com/madhackerdesigns/neverbelate/service/CalendarHelper]
   + Utf8 [com/madhackerdesigns/neverbelate/service/NeverBeLateService]
   + Utf8 [com/madhackerdesigns/neverbelate/service/WakefulServiceReceiver]
@@ -62306,7 +62310,7 @@ Methods (count = 14):
       [466] getstatic #160
         - Fieldref [com/madhackerdesigns/neverbelate/provider/a.a Landroid/net/Uri;]
       [469] getstatic #161
-        - Fieldref [com/madhackerdesigns/neverbelate/provider/c.a [Ljava/lang/String;]
+        - Fieldref [com/madhackerdesigns/neverbelate/provider/b.a [Ljava/lang/String;]
       [472] aload v4
       [474] aload v10
       [476] aconst_null
@@ -62362,7 +62366,7 @@ Methods (count = 14):
       [563] invokevirtual #244
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.getResources ()Landroid/content/res/Resources;]
       [566] ldc #4
-        - Integer [2131099675]
+        - Integer [2131099676]
       [568] invokevirtual #208
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [571] astore v6
@@ -63099,7 +63103,7 @@ Methods (count = 14):
         - Fieldref [com/madhackerdesigns/neverbelate/provider/a.a Landroid/net/Uri;]
       [24] astore_3 v3
       [25] getstatic #161
-        - Fieldref [com/madhackerdesigns/neverbelate/provider/c.a [Ljava/lang/String;]
+        - Fieldref [com/madhackerdesigns/neverbelate/provider/b.a [Ljava/lang/String;]
       [28] astore v4
       [30] ldc #68
         - String [fired=? AND dismissed=?]
@@ -63154,7 +63158,7 @@ Methods (count = 14):
       [106] dup
       [107] astore_3 v3
       [108] ldc #7
-        - Integer [2131099696]
+        - Integer [2131099697]
       [110] invokevirtual #208
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [113] astore v6
@@ -63173,7 +63177,7 @@ Methods (count = 14):
       [133] astore v6
       [135] aload_3 v3
       [136] ldc #5
-        - Integer [2131099693]
+        - Integer [2131099694]
       [138] invokevirtual #208
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [141] astore v7
@@ -63235,7 +63239,7 @@ Methods (count = 14):
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [226] aload_3 v3
       [227] ldc #6
-        - Integer [2131099694]
+        - Integer [2131099695]
       [229] invokevirtual #208
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [232] invokevirtual #278

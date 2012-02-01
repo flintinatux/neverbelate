@@ -3,28 +3,25 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:ads="http://schemas.android.com/apk/res/com.madhackerdesigns.neverbelate"
 	android:isScrollContainer="true"
-	android:layout_width="fill_parent"
+	android:layout_gravity="center_horizontal"
+	android:layout_width="wrap_content"
 	android:layout_height="fill_parent"
-	android:orientation="vertical" >
+	android:orientation="horizontal" >
 
 	<include 
 	    layout="@layout/launcher_logo_enable"  
 	    android:layout_width="wrap_content" 
 	    android:layout_height="wrap_content" 
-	    android:layout_gravity="center_horizontal" />
+	    android:layout_gravity="center_vertical"
+	    android:layout_marginLeft="5dip"
+	    android:layout_marginRight="5dip" />
 	
 	<include 
 	    layout="@layout/launcher_buttons"  
 	    android:layout_width="wrap_content" 
 	    android:layout_height="wrap_content" 
-	    android:layout_gravity="center_horizontal" />
-	
-	<com.google.ads.AdView
-		android:id="@+id/ad_view"
-		android:layout_gravity="center|bottom"
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		ads:adUnitId="a14d952e8939105"
-        ads:adSize="BANNER"   />
+	    android:layout_gravity="center_vertical"
+	    android:layout_marginLeft="5dip"
+	    android:layout_marginRight="5dip" />
   
 </LinearLayout>

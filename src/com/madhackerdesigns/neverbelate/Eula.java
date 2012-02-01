@@ -104,9 +104,9 @@ public class Eula {
         preferences.edit().putBoolean(PREFERENCE_EULA_ACCEPTED, true).commit();
     }
 
-    private static void refuse(Activity activity) {
-        activity.finish();
-    }
+//    private static void refuse(Activity activity) {
+//        activity.finish();
+//    }
 
     // TODO: Create ASSET_EULA file with TOS and EULA.
 //    private static CharSequence readEula(Activity activity) {

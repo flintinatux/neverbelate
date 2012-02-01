@@ -114,6 +114,7 @@ com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: void startProgress
 com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: void cancelProgressDialog()
 com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: java.lang.String getBasePath()
 com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: void asyncHttpRequest(java.lang.String,boolean,java.lang.String)
+com.madhackerdesigns.neverbelate.provider.AlertsContract
 com.madhackerdesigns.neverbelate.service.CalendarHelper
 com.madhackerdesigns.neverbelate.ui.MapOverlay
 com.madhackerdesigns.neverbelate.ui.UserLocationOverlay
