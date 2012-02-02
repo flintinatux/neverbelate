@@ -506,13 +506,30 @@ com.madhackerdesigns.neverbelate.util.Logger:
 com.pontiflex.mobile.webview.models.ResourceData:
     private static final java.lang.String defaultFileName
     34:35:public void removeResourceData(java.lang.String)
-com.pontiflex.mobile.webview.sdk.AdManager:
-    public static final int DefaultAdRefreshIntervalMs
+com.pontiflex.mobile.webview.sdk.AdConfig:
     public static final int DefaultRegistrationInterval
     public static final boolean DefaultRegistrationRequired
-    public static final boolean DefaultShowingMultiAdView
+    public static final boolean DefaultShowAdAfterRegistration
     public static final boolean DefaultAllowReadDeviceData
     public static final java.lang.String DefautlDefaultLocale
+    public static final boolean DefaultWithRegistration
+    public static final boolean DefaultWithSingleOffer
+    public static final boolean DefaultShowOnFirstLaunch
+    50:50:public static com.pontiflex.mobile.webview.sdk.IAdConfig createInstance()
+    94:95:public void setAllowReadDeviceData(boolean)
+    105:114:public void setDefaultLocale(java.lang.String)
+    119:128:private java.util.Locale parseLocale(java.lang.String)
+    134:145:private boolean isValid(java.util.Locale)
+    151:151:public java.lang.String getThemeName()
+    156:157:public void setThemeName(java.lang.String)
+    161:161:public java.util.List getStyles()
+    166:167:public void setStyles(java.util.List)
+    176:177:public void setRegistrationRequired(boolean)
+    186:187:public void setShowAdAferRegistration(boolean)
+    208:209:public boolean addStyle(java.util.Map)
+com.pontiflex.mobile.webview.sdk.AdConfigFactory
+com.pontiflex.mobile.webview.sdk.AdManager:
+    public static final int DefaultAdRefreshIntervalMs
     public static final java.lang.String LeadPostUrlStringKey
     private static final java.lang.String AppInfoPflxAdUrl
     private static final java.lang.String AppInfoPid
@@ -521,39 +538,51 @@ com.pontiflex.mobile.webview.sdk.AdManager:
     private static final java.lang.String JsonPath
     private static final java.lang.String DefaultAppInfoName
     private static final java.lang.String KeystoreFilename
-    121:128:public static com.pontiflex.mobile.webview.sdk.IAdManager createInstance(android.app.Application,java.lang.String)
-    132:144:protected static com.pontiflex.mobile.webview.sdk.IAdManager createInstance(android.app.Application,com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment,boolean)
-    286:286:public com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode getRegistrationMode()
-    303:312:public void setRegistrationInterval(int)
-    315:318:public int getRegistrationInterval()
-    338:364:public boolean setRegistrationData(java.util.Map)
-    426:427:public void startRegistrationActivity()
-    498:498:public com.pontiflex.mobile.webview.utilities.PackageHelper getPkgHelper()
-    529:529:public boolean isOffline()
-    533:533:public int getRefreshIntervalMillis()
-    569:571:public java.lang.String getAdHostString()
-    575:575:public java.lang.String getAdUrl()
-    579:592:public java.lang.String getAdUrl(int)
-    602:602:public java.util.Iterator getRegistrationKeysIterator()
-    633:634:public void setEnvironment(com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment)
-    637:637:public com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment getEnvironment()
-    641:641:public static java.lang.String getKeystoreFilename()
-    645:645:public static java.lang.String getDefaultAppInfoName()
-    649:649:public com.pontiflex.mobile.webview.utilities.VersionHelper getVersionHelper()
-    662:662:public java.lang.String getSdkVersionCode()
-    667:667:public java.lang.String getSdkVersionName()
-    675:675:public boolean showAd()
-    683:683:public boolean showAd(int)
-    691:691:public boolean showAd(boolean)
-    699:699:public boolean showAd(int,boolean,boolean)
-    707:707:public boolean showAd(android.app.Activity)
-    715:715:public boolean showAd(int,android.app.Activity)
-    723:723:public boolean showAd(boolean,android.app.Activity)
-    732:752:public boolean showAd(int,boolean,boolean,android.app.Activity)
+    99:106:public static com.pontiflex.mobile.webview.sdk.IAdManager createInstance(android.app.Application,java.lang.String)
+    110:122:protected static com.pontiflex.mobile.webview.sdk.IAdManager createInstance(android.app.Application,com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment,boolean)
+    177:179:public void setAllowReadDeviceData(boolean)
+    186:188:public void setDefaultLocale(java.lang.String)
+    191:192:public void setRegistrationMode(com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode)
+    195:208:public void setRegistrationMode(com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode,android.app.Activity)
+    211:211:public com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode getRegistrationMode()
+    215:217:public void setRegistrationRequired(boolean)
+    224:229:public void setRegistrationInterval(int)
+    232:232:public int getRegistrationInterval()
+    236:238:public void setShowingMultiAdView(boolean)
+    248:274:public boolean setRegistrationData(java.util.Map)
+    281:308:public boolean setRegistrationData(java.lang.String,java.lang.String)
+    336:337:public void startRegistrationActivity()
+    340:341:public void startMultiOfferActivity()
+    441:441:public com.pontiflex.mobile.webview.utilities.PackageHelper getPkgHelper()
+    472:472:public boolean isOffline()
+    476:476:public int getRefreshIntervalMillis()
+    514:516:public java.lang.String getAdHostString()
+    520:520:public java.lang.String getAdUrl()
+    524:537:public java.lang.String getAdUrl(int)
+    547:547:public java.util.Iterator getRegistrationKeysIterator()
+    578:579:public void setEnvironment(com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment)
+    582:582:public com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment getEnvironment()
+    586:586:public static java.lang.String getKeystoreFilename()
+    590:590:public static java.lang.String getDefaultAppInfoName()
+    594:594:public com.pontiflex.mobile.webview.utilities.VersionHelper getVersionHelper()
+    610:610:public java.lang.String getSdkVersionCode()
+    618:618:public java.lang.String getSdkVersionName()
+    638:643:public void showAd(android.app.Activity)
+    711:712:public void setAdConfig(com.pontiflex.mobile.webview.sdk.IAdConfig)
+    719:735:public void setAdConfig(com.pontiflex.mobile.webview.sdk.IAdConfig,android.app.Activity)
 com.pontiflex.mobile.webview.sdk.AdManagerFactory:
     13:13:public static com.pontiflex.mobile.webview.sdk.IAdManager createInstance(android.app.Application,com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment)
+com.pontiflex.mobile.webview.sdk.IAdConfig:
+    public abstract void setAllowReadDeviceData(boolean)
+    public abstract void setDefaultLocale(java.lang.String)
+    public abstract java.lang.String getThemeName()
+    public abstract void setThemeName(java.lang.String)
+    public abstract boolean addStyle(java.util.Map)
+    public abstract void setRegistrationRequired(boolean)
+    public abstract void setShowAdAferRegistration(boolean)
 com.pontiflex.mobile.webview.sdk.IAdManager:
     public static final int SHOW_AD_REQUEST
+    public abstract void setRegistrationMode(com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode)
     public abstract com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode getRegistrationMode()
     public abstract void setRegistrationMode(com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode,android.app.Activity)
     public abstract void setRegistrationRequired(boolean)
@@ -563,37 +592,39 @@ com.pontiflex.mobile.webview.sdk.IAdManager:
     public abstract void setShowingMultiAdView(boolean)
     public abstract boolean isShowingMultiAdView()
     public abstract boolean setRegistrationData(java.util.Map)
+    public abstract boolean setRegistrationData(java.lang.String,java.lang.String)
     public abstract void startRegistrationActivity()
-    public abstract boolean showAd()
-    public abstract boolean showAd(int)
-    public abstract boolean showAd(boolean)
-    public abstract boolean showAd(int,boolean,boolean)
-    public abstract boolean showAd(android.app.Activity)
-    public abstract boolean showAd(int,android.app.Activity)
-    public abstract boolean showAd(boolean,android.app.Activity)
-    public abstract boolean showAd(int,boolean,boolean,android.app.Activity)
-    public abstract java.lang.String getSdkVersionCode()
-    public abstract java.lang.String getSdkVersionName()
+    public abstract void startMultiOfferActivity()
+    public abstract void startRegistrationActivity(android.app.Activity)
+    public abstract void startMultiOfferActivity(android.app.Activity)
+    public abstract void showAd(android.app.Activity)
+    public abstract void showAd(com.pontiflex.mobile.webview.sdk.IAdConfig,android.app.Activity)
     public abstract boolean isInitialized()
     public abstract void setAllowReadDeviceData(boolean)
     public abstract void setDefaultLocale(java.lang.String)
+    public abstract void setAdConfig(com.pontiflex.mobile.webview.sdk.IAdConfig)
+    public abstract void setAdConfig(com.pontiflex.mobile.webview.sdk.IAdConfig,android.app.Activity)
+    public abstract java.lang.String getSdkVersionCode()
+    public abstract java.lang.String getSdkVersionName()
 com.pontiflex.mobile.webview.sdk.activities.BaseActivity:
     private static final long PROGRESS_DIALOG_TIMEOUT_MILLIS
     private static final java.lang.String StateKeystoreFilename
     private static final java.lang.String AdditionalDataStorageFileName
-    131:134:protected void setProgressDialogProgress(int)
-    187:189:public void clearAdditionalData(java.lang.String)
+    135:138:protected void setProgressDialogProgress(int)
+    191:193:public void clearAdditionalData(java.lang.String)
 com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity:
-    61:63:private void startRegistrationAfterLaunchCount(int)
-    67:68:private void startRegistrationAtLaunch()
-    112:112:public com.pontiflex.mobile.webview.sdk.IAdManager getAdManager()
+    79:82:private void setRegistrationAdHoc()
+    86:91:private void showRegistrationAfterLaunchCount(int)
+    95:99:private void showRegistrationAtLaunch()
+    103:108:private void showAdAfterLaunchCount(int)
+    112:116:private void showAdAtLaunch()
+    120:127:private void prefillRegistrationData()
 com.pontiflex.mobile.webview.utilities.AppInfo:
     private static final java.lang.String AppInfoFileName
     117:121:public java.lang.String getSubSourceId()
     126:130:public java.lang.Integer getPid()
     134:138:public int getFieldCount()
     153:160:public java.lang.String getOfferString(java.lang.String)
-    174:180:public org.json.JSONObject getRegistrationOffer()
     184:191:public java.lang.String getDisplayNameForFieldNamed(java.lang.String)
     211:229:public org.json.JSONObject findOrderedField(int)
     235:253:public java.lang.String getNameOfOrderedField(int)
@@ -610,10 +641,10 @@ com.pontiflex.mobile.webview.utilities.HtmlPageRegistry:
     130:130:public java.lang.String getMultiOfferHtml(android.app.Activity,boolean)
     143:143:public java.lang.String getPrivacyHtml(android.app.Activity,boolean)
     156:156:public java.lang.String getPrivacyListHtml(android.app.Activity,boolean)
-    196:196:public java.lang.String getPrivacyHtmlPath(android.app.Activity,boolean)
-    210:210:public java.lang.String getPrivacyListHtmlPath(android.app.Activity,boolean)
-    215:223:protected java.lang.String getHtml(android.app.Activity,boolean,com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page)
-    452:455:protected void clearRegistry()
+    210:210:public java.lang.String getPrivacyHtmlPath(android.app.Activity,boolean)
+    224:224:public java.lang.String getPrivacyListHtmlPath(android.app.Activity,boolean)
+    229:237:protected java.lang.String getHtml(android.app.Activity,boolean,com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page)
+    466:469:protected void clearRegistry()
 com.pontiflex.mobile.webview.utilities.PackageHelper:
     private static final int BUFFERED_READER_SIZE
     private static final java.lang.String PontiflexSdkVersionBasename

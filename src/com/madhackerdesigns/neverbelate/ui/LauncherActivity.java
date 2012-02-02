@@ -41,7 +41,6 @@ public class LauncherActivity extends Activity {
 	private static final boolean ADMOB_TEST = false;
 	private static final int DLG_COMING_SOON = 0;
 	private static final int RESULT_TOS = 0;
-//	private static final int LAUNCH_INTERVAL = 0;
 	private static final String LOG_TAG = "NeverBeLateService";
 
 	// Private fields
@@ -61,15 +60,12 @@ public class LauncherActivity extends Activity {
 		// TODO: Present registration letter if first use.
 		// (Letter dialog will start registration activity.)
 				
-		// Show registration if time
-		IAdManager adManager = AdManagerFactory.createInstance(getApplication());
-		if (! adManager.hasValidRegistrationData()) {
-			adManager.startRegistrationActivity(this);
+		// Show Pontiflex ad *on launch* each time?
+		if (getIntent().hasCategory(Intent.CATEGORY_LAUNCHER)) {
+			IAdManager adManager = AdManagerFactory.createInstance(getApplication());
+			adManager.showAd();
 		}
-//		adManager.setRegistrationMode(IAdManager.RegistrationMode.RegistrationAtLaunch, this);
-//		adManager.setRegistrationInterval(LAUNCH_INTERVAL);
-//		adManager.setRegistrationMode(IAdManager.RegistrationMode.RegistrationAfterIntervalInLaunches);
-		
+
 		// Set content view to launcher layout and load application resources
 		setContentView(R.layout.launcher);
 		

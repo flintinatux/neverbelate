@@ -3,8 +3,10 @@
  */
 package com.madhackerdesigns.neverbelate.ui;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 import org.json.JSONException;
@@ -74,8 +76,9 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	private PreferenceHelper mPrefs;
 	
 	// other fields
-	private Cursor mCursor;
+//	private Cursor mCursor;
 	private AlertQueryHandler mHandler;
+	private ArrayList<EventHolder> mEventHolders = new ArrayList<EventHolder>();
 	private boolean mInsistentStopped = false;
 	private ViewSwitcher mSwitcher;
 //	private boolean mTrafficViewOn = false;
@@ -179,6 +182,13 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 			switch (token) {
 			case ALERT_TOKEN:
 				if (cursor.moveToFirst()) {
+					// Store away the event information
+					EventHolder eh = new EventHolder();
+					eh.json = cursor.getString(AlertsHelper.PROJ_JSON);
+					eh.title = cursor.getString(AlertsHelper.PROJ_TITLE);
+					eh.location = cursor.getString(AlertsHelper.PROJ_LOCATION);
+					mEventHolders.add(eh);
+					
 					// Calculate the departure window.  Note that first row in cursor should be
 					// the first upcoming event instance, since it is sorted by begin time, ascending.
 					long begin = cursor.getLong(AlertsHelper.PROJ_BEGIN);
@@ -239,9 +249,6 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 				} else {
 					// TODO: Do something else safe.  This really shouldn't happen, though.
 				}
-				
-				// Store cursor for later
-				mCursor = cursor;
 			}
 			
 			// Set the "Snooze" button action
@@ -358,11 +365,15 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	 * 
 	 */
 	private void loadTrafficView() {
+		// Log a little
+		Logger.d(LOG_TAG, "Loading traffic view.");
+		
 		// Get the application context
 		Context context = getApplicationContext();
 		
 		// Get mapview and add zoom controls
 		MapView mapView = (MapView) findViewById(R.id.mapview);
+		if (mapView != null) { Logger.d(LOG_TAG, "MapView loaded."); }
 		mapView.setBuiltInZoomControls(true);		
 		
 		// Turn on the traffic (as early as possible)
@@ -385,14 +396,15 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		MapOverlay redOverlay = new MapOverlay(context, redDrawable);
 
 		// Parse the json directions data
-		Cursor cursor = mCursor;
 		MapBounds bounds = new MapBounds();
-		cursor.moveToFirst();
+		final Iterator<EventHolder> eventIterator = mEventHolders.iterator();
 		do {
 			try {
+				// Get the next EventHolder
+				EventHolder eh = eventIterator.next();
+				
 				// Get the zoom span and zoom center from the route
-				String json = cursor.getString(AlertsHelper.PROJ_JSON);
-				JSONObject directions = new JSONObject(json);
+				JSONObject directions = new JSONObject(eh.json);
 				JSONObject route = directions.getJSONArray("routes").getJSONObject(0);
 
 				// Get the destination coordinates from the leg
@@ -402,9 +414,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 				
 				// Create a GeoPoint for the destination and push onto MapOverlay
 				GeoPoint destPoint = new GeoPoint(latDestE6, lonDestE6);
-				String title = cursor.getString(AlertsHelper.PROJ_TITLE);
-				String location = cursor.getString(AlertsHelper.PROJ_LOCATION);
-				OverlayItem destinationItem = new OverlayItem(destPoint, title, location);
+				OverlayItem destinationItem = new OverlayItem(destPoint, eh.title, eh.location);
 				redOverlay.addOverlay(destinationItem);
 				
 				// Compare latitude and longitude to other points
@@ -414,7 +424,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 				e.printStackTrace();
 				throw new RuntimeException(e);
 			}
-		} while (cursor.moveToNext());
+		} while (eventIterator.hasNext());
 		
 		// Compare user location to the destination points as well
 		GeoPoint userLoc = mUserLocationOverlay.getMyLocation();
@@ -443,7 +453,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		if (adHelper.isTimeToShowAd()) {
 			adHelper.setAdShown(true);
 			mAdJustShown = true;
-			mAdManager.startMultiOfferActivity();
+			mAdManager.showAd();
 		} else {
 			// Otherwise, switch to the traffic view
 			switchToTrafficView();
@@ -530,6 +540,12 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	protected boolean isRouteDisplayed() {
 		// No route will be displayed, since that would cover up the traffic
 		return false;
+	}
+	
+	private class EventHolder {
+		String json;
+		String title;
+		String location;
 	}
 
 }

@@ -336,7 +336,7 @@ com.google.gson.aq -> com.google.a.ao:
     boolean b(java.lang.reflect.Type) -> b
     int b(java.lang.Class) -> b
     java.lang.String toString() -> toString
-com.google.gson.ar -> com.google.a.ar:
+com.google.gson.ar -> com.google.a.aq:
     java.lang.reflect.Type a -> a
     java.lang.reflect.Type[] b -> b
     java.lang.reflect.Type c -> c
@@ -466,7 +466,7 @@ com.google.gson.f$h -> com.google.a.ap:
     java.text.DateFormat a -> a
     com.google.gson.JsonElement a(java.sql.Date) -> a
     com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
-com.google.gson.f$i -> com.google.a.aq:
+com.google.gson.f$i -> com.google.a.ar:
     java.text.DateFormat a -> a
     com.google.gson.JsonElement a(java.sql.Time) -> a
     com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type,com.google.gson.JsonSerializationContext) -> a
@@ -692,13 +692,13 @@ com.madhackerdesigns.neverbelate.settings.WebsitePreference -> com.madhackerdesi
     android.net.Uri WESBITE_URI -> a
     android.content.Context mContext -> b
     void onClick() -> onClick
-com.madhackerdesigns.neverbelate.ui.EventListAdapter -> com.madhackerdesigns.neverbelate.ui.f:
+com.madhackerdesigns.neverbelate.ui.EventListAdapter -> com.madhackerdesigns.neverbelate.ui.g:
     android.content.Context mContext -> a
     int mDateTimeFlags -> b
     java.lang.String mMinutesAway -> c
     void bindView(android.view.View,android.content.Context,android.database.Cursor) -> bindView
     android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
-com.madhackerdesigns.neverbelate.ui.EventListAdapter$ViewHolder -> com.madhackerdesigns.neverbelate.ui.m:
+com.madhackerdesigns.neverbelate.ui.EventListAdapter$ViewHolder -> com.madhackerdesigns.neverbelate.ui.n:
     android.view.View stripe -> a
     android.widget.TextView title -> b
     android.widget.TextView when -> c
@@ -713,22 +713,22 @@ com.madhackerdesigns.neverbelate.ui.LauncherActivity -> com.madhackerdesigns.nev
     void onPause() -> onPause
     void onResume() -> onResume
     com.madhackerdesigns.neverbelate.settings.PreferenceHelper access$0(com.madhackerdesigns.neverbelate.ui.LauncherActivity) -> a
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$1 -> com.madhackerdesigns.neverbelate.ui.g:
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$1 -> com.madhackerdesigns.neverbelate.ui.h:
     com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$2 -> com.madhackerdesigns.neverbelate.ui.k:
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$2 -> com.madhackerdesigns.neverbelate.ui.l:
     com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$3 -> com.madhackerdesigns.neverbelate.ui.j:
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$3 -> com.madhackerdesigns.neverbelate.ui.k:
     com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$4 -> com.madhackerdesigns.neverbelate.ui.i:
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$4 -> com.madhackerdesigns.neverbelate.ui.j:
     com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$5 -> com.madhackerdesigns.neverbelate.ui.h:
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$5 -> com.madhackerdesigns.neverbelate.ui.i:
     com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
     boolean onLongClick(android.view.View) -> onLongClick
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$6 -> com.madhackerdesigns.neverbelate.ui.l:
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$6 -> com.madhackerdesigns.neverbelate.ui.m:
     com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
 com.madhackerdesigns.neverbelate.ui.MapOverlay -> com.madhackerdesigns.neverbelate.ui.MapOverlay:
@@ -775,47 +775,47 @@ com.madhackerdesigns.neverbelate.ui.RegistrationForm -> com.madhackerdesigns.nev
     void access$4(com.madhackerdesigns.neverbelate.ui.RegistrationForm) -> b
     void access$5(com.madhackerdesigns.neverbelate.ui.RegistrationForm,java.lang.String) -> a
     void access$6(com.madhackerdesigns.neverbelate.ui.RegistrationForm) -> c
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$1 -> com.madhackerdesigns.neverbelate.ui.w:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$1 -> com.madhackerdesigns.neverbelate.ui.x:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$2 -> com.madhackerdesigns.neverbelate.ui.y:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$2 -> com.madhackerdesigns.neverbelate.ui.z:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onDateSet(android.widget.DatePicker,int,int,int) -> onDateSet
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$3 -> com.madhackerdesigns.neverbelate.ui.x:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$3 -> com.madhackerdesigns.neverbelate.ui.y:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$4 -> com.madhackerdesigns.neverbelate.ui.aa:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$4 -> com.madhackerdesigns.neverbelate.ui.ab:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$5 -> com.madhackerdesigns.neverbelate.ui.z:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$5 -> com.madhackerdesigns.neverbelate.ui.aa:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$6 -> com.madhackerdesigns.neverbelate.ui.ac:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$6 -> com.madhackerdesigns.neverbelate.ui.ad:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$7 -> com.madhackerdesigns.neverbelate.ui.ab:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$7 -> com.madhackerdesigns.neverbelate.ui.ac:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$8 -> com.madhackerdesigns.neverbelate.ui.v:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$8 -> com.madhackerdesigns.neverbelate.ui.w:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$9 -> com.madhackerdesigns.neverbelate.ui.u:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$9 -> com.madhackerdesigns.neverbelate.ui.v:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
 com.madhackerdesigns.neverbelate.ui.TestActivity -> com.madhackerdesigns.neverbelate.ui.TestActivity:
     com.madhackerdesigns.neverbelate.util.AdHelper mAdHelper -> a
     void onCreate(android.os.Bundle) -> onCreate
     com.madhackerdesigns.neverbelate.util.AdHelper access$0(com.madhackerdesigns.neverbelate.ui.TestActivity) -> a
-com.madhackerdesigns.neverbelate.ui.TestActivity$1 -> com.madhackerdesigns.neverbelate.ui.r:
+com.madhackerdesigns.neverbelate.ui.TestActivity$1 -> com.madhackerdesigns.neverbelate.ui.s:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$2 -> com.madhackerdesigns.neverbelate.ui.p:
+com.madhackerdesigns.neverbelate.ui.TestActivity$2 -> com.madhackerdesigns.neverbelate.ui.q:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$3 -> com.madhackerdesigns.neverbelate.ui.q:
+com.madhackerdesigns.neverbelate.ui.TestActivity$3 -> com.madhackerdesigns.neverbelate.ui.r:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$4 -> com.madhackerdesigns.neverbelate.ui.s:
+com.madhackerdesigns.neverbelate.ui.TestActivity$4 -> com.madhackerdesigns.neverbelate.ui.t:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
 com.madhackerdesigns.neverbelate.ui.UserLocationOverlay -> com.madhackerdesigns.neverbelate.ui.UserLocationOverlay:
@@ -826,8 +826,8 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverb
     com.pontiflex.mobile.webview.sdk.IAdManager mAdManager -> b
     boolean mAdJustShown -> c
     com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> d
-    android.database.Cursor mCursor -> e
-    com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler mHandler -> f
+    com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler mHandler -> e
+    java.util.ArrayList mEventHolders -> f
     boolean mInsistentStopped -> g
     android.widget.ViewSwitcher mSwitcher -> h
     com.google.android.maps.MyLocationOverlay mUserLocationOverlay -> i
@@ -836,34 +836,39 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverb
     void onPause() -> onPause
     void onResume() -> onResume
     boolean isRouteDisplayed() -> isRouteDisplayed
-    void access$0(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> a
-    void access$1(com.madhackerdesigns.neverbelate.ui.WarningDialog,android.database.Cursor) -> a
-    void access$2(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> b
-    void access$3(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> c
-    void access$4(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> d
-    void access$5(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> e
-com.madhackerdesigns.neverbelate.ui.WarningDialog$1 -> com.madhackerdesigns.neverbelate.ui.n:
+    java.util.ArrayList access$0(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> a
+    void access$1(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> b
+    void access$2(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> c
+    void access$3(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> d
+    void access$4(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> e
+    void access$5(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> f
+com.madhackerdesigns.neverbelate.ui.WarningDialog$1 -> com.madhackerdesigns.neverbelate.ui.o:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$2 -> com.madhackerdesigns.neverbelate.ui.o:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$2 -> com.madhackerdesigns.neverbelate.ui.p:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler -> com.madhackerdesigns.neverbelate.ui.a:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler -> com.madhackerdesigns.neverbelate.ui.b:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onQueryComplete(int,java.lang.Object,android.database.Cursor) -> onQueryComplete
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$1 -> com.madhackerdesigns.neverbelate.ui.e:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$1 -> com.madhackerdesigns.neverbelate.ui.f:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$2 -> com.madhackerdesigns.neverbelate.ui.d:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$2 -> com.madhackerdesigns.neverbelate.ui.e:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$3 -> com.madhackerdesigns.neverbelate.ui.c:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$3 -> com.madhackerdesigns.neverbelate.ui.d:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$4 -> com.madhackerdesigns.neverbelate.ui.b:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$4 -> com.madhackerdesigns.neverbelate.ui.c:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$MapBounds -> com.madhackerdesigns.neverbelate.ui.t:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$EventHolder -> com.madhackerdesigns.neverbelate.ui.a:
+    java.lang.String json -> a
+    java.lang.String title -> b
+    java.lang.String location -> c
+    com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> d
+com.madhackerdesigns.neverbelate.ui.WarningDialog$MapBounds -> com.madhackerdesigns.neverbelate.ui.u:
     int mLatMinE6 -> a
     int mLatMaxE6 -> b
     int mLonMinE6 -> c
@@ -886,62 +891,85 @@ com.madhackerdesigns.neverbelate.util.NetUtils -> com.madhackerdesigns.neverbela
     java.io.InputStream OpenHttpConnection(java.lang.String) -> b
     java.lang.String DownloadText(java.lang.String) -> a
 com.pontiflex.mobile.webview.models.ResourceData -> com.pontiflex.mobile.webview.models.ResourceData:
+com.pontiflex.mobile.webview.sdk.AdConfig -> com.pontiflex.mobile.webview.sdk.d:
+    com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode DefaultRegistrationMode -> a
+    int launchInterval -> b
+    boolean withRegistration -> c
+    boolean withSingleOffer -> d
+    boolean showOnFirstLaunch -> e
+    boolean allowReadDeviceData -> f
+    java.lang.String defaultLocale -> g
+    boolean registrationRequired -> h
+    boolean showAdAfterRegistration -> i
+    com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode registrationMode -> j
+    java.lang.String themeName -> k
+    java.util.List styles -> l
+    int getLaunchInterval() -> a
+    void setLaunchInterval$13462e() -> b
+    boolean isWithRegistration() -> c
+    void setWithRegistration(boolean) -> a
+    boolean isShowOnFirstLaunch() -> d
+    void setShowOnFirstLaunch$1385ff() -> e
+    boolean isAllowReadDeviceData() -> f
+    java.lang.String getDefaultLocale() -> g
+    boolean isRegistrationRequired() -> h
+    boolean isShowAdAfterRegistration() -> i
+    com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode getRegistrationMode() -> j
+    void setRegistrationMode(com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode) -> a
+    boolean isWithSingleOffer() -> k
+    void setWithSingleOffer(boolean) -> b
+    void setFromSharedPreferences(android.content.SharedPreferences,android.content.SharedPreferences$Editor) -> a
+    void saveToSharedPreferences(android.content.SharedPreferences$Editor) -> a
+    org.json.JSONArray getStylesJson() -> l
 com.pontiflex.mobile.webview.sdk.AdManager -> com.pontiflex.mobile.webview.sdk.b:
     com.pontiflex.mobile.webview.sdk.AdManager instance -> a
     com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment environment -> b
-    com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode DefaultRegistrationMode -> c
-    int refreshIntervalMs -> d
-    int registrationInterval -> e
-    com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode registrationMode -> f
-    boolean isRegistrationRequired -> g
-    boolean isShowingMultiAdView -> h
-    boolean allowReadDeviceData -> i
-    java.lang.String defaultLocale -> j
-    android.app.Application application -> k
-    com.pontiflex.mobile.webview.utilities.PackageHelper pkgHelper -> l
-    com.pontiflex.mobile.webview.utilities.VersionHelper versionHelper -> m
-    com.pontiflex.mobile.webview.utilities.RegistrationStorage registrationStorage -> n
-    com.pontiflex.mobile.webview.utilities.AppInfo appInfo -> o
-    boolean resourceInitializationInProgress -> p
-    boolean initialized -> q
+    int refreshIntervalMs -> c
+    com.pontiflex.mobile.webview.sdk.IAdConfig adConfig -> d
+    android.app.Application application -> e
+    com.pontiflex.mobile.webview.utilities.PackageHelper pkgHelper -> f
+    com.pontiflex.mobile.webview.utilities.VersionHelper versionHelper -> g
+    com.pontiflex.mobile.webview.utilities.RegistrationStorage registrationStorage -> h
+    com.pontiflex.mobile.webview.utilities.AppInfo appInfo -> i
+    boolean resourceInitializationInProgress -> j
+    boolean initialized -> k
     com.pontiflex.mobile.webview.sdk.IAdManager getInstance(android.app.Application) -> a
     com.pontiflex.mobile.webview.sdk.IAdManager createInstance(android.app.Application) -> b
     com.pontiflex.mobile.webview.sdk.AdManager getAdManagerInstance(android.app.Application) -> c
     boolean isAllowReadDeviceData() -> a
     java.lang.String getDefaultLocale() -> b
-    boolean isValid(java.util.Locale) -> a
-    void setRegistrationMode(com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode) -> a
     boolean isRegistrationRequired() -> c
     boolean isShowingMultiAdView() -> d
-    boolean setRegistrationData(java.lang.String,java.lang.String) -> a
     void commitStorageChanges(com.pontiflex.mobile.webview.utilities.RegistrationStorage) -> a
     java.lang.String getRegistrationData(java.lang.String) -> a
     void clearRegistrationStorage() -> e
     boolean hasValidRegistrationData() -> f
-    void startMultiOfferActivity() -> g
     void startRegistrationActivity(android.app.Activity) -> a
-    void startMultiOfferActivity(android.app.Activity) -> b
-    android.content.Context getContext() -> h
-    void launchActivityAfterMillis$70a4cbd4$63a22f9() -> m
-    int getLaunchCount() -> n
-    com.pontiflex.mobile.webview.utilities.RegistrationStorage getRegistrationStorage() -> i
-    android.content.SharedPreferences getSharedPreferences() -> o
-    android.content.SharedPreferences$Editor getSharedPreferencesEditor() -> p
-    com.pontiflex.mobile.webview.utilities.AppInfo getAppInfo() -> j
+    void startSingleOfferActivity(android.app.Activity) -> b
+    android.content.Context getContext() -> g
+    boolean isOnline() -> n
+    int getLaunchCount() -> o
+    com.pontiflex.mobile.webview.utilities.RegistrationStorage getRegistrationStorage() -> h
+    android.content.SharedPreferences getSharedPreferences() -> p
+    android.content.SharedPreferences$Editor getSharedPreferencesEditor() -> q
+    com.pontiflex.mobile.webview.utilities.AppInfo getAppInfo() -> i
     void setAppInfo(com.pontiflex.mobile.webview.utilities.AppInfo) -> a
     void setResourceInitializationInProgress(boolean) -> a
-    boolean isInitialized() -> k
-    boolean checkInitializationSuccess() -> l
+    void showAd() -> j
+    void showAd(com.pontiflex.mobile.webview.sdk.IAdConfig) -> a
+    com.pontiflex.mobile.webview.sdk.IAdConfig getAdConfig() -> k
+    boolean isInitialized() -> l
+    boolean checkInitializationSuccess() -> m
     boolean access$002$44c29966(com.pontiflex.mobile.webview.sdk.AdManager) -> a
-com.pontiflex.mobile.webview.sdk.AdManager$1 -> com.pontiflex.mobile.webview.sdk.f:
+com.pontiflex.mobile.webview.sdk.AdManager$1 -> com.pontiflex.mobile.webview.sdk.h:
     com.pontiflex.mobile.webview.sdk.AdManager this$0 -> a
     void run() -> run
-com.pontiflex.mobile.webview.sdk.AdManager$2 -> com.pontiflex.mobile.webview.sdk.e:
+com.pontiflex.mobile.webview.sdk.AdManager$2 -> com.pontiflex.mobile.webview.sdk.f:
     boolean val$isRegistration -> a
     android.app.Activity val$context -> b
     com.pontiflex.mobile.webview.sdk.AdManager this$0 -> c
     void run() -> run
-com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment -> com.pontiflex.mobile.webview.sdk.d:
+com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment -> com.pontiflex.mobile.webview.sdk.e:
     com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment DevelopmentEnvironment -> a
     com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment StagingEnvironment -> b
     com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment PreproductionEnvironment -> c
@@ -949,15 +977,30 @@ com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment -> com.pontiflex.mobi
     com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment[] $VALUES -> e
     com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment[] values() -> values
     com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment valueOf(java.lang.String) -> valueOf
-com.pontiflex.mobile.webview.sdk.IAdManager -> com.pontiflex.mobile.webview.sdk.c:
+com.pontiflex.mobile.webview.sdk.IAdConfig -> com.pontiflex.mobile.webview.sdk.g:
+    int getLaunchInterval() -> a
+    void setLaunchInterval$13462e() -> b
+    boolean isWithRegistration() -> c
+    void setWithRegistration(boolean) -> a
+    boolean isWithSingleOffer() -> k
+    void setWithSingleOffer(boolean) -> b
+    boolean isShowOnFirstLaunch() -> d
+    void setShowOnFirstLaunch$1385ff() -> e
+    boolean isAllowReadDeviceData() -> f
+    java.lang.String getDefaultLocale() -> g
+    boolean isRegistrationRequired() -> h
+    boolean isShowAdAfterRegistration() -> i
+    com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode getRegistrationMode() -> j
     void setRegistrationMode(com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode) -> a
-    boolean setRegistrationData(java.lang.String,java.lang.String) -> a
+    void saveToSharedPreferences(android.content.SharedPreferences$Editor) -> a
+    void setFromSharedPreferences(android.content.SharedPreferences,android.content.SharedPreferences$Editor) -> a
+com.pontiflex.mobile.webview.sdk.IAdManager -> com.pontiflex.mobile.webview.sdk.c:
     java.lang.String getRegistrationData(java.lang.String) -> a
     void clearRegistrationStorage() -> e
     boolean hasValidRegistrationData() -> f
-    void startMultiOfferActivity() -> g
-    void startRegistrationActivity(android.app.Activity) -> a
-    void startMultiOfferActivity(android.app.Activity) -> b
+    void showAd() -> j
+    void showAd(com.pontiflex.mobile.webview.sdk.IAdConfig) -> a
+    com.pontiflex.mobile.webview.sdk.IAdConfig getAdConfig() -> k
 com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode -> com.pontiflex.mobile.webview.sdk.a:
     com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode RegistrationAtLaunch -> a
     com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode RegistrationAfterIntervalInLaunches -> b
@@ -989,16 +1032,16 @@ com.pontiflex.mobile.webview.sdk.activities.BaseActivity -> com.pontiflex.mobile
     void onDestroy() -> onDestroy
     void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
     java.lang.String getAppInfoJsonContent() -> h
-    void setUpWebview() -> i
+    android.webkit.WebView setUpWebview() -> i
     boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
     void doUpdateResourcesCallBack(java.lang.String,boolean,java.lang.String) -> a
     java.lang.String getResourceData(java.lang.String,java.lang.String) -> a
     void setResourceData(java.lang.String,java.lang.String,java.lang.String) -> a
     java.lang.String getResourceContent(java.lang.String,boolean,java.lang.String) -> b
-com.pontiflex.mobile.webview.sdk.activities.BaseActivity$1 -> com.pontiflex.mobile.webview.sdk.activities.s:
+com.pontiflex.mobile.webview.sdk.activities.BaseActivity$1 -> com.pontiflex.mobile.webview.sdk.activities.t:
     com.pontiflex.mobile.webview.sdk.activities.BaseActivity this$0 -> a
     void run() -> run
-com.pontiflex.mobile.webview.sdk.activities.BaseActivity$2 -> com.pontiflex.mobile.webview.sdk.activities.t:
+com.pontiflex.mobile.webview.sdk.activities.BaseActivity$2 -> com.pontiflex.mobile.webview.sdk.activities.u:
     com.pontiflex.mobile.webview.sdk.activities.BaseActivity this$0 -> a
     void run() -> run
 com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity -> com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity:
@@ -1014,7 +1057,7 @@ com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface -> com.pontif
     int getScreenDensity() -> getScreenDensity
     int getScreenSize() -> getScreenSize
     java.lang.String getDeviceConfig() -> getDeviceConfig
-com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface -> com.pontiflex.mobile.webview.sdk.activities.r:
+com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface -> com.pontiflex.mobile.webview.sdk.activities.s:
     com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
     android.webkit.WebView innerWebView -> b
     void showKeyboard() -> showKeyboard
@@ -1036,13 +1079,13 @@ com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface -> com.pont
     void updateResource(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> updateResource
     void updateResourceCallback(java.lang.String,boolean,java.lang.String) -> updateResourceCallback
     com.pontiflex.mobile.webview.sdk.activities.BaseActivity access$000(com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface) -> access$000
-com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface$UpdateResourceRunnable -> com.pontiflex.mobile.webview.sdk.activities.q:
+com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface$UpdateResourceRunnable -> com.pontiflex.mobile.webview.sdk.activities.r:
     java.lang.String resourceKey -> a
     boolean updateSuccessful -> b
     java.lang.String newVersionCode -> c
     com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface this$0 -> d
     void run() -> run
-com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface -> com.pontiflex.mobile.webview.sdk.activities.p:
+com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface -> com.pontiflex.mobile.webview.sdk.activities.q:
     com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
     android.webkit.WebView innerWebView -> b
     boolean hasValidRegistrationData() -> hasValidRegistrationData
@@ -1058,7 +1101,7 @@ com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface -> com.ponti
     void setItem(java.lang.String,java.lang.String) -> setItem
     java.lang.String getAdditionalData(java.lang.String) -> getAdditionalData
     void setAdditionalData(java.lang.String,java.lang.String) -> setAdditionalData
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface -> com.pontiflex.mobile.webview.sdk.activities.o:
+com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface -> com.pontiflex.mobile.webview.sdk.activities.p:
     com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
     java.lang.String getAppName() -> getAppName
     java.lang.String getAppVersionCode() -> getAppVersionCode
@@ -1110,19 +1153,23 @@ com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity -> com.p
     com.pontiflex.mobile.webview.sdk.IAdManager adManager -> a
     android.widget.Button registrationButton -> b
     android.widget.Button multiAdButton -> c
-    android.widget.Button clearButton -> d
+    android.widget.Button showAdButton -> d
+    android.widget.Button clearButton -> e
     void onCreate(android.os.Bundle) -> onCreate
     void startRegistrationActivity() -> a
     void startMultiOfferActivity() -> b
-    void clearRegistrationData() -> c
-    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
-com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$1 -> com.pontiflex.mobile.webview.sdk.activities.n:
+    void startShowAd() -> c
+    void clearRegistrationData() -> d
+com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$1 -> com.pontiflex.mobile.webview.sdk.activities.o:
     com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$2 -> com.pontiflex.mobile.webview.sdk.activities.m:
+com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$2 -> com.pontiflex.mobile.webview.sdk.activities.n:
     com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$3 -> com.pontiflex.mobile.webview.sdk.activities.l:
+com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$3 -> com.pontiflex.mobile.webview.sdk.activities.m:
+    com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$4 -> com.pontiflex.mobile.webview.sdk.activities.l:
     com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity this$0 -> a
     void onClick(android.view.View) -> onClick
 com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity -> com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity:
@@ -1134,11 +1181,13 @@ com.pontiflex.mobile.webview.utilities.AppInfo -> com.pontiflex.mobile.webview.u
     com.pontiflex.mobile.webview.utilities.AppInfo createAppInfo(android.content.Context) -> a
     com.pontiflex.mobile.webview.utilities.AppInfo createAppInfo(android.content.Context,java.lang.String) -> a
     org.json.JSONObject getField(java.lang.String) -> b
-    org.json.JSONObject getRegistrationFields() -> d
+    org.json.JSONObject getRegistrationFields() -> f
+    org.json.JSONObject getRegistrationOffer() -> a
     java.lang.String[] getValidationsForFieldNamed(java.lang.String) -> a
-    java.util.Collection getOrderedFieldNames() -> a
-    java.lang.String getPostalCodeFieldName() -> b
-    java.lang.String getCountryFieldName() -> c
+    java.util.Collection getOrderedFieldNames() -> b
+    java.lang.String getPostalCodeFieldName() -> c
+    java.lang.String getAgeRangeFieldName() -> d
+    java.lang.String getCountryFieldName() -> e
 com.pontiflex.mobile.webview.utilities.AppInfo$1 -> com.pontiflex.mobile.webview.utilities.j:
     int compare(org.json.JSONObject,org.json.JSONObject) -> a
     int compare(java.lang.Object,java.lang.Object) -> compare
@@ -1156,7 +1205,7 @@ com.pontiflex.mobile.webview.utilities.DeviceHelper -> com.pontiflex.mobile.webv
     java.lang.String getDeviceConfig(android.app.Activity) -> f
 com.pontiflex.mobile.webview.utilities.FieldValidator -> com.pontiflex.mobile.webview.utilities.f:
     java.util.ArrayList errors -> a
-    boolean validate(java.lang.String,java.lang.String,java.lang.String[],java.util.Map,android.content.Context) -> a
+    boolean isValid$6e64a65d(java.lang.String,java.lang.String,java.lang.String[]) -> a
     void addError(java.lang.String) -> a
 com.pontiflex.mobile.webview.utilities.HtmlPageRegistry -> com.pontiflex.mobile.webview.utilities.b:
     java.util.List registry -> a
@@ -1167,18 +1216,20 @@ com.pontiflex.mobile.webview.utilities.HtmlPageRegistry -> com.pontiflex.mobile.
     void initializeRegistry(android.content.Context) -> c
     java.lang.String getRegistrationHtmlPath$29d40d93(android.app.Activity) -> a
     java.lang.String getMultiOfferHtmlPath$29d40d93(android.app.Activity) -> b
+    java.lang.String getSingleOfferHtmlPath$29d40d93(android.app.Activity) -> c
     java.lang.String getHtmlPath$7d5425f8(android.app.Activity,com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page) -> a
     java.lang.String getKeyPath(com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page,com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation,com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity) -> a
-    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize getScreenSize(android.app.Activity) -> c
-    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity getScreenDensity(android.app.Activity) -> d
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize getScreenSize(android.app.Activity) -> d
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity getScreenDensity(android.app.Activity) -> e
     boolean isRegistryEmpty() -> a
     java.lang.String getBaseHtmlResourcesPath() -> b
 com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page -> com.pontiflex.mobile.webview.utilities.a:
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page registration -> a
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page multioffer -> b
-    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page privacy -> c
-    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page privacylist -> d
-    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page[] $VALUES -> e
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page privacy -> d
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page privacylist -> e
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page singleoffer -> c
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page[] $VALUES -> f
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page[] values() -> values
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page valueOf(java.lang.String) -> valueOf
 com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity -> com.pontiflex.mobile.webview.utilities.o:
