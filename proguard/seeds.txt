@@ -15,6 +15,8 @@ com.madhackerdesigns.neverbelate.settings.FeedbackPreference
 com.madhackerdesigns.neverbelate.settings.FeedbackPreference: FeedbackPreference(android.content.Context)
 com.madhackerdesigns.neverbelate.ui.Registration
 com.madhackerdesigns.neverbelate.ui.Registration: Registration(android.content.Context)
+com.madhackerdesigns.neverbelate.settings.PrivacyPreference
+com.madhackerdesigns.neverbelate.settings.PrivacyPreference: PrivacyPreference(android.content.Context)
 com.google.ads.AdView
 com.google.ads.AdView: AdView(android.content.Context,android.util.AttributeSet)
 com.madhackerdesigns.neverbelate.settings.WebsitePreference
@@ -23,6 +25,8 @@ com.madhackerdesigns.neverbelate.settings.EulaPreference
 com.madhackerdesigns.neverbelate.settings.EulaPreference: EulaPreference(android.content.Context,android.util.AttributeSet)
 com.madhackerdesigns.neverbelate.settings.FeedbackPreference
 com.madhackerdesigns.neverbelate.settings.FeedbackPreference: FeedbackPreference(android.content.Context,android.util.AttributeSet)
+com.madhackerdesigns.neverbelate.settings.PrivacyPreference
+com.madhackerdesigns.neverbelate.settings.PrivacyPreference: PrivacyPreference(android.content.Context,android.util.AttributeSet)
 com.google.ads.AdView
 com.google.ads.AdView: AdView(android.content.Context,android.util.AttributeSet,int)
 com.madhackerdesigns.neverbelate.settings.WebsitePreference
@@ -31,6 +35,8 @@ com.madhackerdesigns.neverbelate.settings.EulaPreference
 com.madhackerdesigns.neverbelate.settings.EulaPreference: EulaPreference(android.content.Context,android.util.AttributeSet,int)
 com.madhackerdesigns.neverbelate.settings.FeedbackPreference
 com.madhackerdesigns.neverbelate.settings.FeedbackPreference: FeedbackPreference(android.content.Context,android.util.AttributeSet,int)
+com.madhackerdesigns.neverbelate.settings.PrivacyPreference
+com.madhackerdesigns.neverbelate.settings.PrivacyPreference: PrivacyPreference(android.content.Context,android.util.AttributeSet,int)
 com.google.gson.LongSerializationPolicy: com.google.gson.LongSerializationPolicy[] values()
 com.google.gson.LongSerializationPolicy: com.google.gson.LongSerializationPolicy valueOf(java.lang.String)
 com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page[] values()
@@ -141,4 +147,5 @@ com.madhackerdesigns.neverbelate.provider.AlertsProvider
 com.madhackerdesigns.neverbelate.settings.WebsitePreference
 com.madhackerdesigns.neverbelate.settings.EulaPreference
 com.madhackerdesigns.neverbelate.settings.FeedbackPreference
+com.madhackerdesigns.neverbelate.settings.PrivacyPreference
 com.madhackerdesigns.neverbelate.ui.WarningDialog

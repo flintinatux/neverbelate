@@ -16,16 +16,12 @@
 	<string name="btn_share_text">Share with a Friend</string>
 	<string name="btn_tips_text">Tips and Tricks</string>
 	<string name="content_description_logo">NeverBeLate™ White Rabbit Logo</string>
-	<string name="dlg_coming_soon_msg">This feature is coming soon, so be sure check back later in the Android Market for updates!</string>
+	<string name="dlg_coming_soon_msg">This feature is coming soon, so be sure to check back later in the Android Market for updates!</string>
 	<string name="dlg_coming_soon_title">Coming soon</string>
 	<string name="loading_text">Loading...</string>
 	<string name="ok">OK</string>
 	<string name="share_menu_title">Share NeverBeLate™</string>
-	<string name="share_message">Dear friend -\n
-	\n
-	I just installed the new NeverBeLate™ app for Android, and I am amazed at how easily it keeps me on time to all of my events! It checks the upcoming events in my Android calendar, and then warns me when I need to get in the car to beat the traffic to my next appointment. I can even use it to check the traffic between my current location and my destination, so that I can decide if I should take another route. I know you will find NeverBeLate™ to be the most useful app on your phone! Click the link below to install NeverBeLate™ for FREE!\n
-	\n
-	http://bit.ly/install-never-be-late-1\n</string>
+	<string name="share_message">I use the new FREE app NeverBeLate™ for Android, and I am amazed how well it keeps me on-time to all of my events! It checks the locations of upcoming events in my Android calendar, and then warns me when I need to get in the car to beat the traffic. I can even use it to check the traffic between my current location and my destination. Check out NeverBeLate™ for FREE here: http://bit.ly/never-be-late</string>
 	<string name="share_subject">Check out NeverBeLate™ for Android!</string>
     
 <!-- Strings for Test Activity -->
@@ -68,6 +64,7 @@
 	<string name="feedback_address">mail@madhackerdesigns.com</string>
 	<string name="feedback_menu_title">Choose email app</string>
 	<string name="feedback_subject">[NeverBeLate™] - Feedback Case #</string>
+	<string name="privacy_title">Privacy policy</string>
 	<string name="send_feedback">Click here to send me an email with feedback, questions, or bugs you have encountered.</string>
 	<string name="send_feedback_title">Send feedback</string>
 	<string name="settings_instructions">Each setting below has a recommended value to balance battery life with performance, but feel free to change them to fit your schedule needs and transportation style.</string>

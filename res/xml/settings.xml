@@ -122,18 +122,16 @@
 			android:id="@+id/pr_eula"
 			android:selectable="true"
 			android:title="@string/eula_title" />
+		<com.madhackerdesigns.neverbelate.settings.PrivacyPreference
+		    android:id="@+id/pr_privacy"
+		    android:selectable="true"
+		    android:title="@string/privacy_title" />
 		
 <!--		<ListPreference-->
 <!--			android:key="version history"-->
 <!--			android:title="Version history"-->
 <!--			android:dialogTitle="Version History"-->
 <!--			android:dialogMessage="This is the version history.  In the future, will be filled with actual version history."-->
-<!--			android:positiveButtonText="Done" />-->
-<!--		<ListPreference-->
-<!--			android:key="terms and privacy"-->
-<!--			android:title="Terms and privacy"-->
-<!--			android:dialogTitle="Terms and privacy"-->
-<!--			android:dialogMessage="This is the terms of service and privacy notice."-->
 <!--			android:positiveButtonText="Done" />-->
 	</PreferenceCategory>
 	

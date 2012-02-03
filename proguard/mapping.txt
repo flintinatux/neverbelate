@@ -688,6 +688,10 @@ com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod ->
     com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod[] ENUM$VALUES -> c
     com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod[] values() -> values
     com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod valueOf(java.lang.String) -> valueOf
+com.madhackerdesigns.neverbelate.settings.PrivacyPreference -> com.madhackerdesigns.neverbelate.settings.PrivacyPreference:
+    android.net.Uri WESBITE_URI -> a
+    android.content.Context mContext -> b
+    void onClick() -> onClick
 com.madhackerdesigns.neverbelate.settings.WebsitePreference -> com.madhackerdesigns.neverbelate.settings.WebsitePreference:
     android.net.Uri WESBITE_URI -> a
     android.content.Context mContext -> b
