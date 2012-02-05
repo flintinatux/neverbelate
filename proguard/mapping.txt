@@ -579,16 +579,18 @@ com.google.gson.v -> com.google.a.m:
     java.lang.String a(java.lang.String) -> a
 com.google.gson.w -> com.google.a.n:
     void a(com.google.gson.JsonElement,java.lang.Appendable,boolean) -> a
-com.madhackerdesigns.neverbelate.Eula -> com.madhackerdesigns.neverbelate.c:
-    boolean show(android.app.Activity) -> a
+com.madhackerdesigns.neverbelate.Eula -> com.madhackerdesigns.neverbelate.d:
+    void show(android.app.Activity) -> a
     void display(android.app.Activity) -> b
-com.madhackerdesigns.neverbelate.Eula$1 -> com.madhackerdesigns.neverbelate.b:
+com.madhackerdesigns.neverbelate.Eula$1 -> com.madhackerdesigns.neverbelate.c:
     android.content.SharedPreferences val$preferences -> a
     android.app.Activity val$activity -> b
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.Eula$2 -> com.madhackerdesigns.neverbelate.a:
+com.madhackerdesigns.neverbelate.Eula$2 -> com.madhackerdesigns.neverbelate.b:
     android.app.Activity val$activity -> a
     void onClick(android.content.DialogInterface,int) -> onClick
+com.madhackerdesigns.neverbelate.Eula$OnEulaAgreedTo -> com.madhackerdesigns.neverbelate.a:
+    void onEulaAgreedTo() -> a
 com.madhackerdesigns.neverbelate.provider.AlertsContract -> com.madhackerdesigns.neverbelate.provider.AlertsContract:
 com.madhackerdesigns.neverbelate.provider.AlertsContract$Alerts -> com.madhackerdesigns.neverbelate.provider.a:
     android.net.Uri CONTENT_URI -> a
@@ -713,9 +715,9 @@ com.madhackerdesigns.neverbelate.ui.LauncherActivity -> com.madhackerdesigns.nev
     com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> b
     void onCreate(android.os.Bundle) -> onCreate
     android.app.Dialog onCreateDialog(int) -> onCreateDialog
-    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
     void onPause() -> onPause
     void onResume() -> onResume
+    void onEulaAgreedTo() -> a
     com.madhackerdesigns.neverbelate.settings.PreferenceHelper access$0(com.madhackerdesigns.neverbelate.ui.LauncherActivity) -> a
 com.madhackerdesigns.neverbelate.ui.LauncherActivity$1 -> com.madhackerdesigns.neverbelate.ui.h:
     com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a

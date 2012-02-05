@@ -3,8 +3,9 @@
 <!-- Application level strings -->
     <string name="app_name">NeverBeLate™</string>
     <string name="app_title">NeverBeLate™ Settings</string>
+    <string name="app_version">App version</string>
     <string name="base_task">com.madhackerdesigns.neverbelate.base_task</string>
-    <string name="hello">Hello World!</string>
+    <string name="version_name">1.0_build-11</string>
     
 <!-- Admob Publisher ID -->
 	<string name="admob_id">a14d952e8939105</string>

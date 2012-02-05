@@ -671,13 +671,14 @@ _____________________________________________________________________
   Access flags:  0x21
     = public class com.madhackerdesigns.neverbelate.ui.LauncherActivity extends android.app.Activity
 
-Interfaces (count = 0):
+Interfaces (count = 1):
+  - Class [com/madhackerdesigns/neverbelate/a]
 
-Constant Pool (count = 192):
+Constant Pool (count = 180):
   - Integer [2130903043]
-  - Integer [2131099663]
   - Integer [2131099664]
-  - Integer [2131099666]
+  - Integer [2131099665]
+  - Integer [2131099667]
   - Integer [2131165198]
   - Integer [2131165199]
   - Integer [2131165200]
@@ -687,13 +688,11 @@ Constant Pool (count = 192):
   - Integer [2131165204]
   - String [AdMob banner loaded.]
   - String [NeverBeLateService]
-  - String [android.intent.category.LAUNCHER]
   - Class [android/app/Activity]
   - Class [android/app/AlertDialog]
   - Class [android/app/AlertDialog$Builder]
   - Class [android/content/DialogInterface]
   - Class [android/content/DialogInterface$OnClickListener]
-  - Class [android/content/Intent]
   - Class [android/util/Log]
   - Class [android/view/View]
   - Class [android/view/View$OnClickListener]
@@ -705,7 +704,8 @@ Constant Pool (count = 192):
   - Class [android/widget/ImageView]
   - Class [com/google/ads/AdView]
   - Class [com/google/ads/c]
-  - Class [com/madhackerdesigns/neverbelate/c]
+  - Class [com/madhackerdesigns/neverbelate/a]
+  - Class [com/madhackerdesigns/neverbelate/d]
   - Class [com/madhackerdesigns/neverbelate/settings/PreferenceHelper]
   - Class [com/madhackerdesigns/neverbelate/ui/LauncherActivity]
   - Class [com/madhackerdesigns/neverbelate/ui/h]
@@ -728,7 +728,6 @@ Constant Pool (count = 192):
   - Methodref [android/app/AlertDialog$Builder.setMessage (I)Landroid/app/AlertDialog$Builder;]
   - Methodref [android/app/AlertDialog$Builder.setPositiveButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
   - Methodref [android/app/AlertDialog$Builder.setTitle (I)Landroid/app/AlertDialog$Builder;]
-  - Methodref [android/content/Intent.hasCategory (Ljava/lang/String;)Z]
   - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
   - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
   - Methodref [android/widget/CheckBox.setChecked (Z)V]
@@ -737,12 +736,11 @@ Constant Pool (count = 192):
   - Methodref [com/google/ads/AdView.a (Lcom/google/ads/c;)V]
   - Methodref [com/google/ads/c.<init> ()V]
   - Methodref [com/google/ads/c.a ()V]
-  - Methodref [com/madhackerdesigns/neverbelate/c.a (Landroid/app/Activity;)Z]
+  - Methodref [com/madhackerdesigns/neverbelate/d.a (Landroid/app/Activity;)V]
   - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.<init> (Landroid/content/Context;)V]
   - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.f ()Z]
   - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
   - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.getApplication ()Landroid/app/Application;]
-  - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.getIntent ()Landroid/content/Intent;]
   - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.setContentView (I)V]
   - Methodref [com/madhackerdesigns/neverbelate/ui/h.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
   - Methodref [com/madhackerdesigns/neverbelate/ui/i.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
@@ -756,7 +754,7 @@ Constant Pool (count = 192):
   + NameAndType [<init> (Landroid/content/Context;)V]
   + NameAndType [<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
   + NameAndType [a ()V]
-  + NameAndType [a (Landroid/app/Activity;)Z]
+  + NameAndType [a (Landroid/app/Activity;)V]
   + NameAndType [a (Lcom/google/ads/c;)V]
   + NameAndType [a Landroid/widget/CheckBox;]
   + NameAndType [b (Landroid/app/Application;)Lcom/pontiflex/mobile/webview/sdk/c;]
@@ -766,8 +764,6 @@ Constant Pool (count = 192):
   + NameAndType [f ()Z]
   + NameAndType [findViewById (I)Landroid/view/View;]
   + NameAndType [getApplication ()Landroid/app/Application;]
-  + NameAndType [getIntent ()Landroid/content/Intent;]
-  + NameAndType [hasCategory (Ljava/lang/String;)Z]
   + NameAndType [j ()V]
   + NameAndType [onCreate (Landroid/os/Bundle;)V]
   + NameAndType [onPause ()V]
@@ -783,16 +779,14 @@ Constant Pool (count = 192):
   + NameAndType [setTitle (I)Landroid/app/AlertDialog$Builder;]
   + Utf8 [()Landroid/app/AlertDialog;]
   + Utf8 [()Landroid/app/Application;]
-  + Utf8 [()Landroid/content/Intent;]
   + Utf8 [()V]
   + Utf8 [()Z]
   + Utf8 [(I)Landroid/app/AlertDialog$Builder;]
   + Utf8 [(I)Landroid/app/Dialog;]
   + Utf8 [(I)Landroid/view/View;]
   + Utf8 [(I)V]
-  + Utf8 [(IILandroid/content/Intent;)V]
   + Utf8 [(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
-  + Utf8 [(Landroid/app/Activity;)Z]
+  + Utf8 [(Landroid/app/Activity;)V]
   + Utf8 [(Landroid/app/Application;)Lcom/pontiflex/mobile/webview/sdk/c;]
   + Utf8 [(Landroid/content/Context;)V]
   + Utf8 [(Landroid/os/Bundle;)V]
@@ -802,7 +796,6 @@ Constant Pool (count = 192):
   + Utf8 [(Lcom/google/ads/c;)V]
   + Utf8 [(Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
   + Utf8 [(Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
-  + Utf8 [(Ljava/lang/String;)Z]
   + Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
   + Utf8 [(Z)Landroid/app/AlertDialog$Builder;]
   + Utf8 [(Z)V]
@@ -813,13 +806,11 @@ Constant Pool (count = 192):
   + Utf8 [Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
   + Utf8 [NeverBeLateService]
   + Utf8 [a]
-  + Utf8 [android.intent.category.LAUNCHER]
   + Utf8 [android/app/Activity]
   + Utf8 [android/app/AlertDialog]
   + Utf8 [android/app/AlertDialog$Builder]
   + Utf8 [android/content/DialogInterface]
   + Utf8 [android/content/DialogInterface$OnClickListener]
-  + Utf8 [android/content/Intent]
   + Utf8 [android/util/Log]
   + Utf8 [android/view/View]
   + Utf8 [android/view/View$OnClickListener]
@@ -832,7 +823,8 @@ Constant Pool (count = 192):
   + Utf8 [b]
   + Utf8 [com/google/ads/AdView]
   + Utf8 [com/google/ads/c]
-  + Utf8 [com/madhackerdesigns/neverbelate/c]
+  + Utf8 [com/madhackerdesigns/neverbelate/a]
+  + Utf8 [com/madhackerdesigns/neverbelate/d]
   + Utf8 [com/madhackerdesigns/neverbelate/settings/PreferenceHelper]
   + Utf8 [com/madhackerdesigns/neverbelate/ui/LauncherActivity]
   + Utf8 [com/madhackerdesigns/neverbelate/ui/h]
@@ -848,10 +840,7 @@ Constant Pool (count = 192):
   + Utf8 [f]
   + Utf8 [findViewById]
   + Utf8 [getApplication]
-  + Utf8 [getIntent]
-  + Utf8 [hasCategory]
   + Utf8 [j]
-  + Utf8 [onActivityResult]
   + Utf8 [onCreate]
   + Utf8 [onCreateDialog]
   + Utf8 [onPause]
@@ -881,7 +870,7 @@ Methods (count = 7):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #45
+      [1] invokespecial #44
         - Methodref [android/app/Activity.<init> ()V]
       [4] return
       Code attribute exceptions (count = 0):
@@ -890,168 +879,156 @@ Methods (count = 7):
     Access flags: 0x4
       = protected void onCreate(android.os.Bundle)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 217, locals = 3, stack = 4):
+    + Code attribute instructions (code length = 197, locals = 3, stack = 4):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #46
+      [2] invokespecial #45
         - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
       [5] aload_0 v0
-      [6] invokevirtual #69
-        - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.getIntent ()Landroid/content/Intent;]
-      [9] ldc #14
-        - String [android.intent.category.LAUNCHER]
-      [11] invokevirtual #55
-        - Methodref [android/content/Intent.hasCategory (Ljava/lang/String;)Z]
-      [14] ifeq +15 (target=29)
-      [17] aload_0 v0
-      [18] invokevirtual #68
-        - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.getApplication ()Landroid/app/Application;]
-      [21] invokestatic #77
-        - Methodref [com/pontiflex/mobile/webview/sdk/b.b (Landroid/app/Application;)Lcom/pontiflex/mobile/webview/sdk/c;]
-      [24] invokeinterface #78
-        - InterfaceMethodref [com/pontiflex/mobile/webview/sdk/c.j ()V]
-      [29] aload_0 v0
-      [30] ldc #1
+      [6] invokestatic #62
+        - Methodref [com/madhackerdesigns/neverbelate/d.a (Landroid/app/Activity;)V]
+      [9] aload_0 v0
+      [10] ldc #1
         - Integer [2130903043]
-      [32] invokevirtual #70
+      [12] invokevirtual #67
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.setContentView (I)V]
-      [35] aload_0 v0
-      [36] getfield #44
+      [15] aload_0 v0
+      [16] getfield #43
         - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
-      [39] ifnonnull +15 (target=54)
-      [42] aload_0 v0
-      [43] new #33
+      [19] ifnonnull +15 (target=34)
+      [22] aload_0 v0
+      [23] new #32
         - Class [com/madhackerdesigns/neverbelate/settings/PreferenceHelper]
-      [46] dup
-      [47] aload_0 v0
-      [48] invokespecial #65
+      [26] dup
+      [27] aload_0 v0
+      [28] invokespecial #63
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.<init> (Landroid/content/Context;)V]
-      [51] putfield #44
+      [31] putfield #43
         - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
-      [54] aload_0 v0
-      [55] aload_0 v0
-      [56] ldc #11
+      [34] aload_0 v0
+      [35] aload_0 v0
+      [36] ldc #11
         - Integer [2131165204]
-      [58] invokevirtual #67
+      [38] invokevirtual #65
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
-      [61] checkcast #26
+      [41] checkcast #24
         - Class [android/widget/CheckBox]
-      [64] putfield #43
+      [44] putfield #42
         - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.a Landroid/widget/CheckBox;]
-      [67] aload_0 v0
-      [68] getfield #43
+      [47] aload_0 v0
+      [48] getfield #42
         - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.a Landroid/widget/CheckBox;]
-      [71] new #35
+      [51] new #34
         - Class [com/madhackerdesigns/neverbelate/ui/h]
+      [54] dup
+      [55] aload_0 v0
+      [56] invokespecial #68
+        - Methodref [com/madhackerdesigns/neverbelate/ui/h.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
+      [59] invokevirtual #57
+        - Methodref [android/widget/CheckBox.setOnCheckedChangeListener (Landroid/widget/CompoundButton$OnCheckedChangeListener;)V]
+      [62] aload_0 v0
+      [63] ldc #7
+        - Integer [2131165200]
+      [65] invokevirtual #65
+        - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
+      [68] checkcast #23
+        - Class [android/widget/Button]
+      [71] new #38
+        - Class [com/madhackerdesigns/neverbelate/ui/l]
       [74] dup
       [75] aload_0 v0
-      [76] invokespecial #71
-        - Methodref [com/madhackerdesigns/neverbelate/ui/h.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
-      [79] invokevirtual #59
-        - Methodref [android/widget/CheckBox.setOnCheckedChangeListener (Landroid/widget/CompoundButton$OnCheckedChangeListener;)V]
+      [76] invokespecial #72
+        - Methodref [com/madhackerdesigns/neverbelate/ui/l.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
+      [79] invokevirtual #55
+        - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
       [82] aload_0 v0
-      [83] ldc #7
-        - Integer [2131165200]
-      [85] invokevirtual #67
+      [83] ldc #8
+        - Integer [2131165201]
+      [85] invokevirtual #65
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
-      [88] checkcast #25
+      [88] checkcast #23
         - Class [android/widget/Button]
-      [91] new #39
-        - Class [com/madhackerdesigns/neverbelate/ui/l]
+      [91] new #37
+        - Class [com/madhackerdesigns/neverbelate/ui/k]
       [94] dup
       [95] aload_0 v0
-      [96] invokespecial #75
-        - Methodref [com/madhackerdesigns/neverbelate/ui/l.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
-      [99] invokevirtual #57
-        - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
-      [102] aload_0 v0
-      [103] ldc #8
-        - Integer [2131165201]
-      [105] invokevirtual #67
-        - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
-      [108] checkcast #25
-        - Class [android/widget/Button]
-      [111] new #38
-        - Class [com/madhackerdesigns/neverbelate/ui/k]
-      [114] dup
-      [115] aload_0 v0
-      [116] invokespecial #74
+      [96] invokespecial #71
         - Methodref [com/madhackerdesigns/neverbelate/ui/k.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
-      [119] invokevirtual #57
+      [99] invokevirtual #55
         - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
-      [122] new #37
+      [102] new #36
         - Class [com/madhackerdesigns/neverbelate/ui/j]
-      [125] dup
-      [126] aload_0 v0
-      [127] invokespecial #73
+      [105] dup
+      [106] aload_0 v0
+      [107] invokespecial #70
         - Methodref [com/madhackerdesigns/neverbelate/ui/j.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
-      [130] astore_1 v1
-      [131] aload_0 v0
-      [132] ldc #9
+      [110] astore_1 v1
+      [111] aload_0 v0
+      [112] ldc #9
         - Integer [2131165202]
-      [134] invokevirtual #67
+      [114] invokevirtual #65
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
-      [137] checkcast #25
+      [117] checkcast #23
         - Class [android/widget/Button]
-      [140] aload_1 v1
-      [141] invokevirtual #57
+      [120] aload_1 v1
+      [121] invokevirtual #55
         - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
-      [144] aload_0 v0
-      [145] ldc #6
+      [124] aload_0 v0
+      [125] ldc #6
         - Integer [2131165199]
-      [147] invokevirtual #67
+      [127] invokevirtual #65
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
-      [150] checkcast #25
+      [130] checkcast #23
         - Class [android/widget/Button]
-      [153] aload_1 v1
-      [154] invokevirtual #57
+      [133] aload_1 v1
+      [134] invokevirtual #55
         - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
-      [157] aload_0 v0
-      [158] ldc #10
+      [137] aload_0 v0
+      [138] ldc #10
         - Integer [2131165203]
-      [160] invokevirtual #67
+      [140] invokevirtual #65
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
-      [163] checkcast #29
+      [143] checkcast #27
         - Class [android/widget/ImageView]
-      [166] new #36
+      [146] new #35
         - Class [com/madhackerdesigns/neverbelate/ui/i]
-      [169] dup
-      [170] aload_0 v0
-      [171] invokespecial #72
+      [149] dup
+      [150] aload_0 v0
+      [151] invokespecial #69
         - Methodref [com/madhackerdesigns/neverbelate/ui/i.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
-      [174] invokevirtual #60
+      [154] invokevirtual #58
         - Methodref [android/widget/ImageView.setOnLongClickListener (Landroid/view/View$OnLongClickListener;)V]
-      [177] new #31
-        - Class [com/google/ads/c]
-      [180] dup
-      [181] invokespecial #62
-        - Methodref [com/google/ads/c.<init> ()V]
-      [184] dup
-      [185] astore_1 v1
-      [186] invokevirtual #63
-        - Methodref [com/google/ads/c.a ()V]
-      [189] aload_0 v0
-      [190] ldc #5
+      [157] aload_0 v0
+      [158] ldc #5
         - Integer [2131165198]
-      [192] invokevirtual #67
+      [160] invokevirtual #65
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
-      [195] checkcast #30
+      [163] checkcast #28
         - Class [com/google/ads/AdView]
-      [198] dup
-      [199] astore_2 v2
-      [200] ifnull +16 (target=216)
-      [203] aload_2 v2
-      [204] aload_1 v1
-      [205] invokevirtual #61
+      [166] dup
+      [167] astore_1 v1
+      [168] ifnull +28 (target=196)
+      [171] new #29
+        - Class [com/google/ads/c]
+      [174] dup
+      [175] invokespecial #60
+        - Methodref [com/google/ads/c.<init> ()V]
+      [178] dup
+      [179] astore_2 v2
+      [180] invokevirtual #61
+        - Methodref [com/google/ads/c.a ()V]
+      [183] aload_1 v1
+      [184] aload_2 v2
+      [185] invokevirtual #59
         - Methodref [com/google/ads/AdView.a (Lcom/google/ads/c;)V]
-      [208] ldc #13
+      [188] ldc #13
         - String [NeverBeLateService]
-      [210] ldc #12
+      [190] ldc #12
         - String [AdMob banner loaded.]
-      [212] invokestatic #56
+      [192] invokestatic #54
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [215] pop
-      [216] return
+      [195] pop
+      [196] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       onCreateDialog(I)Landroid/app/Dialog;
@@ -1059,11 +1036,11 @@ Methods (count = 7):
       = protected android.app.Dialog onCreateDialog(int)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 62, locals = 3, stack = 5):
-      [0] new #17
+      [0] new #16
         - Class [android/app/AlertDialog$Builder]
       [3] dup
       [4] aload_0 v0
-      [5] invokespecial #49
+      [5] invokespecial #48
         - Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
       [8] astore_2 v2
       [9] iload_1 v1
@@ -1072,39 +1049,31 @@ Methods (count = 7):
         default: offset = 47, target = 57
       [28] aload_2 v2
       [29] ldc #3
-        - Integer [2131099664]
-      [31] invokevirtual #54
+        - Integer [2131099665]
+      [31] invokevirtual #53
         - Methodref [android/app/AlertDialog$Builder.setTitle (I)Landroid/app/AlertDialog$Builder;]
       [34] ldc #2
-        - Integer [2131099663]
-      [36] invokevirtual #52
+        - Integer [2131099664]
+      [36] invokevirtual #51
         - Methodref [android/app/AlertDialog$Builder.setMessage (I)Landroid/app/AlertDialog$Builder;]
       [39] iconst_1
-      [40] invokevirtual #51
+      [40] invokevirtual #50
         - Methodref [android/app/AlertDialog$Builder.setCancelable (Z)Landroid/app/AlertDialog$Builder;]
       [43] ldc #4
-        - Integer [2131099666]
-      [45] new #40
+        - Integer [2131099667]
+      [45] new #39
         - Class [com/madhackerdesigns/neverbelate/ui/m]
       [48] dup
       [49] aload_0 v0
-      [50] invokespecial #76
+      [50] invokespecial #73
         - Methodref [com/madhackerdesigns/neverbelate/ui/m.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
-      [53] invokevirtual #53
+      [53] invokevirtual #52
         - Methodref [android/app/AlertDialog$Builder.setPositiveButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [56] pop
       [57] aload_2 v2
-      [58] invokevirtual #50
+      [58] invokevirtual #49
         - Methodref [android/app/AlertDialog$Builder.create ()Landroid/app/AlertDialog;]
       [61] areturn
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
-  + Method:       onActivityResult(IILandroid/content/Intent;)V
-    Access flags: 0x4
-      = protected void onActivityResult(int,int,android.content.Intent)
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 1, locals = 4, stack = 0):
-      [0] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       onPause()V
@@ -1113,11 +1082,11 @@ Methods (count = 7):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 10, locals = 1, stack = 2):
       [0] aload_0 v0
-      [1] invokespecial #47
+      [1] invokespecial #46
         - Methodref [android/app/Activity.onPause ()V]
       [4] aload_0 v0
       [5] aconst_null
-      [6] putfield #44
+      [6] putfield #43
         - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
       [9] return
       Code attribute exceptions (count = 0):
@@ -1126,52 +1095,63 @@ Methods (count = 7):
     Access flags: 0x4
       = protected void onResume()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 63, locals = 1, stack = 4):
+    + Code attribute instructions (code length = 58, locals = 1, stack = 4):
       [0] aload_0 v0
-      [1] invokespecial #48
+      [1] invokespecial #47
         - Methodref [android/app/Activity.onResume ()V]
       [4] aload_0 v0
-      [5] invokestatic #64
-        - Methodref [com/madhackerdesigns/neverbelate/c.a (Landroid/app/Activity;)Z]
-      [8] pop
-      [9] aload_0 v0
-      [10] getfield #44
+      [5] getfield #43
         - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
-      [13] ifnonnull +15 (target=28)
-      [16] aload_0 v0
-      [17] new #33
+      [8] ifnonnull +15 (target=23)
+      [11] aload_0 v0
+      [12] new #32
         - Class [com/madhackerdesigns/neverbelate/settings/PreferenceHelper]
-      [20] dup
-      [21] aload_0 v0
-      [22] invokespecial #65
+      [15] dup
+      [16] aload_0 v0
+      [17] invokespecial #63
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.<init> (Landroid/content/Context;)V]
-      [25] putfield #44
+      [20] putfield #43
         - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
-      [28] aload_0 v0
-      [29] getfield #43
+      [23] aload_0 v0
+      [24] getfield #42
         - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.a Landroid/widget/CheckBox;]
-      [32] ifnonnull +16 (target=48)
-      [35] aload_0 v0
-      [36] aload_0 v0
-      [37] ldc #11
+      [27] ifnonnull +16 (target=43)
+      [30] aload_0 v0
+      [31] aload_0 v0
+      [32] ldc #11
         - Integer [2131165204]
-      [39] invokevirtual #67
+      [34] invokevirtual #65
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
-      [42] checkcast #26
+      [37] checkcast #24
         - Class [android/widget/CheckBox]
-      [45] putfield #43
+      [40] putfield #42
         - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.a Landroid/widget/CheckBox;]
-      [48] aload_0 v0
-      [49] getfield #43
+      [43] aload_0 v0
+      [44] getfield #42
         - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.a Landroid/widget/CheckBox;]
-      [52] aload_0 v0
-      [53] getfield #44
+      [47] aload_0 v0
+      [48] getfield #43
         - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
-      [56] invokevirtual #66
+      [51] invokevirtual #64
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.f ()Z]
-      [59] invokevirtual #58
+      [54] invokevirtual #56
         - Methodref [android/widget/CheckBox.setChecked (Z)V]
-      [62] return
+      [57] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a()V
+    Access flags: 0x11
+      = public final void a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 13, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokevirtual #66
+        - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.getApplication ()Landroid/app/Application;]
+      [4] invokestatic #74
+        - Methodref [com/pontiflex/mobile/webview/sdk/b.b (Landroid/app/Application;)Lcom/pontiflex/mobile/webview/sdk/c;]
+      [7] invokeinterface #75
+        - InterfaceMethodref [com/pontiflex/mobile/webview/sdk/c.j ()V]
+      [12] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       a(Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;
@@ -1180,7 +1160,7 @@ Methods (count = 7):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #44
+      [1] getfield #43
         - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
       [4] areturn
       Code attribute exceptions (count = 0):
@@ -8737,11 +8717,11 @@ _____________________________________________________________________
 Interfaces (count = 0):
 
 Constant Pool (count = 213):
-  - Integer [2131099680]
   - Integer [2131099681]
-  - Integer [2131099689]
+  - Integer [2131099682]
   - Integer [2131099690]
-  - Integer [2131099692]
+  - Integer [2131099691]
+  - Integer [2131099693]
   - Integer [2131165188]
   - Integer [2131165190]
   - Integer [2131165224]
@@ -9074,7 +9054,7 @@ Methods (count = 2):
       [159] invokevirtual #63
         - Methodref [com/madhackerdesigns/neverbelate/ui/WarningDialog.getResources ()Landroid/content/res/Resources;]
       [162] ldc #5
-        - Integer [2131099692]
+        - Integer [2131099693]
       [164] invokevirtual #53
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [167] astore v4
@@ -9270,7 +9250,7 @@ Methods (count = 2):
       [454] aload v5
       [456] aload_1 v1
       [457] ldc #4
-        - Integer [2131099690]
+        - Integer [2131099691]
       [459] invokevirtual #53
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [462] invokevirtual #56
@@ -9279,7 +9259,7 @@ Methods (count = 2):
       [468] aload v5
       [470] aload_1 v1
       [471] ldc #3
-        - Integer [2131099689]
+        - Integer [2131099690]
       [473] invokevirtual #53
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [476] invokevirtual #56
@@ -9316,7 +9296,7 @@ Methods (count = 2):
       [520] aload v7
       [522] aload_1 v1
       [523] ldc #2
-        - Integer [2131099681]
+        - Integer [2131099682]
       [525] invokevirtual #53
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [528] invokevirtual #56
@@ -9325,7 +9305,7 @@ Methods (count = 2):
       [534] aload v7
       [536] aload_1 v1
       [537] ldc #1
-        - Integer [2131099680]
+        - Integer [2131099681]
       [539] invokevirtual #53
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [542] invokevirtual #56
@@ -9365,13 +9345,13 @@ Interfaces (count = 0):
 Constant Pool (count = 30):
   - Class [android/app/Activity]
   - Class [android/preference/Preference]
-  - Class [com/madhackerdesigns/neverbelate/c]
+  - Class [com/madhackerdesigns/neverbelate/d]
   - Class [com/madhackerdesigns/neverbelate/settings/EulaPreference]
   - Fieldref [com/madhackerdesigns/neverbelate/settings/EulaPreference.a Landroid/content/Context;]
   - Methodref [android/preference/Preference.<init> (Landroid/content/Context;)V]
   - Methodref [android/preference/Preference.<init> (Landroid/content/Context;Landroid/util/AttributeSet;)V]
   - Methodref [android/preference/Preference.<init> (Landroid/content/Context;Landroid/util/AttributeSet;I)V]
-  - Methodref [com/madhackerdesigns/neverbelate/c.b (Landroid/app/Activity;)V]
+  - Methodref [com/madhackerdesigns/neverbelate/d.b (Landroid/app/Activity;)V]
   + NameAndType [<init> (Landroid/content/Context;)V]
   + NameAndType [<init> (Landroid/content/Context;Landroid/util/AttributeSet;)V]
   + NameAndType [<init> (Landroid/content/Context;Landroid/util/AttributeSet;I)V]
@@ -9389,7 +9369,7 @@ Constant Pool (count = 30):
   + Utf8 [android/app/Activity]
   + Utf8 [android/preference/Preference]
   + Utf8 [b]
-  + Utf8 [com/madhackerdesigns/neverbelate/c]
+  + Utf8 [com/madhackerdesigns/neverbelate/d]
   + Utf8 [com/madhackerdesigns/neverbelate/settings/EulaPreference]
   + Utf8 [onClick]
 
@@ -9461,7 +9441,7 @@ Methods (count = 4):
       [4] checkcast #1
         - Class [android/app/Activity]
       [7] invokestatic #9
-        - Methodref [com/madhackerdesigns/neverbelate/c.b (Landroid/app/Activity;)V]
+        - Methodref [com/madhackerdesigns/neverbelate/d.b (Landroid/app/Activity;)V]
       [10] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -28385,8 +28365,8 @@ Interfaces (count = 0):
 
 Constant Pool (count = 169):
   - Integer [2130903042]
-  - Integer [2131099678]
-  - Integer [2131099692]
+  - Integer [2131099679]
+  - Integer [2131099693]
   - Integer [2131165192]
   - Integer [2131165193]
   - Integer [2131165195]
@@ -28613,7 +28593,7 @@ Methods (count = 3):
       [49] dup
       [50] aload_1 v1
       [51] ldc #3
-        - Integer [2131099692]
+        - Integer [2131099693]
       [53] invokevirtual #37
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [56] invokestatic #54
@@ -28627,7 +28607,7 @@ Methods (count = 3):
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [67] aload_1 v1
       [68] ldc #2
-        - Integer [2131099678]
+        - Integer [2131099679]
       [70] invokevirtual #37
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [73] invokevirtual #56
@@ -31236,6 +31216,35 @@ Methods (count = 2):
       [7] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/madhackerdesigns/neverbelate/a
+  Superclass:    java/lang/Object
+  Major version: 0x31
+  Minor version: 0x0
+  Access flags:  0x601
+    = public interface com.madhackerdesigns.neverbelate.a extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 9):
+  - Class [com/madhackerdesigns/neverbelate/a]
+  - Class [com/madhackerdesigns/neverbelate/d]
+  - Class [java/lang/Object]
+  + Utf8 [()V]
+  + Utf8 [a]
+  + Utf8 [com/madhackerdesigns/neverbelate/a]
+  + Utf8 [com/madhackerdesigns/neverbelate/d]
+  + Utf8 [java/lang/Object]
+
+Fields (count = 0):
+
+Methods (count = 1):
+  + Method:       a()V
+    Access flags: 0x401
+      = public abstract void a()
 
 Class file attributes (count = 0):
 
@@ -35120,7 +35129,7 @@ Constant Pool (count = 474):
   - Integer [2130903040]
   - Integer [2130903048]
   - Integer [2130903049]
-  - Integer [2131099677]
+  - Integer [2131099678]
   - Integer [2131165191]
   - Integer [2131165198]
   - Integer [2131165221]
@@ -35660,7 +35669,7 @@ Methods (count = 12):
         - Methodref [com/madhackerdesigns/neverbelate/ui/WarningDialog.setContentView (I)V]
       [11] aload_0 v0
       [12] ldc #7
-        - Integer [2131099677]
+        - Integer [2131099678]
       [14] invokevirtual #148
         - Methodref [com/madhackerdesigns/neverbelate/ui/WarningDialog.setTitle (I)V]
       [17] ldc #21
@@ -38282,26 +38291,29 @@ Methods (count = 2):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-+ Program class: com/madhackerdesigns/neverbelate/a
++ Program class: com/madhackerdesigns/neverbelate/b
   Superclass:    java/lang/Object
   Major version: 0x31
   Minor version: 0x0
   Access flags:  0x30
-    = final class com.madhackerdesigns.neverbelate.a extends java.lang.Object
+    = final class com.madhackerdesigns.neverbelate.b extends java.lang.Object
 
 Interfaces (count = 1):
   - Class [android/content/DialogInterface$OnClickListener]
 
-Constant Pool (count = 26):
+Constant Pool (count = 30):
   - Class [android/content/DialogInterface]
   - Class [android/content/DialogInterface$OnClickListener]
   - Class [com/madhackerdesigns/neverbelate/a]
-  - Class [com/madhackerdesigns/neverbelate/c]
+  - Class [com/madhackerdesigns/neverbelate/b]
+  - Class [com/madhackerdesigns/neverbelate/d]
   - Class [java/lang/Object]
-  - Fieldref [com/madhackerdesigns/neverbelate/a.a Landroid/app/Activity;]
+  - Fieldref [com/madhackerdesigns/neverbelate/b.a Landroid/app/Activity;]
   - Methodref [java/lang/Object.<init> ()V]
   - InterfaceMethodref [android/content/DialogInterface.dismiss ()V]
+  - InterfaceMethodref [com/madhackerdesigns/neverbelate/a.a ()V]
   + NameAndType [<init> ()V]
+  + NameAndType [a ()V]
   + NameAndType [a Landroid/app/Activity;]
   + NameAndType [dismiss ()V]
   + Utf8 [()V]
@@ -38314,7 +38326,8 @@ Constant Pool (count = 26):
   + Utf8 [android/content/DialogInterface]
   + Utf8 [android/content/DialogInterface$OnClickListener]
   + Utf8 [com/madhackerdesigns/neverbelate/a]
-  + Utf8 [com/madhackerdesigns/neverbelate/c]
+  + Utf8 [com/madhackerdesigns/neverbelate/b]
+  + Utf8 [com/madhackerdesigns/neverbelate/d]
   + Utf8 [dismiss]
   + Utf8 [java/lang/Object]
   + Utf8 [onClick]
@@ -38327,15 +38340,15 @@ Fields (count = 1):
 Methods (count = 2):
   - Method:       <init>(Landroid/app/Activity;)V
     Access flags: 0x0
-      = a(android.app.Activity)
+      = b(android.app.Activity)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] putfield #6
-        - Fieldref [com/madhackerdesigns/neverbelate/a.a Landroid/app/Activity;]
+      [2] putfield #7
+        - Fieldref [com/madhackerdesigns/neverbelate/b.a Landroid/app/Activity;]
       [5] aload_0 v0
-      [6] invokespecial #7
+      [6] invokespecial #8
         - Methodref [java/lang/Object.<init> ()V]
       [9] return
       Code attribute exceptions (count = 0):
@@ -38344,46 +38357,64 @@ Methods (count = 2):
     Access flags: 0x11
       = public final void onClick(android.content.DialogInterface,int)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 7, locals = 3, stack = 1):
-      [0] aload_1 v1
-      [1] invokeinterface #8
+    + Code attribute instructions (code length = 29, locals = 3, stack = 1):
+      [0] aload_0 v0
+      [1] getfield #7
+        - Fieldref [com/madhackerdesigns/neverbelate/b.a Landroid/app/Activity;]
+      [4] instanceof #3
+        - Class [com/madhackerdesigns/neverbelate/a]
+      [7] ifeq +15 (target=22)
+      [10] aload_0 v0
+      [11] getfield #7
+        - Fieldref [com/madhackerdesigns/neverbelate/b.a Landroid/app/Activity;]
+      [14] checkcast #3
+        - Class [com/madhackerdesigns/neverbelate/a]
+      [17] invokeinterface #10
+        - InterfaceMethodref [com/madhackerdesigns/neverbelate/a.a ()V]
+      [22] aload_1 v1
+      [23] invokeinterface #9
         - InterfaceMethodref [android/content/DialogInterface.dismiss ()V]
-      [6] return
+      [28] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
 
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-+ Program class: com/madhackerdesigns/neverbelate/b
++ Program class: com/madhackerdesigns/neverbelate/c
   Superclass:    java/lang/Object
   Major version: 0x31
   Minor version: 0x0
   Access flags:  0x30
-    = final class com.madhackerdesigns.neverbelate.b extends java.lang.Object
+    = final class com.madhackerdesigns.neverbelate.c extends java.lang.Object
 
 Interfaces (count = 1):
   - Class [android/content/DialogInterface$OnClickListener]
 
-Constant Pool (count = 45):
+Constant Pool (count = 52):
   - String [eula.accepted]
   - Class [android/content/DialogInterface]
   - Class [android/content/DialogInterface$OnClickListener]
   - Class [android/content/SharedPreferences]
   - Class [android/content/SharedPreferences$Editor]
-  - Class [com/madhackerdesigns/neverbelate/b]
+  - Class [com/madhackerdesigns/neverbelate/a]
   - Class [com/madhackerdesigns/neverbelate/c]
+  - Class [com/madhackerdesigns/neverbelate/d]
   - Class [java/lang/Object]
-  - Fieldref [com/madhackerdesigns/neverbelate/b.a Landroid/content/SharedPreferences;]
-  - Fieldref [com/madhackerdesigns/neverbelate/b.b Landroid/app/Activity;]
+  - Fieldref [com/madhackerdesigns/neverbelate/c.a Landroid/content/SharedPreferences;]
+  - Fieldref [com/madhackerdesigns/neverbelate/c.b Landroid/app/Activity;]
   - Methodref [java/lang/Object.<init> ()V]
+  - InterfaceMethodref [android/content/DialogInterface.dismiss ()V]
   - InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
   - InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
   - InterfaceMethodref [android/content/SharedPreferences$Editor.putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
+  - InterfaceMethodref [com/madhackerdesigns/neverbelate/a.a ()V]
   + NameAndType [<init> ()V]
+  + NameAndType [a ()V]
   + NameAndType [a Landroid/content/SharedPreferences;]
   + NameAndType [b Landroid/app/Activity;]
   + NameAndType [commit ()Z]
+  + NameAndType [dismiss ()V]
   + NameAndType [edit ()Landroid/content/SharedPreferences$Editor;]
   + NameAndType [putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
   + Utf8 [()Landroid/content/SharedPreferences$Editor;]
@@ -38402,9 +38433,11 @@ Constant Pool (count = 45):
   + Utf8 [android/content/SharedPreferences]
   + Utf8 [android/content/SharedPreferences$Editor]
   + Utf8 [b]
-  + Utf8 [com/madhackerdesigns/neverbelate/b]
+  + Utf8 [com/madhackerdesigns/neverbelate/a]
   + Utf8 [com/madhackerdesigns/neverbelate/c]
+  + Utf8 [com/madhackerdesigns/neverbelate/d]
   + Utf8 [commit]
+  + Utf8 [dismiss]
   + Utf8 [edit]
   + Utf8 [eula.accepted]
   + Utf8 [java/lang/Object]
@@ -38422,19 +38455,19 @@ Fields (count = 2):
 Methods (count = 2):
   - Method:       <init>(Landroid/content/SharedPreferences;Landroid/app/Activity;)V
     Access flags: 0x0
-      = b(android.content.SharedPreferences,android.app.Activity)
+      = c(android.content.SharedPreferences,android.app.Activity)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 15, locals = 3, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] putfield #9
-        - Fieldref [com/madhackerdesigns/neverbelate/b.a Landroid/content/SharedPreferences;]
+      [2] putfield #10
+        - Fieldref [com/madhackerdesigns/neverbelate/c.a Landroid/content/SharedPreferences;]
       [5] aload_0 v0
       [6] aload_2 v2
-      [7] putfield #10
-        - Fieldref [com/madhackerdesigns/neverbelate/b.b Landroid/app/Activity;]
+      [7] putfield #11
+        - Fieldref [com/madhackerdesigns/neverbelate/c.b Landroid/app/Activity;]
       [10] aload_0 v0
-      [11] invokespecial #11
+      [11] invokespecial #12
         - Methodref [java/lang/Object.<init> ()V]
       [14] return
       Code attribute exceptions (count = 0):
@@ -38443,21 +38476,37 @@ Methods (count = 2):
     Access flags: 0x11
       = public final void onClick(android.content.DialogInterface,int)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 24, locals = 3, stack = 3):
+    + Code attribute instructions (code length = 52, locals = 3, stack = 3):
       [0] aload_0 v0
-      [1] getfield #9
-        - Fieldref [com/madhackerdesigns/neverbelate/b.a Landroid/content/SharedPreferences;]
-      [4] invokeinterface #12
+      [1] getfield #10
+        - Fieldref [com/madhackerdesigns/neverbelate/c.a Landroid/content/SharedPreferences;]
+      [4] invokeinterface #14
         - InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
       [9] ldc #1
         - String [eula.accepted]
       [11] iconst_1
-      [12] invokeinterface #14
+      [12] invokeinterface #16
         - InterfaceMethodref [android/content/SharedPreferences$Editor.putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
-      [17] invokeinterface #13
+      [17] invokeinterface #15
         - InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
       [22] pop
-      [23] return
+      [23] aload_0 v0
+      [24] getfield #11
+        - Fieldref [com/madhackerdesigns/neverbelate/c.b Landroid/app/Activity;]
+      [27] instanceof #6
+        - Class [com/madhackerdesigns/neverbelate/a]
+      [30] ifeq +15 (target=45)
+      [33] aload_0 v0
+      [34] getfield #11
+        - Fieldref [com/madhackerdesigns/neverbelate/c.b Landroid/app/Activity;]
+      [37] checkcast #6
+        - Class [com/madhackerdesigns/neverbelate/a]
+      [40] invokeinterface #17
+        - InterfaceMethodref [com/madhackerdesigns/neverbelate/a.a ()V]
+      [45] aload_1 v1
+      [46] invokeinterface #13
+        - InterfaceMethodref [android/content/DialogInterface.dismiss ()V]
+      [51] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
 
@@ -41879,7 +41928,7 @@ _____________________________________________________________________
 Interfaces (count = 0):
 
 Constant Pool (count = 268):
-  - Integer [2131099676]
+  - Integer [2131099677]
   - String []
   - String [ AND ]
   - String [ContentValues initialValues must be provided]
@@ -42626,7 +42675,7 @@ Methods (count = 8):
         - String [title]
       [165] aload_3 v3
       [166] ldc #1
-        - Integer [2131099676]
+        - Integer [2131099677]
       [168] invokevirtual #70
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [171] invokevirtual #64
@@ -43555,9 +43604,9 @@ Interfaces (count = 1):
   - Class [android/view/View$OnClickListener]
 
 Constant Pool (count = 65):
-  - Integer [2131099667]
   - Integer [2131099668]
   - Integer [2131099669]
+  - Integer [2131099670]
   - String [android.intent.action.SEND]
   - String [android.intent.extra.SUBJECT]
   - String [android.intent.extra.TEXT]
@@ -43673,7 +43722,7 @@ Methods (count = 2):
         - String [android.intent.extra.SUBJECT]
       [30] aload_2 v2
       [31] ldc #3
-        - Integer [2131099669]
+        - Integer [2131099670]
       [33] invokevirtual #20
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [36] invokevirtual #18
@@ -43684,7 +43733,7 @@ Methods (count = 2):
         - String [android.intent.extra.TEXT]
       [43] aload_2 v2
       [44] ldc #2
-        - Integer [2131099668]
+        - Integer [2131099669]
       [46] invokevirtual #20
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [49] invokevirtual #18
@@ -43694,7 +43743,7 @@ Methods (count = 2):
       [54] aload_3 v3
       [55] aload_2 v2
       [56] ldc #1
-        - Integer [2131099667]
+        - Integer [2131099668]
       [58] invokevirtual #20
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [61] invokestatic #17
@@ -44076,9 +44125,9 @@ _____________________________________________________________________
 Interfaces (count = 0):
 
 Constant Pool (count = 94):
-  - Integer [2131099698]
   - Integer [2131099699]
   - Integer [2131099700]
+  - Integer [2131099701]
   - String [android.intent.action.SEND]
   - String [android.intent.extra.EMAIL]
   - String [android.intent.extra.SUBJECT]
@@ -44262,7 +44311,7 @@ Methods (count = 4):
       [33] iconst_0
       [34] aload_1 v1
       [35] ldc #1
-        - Integer [2131099698]
+        - Integer [2131099699]
       [37] invokevirtual #24
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [40] aastore
@@ -44274,7 +44323,7 @@ Methods (count = 4):
       [48] dup
       [49] aload_1 v1
       [50] ldc #3
-        - Integer [2131099700]
+        - Integer [2131099701]
       [52] invokevirtual #24
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [55] invokestatic #28
@@ -44306,7 +44355,7 @@ Methods (count = 4):
       [90] aload_2 v2
       [91] aload_1 v1
       [92] ldc #2
-        - Integer [2131099699]
+        - Integer [2131099700]
       [94] invokevirtual #24
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [97] invokestatic #20
@@ -45036,16 +45085,16 @@ Methods (count = 1):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-+ Program class: com/madhackerdesigns/neverbelate/c
++ Program class: com/madhackerdesigns/neverbelate/d
   Superclass:    java/lang/Object
   Major version: 0x31
   Minor version: 0x0
   Access flags:  0x31
-    = public final class com.madhackerdesigns.neverbelate.c extends java.lang.Object
+    = public final class com.madhackerdesigns.neverbelate.d extends java.lang.Object
 
 Interfaces (count = 0):
 
-Constant Pool (count = 77):
+Constant Pool (count = 80):
   - Integer [2131099648]
   - Integer [2131099650]
   - Integer [2131099651]
@@ -45061,6 +45110,7 @@ Constant Pool (count = 77):
   - Class [com/madhackerdesigns/neverbelate/a]
   - Class [com/madhackerdesigns/neverbelate/b]
   - Class [com/madhackerdesigns/neverbelate/c]
+  - Class [com/madhackerdesigns/neverbelate/d]
   - Class [java/lang/Object]
   - Methodref [android/app/Activity.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
   - Methodref [android/app/AlertDialog.show ()V]
@@ -45070,14 +45120,16 @@ Constant Pool (count = 77):
   - Methodref [android/app/AlertDialog$Builder.setMessage (I)Landroid/app/AlertDialog$Builder;]
   - Methodref [android/app/AlertDialog$Builder.setPositiveButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
   - Methodref [android/app/AlertDialog$Builder.setTitle (I)Landroid/app/AlertDialog$Builder;]
-  - Methodref [com/madhackerdesigns/neverbelate/a.<init> (Landroid/app/Activity;)V]
-  - Methodref [com/madhackerdesigns/neverbelate/b.<init> (Landroid/content/SharedPreferences;Landroid/app/Activity;)V]
+  - Methodref [com/madhackerdesigns/neverbelate/b.<init> (Landroid/app/Activity;)V]
+  - Methodref [com/madhackerdesigns/neverbelate/c.<init> (Landroid/content/SharedPreferences;Landroid/app/Activity;)V]
   - Methodref [java/lang/Object.<init> ()V]
   - InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
+  - InterfaceMethodref [com/madhackerdesigns/neverbelate/a.a ()V]
   + NameAndType [<init> ()V]
   + NameAndType [<init> (Landroid/app/Activity;)V]
   + NameAndType [<init> (Landroid/content/Context;)V]
   + NameAndType [<init> (Landroid/content/SharedPreferences;Landroid/app/Activity;)V]
+  + NameAndType [a ()V]
   + NameAndType [create ()Landroid/app/AlertDialog;]
   + NameAndType [getBoolean (Ljava/lang/String;Z)Z]
   + NameAndType [getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
@@ -45091,7 +45143,6 @@ Constant Pool (count = 77):
   + Utf8 [(I)Landroid/app/AlertDialog$Builder;]
   + Utf8 [(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
   + Utf8 [(Landroid/app/Activity;)V]
-  + Utf8 [(Landroid/app/Activity;)Z]
   + Utf8 [(Landroid/content/Context;)V]
   + Utf8 [(Landroid/content/SharedPreferences;Landroid/app/Activity;)V]
   + Utf8 [(Ljava/lang/String;I)Landroid/content/SharedPreferences;]
@@ -45111,6 +45162,7 @@ Constant Pool (count = 77):
   + Utf8 [com/madhackerdesigns/neverbelate/a]
   + Utf8 [com/madhackerdesigns/neverbelate/b]
   + Utf8 [com/madhackerdesigns/neverbelate/c]
+  + Utf8 [com/madhackerdesigns/neverbelate/d]
   + Utf8 [create]
   + Utf8 [eula]
   + Utf8 [eula.accepted]
@@ -45128,80 +45180,83 @@ Fields (count = 0):
 Methods (count = 3):
   - Method:       <init>()V
     Access flags: 0x1
-      = public c()
+      = public d()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #27
+      [1] invokespecial #28
         - Methodref [java/lang/Object.<init> ()V]
       [4] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       a(Landroid/app/Activity;)Z
+  + Method:       a(Landroid/app/Activity;)V
     Access flags: 0x9
-      = public static boolean a(android.app.Activity)
+      = public static void a(android.app.Activity)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 76, locals = 3, stack = 6):
+    + Code attribute instructions (code length = 83, locals = 3, stack = 6):
       [0] aload_0 v0
       [1] ldc #4
         - String [eula]
       [3] iconst_0
-      [4] invokevirtual #17
+      [4] invokevirtual #18
         - Methodref [android/app/Activity.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
       [7] dup
       [8] astore_1 v1
       [9] ldc #5
         - String [eula.accepted]
       [11] iconst_0
-      [12] invokeinterface #28
+      [12] invokeinterface #29
         - InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
-      [17] ifne +57 (target=74)
+      [17] ifne +56 (target=73)
       [20] new #8
         - Class [android/app/AlertDialog$Builder]
       [23] dup
       [24] aload_0 v0
-      [25] invokespecial #19
+      [25] invokespecial #20
         - Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
       [28] dup
       [29] astore_2 v2
       [30] ldc #2
         - Integer [2131099650]
-      [32] invokevirtual #24
+      [32] invokevirtual #25
         - Methodref [android/app/AlertDialog$Builder.setTitle (I)Landroid/app/AlertDialog$Builder;]
       [35] pop
       [36] aload_2 v2
       [37] iconst_0
-      [38] invokevirtual #21
+      [38] invokevirtual #22
         - Methodref [android/app/AlertDialog$Builder.setCancelable (Z)Landroid/app/AlertDialog$Builder;]
       [41] pop
       [42] aload_2 v2
       [43] ldc #1
         - Integer [2131099648]
-      [45] new #14
-        - Class [com/madhackerdesigns/neverbelate/b]
+      [45] new #15
+        - Class [com/madhackerdesigns/neverbelate/c]
       [48] dup
       [49] aload_1 v1
       [50] aload_0 v0
-      [51] invokespecial #26
-        - Methodref [com/madhackerdesigns/neverbelate/b.<init> (Landroid/content/SharedPreferences;Landroid/app/Activity;)V]
-      [54] invokevirtual #23
+      [51] invokespecial #27
+        - Methodref [com/madhackerdesigns/neverbelate/c.<init> (Landroid/content/SharedPreferences;Landroid/app/Activity;)V]
+      [54] invokevirtual #24
         - Methodref [android/app/AlertDialog$Builder.setPositiveButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [57] pop
       [58] aload_2 v2
       [59] ldc #3
         - Integer [2131099651]
-      [61] invokevirtual #22
+      [61] invokevirtual #23
         - Methodref [android/app/AlertDialog$Builder.setMessage (I)Landroid/app/AlertDialog$Builder;]
       [64] pop
       [65] aload_2 v2
-      [66] invokevirtual #20
+      [66] invokevirtual #21
         - Methodref [android/app/AlertDialog$Builder.create ()Landroid/app/AlertDialog;]
-      [69] invokevirtual #18
+      [69] invokevirtual #19
         - Methodref [android/app/AlertDialog.show ()V]
-      [72] iconst_0
-      [73] ireturn
-      [74] iconst_1
-      [75] ireturn
+      [72] return
+      [73] aload_0 v0
+      [74] checkcast #13
+        - Class [com/madhackerdesigns/neverbelate/a]
+      [77] invokeinterface #30
+        - InterfaceMethodref [com/madhackerdesigns/neverbelate/a.a ()V]
+      [82] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       b(Landroid/app/Activity;)V
@@ -45213,42 +45268,42 @@ Methods (count = 3):
         - Class [android/app/AlertDialog$Builder]
       [3] dup
       [4] aload_0 v0
-      [5] invokespecial #19
+      [5] invokespecial #20
         - Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
       [8] dup
       [9] astore_1 v1
       [10] ldc #2
         - Integer [2131099650]
-      [12] invokevirtual #24
+      [12] invokevirtual #25
         - Methodref [android/app/AlertDialog$Builder.setTitle (I)Landroid/app/AlertDialog$Builder;]
       [15] pop
       [16] aload_1 v1
       [17] iconst_0
-      [18] invokevirtual #21
+      [18] invokevirtual #22
         - Methodref [android/app/AlertDialog$Builder.setCancelable (Z)Landroid/app/AlertDialog$Builder;]
       [21] pop
       [22] aload_1 v1
       [23] ldc #1
         - Integer [2131099648]
-      [25] new #13
-        - Class [com/madhackerdesigns/neverbelate/a]
+      [25] new #14
+        - Class [com/madhackerdesigns/neverbelate/b]
       [28] dup
       [29] aload_0 v0
-      [30] invokespecial #25
-        - Methodref [com/madhackerdesigns/neverbelate/a.<init> (Landroid/app/Activity;)V]
-      [33] invokevirtual #23
+      [30] invokespecial #26
+        - Methodref [com/madhackerdesigns/neverbelate/b.<init> (Landroid/app/Activity;)V]
+      [33] invokevirtual #24
         - Methodref [android/app/AlertDialog$Builder.setPositiveButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [36] pop
       [37] aload_1 v1
       [38] ldc #3
         - Integer [2131099651]
-      [40] invokevirtual #22
+      [40] invokevirtual #23
         - Methodref [android/app/AlertDialog$Builder.setMessage (I)Landroid/app/AlertDialog$Builder;]
       [43] pop
       [44] aload_1 v1
-      [45] invokevirtual #20
+      [45] invokevirtual #21
         - Methodref [android/app/AlertDialog$Builder.create ()Landroid/app/AlertDialog;]
-      [48] invokevirtual #18
+      [48] invokevirtual #19
         - Methodref [android/app/AlertDialog.show ()V]
       [51] return
       Code attribute exceptions (count = 0):
@@ -47761,10 +47816,9 @@ Interfaces (count = 0):
 
 Constant Pool (count = 263):
   - Integer [2130903046]
-  - Integer [2131099721]
-  - Integer [2131099727]
-  - Integer [2131099732]
-  - Integer [2131099736]
+  - Integer [2131099722]
+  - Integer [2131099728]
+  - Integer [2131099733]
   - Integer [2131099737]
   - Integer [2131099738]
   - Integer [2131099739]
@@ -47774,6 +47828,7 @@ Constant Pool (count = 263):
   - Integer [2131099743]
   - Integer [2131099744]
   - Integer [2131099745]
+  - Integer [2131099746]
   - Integer [2131165206]
   - Integer [2131165207]
   - Integer [2131165208]
@@ -48093,7 +48148,7 @@ Methods (count = 10):
         - Methodref [com/madhackerdesigns/neverbelate/ui/RegistrationForm.setContentView (I)V]
       [11] aload_0 v0
       [12] ldc #4
-        - Integer [2131099732]
+        - Integer [2131099733]
       [14] invokevirtual #94
         - Methodref [com/madhackerdesigns/neverbelate/ui/RegistrationForm.setTitle (I)V]
       [17] aload_0 v0
@@ -48241,15 +48296,15 @@ Methods (count = 10):
       [64] areturn
       [65] aload_2 v2
       [66] ldc #5
-        - Integer [2131099736]
+        - Integer [2131099737]
       [68] invokevirtual #73
         - Methodref [android/app/AlertDialog$Builder.setTitle (I)Landroid/app/AlertDialog$Builder;]
       [71] ldc #6
-        - Integer [2131099737]
+        - Integer [2131099738]
       [73] invokevirtual #69
         - Methodref [android/app/AlertDialog$Builder.setMessage (I)Landroid/app/AlertDialog$Builder;]
       [76] ldc #8
-        - Integer [2131099739]
+        - Integer [2131099740]
       [78] new #46
         - Class [com/madhackerdesigns/neverbelate/ui/ad]
       [81] dup
@@ -48259,7 +48314,7 @@ Methods (count = 10):
       [86] invokevirtual #72
         - Methodref [android/app/AlertDialog$Builder.setPositiveButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [89] ldc #7
-        - Integer [2131099738]
+        - Integer [2131099739]
       [91] new #45
         - Class [com/madhackerdesigns/neverbelate/ui/ac]
       [94] dup
@@ -48275,15 +48330,15 @@ Methods (count = 10):
       [107] areturn
       [108] aload_2 v2
       [109] ldc #9
-        - Integer [2131099740]
+        - Integer [2131099741]
       [111] invokevirtual #73
         - Methodref [android/app/AlertDialog$Builder.setTitle (I)Landroid/app/AlertDialog$Builder;]
       [114] ldc #10
-        - Integer [2131099741]
+        - Integer [2131099742]
       [116] invokevirtual #69
         - Methodref [android/app/AlertDialog$Builder.setMessage (I)Landroid/app/AlertDialog$Builder;]
       [119] ldc #11
-        - Integer [2131099742]
+        - Integer [2131099743]
       [121] new #48
         - Class [com/madhackerdesigns/neverbelate/ui/w]
       [124] dup
@@ -48299,15 +48354,15 @@ Methods (count = 10):
       [137] areturn
       [138] aload_2 v2
       [139] ldc #12
-        - Integer [2131099743]
+        - Integer [2131099744]
       [141] invokevirtual #73
         - Methodref [android/app/AlertDialog$Builder.setTitle (I)Landroid/app/AlertDialog$Builder;]
       [144] ldc #13
-        - Integer [2131099744]
+        - Integer [2131099745]
       [146] invokevirtual #69
         - Methodref [android/app/AlertDialog$Builder.setMessage (I)Landroid/app/AlertDialog$Builder;]
       [149] ldc #14
-        - Integer [2131099745]
+        - Integer [2131099746]
       [151] new #47
         - Class [com/madhackerdesigns/neverbelate/ui/v]
       [154] dup
@@ -48519,13 +48574,13 @@ Methods (count = 10):
       [105] dup
       [106] astore v7
       [108] ldc #3
-        - Integer [2131099727]
+        - Integer [2131099728]
       [110] invokevirtual #75
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [113] astore v8
       [115] aload v7
       [117] ldc #2
-        - Integer [2131099721]
+        - Integer [2131099722]
       [119] invokevirtual #75
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [122] astore v7
@@ -62166,10 +62221,10 @@ Constant Pool (count = 752):
   - Integer [134217728]
   - Integer [268435456]
   - Integer [2130837518]
-  - Integer [2131099676]
-  - Integer [2131099694]
+  - Integer [2131099677]
   - Integer [2131099695]
-  - Integer [2131099697]
+  - Integer [2131099696]
+  - Integer [2131099698]
   - Float [1.25]
   - String []
   - String [ ]
@@ -63715,7 +63770,7 @@ Methods (count = 14):
       [563] invokevirtual #244
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.getResources ()Landroid/content/res/Resources;]
       [566] ldc #4
-        - Integer [2131099676]
+        - Integer [2131099677]
       [568] invokevirtual #208
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [571] astore v6
@@ -64507,7 +64562,7 @@ Methods (count = 14):
       [106] dup
       [107] astore_3 v3
       [108] ldc #7
-        - Integer [2131099697]
+        - Integer [2131099698]
       [110] invokevirtual #208
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [113] astore v6
@@ -64526,7 +64581,7 @@ Methods (count = 14):
       [133] astore v6
       [135] aload_3 v3
       [136] ldc #5
-        - Integer [2131099694]
+        - Integer [2131099695]
       [138] invokevirtual #208
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [141] astore v7
@@ -64588,7 +64643,7 @@ Methods (count = 14):
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [226] aload_3 v3
       [227] ldc #6
-        - Integer [2131099695]
+        - Integer [2131099696]
       [229] invokevirtual #208
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [232] invokevirtual #278

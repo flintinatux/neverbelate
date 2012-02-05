@@ -416,7 +416,6 @@ com.madhackerdesigns.neverbelate.ui.LauncherActivity:
     private static final boolean ADMOB
     private static final boolean ADMOB_TEST
     private static final int DLG_COMING_SOON
-    private static final int RESULT_TOS
     private static final java.lang.String LOG_TAG
 com.madhackerdesigns.neverbelate.ui.MapOverlay:
     35:37:public void clearOverlays()

@@ -49,9 +49,8 @@ public class Eula {
      * method of your main Activity.
      *
      * @param activity The Activity to finish if the user rejects the EULA.
-     * @return Whether the user has agreed already.
      */
-    public static boolean show(final Activity activity) {
+    public static void show(final Activity activity) {
         final SharedPreferences preferences = activity.getSharedPreferences(PREFERENCES_EULA,
                 Activity.MODE_PRIVATE);
         if (!preferences.getBoolean(PREFERENCE_EULA_ACCEPTED, false)) {
@@ -64,6 +63,7 @@ public class Eula {
                     if (activity instanceof OnEulaAgreedTo) {
                         ((OnEulaAgreedTo) activity).onEulaAgreedTo();
                     }
+                    dialog.dismiss();
                 }
             });
 //            builder.setNegativeButton(R.string.eula_refuse, new DialogInterface.OnClickListener() {
@@ -79,9 +79,9 @@ public class Eula {
 //            builder.setMessage(readEula(activity));
             builder.setMessage(R.string.eula_text);
             builder.create().show();
-            return false;
+        } else {
+        	((OnEulaAgreedTo) activity).onEulaAgreedTo();
         }
-        return true;
     }
     
     public static void display(final Activity activity) {

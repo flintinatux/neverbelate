@@ -107,7 +107,7 @@
 			android:defaultValue="@bool/default_insistent" />
 	</PreferenceCategory>
 	
-	<PreferenceCategory android:title="Other Settings">
+	<PreferenceCategory android:title="Other Options">
 		<com.madhackerdesigns.neverbelate.settings.FeedbackPreference
 			android:id="@+id/pr_send_feedback"
 			android:selectable="true"
@@ -126,7 +126,11 @@
 		    android:id="@+id/pr_privacy"
 		    android:selectable="true"
 		    android:title="@string/privacy_title" />
-		
+		<Preference
+			android:id="@+id/pr_app_version"
+			android:selectable="false"
+			android:summary="@string/version_name"
+			android:title="@string/app_version" />
 <!--		<ListPreference-->
 <!--			android:key="version history"-->
 <!--			android:title="Version history"-->

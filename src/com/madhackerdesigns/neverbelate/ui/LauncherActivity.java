@@ -34,13 +34,12 @@ import com.pontiflex.mobile.webview.sdk.IAdManager;
  * @author smccormack
  *
  */
-public class LauncherActivity extends Activity {
+public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 
 	// Static constants
 	private static final boolean ADMOB = true;
 	private static final boolean ADMOB_TEST = false;
 	private static final int DLG_COMING_SOON = 0;
-	private static final int RESULT_TOS = 0;
 	private static final String LOG_TAG = "NeverBeLateService";
 
 	// Private fields
@@ -54,18 +53,15 @@ public class LauncherActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {		
 		super.onCreate(savedInstanceState);
 		
+		// Show TOS and EULA for acceptance
+		Eula.show(this);
+		
 		// TODO: If first load, download the registration letter copy.
 		// (For now, just get a static copy from the strings resources.) 
 		
 		// TODO: Present registration letter if first use.
 		// (Letter dialog will start registration activity.)
 				
-		// Show Pontiflex ad *on launch* each time?
-		if (getIntent().hasCategory(Intent.CATEGORY_LAUNCHER)) {
-			IAdManager adManager = AdManagerFactory.createInstance(getApplication());
-			adManager.showAd();
-		}
-
 		// Set content view to launcher layout and load application resources
 		setContentView(R.layout.launcher);
 		
@@ -131,11 +127,11 @@ public class LauncherActivity extends Activity {
 		
 		// Load up an AdMob banner
 		if (ADMOB) {
-			AdRequest request = new AdRequest();
-			request.setTesting(ADMOB_TEST);
 			AdView adView = (AdView) findViewById(R.id.ad_view);
 		    if (adView != null) {
-		    	adView.loadAd(request);
+		    	AdRequest request = new AdRequest();
+				request.setTesting(ADMOB_TEST);
+				adView.loadAd(request);
 		    	Logger.d(LOG_TAG, "AdMob banner loaded.");
 		    }
 		}
@@ -175,21 +171,6 @@ public class LauncherActivity extends Activity {
 	}
 
 	/* (non-Javadoc)
-	 * @see android.app.Activity#onActivityResult(int, int, android.content.Intent)
-	 */
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//		super.onActivityResult(requestCode, resultCode, data);
-		switch(requestCode) {
-		case RESULT_TOS:
-			if (resultCode == 1) {
-				// TODO: Set tos_accepted to true
-			}
-		}
-		
-	}
-
-	/* (non-Javadoc)
 	 * @see android.app.Activity#onPause()
 	 */
 	@Override
@@ -207,13 +188,16 @@ public class LauncherActivity extends Activity {
 	protected void onResume() {
 		super.onResume();
 		
-		// Show TOS and EULA for acceptance
-		Eula.show(this);
-		
 		// Load up the preference helper and set the checked state
 		if (mPrefs == null) { mPrefs = new PreferenceHelper(this); }
 		if (mEnableBtn == null) { mEnableBtn = (CheckBox) findViewById(R.id.btn_enable); }
 		mEnableBtn.setChecked(mPrefs.isNeverLateEnabled());
+	}
+
+	public void onEulaAgreedTo() {
+		// Show Pontiflex ad after confirmation of EULA agreement
+		IAdManager adManager = AdManagerFactory.createInstance(getApplication());
+		adManager.showAd();
 	}
 	
 }
