@@ -38,6 +38,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 
 	// Static constants
 	private static final boolean ADMOB = true;
+	private static final boolean PONTIFLEX = false;
 	private static final boolean ADMOB_TEST = false;
 	private static final int DLG_COMING_SOON = 0;
 	private static final String LOG_TAG = "NeverBeLateService";
@@ -110,7 +111,16 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 			
 		};
 		((Button) findViewById(R.id.btn_tips)).setOnClickListener(comingSoonListener);
-		((Button) findViewById(R.id.btn_tutorial)).setOnClickListener(comingSoonListener);
+//		((Button) findViewById(R.id.btn_tutorial)).setOnClickListener(comingSoonListener);
+		
+		Button quickTourBtn = (Button) findViewById(R.id.btn_tutorial);
+		quickTourBtn.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				startActivity(new Intent(LauncherActivity.this, QuickTourActivity.class));
+			}
+			
+		});
 		
 		// Set the NeverLate logo to launch the testing activity, REMOVE BEFORE PUBLISHING!
 		ImageView logo = (ImageView) findViewById(R.id.logo);
@@ -196,8 +206,10 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 
 	public void onEulaAgreedTo() {
 		// Show Pontiflex ad after confirmation of EULA agreement
-		IAdManager adManager = AdManagerFactory.createInstance(getApplication());
-		adManager.showAd();
+		if (PONTIFLEX) {
+			IAdManager adManager = AdManagerFactory.createInstance(getApplication());
+			adManager.showAd();
+		}
 	}
 	
 }
