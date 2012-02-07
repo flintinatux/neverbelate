@@ -65,7 +65,7 @@
 <activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation" />
 <activity android:name="com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity" android:stateNotNeeded="true" android:excludeFromRecents="true" android:taskAffinity=""/>
 <activity android:name="com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity" android:configChanges="keyboardHidden" android:stateNotNeeded="true" android:excludeFromRecents="true" android:taskAffinity=""/>
-<activity android:name=".ui.QuickTourActivity"></activity>
+<activity android:name=".ui.QuickTourActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
 </application>
     
 </manifest> 

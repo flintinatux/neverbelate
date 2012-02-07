@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="qt_intro_header">Thanks for installing NeverBeLate™!</string>
+    <string name="qt_intro_message">Congratulations on taking the first step towards a new future of taking control of your schedule and eliminating lateness in your professional and personal life.\n\nThis quick tour is simple to use: swipe horizontally to move back and forth between steps, and swipe vertically to scroll up and down on a given step.\n\nNow swipe left to go to Step 1!</string>
+</resources>
