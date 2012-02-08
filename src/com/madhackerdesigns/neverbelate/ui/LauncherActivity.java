@@ -3,11 +3,14 @@
  */
 package com.madhackerdesigns.neverbelate.ui;
 
+import java.util.Date;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
@@ -40,11 +43,19 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 	private static final boolean ADMOB = true;
 	private static final boolean ADMOB_TEST = false;
 	private static final int DLG_COMING_SOON = 0;
-	private static final String LOG_TAG = "NeverBeLateService";
+	private static final int DLG_WHATS_NEW = 1;
+	private static final long FIVE_MINUTES = 5*60*1000;
+	private static final String KEY_AD_LAST_SHOWN = "app_state.ad_last_shown";
+	private static final String KEY_WHATS_NEW = "app_state.whats_new";
+    private static final String LOG_TAG = "NeverBeLateService";
+    private static final boolean PONTIFLEX = true;
+	private static final String PREF_APP_STATE = "app_state";
 
 	// Private fields
+	private boolean mAdJustShown = false;
 	private CheckBox mEnableBtn;
 	private PreferenceHelper mPrefs;
+	private SharedPreferences mAppState;
 	
 	/* (non-Javadoc)
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
@@ -52,6 +63,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {		
 		super.onCreate(savedInstanceState);
+		loadPreferences();
 		
 		// Show TOS and EULA for acceptance
 		Eula.show(this);
@@ -66,7 +78,6 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		setContentView(R.layout.launcher);
 		
 		// Setup the Enable checkbox
-		if (mPrefs == null) { mPrefs = new PreferenceHelper(this); }
 		mEnableBtn = (CheckBox) findViewById(R.id.btn_enable);
 		mEnableBtn.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
@@ -161,10 +172,23 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 			       .setCancelable(true)
 			       .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
 			           public void onClick(DialogInterface dialog, int id) {
-			                dialog.cancel();
+			                dialog.dismiss();
 			           }
 			       });
 			break;
+		case DLG_WHATS_NEW:
+			builder.setTitle(R.string.whats_new_title)
+				   .setMessage(R.string.whats_new_message)
+				   .setCancelable(true)
+				   .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+					
+						public void onClick(DialogInterface dialog, int which) {
+							// Store the new version of What's new as shown and dismiss dialog
+							int current = getResources().getInteger(R.integer.whats_new_version);
+							mAppState.edit().putInt(KEY_WHATS_NEW, current).commit();
+							dialog.dismiss();
+						}
+					});
 		}
 		
 		return builder.create();
@@ -178,7 +202,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		super.onPause();
 		
 		// Release the preference helper resources
-		mPrefs = null;
+		dropPreferences();
 	}
 
 	/* (non-Javadoc)
@@ -189,15 +213,44 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		super.onResume();
 		
 		// Load up the preference helper and set the checked state
-		if (mPrefs == null) { mPrefs = new PreferenceHelper(this); }
+		loadPreferences();
 		if (mEnableBtn == null) { mEnableBtn = (CheckBox) findViewById(R.id.btn_enable); }
 		mEnableBtn.setChecked(mPrefs.isNeverLateEnabled());
+		
+		// Show the What's new dialog after ad if haven't already
+		if (mAdJustShown) {
+			Logger.d("Showing Whats new dialog");
+			int previous = mAppState.getInt(KEY_WHATS_NEW, 0);
+			int current = getResources().getInteger(R.integer.whats_new_version);
+			if (previous < current) { 
+				showDialog(DLG_WHATS_NEW);
+			}
+		}
 	}
 
 	public void onEulaAgreedTo() {
 		// Show Pontiflex ad after confirmation of EULA agreement
-		IAdManager adManager = AdManagerFactory.createInstance(getApplication());
-		adManager.showAd();
+		long adLastShown = mAppState.getLong(KEY_AD_LAST_SHOWN, 0);
+		long now = new Date().getTime();
+		if (PONTIFLEX && (now > (adLastShown + FIVE_MINUTES))) {
+			Logger.d("EULA accepted, showing ad");
+			mAppState.edit().putLong(KEY_AD_LAST_SHOWN, now).commit();
+			mAdJustShown = true;
+			IAdManager adManager = AdManagerFactory.createInstance(getApplication());
+			adManager.showAd();
+		}
+	}
+	
+	private void loadPreferences() {
+		if (mPrefs == null) { mPrefs = new PreferenceHelper(this); }
+		if (mAppState == null) { 
+			mAppState = getSharedPreferences(PREF_APP_STATE, Activity.MODE_PRIVATE);
+		}
+    }
+	
+	private void dropPreferences() {
+		mPrefs = null;
+		mAppState = null;
 	}
 	
 }

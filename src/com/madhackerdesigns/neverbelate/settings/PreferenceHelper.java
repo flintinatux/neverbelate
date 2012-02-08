@@ -28,6 +28,7 @@ public class PreferenceHelper {
 	private static final String	 	DEFAULT_LOOKAHEAD_WINDOW = "7200000";
 	private static final boolean 	DEFAULT_NEVERLATE_ENABLED = false;
 	private static final String	 	DEFAULT_NOTIFICATION_METHOD = "ALERT";
+	private static final boolean	DEFAULT_ONLY_MARKED_LOCATIONS = false;
 	private static final String		DEFAULT_RINGTONE = Settings.System.DEFAULT_ALARM_ALERT_URI.toString();
 	private static final String 	DEFAULT_SNOOZE_DURATION = "300000";
 	private static final boolean 	DEFAULT_TOS_ACCEPTED = false;
@@ -37,22 +38,23 @@ public class PreferenceHelper {
 	private static final boolean 	DEFAULT_WARN_NO_LOCATION = false;
 	
 	// Preference keys
-	private final static String KEY_ADVANCE_WARNING = "advance_warning";
-	private final static String KEY_AVOID_HIGHWAYS = "avoid_highways";
-	private final static String KEY_AVOID_TOLLS = "avoid_tolls";
-//	private final static String KEY_FINE_REQUIRED = "fine_required";
-	private final static String KEY_INSISTENT = "insistent";
-	private final static String KEY_LOCATION_FREQ = "location_freq";
-	private final static String KEY_LOOKAHEAD_WINDOW = "lookahead_window";
-	private final static String KEY_NEVERLATE_ENABLED = "neverlate_enabled";
-	private final static String KEY_NOTIFICATION_METHOD = "notification_method";
-	private final static String KEY_RINGTONE = "ringtone";
-	private final static String KEY_SNOOZE_DURATION = "snooze_duration";
-	private final static String KEY_TOS_ACCEPTED = "tos_accepted";
-	private final static String KEY_TRAVEL_MODE = "travel_mode";
-	private final static String KEY_TRAVELTIME_FREQ = "traveltime_freq";
-	private final static String KEY_VIBRATE = "vibrate";
-	private final static String KEY_WARN_NO_LOCATION = "warn_no_location";
+	private static final String KEY_ADVANCE_WARNING = "advance_warning";
+	private static final String KEY_AVOID_HIGHWAYS = "avoid_highways";
+	private static final String KEY_AVOID_TOLLS = "avoid_tolls";
+//	private static final String KEY_FINE_REQUIRED = "fine_required";
+	private static final String KEY_INSISTENT = "insistent";
+	private static final String KEY_LOCATION_FREQ = "location_freq";
+	private static final String KEY_LOOKAHEAD_WINDOW = "lookahead_window";
+	private static final String KEY_NEVERLATE_ENABLED = "neverlate_enabled";
+	private static final String KEY_NOTIFICATION_METHOD = "notification_method";
+	private static final String KEY_ONLY_MARKED_LOCATIONS = "only_marked_locations";
+	private static final String KEY_RINGTONE = "ringtone";
+	private static final String KEY_SNOOZE_DURATION = "snooze_duration";
+	private static final String KEY_TOS_ACCEPTED = "tos_accepted";
+	private static final String KEY_TRAVEL_MODE = "travel_mode";
+	private static final String KEY_TRAVELTIME_FREQ = "traveltime_freq";
+	private static final String KEY_VIBRATE = "vibrate";
+	private static final String KEY_WARN_NO_LOCATION = "warn_no_location";
 
 	// Private fields
 	private SharedPreferences mPrefs;
@@ -133,6 +135,13 @@ public class PreferenceHelper {
 	public NotificationMethod getNotificationMethod() {
 		return Enum.valueOf(NotificationMethod.class, 
 				mPrefs.getString(KEY_NOTIFICATION_METHOD, DEFAULT_NOTIFICATION_METHOD));
+	}
+	
+	/**
+	 * @return True if the user intends to mark locations for NeverBeLate to find with a (*)
+	 */
+	public boolean isOnlyMarkedLocations() {
+		return mPrefs.getBoolean(KEY_ONLY_MARKED_LOCATIONS, DEFAULT_ONLY_MARKED_LOCATIONS);
 	}
 	
 	/**

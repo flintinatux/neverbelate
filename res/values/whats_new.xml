@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="whats_new_title">What\'s new in NeverBeLate™</string>
+    <integer name="whats_new_version">7</integer>
+    <string name="whats_new_message">Good news! I have added the ability to mark events for NeverBeLate™
+        to find by placing an asterisk or star (*) at the beginning of the event location. For example,
+        \"*221b Baker Street, London, UK\" or \"*Houston, TX\". Now if a coworker invites you to a meeting 
+        with a location of \"Conference Room 4b\", NeverBeLate™ will just ignore that event and will not 
+        warn you incorrectly.\n
+        \nEnabling \"marked locations\" is simple: just press \"Configure Settings\" on the main screen of 
+        NeverBeLate™, and check the box labeled \"Only marked locations\". Then start placing an asterisk
+        or star (*) at the beginning of your searchable event locations.\n
+        \nIf you LOVE NeverBeLate™, don\'t forget to share it with your friends and coworkers using the 
+        \"Share with a friend\" button! And if you have any problems or questions about this new feature, then let me know with the \"Send feedback\" button in the Settings menu. Thanks!</string>
+</resources>

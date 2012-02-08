@@ -240,6 +240,7 @@ com.madhackerdesigns.neverbelate.R$bool
 com.madhackerdesigns.neverbelate.R$color
 com.madhackerdesigns.neverbelate.R$drawable
 com.madhackerdesigns.neverbelate.R$id
+com.madhackerdesigns.neverbelate.R$integer
 com.madhackerdesigns.neverbelate.R$layout
 com.madhackerdesigns.neverbelate.R$string
 com.madhackerdesigns.neverbelate.R$style
@@ -387,6 +388,7 @@ com.madhackerdesigns.neverbelate.settings.PreferenceHelper:
     private static final java.lang.String DEFAULT_LOOKAHEAD_WINDOW
     private static final boolean DEFAULT_NEVERLATE_ENABLED
     private static final java.lang.String DEFAULT_NOTIFICATION_METHOD
+    private static final boolean DEFAULT_ONLY_MARKED_LOCATIONS
     private static final java.lang.String DEFAULT_SNOOZE_DURATION
     private static final boolean DEFAULT_TOS_ACCEPTED
     private static final java.lang.String DEFAULT_TRAVEL_MODE
@@ -401,6 +403,7 @@ com.madhackerdesigns.neverbelate.settings.PreferenceHelper:
     private static final java.lang.String KEY_LOOKAHEAD_WINDOW
     private static final java.lang.String KEY_NEVERLATE_ENABLED
     private static final java.lang.String KEY_NOTIFICATION_METHOD
+    private static final java.lang.String KEY_ONLY_MARKED_LOCATIONS
     private static final java.lang.String KEY_RINGTONE
     private static final java.lang.String KEY_SNOOZE_DURATION
     private static final java.lang.String KEY_TOS_ACCEPTED
@@ -408,15 +411,21 @@ com.madhackerdesigns.neverbelate.settings.PreferenceHelper:
     private static final java.lang.String KEY_TRAVELTIME_FREQ
     private static final java.lang.String KEY_VIBRATE
     private static final java.lang.String KEY_WARN_NO_LOCATION
-    103:103:public long getLocationFreq()
-    156:156:public boolean isTosAccepted()
-    165:166:public boolean setTosAccepted(boolean)
-    194:194:public boolean isWarnNoLocation()
+    105:105:public long getLocationFreq()
+    165:165:public boolean isTosAccepted()
+    174:175:public boolean setTosAccepted(boolean)
+    203:203:public boolean isWarnNoLocation()
 com.madhackerdesigns.neverbelate.ui.LauncherActivity:
     private static final boolean ADMOB
     private static final boolean ADMOB_TEST
     private static final int DLG_COMING_SOON
+    private static final int DLG_WHATS_NEW
+    private static final long FIVE_MINUTES
+    private static final java.lang.String KEY_AD_LAST_SHOWN
+    private static final java.lang.String KEY_WHATS_NEW
     private static final java.lang.String LOG_TAG
+    private static final boolean PONTIFLEX
+    private static final java.lang.String PREF_APP_STATE
 com.madhackerdesigns.neverbelate.ui.MapOverlay:
     35:37:public void clearOverlays()
 com.madhackerdesigns.neverbelate.ui.Registration:

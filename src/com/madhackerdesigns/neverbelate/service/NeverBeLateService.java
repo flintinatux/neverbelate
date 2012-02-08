@@ -164,9 +164,12 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 	}
 	
 	private void checkTravelTimes() {
+		// Optimization: shuffle PreferenceHelper into a local variable
+		PreferenceHelper prefs = mPrefs;
+		
 		// Start off by clearing old alerts that are past their expiration date.
 		// Don't want the database to get too big and eat up the user's precious storage space.
-		long expiration = new Date().getTime() - mPrefs.getLookaheadWindow();
+		long expiration = new Date().getTime() - prefs.getLookaheadWindow();
 		int rowsDeleted = mContentResolver.delete(
 				AlertsContract.Alerts.CONTENT_URI, 
 				AlertsContract.Alerts.BEGIN + "<?", 
@@ -218,7 +221,7 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 				int calendarColor = instance.getInt(CalendarHelper.PROJ_COLOR);
 				
 				// ignore event if not in window
-				if (instanceBegin < mNow || instanceBegin > (mNow + mPrefs.getLookaheadWindow())) {
+				if (instanceBegin < mNow || instanceBegin > (mNow + prefs.getLookaheadWindow())) {
 					Logger.d(LOG_TAG, "Event " + eventID + " not in window.");
 					continue;
 				}
@@ -226,6 +229,13 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 				// TODO:  in the future, ask user if they want to add a location
 				if (eventLocation == null || eventLocation == "") { 
 					Logger.d(LOG_TAG, "Event " + eventID + " does not have a location specified.");
+					continue; 
+				}
+				
+				// If the users wants to mark searchable locations with a (*), then filter out
+				// those that aren't marked
+				if (prefs.isOnlyMarkedLocations() && !eventLocation.matches("^\\*.*")) { 
+					Logger.d(LOG_TAG, "Event " + eventID + " not marked with a star.");
 					continue; 
 				}
 				
@@ -268,9 +278,9 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 				b.appendQueryParameter("origin", String.valueOf(currentBestLocation.getLatitude()) + "," 
 						+ String.valueOf(currentBestLocation.getLongitude()));
 				b.appendQueryParameter("destination", eventLocation);
-				b.appendQueryParameter("mode", mPrefs.getTravelMode());
-				if (mPrefs.isAvoidHighways()) { b.appendQueryParameter("avoid", "highways"); }
-				if (mPrefs.isAvoidTolls()) { b.appendQueryParameter("avoid", "tolls"); }
+				b.appendQueryParameter("mode", prefs.getTravelMode());
+				if (prefs.isAvoidHighways()) { b.appendQueryParameter("avoid", "highways"); }
+				if (prefs.isAvoidTolls()) { b.appendQueryParameter("avoid", "tolls"); }
 				b.appendQueryParameter("sensor", "true");
 				String url = b.build().toString();
 				
@@ -312,7 +322,7 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 						JSONObject leg = route.getJSONArray("legs").getJSONObject(0);
 						long duration = leg.getJSONObject("duration").getLong("value") * 1000;   // in ms
 						Logger.d(LOG_TAG, "Duration: " + String.valueOf(duration/60000) + " min");
-						long warnTime = instanceBegin - duration - mPrefs.getAdvanceWarning();
+						long warnTime = instanceBegin - duration - prefs.getAdvanceWarning();
 						Logger.d(LOG_TAG, "Warn time: " + FullDateTime(warnTime));
 						String copyrights = route.getString("copyrights");
 						
@@ -341,7 +351,7 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 						}
 						
 						// Issue a notification if warning is required before the next check
-						if (warnTime <= (mNow + mPrefs.getTraveltimeFreq())) {
+						if (warnTime <= (mNow + prefs.getTraveltimeFreq())) {
 							// Whether we alert user now or later, consider alert as FIRED.
 							Logger.d(LOG_TAG, "Marking event " + eventID + " as FIRED.");
 							ContentValues firedValues = new ContentValues();

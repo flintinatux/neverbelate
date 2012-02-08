@@ -11,10 +11,10 @@ com.madhackerdesigns.neverbelate.settings.PreferenceHelper
 com.madhackerdesigns.neverbelate.settings.PreferenceHelper: PreferenceHelper(android.content.Context)
 com.pontiflex.mobile.webview.utilities.RegistrationStorage
 com.pontiflex.mobile.webview.utilities.RegistrationStorage: RegistrationStorage(android.content.Context)
-com.madhackerdesigns.neverbelate.settings.FeedbackPreference
-com.madhackerdesigns.neverbelate.settings.FeedbackPreference: FeedbackPreference(android.content.Context)
 com.madhackerdesigns.neverbelate.ui.Registration
 com.madhackerdesigns.neverbelate.ui.Registration: Registration(android.content.Context)
+com.madhackerdesigns.neverbelate.settings.FeedbackPreference
+com.madhackerdesigns.neverbelate.settings.FeedbackPreference: FeedbackPreference(android.content.Context)
 com.madhackerdesigns.neverbelate.settings.PrivacyPreference
 com.madhackerdesigns.neverbelate.settings.PrivacyPreference: PrivacyPreference(android.content.Context)
 com.google.ads.AdView

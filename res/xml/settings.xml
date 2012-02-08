@@ -49,11 +49,17 @@
 			android:entryValues="@array/lookahead_values"
 			android:defaultValue="@string/default_lookahead_window" />
 		<CheckBoxPreference
-			android:key="warn_no_location"
-			android:title="Warn location not found"
-			android:summaryOn="You may then add a valid location or disable notifications for that event"
-			android:summaryOff="Will fail quietly if event location is missing or invalid\n(Not Recommended!)"
-			android:defaultValue="@bool/default_warn_no_location" />
+			android:key="only_marked_locations"
+			android:title="Only marked locations"
+			android:summaryOn="Will only look for events with locations that begin with an asterisk or star (*)"
+			android:summaryOff="Will calculate travel times for all events that have locations specified"
+			android:defaultValue="@bool/default_only_marked_locations" />
+<!-- 		<CheckBoxPreference -->
+<!-- 			android:key="warn_no_location" -->
+<!-- 			android:title="Warn location not found" -->
+<!-- 			android:summaryOn="You may then add a valid location or disable notifications for that event" -->
+<!-- 			android:summaryOff="Will fail quietly if event location is missing or invalid\n(Not Recommended!)" -->
+<!-- 			android:defaultValue="@bool/default_warn_no_location" /> -->
 	</PreferenceCategory>
 	
 	<PreferenceCategory android:title="Travel Settings">
