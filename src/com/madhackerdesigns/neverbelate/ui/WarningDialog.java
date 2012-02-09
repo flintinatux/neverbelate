@@ -61,7 +61,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 
 	// private static tokens
 	private static final int ALERT_TOKEN = 1;
-	private static final String LOG_TAG = "NeverLateWarning";
+	private static final String LOG_TAG = "NeverBeLateWarning";
 	private static final boolean ADMOB = true;
 	private static final boolean ADMOB_TEST = false;
 	
@@ -76,12 +76,10 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	private PreferenceHelper mPrefs;
 	
 	// other fields
-//	private Cursor mCursor;
 	private AlertQueryHandler mHandler;
 	private ArrayList<EventHolder> mEventHolders = new ArrayList<EventHolder>();
 	private boolean mInsistentStopped = false;
 	private ViewSwitcher mSwitcher;
-//	private boolean mTrafficViewOn = false;
 	private MyLocationOverlay mUserLocationOverlay;
 	
 	/* (non-Javadoc)
@@ -251,7 +249,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 				}
 			}
 			
-			// Set the "Snooze" button action
+			// Set the "Snooze" button label
 			Resources res = getResources();
 			Button snoozeButton = (Button) findViewById(R.id.snooze_button);
 			int count = cursor.getCount();
@@ -260,16 +258,24 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 			} else {
 				snoozeButton.setText(res.getString(R.string.snooze_button_text));
 			}
-			snoozeButton.setOnClickListener(new OnClickListener() {
-
-				public void onClick(View v) {
-					// Snooze the alert, and finish the activity
-					snoozeAlert();
-					finish();
-				}
-				
-			});
-			Logger.d(LOG_TAG, "Snooze button added.");
+			
+			// Enable or disable snooze per user preference
+			if (mPrefs.getEarlyArrival().equals(new Long(0))) {
+				snoozeButton.setVisibility(View.GONE);
+				Logger.d(LOG_TAG, "Snooze button disabled.");
+			} else {
+				snoozeButton.setOnClickListener(new OnClickListener() {
+	
+					public void onClick(View v) {
+						// Snooze the alert, and finish the activity
+						snoozeAlert();
+						finish();
+					}
+					
+				});
+				Logger.d(LOG_TAG, "Snooze button added.");
+			}
+			
 			
 			// Set the "Dismiss" button action
 			Button dismissButton = (Button) findViewById(R.id.dismiss_button);
@@ -318,7 +324,6 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		// Ask the Service to just SNOOZE the event, which just clears the notification
 		intent = new Intent(context, NeverBeLateService.class);
 		intent.putExtra(EXTRA_SERVICE_COMMAND, SNOOZE);
-//		NeverBeLateService.sendWakefulWork(context, intent);
 		startService(intent);
 	}
 	
@@ -333,7 +338,6 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		Context context = getApplicationContext();
 		Intent cancelIntent = new Intent(context, NeverBeLateService.class);
 		cancelIntent.putExtra(EXTRA_SERVICE_COMMAND, DISMISS);
-//		NeverBeLateService.sendWakefulWork(context, cancelIntent);
 		startService(cancelIntent);
 	}
 	
@@ -344,20 +348,17 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 			Context context = getApplicationContext();
 			Intent i = new Intent(context, NeverBeLateService.class);
 			i.putExtra(EXTRA_SERVICE_COMMAND, SILENCE);
-//			NeverBeLateService.sendWakefulWork(context, i);
 			startService(i);
 		}
 	}
 
 	private void switchToAlertListView() {
 		mSwitcher.showPrevious();
-//		mTrafficViewOn = false;
 		Logger.d(LOG_TAG, "Switched to alert list view.");
 	}
 	
 	private void switchToTrafficView() {
 		mSwitcher.showNext();
-//		mTrafficViewOn = true;
 		Logger.d(LOG_TAG, "Switched to traffic view.");
 	}
 	

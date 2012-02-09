@@ -22,6 +22,7 @@ public class PreferenceHelper {
 	private static final String 	DEFAULT_ADVANCE_WARNING = "900000";
 	private static final boolean 	DEFAULT_AVOID_HIGHWAYS = false;
 	private static final boolean	DEFAULT_AVOID_TOLLS = false;
+	private static final String		DEFAULT_EARLY_ARRIVAL = "300000";
 //	private static final boolean 	DEFAULT_FINE_REQUIRED = false;
 	private static final boolean 	DEFAULT_INSISTENT = false;
 	private static final String 	DEFAULT_LOCATION_FREQ = "300000";
@@ -41,6 +42,7 @@ public class PreferenceHelper {
 	private static final String KEY_ADVANCE_WARNING = "advance_warning";
 	private static final String KEY_AVOID_HIGHWAYS = "avoid_highways";
 	private static final String KEY_AVOID_TOLLS = "avoid_tolls";
+	private static final String KEY_EARLY_ARRIVAL = "early_arrival";
 //	private static final String KEY_FINE_REQUIRED = "fine_required";
 	private static final String KEY_INSISTENT = "insistent";
 	private static final String KEY_LOCATION_FREQ = "location_freq";
@@ -80,8 +82,15 @@ public class PreferenceHelper {
 	/**
 	 * @return How long in advance to warn the user to leave, in milliseconds.
 	 */
-	public long getAdvanceWarning() {
+	public Long getAdvanceWarning() {
 		return Long.valueOf(mPrefs.getString(KEY_ADVANCE_WARNING, DEFAULT_ADVANCE_WARNING));
+	}
+
+	/**
+	 * @return How early the user wishes to arrive at their destination, in milliseconds.
+	 */
+	public Long getEarlyArrival() {
+		return Long.valueOf(mPrefs.getString(KEY_EARLY_ARRIVAL, DEFAULT_EARLY_ARRIVAL));
 	}
 
 //	/**
@@ -101,14 +110,14 @@ public class PreferenceHelper {
 	/**
 	 * @return The location polling frequency, in milliseconds.
 	 */
-	public long getLocationFreq() {
+	public Long getLocationFreq() {
 		return Long.valueOf(mPrefs.getString(KEY_LOCATION_FREQ, DEFAULT_LOCATION_FREQ));
 	}
 
 	/**
 	 * @return How far ahead to search in the calendar for events, in milliseconds.
 	 */
-	public long getLookaheadWindow() {
+	public Long getLookaheadWindow() {
 		return  Long.valueOf(mPrefs.getString(KEY_LOOKAHEAD_WINDOW, DEFAULT_LOOKAHEAD_WINDOW));
 	}
 
@@ -154,7 +163,7 @@ public class PreferenceHelper {
 	/**
 	 * @return How long to snooze before warning the user again, in milliseconds.
 	 */
-	public long getSnoozeDuration() {
+	public Long getSnoozeDuration() {
 		return Long.valueOf(mPrefs.getString(KEY_SNOOZE_DURATION, DEFAULT_SNOOZE_DURATION));
 	}
 
@@ -185,7 +194,7 @@ public class PreferenceHelper {
 	/**
 	 * @return How frequently to check the next travel times, in milliseconds.
 	 */
-	public long getTraveltimeFreq() {
+	public Long getTraveltimeFreq() {
 		return Long.valueOf(mPrefs.getString(KEY_TRAVELTIME_FREQ, DEFAULT_TRAVELTIME_FREQ));
 	}
 

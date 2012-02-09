@@ -239,6 +239,9 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 					continue; 
 				}
 				
+				// Bite the * off the front if it's there
+				eventLocation = eventLocation.replaceFirst("^\\*", "");
+				
 				// Query for existing alert entry
 				String selection = AlertsContract.Alerts.EVENT_ID + "=? AND " + 
 					AlertsContract.Alerts.BEGIN + "=?";
@@ -296,7 +299,7 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 					Logger.d(LOG_TAG, "Network not available, falling back to previous archived directions.");
 					json = alertCursor.getString(AlertsHelper.PROJ_JSON);
 				}
-				if (json == null || json == "") { 
+				if (json == null || json.length() == 0) { 
 					// TODO: Not sure what to do if I still pull down an empty json result
 					// (which has happened before!)
 					Logger.d(LOG_TAG, "No JSON returned.  Not good.");
@@ -317,12 +320,16 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 					DirectionsApiStatus status = Enum.valueOf(DirectionsApiStatus.class, statusString);
 					switch (status) {
 					case OK:
+						// Set the early arrival parameter
+						Long earlyArrival = prefs.getEarlyArrival();
+						if (earlyArrival == null) { earlyArrival = (long) 0; }
+						
 						// Process the directions returned
 						JSONObject route = directions.getJSONArray("routes").getJSONObject(0);
 						JSONObject leg = route.getJSONArray("legs").getJSONObject(0);
 						long duration = leg.getJSONObject("duration").getLong("value") * 1000;   // in ms
 						Logger.d(LOG_TAG, "Duration: " + String.valueOf(duration/60000) + " min");
-						long warnTime = instanceBegin - duration - prefs.getAdvanceWarning();
+						long warnTime = instanceBegin - earlyArrival - duration - prefs.getAdvanceWarning();
 						Logger.d(LOG_TAG, "Warn time: " + FullDateTime(warnTime));
 						String copyrights = route.getString("copyrights");
 						

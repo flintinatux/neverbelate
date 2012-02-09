@@ -5,7 +5,7 @@ import android.util.Log;
 public class Logger {
 	
 	private static final boolean LOGGING = true;
-	private static final String LOG_TAG = "NeverLate";
+	private static final String LOG_TAG = "NeverBeLate";
 	private static final int NOT_LOGGED = 0x0;
 
 	public static int d (String msg) {

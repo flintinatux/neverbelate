@@ -52,7 +52,6 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 	private static final String PREF_APP_STATE = "app_state";
 
 	// Private fields
-	private boolean mAdJustShown = false;
 	private CheckBox mEnableBtn;
 	private PreferenceHelper mPrefs;
 	private SharedPreferences mAppState;
@@ -216,28 +215,24 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		loadPreferences();
 		if (mEnableBtn == null) { mEnableBtn = (CheckBox) findViewById(R.id.btn_enable); }
 		mEnableBtn.setChecked(mPrefs.isNeverLateEnabled());
-		
-		// Show the What's new dialog after ad if haven't already
-		if (mAdJustShown) {
-			Logger.d("Showing Whats new dialog");
-			int previous = mAppState.getInt(KEY_WHATS_NEW, 0);
-			int current = getResources().getInteger(R.integer.whats_new_version);
-			if (previous < current) { 
-				showDialog(DLG_WHATS_NEW);
-			}
-		}
 	}
 
 	public void onEulaAgreedTo() {
-		// Show Pontiflex ad after confirmation of EULA agreement
-		long adLastShown = mAppState.getLong(KEY_AD_LAST_SHOWN, 0);
-		long now = new Date().getTime();
-		if (PONTIFLEX && (now > (adLastShown + FIVE_MINUTES))) {
-			Logger.d("EULA accepted, showing ad");
-			mAppState.edit().putLong(KEY_AD_LAST_SHOWN, now).commit();
-			mAdJustShown = true;
-			IAdManager adManager = AdManagerFactory.createInstance(getApplication());
-			adManager.showAd();
+		// Show either What's New or Pontiflex ad after confirmation of EULA agreement
+		int previous = mAppState.getInt(KEY_WHATS_NEW, 0);
+		int current = getResources().getInteger(R.integer.whats_new_version);
+		if (previous < current) { 
+			Logger.d("Showing Whats new dialog");
+			showDialog(DLG_WHATS_NEW);
+		} else {
+			long adLastShown = mAppState.getLong(KEY_AD_LAST_SHOWN, 0);
+			long now = new Date().getTime();
+			if (PONTIFLEX && (now > (adLastShown + FIVE_MINUTES))) {
+				Logger.d("Showing Pontiflex ad");
+				mAppState.edit().putLong(KEY_AD_LAST_SHOWN, now).commit();
+				IAdManager adManager = AdManagerFactory.createInstance(getApplication());
+				adManager.showAd();
+			}
 		}
 	}
 	

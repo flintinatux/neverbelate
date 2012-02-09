@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- NeverBeLateSettings -->
+	<string name="feedback_address">mail@madhackerdesigns.com</string>
+	<string name="feedback_menu_title">Choose email app</string>
+	<string name="feedback_subject">[NeverBeLate™] - Feedback Case #</string>
+	<string name="privacy_title">Privacy policy</string>
+	<string name="send_feedback">Click here to send me an email with feedback, questions, or bugs you have encountered.</string>
+	<string name="send_feedback_title">Send feedback</string>
+	<string name="settings_instructions">Each setting below has a recommended value to balance battery life with performance, but feel free to change them to fit your schedule needs and transportation style.</string>
+    <string name="settings_instructions_title">Instructions</string>
+    <string name="website_title">Developer website</string>
+    
+    <bool name="default_avoid_highways">false</bool>
+	<bool name="default_avoid_tolls">false</bool>
+	<bool name="default_insistent">false</bool>
+	<bool name="default_neverlate_enabled">false</bool>
+	<bool name="default_only_marked_locations">false</bool>
+	<bool name="default_tos_accepted">false</bool>
+	<bool name="default_vibrate">true</bool>
+   	<bool name="default_warn_no_location">true</bool>
+    
+    <string-array name="freq_entries_15">
+<!--     	<item>1 minute (dev only)</item> -->
+    	<item>5 minutes</item>
+    	<item>10 minutes</item>
+    	<item>15 minutes (recommended)</item>
+    	<item>30 minutes</item>
+    	<item>60 minutes</item>
+    </string-array>
+    <string-array name="freq_entries_5">
+<!--     	<item>1 minute (dev only)</item> -->
+    	<item>5 minutes (recommended)</item>
+    	<item>10 minutes</item>
+    	<item>15 minutes</item>
+    	<item>30 minutes</item>
+    	<item>60 minutes</item>
+    </string-array>
+    <string-array name="freq_values">
+<!--     	<item>60000</item> -->
+    	<item>300000</item>
+    	<item>600000</item>
+    	<item>900000</item>
+    	<item>1800000</item>
+    	<item>3600000</item>
+    </string-array>
+    <string name="default_location_freq">300000</string>
+    <string name="default_traveltime_freq">900000</string>
+    <string name="default_advance_warning">900000</string>
+        
+    <string-array name="hours_entries">
+    	<item>1 hour</item>
+    	<item>2 hours (default)</item>
+    	<item>3 hours</item>
+    	<item>6 hours</item>
+    	<item>12 hours</item>
+    </string-array>
+    <string-array name="hours_values">
+    	<item>3600000</item>
+    	<item>7200000</item>
+    	<item>10800000</item>
+    	<item>21600000</item>
+    	<item>43200000</item>
+    </string-array>
+    <string name="default_lookahead_window">7200000</string>
+        
+    <string-array name="travel_mode_entries">
+    	<item>Driving (default)</item>
+    	<item>Walking</item>
+    	<item>Bicycling</item>
+    </string-array>
+    <string-array name="travel_mode_values">
+    	<item>driving</item>
+    	<item>walking</item>
+    	<item>bicycling</item>
+    </string-array>
+    <string name="default_travel_mode">driving</string>
+    
+    <string-array name="notify_entries">
+    	<item>Alert dialog (default)</item>
+    	<item>Status bar notification</item>
+    </string-array>
+    <string-array name="notify_values">
+    	<item>ALERT</item>
+    	<item>STATUS_BAR_ONLY</item>
+    </string-array>
+    <string name="default_notification_method">ALERT</string>
+    
+    <string-array name="minutes_entries">
+<!--     	<item>1 minute (dev only)</item> -->
+    	<item>Disabled</item>
+    	<item>5 minutes (default)</item>
+    	<item>10 minutes</item>
+    	<item>15 minutes</item>
+    	<item>20 minutes</item>
+    	<item>30 minutes</item>
+    	<item>60 minutes</item>
+    </string-array>
+    <string-array name="minutes_values">
+<!--     	<item>60000</item> -->
+    	<item>0</item>
+    	<item>300000</item>
+    	<item>600000</item>
+    	<item>900000</item>
+    	<item>1200000</item>
+    	<item>1800000</item>
+    	<item>3600000</item>
+    </string-array>
+    <string name="default_early_arrival">300000</string>
+    <string name="default_snooze_duration">300000</string>
+</resources>
