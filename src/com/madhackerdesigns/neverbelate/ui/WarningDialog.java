@@ -118,6 +118,18 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 			Logger.d(LOG_TAG, "User orientation updates enabled.");
 		}
 		
+		// Adjust the warning text to include early arrival if set
+		final Long earlyArrival = mPrefs.getEarlyArrival() / 60000;
+		if (!earlyArrival.equals(new Long(0))) {
+			final TextView tv_warningText = (TextView) findViewById(R.id.warning_text);
+			final Resources res = getResources();
+			String warningText = res.getString(R.string.warning_text);
+			String onTime = res.getString(R.string.on_time);
+			String minutesEarly = res.getString(R.string.minutes_early);
+			warningText = warningText.replaceFirst(onTime, earlyArrival + " " + minutesEarly);
+			tv_warningText.setText(warningText);
+		}
+		
 		// Load up the list of alerts
 		loadAlertList();
 		

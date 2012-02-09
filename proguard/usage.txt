@@ -383,6 +383,7 @@ com.madhackerdesigns.neverbelate.settings.PreferenceHelper:
     private static final java.lang.String DEFAULT_ADVANCE_WARNING
     private static final boolean DEFAULT_AVOID_HIGHWAYS
     private static final boolean DEFAULT_AVOID_TOLLS
+    private static final java.lang.String DEFAULT_EARLY_ARRIVAL
     private static final boolean DEFAULT_INSISTENT
     private static final java.lang.String DEFAULT_LOCATION_FREQ
     private static final java.lang.String DEFAULT_LOOKAHEAD_WINDOW
@@ -398,6 +399,7 @@ com.madhackerdesigns.neverbelate.settings.PreferenceHelper:
     private static final java.lang.String KEY_ADVANCE_WARNING
     private static final java.lang.String KEY_AVOID_HIGHWAYS
     private static final java.lang.String KEY_AVOID_TOLLS
+    private static final java.lang.String KEY_EARLY_ARRIVAL
     private static final java.lang.String KEY_INSISTENT
     private static final java.lang.String KEY_LOCATION_FREQ
     private static final java.lang.String KEY_LOOKAHEAD_WINDOW
@@ -411,10 +413,10 @@ com.madhackerdesigns.neverbelate.settings.PreferenceHelper:
     private static final java.lang.String KEY_TRAVELTIME_FREQ
     private static final java.lang.String KEY_VIBRATE
     private static final java.lang.String KEY_WARN_NO_LOCATION
-    105:105:public long getLocationFreq()
-    165:165:public boolean isTosAccepted()
-    174:175:public boolean setTosAccepted(boolean)
-    203:203:public boolean isWarnNoLocation()
+    114:114:public java.lang.Long getLocationFreq()
+    174:174:public boolean isTosAccepted()
+    183:184:public boolean setTosAccepted(boolean)
+    212:212:public boolean isWarnNoLocation()
 com.madhackerdesigns.neverbelate.ui.LauncherActivity:
     private static final boolean ADMOB
     private static final boolean ADMOB_TEST

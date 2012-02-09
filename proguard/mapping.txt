@@ -673,18 +673,19 @@ com.madhackerdesigns.neverbelate.settings.PreferenceHelper -> com.madhackerdesig
     android.content.SharedPreferences mPrefs -> b
     boolean isAvoidHighways() -> a
     boolean isAvoidTolls() -> b
-    long getAdvanceWarning() -> c
-    boolean isInsistent() -> d
-    long getLookaheadWindow() -> e
-    boolean isNeverLateEnabled() -> f
+    java.lang.Long getAdvanceWarning() -> c
+    java.lang.Long getEarlyArrival() -> d
+    boolean isInsistent() -> e
+    java.lang.Long getLookaheadWindow() -> f
+    boolean isNeverLateEnabled() -> g
     boolean setNeverLateEnabled(boolean) -> a
-    com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod getNotificationMethod() -> g
-    boolean isOnlyMarkedLocations() -> h
-    android.net.Uri getRingtone() -> i
-    long getSnoozeDuration() -> j
-    java.lang.String getTravelMode() -> k
-    long getTraveltimeFreq() -> l
-    boolean isVibrate() -> m
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod getNotificationMethod() -> h
+    boolean isOnlyMarkedLocations() -> i
+    android.net.Uri getRingtone() -> j
+    java.lang.Long getSnoozeDuration() -> k
+    java.lang.String getTravelMode() -> l
+    java.lang.Long getTraveltimeFreq() -> m
+    boolean isVibrate() -> n
 com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod -> com.madhackerdesigns.neverbelate.settings.a:
     com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod ALERT -> a
     com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod STATUS_BAR_ONLY -> b
@@ -712,10 +713,9 @@ com.madhackerdesigns.neverbelate.ui.EventListAdapter$ViewHolder -> com.madhacker
     android.widget.TextView where -> d
     android.widget.TextView travelTime -> e
 com.madhackerdesigns.neverbelate.ui.LauncherActivity -> com.madhackerdesigns.neverbelate.ui.LauncherActivity:
-    boolean mAdJustShown -> a
-    android.widget.CheckBox mEnableBtn -> b
-    com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> c
-    android.content.SharedPreferences mAppState -> d
+    android.widget.CheckBox mEnableBtn -> a
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> b
+    android.content.SharedPreferences mAppState -> c
     void onCreate(android.os.Bundle) -> onCreate
     android.app.Dialog onCreateDialog(int) -> onCreateDialog
     void onPause() -> onPause
@@ -852,10 +852,11 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverb
     boolean isRouteDisplayed() -> isRouteDisplayed
     java.util.ArrayList access$0(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> a
     void access$1(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> b
-    void access$2(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> c
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper access$2(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> c
     void access$3(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> d
     void access$4(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> e
     void access$5(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> f
+    void access$6(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> g
 com.madhackerdesigns.neverbelate.ui.WarningDialog$1 -> com.madhackerdesigns.neverbelate.ui.p:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.view.View) -> onClick
