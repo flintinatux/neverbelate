@@ -29,6 +29,7 @@ import com.madhackerdesigns.neverbelate.R;
 import com.madhackerdesigns.neverbelate.service.StartupReceiver;
 import com.madhackerdesigns.neverbelate.settings.NeverBeLateSettings;
 import com.madhackerdesigns.neverbelate.settings.PreferenceHelper;
+import com.madhackerdesigns.neverbelate.util.AdHelper;
 import com.madhackerdesigns.neverbelate.util.Logger;
 import com.pontiflex.mobile.webview.sdk.AdManagerFactory;
 import com.pontiflex.mobile.webview.sdk.IAdManager;
@@ -228,10 +229,14 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 			long adLastShown = mAppState.getLong(KEY_AD_LAST_SHOWN, 0);
 			long now = new Date().getTime();
 			if (PONTIFLEX && (now > (adLastShown + FIVE_MINUTES))) {
-				Logger.d("Showing Pontiflex ad");
-				mAppState.edit().putLong(KEY_AD_LAST_SHOWN, now).commit();
-				IAdManager adManager = AdManagerFactory.createInstance(getApplication());
-				adManager.showAd();
+				AdHelper adHelper = new AdHelper(getApplicationContext());
+				if (adHelper.isTimeToShowAd()) {
+					adHelper.setAdShown(true);
+					Logger.d("Showing Pontiflex ad");
+					mAppState.edit().putLong(KEY_AD_LAST_SHOWN, now).commit();
+					IAdManager adManager = AdManagerFactory.createInstance(getApplication());
+					adManager.showAd();
+				}
 			}
 		}
 	}
