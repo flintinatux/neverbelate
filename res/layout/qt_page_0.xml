@@ -1,21 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:isScrollContainer="true"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
     android:orientation="vertical"
     android:padding="20dip" >
     
-    <TextView 
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="@string/qt_intro_header"
-        style="@style/QuickTourHeader" />
+    <LinearLayout
+	    android:isScrollContainer="true"
+	    android:layout_height="0px"
+	    android:layout_weight="1"
+	    android:layout_width="match_parent"
+	    android:orientation="vertical" >
     
+	    <TextView 
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:text="@string/qt_intro_header"
+	        style="@style/QuickTourHeader" />
+	    
+	    <TextView 
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:text="@string/qt_intro_message"
+	        style="@style/QuickTourMessage" />
+	    
+	</LinearLayout>
+	
     <TextView 
+        android:id="@+id/tv_skip_tour"
+        android:gravity="right"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="@string/qt_intro_message"
-        style="@style/QuickTourMessage" />
+        android:layout_width="fill_parent"
+        android:textSize="14sp" />
     
 </LinearLayout>

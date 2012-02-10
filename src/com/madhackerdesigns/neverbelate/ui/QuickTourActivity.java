@@ -6,9 +6,12 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.madhackerdesigns.neverbelate.R;
 
@@ -54,7 +57,7 @@ public class QuickTourActivity extends FragmentActivity {
     	private int mPosition;
     	
     	/**
-         * Create a new instance of CountingFragment, providing "num"
+         * Create a new instance of PageFragment, providing "pos"
          * as an argument.
          */
         public static PageFragment newInstance(int position) {
@@ -69,7 +72,7 @@ public class QuickTourActivity extends FragmentActivity {
 		}
 		
 		/**
-         * When creating, retrieve this instance's number from its arguments.
+         * When creating, retrieve this instance's position from its arguments.
          */
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -78,13 +81,24 @@ public class QuickTourActivity extends FragmentActivity {
         }
 
         /**
-         * The Fragment's UI is just a simple text view showing its
-         * instance number.
+         * The Fragment's UI is inflated from the list of layouts.
          */
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
             View v = inflater.inflate(mPosition, container, false);
+            TextView skipTour = (TextView) v.findViewById(R.id.tv_skip_tour);
+            if (skipTour != null) {
+	            skipTour.setText(Html.fromHtml(v.getResources().getString(R.string.qt_skip_tour)));
+	            skipTour.setOnClickListener(new OnClickListener() {
+	
+					public void onClick(View v) {
+						// Finish the activity
+						getActivity().finish();
+					}
+	            	
+	            });
+            }
             return v;
         }
     }

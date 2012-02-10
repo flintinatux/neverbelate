@@ -2,5 +2,16 @@
 <resources>
     
     <string name="qt_intro_header">Thanks for installing NeverBeLate™!</string>
-    <string name="qt_intro_message">Congratulations on taking the first step towards a new future of taking control of your schedule and eliminating lateness in your professional and personal life.\n\nThis quick tour is simple to use: swipe horizontally to move back and forth between steps, and swipe vertically to scroll up and down on a given step.\n\nNow swipe left to go to Step 1!</string>
+    <string name="qt_intro_message">Congratulations on your first step toward taking control of your schedule 
+        and eliminating lateness in your professional and personal life.\n\nThis quick tour is simple 
+        to use: swipe left and right to move between pages, and swipe up and down to scroll.\n\nNow swipe 
+        left to get started!</string>
+    <string name="qt_skip_tour"><u>... or skip the tour.</u></string>
+    
+    <string name="qt_enable_header">Enabling NeverBeLate™</string>
+    <string name="qt_enable_message_1">Turning on the NeverBeLate™ Advance Warning system is simple. On the main
+        screen you will find a checkbox just the like the one below. Just check the box, and then rest easy knowing
+        that NeverBeLate™ is working behind the scenes to keep you on time to all of your events.</string>
+    <string name="qt_enable_message_2">Well, there is actually one more thing that NeverBeLate™ needs to
+        work properly. Swipe left to learn what it is!</string>
 </resources>
