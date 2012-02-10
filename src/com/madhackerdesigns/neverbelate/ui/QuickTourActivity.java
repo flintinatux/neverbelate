@@ -19,7 +19,9 @@ public class QuickTourActivity extends FragmentActivity {
 	
 	static final int[] PAGE_LAYOUTS = {	
 		R.layout.qt_page_0,
-		R.layout.qt_page_1
+		R.layout.qt_page_1,
+		R.layout.qt_page_2,
+		R.layout.qt_page_3
 	};
 
     MyAdapter mAdapter;

@@ -14,4 +14,24 @@
         that NeverBeLate™ is working behind the scenes to keep you on time to all of your events.</string>
     <string name="qt_enable_message_2">Well, there is actually one more thing that NeverBeLate™ needs to
         work properly. Swipe left to learn what it is!</string>
+    
+    <string name="qt_searchable_header">A Searchable Address</string>
+    <string name="qt_searchable_message_1">The simplest definition for a searchable address is one that you can 
+        search for in Google Maps. NeverBeLate™ requires each of your event locations to be a searchable address 
+        so that it can determine travel distances and times correctly. Good examples are \"221b Baker Street, 
+        London, UK\",  or if you\'re in a hurry, just \"Atlanta, GA\" or even \"77059\". A good tradeoff between 
+        accuracy and speed of entry is to enter just the street address and the postal code, as shown  
+        in the example below.</string>
+    <string name="qt_searchable_message_2">If you leave the location field of an event empty, NeverBeLate™ 
+        will simply ignore it. Looks pretty easy, doesn\'t it?</string>
+    
+    <string name="qt_marked_header">Marked Locations</string>
+    <string name="qt_marked_message_1">\"But what if I want to use both general locations and searchable 
+        addresses in my calendar?\" Now you can! A new Marked Locations feature has been added to help spot the 
+        searchable addresses amongst the bad ones. Enabling Marked Locations is simple: look in the Settings 
+        menu to find the \"Only marked locations\" option shown below, and check the box.</string>
+    <string name="qt_marked_message_2">Then start placing an asterisk or star (*) at the beginning of your 
+        searchable event locations, just like this: \"*Atlanta, GA\". NeverBeLate™ will then only look for 
+        the marked locations, and will ignore the rest. Next time a coworker invites you to a meeting in 
+        \"Joe\'s office\", you won\'t be warned incorrectly.</string>
 </resources>
