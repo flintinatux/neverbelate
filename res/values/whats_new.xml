@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="whats_new_title">What\'s new in NeverBeLate™</string>
-    <integer name="whats_new_version">10</integer>
-    <string name="whats_new_message">Version 1.0_build-13:\n\nAdded a new Early Arrival parameter to the Settings
+    <integer name="whats_new_version">11</integer>
+    <string name="whats_new_message">Version 1.0_build-14:\n\nAdjusted the warning dialog text to include the early
+        arrival parameter set by the user, and reduced the number of ads shown at the launcher screen.\n
+        \nVersion 1.0_build-13:\n\nAdded a new Early Arrival parameter to the Settings
         menu. Set it for how early you wish to arrive at your destination, and NeverBeLate™ will account
         for that extra time when determining what time to alert you for your next event. The default Early Arrival
         value is five minutes.\n

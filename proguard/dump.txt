@@ -674,7 +674,7 @@ _____________________________________________________________________
 Interfaces (count = 1):
   - Class [com/madhackerdesigns/neverbelate/a]
 
-Constant Pool (count = 254):
+Constant Pool (count = 270):
   - Integer [2130903043]
   - Integer [2131099664]
   - Integer [2131099665]
@@ -727,13 +727,15 @@ Constant Pool (count = 254):
   - Class [com/madhackerdesigns/neverbelate/ui/l]
   - Class [com/madhackerdesigns/neverbelate/ui/m]
   - Class [com/madhackerdesigns/neverbelate/ui/n]
+  - Class [com/madhackerdesigns/neverbelate/util/AdHelper]
   - Class [com/pontiflex/mobile/webview/sdk/b]
   - Class [com/pontiflex/mobile/webview/sdk/c]
   - Class [java/util/Date]
   - Long [300000]
-  - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.a Landroid/widget/CheckBox;]
-  - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
-  - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.c Landroid/content/SharedPreferences;]
+  - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.a Lcom/madhackerdesigns/neverbelate/util/AdHelper;]
+  - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Landroid/widget/CheckBox;]
+  - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.c Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
+  - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.d Landroid/content/SharedPreferences;]
   - Methodref [android/app/Activity.<init> ()V]
   - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
   - Methodref [android/app/Activity.onPause ()V]
@@ -759,6 +761,7 @@ Constant Pool (count = 254):
   - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b ()V]
   - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
   - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.getApplication ()Landroid/app/Application;]
+  - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.getApplicationContext ()Landroid/content/Context;]
   - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.getResources ()Landroid/content/res/Resources;]
   - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
   - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.setContentView (I)V]
@@ -770,6 +773,10 @@ Constant Pool (count = 254):
   - Methodref [com/madhackerdesigns/neverbelate/ui/l.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
   - Methodref [com/madhackerdesigns/neverbelate/ui/m.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
   - Methodref [com/madhackerdesigns/neverbelate/ui/n.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
+  - Methodref [com/madhackerdesigns/neverbelate/util/AdHelper.<init> (Landroid/content/Context;)V]
+  - Methodref [com/madhackerdesigns/neverbelate/util/AdHelper.b ()Z]
+  - Methodref [com/madhackerdesigns/neverbelate/util/AdHelper.c ()V]
+  - Methodref [com/madhackerdesigns/neverbelate/util/AdHelper.d ()V]
   - Methodref [com/pontiflex/mobile/webview/sdk/b.b (Landroid/app/Application;)Lcom/pontiflex/mobile/webview/sdk/c;]
   - Methodref [java/util/Date.<init> ()V]
   - Methodref [java/util/Date.getTime ()J]
@@ -785,18 +792,23 @@ Constant Pool (count = 254):
   + NameAndType [a ()V]
   + NameAndType [a (Landroid/app/Activity;)V]
   + NameAndType [a (Lcom/google/ads/c;)V]
-  + NameAndType [a Landroid/widget/CheckBox;]
+  + NameAndType [a Lcom/madhackerdesigns/neverbelate/util/AdHelper;]
   + NameAndType [b ()V]
+  + NameAndType [b ()Z]
   + NameAndType [b (Landroid/app/Application;)Lcom/pontiflex/mobile/webview/sdk/c;]
-  + NameAndType [b Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
-  + NameAndType [c Landroid/content/SharedPreferences;]
+  + NameAndType [b Landroid/widget/CheckBox;]
+  + NameAndType [c ()V]
+  + NameAndType [c Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
   + NameAndType [commit ()Z]
   + NameAndType [create ()Landroid/app/AlertDialog;]
+  + NameAndType [d ()V]
   + NameAndType [d (Ljava/lang/String;Ljava/lang/String;)I]
+  + NameAndType [d Landroid/content/SharedPreferences;]
   + NameAndType [edit ()Landroid/content/SharedPreferences$Editor;]
   + NameAndType [findViewById (I)Landroid/view/View;]
   + NameAndType [g ()Z]
   + NameAndType [getApplication ()Landroid/app/Application;]
+  + NameAndType [getApplicationContext ()Landroid/content/Context;]
   + NameAndType [getInt (Ljava/lang/String;I)I]
   + NameAndType [getInteger (I)I]
   + NameAndType [getLong (Ljava/lang/String;J)J]
@@ -821,6 +833,7 @@ Constant Pool (count = 254):
   + Utf8 [()J]
   + Utf8 [()Landroid/app/AlertDialog;]
   + Utf8 [()Landroid/app/Application;]
+  + Utf8 [()Landroid/content/Context;]
   + Utf8 [()Landroid/content/SharedPreferences$Editor;]
   + Utf8 [()Landroid/content/res/Resources;]
   + Utf8 [()V]
@@ -855,6 +868,7 @@ Constant Pool (count = 254):
   + Utf8 [Landroid/content/SharedPreferences;]
   + Utf8 [Landroid/widget/CheckBox;]
   + Utf8 [Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
+  + Utf8 [Lcom/madhackerdesigns/neverbelate/util/AdHelper;]
   + Utf8 [NeverBeLate]
   + Utf8 [NeverBeLateService]
   + Utf8 [Showing Pontiflex ad]
@@ -895,6 +909,7 @@ Constant Pool (count = 254):
   + Utf8 [com/madhackerdesigns/neverbelate/ui/l]
   + Utf8 [com/madhackerdesigns/neverbelate/ui/m]
   + Utf8 [com/madhackerdesigns/neverbelate/ui/n]
+  + Utf8 [com/madhackerdesigns/neverbelate/util/AdHelper]
   + Utf8 [com/pontiflex/mobile/webview/sdk/b]
   + Utf8 [com/pontiflex/mobile/webview/sdk/c]
   + Utf8 [commit]
@@ -904,6 +919,7 @@ Constant Pool (count = 254):
   + Utf8 [findViewById]
   + Utf8 [g]
   + Utf8 [getApplication]
+  + Utf8 [getApplicationContext]
   + Utf8 [getInt]
   + Utf8 [getInteger]
   + Utf8 [getLong]
@@ -928,16 +944,19 @@ Constant Pool (count = 254):
   + Utf8 [setTitle]
   + Utf8 [showDialog]
 
-Fields (count = 3):
-  + Field:        a Landroid/widget/CheckBox;
+Fields (count = 4):
+  + Field:        a Lcom/madhackerdesigns/neverbelate/util/AdHelper;
     Access flags: 0x2
-      = private android.widget.CheckBox a
-  + Field:        b Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;
+      = private com.madhackerdesigns.neverbelate.util.AdHelper a
+  + Field:        b Landroid/widget/CheckBox;
     Access flags: 0x2
-      = private com.madhackerdesigns.neverbelate.settings.PreferenceHelper b
-  + Field:        c Landroid/content/SharedPreferences;
+      = private android.widget.CheckBox b
+  + Field:        c Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;
     Access flags: 0x2
-      = private android.content.SharedPreferences c
+      = private com.madhackerdesigns.neverbelate.settings.PreferenceHelper c
+  + Field:        d Landroid/content/SharedPreferences;
+    Access flags: 0x2
+      = private android.content.SharedPreferences d
 
 Methods (count = 9):
   - Method:       <init>()V
@@ -946,7 +965,7 @@ Methods (count = 9):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #61
+      [1] invokespecial #63
         - Methodref [android/app/Activity.<init> ()V]
       [4] return
       Code attribute exceptions (count = 0):
@@ -958,44 +977,44 @@ Methods (count = 9):
     + Code attribute instructions (code length = 182, locals = 3, stack = 4):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #62
+      [2] invokespecial #64
         - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
       [5] aload_0 v0
-      [6] invokespecial #83
+      [6] invokespecial #85
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b ()V]
       [9] aload_0 v0
-      [10] invokestatic #80
+      [10] invokestatic #82
         - Methodref [com/madhackerdesigns/neverbelate/d.a (Landroid/app/Activity;)V]
       [13] aload_0 v0
       [14] ldc #1
         - Integer [2130903043]
-      [16] invokevirtual #88
+      [16] invokevirtual #91
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.setContentView (I)V]
       [19] aload_0 v0
       [20] aload_0 v0
       [21] ldc #13
         - Integer [2131165204]
-      [23] invokevirtual #84
+      [23] invokevirtual #86
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
       [26] checkcast #36
         - Class [android/widget/CheckBox]
-      [29] putfield #58
-        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.a Landroid/widget/CheckBox;]
+      [29] putfield #60
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Landroid/widget/CheckBox;]
       [32] aload_0 v0
-      [33] getfield #58
-        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.a Landroid/widget/CheckBox;]
+      [33] getfield #60
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Landroid/widget/CheckBox;]
       [36] new #46
         - Class [com/madhackerdesigns/neverbelate/ui/h]
       [39] dup
       [40] aload_0 v0
-      [41] invokespecial #90
+      [41] invokespecial #93
         - Methodref [com/madhackerdesigns/neverbelate/ui/h.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
-      [44] invokevirtual #75
+      [44] invokevirtual #77
         - Methodref [android/widget/CheckBox.setOnCheckedChangeListener (Landroid/widget/CompoundButton$OnCheckedChangeListener;)V]
       [47] aload_0 v0
       [48] ldc #9
         - Integer [2131165200]
-      [50] invokevirtual #84
+      [50] invokevirtual #86
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
       [53] checkcast #35
         - Class [android/widget/Button]
@@ -1003,14 +1022,14 @@ Methods (count = 9):
         - Class [com/madhackerdesigns/neverbelate/ui/l]
       [59] dup
       [60] aload_0 v0
-      [61] invokespecial #94
+      [61] invokespecial #97
         - Methodref [com/madhackerdesigns/neverbelate/ui/l.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
-      [64] invokevirtual #73
+      [64] invokevirtual #75
         - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
       [67] aload_0 v0
       [68] ldc #10
         - Integer [2131165201]
-      [70] invokevirtual #84
+      [70] invokevirtual #86
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
       [73] checkcast #35
         - Class [android/widget/Button]
@@ -1018,41 +1037,41 @@ Methods (count = 9):
         - Class [com/madhackerdesigns/neverbelate/ui/k]
       [79] dup
       [80] aload_0 v0
-      [81] invokespecial #93
+      [81] invokespecial #96
         - Methodref [com/madhackerdesigns/neverbelate/ui/k.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
-      [84] invokevirtual #73
+      [84] invokevirtual #75
         - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
       [87] new #48
         - Class [com/madhackerdesigns/neverbelate/ui/j]
       [90] dup
       [91] aload_0 v0
-      [92] invokespecial #92
+      [92] invokespecial #95
         - Methodref [com/madhackerdesigns/neverbelate/ui/j.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
       [95] astore_1 v1
       [96] aload_0 v0
       [97] ldc #11
         - Integer [2131165202]
-      [99] invokevirtual #84
+      [99] invokevirtual #86
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
       [102] checkcast #35
         - Class [android/widget/Button]
       [105] aload_1 v1
-      [106] invokevirtual #73
+      [106] invokevirtual #75
         - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
       [109] aload_0 v0
       [110] ldc #8
         - Integer [2131165199]
-      [112] invokevirtual #84
+      [112] invokevirtual #86
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
       [115] checkcast #35
         - Class [android/widget/Button]
       [118] aload_1 v1
-      [119] invokevirtual #73
+      [119] invokevirtual #75
         - Methodref [android/widget/Button.setOnClickListener (Landroid/view/View$OnClickListener;)V]
       [122] aload_0 v0
       [123] ldc #12
         - Integer [2131165203]
-      [125] invokevirtual #84
+      [125] invokevirtual #86
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
       [128] checkcast #39
         - Class [android/widget/ImageView]
@@ -1060,14 +1079,14 @@ Methods (count = 9):
         - Class [com/madhackerdesigns/neverbelate/ui/i]
       [134] dup
       [135] aload_0 v0
-      [136] invokespecial #91
+      [136] invokespecial #94
         - Methodref [com/madhackerdesigns/neverbelate/ui/i.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
-      [139] invokevirtual #76
+      [139] invokevirtual #78
         - Methodref [android/widget/ImageView.setOnLongClickListener (Landroid/view/View$OnLongClickListener;)V]
       [142] aload_0 v0
       [143] ldc #7
         - Integer [2131165198]
-      [145] invokevirtual #84
+      [145] invokevirtual #86
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
       [148] checkcast #40
         - Class [com/google/ads/AdView]
@@ -1077,21 +1096,21 @@ Methods (count = 9):
       [156] new #41
         - Class [com/google/ads/c]
       [159] dup
-      [160] invokespecial #78
+      [160] invokespecial #80
         - Methodref [com/google/ads/c.<init> ()V]
       [163] dup
       [164] astore_2 v2
-      [165] invokevirtual #79
+      [165] invokevirtual #81
         - Methodref [com/google/ads/c.a ()V]
       [168] aload_1 v1
       [169] aload_2 v2
-      [170] invokevirtual #77
+      [170] invokevirtual #79
         - Methodref [com/google/ads/AdView.a (Lcom/google/ads/c;)V]
       [173] ldc #17
         - String [NeverBeLateService]
       [175] ldc #15
         - String [AdMob banner loaded.]
-      [177] invokestatic #72
+      [177] invokestatic #74
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [180] pop
       [181] return
@@ -1106,7 +1125,7 @@ Methods (count = 9):
         - Class [android/app/AlertDialog$Builder]
       [3] dup
       [4] aload_0 v0
-      [5] invokespecial #65
+      [5] invokespecial #67
         - Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
       [8] astore_2 v2
       [9] iload_1 v1
@@ -1117,14 +1136,14 @@ Methods (count = 9):
       [32] aload_2 v2
       [33] ldc #3
         - Integer [2131099665]
-      [35] invokevirtual #70
+      [35] invokevirtual #72
         - Methodref [android/app/AlertDialog$Builder.setTitle (I)Landroid/app/AlertDialog$Builder;]
       [38] ldc #2
         - Integer [2131099664]
-      [40] invokevirtual #68
+      [40] invokevirtual #70
         - Methodref [android/app/AlertDialog$Builder.setMessage (I)Landroid/app/AlertDialog$Builder;]
       [43] iconst_1
-      [44] invokevirtual #67
+      [44] invokevirtual #69
         - Methodref [android/app/AlertDialog$Builder.setCancelable (Z)Landroid/app/AlertDialog$Builder;]
       [47] ldc #4
         - Integer [2131099667]
@@ -1132,23 +1151,23 @@ Methods (count = 9):
         - Class [com/madhackerdesigns/neverbelate/ui/n]
       [52] dup
       [53] aload_0 v0
-      [54] invokespecial #96
+      [54] invokespecial #99
         - Methodref [com/madhackerdesigns/neverbelate/ui/n.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
-      [57] invokevirtual #69
+      [57] invokevirtual #71
         - Methodref [android/app/AlertDialog$Builder.setPositiveButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [60] pop
       [61] goto +32 (target=93)
       [64] aload_2 v2
       [65] ldc #5
         - Integer [2131099750]
-      [67] invokevirtual #70
+      [67] invokevirtual #72
         - Methodref [android/app/AlertDialog$Builder.setTitle (I)Landroid/app/AlertDialog$Builder;]
       [70] ldc #6
         - Integer [2131099751]
-      [72] invokevirtual #68
+      [72] invokevirtual #70
         - Methodref [android/app/AlertDialog$Builder.setMessage (I)Landroid/app/AlertDialog$Builder;]
       [75] iconst_1
-      [76] invokevirtual #67
+      [76] invokevirtual #69
         - Methodref [android/app/AlertDialog$Builder.setCancelable (Z)Landroid/app/AlertDialog$Builder;]
       [79] ldc #4
         - Integer [2131099667]
@@ -1156,13 +1175,13 @@ Methods (count = 9):
         - Class [com/madhackerdesigns/neverbelate/ui/m]
       [84] dup
       [85] aload_0 v0
-      [86] invokespecial #95
+      [86] invokespecial #98
         - Methodref [com/madhackerdesigns/neverbelate/ui/m.<init> (Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)V]
-      [89] invokevirtual #69
+      [89] invokevirtual #71
         - Methodref [android/app/AlertDialog$Builder.setPositiveButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [92] pop
       [93] aload_2 v2
-      [94] invokevirtual #66
+      [94] invokevirtual #68
         - Methodref [android/app/AlertDialog$Builder.create ()Landroid/app/AlertDialog;]
       [97] areturn
       Code attribute exceptions (count = 0):
@@ -1171,21 +1190,25 @@ Methods (count = 9):
     Access flags: 0x4
       = protected void onPause()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 17, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 22, locals = 2, stack = 2):
       [0] aload_0 v0
-      [1] invokespecial #63
+      [1] invokespecial #65
         - Methodref [android/app/Activity.onPause ()V]
       [4] aload_0 v0
       [5] dup
       [6] astore_1 v1
       [7] aconst_null
-      [8] putfield #59
-        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
+      [8] putfield #61
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.c Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
       [11] aload_1 v1
       [12] aconst_null
-      [13] putfield #60
-        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.c Landroid/content/SharedPreferences;]
-      [16] return
+      [13] putfield #62
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.d Landroid/content/SharedPreferences;]
+      [16] aload_1 v1
+      [17] aconst_null
+      [18] putfield #59
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.a Lcom/madhackerdesigns/neverbelate/util/AdHelper;]
+      [21] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       onResume()V
@@ -1194,34 +1217,34 @@ Methods (count = 9):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 43, locals = 1, stack = 3):
       [0] aload_0 v0
-      [1] invokespecial #64
+      [1] invokespecial #66
         - Methodref [android/app/Activity.onResume ()V]
       [4] aload_0 v0
-      [5] invokespecial #83
+      [5] invokespecial #85
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b ()V]
       [8] aload_0 v0
-      [9] getfield #58
-        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.a Landroid/widget/CheckBox;]
+      [9] getfield #60
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Landroid/widget/CheckBox;]
       [12] ifnonnull +16 (target=28)
       [15] aload_0 v0
       [16] aload_0 v0
       [17] ldc #13
         - Integer [2131165204]
-      [19] invokevirtual #84
+      [19] invokevirtual #86
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.findViewById (I)Landroid/view/View;]
       [22] checkcast #36
         - Class [android/widget/CheckBox]
-      [25] putfield #58
-        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.a Landroid/widget/CheckBox;]
+      [25] putfield #60
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Landroid/widget/CheckBox;]
       [28] aload_0 v0
-      [29] getfield #58
-        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.a Landroid/widget/CheckBox;]
+      [29] getfield #60
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Landroid/widget/CheckBox;]
       [32] aload_0 v0
-      [33] getfield #59
-        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
-      [36] invokevirtual #82
+      [33] getfield #61
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.c Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
+      [36] invokevirtual #84
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.g ()Z]
-      [39] invokevirtual #74
+      [39] invokevirtual #76
         - Methodref [android/widget/CheckBox.setChecked (Z)V]
       [42] return
       Code attribute exceptions (count = 0):
@@ -1230,22 +1253,22 @@ Methods (count = 9):
     Access flags: 0x11
       = public final void a()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 126, locals = 7, stack = 6):
+    + Code attribute instructions (code length = 146, locals = 7, stack = 6):
       [0] aload_0 v0
-      [1] getfield #60
-        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.c Landroid/content/SharedPreferences;]
+      [1] getfield #62
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.d Landroid/content/SharedPreferences;]
       [4] ldc #22
         - String [app_state.whats_new]
       [6] iconst_0
-      [7] invokeinterface #101
+      [7] invokeinterface #108
         - InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
       [12] istore_1 v1
       [13] aload_0 v0
-      [14] invokevirtual #86
+      [14] invokevirtual #89
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.getResources ()Landroid/content/res/Resources;]
       [17] ldc #14
         - Integer [2131492864]
-      [19] invokevirtual #71
+      [19] invokevirtual #73
         - Methodref [android/content/res/Resources.getInteger (I)I]
       [22] istore_2 v2
       [23] iload_1 v1
@@ -1253,106 +1276,135 @@ Methods (count = 9):
       [25] ificmpge +19 (target=44)
       [28] ldc #19
         - String [Showing Whats new dialog]
-      [30] astore_1 v1
+      [30] astore_2 v2
       [31] ldc #16
         - String [NeverBeLate]
-      [33] aload_1 v1
-      [34] invokestatic #72
+      [33] aload_2 v2
+      [34] invokestatic #74
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [37] pop
       [38] aload_0 v0
       [39] iconst_1
-      [40] invokevirtual #89
+      [40] invokevirtual #92
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.showDialog (I)V]
       [43] return
       [44] aload_0 v0
-      [45] getfield #60
-        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.c Landroid/content/SharedPreferences;]
+      [45] getfield #62
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.d Landroid/content/SharedPreferences;]
       [48] ldc #21
         - String [app_state.ad_last_shown]
       [50] lconst_0
-      [51] invokeinterface #102
+      [51] invokeinterface #109
         - InterfaceMethodref [android/content/SharedPreferences.getLong (Ljava/lang/String;J)J]
       [56] lstore_3 v3
-      [57] new #55
+      [57] new #56
         - Class [java/util/Date]
       [60] dup
-      [61] invokespecial #98
+      [61] invokespecial #105
         - Methodref [java/util/Date.<init> ()V]
-      [64] invokevirtual #99
+      [64] invokevirtual #106
         - Methodref [java/util/Date.getTime ()J]
       [67] dup2
       [68] lstore v5
       [70] lload_3 v3
-      [71] ldc2_w #56
+      [71] ldc2_w #57
         - Long [300000]
       [74] ladd
       [75] lcmp
-      [76] ifle +49 (target=125)
-      [79] ldc #18
+      [76] ifle +69 (target=145)
+      [79] aload_0 v0
+      [80] getfield #59
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.a Lcom/madhackerdesigns/neverbelate/util/AdHelper;]
+      [83] dup
+      [84] astore_1 v1
+      [85] invokevirtual #101
+        - Methodref [com/madhackerdesigns/neverbelate/util/AdHelper.b ()Z]
+      [88] ifeq +53 (target=141)
+      [91] aload_1 v1
+      [92] invokevirtual #102
+        - Methodref [com/madhackerdesigns/neverbelate/util/AdHelper.c ()V]
+      [95] ldc #18
         - String [Showing Pontiflex ad]
-      [81] astore_1 v1
-      [82] ldc #16
+      [97] astore_2 v2
+      [98] ldc #16
         - String [NeverBeLate]
-      [84] aload_1 v1
-      [85] invokestatic #72
+      [100] aload_2 v2
+      [101] invokestatic #74
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [88] pop
-      [89] aload_0 v0
-      [90] getfield #60
-        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.c Landroid/content/SharedPreferences;]
-      [93] invokeinterface #100
+      [104] pop
+      [105] aload_0 v0
+      [106] getfield #62
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.d Landroid/content/SharedPreferences;]
+      [109] invokeinterface #107
         - InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
-      [98] ldc #21
+      [114] ldc #21
         - String [app_state.ad_last_shown]
-      [100] lload v5
-      [102] invokeinterface #104
+      [116] lload v5
+      [118] invokeinterface #111
         - InterfaceMethodref [android/content/SharedPreferences$Editor.putLong (Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;]
-      [107] invokeinterface #103
+      [123] invokeinterface #110
         - InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
-      [112] pop
-      [113] aload_0 v0
-      [114] invokevirtual #85
+      [128] pop
+      [129] aload_0 v0
+      [130] invokevirtual #87
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.getApplication ()Landroid/app/Application;]
-      [117] invokestatic #97
+      [133] invokestatic #104
         - Methodref [com/pontiflex/mobile/webview/sdk/b.b (Landroid/app/Application;)Lcom/pontiflex/mobile/webview/sdk/c;]
-      [120] invokeinterface #105
+      [136] invokeinterface #112
         - InterfaceMethodref [com/pontiflex/mobile/webview/sdk/c.j ()V]
-      [125] return
+      [141] aload_1 v1
+      [142] invokevirtual #103
+        - Methodref [com/madhackerdesigns/neverbelate/util/AdHelper.d ()V]
+      [145] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       b()V
     Access flags: 0x2
       = private void b()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 38, locals = 1, stack = 4):
+    + Code attribute instructions (code length = 60, locals = 1, stack = 4):
       [0] aload_0 v0
-      [1] getfield #59
-        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
+      [1] getfield #61
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.c Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
       [4] ifnonnull +15 (target=19)
       [7] aload_0 v0
       [8] new #44
         - Class [com/madhackerdesigns/neverbelate/settings/PreferenceHelper]
       [11] dup
       [12] aload_0 v0
-      [13] invokespecial #81
+      [13] invokespecial #83
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.<init> (Landroid/content/Context;)V]
-      [16] putfield #59
-        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
+      [16] putfield #61
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.c Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
       [19] aload_0 v0
-      [20] getfield #60
-        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.c Landroid/content/SharedPreferences;]
+      [20] getfield #62
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.d Landroid/content/SharedPreferences;]
       [23] ifnonnull +14 (target=37)
       [26] aload_0 v0
       [27] aload_0 v0
       [28] ldc #20
         - String [app_state]
       [30] iconst_0
-      [31] invokevirtual #87
+      [31] invokevirtual #90
         - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
-      [34] putfield #60
-        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.c Landroid/content/SharedPreferences;]
-      [37] return
+      [34] putfield #62
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.d Landroid/content/SharedPreferences;]
+      [37] aload_0 v0
+      [38] getfield #59
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.a Lcom/madhackerdesigns/neverbelate/util/AdHelper;]
+      [41] ifnonnull +18 (target=59)
+      [44] aload_0 v0
+      [45] new #53
+        - Class [com/madhackerdesigns/neverbelate/util/AdHelper]
+      [48] dup
+      [49] aload_0 v0
+      [50] invokevirtual #88
+        - Methodref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.getApplicationContext ()Landroid/content/Context;]
+      [53] invokespecial #100
+        - Methodref [com/madhackerdesigns/neverbelate/util/AdHelper.<init> (Landroid/content/Context;)V]
+      [56] putfield #59
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.a Lcom/madhackerdesigns/neverbelate/util/AdHelper;]
+      [59] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       a(Lcom/madhackerdesigns/neverbelate/ui/LauncherActivity;)Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;
@@ -1361,8 +1413,8 @@ Methods (count = 9):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #59
-        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.b Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
+      [1] getfield #61
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.c Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
       [4] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -1372,8 +1424,8 @@ Methods (count = 9):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #60
-        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.c Landroid/content/SharedPreferences;]
+      [1] getfield #62
+        - Fieldref [com/madhackerdesigns/neverbelate/ui/LauncherActivity.d Landroid/content/SharedPreferences;]
       [4] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):

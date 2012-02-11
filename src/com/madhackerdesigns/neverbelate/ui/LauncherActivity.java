@@ -53,6 +53,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 	private static final String PREF_APP_STATE = "app_state";
 
 	// Private fields
+	private AdHelper mAdHelper;
 	private CheckBox mEnableBtn;
 	private PreferenceHelper mPrefs;
 	private SharedPreferences mAppState;
@@ -63,7 +64,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {		
 		super.onCreate(savedInstanceState);
-		loadPreferences();
+		loadHelpers();
 		
 		// Show TOS and EULA for acceptance
 		Eula.show(this);
@@ -202,7 +203,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		super.onPause();
 		
 		// Release the preference helper resources
-		dropPreferences();
+		dropHelpers();
 	}
 
 	/* (non-Javadoc)
@@ -213,7 +214,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		super.onResume();
 		
 		// Load up the preference helper and set the checked state
-		loadPreferences();
+		loadHelpers();
 		if (mEnableBtn == null) { mEnableBtn = (CheckBox) findViewById(R.id.btn_enable); }
 		mEnableBtn.setChecked(mPrefs.isNeverLateEnabled());
 	}
@@ -228,8 +229,8 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		} else {
 			long adLastShown = mAppState.getLong(KEY_AD_LAST_SHOWN, 0);
 			long now = new Date().getTime();
-			if (PONTIFLEX && (now > (adLastShown + FIVE_MINUTES))) {
-				AdHelper adHelper = new AdHelper(getApplicationContext());
+			if (PONTIFLEX && now > (adLastShown + FIVE_MINUTES)) {
+				AdHelper adHelper = mAdHelper;
 				if (adHelper.isTimeToShowAd()) {
 					adHelper.setAdShown(true);
 					Logger.d("Showing Pontiflex ad");
@@ -237,20 +238,23 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 					IAdManager adManager = AdManagerFactory.createInstance(getApplication());
 					adManager.showAd();
 				}
+				adHelper.setWarningDismissed(true);
 			}
 		}
 	}
 	
-	private void loadPreferences() {
+	private void loadHelpers() {
 		if (mPrefs == null) { mPrefs = new PreferenceHelper(this); }
 		if (mAppState == null) { 
 			mAppState = getSharedPreferences(PREF_APP_STATE, Activity.MODE_PRIVATE);
 		}
+		if (mAdHelper == null) { mAdHelper = new AdHelper(getApplicationContext()); }
     }
 	
-	private void dropPreferences() {
+	private void dropHelpers() {
 		mPrefs = null;
 		mAppState = null;
+		mAdHelper = null;
 	}
 	
 }

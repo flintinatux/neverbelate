@@ -713,15 +713,16 @@ com.madhackerdesigns.neverbelate.ui.EventListAdapter$ViewHolder -> com.madhacker
     android.widget.TextView where -> d
     android.widget.TextView travelTime -> e
 com.madhackerdesigns.neverbelate.ui.LauncherActivity -> com.madhackerdesigns.neverbelate.ui.LauncherActivity:
-    android.widget.CheckBox mEnableBtn -> a
-    com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> b
-    android.content.SharedPreferences mAppState -> c
+    com.madhackerdesigns.neverbelate.util.AdHelper mAdHelper -> a
+    android.widget.CheckBox mEnableBtn -> b
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> c
+    android.content.SharedPreferences mAppState -> d
     void onCreate(android.os.Bundle) -> onCreate
     android.app.Dialog onCreateDialog(int) -> onCreateDialog
     void onPause() -> onPause
     void onResume() -> onResume
     void onEulaAgreedTo() -> a
-    void loadPreferences() -> b
+    void loadHelpers() -> b
     com.madhackerdesigns.neverbelate.settings.PreferenceHelper access$0(com.madhackerdesigns.neverbelate.ui.LauncherActivity) -> a
     android.content.SharedPreferences access$1(com.madhackerdesigns.neverbelate.ui.LauncherActivity) -> b
 com.madhackerdesigns.neverbelate.ui.LauncherActivity$1 -> com.madhackerdesigns.neverbelate.ui.h:
