@@ -27,11 +27,21 @@
     
     <string name="qt_marked_header">Marked Locations</string>
     <string name="qt_marked_message_1">\"But what if I want to use both general locations and searchable 
-        addresses in my calendar?\" Now you can! A new Marked Locations feature has been added to help spot the 
-        searchable addresses amongst the bad ones. Enabling Marked Locations is simple: look in the Settings 
+        addresses in my calendar?\" Now you can! A new marked locations feature has been added to help spot the 
+        searchable addresses amongst the bad ones. Enabling marked locations is simple: look in the Settings 
         menu to find the \"Only marked locations\" option shown below, and check the box.</string>
     <string name="qt_marked_message_2">Then start placing an asterisk or star (*) at the beginning of your 
         searchable event locations, just like this: \"*Atlanta, GA\". NeverBeLate™ will then only look for 
         the marked locations, and will ignore the rest. Next time a coworker invites you to a meeting in 
         \"Joe\'s office\", you won\'t be warned incorrectly.</string>
+    
+    <string name="qt_traffic_header">Check the Traffic</string>
+    <string name="qt_traffic_message_1">One of the most powerful features of NeverBeLate™ is the instant opportunity
+        to check the traffic between where you are now and where you need to be. When an Advance Warning 
+        dialog pops up to warn you that it is time to leave for your next event, you will see a large green 
+        button just like the one below.</string>
+    <string name="qt_traffic_message_2">Press this button to view a colorful map showing the traffic in the 
+        area. Your current location will be marked with a blue flag, and your event location will be marked with
+        a red flag. The traffic will be color-coded just like in Google Maps. If the traffic is red, be sure 
+        leave as soon as possible!</string>
 </resources>

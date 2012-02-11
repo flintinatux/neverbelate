@@ -45,13 +45,17 @@
 	</style>
 	
 	<style name="QuickTourHeader">
-	    <item name="android:layout_marginBottom">12dip</item>
-	    <item name="android:textSize">14sp</item>
+	    <item name="android:layout_marginBottom">10dip</item>
+	    <item name="android:textSize">18sp</item>
 	    <item name="android:textStyle">bold</item>
 	</style>
 	
 	<style name="QuickTourMessage">
 	    <item name="android:layout_marginBottom">10dip</item>
-	    <item name="android:textSize">14sp</item>
+	    <item name="android:textSize">16sp</item>
+	</style>
+	
+	<style name="QuickTourPage">
+	    <item name="android:padding">15dip</item>
 	</style>
 </resources>
