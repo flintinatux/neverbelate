@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
+    <string name="qt_title_0">Introduction</string>
+    <string name="qt_title_1">Enable</string>
+    <string name="qt_title_2">Searchable</string>
+    <string name="qt_title_3">Mark it!</string>
+    <string name="qt_title_4">Traffic</string>
+    
     <string name="qt_intro_header">Thanks for installing NeverBeLate™!</string>
     <string name="qt_intro_message">Congratulations on your first step toward taking control of your schedule 
         and eliminating lateness in your professional and personal life.\n\nThis quick tour is simple 
@@ -22,6 +28,8 @@
         London, UK\",  or if you\'re in a hurry, just \"Atlanta, GA\" or even \"77059\". A good tradeoff between 
         accuracy and speed of entry is to enter just the street address and the postal code, as shown  
         in the example below.</string>
+    <string name="qt_where">Where</string>
+    <string name="qt_sample_location">1600 Amphitheatre Pkwy, 94043</string>
     <string name="qt_searchable_message_2">If you leave the location field of an event empty, NeverBeLate™ 
         will simply ignore it. Looks pretty easy, doesn\'t it?</string>
     

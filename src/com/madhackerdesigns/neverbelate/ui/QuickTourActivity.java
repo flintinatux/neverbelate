@@ -1,5 +1,6 @@
 package com.madhackerdesigns.neverbelate.ui;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -24,10 +25,20 @@ public class QuickTourActivity extends FragmentActivity {
 		R.layout.qt_page_3,
 		R.layout.qt_page_4
 	};
+	
+	static final int[] PAGE_TITLES = {
+		R.string.qt_title_0,
+		R.string.qt_title_1,
+		R.string.qt_title_2,
+		R.string.qt_title_3,
+		R.string.qt_title_4
+	};
+	
+	static Resources RESOURCES;
 
     MyAdapter mAdapter;
     ViewPager mPager;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,10 +48,13 @@ public class QuickTourActivity extends FragmentActivity {
 
         mPager = (ViewPager)findViewById(R.id.pager);
         mPager.setAdapter(mAdapter);
+        
+        RESOURCES = getResources();
     }
     
     public static class MyAdapter extends FragmentStatePagerAdapter {
-        public MyAdapter(FragmentManager fm) {
+        
+    	public MyAdapter(FragmentManager fm) {
             super(fm);
         }
 
@@ -53,6 +67,11 @@ public class QuickTourActivity extends FragmentActivity {
         public Fragment getItem(int position) {
             return PageFragment.newInstance(position);
         }
+
+		@Override
+		public CharSequence getPageTitle(int position) {
+			return RESOURCES.getString(PAGE_TITLES[position]);
+		}
     }
     
     public static class PageFragment extends Fragment {
