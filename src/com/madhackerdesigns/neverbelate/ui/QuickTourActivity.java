@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.madhackerdesigns.neverbelate.R;
+import com.viewpagerindicator.CirclePageIndicator;
 
 public class QuickTourActivity extends FragmentActivity {
 	
@@ -48,6 +49,11 @@ public class QuickTourActivity extends FragmentActivity {
 
         mPager = (ViewPager)findViewById(R.id.pager);
         mPager.setAdapter(mAdapter);
+        
+      	//Bind the title indicator to the adapter
+        CirclePageIndicator indicator = (CirclePageIndicator) findViewById(R.id.indicator);
+        indicator.setViewPager(mPager);
+        indicator.setSnap(true);
         
         RESOURCES = getResources();
     }

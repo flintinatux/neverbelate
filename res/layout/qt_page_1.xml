@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:isScrollContainer="true"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:padding="15dip" >
+    android:layout_width="match_parent" >
     
-   <TextView 
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="@string/qt_enable_header"
-        style="@style/QuickTourHeader" />
-    
-    <TextView 
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="@string/qt_enable_message_1"
-        style="@style/QuickTourMessage" />
-    
-    <CheckBox
-        android:clickable="false"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="10dip"
-        android:text="@string/btn_enable_text"
-        android:textSize="16sp" />
-    
-    <TextView 
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="@string/qt_enable_message_2"
-        style="@style/QuickTourMessage" />
-    
-</LinearLayout>
+	<LinearLayout 
+		android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:orientation="vertical"
+	    android:padding="15dip" >
+	    
+	   <TextView 
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:text="@string/qt_enable_header"
+	        style="@style/QuickTourHeader" />
+	    
+	    <TextView 
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:text="@string/qt_enable_message_1"
+	        style="@style/QuickTourMessage" />
+	    
+	    <CheckBox
+	        android:clickable="false"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_marginBottom="10dip"
+	        android:text="@string/btn_enable_text"
+	        android:textSize="16sp" />
+	    
+	    <TextView 
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:text="@string/qt_enable_message_2"
+	        style="@style/QuickTourMessage" />
+	    
+	</LinearLayout>
+
+</ScrollView>
