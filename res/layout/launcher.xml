@@ -1,30 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:ads="http://schemas.android.com/apk/res/com.madhackerdesigns.neverbelate"
-	android:isScrollContainer="true"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res/com.madhackerdesigns.neverbelate"
 	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-	android:orientation="vertical" >
-
-	<include 
-	    layout="@layout/launcher_logo_enable"  
-	    android:layout_width="wrap_content" 
-	    android:layout_height="wrap_content" 
-	    android:layout_gravity="center_horizontal" />
+	android:layout_height="fill_parent" >
 	
-	<include 
-	    layout="@layout/launcher_buttons"  
-	    android:layout_width="wrap_content" 
-	    android:layout_height="wrap_content" 
-	    android:layout_gravity="center_horizontal" />
-	
-	<com.google.ads.AdView
-		android:id="@+id/ad_view"
-		android:layout_gravity="center|bottom"
+	<LinearLayout
+		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		ads:adUnitId="a14d952e8939105"
-        ads:adSize="BANNER"   />
-  
-</LinearLayout>
+		android:orientation="vertical" >
+	
+		<include 
+		    layout="@layout/launcher_logo_enable"  
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content" 
+		    android:layout_gravity="center_horizontal" />
+		
+		<include 
+		    layout="@layout/launcher_buttons"  
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content" 
+		    android:layout_gravity="center_horizontal" />
+		
+		<com.google.ads.AdView
+			android:id="@+id/ad_view"
+			android:layout_gravity="center|bottom"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			ads:adUnitId="a14d952e8939105"
+	        ads:adSize="BANNER"   />
+	  
+	</LinearLayout>
+
+</ScrollView>
