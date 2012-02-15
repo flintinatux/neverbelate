@@ -27,7 +27,7 @@
         <screen android:screenSize="normal" android:screenDensity="xhdpi" />
     </compatible-screens>
     
-    <application android:label="NeverBeLate" android:debuggable="false" android:icon="@drawable/ic_launcher_rabbit3">
+    <application android:label="NeverBeLate" android:debuggable="true" android:icon="@drawable/ic_launcher_rabbit3">
     
     	<meta-data android:value="507f773330a246a0aede2710bf1ced96" android:name="ADWHIRL_KEY"/>
     	
@@ -65,6 +65,7 @@
 <activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation" />
 <activity android:name="com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity" android:stateNotNeeded="true" android:excludeFromRecents="true" android:taskAffinity=""/>
 <activity android:name="com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity" android:configChanges="keyboardHidden" android:stateNotNeeded="true" android:excludeFromRecents="true" android:taskAffinity=""/>
+<activity android:name=".ui.QuickTourActivity" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
 </application>
     
 </manifest> 

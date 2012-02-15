@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.madhackerdesigns.neverbelate"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:layout_width="fill_parent">
+           
+<!--        	<android.support.v4.view.PagerTitleStrip -->
+<!--        	    android:background="@color/black" -->
+<!--        	    android:layout_height="wrap_content" -->
+<!--        	    android:layout_gravity="top" -->
+<!--        	    android:layout_width="fill_parent" -->
+<!--        	    android:textColor="@color/white" /> -->
+        	
+    </android.support.v4.view.ViewPager>
+    
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:padding="15dip"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:background="@android:color/background_light"
+        app:radius="4dp"
+        app:fillColor="@android:color/primary_text_light"
+        app:pageColor="@android:color/background_light"
+        app:strokeColor="@android:color/primary_text_light"
+        app:strokeWidth="1dp" />
+
+</LinearLayout>
