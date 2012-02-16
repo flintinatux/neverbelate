@@ -1,5 +1,6 @@
 package com.madhackerdesigns.neverbelate.ui;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,11 +8,13 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import com.madhackerdesigns.neverbelate.R;
@@ -30,12 +33,15 @@ public class QuickTourActivity extends FragmentActivity {
 	static Resources RESOURCES;
 
     MyAdapter mAdapter;
+    Context mContext;
+    CirclePageIndicator mIndicator;
     ViewPager mPager;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quick_tour);
+        mContext = getApplicationContext();
 
         mAdapter = new MyAdapter(getSupportFragmentManager());
 
@@ -44,8 +50,42 @@ public class QuickTourActivity extends FragmentActivity {
         
       	//Bind the title indicator to the adapter
         CirclePageIndicator indicator = (CirclePageIndicator) findViewById(R.id.indicator);
+        mIndicator = indicator;
         indicator.setViewPager(mPager);
         indicator.setSnap(true);
+        indicator.setOnPageChangeListener(new OnPageChangeListener() {
+
+			public void onPageScrollStateChanged(int state) {
+				// Change visibility of indicator based on scroll state
+				View indicator = mIndicator;
+				switch(state) {
+				case ViewPager.SCROLL_STATE_DRAGGING:
+					if (indicator.getVisibility() == View.INVISIBLE) {
+						indicator.startAnimation(AnimationUtils.loadAnimation(mContext, android.R.anim.fade_in));
+						indicator.setVisibility(View.VISIBLE);
+					}
+					break;
+				case ViewPager.SCROLL_STATE_IDLE:
+					if (indicator.getVisibility() == View.VISIBLE) {
+						indicator.startAnimation(AnimationUtils.loadAnimation(mContext, android.R.anim.fade_out));
+						indicator.setVisibility(View.INVISIBLE);
+					}
+					break;
+				case ViewPager.SCROLL_STATE_SETTLING:
+					// Do nothing.
+					break;
+				}
+			}
+
+			public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+				// Do nothing.
+			}
+
+			public void onPageSelected(int position) {
+				// Do nothing.
+			}
+        	
+        });
         
         RESOURCES = getResources();
     }

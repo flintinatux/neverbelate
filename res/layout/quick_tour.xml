@@ -11,13 +11,6 @@
         android:layout_weight="1"
         android:layout_width="fill_parent">
            
-<!--        	<android.support.v4.view.PagerTitleStrip -->
-<!--        	    android:background="@color/black" -->
-<!--        	    android:layout_height="wrap_content" -->
-<!--        	    android:layout_gravity="top" -->
-<!--        	    android:layout_width="fill_parent" -->
-<!--        	    android:textColor="@color/white" /> -->
-        	
     </android.support.v4.view.ViewPager>
     
     <com.viewpagerindicator.CirclePageIndicator
@@ -25,6 +18,7 @@
         android:padding="15dip"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
+        android:visibility="invisible"
         android:background="@android:color/background_light"
         app:radius="4dp"
         app:fillColor="@android:color/primary_text_light"
