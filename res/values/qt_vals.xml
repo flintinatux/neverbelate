@@ -23,7 +23,7 @@
         accuracy and speed of entry is to enter just the street address and the postal code, as shown  
         in the example below.</string>
     <string name="qt_where">Where</string>
-    <string name="qt_sample_location">1600 Amphitheatre Pkwy, 94043</string>
+    <string name="qt_sample_location">30 Rockefeller, 10112</string>
     <string name="qt_searchable_message_2">If you leave the location field of an event empty, NeverBeLate™ 
         will simply ignore it. Looks pretty easy, doesn\'t it?</string>
     
@@ -45,5 +45,16 @@
     <string name="qt_traffic_message_2">Press this button to view a colorful map showing the traffic in the 
         area. Your current location will be marked with a blue flag, and your event location will be marked with
         a red flag. The traffic will be color-coded just like in Google Maps. If the traffic is red, be sure 
-        leave as soon as possible!</string>
+        to leave as soon as possible!</string>
+    
+    <string name="qt_final_header">Just the Beginning</string>
+    <string name="qt_final_message_1">These few steps cover just the basics of putting NeverBeLate™ to work for 
+        you. I challenge you to explore the settings menu to discover new ways to adjust the performance of 
+        NeverBeLate™ to fit your lifestyle and travel needs. You can adjust the travel method, the early arrival 
+        time, and your preferred notification method, just to name a few.</string>
+    <string name="qt_final_message_2">A good productivity app should help you get more done with less effort. 
+        NeverBeLate™ is designed to be an indispensable tool that blends with your favorite calendar app 
+        and makes sticking to your schedule an effortless task. Test it for yourself: go create a test event 
+        in your calendar, and let NeverBeLate™ take care of the reminder!</string>
+    <string name="qt_finish_button">Done</string>
 </resources>

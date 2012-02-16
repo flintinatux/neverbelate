@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.madhackerdesigns.neverbelate.ui.EdgeScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent" >
 
@@ -43,4 +44,4 @@
 	    
 	</LinearLayout>
 
-</ScrollView>
+</com.madhackerdesigns.neverbelate.ui.EdgeScrollView>
