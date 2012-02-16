@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res/com.madhackerdesigns.neverbelate"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:layout_height="fill_parent" >
     
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
-        android:layout_height="0px"
-        android:layout_weight="1"
+        android:layout_height="fill_parent"
         android:layout_width="fill_parent">
            
     </android.support.v4.view.ViewPager>
@@ -16,6 +14,7 @@
     <com.viewpagerindicator.CirclePageIndicator
         android:id="@+id/indicator"
         android:padding="15dip"
+        android:layout_gravity="center|bottom"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:visibility="invisible"
@@ -26,4 +25,4 @@
         app:strokeColor="@android:color/primary_text_light"
         app:strokeWidth="1dp" />
 
-</LinearLayout>
+</merge>

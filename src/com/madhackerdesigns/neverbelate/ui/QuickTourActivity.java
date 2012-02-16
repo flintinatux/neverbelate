@@ -31,7 +31,8 @@ public class QuickTourActivity extends FragmentActivity {
 		R.layout.qt_page_1,
 		R.layout.qt_page_2,
 		R.layout.qt_page_3,
-		R.layout.qt_page_4
+		R.layout.qt_page_4,
+		R.layout.qt_page_5
 	};
 	
 	static Resources RESOURCES;
