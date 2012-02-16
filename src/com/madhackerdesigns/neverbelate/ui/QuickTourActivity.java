@@ -9,15 +9,19 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.TextView;
 
 import com.madhackerdesigns.neverbelate.R;
+import com.madhackerdesigns.neverbelate.settings.PreferenceHelper;
 import com.viewpagerindicator.CirclePageIndicator;
 
 public class QuickTourActivity extends FragmentActivity {
@@ -110,6 +114,7 @@ public class QuickTourActivity extends FragmentActivity {
     public static class PageFragment extends Fragment {
 
     	private int mPosition;
+    	PreferenceHelper mPrefs;
     	
     	/**
          * Create a new instance of PageFragment, providing "pos"
@@ -142,17 +147,48 @@ public class QuickTourActivity extends FragmentActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
             View v = inflater.inflate(mPosition, container, false);
+            
+            // Build a finish OnClickListener
+            OnClickListener finishListener = new OnClickListener() {
+            	
+				public void onClick(View v) {
+					// Finish the activity
+					getActivity().finish();
+				}
+            	
+            };
+            
+            // Load the Skip Tour button if available
             TextView skipTour = (TextView) v.findViewById(R.id.tv_skip_tour);
             if (skipTour != null) {
-	            skipTour.setText(Html.fromHtml(v.getResources().getString(R.string.qt_skip_tour)));
-	            skipTour.setOnClickListener(new OnClickListener() {
-	
-					public void onClick(View v) {
-						// Finish the activity
-						getActivity().finish();
-					}
-	            	
-	            });
+	            skipTour.setOnClickListener(finishListener);
+            }
+            
+            // Load the Enable checkbox if available
+            CheckBox btnEnable = (CheckBox) v.findViewById(R.id.btn_enable);
+            if (btnEnable != null) {
+            	mPrefs = new PreferenceHelper(getActivity());
+            	if (mPrefs.isNeverLateEnabled()) {
+            		btnEnable.setChecked(true);
+            		btnEnable.setClickable(false);
+            	} else {
+            		btnEnable.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+            			
+            			public void onCheckedChanged(CompoundButton buttonView,
+            					boolean isChecked) {
+            				// Change the enabled state
+            				mPrefs.setNeverLateEnabled(isChecked);
+            				buttonView.setClickable(false);
+            			}
+            			
+            		});
+            	}
+            }
+            
+            // Load the Done button if available
+            Button btnDone = (Button) v.findViewById(R.id.qt_finish_button);
+            if (btnDone != null) {
+            	btnDone.setOnClickListener(finishListener);
             }
             return v;
         }

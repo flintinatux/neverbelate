@@ -6,7 +6,7 @@
         and eliminating lateness in your professional and personal life.\n\nThis quick tour is simple 
         to use: swipe left and right to move between pages, and swipe up and down to scroll.\n\nNow swipe 
         to the next page to get started!</string>
-    <string name="qt_skip_tour"><u>... or skip the tour.</u></string>
+    <string name="qt_skip_tour">... or skip the tour.</string>
     
     <string name="qt_enable_header">Enabling NeverBeLate™</string>
     <string name="qt_enable_message_1">Turning on the NeverBeLate™ Advance Warning system is simple. On the main

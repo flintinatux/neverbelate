@@ -36,6 +36,7 @@
         android:gravity="right"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
+        android:text="@string/qt_skip_tour"
         android:textColor="@color/blue"
         android:textSize="14sp" />
     
