@@ -49,6 +49,8 @@
     <string name="default_event_title">Default Event Title</string>
     <string name="default_travel_time">25 min\naway</string>
     <string name="maps_data">Maps data</string>
+    <string name="minutes_early">minutes early</string>
+    <string name="on_time">on time</string>
     <string name="snooze_button_text">Snooze</string>
     <string name="snooze_all_button_text">Snooze all</string>
     <string name="traffic_button_text">Click to View\nCurrent Traffic</string>

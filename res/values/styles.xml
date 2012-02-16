@@ -21,6 +21,7 @@
 <resources>
 	<color name="black">#000000</color>
 	<color name="blue">#0055D4</color>
+	<color name="blue_electric">#18A2BD</color>
 	<color name="blue_light">#AACCFF</color>
 	<color name="edit_event_separator">#FFDDDDDD</color>
 	<color name="event_info_label_color">#FF999999</color>

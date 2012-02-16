@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string name="qt_title_0">Introduction</string>
-    <string name="qt_title_1">Enable</string>
-    <string name="qt_title_2">Searchable</string>
-    <string name="qt_title_3">Mark it!</string>
-    <string name="qt_title_4">Traffic</string>
-    
     <string name="qt_intro_header">Thanks for installing NeverBeLate™!</string>
     <string name="qt_intro_message">Congratulations on the first step toward taking control of your schedule 
         and eliminating lateness in your professional and personal life.\n\nThis quick tour is simple 

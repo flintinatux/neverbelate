@@ -27,14 +27,6 @@ public class QuickTourActivity extends FragmentActivity {
 		R.layout.qt_page_4
 	};
 	
-	static final int[] PAGE_TITLES = {
-		R.string.qt_title_0,
-		R.string.qt_title_1,
-		R.string.qt_title_2,
-		R.string.qt_title_3,
-		R.string.qt_title_4
-	};
-	
 	static Resources RESOURCES;
 
     MyAdapter mAdapter;
@@ -73,11 +65,6 @@ public class QuickTourActivity extends FragmentActivity {
         public Fragment getItem(int position) {
             return PageFragment.newInstance(position);
         }
-
-		@Override
-		public CharSequence getPageTitle(int position) {
-			return RESOURCES.getString(PAGE_TITLES[position]);
-		}
     }
     
     public static class PageFragment extends Fragment {
