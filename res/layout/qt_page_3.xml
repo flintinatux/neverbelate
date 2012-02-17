@@ -8,19 +8,19 @@
 	    android:layout_height="wrap_content"
 	    android:layout_width="match_parent"
 	    android:orientation="vertical"
-	    style="@style/QuickTourPage" >
+	    style="@style/QuickTourPageNoPad" >
 	    
 	   <TextView 
 	        android:layout_height="wrap_content"
 	        android:layout_width="wrap_content"
 	        android:text="@string/qt_marked_header"
-	        style="@style/QuickTourHeader" />
+	        style="@style/QuickTourHeaderPadded" />
 	    
 	    <TextView 
 	        android:layout_height="wrap_content"
 	        android:layout_width="wrap_content"
 	        android:text="@string/qt_marked_message_1"
-	        style="@style/QuickTourMessage" />
+	        style="@style/QuickTourMessagePadded" />
 	    
 	    <include 
 	        android:id="@+id/pref_marked_locations"
@@ -33,7 +33,7 @@
 	        android:layout_height="wrap_content"
 	        android:layout_width="wrap_content"
 	        android:text="@string/qt_marked_message_2"
-	        style="@style/QuickTourMessage" />
+	        style="@style/QuickTourMessagePadded" />
 	    
 	</LinearLayout>
 

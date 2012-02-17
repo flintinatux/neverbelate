@@ -81,13 +81,28 @@
 	    <item name="android:textStyle">bold</item>
 	</style>
 	
+	<style name="QuickTourHeaderPadded" parent="QuickTourHeader">
+	    <item name="android:paddingLeft">15dip</item>
+	    <item name="android:paddingRight">15dip</item>
+	</style>
+	
 	<style name="QuickTourMessage">
 	    <item name="android:layout_marginBottom">10dip</item>
 	    <item name="android:textSize">16sp</item>
 	</style>
 	
+	<style name="QuickTourMessagePadded" parent="QuickTourMessage">
+	    <item name="android:paddingLeft">15dip</item>
+	    <item name="android:paddingRight">15dip</item>
+	</style>
+	
 	<style name="QuickTourPage">
 	    <item name="android:padding">15dip</item>
+	</style>
+	
+	<style name="QuickTourPageNoPad">
+	    <item name="android:paddingBottom">15dip</item>
+	    <item name="android:paddingTop">15dip</item>
 	</style>
 	
 	<style name="TextAppearance.EditEvent" parent="@android:style/TextAppearance.Medium">
