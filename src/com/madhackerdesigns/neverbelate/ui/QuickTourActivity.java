@@ -116,6 +116,9 @@ public class QuickTourActivity extends FragmentActivity {
 
     	private int mPosition;
     	PreferenceHelper mPrefs;
+    	TextView mSummaryText;
+    	String mSummaryOff;
+    	String mSummaryOn;
     	
     	/**
          * Create a new instance of PageFragment, providing "pos"
@@ -186,12 +189,51 @@ public class QuickTourActivity extends FragmentActivity {
             	}
             }
             
+            // Load the marked locations preference view if available
+            ViewGroup pref = (ViewGroup) v.findViewById(R.id.pref_marked_locations);
+            if (pref != null) {
+            	inflateMarkedLocationPref(pref);
+            }
+            
             // Load the Done button if available
             Button btnDone = (Button) v.findViewById(R.id.qt_finish_button);
             if (btnDone != null) {
             	btnDone.setOnClickListener(finishListener);
             }
             return v;
+        }
+        
+        private void inflateMarkedLocationPref(ViewGroup v) {
+        	// Set the preference title
+        	Resources res = v.getResources();
+        	String title = res.getString(R.string.pr_marked_locations_title);
+        	((TextView) v.findViewById(R.id.title)).setText(title);
+        	
+        	// Set the "off" summary text
+        	mSummaryOff = res.getString(R.string.pr_marked_locations_summary_off);
+        	mSummaryOn = res.getString(R.string.pr_marked_locations_summary_on);
+        	mSummaryText = (TextView) v.findViewById(R.id.summary);
+        	mSummaryText.setText(mSummaryOff);
+        	
+        	// Inflate the checkbox into the widget placeholder
+        	LayoutInflater inflater = (LayoutInflater) v.getContext().getSystemService(LAYOUT_INFLATER_SERVICE);
+        	ViewGroup widget = (ViewGroup) v.findViewById(R.id.widget_frame);
+        	inflater.inflate(R.layout.preference_widget_checkbox, widget);
+        	CheckBox c = (CheckBox) widget.findViewById(R.id.checkbox);
+        	
+        	// Set the OnCheckedChangedListener to actually change the summary and underlying preference
+        	c.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+
+				public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+					mPrefs.setOnlyMarkedLocatitons(isChecked);
+					if (isChecked) { mSummaryText.setText(mSummaryOn); }
+					else { mSummaryText.setText(mSummaryOff); }
+				}
+        		
+        	});
+        	
+        	// Check the prefs and set checkbox for current state
+        	c.setChecked(mPrefs.isOnlyMarkedLocations()); 
         }
     }
 }
