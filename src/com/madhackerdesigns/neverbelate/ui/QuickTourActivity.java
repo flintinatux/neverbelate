@@ -171,7 +171,7 @@ public class QuickTourActivity extends FragmentActivity {
             // Load the Enable checkbox if available
             CheckBox btnEnable = (CheckBox) v.findViewById(R.id.btn_enable);
             if (btnEnable != null) {
-            	mPrefs = new PreferenceHelper(getActivity());
+            	if (mPrefs == null) { mPrefs = new PreferenceHelper(getActivity()); }
             	if (mPrefs.isNeverLateEnabled()) {
             		btnEnable.setChecked(true);
             		btnEnable.setClickable(false);
@@ -222,6 +222,7 @@ public class QuickTourActivity extends FragmentActivity {
         	CheckBox c = (CheckBox) widget.findViewById(R.id.checkbox);
         	
         	// Set the OnCheckedChangedListener to actually change the summary and underlying preference
+        	if (mPrefs == null) { mPrefs = new PreferenceHelper(getActivity()); }
         	c.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 				public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -233,6 +234,8 @@ public class QuickTourActivity extends FragmentActivity {
         	});
         	
         	// Check the prefs and set checkbox for current state
+        	c.setFocusable(true);
+        	c.setClickable(true);
         	c.setChecked(mPrefs.isOnlyMarkedLocations()); 
         }
     }
