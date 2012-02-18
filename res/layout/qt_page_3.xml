@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.madhackerdesigns.neverbelate.ui.EdgeScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent" >
+
+	<LinearLayout
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:orientation="vertical"
+	    style="@style/QuickTourPageNoPad" >
+	    
+	   <TextView 
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:text="@string/qt_marked_header"
+	        style="@style/QuickTourHeaderPadded" />
+	    
+	    <TextView 
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:text="@string/qt_marked_message_1"
+	        style="@style/QuickTourMessagePadded" />
+	    
+	    <include 
+	        android:id="@+id/pref_marked_locations"
+	        android:layout_height="wrap_content"
+	        android:layout_width="fill_parent"
+	        android:layout_marginBottom="10dip"
+	        layout="@layout/preference" />
+	    
+	    <TextView 
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:text="@string/qt_marked_message_2"
+	        style="@style/QuickTourMessagePadded" />
+	    
+	</LinearLayout>
+
+</com.madhackerdesigns.neverbelate.ui.EdgeScrollView>

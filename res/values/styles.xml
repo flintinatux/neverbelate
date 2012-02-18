@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+/* //device/apps/Calendar/assets/res/any/styles.xml
+**
+** Copyright 2006, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
 <resources>
 	<color name="black">#000000</color>
 	<color name="blue">#0055D4</color>
+	<color name="blue_electric">#18A2BD</color>
 	<color name="blue_light">#AACCFF</color>
+	<color name="edit_event_separator">#FFDDDDDD</color>
+	<color name="event_info_label_color">#FF999999</color>
 	<color name="red_dark">#D40000</color>
 	<color name="grey_dark">#333333</color>
 	<color name="grey_light">#AAAAAA</color>
@@ -30,6 +52,15 @@
  		<item name="android:background">@android:drawable/bottom_bar</item>
 	</style>
 	
+	<style name="EditEventSeparator">
+        <item name="android:layout_height">15dip</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">10dip</item>
+        <item name="android:layout_marginBottom">5dip</item>
+        <item name="android:background">@color/edit_event_separator</item>
+        <item name="android:visibility">gone</item>
+    </style>
+	
 	<style name="LauncherButton" >
 		<item name="android:layout_height">wrap_content</item>
 		<item name="android:layout_width">96dip</item>
@@ -43,4 +74,46 @@
 	    <item name="android:layout_margin">10dip</item>
 	    <item name="android:textSize">12sp</item>
 	</style>
+	
+	<style name="QuickTourHeader">
+	    <item name="android:layout_marginBottom">10dip</item>
+	    <item name="android:textSize">18sp</item>
+	    <item name="android:textStyle">bold</item>
+	</style>
+	
+	<style name="QuickTourHeaderPadded" parent="QuickTourHeader">
+	    <item name="android:paddingLeft">15dip</item>
+	    <item name="android:paddingRight">15dip</item>
+	</style>
+	
+	<style name="QuickTourMessage">
+	    <item name="android:layout_marginBottom">10dip</item>
+	    <item name="android:textSize">16sp</item>
+	</style>
+	
+	<style name="QuickTourMessagePadded" parent="QuickTourMessage">
+	    <item name="android:paddingLeft">15dip</item>
+	    <item name="android:paddingRight">15dip</item>
+	</style>
+	
+	<style name="QuickTourPage">
+	    <item name="android:padding">15dip</item>
+	</style>
+	
+	<style name="QuickTourPageNoPad">
+	    <item name="android:paddingBottom">15dip</item>
+	    <item name="android:paddingTop">15dip</item>
+	</style>
+	
+	<style name="TextAppearance.EditEvent" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FF333333</item>
+    </style>
+
+    <style name="TextAppearance.EditEvent_Value" parent="TextAppearance.EditEvent">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginRight">12dip</item>
+        <item name="android:layout_marginLeft">12dip</item>
+    </style>
 </resources>

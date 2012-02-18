@@ -154,6 +154,16 @@ public class PreferenceHelper {
 	}
 	
 	/**
+	 * @param onlyMarkedLocations True to only act on locations marked with (*)
+	 * 
+	 * @return True if successfully set
+	 */
+	public boolean setOnlyMarkedLocatitons(boolean onlyMarkedLocations) {
+		SharedPreferences.Editor editor = mPrefs.edit();
+		return editor.putBoolean(KEY_ONLY_MARKED_LOCATIONS, onlyMarkedLocations).commit();
+	}
+	
+	/**
 	 * @return The ringtone set by the user.
 	 */
 	public Uri getRingtone() {

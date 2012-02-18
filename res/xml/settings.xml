@@ -51,9 +51,9 @@
 			android:defaultValue="@string/default_lookahead_window" />
 		<CheckBoxPreference
 			android:key="only_marked_locations"
-			android:title="Only marked locations"
-			android:summaryOn="Will only look for events with locations that begin with an asterisk or star (*)"
-			android:summaryOff="Will calculate travel times for all events that have locations specified"
+			android:title="@string/pr_marked_locations_title"
+			android:summaryOn="@string/pr_marked_locations_summary_on"
+			android:summaryOff="@string/pr_marked_locations_summary_off"
 			android:defaultValue="@bool/default_only_marked_locations" />
 <!-- 		<CheckBoxPreference -->
 <!-- 			android:key="warn_no_location" -->
