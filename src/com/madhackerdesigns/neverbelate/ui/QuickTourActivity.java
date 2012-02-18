@@ -22,7 +22,7 @@ import android.widget.TextView;
 
 import com.madhackerdesigns.neverbelate.R;
 import com.madhackerdesigns.neverbelate.settings.PreferenceHelper;
-import com.viewpagerindicator.CirclePageIndicator;
+import com.viewpagerindicator.CirclePageIndicator; 
 
 public class QuickTourActivity extends FragmentActivity {
 	

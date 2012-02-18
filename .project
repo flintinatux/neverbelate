@@ -3,6 +3,7 @@
 	<name>NeverBeLate</name>
 	<comment></comment>
 	<projects>
+		<project>com_viewpagerindicator</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

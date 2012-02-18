@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="whats_new_title">What\'s new in NeverBeLate™</string>
-    <integer name="whats_new_version">13</integer>
+    <integer name="whats_new_version">14</integer>
     <string name="whats_new_message">Version 1.1_build-16:\n\nAdded the new Quick Tour! It will help you get 
         up and running quickly, and should answer some of the questions you may have about how to make 
         NeverBeLate™ work for you.\n
