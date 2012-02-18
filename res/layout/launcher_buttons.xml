@@ -12,10 +12,10 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/btn_tutorial"
+            android:id="@+id/btn_quick_tour"
             style="@style/LauncherButton"
             android:drawableTop="@drawable/ic_menu_help"
-            android:text="@string/btn_tutorial_text" />
+            android:text="@string/btn_quick_tour_text" />
 
         <Button
             android:id="@+id/btn_configure"

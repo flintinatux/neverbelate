@@ -3,11 +3,15 @@
  */
 package com.madhackerdesigns.neverbelate.ui;
 
+import java.util.Date;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +30,7 @@ import com.madhackerdesigns.neverbelate.R;
 import com.madhackerdesigns.neverbelate.service.StartupReceiver;
 import com.madhackerdesigns.neverbelate.settings.NeverBeLateSettings;
 import com.madhackerdesigns.neverbelate.settings.PreferenceHelper;
+import com.madhackerdesigns.neverbelate.util.AdHelper;
 import com.madhackerdesigns.neverbelate.util.Logger;
 import com.pontiflex.mobile.webview.sdk.AdManagerFactory;
 import com.pontiflex.mobile.webview.sdk.IAdManager;
@@ -38,14 +43,23 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 
 	// Static constants
 	private static final boolean ADMOB = true;
-	private static final boolean PONTIFLEX = false;
 	private static final boolean ADMOB_TEST = false;
 	private static final int DLG_COMING_SOON = 0;
-	private static final String LOG_TAG = "NeverBeLateService";
+	private static final int DLG_QUICK_TOUR = 1;
+	private static final int DLG_WHATS_NEW = 2;
+	private static final long FIVE_MINUTES = 5*60*1000;
+	private static final String KEY_AD_LAST_SHOWN = "app_state.ad_last_shown";
+	private static final String KEY_QUICK_TOUR = "app_state.quick_tour";
+	private static final String KEY_WHATS_NEW = "app_state.whats_new";
+    private static final String LOG_TAG = "NeverBeLateService";
+    private static final boolean PONTIFLEX = true;
+	private static final String PREF_APP_STATE = "app_state";
 
 	// Private fields
+	private AdHelper mAdHelper;
 	private CheckBox mEnableBtn;
 	private PreferenceHelper mPrefs;
+	private SharedPreferences mAppState;
 	
 	/* (non-Javadoc)
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
@@ -53,6 +67,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {		
 		super.onCreate(savedInstanceState);
+		loadHelpers();
 		
 		// Show TOS and EULA for acceptance
 		Eula.show(this);
@@ -67,7 +82,6 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		setContentView(R.layout.launcher);
 		
 		// Setup the Enable checkbox
-		if (mPrefs == null) { mPrefs = new PreferenceHelper(this); }
 		mEnableBtn = (CheckBox) findViewById(R.id.btn_enable);
 		mEnableBtn.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
@@ -111,10 +125,9 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 			
 		};
 		((Button) findViewById(R.id.btn_tips)).setOnClickListener(comingSoonListener);
-//		((Button) findViewById(R.id.btn_tutorial)).setOnClickListener(comingSoonListener);
 		
-		Button quickTourBtn = (Button) findViewById(R.id.btn_tutorial);
-		quickTourBtn.setOnClickListener(new OnClickListener() {
+		// Point the Quick Tour button to the new Quick Tour
+		((Button) findViewById(R.id.btn_quick_tour)).setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
 				startActivity(new Intent(LauncherActivity.this, QuickTourActivity.class));
@@ -175,6 +188,57 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 			           }
 			       });
 			break;
+		case DLG_WHATS_NEW:
+			builder.setTitle(R.string.whats_new_title)
+				   .setMessage(R.string.whats_new_message)
+				   .setCancelable(true)
+				   .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+					
+						public void onClick(DialogInterface dialog, int which) {
+							// Store the new version of What's new as shown and dismiss dialog
+							int current = getResources().getInteger(R.integer.whats_new_version);
+							mAppState.edit().putInt(KEY_WHATS_NEW, current).commit();
+							dialog.cancel();
+						}
+					})
+					.setOnCancelListener(new OnCancelListener() {
+
+						public void onCancel(DialogInterface dialog) {
+							// Check if the QuickTour has been viewed, and challenge if not
+							boolean seenQT = mAppState.getBoolean(KEY_QUICK_TOUR, false);
+							if (!seenQT) {
+								showDialog(DLG_QUICK_TOUR);
+							}
+						}
+						
+					});
+		case DLG_QUICK_TOUR:
+			builder.setTitle(R.string.dlg_qt_title)
+				   .setMessage(R.string.dlg_qt_msg)
+				   .setCancelable(true)
+				   .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+					
+						public void onClick(DialogInterface dialog, int which) {
+							// Mark QT as seen, and then start the QT activity
+							mAppState.edit().putBoolean(KEY_QUICK_TOUR, true).commit();
+							startActivity(new Intent(LauncherActivity.this, QuickTourActivity.class));
+						}
+				   })
+				   .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+						
+						public void onClick(DialogInterface dialog, int which) {
+							// Still mark as seen to not annoy the user
+							mAppState.edit().putBoolean(KEY_QUICK_TOUR, true).commit();
+						}
+				   })
+				   .setOnCancelListener(new OnCancelListener() {
+
+						public void onCancel(DialogInterface dialog) {
+							// Still mark as seen to not annoy the user
+							mAppState.edit().putBoolean(KEY_QUICK_TOUR, true).commit();
+						}
+					   
+				   });
 		}
 		
 		return builder.create();
@@ -188,7 +252,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		super.onPause();
 		
 		// Release the preference helper resources
-		mPrefs = null;
+		dropHelpers();
 	}
 
 	/* (non-Javadoc)
@@ -199,17 +263,47 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		super.onResume();
 		
 		// Load up the preference helper and set the checked state
-		if (mPrefs == null) { mPrefs = new PreferenceHelper(this); }
+		loadHelpers();
 		if (mEnableBtn == null) { mEnableBtn = (CheckBox) findViewById(R.id.btn_enable); }
 		mEnableBtn.setChecked(mPrefs.isNeverLateEnabled());
 	}
 
 	public void onEulaAgreedTo() {
-		// Show Pontiflex ad after confirmation of EULA agreement
-		if (PONTIFLEX) {
-			IAdManager adManager = AdManagerFactory.createInstance(getApplication());
-			adManager.showAd();
+		// Show either What's New or Pontiflex ad after confirmation of EULA agreement
+		int previous = mAppState.getInt(KEY_WHATS_NEW, 0);
+		int current = getResources().getInteger(R.integer.whats_new_version);
+		if (previous < current) { 
+			Logger.d("Showing Whats new dialog");
+			showDialog(DLG_WHATS_NEW);
+		} else {
+			long adLastShown = mAppState.getLong(KEY_AD_LAST_SHOWN, 0);
+			long now = new Date().getTime();
+			if (PONTIFLEX && now > (adLastShown + FIVE_MINUTES)) {
+				AdHelper adHelper = mAdHelper;
+				if (adHelper.isTimeToShowAd()) {
+					adHelper.setAdShown(true);
+					Logger.d("Showing Pontiflex ad");
+					mAppState.edit().putLong(KEY_AD_LAST_SHOWN, now).commit();
+					IAdManager adManager = AdManagerFactory.createInstance(getApplication());
+					adManager.showAd();
+				}
+				adHelper.setWarningDismissed(true);
+			}
 		}
+	}
+	
+	private void loadHelpers() {
+		if (mPrefs == null) { mPrefs = new PreferenceHelper(this); }
+		if (mAppState == null) { 
+			mAppState = getSharedPreferences(PREF_APP_STATE, Activity.MODE_PRIVATE);
+		}
+		if (mAdHelper == null) { mAdHelper = new AdHelper(getApplicationContext()); }
+    }
+	
+	private void dropHelpers() {
+		mPrefs = null;
+		mAppState = null;
+		mAdHelper = null;
 	}
 	
 }

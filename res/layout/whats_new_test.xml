@@ -6,7 +6,7 @@
     android:padding="15dip" >
     
     <TextView
-        android:text="@string/whats_new_message"
+        android:text="@string/dlg_qt_msg"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent" />
 
