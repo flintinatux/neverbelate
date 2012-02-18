@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="whats_new_title">What\'s new in NeverBeLate™</string>
-    <integer name="whats_new_version">12</integer>
-    <string name="whats_new_message">Version 1.0_build-15:\n\nMade the launcher screen scrollable to support 
+    <integer name="whats_new_version">13</integer>
+    <string name="whats_new_message">Version 1.1_build-16:\n\nAdded the new Quick Tour! It will help you get 
+        up and running quickly, and should answer some of the questions you may have about how to make 
+        NeverBeLate™ work for you.\n
+        \nVersion 1.0_build-15:\n\nMade the launcher screen scrollable to support 
         devices with smaller screens. If you have a small-screen device, and you find that another feature in 
         NeverBeLate™ does not fit properly on your screen, please send me some feedback to let me know!\n
         \nVersion 1.0_build-14:\n\nAdjusted the warning dialog text to include the early

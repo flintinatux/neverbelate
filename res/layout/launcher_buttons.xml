@@ -37,10 +37,10 @@
             android:text="@string/btn_share_text" />
 
         <Button
-            android:id="@+id/btn_tips"
+            android:id="@+id/btn_video_tour"
             style="@style/LauncherButton"
-            android:drawableTop="@drawable/ic_menu_notifications"
-            android:text="@string/btn_tips_text" />
+            android:drawableTop="@drawable/ic_menu_play_clip"
+            android:text="@string/btn_video_tour_text" />
     </LinearLayout>
 
 </LinearLayout>

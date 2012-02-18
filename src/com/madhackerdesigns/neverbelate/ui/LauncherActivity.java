@@ -124,7 +124,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 			}
 			
 		};
-		((Button) findViewById(R.id.btn_tips)).setOnClickListener(comingSoonListener);
+		((Button) findViewById(R.id.btn_video_tour)).setOnClickListener(comingSoonListener);
 		
 		// Point the Quick Tour button to the new Quick Tour
 		((Button) findViewById(R.id.btn_quick_tour)).setOnClickListener(new OnClickListener() {
@@ -202,7 +202,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 						}
 					})
 					.setOnCancelListener(new OnCancelListener() {
-
+					
 						public void onCancel(DialogInterface dialog) {
 							// Check if the QuickTour has been viewed, and challenge if not
 							boolean seenQT = mAppState.getBoolean(KEY_QUICK_TOUR, false);
@@ -212,6 +212,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 						}
 						
 					});
+			break;
 		case DLG_QUICK_TOUR:
 			builder.setTitle(R.string.dlg_qt_title)
 				   .setMessage(R.string.dlg_qt_msg)

@@ -5,22 +5,22 @@
     <string name="app_title">NeverBeLate™ Settings</string>
     <string name="app_version">App version</string>
     <string name="base_task">com.madhackerdesigns.neverbelate.base_task</string>
-    <string name="version_name">1.0_build-15</string>
+    <string name="version_name">1.1_build-16</string>
 
 <!-- Admob Publisher ID -->
 	<string name="admob_id">a14d952e8939105</string>
 	
 <!-- Strings for Launcher Activity -->
 	<string name="btn_enable_text">Enable NeverBeLate™</string>
-	<string name="btn_quick_tour_text">Quick Tour</string>
+	<string name="btn_quick_tour_text">View\nQuick Tour</string>
 	<string name="btn_configure_text">Configure Settings</string>
 	<string name="btn_share_text">Share with a Friend</string>
-	<string name="btn_tips_text">Tips and Tricks</string>
+	<string name="btn_video_tour_text">Watch\nVideo Tour</string>
 	<string name="content_description_logo">NeverBeLate™ White Rabbit Logo</string>
 	<string name="dlg_coming_soon_msg">This feature is coming soon, so be sure to check back later in the Android Market for updates!</string>
 	<string name="dlg_coming_soon_title">Coming soon</string>
 	<string name="dlg_qt_title">Check out the Quick Tour!</string>
-	<string name="dlg_qt_msg">Would you like to check out the new Quick Tour? It will help you get up and running quickly, and should answer some of the questions you may have about how to make NeverBeLate™ work for you.\n\n(NOTE: if you do not view it now, you can always get back to it from the Quick Tour button on the main screen.)</string>
+	<string name="dlg_qt_msg">Would you like to view the new Quick Tour? It will help you get up and running quickly, and should answer some of the questions you may have about how to make NeverBeLate™ work for you.\n\n(NOTE: if you do not view it now, you can always get back to it from the Quick Tour button on the main screen.)</string>
 	<string name="yes">Yes</string>
 	<string name="no">No</string>
 	<string name="loading_text">Loading...</string>

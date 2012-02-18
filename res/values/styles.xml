@@ -62,11 +62,13 @@
     </style>
 	
 	<style name="LauncherButton" >
+		<item name="android:background">@drawable/btn_default_holo_dark</item>
 		<item name="android:layout_height">wrap_content</item>
 		<item name="android:layout_width">96dip</item>
 		<item name="android:layout_marginBottom">10dip</item>
 		<item name="android:layout_marginLeft">5dip</item>
 		<item name="android:layout_marginRight">5dip</item>
+		<item name="android:textColor">@android:color/primary_text_dark</item>
 		<item name="android:textSize">12sp</item>
 	</style>
 	
