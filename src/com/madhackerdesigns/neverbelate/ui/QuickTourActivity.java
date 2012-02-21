@@ -92,6 +92,17 @@ public class QuickTourActivity extends FragmentActivity {
         	
         });
         
+        // Style the adapter with methods
+        RESOURCES = getResources();
+        final float density = RESOURCES.getDisplayMetrics().density;
+        int textColor = RESOURCES.getColor(android.R.color.primary_text_light);
+        int bgColor = RESOURCES.getColor(android.R.color.background_light);
+        indicator.setRadius(4 * density);
+        indicator.setFillColor(textColor);
+        indicator.setPageColor(bgColor);
+        indicator.setStrokeColor(textColor);
+        indicator.setStrokeWidth(1 * density);
+        
         RESOURCES = getResources();
     }
     
