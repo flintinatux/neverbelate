@@ -304,8 +304,16 @@ android.support.v4.view.PagerTitleStrip$1
 android.support.v4.view.PagerTitleStrip$PageListener
 android.support.v4.view.VelocityTrackerCompat:
     25:51:public VelocityTrackerCompat()
+    91:91:public static float getYVelocity(android.view.VelocityTracker,int)
+android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl:
+    44:44:public float getYVelocity(android.view.VelocityTracker,int)
+android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl:
+    58:58:public float getYVelocity(android.view.VelocityTracker,int)
+android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl:
+    public abstract float getYVelocity(android.view.VelocityTracker,int)
 android.support.v4.view.VelocityTrackerCompatHoneycomb:
     24:24:VelocityTrackerCompatHoneycomb()
+    29:29:public static float getYVelocity(android.view.VelocityTracker,int)
 android.support.v4.view.ViewCompat:
     public static final int OVER_SCROLL_ALWAYS
     public static final int OVER_SCROLL_IF_CONTENT_SCROLLS
@@ -367,14 +375,18 @@ android.support.v4.view.ViewPager:
     private static final int MAX_SETTLE_DURATION
     private static final int MIN_DISTANCE_FOR_FLING
     private static final int INVALID_POINTER
+    private long mFakeDragBeginTime
     public static final int SCROLL_STATE_IDLE
     public static final int SCROLL_STATE_DRAGGING
     public static final int SCROLL_STATE_SETTLING
     271:273:public ViewPager(android.content.Context)
     276:278:public ViewPager(android.content.Context,android.util.AttributeSet)
     281:295:void initViewPager()
+    370:370:public android.support.v4.view.PagerAdapter getAdapter()
     374:375:void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener)
+    385:387:public void setCurrentItem(int)
     401:401:public int getCurrentItem()
+    462:463:public void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
     472:474:android.support.v4.view.ViewPager$OnPageChangeListener setInternalPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
     485:485:public int getOffscreenPageLimit()
     506:515:public void setOffscreenPageLimit(int)
@@ -383,6 +395,10 @@ android.support.v4.view.ViewPager:
     550:554:public void setPageMarginDrawable(android.graphics.drawable.Drawable)
     562:563:public void setPageMarginDrawable(int)
     596:597:void smoothScrollTo(int,int)
+    1652:1668:public boolean beginFakeDrag()
+    1678:1697:public void endFakeDrag()
+    1707:1735:public void fakeDragBy(float)
+    1747:1747:public boolean isFakeDragging()
 android.support.v4.view.ViewPager$SimpleOnPageChangeListener
 android.support.v4.view.accessibility.AccessibilityEventCompat
 android.support.v4.view.accessibility.AccessibilityEventCompat$AccessibilityEventIcsImpl
@@ -696,7 +712,6 @@ com.madhackerdesigns.neverbelate.R$array
 com.madhackerdesigns.neverbelate.R$attr
 com.madhackerdesigns.neverbelate.R$bool
 com.madhackerdesigns.neverbelate.R$color
-com.madhackerdesigns.neverbelate.R$dimen
 com.madhackerdesigns.neverbelate.R$drawable
 com.madhackerdesigns.neverbelate.R$id
 com.madhackerdesigns.neverbelate.R$integer
@@ -1174,95 +1189,6 @@ com.pontiflex.mobile.webview.utilities.VersionHelper:
     90:94:public java.lang.String getPflxSdkVersionCode(android.content.Context)
     103:106:public java.lang.String getPflxSdkVersionName(android.content.Context)
     179:183:public java.lang.String getAppUri(android.content.Context)
-com.viewpagerindicator.CirclePageIndicator:
-    public static final int HORIZONTAL
-    public static final int VERTICAL
-    private static final int INVALID_POINTER
-    67:68:public CirclePageIndicator(android.content.Context)
-    71:72:public CirclePageIndicator(android.content.Context,android.util.AttributeSet)
-    75:110:public CirclePageIndicator(android.content.Context,android.util.AttributeSet,int)
-    114:116:public void setCentered(boolean)
-    119:119:public boolean isCentered()
-    123:125:public void setPageColor(int)
-    128:128:public int getPageColor()
-    132:134:public void setFillColor(int)
-    137:137:public int getFillColor()
-    141:152:public void setOrientation(int)
-    155:155:public int getOrientation()
-    159:161:public void setStrokeColor(int)
-    164:164:public int getStrokeColor()
-    168:170:public void setStrokeWidth(float)
-    173:173:public float getStrokeWidth()
-    177:179:public void setRadius(float)
-    182:182:public float getRadius()
-    191:191:public boolean isSnap()
-    386:388:public void setViewPager(android.support.v4.view.ViewPager,int)
-    402:403:public void notifyDataSetChanged()
-com.viewpagerindicator.PageIndicator:
-    public abstract void setViewPager(android.support.v4.view.ViewPager)
-    public abstract void setViewPager(android.support.v4.view.ViewPager,int)
-    public abstract void setCurrentItem(int)
-    public abstract void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
-    public abstract void notifyDataSetChanged()
-com.viewpagerindicator.R
-com.viewpagerindicator.R$anim
-com.viewpagerindicator.R$array
-com.viewpagerindicator.R$attr
-com.viewpagerindicator.R$bool
-com.viewpagerindicator.R$color
-com.viewpagerindicator.R$dimen
-com.viewpagerindicator.R$drawable
-com.viewpagerindicator.R$id
-com.viewpagerindicator.R$integer
-com.viewpagerindicator.R$layout
-com.viewpagerindicator.R$string
-com.viewpagerindicator.R$style
-com.viewpagerindicator.R$styleable
-com.viewpagerindicator.R$xml
-com.viewpagerindicator.TabPageIndicator
-com.viewpagerindicator.TabPageIndicator$1
-com.viewpagerindicator.TabPageIndicator$2
-com.viewpagerindicator.TabPageIndicator$TabView
-com.viewpagerindicator.TitlePageIndicator:
-    private static final float SELECTION_FADE_PERCENTAGE
-    private static final float BOLD_FADE_PERCENTAGE
-    private static final int INVALID_POINTER
-    126:127:public TitlePageIndicator(android.content.Context)
-    130:131:public TitlePageIndicator(android.content.Context,android.util.AttributeSet)
-    134:182:public TitlePageIndicator(android.content.Context,android.util.AttributeSet,int)
-    186:186:public int getFooterColor()
-    190:193:public void setFooterColor(int)
-    196:196:public float getFooterLineHeight()
-    200:203:public void setFooterLineHeight(float)
-    206:206:public float getFooterIndicatorHeight()
-    210:212:public void setFooterIndicatorHeight(float)
-    215:215:public float getFooterIndicatorPadding()
-    219:221:public void setFooterIndicatorPadding(float)
-    224:224:public com.viewpagerindicator.TitlePageIndicator$IndicatorStyle getFooterIndicatorStyle()
-    228:230:public void setFooterIndicatorStyle(com.viewpagerindicator.TitlePageIndicator$IndicatorStyle)
-    233:233:public int getSelectedColor()
-    237:239:public void setSelectedColor(int)
-    242:242:public boolean isSelectedBold()
-    246:248:public void setSelectedBold(boolean)
-    251:251:public int getTextColor()
-    255:258:public void setTextColor(int)
-    261:261:public float getTextSize()
-    265:267:public void setTextSize(float)
-    270:270:public float getTitlePadding()
-    274:276:public void setTitlePadding(float)
-    279:279:public float getTopPadding()
-    283:285:public void setTopPadding(float)
-    288:288:public float getClipPadding()
-    292:294:public void setClipPadding(float)
-    297:299:public void setTypeface(android.graphics.Typeface)
-    302:302:public android.graphics.Typeface getTypeface()
-    635:646:public void setViewPager(android.support.v4.view.ViewPager)
-    650:652:public void setViewPager(android.support.v4.view.ViewPager,int)
-    656:657:public void notifyDataSetChanged()
-    665:666:public void setOnCenterItemClickListener(com.viewpagerindicator.TitlePageIndicator$OnCenterItemClickListener)
-    712:713:public void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
-com.viewpagerindicator.TitlePageIndicator$IndicatorStyle:
-    83:88:public static com.viewpagerindicator.TitlePageIndicator$IndicatorStyle fromValue(int)
 d:
     public d(android.app.Activity,com.google.ads.Ad,com.google.ads.AdSize,java.lang.String)
     public final synchronized boolean l()

@@ -508,16 +508,12 @@ android.support.v4.view.PagerAdapter -> android.support.v4.view.i:
 android.support.v4.view.VelocityTrackerCompat -> android.support.v4.view.j:
     android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl IMPL -> a
     float getXVelocity(android.view.VelocityTracker,int) -> a
-    float getYVelocity(android.view.VelocityTracker,int) -> b
 android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl -> android.support.v4.view.k:
     float getXVelocity(android.view.VelocityTracker,int) -> a
-    float getYVelocity(android.view.VelocityTracker,int) -> b
 android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl -> android.support.v4.view.l:
     float getXVelocity(android.view.VelocityTracker,int) -> a
-    float getYVelocity(android.view.VelocityTracker,int) -> b
 android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl -> android.support.v4.view.m:
     float getXVelocity(android.view.VelocityTracker,int) -> a
-    float getYVelocity(android.view.VelocityTracker,int) -> b
 android.support.v4.view.ViewCompat -> android.support.v4.view.n:
     android.support.v4.view.ViewCompat$ViewCompatImpl IMPL -> a
     boolean canScrollHorizontally(android.view.View,int) -> a
@@ -567,29 +563,25 @@ android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     int mMaximumVelocity -> F
     int mFlingDistance -> G
     boolean mFakeDragging -> H
-    long mFakeDragBeginTime -> I
-    android.support.v4.widget.EdgeEffectCompat mLeftEdge -> J
-    android.support.v4.widget.EdgeEffectCompat mRightEdge -> K
-    boolean mFirstLayout -> L
-    boolean mCalledSuper -> M
-    int mDecorChildCount -> N
-    android.support.v4.view.ViewPager$OnPageChangeListener mOnPageChangeListener -> O
-    android.support.v4.view.ViewPager$OnPageChangeListener mInternalPageChangeListener -> P
-    android.support.v4.view.ViewPager$OnAdapterChangeListener mAdapterChangeListener -> Q
-    int mScrollState -> R
-    void setScrollState(int) -> b
+    android.support.v4.widget.EdgeEffectCompat mLeftEdge -> I
+    android.support.v4.widget.EdgeEffectCompat mRightEdge -> J
+    boolean mFirstLayout -> K
+    boolean mCalledSuper -> L
+    int mDecorChildCount -> M
+    android.support.v4.view.ViewPager$OnPageChangeListener mOnPageChangeListener -> N
+    android.support.v4.view.ViewPager$OnPageChangeListener mInternalPageChangeListener -> O
+    android.support.v4.view.ViewPager$OnAdapterChangeListener mAdapterChangeListener -> P
+    int mScrollState -> Q
+    void setScrollState(int) -> a
     void setAdapter(android.support.v4.view.PagerAdapter) -> a
-    android.support.v4.view.PagerAdapter getAdapter() -> a
-    void setCurrentItem(int) -> a
-    void setCurrentItem$2563266(int) -> c
+    void setCurrentItem$2563266(int) -> b
     void setCurrentItemInternal(int,boolean,boolean) -> a
     void setCurrentItemInternal(int,boolean,boolean,int) -> a
-    void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener) -> a
     boolean verifyDrawable(android.graphics.drawable.Drawable) -> verifyDrawable
     void drawableStateChanged() -> drawableStateChanged
     void addNewItem(int,int) -> a
-    void dataSetChanged() -> b
-    void populate() -> g
+    void dataSetChanged() -> a
+    void populate() -> c
     android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
     void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
     void addView(android.view.View,int,android.view.ViewGroup$LayoutParams) -> addView
@@ -599,24 +591,19 @@ android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     void onSizeChanged(int,int,int,int) -> onSizeChanged
     void onLayout(boolean,int,int,int,int) -> onLayout
     void computeScroll() -> computeScroll
-    void pageScrolled(int) -> d
-    void completeScroll() -> h
+    void pageScrolled$13462e() -> d
+    void completeScroll() -> e
     boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
     boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
-    int determineTargetPage(int,float,int,int) -> a
     void draw(android.graphics.Canvas) -> draw
     void onDraw(android.graphics.Canvas) -> onDraw
-    boolean beginFakeDrag() -> c
-    void endFakeDrag() -> d
-    void fakeDragBy(float) -> a
-    boolean isFakeDragging() -> e
     void onSecondaryPointerUp(android.view.MotionEvent) -> a
-    void endDrag() -> i
+    void endDrag() -> f
     void setScrollingCacheEnabled(boolean) -> a
     boolean canScroll(android.view.View,boolean,int,int,int) -> a
     boolean dispatchKeyEvent(android.view.KeyEvent) -> dispatchKeyEvent
-    boolean arrowScroll(int) -> e
-    boolean pageLeft() -> j
+    boolean arrowScroll(int) -> c
+    boolean pageLeft() -> g
     void addFocusables(java.util.ArrayList,int,int) -> addFocusables
     void addTouchables(java.util.ArrayList) -> addTouchables
     boolean onRequestFocusInDescendants(int,android.graphics.Rect) -> onRequestFocusInDescendants
@@ -625,7 +612,7 @@ android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams) -> generateLayoutParams
     boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
     android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
-    int[] access$100() -> f
+    int[] access$100() -> b
 android.support.v4.view.ViewPager$1 -> android.support.v4.view.s:
     int compare(java.lang.Object,java.lang.Object) -> compare
 android.support.v4.view.ViewPager$2 -> android.support.v4.view.t:
@@ -640,9 +627,6 @@ android.support.v4.view.ViewPager$LayoutParams -> android.support.v4.view.ViewPa
     int gravity -> b
 android.support.v4.view.ViewPager$OnAdapterChangeListener -> android.support.v4.view.w:
 android.support.v4.view.ViewPager$OnPageChangeListener -> android.support.v4.view.x:
-    void onPageScrolled(int,float,int) -> a
-    void onPageSelected(int) -> a
-    void onPageScrollStateChanged(int) -> b
 android.support.v4.view.ViewPager$PagerObserver -> android.support.v4.view.y:
     android.support.v4.view.ViewPager this$0 -> a
     void onChanged() -> onChanged
@@ -786,14 +770,14 @@ com.google.ads.AdSize -> com.google.ads.f:
     int getWidth() -> a
     int getHeight() -> b
     java.lang.String toString() -> toString
-com.google.ads.AdView -> com.google.ads.AdView:
+com.google.ads.AdView -> com.google.ads.g:
     d a -> a
     void loadAd(com.google.ads.AdRequest) -> a
 com.google.ads.InstallReceiver -> com.google.ads.InstallReceiver:
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
     java.lang.String a(java.lang.String,java.lang.String,java.lang.String) -> a
     void a(android.content.Context,android.content.Intent) -> a
-com.google.ads.InterstitialAd -> com.google.ads.g:
+com.google.ads.InterstitialAd -> com.google.ads.h:
 com.google.gson.ExclusionStrategy -> com.google.a.a:
     boolean shouldSkipField(com.google.gson.FieldAttributes) -> a
     boolean shouldSkipClass(java.lang.Class) -> a
@@ -1451,18 +1435,12 @@ com.madhackerdesigns.neverbelate.ui.QuickTourActivity -> com.madhackerdesigns.ne
     android.content.res.Resources RESOURCES -> n
     com.madhackerdesigns.neverbelate.ui.QuickTourActivity$MyAdapter mAdapter -> o
     android.content.Context mContext -> p
-    com.viewpagerindicator.CirclePageIndicator mIndicator -> q
-    android.support.v4.view.ViewPager mPager -> r
+    android.support.v4.view.ViewPager mPager -> q
     void onCreate(android.os.Bundle) -> onCreate
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity$1 -> com.madhackerdesigns.neverbelate.ui.o:
-    com.madhackerdesigns.neverbelate.ui.QuickTourActivity this$0 -> a
-    void onPageScrollStateChanged(int) -> b
-    void onPageScrolled(int,float,int) -> a
-    void onPageSelected(int) -> a
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity$MyAdapter -> com.madhackerdesigns.neverbelate.ui.p:
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity$MyAdapter -> com.madhackerdesigns.neverbelate.ui.o:
     int getCount() -> c
     android.support.v4.app.Fragment getItem(int) -> a
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment -> com.madhackerdesigns.neverbelate.ui.q:
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment -> com.madhackerdesigns.neverbelate.ui.p:
     int mPosition -> R
     com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> N
     android.widget.TextView mSummaryText -> O
@@ -1471,13 +1449,13 @@ com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment -> com.madhac
     com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment newInstance(int) -> b
     void onCreate(android.os.Bundle) -> b
     android.view.View onCreateView$469ccb8a(android.view.LayoutInflater,android.view.ViewGroup) -> a
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$1 -> com.madhackerdesigns.neverbelate.ui.r:
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$1 -> com.madhackerdesigns.neverbelate.ui.q:
     com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$2 -> com.madhackerdesigns.neverbelate.ui.s:
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$2 -> com.madhackerdesigns.neverbelate.ui.r:
     com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment this$1 -> a
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$3 -> com.madhackerdesigns.neverbelate.ui.t:
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$3 -> com.madhackerdesigns.neverbelate.ui.s:
     com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment this$1 -> a
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
 com.madhackerdesigns.neverbelate.ui.Registration -> com.madhackerdesigns.neverbelate.ui.Registration:
@@ -1516,47 +1494,47 @@ com.madhackerdesigns.neverbelate.ui.RegistrationForm -> com.madhackerdesigns.nev
     void access$4(com.madhackerdesigns.neverbelate.ui.RegistrationForm) -> b
     void access$5(com.madhackerdesigns.neverbelate.ui.RegistrationForm,java.lang.String) -> a
     void access$6(com.madhackerdesigns.neverbelate.ui.RegistrationForm) -> c
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$1 -> com.madhackerdesigns.neverbelate.ui.u:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$1 -> com.madhackerdesigns.neverbelate.ui.t:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$2 -> com.madhackerdesigns.neverbelate.ui.v:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$2 -> com.madhackerdesigns.neverbelate.ui.u:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onDateSet(android.widget.DatePicker,int,int,int) -> onDateSet
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$3 -> com.madhackerdesigns.neverbelate.ui.w:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$3 -> com.madhackerdesigns.neverbelate.ui.v:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$4 -> com.madhackerdesigns.neverbelate.ui.x:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$4 -> com.madhackerdesigns.neverbelate.ui.w:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$5 -> com.madhackerdesigns.neverbelate.ui.y:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$5 -> com.madhackerdesigns.neverbelate.ui.x:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$6 -> com.madhackerdesigns.neverbelate.ui.z:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$6 -> com.madhackerdesigns.neverbelate.ui.y:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$7 -> com.madhackerdesigns.neverbelate.ui.aa:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$7 -> com.madhackerdesigns.neverbelate.ui.z:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$8 -> com.madhackerdesigns.neverbelate.ui.ab:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$8 -> com.madhackerdesigns.neverbelate.ui.aa:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$9 -> com.madhackerdesigns.neverbelate.ui.ac:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$9 -> com.madhackerdesigns.neverbelate.ui.ab:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
 com.madhackerdesigns.neverbelate.ui.TestActivity -> com.madhackerdesigns.neverbelate.ui.TestActivity:
     com.madhackerdesigns.neverbelate.util.AdHelper mAdHelper -> a
     void onCreate(android.os.Bundle) -> onCreate
     com.madhackerdesigns.neverbelate.util.AdHelper access$0(com.madhackerdesigns.neverbelate.ui.TestActivity) -> a
-com.madhackerdesigns.neverbelate.ui.TestActivity$1 -> com.madhackerdesigns.neverbelate.ui.ad:
+com.madhackerdesigns.neverbelate.ui.TestActivity$1 -> com.madhackerdesigns.neverbelate.ui.ac:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$2 -> com.madhackerdesigns.neverbelate.ui.ae:
+com.madhackerdesigns.neverbelate.ui.TestActivity$2 -> com.madhackerdesigns.neverbelate.ui.ad:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$3 -> com.madhackerdesigns.neverbelate.ui.af:
+com.madhackerdesigns.neverbelate.ui.TestActivity$3 -> com.madhackerdesigns.neverbelate.ui.ae:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$4 -> com.madhackerdesigns.neverbelate.ui.ag:
+com.madhackerdesigns.neverbelate.ui.TestActivity$4 -> com.madhackerdesigns.neverbelate.ui.af:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
 com.madhackerdesigns.neverbelate.ui.UserLocationOverlay -> com.madhackerdesigns.neverbelate.ui.UserLocationOverlay:
@@ -1584,34 +1562,34 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverb
     void access$4(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> e
     void access$5(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> f
     void access$6(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> g
-com.madhackerdesigns.neverbelate.ui.WarningDialog$1 -> com.madhackerdesigns.neverbelate.ui.ah:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$1 -> com.madhackerdesigns.neverbelate.ui.ag:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$2 -> com.madhackerdesigns.neverbelate.ui.ai:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$2 -> com.madhackerdesigns.neverbelate.ui.ah:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler -> com.madhackerdesigns.neverbelate.ui.aj:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler -> com.madhackerdesigns.neverbelate.ui.ai:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onQueryComplete(int,java.lang.Object,android.database.Cursor) -> onQueryComplete
     com.madhackerdesigns.neverbelate.ui.WarningDialog access$0(com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler) -> a
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$1 -> com.madhackerdesigns.neverbelate.ui.ak:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$1 -> com.madhackerdesigns.neverbelate.ui.aj:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$2 -> com.madhackerdesigns.neverbelate.ui.al:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$2 -> com.madhackerdesigns.neverbelate.ui.ak:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$3 -> com.madhackerdesigns.neverbelate.ui.am:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$3 -> com.madhackerdesigns.neverbelate.ui.al:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$4 -> com.madhackerdesigns.neverbelate.ui.an:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$4 -> com.madhackerdesigns.neverbelate.ui.am:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$EventHolder -> com.madhackerdesigns.neverbelate.ui.ao:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$EventHolder -> com.madhackerdesigns.neverbelate.ui.an:
     java.lang.String json -> a
     java.lang.String title -> b
     java.lang.String location -> c
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> d
-com.madhackerdesigns.neverbelate.ui.WarningDialog$MapBounds -> com.madhackerdesigns.neverbelate.ui.ap:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$MapBounds -> com.madhackerdesigns.neverbelate.ui.ao:
     int mLatMinE6 -> b
     int mLatMaxE6 -> c
     int mLonMinE6 -> d
@@ -2110,104 +2088,6 @@ com.pontiflex.mobile.webview.utilities.VersionHelper -> com.pontiflex.mobile.web
     java.lang.String urlEncode(java.lang.String) -> a
     void resetCache() -> d
     java.lang.String getNativeVersionConfig(android.content.Context) -> g
-com.viewpagerindicator.CirclePageIndicator -> com.viewpagerindicator.CirclePageIndicator:
-    float mRadius -> a
-    android.graphics.Paint mPaintPageFill -> b
-    android.graphics.Paint mPaintStroke -> c
-    android.graphics.Paint mPaintFill -> d
-    android.support.v4.view.ViewPager mViewPager -> e
-    android.support.v4.view.ViewPager$OnPageChangeListener mListener -> f
-    int mCurrentPage -> g
-    int mSnapPage -> h
-    int mCurrentOffset -> i
-    int mScrollState -> j
-    int mPageSize -> k
-    int mOrientation -> l
-    boolean mCentered -> m
-    boolean mSnap -> n
-    int mTouchSlop -> o
-    float mLastMotionX -> p
-    int mActivePointerId -> q
-    boolean mIsDragging -> r
-    void setSnap$1385ff() -> a
-    void onDraw(android.graphics.Canvas) -> onDraw
-    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
-    void setViewPager(android.support.v4.view.ViewPager) -> a
-    void updatePageSize() -> b
-    void onPageScrollStateChanged(int) -> b
-    void onPageScrolled(int,float,int) -> a
-    void onPageSelected(int) -> a
-    void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener) -> a
-    void onMeasure(int,int) -> onMeasure
-    int measureLong(int) -> c
-    int measureShort(int) -> d
-    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
-    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
-com.viewpagerindicator.CirclePageIndicator$SavedState -> com.viewpagerindicator.CirclePageIndicator$SavedState:
-    int currentPage -> a
-    android.os.Parcelable$Creator CREATOR -> CREATOR
-    void writeToParcel(android.os.Parcel,int) -> writeToParcel
-com.viewpagerindicator.CirclePageIndicator$SavedState$1 -> com.viewpagerindicator.a:
-    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
-    java.lang.Object[] newArray(int) -> newArray
-com.viewpagerindicator.PageIndicator -> com.viewpagerindicator.b:
-com.viewpagerindicator.TitlePageIndicator -> com.viewpagerindicator.TitlePageIndicator:
-    android.support.v4.view.ViewPager mViewPager -> a
-    android.support.v4.view.ViewPager$OnPageChangeListener mListener -> b
-    com.viewpagerindicator.TitleProvider mTitleProvider -> c
-    int mCurrentPage -> d
-    int mCurrentOffset -> e
-    int mScrollState -> f
-    android.graphics.Paint mPaintText -> g
-    boolean mBoldText -> h
-    int mColorText -> i
-    int mColorSelected -> j
-    android.graphics.Path mPath -> k
-    android.graphics.Paint mPaintFooterLine -> l
-    com.viewpagerindicator.TitlePageIndicator$IndicatorStyle mFooterIndicatorStyle -> m
-    android.graphics.Paint mPaintFooterIndicator -> n
-    float mFooterIndicatorHeight -> o
-    float mFooterIndicatorUnderlinePadding -> p
-    float mFooterPadding -> q
-    float mTitlePadding -> r
-    float mTopPadding -> s
-    float mClipPadding -> t
-    float mFooterLineHeight -> u
-    int mTouchSlop -> v
-    float mLastMotionX -> w
-    int mActivePointerId -> x
-    boolean mIsDragging -> y
-    com.viewpagerindicator.TitlePageIndicator$OnCenterItemClickListener mCenterItemClickListener -> z
-    int[] $SWITCH_TABLE$com$viewpagerindicator$TitlePageIndicator$IndicatorStyle -> A
-    void onDraw(android.graphics.Canvas) -> onDraw
-    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
-    void clipViewOnTheRight(android.graphics.RectF,float,int) -> a
-    void clipViewOnTheLeft(android.graphics.RectF,float,int) -> b
-    void onPageScrollStateChanged(int) -> b
-    void onPageScrolled(int,float,int) -> a
-    void onPageSelected(int) -> a
-    void onMeasure(int,int) -> onMeasure
-    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
-    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
-    int[] $SWITCH_TABLE$com$viewpagerindicator$TitlePageIndicator$IndicatorStyle() -> a
-com.viewpagerindicator.TitlePageIndicator$IndicatorStyle -> com.viewpagerindicator.c:
-    com.viewpagerindicator.TitlePageIndicator$IndicatorStyle None -> a
-    com.viewpagerindicator.TitlePageIndicator$IndicatorStyle Triangle -> b
-    com.viewpagerindicator.TitlePageIndicator$IndicatorStyle Underline -> c
-    int value -> d
-    com.viewpagerindicator.TitlePageIndicator$IndicatorStyle[] ENUM$VALUES -> e
-    com.viewpagerindicator.TitlePageIndicator$IndicatorStyle[] values() -> values
-    com.viewpagerindicator.TitlePageIndicator$IndicatorStyle valueOf(java.lang.String) -> valueOf
-com.viewpagerindicator.TitlePageIndicator$OnCenterItemClickListener -> com.viewpagerindicator.d:
-com.viewpagerindicator.TitlePageIndicator$SavedState -> com.viewpagerindicator.TitlePageIndicator$SavedState:
-    int currentPage -> a
-    android.os.Parcelable$Creator CREATOR -> CREATOR
-    void writeToParcel(android.os.Parcel,int) -> writeToParcel
-com.viewpagerindicator.TitlePageIndicator$SavedState$1 -> com.viewpagerindicator.e:
-    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
-    java.lang.Object[] newArray(int) -> newArray
-com.viewpagerindicator.TitleProvider -> com.viewpagerindicator.f:
-    java.lang.String getTitle$47921032() -> a
 d -> h:
     java.lang.ref.WeakReference a -> a
     com.google.ads.Ad b -> b

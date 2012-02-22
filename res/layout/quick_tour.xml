@@ -10,13 +10,18 @@
            
     </android.support.v4.view.ViewPager>
     
-    <com.viewpagerindicator.CirclePageIndicator
-        android:id="@+id/indicator"
-        android:padding="15dip"
-        android:layout_gravity="center|bottom"
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:visibility="invisible"
-        android:background="@android:color/background_light" />
+<!--     <com.viewpagerindicator.CirclePageIndicator -->
+<!--         android:id="@+id/indicator" -->
+<!--         android:padding="15dip" -->
+<!--         android:layout_gravity="center|bottom" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_width="fill_parent" -->
+<!--         android:visibility="invisible" -->
+<!--         android:background="@android:color/background_light" -->
+<!--         app:radius="4dp" -->
+<!--         app:fillColor="@android:color/primary_text_light" -->
+<!--         app:pageColor="@android:color/background_light" -->
+<!--         app:strokeColor="@android:color/primary_text_light" -->
+<!--         app:strokeWidth="1dp" /> -->
 
 </merge>

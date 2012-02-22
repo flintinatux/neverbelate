@@ -167,24 +167,5 @@ com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize: com.pontifle
 com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize valueOf(java.lang.String)
 com.pontiflex.mobile.webview.utilities.RegistrationStorage
 com.pontiflex.mobile.webview.utilities.RegistrationStorage: RegistrationStorage(android.content.Context)
-com.viewpagerindicator.CirclePageIndicator
-com.viewpagerindicator.CirclePageIndicator: CirclePageIndicator(android.content.Context)
-com.viewpagerindicator.CirclePageIndicator: CirclePageIndicator(android.content.Context,android.util.AttributeSet)
-com.viewpagerindicator.CirclePageIndicator: CirclePageIndicator(android.content.Context,android.util.AttributeSet,int)
-com.viewpagerindicator.CirclePageIndicator$SavedState
-com.viewpagerindicator.CirclePageIndicator$SavedState: android.os.Parcelable$Creator CREATOR
-com.viewpagerindicator.TabPageIndicator
-com.viewpagerindicator.TabPageIndicator: TabPageIndicator(android.content.Context)
-com.viewpagerindicator.TabPageIndicator: TabPageIndicator(android.content.Context,android.util.AttributeSet)
-com.viewpagerindicator.TabPageIndicator$TabView
-com.viewpagerindicator.TabPageIndicator$TabView: TabPageIndicator$TabView(android.content.Context,android.util.AttributeSet)
-com.viewpagerindicator.TitlePageIndicator
-com.viewpagerindicator.TitlePageIndicator: TitlePageIndicator(android.content.Context)
-com.viewpagerindicator.TitlePageIndicator: TitlePageIndicator(android.content.Context,android.util.AttributeSet)
-com.viewpagerindicator.TitlePageIndicator: TitlePageIndicator(android.content.Context,android.util.AttributeSet,int)
-com.viewpagerindicator.TitlePageIndicator$IndicatorStyle: com.viewpagerindicator.TitlePageIndicator$IndicatorStyle[] values()
-com.viewpagerindicator.TitlePageIndicator$IndicatorStyle: com.viewpagerindicator.TitlePageIndicator$IndicatorStyle valueOf(java.lang.String)
-com.viewpagerindicator.TitlePageIndicator$SavedState
-com.viewpagerindicator.TitlePageIndicator$SavedState: android.os.Parcelable$Creator CREATOR
 u$a: u$a[] values()
 u$a: u$a valueOf(java.lang.String)
