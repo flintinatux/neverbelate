@@ -1,12 +1,9 @@
-a:
-    private a()
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoIcsImpl
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoStubImpl
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompatIcs
 android.support.v4.app.ActivityCompatHoneycomb:
-    27:27:ActivityCompatHoneycomb()
     34:35:static void dump(android.app.Activity,java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])
 android.support.v4.app.BackStackRecord:
     static final java.lang.String TAG
@@ -62,7 +59,7 @@ android.support.v4.app.Fragment:
     550:553:public final android.content.res.Resources getResources()
     563:563:public final java.lang.CharSequence getText(int)
     573:573:public final java.lang.String getString(int)
-    586:586:public final varargs java.lang.String getString(int,java.lang.Object[])
+    586:586:public final java.lang.String getString(int,java.lang.Object[])
     597:597:public final android.support.v4.app.FragmentManager getFragmentManager()
     613:613:public final boolean isDetached()
     622:622:public final boolean isRemoving()
@@ -86,14 +83,12 @@ android.support.v4.app.FragmentActivity:
     static final int MSG_REALLY_STOPPED
     static final int MSG_RESUME_PENDING
     558:560:public java.lang.Object getLastCustomNonConfigurationInstance()
-    587:609:public void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])
     677:685:public void startActivityFromFragment(android.support.v4.app.Fragment,android.content.Intent,int)
     706:711:public android.support.v4.app.LoaderManager getSupportLoaderManager()
 android.support.v4.app.FragmentActivity$FragmentTag:
     public static final int Fragment_id
     public static final int Fragment_name
     public static final int Fragment_tag
-    121:121:FragmentActivity$FragmentTag()
 android.support.v4.app.FragmentManager:
     public static final int POP_BACK_STACK_INCLUSIVE
     139:139:public android.support.v4.app.FragmentTransaction openTransaction()
@@ -238,16 +233,6 @@ android.support.v4.content.ModernAsyncTask$Status
 android.support.v4.content.ModernAsyncTask$WorkerRunnable
 android.support.v4.content.pm.ActivityInfoCompat
 android.support.v4.database.DatabaseUtilsCompat
-android.support.v4.os.ParcelableCompat:
-    26:42:public ParcelableCompat()
-android.support.v4.os.ParcelableCompatCreatorHoneycombMR2:
-    36:36:public java.lang.Object createFromParcel(android.os.Parcel)
-    40:40:public java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader)
-    44:44:public java.lang.Object[] newArray(int)
-android.support.v4.os.ParcelableCompatCreatorHoneycombMR2Stub:
-    22:22:ParcelableCompatCreatorHoneycombMR2Stub()
-android.support.v4.util.DebugUtils:
-    25:25:public DebugUtils()
 android.support.v4.util.LruCache
 android.support.v4.util.TimeUtils
 android.support.v4.view.AccessibilityDelegateCompat
@@ -259,7 +244,6 @@ android.support.v4.view.AccessibilityDelegateCompatIcs
 android.support.v4.view.AccessibilityDelegateCompatIcs$1
 android.support.v4.view.AccessibilityDelegateCompatIcs$AccessibilityDelegateBridge
 android.support.v4.view.KeyEventCompat:
-    25:95:public KeyEventCompat()
     127:127:public static int normalizeMetaState(int)
     131:131:public static boolean metaStateHasModifiers(int,int)
     135:135:public static boolean metaStateHasNoModifiers(int)
@@ -271,7 +255,6 @@ android.support.v4.view.KeyEventCompat$HoneycombKeyEventVersionImpl:
 android.support.v4.view.KeyEventCompat$KeyEventVersionImpl:
     public abstract int normalizeMetaState(int)
 android.support.v4.view.KeyEventCompatHoneycomb:
-    24:24:KeyEventCompatHoneycomb()
     26:26:public static int normalizeMetaState(int)
 android.support.v4.view.MenuCompat
 android.support.v4.view.MenuCompat$BaseMenuVersionImpl
@@ -290,10 +273,7 @@ android.support.v4.view.MotionEventCompat:
     public static final int ACTION_SCROLL
     public static final int ACTION_POINTER_INDEX_MASK
     public static final int ACTION_POINTER_INDEX_SHIFT
-    25:75:public MotionEventCompat()
     148:148:public static int getActionMasked(android.view.MotionEvent)
-android.support.v4.view.MotionEventCompatEclair:
-    24:24:MotionEventCompatEclair()
 android.support.v4.view.PagerAdapter:
     public static final int POSITION_UNCHANGED
     public static final int POSITION_NONE
@@ -302,23 +282,10 @@ android.support.v4.view.PagerAdapter:
 android.support.v4.view.PagerTitleStrip
 android.support.v4.view.PagerTitleStrip$1
 android.support.v4.view.PagerTitleStrip$PageListener
-android.support.v4.view.VelocityTrackerCompat:
-    25:51:public VelocityTrackerCompat()
-    91:91:public static float getYVelocity(android.view.VelocityTracker,int)
-android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl:
-    44:44:public float getYVelocity(android.view.VelocityTracker,int)
-android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl:
-    58:58:public float getYVelocity(android.view.VelocityTracker,int)
-android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl:
-    public abstract float getYVelocity(android.view.VelocityTracker,int)
-android.support.v4.view.VelocityTrackerCompatHoneycomb:
-    24:24:VelocityTrackerCompatHoneycomb()
-    29:29:public static float getYVelocity(android.view.VelocityTracker,int)
 android.support.v4.view.ViewCompat:
     public static final int OVER_SCROLL_ALWAYS
     public static final int OVER_SCROLL_IF_CONTENT_SCROLLS
     public static final int OVER_SCROLL_NEVER
-    28:95:public ViewCompat()
     153:153:public static boolean canScrollVertically(android.view.View,int)
     182:183:public static void setOverScrollMode(android.view.View,int)
     219:220:public static void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
@@ -348,20 +315,13 @@ android.support.v4.view.ViewCompat$ViewCompatImpl:
     public abstract void onInitializeAccessibilityNodeInfo(android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat)
     public abstract void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat)
 android.support.v4.view.ViewCompatGingerbread:
-    21:21:ViewCompatGingerbread()
     27:28:public static void setOverScrollMode(android.view.View,int)
 android.support.v4.view.ViewCompatICS:
-    27:27:ViewCompatICS()
     34:34:public static boolean canScrollVertically(android.view.View,int)
     38:39:public static void setAccessibilityDelegate(android.view.View,java.lang.Object)
     42:43:public static void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
     46:47:public static void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
     50:51:public static void onInitializeAccessibilityNodeInfo(android.view.View,java.lang.Object)
-android.support.v4.view.ViewConfigurationCompat
-android.support.v4.view.ViewConfigurationCompat$BaseViewConfigurationVersionImpl
-android.support.v4.view.ViewConfigurationCompat$FroyoViewConfigurationVersionImpl
-android.support.v4.view.ViewConfigurationCompat$ViewConfigurationVersionImpl
-android.support.v4.view.ViewConfigurationCompatFroyo
 android.support.v4.view.ViewGroupCompat
 android.support.v4.view.ViewGroupCompat$ViewGroupCompatIcsImpl
 android.support.v4.view.ViewGroupCompat$ViewGroupCompatImpl
@@ -375,18 +335,11 @@ android.support.v4.view.ViewPager:
     private static final int MAX_SETTLE_DURATION
     private static final int MIN_DISTANCE_FOR_FLING
     private static final int INVALID_POINTER
-    private long mFakeDragBeginTime
     public static final int SCROLL_STATE_IDLE
     public static final int SCROLL_STATE_DRAGGING
     public static final int SCROLL_STATE_SETTLING
-    271:273:public ViewPager(android.content.Context)
-    276:278:public ViewPager(android.content.Context,android.util.AttributeSet)
-    281:295:void initViewPager()
-    370:370:public android.support.v4.view.PagerAdapter getAdapter()
     374:375:void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener)
-    385:387:public void setCurrentItem(int)
     401:401:public int getCurrentItem()
-    462:463:public void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
     472:474:android.support.v4.view.ViewPager$OnPageChangeListener setInternalPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
     485:485:public int getOffscreenPageLimit()
     506:515:public void setOffscreenPageLimit(int)
@@ -395,10 +348,6 @@ android.support.v4.view.ViewPager:
     550:554:public void setPageMarginDrawable(android.graphics.drawable.Drawable)
     562:563:public void setPageMarginDrawable(int)
     596:597:void smoothScrollTo(int,int)
-    1652:1668:public boolean beginFakeDrag()
-    1678:1697:public void endFakeDrag()
-    1707:1735:public void fakeDragBy(float)
-    1747:1747:public boolean isFakeDragging()
 android.support.v4.view.ViewPager$SimpleOnPageChangeListener
 android.support.v4.view.accessibility.AccessibilityEventCompat
 android.support.v4.view.accessibility.AccessibilityEventCompat$AccessibilityEventIcsImpl
@@ -431,20 +380,14 @@ android.support.v4.widget.CursorAdapter$MyDataSetObserver
 android.support.v4.widget.CursorFilter
 android.support.v4.widget.CursorFilter$CursorFilterClient
 android.support.v4.widget.EdgeEffectCompat:
-    132:134:public EdgeEffectCompat(android.content.Context)
     204:204:public boolean onAbsorb(int)
 android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl:
-    60:60:public java.lang.Object newEdgeEffect(android.content.Context)
     82:82:public boolean onAbsorb(java.lang.Object,int)
 android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl:
-    92:92:public java.lang.Object newEdgeEffect(android.content.Context)
     116:116:public boolean onAbsorb(java.lang.Object,int)
 android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl:
-    public abstract java.lang.Object newEdgeEffect(android.content.Context)
     public abstract boolean onAbsorb(java.lang.Object,int)
 android.support.v4.widget.EdgeEffectCompatIcs:
-    28:28:EdgeEffectCompatIcs()
-    30:30:public static java.lang.Object newEdgeEffect(android.content.Context)
     57:58:public static boolean onAbsorb(java.lang.Object,int)
 android.support.v4.widget.ResourceCursorAdapter
 android.support.v4.widget.SearchViewCompat
@@ -474,244 +417,63 @@ com.google.ads.AdActivity:
 com.google.ads.AdRequest:
     public static final java.lang.String VERSION
     public static final java.lang.String LOGTAG
-    public void setGender(com.google.ads.AdRequest$Gender)
-    public void setBirthday(java.lang.String)
-    public void setKeywords(java.util.Set)
-    public void addKeyword(java.lang.String)
-    public void setExtras(java.util.Map)
-    public void addExtra(java.lang.String,java.lang.Object)
+    173:174:public void setGender(com.google.ads.AdRequest$Gender)
+    184:185:public void setBirthday(java.lang.String)
+    196:197:public void setPlusOneOptOut(boolean)
+    208:209:public void setKeywords(java.util.Set)
+    238:239:public void setExtras(java.util.Map)
+    385:386:public void setTestDevices(java.util.Set)
 com.google.ads.AdSize:
-    public AdSize(int,int)
+    38:39:public AdSize(int,int)
 com.google.ads.AdView:
-    public AdView(android.app.Activity,com.google.ads.AdSize,java.lang.String)
-    public AdView(android.content.Context,android.util.AttributeSet)
-    public AdView(android.content.Context,android.util.AttributeSet,int)
-    private void a(android.app.Activity,com.google.ads.AdSize,java.lang.String)
-    public boolean isReady()
-    public void setAdListener(com.google.ads.AdListener)
-    public void stopLoading()
+    78:87:public AdView(android.app.Activity,com.google.ads.AdSize,java.lang.String)
+    237:238:public void destroy()
+    478:482:public boolean isReady()
+    523:524:public void setAdListener(com.google.ads.AdListener)
+    535:536:public void stopLoading()
 com.google.ads.InterstitialAd:
-    private d a
-    public InterstitialAd(android.app.Activity,java.lang.String)
-    public boolean isReady()
-    public void loadAd(com.google.ads.AdRequest)
-    public void show()
-    public void setAdListener(com.google.ads.AdListener)
-    public void stopLoading()
-com.google.gson.FieldAttributes:
-    final void a(java.lang.Object,java.lang.Object)
-    final java.lang.reflect.Field b()
-com.google.gson.FieldNamingPolicy
-com.google.gson.FieldNamingStrategy
-com.google.gson.Gson:
-    public final com.google.gson.JsonElement toJsonTree(java.lang.Object)
-    public final void toJson(java.lang.Object,java.lang.Appendable)
-    public final java.lang.String toJson(com.google.gson.JsonElement)
-    public final java.lang.Object fromJson(java.lang.String,java.lang.Class)
-    public final java.lang.Object fromJson(java.lang.String,java.lang.reflect.Type)
-    public final java.lang.Object fromJson(java.io.Reader,java.lang.Class)
-    public final java.lang.Object fromJson(java.io.Reader,java.lang.reflect.Type)
-    public final java.lang.Object fromJson(com.google.gson.JsonElement,java.lang.Class)
-    public final java.lang.Object fromJson(com.google.gson.JsonElement,java.lang.reflect.Type)
-com.google.gson.GsonBuilder
-com.google.gson.InstanceCreator
-com.google.gson.JsonArray:
-    public final void addAll(com.google.gson.JsonArray)
-    public final int size()
-    public final com.google.gson.JsonElement get(int)
-    public final java.lang.String getAsString()
-    public final double getAsDouble()
-    public final java.math.BigDecimal getAsBigDecimal()
-    public final java.math.BigInteger getAsBigInteger()
-    public final float getAsFloat()
-    public final long getAsLong()
-    public final int getAsInt()
-    public final byte getAsByte()
-    public final char getAsCharacter()
-    public final short getAsShort()
-    public final boolean getAsBoolean()
-    final java.lang.Object a()
-com.google.gson.JsonDeserializationContext
-com.google.gson.JsonDeserializer:
-    public abstract java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.JsonElement:
-    public boolean getAsBoolean()
-    public java.lang.String getAsString()
-    public double getAsDouble()
-    public float getAsFloat()
-    public long getAsLong()
-    public int getAsInt()
-    public byte getAsByte()
-    public char getAsCharacter()
-    public java.math.BigDecimal getAsBigDecimal()
-    public java.math.BigInteger getAsBigInteger()
-    public short getAsShort()
-    java.lang.Object a()
-com.google.gson.JsonObject:
-    public final com.google.gson.JsonElement remove(java.lang.String)
-    public final void addProperty(java.lang.String,java.lang.String)
-    public final void addProperty(java.lang.String,java.lang.Boolean)
-    public final void addProperty(java.lang.String,java.lang.Character)
-    public final boolean has(java.lang.String)
-    public final com.google.gson.JsonElement get(java.lang.String)
-    public final com.google.gson.JsonPrimitive getAsJsonPrimitive(java.lang.String)
-    public final com.google.gson.JsonArray getAsJsonArray(java.lang.String)
-    public final com.google.gson.JsonObject getAsJsonObject(java.lang.String)
-com.google.gson.JsonParseException
-com.google.gson.JsonParser
-com.google.gson.JsonPrimitive:
-    public final boolean isBoolean()
-    public final boolean getAsBoolean()
-    public final boolean isNumber()
-    public final java.lang.String getAsString()
-    public final double getAsDouble()
-    public final java.math.BigDecimal getAsBigDecimal()
-    public final java.math.BigInteger getAsBigInteger()
-    public final float getAsFloat()
-    public final long getAsLong()
-    public final short getAsShort()
-    public final int getAsInt()
-    public final byte getAsByte()
-    public final char getAsCharacter()
-    final java.lang.Object a()
-com.google.gson.JsonSerializationContext:
-    public abstract com.google.gson.JsonElement serialize(java.lang.Object)
-com.google.gson.JsonStreamParser
-com.google.gson.ModifyFirstLetterNamingPolicy
-com.google.gson.ModifyFirstLetterNamingPolicy$LetterModifier
-com.google.gson.aa
-com.google.gson.ab
-com.google.gson.ab$a
-com.google.gson.ab$b
-com.google.gson.ac:
-    public final com.google.gson.JsonElement serialize(java.lang.Object)
-com.google.gson.af
-com.google.gson.ag
-com.google.gson.ai:
-    public final java.lang.Object a(java.lang.reflect.Type)
-    public final java.lang.Object a(java.lang.reflect.Type,int)
-    private static java.lang.Object b(java.lang.reflect.Type)
-com.google.gson.am
-com.google.gson.annotations.Expose
-com.google.gson.annotations.Since
-com.google.gson.annotations.Until
-com.google.gson.aq:
-    public final synchronized com.google.gson.aq b()
-com.google.gson.as
-com.google.gson.at:
-    at()
-com.google.gson.au:
-    private au()
-    public static boolean a(java.lang.Class)
-    public static java.lang.Class b(java.lang.Class)
-com.google.gson.ax
-com.google.gson.az
-com.google.gson.ba
-com.google.gson.bb:
-    public final boolean d()
-com.google.gson.bc:
-    public final java.lang.Class f()
-com.google.gson.be:
-    private be()
-com.google.gson.bf:
-    public final java.lang.reflect.Type a()
-com.google.gson.bg:
-    private bg()
-com.google.gson.bh
-com.google.gson.bi
-com.google.gson.c
-com.google.gson.e
-com.google.gson.f:
-    f()
-com.google.gson.f$a:
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$aa:
-    public synthetic java.lang.Object createInstance(java.lang.reflect.Type)
-com.google.gson.f$ab:
-    private static java.net.URI a(com.google.gson.JsonElement)
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$ac:
-    private static java.net.URL a(com.google.gson.JsonElement)
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$ad:
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$b:
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$c:
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$d:
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$e:
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$f:
-    public final synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-    public final synthetic java.lang.Object createInstance(java.lang.reflect.Type)
-com.google.gson.f$g:
-    f$g(java.lang.String)
-    public f$g(int,int)
-    private java.util.Date a(com.google.gson.JsonElement)
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$h:
-    private java.sql.Date a(com.google.gson.JsonElement)
-    public final synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$i:
-    private java.sql.Time a(com.google.gson.JsonElement)
-    public final synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$j:
-    public final synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$k:
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$m:
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$n:
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$p:
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$q:
-    public synthetic java.lang.Object createInstance(java.lang.reflect.Type)
-com.google.gson.f$r:
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$s:
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$t:
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$v:
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-    public synthetic java.lang.Object createInstance(java.lang.reflect.Type)
-com.google.gson.f$w:
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$x:
-    public final synthetic java.lang.Object createInstance(java.lang.reflect.Type)
-com.google.gson.f$y:
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.f$z:
-    public synthetic java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.i
-com.google.gson.j
-com.google.gson.l
-com.google.gson.n
-com.google.gson.p
-com.google.gson.r
-com.google.gson.reflect.TypeToken
-com.google.gson.reflect.TypeToken$a
-com.google.gson.s
-com.google.gson.t:
-    public final java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type,com.google.gson.JsonDeserializationContext)
-com.google.gson.x
-com.google.gson.y
-com.google.gson.y$a
-com.google.gson.y$b
-com.google.gson.z
+    private com.google.ads.d a
+    73:74:public InterstitialAd(android.app.Activity,java.lang.String)
+    88:91:public InterstitialAd(android.app.Activity,java.lang.String,boolean)
+    100:100:public boolean isReady()
+    112:113:public void loadAd(com.google.ads.AdRequest)
+    122:135:public void show()
+    146:147:public void setAdListener(com.google.ads.AdListener)
+    156:157:public void stopLoading()
+com.google.ads.R
+com.google.ads.R$attr
+com.google.ads.R$id
+com.google.ads.R$layout
+com.google.ads.c:
+    371:387:final void a()
+com.google.ads.d:
+    276:279:public final synchronized void b()
+    464:464:public final synchronized boolean o()
+    748:749:public final synchronized void a(com.google.ads.AdListener)
+    777:778:public final synchronized void y()
+    809:816:public final synchronized void z()
+com.google.ads.searchads.SearchAdRequest:
+    88:89:public void setQuery(java.lang.String)
+    98:104:public void setBackgroundColor(int)
+    116:122:public void setBackgroundGradient(int,int)
+    132:133:public void setHeaderTextColor(int)
+    143:144:public void setDescriptionTextColor(int)
+    154:155:public void setAnchorTextColor(int)
+    163:164:public void setFontFace(java.lang.String)
+    173:174:public void setHeaderTextSize(int)
+    184:185:public void setBorderColor(int)
+    192:193:public void setBorderType(com.google.ads.searchads.SearchAdRequest$BorderType)
+    202:203:public void setBorderThickness(int)
 com.madhackerdesigns.neverbelate.Eula:
     private static final java.lang.String PREFERENCE_EULA_ACCEPTED
     private static final java.lang.String PREFERENCES_EULA
-    31:31:public Eula()
 com.madhackerdesigns.neverbelate.R
 com.madhackerdesigns.neverbelate.R$anim
 com.madhackerdesigns.neverbelate.R$array
 com.madhackerdesigns.neverbelate.R$attr
 com.madhackerdesigns.neverbelate.R$bool
 com.madhackerdesigns.neverbelate.R$color
+com.madhackerdesigns.neverbelate.R$dimen
 com.madhackerdesigns.neverbelate.R$drawable
 com.madhackerdesigns.neverbelate.R$id
 com.madhackerdesigns.neverbelate.R$integer
@@ -743,7 +505,6 @@ com.madhackerdesigns.neverbelate.provider.AlertsContract$Alerts:
     public static final java.lang.String JSON
     public static final java.lang.String FIRED
     public static final java.lang.String DISMISSED
-    41:41:private AlertsContract$Alerts()
 com.madhackerdesigns.neverbelate.provider.AlertsHelper:
     public static final int PROJ_ID
     public static final int PROJ_EVENT_ID
@@ -758,7 +519,6 @@ com.madhackerdesigns.neverbelate.provider.AlertsHelper:
     public static final int PROJ_JSON
     public static final int PROJ_FIRED
     public static final int PROJ_DISMISSED
-    4:4:public AlertsHelper()
 com.madhackerdesigns.neverbelate.provider.AlertsProvider:
     private static final java.lang.String TAG
     private static final java.lang.String DATABASE_NAME
@@ -855,14 +615,6 @@ com.madhackerdesigns.neverbelate.service.StartupReceiver:
     private static final int REQUEST_CODE
 com.madhackerdesigns.neverbelate.service.WakefulServiceReceiver:
     private static final java.lang.String LOG_TAG
-com.madhackerdesigns.neverbelate.settings.EulaPreference:
-    20:22:public EulaPreference(android.content.Context,android.util.AttributeSet,int)
-    29:31:public EulaPreference(android.content.Context,android.util.AttributeSet)
-    37:39:public EulaPreference(android.content.Context)
-com.madhackerdesigns.neverbelate.settings.FeedbackPreference:
-    23:25:public FeedbackPreference(android.content.Context,android.util.AttributeSet,int)
-    32:34:public FeedbackPreference(android.content.Context,android.util.AttributeSet)
-    40:42:public FeedbackPreference(android.content.Context)
 com.madhackerdesigns.neverbelate.settings.PreferenceHelper:
     private static final java.lang.String DEFAULT_ADVANCE_WARNING
     private static final boolean DEFAULT_AVOID_HIGHWAYS
@@ -901,17 +653,6 @@ com.madhackerdesigns.neverbelate.settings.PreferenceHelper:
     184:184:public boolean isTosAccepted()
     193:194:public boolean setTosAccepted(boolean)
     222:222:public boolean isWarnNoLocation()
-com.madhackerdesigns.neverbelate.settings.PrivacyPreference:
-    21:23:public PrivacyPreference(android.content.Context,android.util.AttributeSet,int)
-    30:32:public PrivacyPreference(android.content.Context,android.util.AttributeSet)
-    38:40:public PrivacyPreference(android.content.Context)
-com.madhackerdesigns.neverbelate.settings.WebsitePreference:
-    21:23:public WebsitePreference(android.content.Context,android.util.AttributeSet,int)
-    30:32:public WebsitePreference(android.content.Context,android.util.AttributeSet)
-    38:40:public WebsitePreference(android.content.Context)
-com.madhackerdesigns.neverbelate.ui.EdgeScrollView:
-    14:15:public EdgeScrollView(android.content.Context,android.util.AttributeSet)
-    18:22:public EdgeScrollView(android.content.Context,android.util.AttributeSet,int)
 com.madhackerdesigns.neverbelate.ui.LauncherActivity:
     private static final boolean ADMOB
     private static final boolean ADMOB_TEST
@@ -1078,7 +819,6 @@ com.pontiflex.mobile.webview.sdk.AdManager:
     711:712:public void setAdConfig(com.pontiflex.mobile.webview.sdk.IAdConfig)
     719:735:public void setAdConfig(com.pontiflex.mobile.webview.sdk.IAdConfig,android.app.Activity)
 com.pontiflex.mobile.webview.sdk.AdManagerFactory:
-    7:7:public AdManagerFactory()
     13:13:public static com.pontiflex.mobile.webview.sdk.IAdManager createInstance(android.app.Application,com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment)
 com.pontiflex.mobile.webview.sdk.IAdConfig:
     public abstract void setAllowReadDeviceData(boolean)
@@ -1136,8 +876,6 @@ com.pontiflex.mobile.webview.utilities.AppInfo:
     184:191:public java.lang.String getDisplayNameForFieldNamed(java.lang.String)
     211:229:public org.json.JSONObject findOrderedField(int)
     235:253:public java.lang.String getNameOfOrderedField(int)
-com.pontiflex.mobile.webview.utilities.DeviceHelper:
-    30:30:public DeviceHelper()
 com.pontiflex.mobile.webview.utilities.FieldValidator:
     private static final java.lang.String ValidationRequired
     private static final java.lang.String ValidationPostalCode
@@ -1172,7 +910,6 @@ com.pontiflex.mobile.webview.utilities.PackageHelper:
 com.pontiflex.mobile.webview.utilities.RegistrationStorage:
     public static final java.lang.String DefaultKeystoreFilename
     private static final java.lang.String HEX
-    30:32:public RegistrationStorage(android.content.Context)
     77:77:public boolean isEmpty()
 com.pontiflex.mobile.webview.utilities.UpdateResourceUtil:
     static final java.lang.String RES_PATH
@@ -1181,7 +918,6 @@ com.pontiflex.mobile.webview.utilities.UpdateResourceUtil:
     static final java.lang.String versionCodeSuffix
     static final java.lang.String lastUpdatedDateSuffix
     private static final java.lang.String RES_JS_CLIENT
-    36:36:public UpdateResourceUtil()
 com.pontiflex.mobile.webview.utilities.VersionHelper:
     45:52:private java.lang.String getFromStringCache(android.content.Context,java.lang.String)
     63:67:public java.lang.String getPflxAdVersion(android.content.Context)
@@ -1189,19 +925,186 @@ com.pontiflex.mobile.webview.utilities.VersionHelper:
     90:94:public java.lang.String getPflxSdkVersionCode(android.content.Context)
     103:106:public java.lang.String getPflxSdkVersionName(android.content.Context)
     179:183:public java.lang.String getAppUri(android.content.Context)
-d:
-    public d(android.app.Activity,com.google.ads.Ad,com.google.ads.AdSize,java.lang.String)
-    public final synchronized boolean l()
-    public final synchronized void a(com.google.ads.AdListener)
-    public final synchronized void t()
-f:
-    f()
-t:
-    private t()
-u:
-    private u()
-    public static void a(boolean)
-    public static void g(android.content.Context)
-u$b
-x:
-    public x(d)
+com.viewpagerindicator.CirclePageIndicator:
+    public static final int HORIZONTAL
+    public static final int VERTICAL
+    private static final int INVALID_POINTER
+    114:116:public void setCentered(boolean)
+    119:119:public boolean isCentered()
+    123:125:public void setPageColor(int)
+    128:128:public int getPageColor()
+    132:134:public void setFillColor(int)
+    137:137:public int getFillColor()
+    141:152:public void setOrientation(int)
+    155:155:public int getOrientation()
+    159:161:public void setStrokeColor(int)
+    164:164:public int getStrokeColor()
+    168:170:public void setStrokeWidth(float)
+    173:173:public float getStrokeWidth()
+    177:179:public void setRadius(float)
+    182:182:public float getRadius()
+    191:191:public boolean isSnap()
+    386:388:public void setViewPager(android.support.v4.view.ViewPager,int)
+    402:403:public void notifyDataSetChanged()
+com.viewpagerindicator.PageIndicator:
+    public abstract void setViewPager(android.support.v4.view.ViewPager)
+    public abstract void setViewPager(android.support.v4.view.ViewPager,int)
+    public abstract void setCurrentItem(int)
+    public abstract void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
+    public abstract void notifyDataSetChanged()
+com.viewpagerindicator.R$anim
+com.viewpagerindicator.R$array
+com.viewpagerindicator.R$attr:
+    public static final int adSize
+    public static final int adUnitId
+    public static final int centered
+    public static final int clipPadding
+    public static final int fillColor
+    public static final int footerColor
+    public static final int footerIndicatorHeight
+    public static final int footerIndicatorStyle
+    public static final int footerIndicatorUnderlinePadding
+    public static final int footerLineHeight
+    public static final int footerPadding
+    public static final int orientation
+    public static final int pageColor
+    public static final int radius
+    public static final int selectedBold
+    public static final int selectedColor
+    public static final int snap
+    public static final int strokeColor
+    public static final int strokeWidth
+    public static final int textColor
+    public static final int textSize
+    public static final int titlePadding
+    public static final int topPadding
+    public static final int vpiTabPageIndicatorStyle
+    public static final int vpiTabTextStyle
+com.viewpagerindicator.R$bool:
+    public static final int default_avoid_highways
+    public static final int default_avoid_tolls
+    public static final int default_insistent
+    public static final int default_neverlate_enabled
+    public static final int default_only_marked_locations
+    public static final int default_tos_accepted
+    public static final int default_vibrate
+    public static final int default_warn_no_location
+com.viewpagerindicator.R$color:
+    public static final int black
+    public static final int blue
+    public static final int blue_electric
+    public static final int blue_light
+    public static final int edit_event_separator
+    public static final int event_info_label_color
+    public static final int grey_dark
+    public static final int grey_light
+    public static final int red_dark
+    public static final int vpi__background_holo_dark
+    public static final int vpi__background_holo_light
+    public static final int vpi__bright_foreground_disabled_holo_dark
+    public static final int vpi__bright_foreground_disabled_holo_light
+    public static final int vpi__bright_foreground_holo_dark
+    public static final int vpi__bright_foreground_holo_light
+    public static final int vpi__bright_foreground_inverse_holo_dark
+    public static final int vpi__bright_foreground_inverse_holo_light
+    public static final int vpi__dark_theme
+    public static final int vpi__light_theme
+    public static final int white
+com.viewpagerindicator.R$drawable
+com.viewpagerindicator.R$id
+com.viewpagerindicator.R$integer:
+    public static final int whats_new_version
+com.viewpagerindicator.R$layout
+com.viewpagerindicator.R$string
+com.viewpagerindicator.R$style:
+    public static final int ButtonBar
+    public static final int EditEventSeparator
+    public static final int GenderButton
+    public static final int LargeBlackText
+    public static final int LauncherButton
+    public static final int MediumBlackText
+    public static final int QuickTourHeader
+    public static final int QuickTourHeaderPadded
+    public static final int QuickTourMessage
+    public static final int QuickTourMessagePadded
+    public static final int QuickTourPage
+    public static final int QuickTourPageNoPad
+    public static final int RegEditText
+    public static final int RegLabelFont
+    public static final int SettingsInstructions
+    public static final int SmallBlackText
+    public static final int TextAppearance_EditEvent
+    public static final int TextAppearance_EditEvent_Value
+    public static final int TextAppearance_TabPageIndicator
+    public static final int Theme_PageIndicatorDefaults
+    public static final int Widget
+    public static final int Widget_TabPageIndicator
+    public static final int Widget_TabPageIndicator_Text
+com.viewpagerindicator.R$styleable:
+    public static final int CirclePageIndicator_centered
+    public static final int CirclePageIndicator_fillColor
+    public static final int CirclePageIndicator_orientation
+    public static final int CirclePageIndicator_pageColor
+    public static final int CirclePageIndicator_radius
+    public static final int CirclePageIndicator_snap
+    public static final int CirclePageIndicator_strokeColor
+    public static final int CirclePageIndicator_strokeWidth
+    public static final int TitlePageIndicator_clipPadding
+    public static final int TitlePageIndicator_footerColor
+    public static final int TitlePageIndicator_footerIndicatorHeight
+    public static final int TitlePageIndicator_footerIndicatorStyle
+    public static final int TitlePageIndicator_footerIndicatorUnderlinePadding
+    public static final int TitlePageIndicator_footerLineHeight
+    public static final int TitlePageIndicator_footerPadding
+    public static final int TitlePageIndicator_selectedBold
+    public static final int TitlePageIndicator_selectedColor
+    public static final int TitlePageIndicator_textColor
+    public static final int TitlePageIndicator_textSize
+    public static final int TitlePageIndicator_titlePadding
+    public static final int TitlePageIndicator_topPadding
+    public static final int ViewPagerIndicator_vpiCirclePageIndicatorStyle
+    public static final int ViewPagerIndicator_vpiTabPageIndicatorStyle
+    public static final int ViewPagerIndicator_vpiTabTextStyle
+    public static final int ViewPagerIndicator_vpiTitlePageIndicatorStyle
+    public static final int com_google_ads_AdView_adSize
+    public static final int com_google_ads_AdView_adUnitId
+com.viewpagerindicator.R$xml
+com.viewpagerindicator.TabPageIndicator
+com.viewpagerindicator.TabPageIndicator$1
+com.viewpagerindicator.TabPageIndicator$2
+com.viewpagerindicator.TabPageIndicator$TabView
+com.viewpagerindicator.TitlePageIndicator:
+    private static final float SELECTION_FADE_PERCENTAGE
+    private static final float BOLD_FADE_PERCENTAGE
+    private static final int INVALID_POINTER
+    186:186:public int getFooterColor()
+    190:193:public void setFooterColor(int)
+    196:196:public float getFooterLineHeight()
+    200:203:public void setFooterLineHeight(float)
+    206:206:public float getFooterIndicatorHeight()
+    210:212:public void setFooterIndicatorHeight(float)
+    215:215:public float getFooterIndicatorPadding()
+    219:221:public void setFooterIndicatorPadding(float)
+    224:224:public com.viewpagerindicator.TitlePageIndicator$IndicatorStyle getFooterIndicatorStyle()
+    228:230:public void setFooterIndicatorStyle(com.viewpagerindicator.TitlePageIndicator$IndicatorStyle)
+    233:233:public int getSelectedColor()
+    237:239:public void setSelectedColor(int)
+    242:242:public boolean isSelectedBold()
+    246:248:public void setSelectedBold(boolean)
+    251:251:public int getTextColor()
+    255:258:public void setTextColor(int)
+    261:261:public float getTextSize()
+    265:267:public void setTextSize(float)
+    270:270:public float getTitlePadding()
+    274:276:public void setTitlePadding(float)
+    279:279:public float getTopPadding()
+    283:285:public void setTopPadding(float)
+    288:288:public float getClipPadding()
+    292:294:public void setClipPadding(float)
+    297:299:public void setTypeface(android.graphics.Typeface)
+    302:302:public android.graphics.Typeface getTypeface()
+    635:646:public void setViewPager(android.support.v4.view.ViewPager)
+    650:652:public void setViewPager(android.support.v4.view.ViewPager,int)
+    656:657:public void notifyDataSetChanged()
+    665:666:public void setOnCenterItemClickListener(com.viewpagerindicator.TitlePageIndicator$OnCenterItemClickListener)
+    712:713:public void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)

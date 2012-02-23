@@ -17,11 +17,11 @@
     
     <string name="qt_searchable_header">A Searchable Address</string>
     <string name="qt_searchable_message_1">The simplest definition for a searchable address is one that you can 
-        search for in Google Maps. NeverBeLate™ requires each of your event locations to be a searchable address 
-        so that it can determine travel distances and times correctly. Good examples are \"221b Baker Street, 
-        London, UK\",  or if you\'re in a hurry, just \"Atlanta, GA\" or even \"77059\". A good tradeoff between 
-        accuracy and speed of entry is to enter just the street address and the postal code, as shown  
-        in the example below.</string>
+        search for in Google Maps. When you create a new event in your favorite calendar app, NeverBeLate™ 
+        needs the event location to be a searchable address so that it can determine travel distances and 
+        times correctly. Good examples are \"221b Baker Street, London, UK\", or if you\'re in a hurry, 
+        just \"Atlanta, GA\" or even \"77059\". A good tradeoff between accuracy and speed of entry is to 
+        enter just the street address and the postal code, as shown in the example below.</string>
     <string name="qt_where">Where</string>
     <string name="qt_sample_location">30 Rockefeller, 10112</string>
     <string name="qt_searchable_message_2">If you leave the location field of an event empty, NeverBeLate™ 

@@ -1,116 +1,135 @@
-a$a: a$a[] values()
-a$a: a$a valueOf(java.lang.String)
-android.support.v4.app.BackStackState
-android.support.v4.app.BackStackState: android.os.Parcelable$Creator CREATOR
-android.support.v4.app.Fragment$SavedState
-android.support.v4.app.Fragment$SavedState: android.os.Parcelable$Creator CREATOR
-android.support.v4.app.FragmentActivity
-android.support.v4.app.FragmentManagerState
-android.support.v4.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
-android.support.v4.app.FragmentState
-android.support.v4.app.FragmentState: android.os.Parcelable$Creator CREATOR
-android.support.v4.app.NoSaveStateFrameLayout
-android.support.v4.app.NoSaveStateFrameLayout: NoSaveStateFrameLayout(android.content.Context)
-android.support.v4.content.AsyncTaskLoader
-android.support.v4.content.AsyncTaskLoader: AsyncTaskLoader(android.content.Context)
-android.support.v4.content.CursorLoader
-android.support.v4.content.CursorLoader: CursorLoader(android.content.Context)
-android.support.v4.content.Loader
-android.support.v4.content.Loader: Loader(android.content.Context)
-android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status[] values()
-android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status valueOf(java.lang.String)
-android.support.v4.view.PagerTitleStrip
-android.support.v4.view.PagerTitleStrip: PagerTitleStrip(android.content.Context)
-android.support.v4.view.PagerTitleStrip: PagerTitleStrip(android.content.Context,android.util.AttributeSet)
-android.support.v4.view.ViewPager
-android.support.v4.view.ViewPager: ViewPager(android.content.Context)
-android.support.v4.view.ViewPager: ViewPager(android.content.Context,android.util.AttributeSet)
-android.support.v4.view.ViewPager$LayoutParams
-android.support.v4.view.ViewPager$LayoutParams: ViewPager$LayoutParams(android.content.Context,android.util.AttributeSet)
-android.support.v4.view.ViewPager$SavedState
-android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREATOR
-android.support.v4.widget.EdgeEffectCompat
-android.support.v4.widget.EdgeEffectCompat: EdgeEffectCompat(android.content.Context)
-com.google.ads.AdActivity
-com.google.ads.AdRequest$ErrorCode: com.google.ads.AdRequest$ErrorCode[] values()
-com.google.ads.AdRequest$ErrorCode: com.google.ads.AdRequest$ErrorCode valueOf(java.lang.String)
-com.google.ads.AdRequest$Gender: com.google.ads.AdRequest$Gender[] values()
-com.google.ads.AdRequest$Gender: com.google.ads.AdRequest$Gender valueOf(java.lang.String)
-com.google.ads.AdView
-com.google.ads.AdView: AdView(android.content.Context,android.util.AttributeSet)
-com.google.ads.AdView: AdView(android.content.Context,android.util.AttributeSet,int)
-com.google.ads.InstallReceiver
-com.google.gson.FieldNamingPolicy: com.google.gson.FieldNamingPolicy[] values()
-com.google.gson.FieldNamingPolicy: com.google.gson.FieldNamingPolicy valueOf(java.lang.String)
-com.google.gson.LongSerializationPolicy: com.google.gson.LongSerializationPolicy[] values()
-com.google.gson.LongSerializationPolicy: com.google.gson.LongSerializationPolicy valueOf(java.lang.String)
-com.google.gson.ModifyFirstLetterNamingPolicy$LetterModifier: com.google.gson.ModifyFirstLetterNamingPolicy$LetterModifier[] values()
-com.google.gson.ModifyFirstLetterNamingPolicy$LetterModifier: com.google.gson.ModifyFirstLetterNamingPolicy$LetterModifier valueOf(java.lang.String)
-com.madhackerdesigns.neverbelate.provider.AlertsContract
-com.madhackerdesigns.neverbelate.provider.AlertsProvider
-com.madhackerdesigns.neverbelate.service.CalendarHelper
-com.madhackerdesigns.neverbelate.service.LocationReceiver
-com.madhackerdesigns.neverbelate.service.NeverBeLateService
-com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus: com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus[] values()
-com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus: com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus valueOf(java.lang.String)
-com.madhackerdesigns.neverbelate.service.StartupReceiver
-com.madhackerdesigns.neverbelate.service.TravelTimeReceiver
-com.madhackerdesigns.neverbelate.service.WakefulServiceReceiver
-com.madhackerdesigns.neverbelate.settings.EulaPreference
-com.madhackerdesigns.neverbelate.settings.EulaPreference: EulaPreference(android.content.Context,android.util.AttributeSet,int)
-com.madhackerdesigns.neverbelate.settings.EulaPreference: EulaPreference(android.content.Context,android.util.AttributeSet)
-com.madhackerdesigns.neverbelate.settings.EulaPreference: EulaPreference(android.content.Context)
-com.madhackerdesigns.neverbelate.settings.FeedbackPreference
-com.madhackerdesigns.neverbelate.settings.FeedbackPreference: FeedbackPreference(android.content.Context,android.util.AttributeSet,int)
-com.madhackerdesigns.neverbelate.settings.FeedbackPreference: FeedbackPreference(android.content.Context,android.util.AttributeSet)
-com.madhackerdesigns.neverbelate.settings.FeedbackPreference: FeedbackPreference(android.content.Context)
-com.madhackerdesigns.neverbelate.settings.NeverBeLateSettings
-com.madhackerdesigns.neverbelate.settings.PreferenceHelper
-com.madhackerdesigns.neverbelate.settings.PreferenceHelper: PreferenceHelper(android.content.Context)
-com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod: com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod[] values()
-com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod: com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod valueOf(java.lang.String)
-com.madhackerdesigns.neverbelate.settings.PrivacyPreference
-com.madhackerdesigns.neverbelate.settings.PrivacyPreference: PrivacyPreference(android.content.Context,android.util.AttributeSet,int)
-com.madhackerdesigns.neverbelate.settings.PrivacyPreference: PrivacyPreference(android.content.Context,android.util.AttributeSet)
-com.madhackerdesigns.neverbelate.settings.PrivacyPreference: PrivacyPreference(android.content.Context)
-com.madhackerdesigns.neverbelate.settings.WebsitePreference
-com.madhackerdesigns.neverbelate.settings.WebsitePreference: WebsitePreference(android.content.Context,android.util.AttributeSet,int)
-com.madhackerdesigns.neverbelate.settings.WebsitePreference: WebsitePreference(android.content.Context,android.util.AttributeSet)
-com.madhackerdesigns.neverbelate.settings.WebsitePreference: WebsitePreference(android.content.Context)
-com.madhackerdesigns.neverbelate.ui.EdgeScrollView
-com.madhackerdesigns.neverbelate.ui.EdgeScrollView: EdgeScrollView(android.content.Context,android.util.AttributeSet)
-com.madhackerdesigns.neverbelate.ui.EdgeScrollView: EdgeScrollView(android.content.Context,android.util.AttributeSet,int)
-com.madhackerdesigns.neverbelate.ui.LauncherActivity
-com.madhackerdesigns.neverbelate.ui.MapOverlay
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity
-com.madhackerdesigns.neverbelate.ui.Registration
-com.madhackerdesigns.neverbelate.ui.Registration: Registration(android.content.Context)
-com.madhackerdesigns.neverbelate.ui.RegistrationForm
-com.madhackerdesigns.neverbelate.ui.TestActivity
-com.madhackerdesigns.neverbelate.ui.UserLocationOverlay
-com.madhackerdesigns.neverbelate.ui.WarningDialog
 com.madhackerdesigns.neverbelate.util.AdHelper
 com.madhackerdesigns.neverbelate.util.AdHelper: AdHelper(android.content.Context)
-com.madhackerdesigns.neverbelate.util.Logger
-com.madhackerdesigns.neverbelate.util.NetUtils
 com.pontiflex.mobile.webview.models.ResourceData
 com.pontiflex.mobile.webview.models.ResourceData: ResourceData(android.content.Context)
+com.pontiflex.mobile.webview.utilities.RegistrationStorage: RegistrationStorage(android.content.Context)
+com.madhackerdesigns.neverbelate.settings.PreferenceHelper
+com.madhackerdesigns.neverbelate.settings.PreferenceHelper: PreferenceHelper(android.content.Context)
+com.pontiflex.mobile.webview.utilities.RegistrationStorage
+com.pontiflex.mobile.webview.utilities.RegistrationStorage: RegistrationStorage(android.content.Context)
+com.viewpagerindicator.TitlePageIndicator
+com.viewpagerindicator.TitlePageIndicator: TitlePageIndicator(android.content.Context)
+com.madhackerdesigns.neverbelate.settings.FeedbackPreference
+com.madhackerdesigns.neverbelate.settings.FeedbackPreference: FeedbackPreference(android.content.Context)
+android.support.v4.content.AsyncTaskLoader
+android.support.v4.content.AsyncTaskLoader: AsyncTaskLoader(android.content.Context)
+android.support.v4.content.Loader: Loader(android.content.Context)
+android.support.v4.widget.EdgeEffectCompat
+android.support.v4.widget.EdgeEffectCompat: EdgeEffectCompat(android.content.Context)
+android.support.v4.view.ViewPager
+android.support.v4.view.ViewPager: ViewPager(android.content.Context)
+com.madhackerdesigns.neverbelate.settings.PrivacyPreference
+com.madhackerdesigns.neverbelate.settings.PrivacyPreference: PrivacyPreference(android.content.Context)
+com.madhackerdesigns.neverbelate.settings.WebsitePreference
+com.madhackerdesigns.neverbelate.settings.WebsitePreference: WebsitePreference(android.content.Context)
+com.madhackerdesigns.neverbelate.settings.EulaPreference
+com.madhackerdesigns.neverbelate.settings.EulaPreference: EulaPreference(android.content.Context)
+com.viewpagerindicator.TabPageIndicator
+com.viewpagerindicator.TabPageIndicator: TabPageIndicator(android.content.Context)
+android.support.v4.content.CursorLoader
+android.support.v4.content.CursorLoader: CursorLoader(android.content.Context)
+android.support.v4.content.AsyncTaskLoader: AsyncTaskLoader(android.content.Context)
+android.support.v4.content.Loader: Loader(android.content.Context)
+android.support.v4.view.PagerTitleStrip
+android.support.v4.view.PagerTitleStrip: PagerTitleStrip(android.content.Context)
+android.support.v4.app.NoSaveStateFrameLayout
+android.support.v4.app.NoSaveStateFrameLayout: NoSaveStateFrameLayout(android.content.Context)
+com.viewpagerindicator.CirclePageIndicator
+com.viewpagerindicator.CirclePageIndicator: CirclePageIndicator(android.content.Context)
+com.madhackerdesigns.neverbelate.ui.Registration
+com.madhackerdesigns.neverbelate.ui.Registration: Registration(android.content.Context)
+android.support.v4.content.Loader
+android.support.v4.content.Loader: Loader(android.content.Context)
+com.madhackerdesigns.neverbelate.ui.EdgeScrollView
+com.madhackerdesigns.neverbelate.ui.EdgeScrollView: EdgeScrollView(android.content.Context,android.util.AttributeSet)
+com.viewpagerindicator.TitlePageIndicator
+com.viewpagerindicator.TitlePageIndicator: TitlePageIndicator(android.content.Context,android.util.AttributeSet)
+com.madhackerdesigns.neverbelate.settings.FeedbackPreference
+com.madhackerdesigns.neverbelate.settings.FeedbackPreference: FeedbackPreference(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.ViewPager$LayoutParams
+android.support.v4.view.ViewPager$LayoutParams: ViewPager$LayoutParams(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.ViewPager
+android.support.v4.view.ViewPager: ViewPager(android.content.Context,android.util.AttributeSet)
+com.madhackerdesigns.neverbelate.settings.PrivacyPreference
+com.madhackerdesigns.neverbelate.settings.PrivacyPreference: PrivacyPreference(android.content.Context,android.util.AttributeSet)
+com.google.ads.AdView
+com.google.ads.AdView: AdView(android.content.Context,android.util.AttributeSet)
+com.madhackerdesigns.neverbelate.settings.WebsitePreference
+com.madhackerdesigns.neverbelate.settings.WebsitePreference: WebsitePreference(android.content.Context,android.util.AttributeSet)
+com.madhackerdesigns.neverbelate.settings.EulaPreference
+com.madhackerdesigns.neverbelate.settings.EulaPreference: EulaPreference(android.content.Context,android.util.AttributeSet)
+com.viewpagerindicator.TabPageIndicator
+com.viewpagerindicator.TabPageIndicator: TabPageIndicator(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.PagerTitleStrip
+android.support.v4.view.PagerTitleStrip: PagerTitleStrip(android.content.Context,android.util.AttributeSet)
+com.viewpagerindicator.CirclePageIndicator
+com.viewpagerindicator.CirclePageIndicator: CirclePageIndicator(android.content.Context,android.util.AttributeSet)
+com.viewpagerindicator.TabPageIndicator$TabView
+com.viewpagerindicator.TabPageIndicator$TabView: TabPageIndicator$TabView(android.content.Context,android.util.AttributeSet)
+com.madhackerdesigns.neverbelate.ui.EdgeScrollView
+com.madhackerdesigns.neverbelate.ui.EdgeScrollView: EdgeScrollView(android.content.Context,android.util.AttributeSet,int)
+com.viewpagerindicator.TitlePageIndicator
+com.viewpagerindicator.TitlePageIndicator: TitlePageIndicator(android.content.Context,android.util.AttributeSet,int)
+com.madhackerdesigns.neverbelate.settings.FeedbackPreference
+com.madhackerdesigns.neverbelate.settings.FeedbackPreference: FeedbackPreference(android.content.Context,android.util.AttributeSet,int)
+com.madhackerdesigns.neverbelate.settings.PrivacyPreference
+com.madhackerdesigns.neverbelate.settings.PrivacyPreference: PrivacyPreference(android.content.Context,android.util.AttributeSet,int)
+com.google.ads.AdView
+com.google.ads.AdView: AdView(android.content.Context,android.util.AttributeSet,int)
+com.madhackerdesigns.neverbelate.settings.WebsitePreference
+com.madhackerdesigns.neverbelate.settings.WebsitePreference: WebsitePreference(android.content.Context,android.util.AttributeSet,int)
+com.madhackerdesigns.neverbelate.settings.EulaPreference
+com.madhackerdesigns.neverbelate.settings.EulaPreference: EulaPreference(android.content.Context,android.util.AttributeSet,int)
+com.viewpagerindicator.CirclePageIndicator
+com.viewpagerindicator.CirclePageIndicator: CirclePageIndicator(android.content.Context,android.util.AttributeSet,int)
+com.google.ads.searchads.SearchAdRequest$BorderType: com.google.ads.searchads.SearchAdRequest$BorderType[] values()
+com.google.ads.searchads.SearchAdRequest$BorderType: com.google.ads.searchads.SearchAdRequest$BorderType valueOf(java.lang.String)
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation[] values()
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation valueOf(java.lang.String)
 com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment: com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment[] values()
 com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment: com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment valueOf(java.lang.String)
+com.google.ads.ab$b: com.google.ads.ab$b[] values()
+com.google.ads.ab$b: com.google.ads.ab$b valueOf(java.lang.String)
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity[] values()
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity valueOf(java.lang.String)
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status[] values()
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status valueOf(java.lang.String)
+com.google.ads.util.AdUtil$a: com.google.ads.util.AdUtil$a[] values()
+com.google.ads.util.AdUtil$a: com.google.ads.util.AdUtil$a valueOf(java.lang.String)
+com.google.ads.AdRequest$Gender: com.google.ads.AdRequest$Gender[] values()
+com.google.ads.AdRequest$Gender: com.google.ads.AdRequest$Gender valueOf(java.lang.String)
+com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus: com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus[] values()
+com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus: com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus valueOf(java.lang.String)
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page[] values()
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page valueOf(java.lang.String)
 com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode: com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode[] values()
 com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode: com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode valueOf(java.lang.String)
+com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod: com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod[] values()
+com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod: com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod valueOf(java.lang.String)
+com.google.ads.AdRequest$ErrorCode: com.google.ads.AdRequest$ErrorCode[] values()
+com.google.ads.AdRequest$ErrorCode: com.google.ads.AdRequest$ErrorCode valueOf(java.lang.String)
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize[] values()
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize valueOf(java.lang.String)
+com.viewpagerindicator.TitlePageIndicator$IndicatorStyle: com.viewpagerindicator.TitlePageIndicator$IndicatorStyle[] values()
+com.viewpagerindicator.TitlePageIndicator$IndicatorStyle: com.viewpagerindicator.TitlePageIndicator$IndicatorStyle valueOf(java.lang.String)
 com.pontiflex.mobile.webview.sdk.IPflexJSInterface
-com.pontiflex.mobile.webview.sdk.activities.BaseActivity
-com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: PflexDeviceJSInterface(com.pontiflex.mobile.webview.sdk.activities.BaseActivity)
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: java.lang.String getDeviceData(java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: java.lang.String getAllDeviceData()
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: int getScreenOrientation()
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: int getScreenWidth()
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: int getScreenHeight()
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: int getScreenDensity()
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: int getScreenSize()
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: java.lang.String getDeviceConfig()
+com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: PflexResourceJSInterface(com.pontiflex.mobile.webview.sdk.activities.BaseActivity)
+com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: java.lang.String getResourceData(java.lang.String,java.lang.String)
+com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: void setResourceData(java.lang.String,java.lang.String,java.lang.String)
+com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: java.lang.String getResourceContent(java.lang.String,java.lang.String,java.lang.String)
+com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: void updateResource(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: void updateResourceCallback(java.lang.String,boolean,java.lang.String)
+com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: com.pontiflex.mobile.webview.sdk.activities.BaseActivity access$000(com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface)
+com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: PflexVersionJSInterface(com.pontiflex.mobile.webview.sdk.activities.BaseActivity)
+com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getAppName()
+com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getAppVersionCode()
+com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getAppVersionName()
+com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getOsVersion()
+com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getUserAgent()
+com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getLocale()
+com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getPostalCode()
+com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: int getOsVersionCode()
+com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getNativeVersionConfig()
 com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: PflexJSInterface(com.pontiflex.mobile.webview.sdk.activities.BaseActivity,android.webkit.WebView)
 com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: void showKeyboard()
 com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: void finishActivity()
@@ -123,13 +142,15 @@ com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: void startProgress
 com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: void cancelProgressDialog()
 com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: java.lang.String getBasePath()
 com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: void asyncHttpRequest(java.lang.String,boolean,java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: PflexResourceJSInterface(com.pontiflex.mobile.webview.sdk.activities.BaseActivity)
-com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: java.lang.String getResourceData(java.lang.String,java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: void setResourceData(java.lang.String,java.lang.String,java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: java.lang.String getResourceContent(java.lang.String,java.lang.String,java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: void updateResource(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: void updateResourceCallback(java.lang.String,boolean,java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: com.pontiflex.mobile.webview.sdk.activities.BaseActivity access$000(com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface)
+com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: PflexDeviceJSInterface(com.pontiflex.mobile.webview.sdk.activities.BaseActivity)
+com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: java.lang.String getDeviceData(java.lang.String)
+com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: java.lang.String getAllDeviceData()
+com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: int getScreenOrientation()
+com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: int getScreenWidth()
+com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: int getScreenHeight()
+com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: int getScreenDensity()
+com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: int getScreenSize()
+com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: java.lang.String getDeviceConfig()
 com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: PflexStorageJSInterface(com.pontiflex.mobile.webview.sdk.activities.BaseActivity,android.webkit.WebView)
 com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: boolean hasValidRegistrationData()
 com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: void addRegistrationData(java.lang.String,java.lang.String)
@@ -144,28 +165,49 @@ com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: void remove
 com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: void setItem(java.lang.String,java.lang.String)
 com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: java.lang.String getAdditionalData(java.lang.String)
 com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: void setAdditionalData(java.lang.String,java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: PflexVersionJSInterface(com.pontiflex.mobile.webview.sdk.activities.BaseActivity)
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getAppName()
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getAppVersionCode()
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getAppVersionName()
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getOsVersion()
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getUserAgent()
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getLocale()
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getPostalCode()
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: int getOsVersionCode()
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getNativeVersionConfig()
-com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity
-com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity
+com.madhackerdesigns.neverbelate.provider.AlertsContract
+com.madhackerdesigns.neverbelate.service.CalendarHelper
+com.madhackerdesigns.neverbelate.ui.EdgeScrollView
+com.madhackerdesigns.neverbelate.ui.MapOverlay
+com.madhackerdesigns.neverbelate.ui.UserLocationOverlay
+com.madhackerdesigns.neverbelate.util.Logger
+com.madhackerdesigns.neverbelate.util.NetUtils
+com.madhackerdesigns.neverbelate.ui.LauncherActivity
+com.google.ads.AdActivity
+com.pontiflex.mobile.webview.sdk.activities.BaseActivity
+com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity
 com.pontiflex.mobile.webview.sdk.activities.SignUpActivity
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page[] values()
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page valueOf(java.lang.String)
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity[] values()
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity valueOf(java.lang.String)
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation[] values()
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation valueOf(java.lang.String)
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize[] values()
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize valueOf(java.lang.String)
-com.pontiflex.mobile.webview.utilities.RegistrationStorage
-com.pontiflex.mobile.webview.utilities.RegistrationStorage: RegistrationStorage(android.content.Context)
-u$a: u$a[] values()
-u$a: u$a valueOf(java.lang.String)
+com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity
+com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity
+android.support.v4.app.FragmentActivity
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity
+com.madhackerdesigns.neverbelate.ui.RegistrationForm
+com.madhackerdesigns.neverbelate.ui.TestActivity
+com.madhackerdesigns.neverbelate.ui.WarningDialog
+com.madhackerdesigns.neverbelate.settings.NeverBeLateSettings
+com.madhackerdesigns.neverbelate.service.NeverBeLateService
+com.madhackerdesigns.neverbelate.service.StartupReceiver
+com.madhackerdesigns.neverbelate.service.LocationReceiver
+com.madhackerdesigns.neverbelate.service.WakefulServiceReceiver
+com.google.ads.util.AdUtil$UserActivityReceiver
+com.madhackerdesigns.neverbelate.service.TravelTimeReceiver
+com.madhackerdesigns.neverbelate.provider.AlertsProvider
+com.madhackerdesigns.neverbelate.settings.FeedbackPreference
+com.madhackerdesigns.neverbelate.settings.PrivacyPreference
+com.madhackerdesigns.neverbelate.settings.WebsitePreference
+com.madhackerdesigns.neverbelate.settings.EulaPreference
+com.madhackerdesigns.neverbelate.ui.WarningDialog
+android.support.v4.app.FragmentState
+android.support.v4.app.FragmentState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.BackStackState
+android.support.v4.app.BackStackState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.Fragment$SavedState
+android.support.v4.app.Fragment$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentManagerState
+android.support.v4.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
+com.viewpagerindicator.CirclePageIndicator$SavedState
+com.viewpagerindicator.CirclePageIndicator$SavedState: android.os.Parcelable$Creator CREATOR
+com.viewpagerindicator.TitlePageIndicator$SavedState
+com.viewpagerindicator.TitlePageIndicator$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.view.ViewPager$SavedState
+android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREATOR

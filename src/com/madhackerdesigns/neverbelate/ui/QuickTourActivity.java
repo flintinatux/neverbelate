@@ -8,10 +8,12 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -20,6 +22,7 @@ import android.widget.TextView;
 
 import com.madhackerdesigns.neverbelate.R;
 import com.madhackerdesigns.neverbelate.settings.PreferenceHelper;
+import com.viewpagerindicator.CirclePageIndicator;
 
 public class QuickTourActivity extends FragmentActivity {
 	
@@ -36,7 +39,7 @@ public class QuickTourActivity extends FragmentActivity {
 
     MyAdapter mAdapter;
     Context mContext;
-//    CirclePageIndicator mIndicator;
+    CirclePageIndicator mIndicator;
     ViewPager mPager;
     
     @Override
@@ -51,43 +54,43 @@ public class QuickTourActivity extends FragmentActivity {
         mPager.setAdapter(mAdapter);
         
       	//Bind the title indicator to the adapter
-//        CirclePageIndicator indicator = (CirclePageIndicator) findViewById(R.id.indicator);
-//        mIndicator = indicator;
-//        indicator.setViewPager(mPager);
-//        indicator.setSnap(true);
-//        indicator.setOnPageChangeListener(new OnPageChangeListener() {
-//
-//			public void onPageScrollStateChanged(int state) {
-//				// Change visibility of indicator based on scroll state
-//				View indicator = mIndicator;
-//				switch(state) {
-//				case ViewPager.SCROLL_STATE_DRAGGING:
-//					if (indicator.getVisibility() == View.INVISIBLE) {
-//						indicator.startAnimation(AnimationUtils.loadAnimation(mContext, android.R.anim.fade_in));
-//						indicator.setVisibility(View.VISIBLE);
-//					}
-//					break;
-//				case ViewPager.SCROLL_STATE_IDLE:
-//					if (indicator.getVisibility() == View.VISIBLE) {
-//						indicator.startAnimation(AnimationUtils.loadAnimation(mContext, android.R.anim.fade_out));
-//						indicator.setVisibility(View.INVISIBLE);
-//					}
-//					break;
-//				case ViewPager.SCROLL_STATE_SETTLING:
-//					// Do nothing.
-//					break;
-//				}
-//			}
-//
-//			public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-//				// Do nothing.
-//			}
-//
-//			public void onPageSelected(int position) {
-//				// Do nothing.
-//			}
-//        	
-//        });
+        CirclePageIndicator indicator = (CirclePageIndicator) findViewById(R.id.indicator);
+        mIndicator = indicator;
+        indicator.setViewPager(mPager);
+        indicator.setSnap(true);
+        indicator.setOnPageChangeListener(new OnPageChangeListener() {
+
+			public void onPageScrollStateChanged(int state) {
+				// Change visibility of indicator based on scroll state
+				View indicator = mIndicator;
+				switch(state) {
+				case ViewPager.SCROLL_STATE_DRAGGING:
+					if (indicator.getVisibility() == View.INVISIBLE) {
+						indicator.startAnimation(AnimationUtils.loadAnimation(mContext, android.R.anim.fade_in));
+						indicator.setVisibility(View.VISIBLE);
+					}
+					break;
+				case ViewPager.SCROLL_STATE_IDLE:
+					if (indicator.getVisibility() == View.VISIBLE) {
+						indicator.startAnimation(AnimationUtils.loadAnimation(mContext, android.R.anim.fade_out));
+						indicator.setVisibility(View.INVISIBLE);
+					}
+					break;
+				case ViewPager.SCROLL_STATE_SETTLING:
+					// Do nothing.
+					break;
+				}
+			}
+
+			public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+				// Do nothing.
+			}
+
+			public void onPageSelected(int position) {
+				// Do nothing.
+			}
+        	
+        });
         
         // Style the adapter with methods
         RESOURCES = getResources();
