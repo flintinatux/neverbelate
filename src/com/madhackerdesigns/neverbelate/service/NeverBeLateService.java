@@ -201,7 +201,7 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 		Location currentBestLocation = getCurrentLocation();
 		
 		// Iterate through the event instances
-		if (instance.moveToFirst()) {
+		if (currentBestLocation != null && instance.moveToFirst()) {
 			// ContentValues and Cursor objects to re-use
 			ContentValues values = new ContentValues();
 			Cursor alertCursor;
@@ -410,7 +410,7 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 				}
 			} while (instance.moveToNext());
 		} else {
-			// no calendar entries in the next lookaheadWindow, so wait til next time
+			// no current location or calendar entries in the next lookaheadWindow, so wait til next time
 		}
 		instance.close();
 	}
@@ -514,6 +514,10 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 
 		// Get the location manager locally and create new listener
 		LocationManager lm = mLocationManager;
+		if (lm == null) {
+			Logger.d(LOG_TAG, "Location Manager is null");
+			return null;
+		}
 		
 		// getLastKnownLocation of, and start listening for new locations from, all available enabled providers
 		List<String> allProviders = lm.getProviders(true);
@@ -524,7 +528,10 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 				Location nextLocation = lm.getLastKnownLocation(provider);
 				
 				// Rule 0: if last known location is null, don't use it
-				if (nextLocation == null) { continue; }
+				if (nextLocation == null) { 
+					Logger.d(LOG_TAG, "nextLocation is null");
+					continue;
+				}
 				
 				// Rule 1: if the current best location is null, set it to the next location
 				if (bestLocation == null) { 
@@ -571,7 +578,7 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 //				lm.requestLocationUpdates(provider, 0, 0, myLocationListener);
 			}
 		} else {
-//			publishProgress("No location providers enabled!");
+			Logger.d(LOG_TAG, "No location providers enabled!");
 			return null;
 		}
 		
