@@ -51,7 +51,8 @@ public class FeedbackPreference extends Preference {
 		Intent i = new Intent(Intent.ACTION_SEND);
 		i.setType("text/plain");
 		i.putExtra(Intent.EXTRA_EMAIL, new String[] { res.getString(R.string.feedback_address) });
-		String subject = res.getString(R.string.feedback_subject) + (new Date().getTime());
+		String subject = res.getString(R.string.feedback_subject) + (new Date().getTime()) + 
+				"(" + res.getString(R.string.app_version) + ")";
 		i.putExtra(Intent.EXTRA_SUBJECT, subject);
 		mContext.startActivity(Intent.createChooser(i, res.getString(R.string.feedback_menu_title)));
 	}
