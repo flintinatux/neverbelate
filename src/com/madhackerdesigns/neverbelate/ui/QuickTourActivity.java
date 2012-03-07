@@ -201,7 +201,7 @@ public class QuickTourActivity extends FragmentActivity {
             // Load the marked locations preference view if available
             ViewGroup pref = (ViewGroup) v.findViewById(R.id.pref_marked_locations);
             if (pref != null) {
-            	inflateMarkedLocationPref(pref);
+            	inflateMarkedEventsPref(pref);
             }
             
             // Load the Done button if available
@@ -212,15 +212,15 @@ public class QuickTourActivity extends FragmentActivity {
             return v;
         }
         
-        private void inflateMarkedLocationPref(ViewGroup v) {
+        private void inflateMarkedEventsPref(ViewGroup v) {
         	// Set the preference title
         	Resources res = v.getResources();
-        	String title = res.getString(R.string.pr_marked_locations_title);
+        	String title = res.getString(R.string.pr_marked_events_title);
         	((TextView) v.findViewById(R.id.title)).setText(title);
         	
         	// Set the "off" summary text
-        	mSummaryOff = res.getString(R.string.pr_marked_locations_summary_off);
-        	mSummaryOn = res.getString(R.string.pr_marked_locations_summary_on);
+        	mSummaryOff = res.getString(R.string.pr_marked_events_summary_off);
+        	mSummaryOn = res.getString(R.string.pr_marked_events_summary_on);
         	mSummaryText = (TextView) v.findViewById(R.id.summary);
         	mSummaryText.setText(mSummaryOff);
         	
@@ -235,7 +235,7 @@ public class QuickTourActivity extends FragmentActivity {
         	c.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 				public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-					mPrefs.setOnlyMarkedLocatitons(isChecked);
+					mPrefs.setOnlyMarkedEvents(isChecked);
 					if (isChecked) { mSummaryText.setText(mSummaryOn); }
 					else { mSummaryText.setText(mSummaryOff); }
 				}

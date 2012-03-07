@@ -71160,10 +71160,13 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 94):
+Constant Pool (count = 102):
+  - Integer [2131492893]
   - Integer [2131492974]
   - Integer [2131492975]
   - Integer [2131492976]
+  - String [(]
+  - String [)]
   - String [android.intent.action.SEND]
   - String [android.intent.extra.EMAIL]
   - String [android.intent.extra.SUBJECT]
@@ -71191,6 +71194,7 @@ Constant Pool (count = 94):
   - Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
   - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
   - Methodref [java/lang/StringBuilder.append (J)Ljava/lang/StringBuilder;]
+  - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
   - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
   - Methodref [java/util/Date.<init> ()V]
   - Methodref [java/util/Date.getTime ()J]
@@ -71201,6 +71205,7 @@ Constant Pool (count = 94):
   + NameAndType [<init> (Ljava/lang/String;)V]
   + NameAndType [a Landroid/content/Context;]
   + NameAndType [append (J)Ljava/lang/StringBuilder;]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
   + NameAndType [createChooser (Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;]
   + NameAndType [getResources ()Landroid/content/res/Resources;]
   + NameAndType [getString (I)Ljava/lang/String;]
@@ -71211,6 +71216,7 @@ Constant Pool (count = 94):
   + NameAndType [startActivity (Landroid/content/Intent;)V]
   + NameAndType [toString ()Ljava/lang/String;]
   + NameAndType [valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+  + Utf8 [(]
   + Utf8 [()J]
   + Utf8 [()Landroid/content/res/Resources;]
   + Utf8 [()Ljava/lang/String;]
@@ -71224,9 +71230,11 @@ Constant Pool (count = 94):
   + Utf8 [(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;]
   + Utf8 [(Ljava/lang/Object;)Ljava/lang/String;]
   + Utf8 [(Ljava/lang/String;)Landroid/content/Intent;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
   + Utf8 [(Ljava/lang/String;)V]
   + Utf8 [(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
   + Utf8 [(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;]
+  + Utf8 [)]
   + Utf8 [<init>]
   + Utf8 [Code]
   + Utf8 [Landroid/content/Context;]
@@ -71270,11 +71278,11 @@ Methods (count = 4):
       [1] aload_1 v1
       [2] aload_2 v2
       [3] iload_3 v3
-      [4] invokespecial #27
+      [4] invokespecial #30
         - Methodref [android/preference/Preference.<init> (Landroid/content/Context;Landroid/util/AttributeSet;I)V]
       [7] aload_0 v0
       [8] aload_1 v1
-      [9] putfield #16
+      [9] putfield #19
         - Fieldref [com/madhackerdesigns/neverbelate/settings/FeedbackPreference.a Landroid/content/Context;]
       [12] return
       Code attribute exceptions (count = 0):
@@ -71287,11 +71295,11 @@ Methods (count = 4):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] aload_2 v2
-      [3] invokespecial #26
+      [3] invokespecial #29
         - Methodref [android/preference/Preference.<init> (Landroid/content/Context;Landroid/util/AttributeSet;)V]
       [6] aload_0 v0
       [7] aload_1 v1
-      [8] putfield #16
+      [8] putfield #19
         - Fieldref [com/madhackerdesigns/neverbelate/settings/FeedbackPreference.a Landroid/content/Context;]
       [11] return
       Code attribute exceptions (count = 0):
@@ -71303,11 +71311,11 @@ Methods (count = 4):
     + Code attribute instructions (code length = 11, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #25
+      [2] invokespecial #28
         - Methodref [android/preference/Preference.<init> (Landroid/content/Context;)V]
       [5] aload_0 v0
       [6] aload_1 v1
-      [7] putfield #16
+      [7] putfield #19
         - Fieldref [com/madhackerdesigns/neverbelate/settings/FeedbackPreference.a Landroid/content/Context;]
       [10] return
       Code attribute exceptions (count = 0):
@@ -71316,89 +71324,104 @@ Methods (count = 4):
     Access flags: 0x4
       = protected void onClick()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 104, locals = 4, stack = 7):
+    + Code attribute instructions (code length = 123, locals = 4, stack = 7):
       [0] aload_0 v0
-      [1] getfield #16
+      [1] getfield #19
         - Fieldref [com/madhackerdesigns/neverbelate/settings/FeedbackPreference.a Landroid/content/Context;]
-      [4] invokevirtual #17
+      [4] invokevirtual #20
         - Methodref [android/content/Context.getResources ()Landroid/content/res/Resources;]
       [7] astore_1 v1
-      [8] new #9
+      [8] new #12
         - Class [android/content/Intent]
       [11] dup
-      [12] ldc #4
+      [12] ldc #7
         - String [android.intent.action.SEND]
-      [14] invokespecial #19
+      [14] invokespecial #22
         - Methodref [android/content/Intent.<init> (Ljava/lang/String;)V]
       [17] dup
       [18] astore_2 v2
-      [19] ldc #7
+      [19] ldc #10
         - String [text/plain]
-      [21] invokevirtual #23
+      [21] invokevirtual #26
         - Methodref [android/content/Intent.setType (Ljava/lang/String;)Landroid/content/Intent;]
       [24] pop
       [25] aload_2 v2
-      [26] ldc #5
+      [26] ldc #8
         - String [android.intent.extra.EMAIL]
       [28] iconst_1
-      [29] anewarray #13
+      [29] anewarray #16
         - Class [java/lang/String]
       [32] dup
       [33] iconst_0
       [34] aload_1 v1
-      [35] ldc #1
+      [35] ldc #2
         - Integer [2131492974]
-      [37] invokevirtual #24
+      [37] invokevirtual #27
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [40] aastore
-      [41] invokevirtual #22
+      [41] invokevirtual #25
         - Methodref [android/content/Intent.putExtra (Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;]
       [44] pop
-      [45] new #14
+      [45] new #17
         - Class [java/lang/StringBuilder]
       [48] dup
       [49] aload_1 v1
-      [50] ldc #3
+      [50] ldc #4
         - Integer [2131492976]
-      [52] invokevirtual #24
+      [52] invokevirtual #27
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
-      [55] invokestatic #28
+      [55] invokestatic #31
         - Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [58] invokespecial #29
+      [58] invokespecial #32
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [61] new #15
+      [61] new #18
         - Class [java/util/Date]
       [64] dup
-      [65] invokespecial #32
+      [65] invokespecial #36
         - Methodref [java/util/Date.<init> ()V]
-      [68] invokevirtual #33
+      [68] invokevirtual #37
         - Methodref [java/util/Date.getTime ()J]
-      [71] invokevirtual #30
+      [71] invokevirtual #33
         - Methodref [java/lang/StringBuilder.append (J)Ljava/lang/StringBuilder;]
-      [74] invokevirtual #31
-        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [77] astore_3 v3
-      [78] aload_2 v2
-      [79] ldc #6
-        - String [android.intent.extra.SUBJECT]
-      [81] aload_3 v3
-      [82] invokevirtual #21
-        - Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
-      [85] pop
-      [86] aload_0 v0
-      [87] getfield #16
-        - Fieldref [com/madhackerdesigns/neverbelate/settings/FeedbackPreference.a Landroid/content/Context;]
-      [90] aload_2 v2
-      [91] aload_1 v1
-      [92] ldc #2
-        - Integer [2131492975]
-      [94] invokevirtual #24
+      [74] ldc #5
+        - String [(]
+      [76] invokevirtual #34
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [79] aload_1 v1
+      [80] ldc #1
+        - Integer [2131492893]
+      [82] invokevirtual #27
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
-      [97] invokestatic #20
+      [85] invokevirtual #34
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [88] ldc #6
+        - String [)]
+      [90] invokevirtual #34
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [93] invokevirtual #35
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [96] astore_3 v3
+      [97] aload_2 v2
+      [98] ldc #9
+        - String [android.intent.extra.SUBJECT]
+      [100] aload_3 v3
+      [101] invokevirtual #24
+        - Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+      [104] pop
+      [105] aload_0 v0
+      [106] getfield #19
+        - Fieldref [com/madhackerdesigns/neverbelate/settings/FeedbackPreference.a Landroid/content/Context;]
+      [109] aload_2 v2
+      [110] aload_1 v1
+      [111] ldc #3
+        - Integer [2131492975]
+      [113] invokevirtual #27
+        - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
+      [116] invokestatic #23
         - Methodref [android/content/Intent.createChooser (Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;]
-      [100] invokevirtual #18
+      [119] invokevirtual #21
         - Methodref [android/content/Context.startActivity (Landroid/content/Intent;)V]
-      [103] return
+      [122] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
 
@@ -93925,7 +93948,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 772):
+Constant Pool (count = 778):
   - Integer [134217728]
   - Integer [268435456]
   - Integer [2130837524]
@@ -93962,6 +93985,7 @@ Constant Pool (count = 772):
   - String [Finished handling intent at: ]
   - String [Found ]
   - String [JSON status: ]
+  - String [Location Manager is null]
   - String [Location is null!]
   - String [Marking event ]
   - String [Network available, attempting to download new directions.]
@@ -93970,6 +93994,7 @@ Constant Pool (count = 772):
   - String [NeverBeLateService]
   - String [NeverBeLateService received an intent with task ']
   - String [No JSON returned.  Not good.]
+  - String [No location providers enabled!]
   - String [Notify the user later about event ]
   - String [Notify the user now about event ]
   - String [Notifying user now of upcoming events!]
@@ -94003,6 +94028,7 @@ Constant Pool (count = 772):
   - String [legs]
   - String [location]
   - String [mode]
+  - String [nextLocation is null]
   - String [notification]
   - String [origin]
   - String [power]
@@ -94494,6 +94520,7 @@ Constant Pool (count = 772):
   + Utf8 [Lcom/madhackerdesigns/neverbelate/service/a;]
   + Utf8 [Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
   + Utf8 [Lcom/madhackerdesigns/neverbelate/settings/a;]
+  + Utf8 [Location Manager is null]
   + Utf8 [Location is null!]
   + Utf8 [Marking event ]
   + Utf8 [Network available, attempting to download new directions.]
@@ -94502,6 +94529,7 @@ Constant Pool (count = 772):
   + Utf8 [NeverBeLateService]
   + Utf8 [NeverBeLateService received an intent with task ']
   + Utf8 [No JSON returned.  Not good.]
+  + Utf8 [No location providers enabled!]
   + Utf8 [Notify the user later about event ]
   + Utf8 [Notify the user now about event ]
   + Utf8 [Notifying user now of upcoming events!]
@@ -94654,6 +94682,7 @@ Constant Pool (count = 772):
   + Utf8 [n]
   + Utf8 [newWakeLock]
   + Utf8 [next]
+  + Utf8 [nextLocation is null]
   + Utf8 [notification]
   + Utf8 [notify]
   + Utf8 [onBind]
@@ -94729,28 +94758,28 @@ Methods (count = 14):
       [1] newarray 11
       [3] dup
       [4] iconst_0
-      [5] ldc2_w #147
+      [5] ldc2_w #150
         - Long [1250]
       [8] lastore
       [9] dup
       [10] iconst_1
-      [11] ldc2_w #143
+      [11] ldc2_w #146
         - Long [250]
       [14] lastore
       [15] dup
       [16] iconst_2
-      [17] ldc2_w #143
+      [17] ldc2_w #146
         - Long [250]
       [20] lastore
       [21] dup
       [22] iconst_3
-      [23] ldc2_w #143
+      [23] ldc2_w #146
         - Long [250]
       [26] lastore
-      [27] putstatic #167
+      [27] putstatic #170
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.a [J]
       [30] aconst_null
-      [31] putstatic #173
+      [31] putstatic #176
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.g Landroid/os/PowerManager$WakeLock;]
       [34] return
       Code attribute exceptions (count = 0):
@@ -94761,9 +94790,9 @@ Methods (count = 14):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 7, locals = 1, stack = 2):
       [0] aload_0 v0
-      [1] ldc #42
+      [1] ldc #43
         - String [NeverBeLateService]
-      [3] invokespecial #187
+      [3] invokespecial #190
         - Methodref [android/app/IntentService.<init> (Ljava/lang/String;)V]
       [6] return
       Code attribute exceptions (count = 0):
@@ -94773,34 +94802,34 @@ Methods (count = 14):
       = public static void a(android.content.Context,android.content.Intent)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 43, locals = 2, stack = 3):
-      [0] getstatic #173
+      [0] getstatic #176
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.g Landroid/os/PowerManager$WakeLock;]
       [3] ifnonnull +24 (target=27)
       [6] aload_0 v0
-      [7] invokevirtual #204
+      [7] invokevirtual #207
         - Methodref [android/content/Context.getApplicationContext ()Landroid/content/Context;]
-      [10] ldc #80
+      [10] ldc #83
         - String [power]
-      [12] invokevirtual #205
+      [12] invokevirtual #208
         - Methodref [android/content/Context.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-      [15] checkcast #110
+      [15] checkcast #113
         - Class [android/os/PowerManager]
       [18] iconst_1
-      [19] ldc #59
+      [19] ldc #61
         - String [com.madhackerdesigns.neverbelate.service.NeverBeLateService]
-      [21] invokevirtual #232
+      [21] invokevirtual #235
         - Methodref [android/os/PowerManager.newWakeLock (ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;]
-      [24] putstatic #173
+      [24] putstatic #176
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.g Landroid/os/PowerManager$WakeLock;]
-      [27] getstatic #173
+      [27] getstatic #176
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.g Landroid/os/PowerManager$WakeLock;]
-      [30] ldc2_w #149
+      [30] ldc2_w #152
         - Long [10000]
-      [33] invokevirtual #233
+      [33] invokevirtual #236
         - Methodref [android/os/PowerManager$WakeLock.acquire (J)V]
       [36] aload_0 v0
       [37] aload_1 v1
-      [38] invokevirtual #206
+      [38] invokevirtual #209
         - Methodref [android/content/Context.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
       [41] pop
       [42] return
@@ -94811,35 +94840,35 @@ Methods (count = 14):
       = protected void onHandleIntent(android.content.Intent)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 431, locals = 6, stack = 5):
-      [0] new #135
+      [0] new #138
         - Class [java/util/Date]
       [3] dup
-      [4] invokespecial #290
+      [4] invokespecial #293
         - Methodref [java/util/Date.<init> ()V]
-      [7] invokevirtual #292
+      [7] invokevirtual #295
         - Methodref [java/util/Date.getTime ()J]
-      [10] invokestatic #274
+      [10] invokestatic #277
         - Methodref [java/lang/Long.valueOf (J)Ljava/lang/Long;]
-      [13] invokestatic #238
+      [13] invokestatic #241
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.a (Ljava/lang/Long;)Ljava/lang/String;]
       [16] astore_2 v2
-      [17] new #132
+      [17] new #135
         - Class [java/lang/StringBuilder]
       [20] dup
-      [21] ldc #49
+      [21] ldc #51
         - String [Started handling intent at: ]
-      [23] invokespecial #283
+      [23] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [26] aload_2 v2
-      [27] invokevirtual #285
+      [27] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [30] invokevirtual #286
+      [30] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [33] astore_3 v3
-      [34] ldc #41
+      [34] ldc #42
         - String [NeverBeLate]
       [36] aload_3 v3
-      [37] invokestatic #234
+      [37] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [40] pop
       [41] aload_0 v0
@@ -94849,85 +94878,85 @@ Methods (count = 14):
       [45] astore_1 v1
       [46] dup
       [47] astore_3 v3
-      [48] getfield #168
+      [48] getfield #171
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.b Landroid/content/ContentResolver;]
       [51] ifnonnull +11 (target=62)
       [54] aload_3 v3
       [55] aload_3 v3
-      [56] invokevirtual #246
+      [56] invokevirtual #249
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.getContentResolver ()Landroid/content/ContentResolver;]
-      [59] putfield #168
+      [59] putfield #171
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.b Landroid/content/ContentResolver;]
       [62] aload_3 v3
-      [63] getfield #169
+      [63] getfield #172
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.c Landroid/location/LocationManager;]
       [66] ifnonnull +16 (target=82)
       [69] aload_3 v3
       [70] aload_3 v3
-      [71] ldc #76
+      [71] ldc #78
         - String [location]
-      [73] invokevirtual #248
+      [73] invokevirtual #251
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-      [76] checkcast #101
+      [76] checkcast #104
         - Class [android/location/LocationManager]
-      [79] putfield #169
+      [79] putfield #172
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.c Landroid/location/LocationManager;]
       [82] aload_3 v3
-      [83] getfield #170
+      [83] getfield #173
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.d Landroid/app/NotificationManager;]
       [86] ifnonnull +16 (target=102)
       [89] aload_3 v3
       [90] aload_3 v3
-      [91] ldc #78
+      [91] ldc #81
         - String [notification]
-      [93] invokevirtual #248
+      [93] invokevirtual #251
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-      [96] checkcast #91
+      [96] checkcast #94
         - Class [android/app/NotificationManager]
-      [99] putfield #170
+      [99] putfield #173
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.d Landroid/app/NotificationManager;]
       [102] aload_3 v3
-      [103] getfield #172
+      [103] getfield #175
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.f Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
       [106] ifnonnull +18 (target=124)
       [109] aload_3 v3
-      [110] new #120
+      [110] new #123
         - Class [com/madhackerdesigns/neverbelate/settings/PreferenceHelper]
       [113] dup
       [114] aload_3 v3
-      [115] invokevirtual #245
+      [115] invokevirtual #248
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.getApplicationContext ()Landroid/content/Context;]
-      [118] invokespecial #252
+      [118] invokespecial #255
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.<init> (Landroid/content/Context;)V]
-      [121] putfield #172
+      [121] putfield #175
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.f Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
       [124] aload_2 v2
-      [125] invokevirtual #208
+      [125] invokevirtual #211
         - Methodref [android/content/Intent.getExtras ()Landroid/os/Bundle;]
-      [128] ldc #60
+      [128] ldc #62
         - String [com.madhackerdesigns.neverbelate.task]
-      [130] invokevirtual #231
+      [130] invokevirtual #234
         - Methodref [android/os/Bundle.getInt (Ljava/lang/String;)I]
       [133] istore_2 v2
-      [134] ldc #42
+      [134] ldc #43
         - String [NeverBeLateService]
-      [136] new #132
+      [136] new #135
         - Class [java/lang/StringBuilder]
       [139] dup
-      [140] ldc #43
+      [140] ldc #44
         - String [NeverBeLateService received an intent with task ']
-      [142] invokespecial #283
+      [142] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [145] iload_2 v2
-      [146] invokevirtual #284
+      [146] invokevirtual #287
         - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
       [149] ldc #20
         - String ['.]
-      [151] invokevirtual #285
+      [151] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [154] invokevirtual #286
+      [154] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [157] invokestatic #234
+      [157] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [160] pop
       [161] iload_2 v2
@@ -94942,25 +94971,25 @@ Methods (count = 14):
         default: offset = 158, target = 320
       [204] aload_1 v1
       [205] astore_3 v3
-      [206] new #95
+      [206] new #98
         - Class [android/content/ContentValues]
       [209] dup
-      [210] invokespecial #199
+      [210] invokespecial #202
         - Methodref [android/content/ContentValues.<init> ()V]
       [213] dup
       [214] astore_2 v2
-      [215] ldc #65
+      [215] ldc #67
         - String [dismissed]
       [217] iconst_1
-      [218] invokestatic #272
+      [218] invokestatic #275
         - Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [221] invokevirtual #201
+      [221] invokevirtual #204
         - Methodref [android/content/ContentValues.put (Ljava/lang/String;Ljava/lang/Integer;)V]
-      [224] ldc #71
+      [224] ldc #73
         - String [fired=? AND dismissed=?]
       [226] astore v4
       [228] iconst_2
-      [229] anewarray #131
+      [229] anewarray #134
         - Class [java/lang/String]
       [232] dup
       [233] iconst_0
@@ -94974,139 +95003,139 @@ Methods (count = 14):
       [241] aastore
       [242] astore v5
       [244] aload_3 v3
-      [245] getfield #168
+      [245] getfield #171
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.b Landroid/content/ContentResolver;]
-      [248] getstatic #163
+      [248] getstatic #166
         - Fieldref [com/madhackerdesigns/neverbelate/provider/a.a Landroid/net/Uri;]
       [251] aload_2 v2
       [252] aload v4
       [254] aload v5
-      [256] invokevirtual #197
+      [256] invokevirtual #200
         - Methodref [android/content/ContentResolver.update (Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I]
       [259] istore_2 v2
-      [260] ldc #42
+      [260] ldc #43
         - String [NeverBeLateService]
-      [262] new #132
+      [262] new #135
         - Class [java/lang/StringBuilder]
       [265] dup
       [266] ldc #29
         - String [Dismissed ]
-      [268] invokespecial #283
+      [268] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [271] iload_2 v2
-      [272] invokevirtual #284
+      [272] invokevirtual #287
         - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
       [275] ldc #12
         - String [ alerts.]
-      [277] invokevirtual #285
+      [277] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [280] invokevirtual #286
+      [280] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [283] invokestatic #234
+      [283] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [286] pop
       [287] aload_1 v1
-      [288] getfield #170
+      [288] getfield #173
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.d Landroid/app/NotificationManager;]
       [291] iconst_1
-      [292] invokevirtual #190
+      [292] invokevirtual #193
         - Methodref [android/app/NotificationManager.cancel (I)V]
       [295] goto +25 (target=320)
       [298] aload_1 v1
-      [299] invokespecial #236
+      [299] invokespecial #239
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.a ()V]
       [302] goto +18 (target=320)
       [305] aload_1 v1
-      [306] invokespecial #240
+      [306] invokespecial #243
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.b ()V]
       [309] goto +11 (target=320)
       [312] goto +8 (target=320)
       [315] aload_1 v1
       [316] iconst_0
-      [317] invokespecial #239
+      [317] invokespecial #242
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.a (Z)V]
       [320] aload_1 v1
       [321] dup
       [322] astore_3 v3
       [323] aconst_null
-      [324] putfield #168
+      [324] putfield #171
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.b Landroid/content/ContentResolver;]
       [327] aload_3 v3
       [328] aconst_null
-      [329] putfield #169
+      [329] putfield #172
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.c Landroid/location/LocationManager;]
       [332] aload_3 v3
       [333] aconst_null
-      [334] putfield #170
+      [334] putfield #173
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.d Landroid/app/NotificationManager;]
       [337] aload_3 v3
       [338] aconst_null
-      [339] putfield #172
+      [339] putfield #175
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.f Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
       [342] goto +47 (target=389)
       [345] astore_1 v1
-      [346] new #135
+      [346] new #138
         - Class [java/util/Date]
       [349] dup
-      [350] invokespecial #290
+      [350] invokespecial #293
         - Methodref [java/util/Date.<init> ()V]
-      [353] invokevirtual #292
+      [353] invokevirtual #295
         - Methodref [java/util/Date.getTime ()J]
-      [356] invokestatic #274
+      [356] invokestatic #277
         - Methodref [java/lang/Long.valueOf (J)Ljava/lang/Long;]
-      [359] invokestatic #238
+      [359] invokestatic #241
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.a (Ljava/lang/Long;)Ljava/lang/String;]
       [362] astore_2 v2
-      [363] new #132
+      [363] new #135
         - Class [java/lang/StringBuilder]
       [366] dup
       [367] ldc #34
         - String [Finished handling intent at: ]
-      [369] invokespecial #283
+      [369] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [372] aload_2 v2
-      [373] invokevirtual #285
+      [373] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [376] invokevirtual #286
+      [376] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [379] astore_3 v3
-      [380] ldc #41
+      [380] ldc #42
         - String [NeverBeLate]
       [382] aload_3 v3
-      [383] invokestatic #234
+      [383] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [386] pop
       [387] aload_1 v1
       [388] athrow
-      [389] new #135
+      [389] new #138
         - Class [java/util/Date]
       [392] dup
-      [393] invokespecial #290
+      [393] invokespecial #293
         - Methodref [java/util/Date.<init> ()V]
-      [396] invokevirtual #292
+      [396] invokevirtual #295
         - Methodref [java/util/Date.getTime ()J]
-      [399] invokestatic #274
+      [399] invokestatic #277
         - Methodref [java/lang/Long.valueOf (J)Ljava/lang/Long;]
-      [402] invokestatic #238
+      [402] invokestatic #241
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.a (Ljava/lang/Long;)Ljava/lang/String;]
       [405] astore_2 v2
-      [406] new #132
+      [406] new #135
         - Class [java/lang/StringBuilder]
       [409] dup
       [410] ldc #34
         - String [Finished handling intent at: ]
-      [412] invokespecial #283
+      [412] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [415] aload_2 v2
-      [416] invokevirtual #285
+      [416] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [419] invokevirtual #286
+      [419] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [422] astore_3 v3
-      [423] ldc #41
+      [423] ldc #42
         - String [NeverBeLate]
       [425] aload_3 v3
-      [426] invokestatic #234
+      [426] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [429] pop
       [430] return
@@ -95117,1094 +95146,1096 @@ Methods (count = 14):
     Access flags: 0x2
       = private void a()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 1643, locals = 25, stack = 8):
+    + Code attribute instructions (code length = 1647, locals = 25, stack = 8):
       [0] aload_0 v0
-      [1] getfield #172
+      [1] getfield #175
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.f Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
       [4] astore_1 v1
-      [5] new #135
+      [5] new #138
         - Class [java/util/Date]
       [8] dup
-      [9] invokespecial #290
+      [9] invokespecial #293
         - Methodref [java/util/Date.<init> ()V]
-      [12] invokevirtual #292
+      [12] invokevirtual #295
         - Methodref [java/util/Date.getTime ()J]
       [15] aload_1 v1
-      [16] invokevirtual #258
+      [16] invokevirtual #261
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.f ()Ljava/lang/Long;]
-      [19] invokevirtual #273
+      [19] invokevirtual #276
         - Methodref [java/lang/Long.longValue ()J]
       [22] lsub
       [23] lstore_2 v2
       [24] aload_0 v0
-      [25] getfield #168
+      [25] getfield #171
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.b Landroid/content/ContentResolver;]
-      [28] getstatic #163
+      [28] getstatic #166
         - Fieldref [com/madhackerdesigns/neverbelate/provider/a.a Landroid/net/Uri;]
-      [31] ldc #57
+      [31] ldc #59
         - String [begin<?]
       [33] iconst_1
-      [34] anewarray #131
+      [34] anewarray #134
         - Class [java/lang/String]
       [37] dup
       [38] iconst_0
       [39] lload_2 v2
-      [40] invokestatic #281
+      [40] invokestatic #284
         - Methodref [java/lang/String.valueOf (J)Ljava/lang/String;]
       [43] aastore
-      [44] invokevirtual #194
+      [44] invokevirtual #197
         - Methodref [android/content/ContentResolver.delete (Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I]
       [47] dup
       [48] istore_2 v2
       [49] ifle +30 (target=79)
-      [52] ldc #42
+      [52] ldc #43
         - String [NeverBeLateService]
-      [54] new #132
+      [54] new #135
         - Class [java/lang/StringBuilder]
       [57] dup
       [58] ldc #28
         - String [Deleted ]
-      [60] invokespecial #283
+      [60] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [63] iload_2 v2
-      [64] invokevirtual #284
+      [64] invokevirtual #287
         - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
       [67] ldc #11
         - String [ alerts from the AlertProvider database.]
-      [69] invokevirtual #285
+      [69] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [72] invokevirtual #286
+      [72] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [75] invokestatic #234
+      [75] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [78] pop
-      [79] new #116
+      [79] new #119
         - Class [com/madhackerdesigns/neverbelate/service/CalendarHelper]
       [82] dup
-      [83] invokespecial #235
+      [83] invokespecial #238
         - Methodref [com/madhackerdesigns/neverbelate/service/CalendarHelper.<init> ()V]
       [86] astore_2 v2
       [87] aload_0 v0
-      [88] new #135
+      [88] new #138
         - Class [java/util/Date]
       [91] dup
-      [92] invokespecial #290
+      [92] invokespecial #293
         - Methodref [java/util/Date.<init> ()V]
-      [95] invokevirtual #292
+      [95] invokevirtual #295
         - Methodref [java/util/Date.getTime ()J]
-      [98] putfield #171
+      [98] putfield #174
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.e J]
-      [101] new #132
+      [101] new #135
         - Class [java/lang/StringBuilder]
       [104] dup
-      [105] ldc #50
+      [105] ldc #52
         - String [The current time is ]
-      [107] invokespecial #283
+      [107] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [110] aload_0 v0
-      [111] getfield #171
+      [111] getfield #174
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.e J]
-      [114] invokestatic #274
+      [114] invokestatic #277
         - Methodref [java/lang/Long.valueOf (J)Ljava/lang/Long;]
-      [117] invokestatic #238
+      [117] invokestatic #241
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.a (Ljava/lang/Long;)Ljava/lang/String;]
-      [120] invokevirtual #285
+      [120] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [123] invokevirtual #286
+      [123] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [126] astore_3 v3
-      [127] ldc #42
+      [127] ldc #43
         - String [NeverBeLateService]
       [129] aload_3 v3
-      [130] invokestatic #234
+      [130] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [133] pop
       [134] aload_2 v2
-      [135] getfield #166
+      [135] getfield #169
         - Fieldref [com/madhackerdesigns/neverbelate/service/CalendarHelper.b Landroid/net/Uri;]
-      [138] invokevirtual #225
+      [138] invokevirtual #228
         - Methodref [android/net/Uri.buildUpon ()Landroid/net/Uri$Builder;]
       [141] dup
       [142] astore_2 v2
       [143] aload_0 v0
-      [144] getfield #171
+      [144] getfield #174
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.e J]
-      [147] ldc2_w #155
+      [147] ldc2_w #158
         - Long [86400000]
       [150] lsub
-      [151] invokestatic #198
+      [151] invokestatic #201
         - Methodref [android/content/ContentUris.appendId (Landroid/net/Uri$Builder;J)Landroid/net/Uri$Builder;]
       [154] pop
       [155] aload_2 v2
       [156] aload_0 v0
-      [157] getfield #171
+      [157] getfield #174
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.e J]
-      [160] ldc2_w #155
+      [160] ldc2_w #158
         - Long [86400000]
       [163] ladd
-      [164] invokestatic #198
+      [164] invokestatic #201
         - Methodref [android/content/ContentUris.appendId (Landroid/net/Uri$Builder;J)Landroid/net/Uri$Builder;]
       [167] pop
-      [168] ldc #42
+      [168] ldc #43
         - String [NeverBeLateService]
-      [170] ldc #48
+      [170] ldc #50
         - String [Querying calendar...]
-      [172] invokestatic #234
+      [172] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [175] pop
       [176] aload_0 v0
-      [177] getfield #168
+      [177] getfield #171
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.b Landroid/content/ContentResolver;]
       [180] aload_2 v2
-      [181] invokevirtual #230
+      [181] invokevirtual #233
         - Methodref [android/net/Uri$Builder.build ()Landroid/net/Uri;]
-      [184] getstatic #165
+      [184] getstatic #168
         - Fieldref [com/madhackerdesigns/neverbelate/service/CalendarHelper.a [Ljava/lang/String;]
       [187] aconst_null
       [188] aconst_null
       [189] aconst_null
-      [190] invokevirtual #196
+      [190] invokevirtual #199
         - Methodref [android/content/ContentResolver.query (Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;]
       [193] astore_2 v2
-      [194] ldc #42
+      [194] ldc #43
         - String [NeverBeLateService]
-      [196] new #132
+      [196] new #135
         - Class [java/lang/StringBuilder]
       [199] dup
       [200] ldc #35
         - String [Found ]
-      [202] invokespecial #283
+      [202] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [205] aload_2 v2
-      [206] invokeinterface #301
+      [206] invokeinterface #304
         - InterfaceMethodref [android/database/Cursor.getCount ()I]
-      [211] invokevirtual #284
+      [211] invokevirtual #287
         - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
       [214] ldc #15
         - String [ events!]
-      [216] invokevirtual #285
+      [216] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [219] invokevirtual #286
+      [219] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [222] invokestatic #234
+      [222] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [225] pop
       [226] aload_0 v0
-      [227] invokespecial #242
+      [227] invokespecial #245
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.d ()Landroid/location/Location;]
-      [230] astore_3 v3
-      [231] aload_2 v2
-      [232] invokeinterface #305
+      [230] dup
+      [231] astore_3 v3
+      [232] ifnull +1408 (target=1640)
+      [235] aload_2 v2
+      [236] invokeinterface #308
         - InterfaceMethodref [android/database/Cursor.moveToFirst ()Z]
-      [237] ifeq +1399 (target=1636)
-      [240] new #95
+      [241] ifeq +1399 (target=1640)
+      [244] new #98
         - Class [android/content/ContentValues]
-      [243] dup
-      [244] invokespecial #199
+      [247] dup
+      [248] invokespecial #202
         - Methodref [android/content/ContentValues.<init> ()V]
-      [247] astore v4
-      [249] aload_2 v2
-      [250] iconst_2
-      [251] invokeinterface #304
+      [251] astore v4
+      [253] aload_2 v2
+      [254] iconst_2
+      [255] invokeinterface #307
         - InterfaceMethodref [android/database/Cursor.getString (I)Ljava/lang/String;]
-      [256] ldc #24
+      [260] ldc #24
         - String [0]
-      [258] invokevirtual #276
+      [262] invokevirtual #279
         - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-      [261] ifeq +7 (target=268)
-      [264] iconst_0
-      [265] goto +4 (target=269)
-      [268] iconst_1
-      [269] invokestatic #269
+      [265] ifeq +7 (target=272)
+      [268] iconst_0
+      [269] goto +4 (target=273)
+      [272] iconst_1
+      [273] invokestatic #272
         - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
-      [272] invokevirtual #268
+      [276] invokevirtual #271
         - Methodref [java/lang/Boolean.booleanValue ()Z]
-      [275] ifne +1352 (target=1627)
-      [278] aload_2 v2
-      [279] iconst_0
-      [280] invokeinterface #304
+      [279] ifne +1352 (target=1631)
+      [282] aload_2 v2
+      [283] iconst_0
+      [284] invokeinterface #307
         - InterfaceMethodref [android/database/Cursor.getString (I)Ljava/lang/String;]
-      [285] astore v6
-      [287] aload_2 v2
-      [288] iconst_1
-      [289] invokeinterface #304
+      [289] astore v6
+      [291] aload_2 v2
+      [292] iconst_1
+      [293] invokeinterface #307
         - InterfaceMethodref [android/database/Cursor.getString (I)Ljava/lang/String;]
-      [294] astore v7
-      [296] aload_2 v2
-      [297] iconst_3
-      [298] invokeinterface #303
+      [298] astore v7
+      [300] aload_2 v2
+      [301] iconst_3
+      [302] invokeinterface #306
         - InterfaceMethodref [android/database/Cursor.getLong (I)J]
-      [303] lstore v15
-      [305] aload_2 v2
-      [306] iconst_4
-      [307] invokeinterface #303
+      [307] lstore v15
+      [309] aload_2 v2
+      [310] iconst_4
+      [311] invokeinterface #306
         - InterfaceMethodref [android/database/Cursor.getLong (I)J]
-      [312] lstore v17
-      [314] aload_2 v2
-      [315] iconst_5
-      [316] invokeinterface #304
+      [316] lstore v17
+      [318] aload_2 v2
+      [319] iconst_5
+      [320] invokeinterface #307
         - InterfaceMethodref [android/database/Cursor.getString (I)Ljava/lang/String;]
-      [321] astore v8
-      [323] aload_2 v2
-      [324] bipush 6
-      [326] invokeinterface #304
+      [325] astore v8
+      [327] aload_2 v2
+      [328] bipush 6
+      [330] invokeinterface #307
         - InterfaceMethodref [android/database/Cursor.getString (I)Ljava/lang/String;]
-      [331] astore v9
-      [333] aload_2 v2
-      [334] bipush 7
-      [336] invokeinterface #302
+      [335] astore v9
+      [337] aload_2 v2
+      [338] bipush 7
+      [340] invokeinterface #305
         - InterfaceMethodref [android/database/Cursor.getInt (I)I]
-      [341] istore v10
-      [343] lload v15
-      [345] aload_0 v0
-      [346] getfield #171
+      [345] istore v10
+      [347] lload v15
+      [349] aload_0 v0
+      [350] getfield #174
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.e J]
-      [349] lcmp
-      [350] iflt +21 (target=371)
-      [353] lload v15
-      [355] aload_0 v0
-      [356] getfield #171
+      [353] lcmp
+      [354] iflt +21 (target=375)
+      [357] lload v15
+      [359] aload_0 v0
+      [360] getfield #174
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.e J]
-      [359] aload_1 v1
-      [360] invokevirtual #258
+      [363] aload_1 v1
+      [364] invokevirtual #261
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.f ()Ljava/lang/Long;]
-      [363] invokevirtual #273
+      [367] invokevirtual #276
         - Methodref [java/lang/Long.longValue ()J]
-      [366] ladd
-      [367] lcmp
-      [368] ifle +34 (target=402)
-      [371] ldc #42
+      [370] ladd
+      [371] lcmp
+      [372] ifle +34 (target=406)
+      [375] ldc #43
         - String [NeverBeLateService]
-      [373] new #132
+      [377] new #135
         - Class [java/lang/StringBuilder]
-      [376] dup
-      [377] ldc #31
+      [380] dup
+      [381] ldc #31
         - String [Event ]
-      [379] invokespecial #283
+      [383] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [382] aload v6
-      [384] invokevirtual #285
+      [386] aload v6
+      [388] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [387] ldc #18
+      [391] ldc #18
         - String [ not in window.]
-      [389] invokevirtual #285
+      [393] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [392] invokevirtual #286
+      [396] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [395] invokestatic #234
+      [399] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [398] pop
-      [399] goto +1228 (target=1627)
-      [402] aload v8
-      [404] ifnull +10 (target=414)
-      [407] aload v8
-      [409] ldc #9
+      [402] pop
+      [403] goto +1228 (target=1631)
+      [406] aload v8
+      [408] ifnull +10 (target=418)
+      [411] aload v8
+      [413] ldc #9
         - String []
-      [411] ifacmpne +34 (target=445)
-      [414] ldc #42
+      [415] ifacmpne +34 (target=449)
+      [418] ldc #43
         - String [NeverBeLateService]
-      [416] new #132
+      [420] new #135
         - Class [java/lang/StringBuilder]
-      [419] dup
-      [420] ldc #31
+      [423] dup
+      [424] ldc #31
         - String [Event ]
-      [422] invokespecial #283
+      [426] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [425] aload v6
-      [427] invokevirtual #285
+      [429] aload v6
+      [431] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [430] ldc #14
+      [434] ldc #14
         - String [ does not have a location specified.]
-      [432] invokevirtual #285
+      [436] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [435] invokevirtual #286
+      [439] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [438] invokestatic #234
+      [442] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [441] pop
-      [442] goto +1185 (target=1627)
-      [445] aload_1 v1
-      [446] invokevirtual #260
+      [445] pop
+      [446] goto +1185 (target=1631)
+      [449] aload_1 v1
+      [450] invokevirtual #263
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.i ()Z]
-      [449] ifeq +44 (target=493)
-      [452] aload v8
-      [454] ldc #53
+      [453] ifeq +44 (target=497)
+      [456] aload v8
+      [458] ldc #55
         - String [^\*.*]
-      [456] invokevirtual #278
+      [460] invokevirtual #281
         - Methodref [java/lang/String.matches (Ljava/lang/String;)Z]
-      [459] ifne +34 (target=493)
-      [462] ldc #42
+      [463] ifne +34 (target=497)
+      [466] ldc #43
         - String [NeverBeLateService]
-      [464] new #132
+      [468] new #135
         - Class [java/lang/StringBuilder]
-      [467] dup
-      [468] ldc #31
+      [471] dup
+      [472] ldc #31
         - String [Event ]
-      [470] invokespecial #283
+      [474] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [473] aload v6
-      [475] invokevirtual #285
+      [477] aload v6
+      [479] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [478] ldc #19
+      [482] ldc #19
         - String [ not marked with a star.]
-      [480] invokevirtual #285
+      [484] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [483] invokevirtual #286
+      [487] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [486] invokestatic #234
+      [490] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [489] pop
-      [490] goto +1137 (target=1627)
-      [493] aload v8
-      [495] ldc #52
+      [493] pop
+      [494] goto +1137 (target=1631)
+      [497] aload v8
+      [499] ldc #54
         - String [^\*]
-      [497] ldc #9
+      [501] ldc #9
         - String []
-      [499] invokevirtual #279
+      [503] invokevirtual #282
         - Methodref [java/lang/String.replaceFirst (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
-      [502] astore v8
-      [504] ldc #69
+      [506] astore v8
+      [508] ldc #71
         - String [event_id=? AND begin=?]
-      [506] astore v5
-      [508] iconst_2
-      [509] anewarray #131
+      [510] astore v5
+      [512] iconst_2
+      [513] anewarray #134
         - Class [java/lang/String]
-      [512] dup
-      [513] iconst_0
-      [514] aload v6
-      [516] aastore
-      [517] dup
-      [518] iconst_1
-      [519] lload v15
-      [521] invokestatic #281
+      [516] dup
+      [517] iconst_0
+      [518] aload v6
+      [520] aastore
+      [521] dup
+      [522] iconst_1
+      [523] lload v15
+      [525] invokestatic #284
         - Methodref [java/lang/String.valueOf (J)Ljava/lang/String;]
-      [524] aastore
-      [525] astore v11
-      [527] aload_0 v0
-      [528] getfield #168
+      [528] aastore
+      [529] astore v11
+      [531] aload_0 v0
+      [532] getfield #171
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.b Landroid/content/ContentResolver;]
-      [531] getstatic #163
+      [535] getstatic #166
         - Fieldref [com/madhackerdesigns/neverbelate/provider/a.a Landroid/net/Uri;]
-      [534] getstatic #164
+      [538] getstatic #167
         - Fieldref [com/madhackerdesigns/neverbelate/provider/b.a [Ljava/lang/String;]
-      [537] aload v5
-      [539] aload v11
-      [541] aconst_null
-      [542] invokevirtual #196
+      [541] aload v5
+      [543] aload v11
+      [545] aconst_null
+      [546] invokevirtual #199
         - Methodref [android/content/ContentResolver.query (Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;]
-      [545] astore v5
-      [547] aconst_null
-      [548] astore v11
-      [550] aload v5
-      [552] invokeinterface #305
+      [549] astore v5
+      [551] aconst_null
+      [552] astore v11
+      [554] aload v5
+      [556] invokeinterface #308
         - InterfaceMethodref [android/database/Cursor.moveToFirst ()Z]
-      [557] ifeq +57 (target=614)
-      [560] aload v5
-      [562] bipush 11
-      [564] invokeinterface #302
+      [561] ifeq +57 (target=618)
+      [564] aload v5
+      [566] bipush 11
+      [568] invokeinterface #305
         - InterfaceMethodref [android/database/Cursor.getInt (I)I]
-      [569] iconst_1
-      [570] ificmpne +34 (target=604)
-      [573] ldc #42
+      [573] iconst_1
+      [574] ificmpne +34 (target=608)
+      [577] ldc #43
         - String [NeverBeLateService]
-      [575] new #132
+      [579] new #135
         - Class [java/lang/StringBuilder]
-      [578] dup
-      [579] ldc #26
+      [582] dup
+      [583] ldc #26
         - String [Alert for event ]
-      [581] invokespecial #283
+      [585] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [584] aload v6
-      [586] invokevirtual #285
+      [588] aload v6
+      [590] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [589] ldc #16
+      [593] ldc #16
         - String [ has already been FIRED.]
-      [591] invokevirtual #285
+      [595] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [594] invokevirtual #286
+      [598] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [597] invokestatic #234
+      [601] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [600] pop
-      [601] goto +1026 (target=1627)
-      [604] aload v5
-      [606] iconst_0
-      [607] invokeinterface #304
+      [604] pop
+      [605] goto +1026 (target=1631)
+      [608] aload v5
+      [610] iconst_0
+      [611] invokeinterface #307
         - InterfaceMethodref [android/database/Cursor.getString (I)Ljava/lang/String;]
-      [612] astore v11
-      [614] aload v7
-      [616] ifnull +11 (target=627)
-      [619] aload v7
-      [621] invokevirtual #277
+      [616] astore v11
+      [618] aload v7
+      [620] ifnull +11 (target=631)
+      [623] aload v7
+      [625] invokevirtual #280
         - Methodref [java/lang/String.length ()I]
-      [624] ifgt +14 (target=638)
-      [627] aload_0 v0
-      [628] invokevirtual #247
+      [628] ifgt +14 (target=642)
+      [631] aload_0 v0
+      [632] invokevirtual #250
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.getResources ()Landroid/content/res/Resources;]
-      [631] ldc #4
+      [635] ldc #4
         - Integer [2131492918]
-      [633] invokevirtual #211
+      [637] invokevirtual #214
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
-      [636] astore v7
-      [638] ldc #42
+      [640] astore v7
+      [642] ldc #43
         - String [NeverBeLateService]
-      [640] new #132
+      [644] new #135
         - Class [java/lang/StringBuilder]
-      [643] dup
-      [644] ldc #33
+      [647] dup
+      [648] ldc #33
         - String [Event title: ]
-      [646] invokespecial #283
+      [650] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [649] aload v7
-      [651] invokevirtual #285
+      [653] aload v7
+      [655] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [654] invokevirtual #286
+      [658] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [657] invokestatic #234
+      [661] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [660] pop
-      [661] ldc #42
+      [664] pop
+      [665] ldc #43
         - String [NeverBeLateService]
-      [663] new #132
+      [667] new #135
         - Class [java/lang/StringBuilder]
-      [666] dup
-      [667] ldc #32
+      [670] dup
+      [671] ldc #32
         - String [Event location: ]
-      [669] invokespecial #283
+      [673] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [672] aload v8
-      [674] invokevirtual #285
+      [676] aload v8
+      [678] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [677] invokevirtual #286
+      [681] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [680] invokestatic #234
+      [684] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [683] pop
-      [684] ldc #42
+      [687] pop
+      [688] ldc #43
         - String [NeverBeLateService]
-      [686] new #132
+      [690] new #135
         - Class [java/lang/StringBuilder]
-      [689] dup
-      [690] ldc #27
+      [693] dup
+      [694] ldc #27
         - String [Begin time: ]
-      [692] invokespecial #283
+      [696] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [695] lload v15
-      [697] invokestatic #274
+      [699] lload v15
+      [701] invokestatic #277
         - Methodref [java/lang/Long.valueOf (J)Ljava/lang/Long;]
-      [700] invokestatic #238
+      [704] invokestatic #241
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.a (Ljava/lang/Long;)Ljava/lang/String;]
-      [703] invokevirtual #285
+      [707] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [706] invokevirtual #286
+      [710] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [709] invokestatic #234
+      [713] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [712] pop
-      [713] ldc #73
+      [716] pop
+      [717] ldc #75
         - String [http://maps.googleapis.com/maps/api/directions/json]
-      [715] invokestatic #226
+      [719] invokestatic #229
         - Methodref [android/net/Uri.parse (Ljava/lang/String;)Landroid/net/Uri;]
-      [718] invokevirtual #225
+      [722] invokevirtual #228
         - Methodref [android/net/Uri.buildUpon ()Landroid/net/Uri$Builder;]
-      [721] dup
-      [722] astore v12
-      [724] ldc #79
+      [725] dup
+      [726] astore v12
+      [728] ldc #82
         - String [origin]
-      [726] new #132
+      [730] new #135
         - Class [java/lang/StringBuilder]
-      [729] dup
-      [730] aload_3 v3
-      [731] invokevirtual #214
+      [733] dup
+      [734] aload_3 v3
+      [735] invokevirtual #217
         - Methodref [android/location/Location.getLatitude ()D]
-      [734] invokestatic #280
+      [738] invokestatic #283
         - Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
-      [737] invokestatic #282
+      [741] invokestatic #285
         - Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [740] invokespecial #283
+      [744] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [743] ldc #23
+      [747] ldc #23
         - String [,]
-      [745] invokevirtual #285
+      [749] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [748] aload_3 v3
-      [749] invokevirtual #215
+      [752] aload_3 v3
+      [753] invokevirtual #218
         - Methodref [android/location/Location.getLongitude ()D]
-      [752] invokestatic #280
+      [756] invokestatic #283
         - Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
-      [755] invokevirtual #285
+      [759] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [758] invokevirtual #286
+      [762] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [761] invokevirtual #229
+      [765] invokevirtual #232
         - Methodref [android/net/Uri$Builder.appendQueryParameter (Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;]
-      [764] pop
-      [765] aload v12
-      [767] ldc #64
+      [768] pop
+      [769] aload v12
+      [771] ldc #66
         - String [destination]
-      [769] aload v8
-      [771] invokevirtual #229
+      [773] aload v8
+      [775] invokevirtual #232
         - Methodref [android/net/Uri$Builder.appendQueryParameter (Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;]
-      [774] pop
-      [775] aload v12
-      [777] ldc #77
+      [778] pop
+      [779] aload v12
+      [781] ldc #79
         - String [mode]
-      [779] aload_1 v1
-      [780] invokevirtual #262
+      [783] aload_1 v1
+      [784] invokevirtual #265
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.l ()Ljava/lang/String;]
-      [783] invokevirtual #229
+      [787] invokevirtual #232
         - Methodref [android/net/Uri$Builder.appendQueryParameter (Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;]
-      [786] pop
-      [787] aload_1 v1
-      [788] invokevirtual #253
+      [790] pop
+      [791] aload_1 v1
+      [792] invokevirtual #256
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.a ()Z]
-      [791] ifeq +13 (target=804)
-      [794] aload v12
-      [796] ldc #55
+      [795] ifeq +13 (target=808)
+      [798] aload v12
+      [800] ldc #57
         - String [avoid]
-      [798] ldc #72
+      [802] ldc #74
         - String [highways]
-      [800] invokevirtual #229
+      [804] invokevirtual #232
         - Methodref [android/net/Uri$Builder.appendQueryParameter (Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;]
-      [803] pop
-      [804] aload_1 v1
-      [805] invokevirtual #254
+      [807] pop
+      [808] aload_1 v1
+      [809] invokevirtual #257
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.b ()Z]
-      [808] ifeq +13 (target=821)
-      [811] aload v12
-      [813] ldc #55
+      [812] ifeq +13 (target=825)
+      [815] aload v12
+      [817] ldc #57
         - String [avoid]
-      [815] ldc #85
+      [819] ldc #88
         - String [tolls]
-      [817] invokevirtual #229
+      [821] invokevirtual #232
         - Methodref [android/net/Uri$Builder.appendQueryParameter (Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;]
-      [820] pop
-      [821] aload v12
-      [823] ldc #82
+      [824] pop
+      [825] aload v12
+      [827] ldc #85
         - String [sensor]
-      [825] ldc #86
+      [829] ldc #89
         - String [true]
-      [827] invokevirtual #229
+      [831] invokevirtual #232
         - Methodref [android/net/Uri$Builder.appendQueryParameter (Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;]
-      [830] pop
-      [831] aload v12
-      [833] invokevirtual #230
+      [834] pop
+      [835] aload v12
+      [837] invokevirtual #233
         - Methodref [android/net/Uri$Builder.build ()Landroid/net/Uri;]
-      [836] invokevirtual #227
+      [840] invokevirtual #230
         - Methodref [android/net/Uri.toString ()Ljava/lang/String;]
-      [839] astore v12
-      [841] aconst_null
-      [842] astore v13
-      [844] aload_0 v0
-      [845] ldc #61
+      [843] astore v12
+      [845] aconst_null
+      [846] astore v13
+      [848] aload_0 v0
+      [849] ldc #63
         - String [connectivity]
-      [847] invokevirtual #248
+      [851] invokevirtual #251
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-      [850] checkcast #103
+      [854] checkcast #106
         - Class [android/net/ConnectivityManager]
-      [853] invokevirtual #223
+      [857] invokevirtual #226
         - Methodref [android/net/ConnectivityManager.getActiveNetworkInfo ()Landroid/net/NetworkInfo;]
-      [856] dup
-      [857] astore v14
-      [859] ifnull +29 (target=888)
-      [862] aload v14
-      [864] invokevirtual #224
+      [860] dup
+      [861] astore v14
+      [863] ifnull +29 (target=892)
+      [866] aload v14
+      [868] invokevirtual #227
         - Methodref [android/net/NetworkInfo.isConnected ()Z]
-      [867] ifeq +21 (target=888)
-      [870] ldc #42
+      [871] ifeq +21 (target=892)
+      [874] ldc #43
         - String [NeverBeLateService]
-      [872] ldc #39
+      [876] ldc #40
         - String [Network available, attempting to download new directions.]
-      [874] invokestatic #234
+      [878] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [877] pop
-      [878] aload v12
-      [880] invokestatic #267
+      [881] pop
+      [882] aload v12
+      [884] invokestatic #270
         - Methodref [com/madhackerdesigns/neverbelate/util/NetUtils.a (Ljava/lang/String;)Ljava/lang/String;]
-      [883] astore v13
-      [885] goto +32 (target=917)
-      [888] aload v5
-      [890] invokeinterface #305
+      [887] astore v13
+      [889] goto +32 (target=921)
+      [892] aload v5
+      [894] invokeinterface #308
         - InterfaceMethodref [android/database/Cursor.moveToFirst ()Z]
-      [895] ifeq +22 (target=917)
-      [898] ldc #42
+      [899] ifeq +22 (target=921)
+      [902] ldc #43
         - String [NeverBeLateService]
-      [900] ldc #40
+      [904] ldc #41
         - String [Network not available, falling back to previous archived directions.]
-      [902] invokestatic #234
+      [906] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [905] pop
-      [906] aload v5
-      [908] bipush 10
-      [910] invokeinterface #304
+      [909] pop
+      [910] aload v5
+      [912] bipush 10
+      [914] invokeinterface #307
         - InterfaceMethodref [android/database/Cursor.getString (I)Ljava/lang/String;]
-      [915] astore v13
-      [917] aload v13
-      [919] ifnull +11 (target=930)
-      [922] aload v13
-      [924] invokevirtual #277
+      [919] astore v13
+      [921] aload v13
+      [923] ifnull +11 (target=934)
+      [926] aload v13
+      [928] invokevirtual #280
         - Methodref [java/lang/String.length ()I]
-      [927] ifne +14 (target=941)
-      [930] ldc #42
+      [931] ifne +14 (target=945)
+      [934] ldc #43
         - String [NeverBeLateService]
-      [932] ldc #44
+      [936] ldc #45
         - String [No JSON returned.  Not good.]
-      [934] invokestatic #234
+      [938] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [937] pop
-      [938] goto +689 (target=1627)
-      [941] aload v5
-      [943] invokeinterface #300
+      [941] pop
+      [942] goto +689 (target=1631)
+      [945] aload v5
+      [947] invokeinterface #303
         - InterfaceMethodref [android/database/Cursor.close ()V]
-      [948] new #140
+      [952] new #143
         - Class [org/json/JSONObject]
-      [951] dup
-      [952] aload v13
-      [954] invokespecial #295
+      [955] dup
+      [956] aload v13
+      [958] invokespecial #298
         - Methodref [org/json/JSONObject.<init> (Ljava/lang/String;)V]
-      [957] dup
-      [958] astore v5
-      [960] ldc #83
+      [961] dup
+      [962] astore v5
+      [964] ldc #86
         - String [status]
-      [962] invokevirtual #299
+      [966] invokevirtual #302
         - Methodref [org/json/JSONObject.getString (Ljava/lang/String;)Ljava/lang/String;]
-      [965] astore v12
-      [967] ldc #42
+      [969] astore v12
+      [971] ldc #43
         - String [NeverBeLateService]
-      [969] new #132
+      [973] new #135
         - Class [java/lang/StringBuilder]
-      [972] dup
-      [973] ldc #36
+      [976] dup
+      [977] ldc #36
         - String [JSON status: ]
-      [975] invokespecial #283
+      [979] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [978] aload v12
-      [980] invokevirtual #285
+      [982] aload v12
+      [984] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [983] invokevirtual #286
+      [987] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [986] invokestatic #234
+      [990] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [989] pop
-      [990] ldc #119
+      [993] pop
+      [994] ldc #122
         - Class [com/madhackerdesigns/neverbelate/service/a]
-      [992] aload v12
-      [994] invokestatic #270
+      [996] aload v12
+      [998] invokestatic #273
         - Methodref [java/lang/Enum.valueOf (Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;]
-      [997] checkcast #119
+      [1001] checkcast #122
         - Class [com/madhackerdesigns/neverbelate/service/a]
-      [1000] astore v12
-      [1002] invokestatic #243
+      [1004] astore v12
+      [1006] invokestatic #246
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.e ()[I]
-      [1005] aload v12
-      [1007] invokevirtual #250
+      [1009] aload v12
+      [1011] invokevirtual #253
         - Methodref [com/madhackerdesigns/neverbelate/service/a.ordinal ()I]
-      [1010] iaload
-      [1011] tableswitch (8 offsets, default=581) (target=1592)
-        1: offset = 45, target = 1056
-        2: offset = 560, target = 1571
-        3: offset = 563, target = 1574
-        4: offset = 566, target = 1577
-        5: offset = 569, target = 1580
-        6: offset = 572, target = 1583
-        7: offset = 575, target = 1586
-        8: offset = 578, target = 1589
-        default: offset = 581, target = 1592
-      [1056] aload_1 v1
-      [1057] invokevirtual #256
+      [1014] iaload
+      [1015] tableswitch (8 offsets, default=581) (target=1596)
+        1: offset = 45, target = 1060
+        2: offset = 560, target = 1575
+        3: offset = 563, target = 1578
+        4: offset = 566, target = 1581
+        5: offset = 569, target = 1584
+        6: offset = 572, target = 1587
+        7: offset = 575, target = 1590
+        8: offset = 578, target = 1593
+        default: offset = 581, target = 1596
+      [1060] aload_1 v1
+      [1061] invokevirtual #259
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.d ()Ljava/lang/Long;]
-      [1060] dup
-      [1061] astore v12
-      [1063] ifnonnull +9 (target=1072)
-      [1066] lconst_0
-      [1067] invokestatic #274
+      [1064] dup
+      [1065] astore v12
+      [1067] ifnonnull +9 (target=1076)
+      [1070] lconst_0
+      [1071] invokestatic #277
         - Methodref [java/lang/Long.valueOf (J)Ljava/lang/Long;]
-      [1070] astore v12
-      [1072] aload v5
-      [1074] ldc #81
+      [1074] astore v12
+      [1076] aload v5
+      [1078] ldc #84
         - String [routes]
-      [1076] invokevirtual #296
+      [1080] invokevirtual #299
         - Methodref [org/json/JSONObject.getJSONArray (Ljava/lang/String;)Lorg/json/JSONArray;]
-      [1079] iconst_0
-      [1080] invokevirtual #293
+      [1083] iconst_0
+      [1084] invokevirtual #296
         - Methodref [org/json/JSONArray.getJSONObject (I)Lorg/json/JSONObject;]
-      [1083] dup
-      [1084] astore v5
-      [1086] ldc #75
+      [1087] dup
+      [1088] astore v5
+      [1090] ldc #77
         - String [legs]
-      [1088] invokevirtual #296
+      [1092] invokevirtual #299
         - Methodref [org/json/JSONObject.getJSONArray (Ljava/lang/String;)Lorg/json/JSONArray;]
-      [1091] iconst_0
-      [1092] invokevirtual #293
+      [1095] iconst_0
+      [1096] invokevirtual #296
         - Methodref [org/json/JSONArray.getJSONObject (I)Lorg/json/JSONObject;]
-      [1095] ldc #66
+      [1099] ldc #68
         - String [duration]
-      [1097] invokevirtual #297
+      [1101] invokevirtual #300
         - Methodref [org/json/JSONObject.getJSONObject (Ljava/lang/String;)Lorg/json/JSONObject;]
-      [1100] ldc #87
+      [1104] ldc #90
         - String [value]
-      [1102] invokevirtual #298
+      [1106] invokevirtual #301
         - Methodref [org/json/JSONObject.getLong (Ljava/lang/String;)J]
-      [1105] ldc2_w #145
+      [1109] ldc2_w #148
         - Long [1000]
-      [1108] lmul
-      [1109] lstore v19
-      [1111] ldc #42
+      [1112] lmul
+      [1113] lstore v19
+      [1115] ldc #43
         - String [NeverBeLateService]
-      [1113] new #132
+      [1117] new #135
         - Class [java/lang/StringBuilder]
-      [1116] dup
-      [1117] ldc #30
+      [1120] dup
+      [1121] ldc #30
         - String [Duration: ]
-      [1119] invokespecial #283
+      [1123] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [1122] lload v19
-      [1124] ldc2_w #151
+      [1126] lload v19
+      [1128] ldc2_w #154
         - Long [60000]
-      [1127] ldiv
-      [1128] invokestatic #281
+      [1131] ldiv
+      [1132] invokestatic #284
         - Methodref [java/lang/String.valueOf (J)Ljava/lang/String;]
-      [1131] invokevirtual #285
+      [1135] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [1134] ldc #17
+      [1138] ldc #17
         - String [ min]
-      [1136] invokevirtual #285
+      [1140] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [1139] invokevirtual #286
+      [1143] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [1142] invokestatic #234
+      [1146] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [1145] pop
-      [1146] lload v15
-      [1148] aload v12
-      [1150] invokevirtual #273
+      [1149] pop
+      [1150] lload v15
+      [1152] aload v12
+      [1154] invokevirtual #276
         - Methodref [java/lang/Long.longValue ()J]
-      [1153] lsub
-      [1154] lload v19
-      [1156] lsub
-      [1157] aload_1 v1
-      [1158] invokevirtual #255
+      [1157] lsub
+      [1158] lload v19
+      [1160] lsub
+      [1161] aload_1 v1
+      [1162] invokevirtual #258
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.c ()Ljava/lang/Long;]
-      [1161] invokevirtual #273
+      [1165] invokevirtual #276
         - Methodref [java/lang/Long.longValue ()J]
-      [1164] lsub
-      [1165] lstore v21
-      [1167] ldc #42
+      [1168] lsub
+      [1169] lstore v21
+      [1171] ldc #43
         - String [NeverBeLateService]
-      [1169] new #132
+      [1173] new #135
         - Class [java/lang/StringBuilder]
-      [1172] dup
-      [1173] ldc #51
+      [1176] dup
+      [1177] ldc #53
         - String [Warn time: ]
-      [1175] invokespecial #283
+      [1179] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [1178] lload v21
-      [1180] invokestatic #274
+      [1182] lload v21
+      [1184] invokestatic #277
         - Methodref [java/lang/Long.valueOf (J)Ljava/lang/Long;]
-      [1183] invokestatic #238
+      [1187] invokestatic #241
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.a (Ljava/lang/Long;)Ljava/lang/String;]
-      [1186] invokevirtual #285
+      [1190] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [1189] invokevirtual #286
+      [1193] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [1192] invokestatic #234
+      [1196] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [1195] pop
-      [1196] aload v5
-      [1198] ldc #62
+      [1199] pop
+      [1200] aload v5
+      [1202] ldc #64
         - String [copyrights]
-      [1200] invokevirtual #299
+      [1204] invokevirtual #302
         - Methodref [org/json/JSONObject.getString (Ljava/lang/String;)Ljava/lang/String;]
-      [1203] astore v5
-      [1205] aload v4
-      [1207] invokevirtual #200
+      [1207] astore v5
+      [1209] aload v4
+      [1211] invokevirtual #203
         - Methodref [android/content/ContentValues.clear ()V]
-      [1210] aload v4
-      [1212] ldc #68
+      [1214] aload v4
+      [1216] ldc #70
         - String [event_id]
-      [1214] aload v6
-      [1216] invokevirtual #203
+      [1218] aload v6
+      [1220] invokevirtual #206
         - Methodref [android/content/ContentValues.put (Ljava/lang/String;Ljava/lang/String;)V]
-      [1219] aload v4
-      [1221] ldc #58
+      [1223] aload v4
+      [1225] ldc #60
         - String [calendar_color]
-      [1223] iload v10
-      [1225] invokestatic #272
+      [1227] iload v10
+      [1229] invokestatic #275
         - Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [1228] invokevirtual #201
+      [1232] invokevirtual #204
         - Methodref [android/content/ContentValues.put (Ljava/lang/String;Ljava/lang/Integer;)V]
-      [1231] aload v4
-      [1233] ldc #84
+      [1235] aload v4
+      [1237] ldc #87
         - String [title]
-      [1235] aload v7
-      [1237] invokevirtual #203
+      [1239] aload v7
+      [1241] invokevirtual #206
         - Methodref [android/content/ContentValues.put (Ljava/lang/String;Ljava/lang/String;)V]
-      [1240] aload v4
-      [1242] ldc #56
+      [1244] aload v4
+      [1246] ldc #58
         - String [begin]
-      [1244] lload v15
-      [1246] invokestatic #274
+      [1248] lload v15
+      [1250] invokestatic #277
         - Methodref [java/lang/Long.valueOf (J)Ljava/lang/Long;]
-      [1249] invokevirtual #202
+      [1253] invokevirtual #205
         - Methodref [android/content/ContentValues.put (Ljava/lang/String;Ljava/lang/Long;)V]
-      [1252] aload v4
-      [1254] ldc #67
+      [1256] aload v4
+      [1258] ldc #69
         - String [end]
-      [1256] lload v17
-      [1258] invokestatic #274
+      [1260] lload v17
+      [1262] invokestatic #277
         - Methodref [java/lang/Long.valueOf (J)Ljava/lang/Long;]
-      [1261] invokevirtual #202
+      [1265] invokevirtual #205
         - Methodref [android/content/ContentValues.put (Ljava/lang/String;Ljava/lang/Long;)V]
-      [1264] aload v4
-      [1266] ldc #76
+      [1268] aload v4
+      [1270] ldc #78
         - String [location]
-      [1268] aload v8
-      [1270] invokevirtual #203
+      [1272] aload v8
+      [1274] invokevirtual #206
         - Methodref [android/content/ContentValues.put (Ljava/lang/String;Ljava/lang/String;)V]
-      [1273] aload v4
-      [1275] ldc #63
+      [1277] aload v4
+      [1279] ldc #65
         - String [description]
-      [1277] aload v9
-      [1279] invokevirtual #203
+      [1281] aload v9
+      [1283] invokevirtual #206
         - Methodref [android/content/ContentValues.put (Ljava/lang/String;Ljava/lang/String;)V]
-      [1282] aload v4
-      [1284] ldc #66
+      [1286] aload v4
+      [1288] ldc #68
         - String [duration]
-      [1286] lload v19
-      [1288] invokestatic #274
+      [1290] lload v19
+      [1292] invokestatic #277
         - Methodref [java/lang/Long.valueOf (J)Ljava/lang/Long;]
-      [1291] invokevirtual #202
+      [1295] invokevirtual #205
         - Methodref [android/content/ContentValues.put (Ljava/lang/String;Ljava/lang/Long;)V]
-      [1294] aload v4
-      [1296] ldc #62
+      [1298] aload v4
+      [1300] ldc #64
         - String [copyrights]
-      [1298] aload v5
-      [1300] invokevirtual #203
+      [1302] aload v5
+      [1304] invokevirtual #206
         - Methodref [android/content/ContentValues.put (Ljava/lang/String;Ljava/lang/String;)V]
-      [1303] aload v4
-      [1305] ldc #74
+      [1307] aload v4
+      [1309] ldc #76
         - String [json]
-      [1307] aload v13
-      [1309] invokevirtual #203
+      [1311] aload v13
+      [1313] invokevirtual #206
         - Methodref [android/content/ContentValues.put (Ljava/lang/String;Ljava/lang/String;)V]
-      [1312] aload v11
-      [1314] ifnull +30 (target=1344)
-      [1317] getstatic #163
+      [1316] aload v11
+      [1318] ifnull +30 (target=1348)
+      [1321] getstatic #166
         - Fieldref [com/madhackerdesigns/neverbelate/provider/a.a Landroid/net/Uri;]
-      [1320] aload v11
-      [1322] invokestatic #228
+      [1324] aload v11
+      [1326] invokestatic #231
         - Methodref [android/net/Uri.withAppendedPath (Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;]
-      [1325] astore v5
-      [1327] aload_0 v0
-      [1328] getfield #168
+      [1329] astore v5
+      [1331] aload_0 v0
+      [1332] getfield #171
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.b Landroid/content/ContentResolver;]
-      [1331] aload v5
-      [1333] aload v4
-      [1335] aconst_null
-      [1336] aconst_null
-      [1337] invokevirtual #197
+      [1335] aload v5
+      [1337] aload v4
+      [1339] aconst_null
+      [1340] aconst_null
+      [1341] invokevirtual #200
         - Methodref [android/content/ContentResolver.update (Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I]
-      [1340] pop
-      [1341] goto +17 (target=1358)
-      [1344] aload_0 v0
-      [1345] getfield #168
+      [1344] pop
+      [1345] goto +17 (target=1362)
+      [1348] aload_0 v0
+      [1349] getfield #171
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.b Landroid/content/ContentResolver;]
-      [1348] getstatic #163
+      [1352] getstatic #166
         - Fieldref [com/madhackerdesigns/neverbelate/provider/a.a Landroid/net/Uri;]
-      [1351] aload v4
-      [1353] invokevirtual #195
+      [1355] aload v4
+      [1357] invokevirtual #198
         - Methodref [android/content/ContentResolver.insert (Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;]
-      [1356] astore v5
-      [1358] lload v21
-      [1360] aload_0 v0
-      [1361] getfield #171
+      [1360] astore v5
+      [1362] lload v21
+      [1364] aload_0 v0
+      [1365] getfield #174
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.e J]
-      [1364] aload_1 v1
-      [1365] invokevirtual #263
+      [1368] aload_1 v1
+      [1369] invokevirtual #266
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.m ()Ljava/lang/Long;]
-      [1368] invokevirtual #273
+      [1372] invokevirtual #276
         - Methodref [java/lang/Long.longValue ()J]
-      [1371] ladd
-      [1372] lcmp
-      [1373] ifgt +254 (target=1627)
-      [1376] ldc #42
+      [1375] ladd
+      [1376] lcmp
+      [1377] ifgt +254 (target=1631)
+      [1380] ldc #43
         - String [NeverBeLateService]
-      [1378] new #132
+      [1382] new #135
         - Class [java/lang/StringBuilder]
-      [1381] dup
-      [1382] ldc #38
+      [1385] dup
+      [1386] ldc #39
         - String [Marking event ]
-      [1384] invokespecial #283
+      [1388] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [1387] aload v6
-      [1389] invokevirtual #285
+      [1391] aload v6
+      [1393] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [1392] ldc #13
+      [1396] ldc #13
         - String [ as FIRED.]
-      [1394] invokevirtual #285
+      [1398] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [1397] invokevirtual #286
+      [1401] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [1400] invokestatic #234
+      [1404] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [1403] pop
-      [1404] new #95
+      [1407] pop
+      [1408] new #98
         - Class [android/content/ContentValues]
-      [1407] dup
-      [1408] invokespecial #199
-        - Methodref [android/content/ContentValues.<init> ()V]
       [1411] dup
-      [1412] astore v7
-      [1414] ldc #70
+      [1412] invokespecial #202
+        - Methodref [android/content/ContentValues.<init> ()V]
+      [1415] dup
+      [1416] astore v7
+      [1418] ldc #72
         - String [fired]
-      [1416] iconst_1
-      [1417] invokestatic #272
+      [1420] iconst_1
+      [1421] invokestatic #275
         - Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
-      [1420] invokevirtual #201
+      [1424] invokevirtual #204
         - Methodref [android/content/ContentValues.put (Ljava/lang/String;Ljava/lang/Integer;)V]
-      [1423] aload_0 v0
-      [1424] getfield #168
+      [1427] aload_0 v0
+      [1428] getfield #171
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.b Landroid/content/ContentResolver;]
-      [1427] aload v5
-      [1429] aload v7
-      [1431] aconst_null
-      [1432] aconst_null
-      [1433] invokevirtual #197
+      [1431] aload v5
+      [1433] aload v7
+      [1435] aconst_null
+      [1436] aconst_null
+      [1437] invokevirtual #200
         - Methodref [android/content/ContentResolver.update (Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I]
-      [1436] pop
-      [1437] lload v21
-      [1439] aload_0 v0
-      [1440] getfield #171
+      [1440] pop
+      [1441] lload v21
+      [1443] aload_0 v0
+      [1444] getfield #174
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.e J]
-      [1443] lcmp
-      [1444] ifgt +33 (target=1477)
-      [1447] ldc #42
+      [1447] lcmp
+      [1448] ifgt +33 (target=1481)
+      [1451] ldc #43
         - String [NeverBeLateService]
-      [1449] new #132
+      [1453] new #135
         - Class [java/lang/StringBuilder]
-      [1452] dup
-      [1453] ldc #46
+      [1456] dup
+      [1457] ldc #48
         - String [Notify the user now about event ]
-      [1455] invokespecial #283
+      [1459] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [1458] aload v6
-      [1460] invokevirtual #285
+      [1462] aload v6
+      [1464] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [1463] invokevirtual #286
+      [1467] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [1466] invokestatic #234
+      [1470] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [1469] pop
-      [1470] aload_0 v0
-      [1471] invokespecial #240
+      [1473] pop
+      [1474] aload_0 v0
+      [1475] invokespecial #243
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.b ()V]
-      [1474] goto +153 (target=1627)
-      [1477] ldc #42
+      [1478] goto +153 (target=1631)
+      [1481] ldc #43
         - String [NeverBeLateService]
-      [1479] new #132
+      [1483] new #135
         - Class [java/lang/StringBuilder]
-      [1482] dup
-      [1483] ldc #45
+      [1486] dup
+      [1487] ldc #47
         - String [Notify the user later about event ]
-      [1485] invokespecial #283
+      [1489] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [1488] aload v6
-      [1490] invokevirtual #285
+      [1492] aload v6
+      [1494] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [1493] invokevirtual #286
+      [1497] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [1496] invokestatic #234
+      [1500] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [1499] pop
-      [1500] aload_0 v0
-      [1501] lload v21
-      [1503] lstore v23
-      [1505] dup
-      [1506] astore v5
-      [1508] invokevirtual #245
+      [1503] pop
+      [1504] aload_0 v0
+      [1505] lload v21
+      [1507] lstore v23
+      [1509] dup
+      [1510] astore v5
+      [1512] invokevirtual #248
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.getApplicationContext ()Landroid/content/Context;]
-      [1511] astore v6
-      [1513] aload v5
-      [1515] ldc #54
+      [1515] astore v6
+      [1517] aload v5
+      [1519] ldc #56
         - String [alarm]
-      [1517] invokevirtual #248
+      [1521] invokevirtual #251
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-      [1520] checkcast #88
+      [1524] checkcast #91
         - Class [android/app/AlarmManager]
-      [1523] astore v5
-      [1525] new #97
+      [1527] astore v5
+      [1529] new #100
         - Class [android/content/Intent]
-      [1528] dup
-      [1529] aload v6
-      [1531] ldc #118
+      [1532] dup
+      [1533] aload v6
+      [1535] ldc #121
         - Class [com/madhackerdesigns/neverbelate/service/WakefulServiceReceiver]
-      [1533] invokespecial #207
+      [1537] invokespecial #210
         - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
-      [1536] dup
-      [1537] astore v7
-      [1539] ldc #60
+      [1540] dup
+      [1541] astore v7
+      [1543] ldc #62
         - String [com.madhackerdesigns.neverbelate.task]
-      [1541] iconst_5
-      [1542] invokevirtual #209
+      [1545] iconst_5
+      [1546] invokevirtual #212
         - Methodref [android/content/Intent.putExtra (Ljava/lang/String;I)Landroid/content/Intent;]
-      [1545] pop
-      [1546] aload v6
-      [1548] iconst_0
-      [1549] aload v7
-      [1551] ldc #1
+      [1549] pop
+      [1550] aload v6
+      [1552] iconst_0
+      [1553] aload v7
+      [1555] ldc #1
         - Integer [134217728]
-      [1553] invokestatic #193
+      [1557] invokestatic #196
         - Methodref [android/app/PendingIntent.getBroadcast (Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;]
-      [1556] astore v6
-      [1558] aload v5
-      [1560] iconst_0
-      [1561] lload v23
-      [1563] aload v6
-      [1565] invokevirtual #186
+      [1560] astore v6
+      [1562] aload v5
+      [1564] iconst_0
+      [1565] lload v23
+      [1567] aload v6
+      [1569] invokevirtual #189
         - Methodref [android/app/AlarmManager.set (IJLandroid/app/PendingIntent;)V]
-      [1568] goto +59 (target=1627)
-      [1571] goto +56 (target=1627)
-      [1574] goto +53 (target=1627)
-      [1577] goto +50 (target=1627)
-      [1580] goto +47 (target=1627)
-      [1583] goto +44 (target=1627)
-      [1586] goto +41 (target=1627)
-      [1589] goto +38 (target=1627)
-      [1592] goto +35 (target=1627)
-      [1595] dup
-      [1596] astore v12
-      [1598] invokevirtual #294
+      [1572] goto +59 (target=1631)
+      [1575] goto +56 (target=1631)
+      [1578] goto +53 (target=1631)
+      [1581] goto +50 (target=1631)
+      [1584] goto +47 (target=1631)
+      [1587] goto +44 (target=1631)
+      [1590] goto +41 (target=1631)
+      [1593] goto +38 (target=1631)
+      [1596] goto +35 (target=1631)
+      [1599] dup
+      [1600] astore v12
+      [1602] invokevirtual #297
         - Methodref [org/json/JSONException.printStackTrace ()V]
-      [1601] new #130
+      [1605] new #133
         - Class [java/lang/RuntimeException]
-      [1604] dup
-      [1605] aload v12
-      [1607] invokespecial #275
+      [1608] dup
+      [1609] aload v12
+      [1611] invokespecial #278
         - Methodref [java/lang/RuntimeException.<init> (Ljava/lang/Throwable;)V]
-      [1610] athrow
-      [1611] dup
-      [1612] astore v12
-      [1614] invokevirtual #271
+      [1614] athrow
+      [1615] dup
+      [1616] astore v12
+      [1618] invokevirtual #274
         - Methodref [java/lang/IllegalArgumentException.printStackTrace ()V]
-      [1617] new #130
+      [1621] new #133
         - Class [java/lang/RuntimeException]
-      [1620] dup
-      [1621] aload v12
-      [1623] invokespecial #275
+      [1624] dup
+      [1625] aload v12
+      [1627] invokespecial #278
         - Methodref [java/lang/RuntimeException.<init> (Ljava/lang/Throwable;)V]
-      [1626] athrow
-      [1627] aload_2 v2
-      [1628] invokeinterface #306
+      [1630] athrow
+      [1631] aload_2 v2
+      [1632] invokeinterface #309
         - InterfaceMethodref [android/database/Cursor.moveToNext ()Z]
-      [1633] ifne -1384 (target=249)
-      [1636] aload_2 v2
-      [1637] invokeinterface #300
+      [1637] ifne -1384 (target=253)
+      [1640] aload_2 v2
+      [1641] invokeinterface #303
         - InterfaceMethodref [android/database/Cursor.close ()V]
-      [1642] return
+      [1646] return
       Code attribute exceptions (count = 2):
-      - ExceptionInfo (948 -> 1568: 1595):
+      - ExceptionInfo (952 -> 1572: 1599):
       - Class [org/json/JSONException]
-      - ExceptionInfo (948 -> 1568: 1611):
+      - ExceptionInfo (952 -> 1572: 1615):
       - Class [java/lang/IllegalArgumentException]
       Code attribute attributes (attribute count = 0):
   + Method:       b()V
@@ -96212,14 +96243,14 @@ Methods (count = 14):
       = private void b()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 50, locals = 1, stack = 2):
-      [0] invokestatic #244
+      [0] invokestatic #247
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.f ()[I]
       [3] aload_0 v0
-      [4] getfield #172
+      [4] getfield #175
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.f Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
-      [7] invokevirtual #259
+      [7] invokevirtual #262
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.h ()Lcom/madhackerdesigns/neverbelate/settings/a;]
-      [10] invokevirtual #265
+      [10] invokevirtual #268
         - Methodref [com/madhackerdesigns/neverbelate/settings/a.ordinal ()I]
       [13] iaload
       [14] tableswitch (2 offsets, default=35) (target=49)
@@ -96228,13 +96259,13 @@ Methods (count = 14):
         default: offset = 35, target = 49
       [36] aload_0 v0
       [37] aload_0 v0
-      [38] invokespecial #241
+      [38] invokespecial #244
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.c ()Landroid/content/Intent;]
-      [41] invokevirtual #249
+      [41] invokevirtual #252
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.startActivity (Landroid/content/Intent;)V]
       [44] aload_0 v0
       [45] iconst_1
-      [46] invokespecial #239
+      [46] invokespecial #242
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.a (Z)V]
       [49] return
       Code attribute exceptions (count = 0):
@@ -96244,19 +96275,19 @@ Methods (count = 14):
       = private android.content.Intent c()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 19, locals = 1, stack = 4):
-      [0] new #97
+      [0] new #100
         - Class [android/content/Intent]
       [3] dup
       [4] aload_0 v0
-      [5] invokevirtual #245
+      [5] invokevirtual #248
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.getApplicationContext ()Landroid/content/Context;]
-      [8] ldc #122
+      [8] ldc #125
         - Class [com/madhackerdesigns/neverbelate/ui/WarningDialog]
-      [10] invokespecial #207
+      [10] invokespecial #210
         - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
       [13] ldc #2
         - Integer [268435456]
-      [15] invokevirtual #210
+      [15] invokevirtual #213
         - Methodref [android/content/Intent.setFlags (I)Landroid/content/Intent;]
       [18] areturn
       Code attribute exceptions (count = 0):
@@ -96267,33 +96298,33 @@ Methods (count = 14):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 393, locals = 10, stack = 6):
       [0] aload_0 v0
-      [1] getfield #170
+      [1] getfield #173
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.d Landroid/app/NotificationManager;]
       [4] iconst_1
-      [5] invokevirtual #190
+      [5] invokevirtual #193
         - Methodref [android/app/NotificationManager.cancel (I)V]
       [8] aload_0 v0
-      [9] invokevirtual #245
+      [9] invokevirtual #248
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.getApplicationContext ()Landroid/content/Context;]
       [12] astore_2 v2
-      [13] ldc #42
+      [13] ldc #43
         - String [NeverBeLateService]
-      [15] ldc #47
+      [15] ldc #49
         - String [Notifying user now of upcoming events!]
-      [17] invokestatic #234
+      [17] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [20] pop
-      [21] getstatic #163
+      [21] getstatic #166
         - Fieldref [com/madhackerdesigns/neverbelate/provider/a.a Landroid/net/Uri;]
       [24] astore_3 v3
-      [25] getstatic #164
+      [25] getstatic #167
         - Fieldref [com/madhackerdesigns/neverbelate/provider/b.a [Ljava/lang/String;]
       [28] astore v4
-      [30] ldc #71
+      [30] ldc #73
         - String [fired=? AND dismissed=?]
       [32] astore v5
       [34] iconst_2
-      [35] anewarray #131
+      [35] anewarray #134
         - Class [java/lang/String]
       [38] dup
       [39] iconst_0
@@ -96307,80 +96338,80 @@ Methods (count = 14):
       [47] aastore
       [48] astore v6
       [50] aload_0 v0
-      [51] getfield #168
+      [51] getfield #171
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.b Landroid/content/ContentResolver;]
       [54] aload_3 v3
       [55] aload v4
       [57] aload v5
       [59] aload v6
       [61] aconst_null
-      [62] invokevirtual #196
+      [62] invokevirtual #199
         - Methodref [android/content/ContentResolver.query (Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;]
       [65] dup
       [66] astore_3 v3
-      [67] invokeinterface #301
+      [67] invokeinterface #304
         - InterfaceMethodref [android/database/Cursor.getCount ()I]
       [72] istore v4
       [74] ldc #9
         - String []
       [76] astore v5
       [78] aload_3 v3
-      [79] invokeinterface #305
+      [79] invokeinterface #308
         - InterfaceMethodref [android/database/Cursor.moveToFirst ()Z]
       [84] ifeq +12 (target=96)
       [87] aload_3 v3
       [88] iconst_3
-      [89] invokeinterface #304
+      [89] invokeinterface #307
         - InterfaceMethodref [android/database/Cursor.getString (I)Ljava/lang/String;]
       [94] astore v5
       [96] aload_3 v3
-      [97] invokeinterface #300
+      [97] invokeinterface #303
         - InterfaceMethodref [android/database/Cursor.close ()V]
       [102] aload_0 v0
-      [103] invokevirtual #247
+      [103] invokevirtual #250
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.getResources ()Landroid/content/res/Resources;]
       [106] dup
       [107] astore_3 v3
       [108] ldc #7
         - Integer [2131492941]
-      [110] invokevirtual #211
+      [110] invokevirtual #214
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [113] astore v6
-      [115] invokestatic #287
+      [115] invokestatic #290
         - Methodref [java/lang/System.currentTimeMillis ()J]
       [118] lstore v8
-      [120] new #90
+      [120] new #93
         - Class [android/app/Notification]
       [123] dup
       [124] ldc #3
         - Integer [2130837524]
       [126] aload v6
       [128] lload v8
-      [130] invokespecial #188
+      [130] invokespecial #191
         - Methodref [android/app/Notification.<init> (ILjava/lang/CharSequence;J)V]
       [133] astore v6
       [135] aload_3 v3
       [136] ldc #5
         - Integer [2131492938]
-      [138] invokevirtual #211
+      [138] invokevirtual #214
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
       [141] astore v7
-      [143] new #132
+      [143] new #135
         - Class [java/lang/StringBuilder]
       [146] dup
       [147] aload v7
-      [149] invokestatic #282
+      [149] invokestatic #285
         - Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [152] invokespecial #283
+      [152] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [155] ldc #10
         - String [ ]
-      [157] invokevirtual #285
+      [157] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [160] aload v5
-      [162] invokevirtual #285
+      [162] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [165] invokevirtual #286
+      [165] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [168] astore v7
       [170] ldc #9
@@ -96389,75 +96420,75 @@ Methods (count = 14):
       [174] iload v4
       [176] iconst_1
       [177] ificmple +37 (target=214)
-      [180] new #132
+      [180] new #135
         - Class [java/lang/StringBuilder]
       [183] dup
       [184] aload v5
-      [186] invokestatic #282
+      [186] invokestatic #285
         - Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [189] invokespecial #283
+      [189] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [192] ldc #21
         - String [(+]
-      [194] invokevirtual #285
+      [194] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [197] iload v4
       [199] iconst_1
       [200] isub
-      [201] invokevirtual #284
+      [201] invokevirtual #287
         - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
       [204] ldc #22
         - String [)  ]
-      [206] invokevirtual #285
+      [206] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [209] invokevirtual #286
+      [209] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [212] astore v5
-      [214] new #132
+      [214] new #135
         - Class [java/lang/StringBuilder]
       [217] dup
       [218] aload v5
-      [220] invokestatic #282
+      [220] invokestatic #285
         - Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [223] invokespecial #283
+      [223] invokespecial #286
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [226] aload_3 v3
       [227] ldc #6
         - Integer [2131492939]
-      [229] invokevirtual #211
+      [229] invokevirtual #214
         - Methodref [android/content/res/Resources.getString (I)Ljava/lang/String;]
-      [232] invokevirtual #285
+      [232] invokevirtual #288
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [235] invokevirtual #286
+      [235] invokevirtual #289
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [238] astore v5
       [240] aload_0 v0
-      [241] invokespecial #241
+      [241] invokespecial #244
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.c ()Landroid/content/Intent;]
       [244] astore_3 v3
       [245] aload_2 v2
       [246] iconst_0
       [247] aload_3 v3
       [248] iconst_0
-      [249] invokestatic #192
+      [249] invokestatic #195
         - Methodref [android/app/PendingIntent.getActivity (Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;]
       [252] astore_3 v3
-      [253] new #97
+      [253] new #100
         - Class [android/content/Intent]
       [256] dup
       [257] aload_0 v0
-      [258] invokevirtual #245
+      [258] invokevirtual #248
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.getApplicationContext ()Landroid/content/Context;]
-      [261] ldc #118
+      [261] ldc #121
         - Class [com/madhackerdesigns/neverbelate/service/WakefulServiceReceiver]
-      [263] invokespecial #207
+      [263] invokespecial #210
         - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
       [266] dup
       [267] astore v4
-      [269] ldc #60
+      [269] ldc #62
         - String [com.madhackerdesigns.neverbelate.task]
       [271] iconst_1
-      [272] invokevirtual #209
+      [272] invokevirtual #212
         - Methodref [android/content/Intent.putExtra (Ljava/lang/String;I)Landroid/content/Intent;]
       [275] pop
       [276] aload_2 v2
@@ -96465,7 +96496,7 @@ Methods (count = 14):
       [278] aload v4
       [280] ldc #1
         - Integer [134217728]
-      [282] invokestatic #193
+      [282] invokestatic #196
         - Methodref [android/app/PendingIntent.getBroadcast (Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;]
       [285] astore v4
       [287] aload v6
@@ -96473,69 +96504,69 @@ Methods (count = 14):
       [290] aload v7
       [292] aload v5
       [294] aload_3 v3
-      [295] invokevirtual #189
+      [295] invokevirtual #192
         - Methodref [android/app/Notification.setLatestEventInfo (Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V]
       [298] aload v6
       [300] dup
-      [301] getfield #159
+      [301] getfield #162
         - Fieldref [android/app/Notification.flags I]
       [304] iconst_1
       [305] ior
-      [306] putfield #159
+      [306] putfield #162
         - Fieldref [android/app/Notification.flags I]
       [309] aload v6
       [311] dup
-      [312] getfield #157
+      [312] getfield #160
         - Fieldref [android/app/Notification.defaults I]
       [315] iconst_4
       [316] ior
-      [317] putfield #157
+      [317] putfield #160
         - Fieldref [android/app/Notification.defaults I]
       [320] aload v6
       [322] aload v4
-      [324] putfield #158
+      [324] putfield #161
         - Fieldref [android/app/Notification.deleteIntent Landroid/app/PendingIntent;]
       [327] iload_1 v1
       [328] ifeq +54 (target=382)
       [331] aload v6
       [333] aload_0 v0
-      [334] getfield #172
+      [334] getfield #175
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.f Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
-      [337] invokevirtual #261
+      [337] invokevirtual #264
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.j ()Landroid/net/Uri;]
-      [340] putfield #160
+      [340] putfield #163
         - Fieldref [android/app/Notification.sound Landroid/net/Uri;]
       [343] aload_0 v0
-      [344] getfield #172
+      [344] getfield #175
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.f Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
-      [347] invokevirtual #264
+      [347] invokevirtual #267
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.n ()Z]
       [350] ifeq +11 (target=361)
       [353] aload v6
-      [355] getstatic #167
+      [355] getstatic #170
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.a [J]
-      [358] putfield #161
+      [358] putfield #164
         - Fieldref [android/app/Notification.vibrate [J]
       [361] aload_0 v0
-      [362] getfield #172
+      [362] getfield #175
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.f Lcom/madhackerdesigns/neverbelate/settings/PreferenceHelper;]
-      [365] invokevirtual #257
+      [365] invokevirtual #260
         - Methodref [com/madhackerdesigns/neverbelate/settings/PreferenceHelper.e ()Z]
       [368] ifeq +14 (target=382)
       [371] aload v6
       [373] dup
-      [374] getfield #159
+      [374] getfield #162
         - Fieldref [android/app/Notification.flags I]
       [377] iconst_4
       [378] ior
-      [379] putfield #159
+      [379] putfield #162
         - Fieldref [android/app/Notification.flags I]
       [382] aload_0 v0
-      [383] getfield #170
+      [383] getfield #173
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.d Landroid/app/NotificationManager;]
       [386] iconst_1
       [387] aload v6
-      [389] invokevirtual #191
+      [389] invokevirtual #194
         - Methodref [android/app/NotificationManager.notify (ILandroid/app/Notification;)V]
       [392] return
       Code attribute exceptions (count = 0):
@@ -96544,196 +96575,222 @@ Methods (count = 14):
     Access flags: 0x2
       = private android.location.Location d()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 352, locals = 8, stack = 4):
+    + Code attribute instructions (code length = 384, locals = 8, stack = 4):
       [0] aload_0 v0
-      [1] getfield #169
+      [1] getfield #172
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.c Landroid/location/LocationManager;]
       [4] dup
       [5] astore_1 v1
-      [6] iconst_1
-      [7] invokevirtual #221
+      [6] ifnonnull +13 (target=19)
+      [9] ldc #43
+        - String [NeverBeLateService]
+      [11] ldc #37
+        - String [Location Manager is null]
+      [13] invokestatic #237
+        - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
+      [16] pop
+      [17] aconst_null
+      [18] areturn
+      [19] aload_1 v1
+      [20] iconst_1
+      [21] invokevirtual #224
         - Methodref [android/location/LocationManager.getProviders (Z)Ljava/util/List;]
-      [10] astore_2 v2
-      [11] aconst_null
-      [12] astore_3 v3
-      [13] aload_2 v2
-      [14] ifnull +320 (target=334)
-      [17] aload_2 v2
-      [18] invokeinterface #309
+      [24] astore_2 v2
+      [25] aconst_null
+      [26] astore_3 v3
+      [27] aload_2 v2
+      [28] ifnull +330 (target=358)
+      [31] aload_2 v2
+      [32] invokeinterface #312
         - InterfaceMethodref [java/util/List.iterator ()Ljava/util/Iterator;]
-      [23] astore v4
-      [25] goto +296 (target=321)
-      [28] aload v4
-      [30] invokeinterface #308
+      [37] astore v4
+      [39] goto +306 (target=345)
+      [42] aload v4
+      [44] invokeinterface #311
         - InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
-      [35] checkcast #131
+      [49] checkcast #134
         - Class [java/lang/String]
-      [38] astore_2 v2
-      [39] aload_1 v1
-      [40] aload_2 v2
-      [41] invokevirtual #219
-        - Methodref [android/location/LocationManager.getLastKnownLocation (Ljava/lang/String;)Landroid/location/Location;]
-      [44] dup
-      [45] astore_2 v2
-      [46] ifnull +275 (target=321)
-      [49] aload_3 v3
-      [50] ifnull +269 (target=319)
-      [53] aload_0 v0
+      [52] astore_2 v2
+      [53] aload_1 v1
       [54] aload_2 v2
-      [55] aload_3 v3
-      [56] astore v7
-      [58] astore v6
-      [60] astore v5
-      [62] aload v6
-      [64] invokevirtual #218
+      [55] invokevirtual #222
+        - Methodref [android/location/LocationManager.getLastKnownLocation (Ljava/lang/String;)Landroid/location/Location;]
+      [58] dup
+      [59] astore_2 v2
+      [60] ifnonnull +14 (target=74)
+      [63] ldc #43
+        - String [NeverBeLateService]
+      [65] ldc #80
+        - String [nextLocation is null]
+      [67] invokestatic #237
+        - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
+      [70] pop
+      [71] goto +274 (target=345)
+      [74] aload_3 v3
+      [75] ifnull +268 (target=343)
+      [78] aload_0 v0
+      [79] aload_2 v2
+      [80] aload_3 v3
+      [81] astore v7
+      [83] astore v6
+      [85] astore v5
+      [87] aload v6
+      [89] invokevirtual #221
         - Methodref [android/location/Location.hasAccuracy ()Z]
-      [67] ifeq +53 (target=120)
-      [70] aload v7
-      [72] invokevirtual #218
+      [92] ifeq +53 (target=145)
+      [95] aload v7
+      [97] invokevirtual #221
         - Methodref [android/location/Location.hasAccuracy ()Z]
-      [75] ifeq +45 (target=120)
-      [78] aload v6
-      [80] invokevirtual #213
+      [100] ifeq +45 (target=145)
+      [103] aload v6
+      [105] invokevirtual #216
         - Methodref [android/location/Location.getAccuracy ()F]
-      [83] fstore v6
-      [85] aload v7
-      [87] invokevirtual #213
+      [108] fstore v6
+      [110] aload v7
+      [112] invokevirtual #216
         - Methodref [android/location/Location.getAccuracy ()F]
-      [90] fstore v5
-      [92] fload v6
-      [94] fload v5
-      [96] fcmpg
-      [97] ifge +7 (target=104)
-      [100] iconst_1
-      [101] goto +98 (target=199)
-      [104] fload v6
-      [106] fload v5
-      [108] fcmpl
-      [109] ifle +7 (target=116)
-      [112] iconst_m1
-      [113] goto +86 (target=199)
-      [116] iconst_0
-      [117] goto +82 (target=199)
-      [120] aload v5
-      [122] getfield #169
+      [115] fstore v5
+      [117] fload v6
+      [119] fload v5
+      [121] fcmpg
+      [122] ifge +7 (target=129)
+      [125] iconst_1
+      [126] goto +98 (target=224)
+      [129] fload v6
+      [131] fload v5
+      [133] fcmpl
+      [134] ifle +7 (target=141)
+      [137] iconst_m1
+      [138] goto +86 (target=224)
+      [141] iconst_0
+      [142] goto +82 (target=224)
+      [145] aload v5
+      [147] getfield #172
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.c Landroid/location/LocationManager;]
-      [125] aload v6
-      [127] invokevirtual #216
+      [150] aload v6
+      [152] invokevirtual #219
         - Methodref [android/location/Location.getProvider ()Ljava/lang/String;]
-      [130] invokevirtual #220
+      [155] invokevirtual #223
         - Methodref [android/location/LocationManager.getProvider (Ljava/lang/String;)Landroid/location/LocationProvider;]
-      [133] invokevirtual #222
+      [158] invokevirtual #225
         - Methodref [android/location/LocationProvider.getAccuracy ()I]
-      [136] istore v6
-      [138] aload v5
-      [140] getfield #169
+      [161] istore v6
+      [163] aload v5
+      [165] getfield #172
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.c Landroid/location/LocationManager;]
-      [143] aload v7
-      [145] invokevirtual #216
+      [168] aload v7
+      [170] invokevirtual #219
         - Methodref [android/location/Location.getProvider ()Ljava/lang/String;]
-      [148] invokevirtual #220
+      [173] invokevirtual #223
         - Methodref [android/location/LocationManager.getProvider (Ljava/lang/String;)Landroid/location/LocationProvider;]
-      [151] invokevirtual #222
+      [176] invokevirtual #225
         - Methodref [android/location/LocationProvider.getAccuracy ()I]
-      [154] istore v5
-      [156] getstatic #162
+      [179] istore v5
+      [181] getstatic #165
         - Fieldref [android/os/Build$VERSION.SDK_INT I]
-      [159] bipush 9
-      [161] ificmplt +15 (target=176)
-      [164] iconst_4
-      [165] iload v6
-      [167] isub
-      [168] istore v6
-      [170] iconst_4
-      [171] iload v5
-      [173] isub
-      [174] istore v5
-      [176] iload v6
-      [178] iload v5
-      [180] ificmpge +7 (target=187)
-      [183] iconst_1
-      [184] goto +15 (target=199)
-      [187] iload v6
-      [189] iload v5
-      [191] ificmple +7 (target=198)
-      [194] iconst_m1
-      [195] goto +4 (target=199)
-      [198] iconst_0
+      [184] bipush 9
+      [186] ificmplt +15 (target=201)
+      [189] iconst_4
+      [190] iload v6
+      [192] isub
+      [193] istore v6
+      [195] iconst_4
+      [196] iload v5
+      [198] isub
       [199] istore v5
-      [201] iconst_0
-      [202] istore v6
-      [204] iload v5
-      [206] tableswitch (3 offsets, default=60) (target=266)
-        -1: offset = 50, target = 256
-        0: offset = 39, target = 245
-        1: offset = 26, target = 232
-        default: offset = 60, target = 266
-      [232] aload_2 v2
-      [233] aload_3 v3
-      [234] ldc2_w #141
-        - Long [-300000]
-      [237] invokestatic #237
-        - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.a (Landroid/location/Location;Landroid/location/Location;J)I]
-      [240] istore v6
-      [242] goto +24 (target=266)
-      [245] aload_2 v2
-      [246] aload_3 v3
-      [247] lconst_0
-      [248] invokestatic #237
-        - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.a (Landroid/location/Location;Landroid/location/Location;J)I]
-      [251] istore v6
-      [253] goto +13 (target=266)
+      [201] iload v6
+      [203] iload v5
+      [205] ificmpge +7 (target=212)
+      [208] iconst_1
+      [209] goto +15 (target=224)
+      [212] iload v6
+      [214] iload v5
+      [216] ificmple +7 (target=223)
+      [219] iconst_m1
+      [220] goto +4 (target=224)
+      [223] iconst_0
+      [224] istore v5
+      [226] iconst_0
+      [227] istore v6
+      [229] iload v5
+      [231] tableswitch (3 offsets, default=59) (target=290)
+        -1: offset = 49, target = 280
+        0: offset = 38, target = 269
+        1: offset = 25, target = 256
+        default: offset = 59, target = 290
       [256] aload_2 v2
       [257] aload_3 v3
-      [258] ldc2_w #153
-        - Long [300000]
-      [261] invokestatic #237
+      [258] ldc2_w #144
+        - Long [-300000]
+      [261] invokestatic #240
         - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.a (Landroid/location/Location;Landroid/location/Location;J)I]
       [264] istore v6
-      [266] iload v6
-      [268] tableswitch (3 offsets, default=53) (target=321)
-        -1: offset = 53, target = 321
-        0: offset = 28, target = 296
-        1: offset = 28, target = 296
-        default: offset = 53, target = 321
-      [296] aload_2 v2
-      [297] invokevirtual #218
+      [266] goto +24 (target=290)
+      [269] aload_2 v2
+      [270] aload_3 v3
+      [271] lconst_0
+      [272] invokestatic #240
+        - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.a (Landroid/location/Location;Landroid/location/Location;J)I]
+      [275] istore v6
+      [277] goto +13 (target=290)
+      [280] aload_2 v2
+      [281] aload_3 v3
+      [282] ldc2_w #156
+        - Long [300000]
+      [285] invokestatic #240
+        - Methodref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.a (Landroid/location/Location;Landroid/location/Location;J)I]
+      [288] istore v6
+      [290] iload v6
+      [292] tableswitch (3 offsets, default=53) (target=345)
+        -1: offset = 53, target = 345
+        0: offset = 28, target = 320
+        1: offset = 28, target = 320
+        default: offset = 53, target = 345
+      [320] aload_2 v2
+      [321] invokevirtual #221
         - Methodref [android/location/Location.hasAccuracy ()Z]
-      [300] ifeq +19 (target=319)
-      [303] aload_3 v3
-      [304] aload_2 v2
-      [305] invokevirtual #212
+      [324] ifeq +19 (target=343)
+      [327] aload_3 v3
+      [328] aload_2 v2
+      [329] invokevirtual #215
         - Methodref [android/location/Location.distanceTo (Landroid/location/Location;)F]
-      [308] ldc #8
+      [332] ldc #8
         - Float [1.25]
-      [310] aload_2 v2
-      [311] invokevirtual #213
+      [334] aload_2 v2
+      [335] invokevirtual #216
         - Methodref [android/location/Location.getAccuracy ()F]
-      [314] fmul
-      [315] fcmpg
-      [316] ifle +5 (target=321)
-      [319] aload_2 v2
-      [320] astore_3 v3
-      [321] aload v4
-      [323] invokeinterface #307
+      [338] fmul
+      [339] fcmpg
+      [340] ifle +5 (target=345)
+      [343] aload_2 v2
+      [344] astore_3 v3
+      [345] aload v4
+      [347] invokeinterface #310
         - InterfaceMethodref [java/util/Iterator.hasNext ()Z]
-      [328] ifne -300 (target=28)
-      [331] goto +5 (target=336)
-      [334] aconst_null
-      [335] areturn
-      [336] aload_3 v3
-      [337] ifnonnull +13 (target=350)
-      [340] ldc #42
+      [352] ifne -310 (target=42)
+      [355] goto +13 (target=368)
+      [358] ldc #43
         - String [NeverBeLateService]
-      [342] ldc #37
-        - String [Location is null!]
-      [344] invokestatic #234
+      [360] ldc #46
+        - String [No location providers enabled!]
+      [362] invokestatic #237
         - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
-      [347] pop
-      [348] aconst_null
-      [349] areturn
-      [350] aload_3 v3
-      [351] areturn
+      [365] pop
+      [366] aconst_null
+      [367] areturn
+      [368] aload_3 v3
+      [369] ifnonnull +13 (target=382)
+      [372] ldc #43
+        - String [NeverBeLateService]
+      [374] ldc #38
+        - String [Location is null!]
+      [376] invokestatic #237
+        - Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
+      [379] pop
+      [380] aconst_null
+      [381] areturn
+      [382] aload_3 v3
+      [383] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       a(Landroid/location/Location;Landroid/location/Location;J)I
@@ -96742,11 +96799,11 @@ Methods (count = 14):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 38, locals = 8, stack = 6):
       [0] aload_0 v0
-      [1] invokevirtual #217
+      [1] invokevirtual #220
         - Methodref [android/location/Location.getTime ()J]
       [4] lstore v4
       [6] aload_1 v1
-      [7] invokevirtual #217
+      [7] invokevirtual #220
         - Methodref [android/location/Location.getTime ()J]
       [10] lstore v6
       [12] lload v4
@@ -96776,17 +96833,17 @@ Methods (count = 14):
     + Code attribute instructions (code length = 20, locals = 1, stack = 5):
       [0] iconst_0
       [1] iconst_0
-      [2] invokestatic #289
+      [2] invokestatic #292
         - Methodref [java/text/DateFormat.getDateTimeInstance (II)Ljava/text/DateFormat;]
-      [5] new #135
+      [5] new #138
         - Class [java/util/Date]
       [8] dup
       [9] aload_0 v0
-      [10] invokevirtual #273
+      [10] invokevirtual #276
         - Methodref [java/lang/Long.longValue ()J]
-      [13] invokespecial #291
+      [13] invokespecial #294
         - Methodref [java/util/Date.<init> (J)V]
-      [16] invokevirtual #288
+      [16] invokevirtual #291
         - Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
       [19] areturn
       Code attribute exceptions (count = 0):
@@ -96805,84 +96862,84 @@ Methods (count = 14):
       = private static int[] e()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 129, locals = 1, stack = 3):
-      [0] getstatic #174
+      [0] getstatic #177
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.h [I]
       [3] dup
       [4] ifnull +4 (target=8)
       [7] areturn
       [8] pop
-      [9] invokestatic #251
+      [9] invokestatic #254
         - Methodref [com/madhackerdesigns/neverbelate/service/a.values ()[Lcom/madhackerdesigns/neverbelate/service/a;]
       [12] arraylength
       [13] newarray 10
       [15] astore_0 v0
       [16] aload_0 v0
-      [17] getstatic #180
+      [17] getstatic #183
         - Fieldref [com/madhackerdesigns/neverbelate/service/a.e Lcom/madhackerdesigns/neverbelate/service/a;]
-      [20] invokevirtual #250
+      [20] invokevirtual #253
         - Methodref [com/madhackerdesigns/neverbelate/service/a.ordinal ()I]
       [23] iconst_5
       [24] iastore
       [25] goto +4 (target=29)
       [28] pop
       [29] aload_0 v0
-      [30] getstatic #179
+      [30] getstatic #182
         - Fieldref [com/madhackerdesigns/neverbelate/service/a.d Lcom/madhackerdesigns/neverbelate/service/a;]
-      [33] invokevirtual #250
+      [33] invokevirtual #253
         - Methodref [com/madhackerdesigns/neverbelate/service/a.ordinal ()I]
       [36] iconst_4
       [37] iastore
       [38] goto +4 (target=42)
       [41] pop
       [42] aload_0 v0
-      [43] getstatic #177
+      [43] getstatic #180
         - Fieldref [com/madhackerdesigns/neverbelate/service/a.b Lcom/madhackerdesigns/neverbelate/service/a;]
-      [46] invokevirtual #250
+      [46] invokevirtual #253
         - Methodref [com/madhackerdesigns/neverbelate/service/a.ordinal ()I]
       [49] iconst_2
       [50] iastore
       [51] goto +4 (target=55)
       [54] pop
       [55] aload_0 v0
-      [56] getstatic #176
+      [56] getstatic #179
         - Fieldref [com/madhackerdesigns/neverbelate/service/a.a Lcom/madhackerdesigns/neverbelate/service/a;]
-      [59] invokevirtual #250
+      [59] invokevirtual #253
         - Methodref [com/madhackerdesigns/neverbelate/service/a.ordinal ()I]
       [62] iconst_1
       [63] iastore
       [64] goto +4 (target=68)
       [67] pop
       [68] aload_0 v0
-      [69] getstatic #181
+      [69] getstatic #184
         - Fieldref [com/madhackerdesigns/neverbelate/service/a.f Lcom/madhackerdesigns/neverbelate/service/a;]
-      [72] invokevirtual #250
+      [72] invokevirtual #253
         - Methodref [com/madhackerdesigns/neverbelate/service/a.ordinal ()I]
       [75] bipush 6
       [77] iastore
       [78] goto +4 (target=82)
       [81] pop
       [82] aload_0 v0
-      [83] getstatic #182
+      [83] getstatic #185
         - Fieldref [com/madhackerdesigns/neverbelate/service/a.g Lcom/madhackerdesigns/neverbelate/service/a;]
-      [86] invokevirtual #250
+      [86] invokevirtual #253
         - Methodref [com/madhackerdesigns/neverbelate/service/a.ordinal ()I]
       [89] bipush 7
       [91] iastore
       [92] goto +4 (target=96)
       [95] pop
       [96] aload_0 v0
-      [97] getstatic #183
+      [97] getstatic #186
         - Fieldref [com/madhackerdesigns/neverbelate/service/a.h Lcom/madhackerdesigns/neverbelate/service/a;]
-      [100] invokevirtual #250
+      [100] invokevirtual #253
         - Methodref [com/madhackerdesigns/neverbelate/service/a.ordinal ()I]
       [103] bipush 8
       [105] iastore
       [106] goto +4 (target=110)
       [109] pop
       [110] aload_0 v0
-      [111] getstatic #178
+      [111] getstatic #181
         - Fieldref [com/madhackerdesigns/neverbelate/service/a.c Lcom/madhackerdesigns/neverbelate/service/a;]
-      [114] invokevirtual #250
+      [114] invokevirtual #253
         - Methodref [com/madhackerdesigns/neverbelate/service/a.ordinal ()I]
       [117] iconst_3
       [118] iastore
@@ -96890,7 +96947,7 @@ Methods (count = 14):
       [122] pop
       [123] aload_0 v0
       [124] dup
-      [125] putstatic #174
+      [125] putstatic #177
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.h [I]
       [128] areturn
       Code attribute exceptions (count = 8):
@@ -96916,30 +96973,30 @@ Methods (count = 14):
       = private static int[] f()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 48, locals = 1, stack = 3):
-      [0] getstatic #175
+      [0] getstatic #178
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.i [I]
       [3] dup
       [4] ifnull +4 (target=8)
       [7] areturn
       [8] pop
-      [9] invokestatic #266
+      [9] invokestatic #269
         - Methodref [com/madhackerdesigns/neverbelate/settings/a.values ()[Lcom/madhackerdesigns/neverbelate/settings/a;]
       [12] arraylength
       [13] newarray 10
       [15] astore_0 v0
       [16] aload_0 v0
-      [17] getstatic #184
+      [17] getstatic #187
         - Fieldref [com/madhackerdesigns/neverbelate/settings/a.a Lcom/madhackerdesigns/neverbelate/settings/a;]
-      [20] invokevirtual #265
+      [20] invokevirtual #268
         - Methodref [com/madhackerdesigns/neverbelate/settings/a.ordinal ()I]
       [23] iconst_1
       [24] iastore
       [25] goto +4 (target=29)
       [28] pop
       [29] aload_0 v0
-      [30] getstatic #185
+      [30] getstatic #188
         - Fieldref [com/madhackerdesigns/neverbelate/settings/a.b Lcom/madhackerdesigns/neverbelate/settings/a;]
-      [33] invokevirtual #265
+      [33] invokevirtual #268
         - Methodref [com/madhackerdesigns/neverbelate/settings/a.ordinal ()I]
       [36] iconst_2
       [37] iastore
@@ -96947,7 +97004,7 @@ Methods (count = 14):
       [41] pop
       [42] aload_0 v0
       [43] dup
-      [44] putstatic #175
+      [44] putstatic #178
         - Fieldref [com/madhackerdesigns/neverbelate/service/NeverBeLateService.i [I]
       [47] areturn
       Code attribute exceptions (count = 2):

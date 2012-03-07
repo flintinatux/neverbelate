@@ -4,9 +4,9 @@
 	<string name="feedback_address">mail@madhackerdesigns.com</string>
 	<string name="feedback_menu_title">Choose email app</string>
 	<string name="feedback_subject">[NeverBeLate™] - Feedback Case #</string>
-	<string name="pr_marked_locations_title">Only marked locations</string>
-	<string name="pr_marked_locations_summary_on">Will only look for events with locations that begin with an asterisk or star (*)</string>
-	<string name="pr_marked_locations_summary_off">Will calculate travel times for all events that have locations specified</string>
+	<string name="pr_marked_events_title">Only marked events</string>
+	<string name="pr_marked_events_summary_on">Will only look for events with locations that begin with an asterisk or star (*)</string>
+	<string name="pr_marked_events_summary_off">Will calculate travel times for all events that have locations specified</string>
 	<string name="privacy_title">Privacy policy</string>
 	<string name="send_feedback">Click here to send me an email with feedback, questions, or bugs you have encountered.</string>
 	<string name="send_feedback_title">Send feedback</string>

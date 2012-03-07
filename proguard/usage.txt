@@ -625,7 +625,7 @@ com.madhackerdesigns.neverbelate.settings.PreferenceHelper:
     private static final java.lang.String DEFAULT_LOOKAHEAD_WINDOW
     private static final boolean DEFAULT_NEVERLATE_ENABLED
     private static final java.lang.String DEFAULT_NOTIFICATION_METHOD
-    private static final boolean DEFAULT_ONLY_MARKED_LOCATIONS
+    private static final boolean DEFAULT_ONLY_MARKED_EVENTS
     private static final java.lang.String DEFAULT_SNOOZE_DURATION
     private static final boolean DEFAULT_TOS_ACCEPTED
     private static final java.lang.String DEFAULT_TRAVEL_MODE
@@ -641,7 +641,7 @@ com.madhackerdesigns.neverbelate.settings.PreferenceHelper:
     private static final java.lang.String KEY_LOOKAHEAD_WINDOW
     private static final java.lang.String KEY_NEVERLATE_ENABLED
     private static final java.lang.String KEY_NOTIFICATION_METHOD
-    private static final java.lang.String KEY_ONLY_MARKED_LOCATIONS
+    private static final java.lang.String KEY_ONLY_MARKED_EVENTS
     private static final java.lang.String KEY_RINGTONE
     private static final java.lang.String KEY_SNOOZE_DURATION
     private static final java.lang.String KEY_TOS_ACCEPTED

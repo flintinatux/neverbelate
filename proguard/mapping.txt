@@ -1242,7 +1242,7 @@ com.madhackerdesigns.neverbelate.settings.PreferenceHelper -> com.madhackerdesig
     boolean setNeverLateEnabled(boolean) -> a
     com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod getNotificationMethod() -> h
     boolean isOnlyMarkedLocations() -> i
-    boolean setOnlyMarkedLocatitons(boolean) -> b
+    boolean setOnlyMarkedEvents(boolean) -> b
     android.net.Uri getRingtone() -> j
     java.lang.Long getSnoozeDuration() -> k
     java.lang.String getTravelMode() -> l

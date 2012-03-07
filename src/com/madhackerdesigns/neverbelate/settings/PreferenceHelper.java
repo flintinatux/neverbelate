@@ -29,7 +29,7 @@ public class PreferenceHelper {
 	private static final String	 	DEFAULT_LOOKAHEAD_WINDOW = "7200000";
 	private static final boolean 	DEFAULT_NEVERLATE_ENABLED = false;
 	private static final String	 	DEFAULT_NOTIFICATION_METHOD = "ALERT";
-	private static final boolean	DEFAULT_ONLY_MARKED_LOCATIONS = false;
+	private static final boolean	DEFAULT_ONLY_MARKED_EVENTS = false;
 	private static final String		DEFAULT_RINGTONE = Settings.System.DEFAULT_ALARM_ALERT_URI.toString();
 	private static final String 	DEFAULT_SNOOZE_DURATION = "300000";
 	private static final boolean 	DEFAULT_TOS_ACCEPTED = false;
@@ -49,7 +49,7 @@ public class PreferenceHelper {
 	private static final String KEY_LOOKAHEAD_WINDOW = "lookahead_window";
 	private static final String KEY_NEVERLATE_ENABLED = "neverlate_enabled";
 	private static final String KEY_NOTIFICATION_METHOD = "notification_method";
-	private static final String KEY_ONLY_MARKED_LOCATIONS = "only_marked_locations";
+	private static final String KEY_ONLY_MARKED_EVENTS = "only_marked_locations";
 	private static final String KEY_RINGTONE = "ringtone";
 	private static final String KEY_SNOOZE_DURATION = "snooze_duration";
 	private static final String KEY_TOS_ACCEPTED = "tos_accepted";
@@ -150,17 +150,17 @@ public class PreferenceHelper {
 	 * @return True if the user intends to mark locations for NeverBeLate to find with a (*)
 	 */
 	public boolean isOnlyMarkedLocations() {
-		return mPrefs.getBoolean(KEY_ONLY_MARKED_LOCATIONS, DEFAULT_ONLY_MARKED_LOCATIONS);
+		return mPrefs.getBoolean(KEY_ONLY_MARKED_EVENTS, DEFAULT_ONLY_MARKED_EVENTS);
 	}
 	
 	/**
-	 * @param onlyMarkedLocations True to only act on locations marked with (*)
+	 * @param onlyMarkedEvents True to only act on locations marked with (*)
 	 * 
 	 * @return True if successfully set
 	 */
-	public boolean setOnlyMarkedLocatitons(boolean onlyMarkedLocations) {
+	public boolean setOnlyMarkedEvents(boolean onlyMarkedEvents) {
 		SharedPreferences.Editor editor = mPrefs.edit();
-		return editor.putBoolean(KEY_ONLY_MARKED_LOCATIONS, onlyMarkedLocations).commit();
+		return editor.putBoolean(KEY_ONLY_MARKED_EVENTS, onlyMarkedEvents).commit();
 	}
 	
 	/**
