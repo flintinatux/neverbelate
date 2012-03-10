@@ -26,7 +26,7 @@
 	<string name="loading_text">Loading...</string>
 	<string name="ok">OK</string>
 	<string name="share_menu_title">Share NeverBeLate™</string>
-	<string name="share_message">I use the new FREE app NeverBeLate™ for Android, and I am amazed how well it keeps me on-time to all of my events! It checks the locations of upcoming events in my Android calendar, and then warns me when I need to get in the car to beat the traffic. I can even use it to check the traffic between my current location and my destination. Check out NeverBeLate™ for FREE here: http://bit.ly/never-be-late</string>
+	<string name="share_message">http://play.google.com/store/apps/details?id=com.madhackerdesigns.neverbelate</string>
 	<string name="share_subject">Check out NeverBeLate™ for Android!</string>
     
 <!-- Strings for Test Activity -->
