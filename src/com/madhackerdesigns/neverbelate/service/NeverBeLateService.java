@@ -180,17 +180,17 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 		}
 		
 		// Instantiate new CalendarHelper and query for event instances within the lookahead window
-		CalendarHelper ch = new CalendarHelper();
+		CalendarHelper ch = CalendarHelper.createHelper();
 		mNow = new Date().getTime();
 		String currentTime = "The current time is " + FullDateTime(mNow);
 		Logger.d(LOG_TAG, currentTime);
-		Uri.Builder instanceBuilder = ch.mInstancesUri.buildUpon();
+		Uri.Builder instanceBuilder = ch.getInstancesUri().buildUpon();
 		ContentUris.appendId(instanceBuilder, mNow - DateUtils.DAY_IN_MILLIS);
 		ContentUris.appendId(instanceBuilder, mNow + DateUtils.DAY_IN_MILLIS);
 		Logger.d(LOG_TAG, "Querying calendar...");
 		Cursor instance = mContentResolver.query(	
 			instanceBuilder.build(), 
-			CalendarHelper.INSTANCES_PROJECTION, 
+			ch.getInstancesProjection(), 
 			null, 
 			null, 
 			null
