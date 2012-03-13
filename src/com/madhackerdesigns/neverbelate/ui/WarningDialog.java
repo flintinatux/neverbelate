@@ -80,7 +80,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	private ArrayList<EventHolder> mEventHolders = new ArrayList<EventHolder>();
 	private boolean mInsistentStopped = false;
 	private ViewSwitcher mSwitcher;
-	private MyLocationOverlay mUserLocationOverlay;
+	private UserLocationOverlay mUserLocationOverlay;
 	
 	/* (non-Javadoc)
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
@@ -381,9 +381,6 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		// Log a little
 		Logger.d(LOG_TAG, "Loading traffic view.");
 		
-		// Get the application context
-		Context context = getApplicationContext();
-		
 		// Get mapview and add zoom controls
 		MapView mapView = (MapView) findViewById(R.id.mapview);
 		if (mapView != null) { Logger.d(LOG_TAG, "MapView loaded."); }
@@ -402,14 +399,11 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 			
 		});
 	
-		// Generate the map overlays
-		List<Overlay> mapOverlays = mapView.getOverlays();
-		mapOverlays.clear();
-		Drawable redDrawable = this.getResources().getDrawable(R.drawable.flag_red);
-		MapOverlay redOverlay = new MapOverlay(context, redDrawable);
-
+		// Get the UserLocationOverlay to draw both flags and stay updated
+		UserLocationOverlay overlay = mUserLocationOverlay;
+		GeoPoint orig = null;
+				
 		// Parse the json directions data
-		MapBounds bounds = new MapBounds();
 		final Iterator<EventHolder> eventIterator = mEventHolders.iterator();
 		do {
 			try {
@@ -419,47 +413,31 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 				// Get the zoom span and zoom center from the route
 				JSONObject directions = new JSONObject(eh.json);
 				JSONObject route = directions.getJSONArray("routes").getJSONObject(0);
+				
+				// If the origin is null, pull the origin coordinates
+				JSONObject leg = route.getJSONArray("legs").getJSONObject(0);
+				if (orig == null) {
+					int latOrigE6 = (int) (1.0E6 * leg.getJSONObject("start_location").getDouble("lat"));
+					int lonOrigE6 = (int) (1.0E6 * leg.getJSONObject("start_location").getDouble("lng"));
+					orig = new GeoPoint(latOrigE6, lonOrigE6);
+				}
 
 				// Get the destination coordinates from the leg
-				JSONObject leg = route.getJSONArray("legs").getJSONObject(0);
 				int latDestE6 = (int) (1.0E6 * leg.getJSONObject("end_location").getDouble("lat")); 
 				int lonDestE6 = (int) (1.0E6 * leg.getJSONObject("end_location").getDouble("lng"));
 				
 				// Create a GeoPoint for the destination and push onto MapOverlay
 				GeoPoint destPoint = new GeoPoint(latDestE6, lonDestE6);
-				OverlayItem destinationItem = new OverlayItem(destPoint, eh.title, eh.location);
-				redOverlay.addOverlay(destinationItem);
-				
-				// Compare latitude and longitude to other points
-				bounds.addPoint(latDestE6, lonDestE6);
-				
+				overlay.addDestination(destPoint, eh.title, eh.location);
 			} catch (JSONException e) {
 				e.printStackTrace();
 				throw new RuntimeException(e);
 			}
 		} while (eventIterator.hasNext());
 		
-		// Compare user location to the destination points as well
-		GeoPoint userLoc = mUserLocationOverlay.getMyLocation();
-		bounds.addPoint(userLoc.getLatitudeE6(), userLoc.getLongitudeE6());
-		
-		// Create an overlay with a green flag for the user location
-		Drawable greenDrawable = this.getResources().getDrawable(R.drawable.flag_blue);
-		MapOverlay greenOverlay = new MapOverlay(context, greenDrawable);
-		greenOverlay.addOverlay(new OverlayItem(userLoc, null, null));
-		
-		// Add the user location and destinations to the map overlays
-		mapOverlays.add(greenOverlay);
-		mapOverlays.add(redOverlay); 
-		
-		// Turn off location updates
-		mUserLocationOverlay.disableMyLocation();
-		
-		// Get map controller, animate to zoom center, and set zoom span
-		MapController mapController = mapView.getController();
-		GeoPoint zoomCenter = new GeoPoint(bounds.getLatCenterE6(), bounds.getLonCenterE6());
-		mapController.animateTo(zoomCenter);
-		mapController.zoomToSpan(bounds.getLatSpanE6(), bounds.getLonSpanE6());
+		// Set the origin and draw the locations
+		overlay.setOrigin(orig);
+		overlay.drawLocations();
 		
 		// Load an interstitial ad if it's time
 		AdHelper adHelper = mAdHelper;
@@ -474,48 +452,6 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		
 	}
 	
-	/**
-	 * 
-	 *
-	 */
-	private class MapBounds {
-		private int mLatMinE6 = 0;
-		private int mLatMaxE6 = 0;
-		private int mLonMinE6 = 0;
-		private int mLonMaxE6 = 0;
-		private static final double RATIO = 1.25;
-		
-		protected MapBounds() {
-			super();
-		}
-		
-		protected void addPoint(int latE6, int lonE6) {
-			// Check if this latitude is the minimum
-			if (mLatMinE6 == 0 || latE6 < mLatMinE6) { mLatMinE6 = latE6; }
-			// Check if this latitude is the maximum
-			if (mLatMaxE6 == 0 || latE6 > mLatMaxE6) { mLatMaxE6 = latE6; }
-			// Check if this longitude is the minimum
-			if (mLonMinE6 == 0 || lonE6 < mLonMinE6) { mLonMinE6 = lonE6; }
-			// Check if this longitude is the maximum
-			if (mLonMaxE6 == 0 || lonE6 > mLonMaxE6) { mLonMaxE6 = lonE6; }
-		}
-		
-		protected int getLatSpanE6() {
-			return (int) Math.abs(RATIO * (mLatMaxE6 - mLatMinE6));
-		}
-		
-		protected int getLonSpanE6() {
-			return (int) Math.abs(RATIO * (mLonMaxE6 - mLonMinE6));
-		}
-		
-		protected int getLatCenterE6() {
-			return (int) (mLatMaxE6 + mLatMinE6)/2;
-		}
-		
-		protected int getLonCenterE6() {
-			return (int) (mLonMaxE6 + mLonMinE6)/2;
-		}
-	}
 	
 	/* (non-Javadoc)
 	 * @see com.google.android.maps.MapActivity#onPause()
