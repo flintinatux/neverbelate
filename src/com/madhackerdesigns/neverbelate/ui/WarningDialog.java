@@ -114,9 +114,6 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		if (providersEnabled) { 
 			Logger.d(LOG_TAG, "User location updates enabled."); 
 		}
-		if (mUserLocationOverlay.enableCompass()) {
-			Logger.d(LOG_TAG, "User orientation updates enabled.");
-		}
 		
 		// Adjust the warning text to include early arrival if set
 		final Long earlyArrival = mPrefs.getEarlyArrival() / 60000;
@@ -156,6 +153,8 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		    adView.loadAd(request);
 		    Logger.d(LOG_TAG, "AdMob banner loaded.");
 		}
+		
+		mUserLocationOverlay.disableMyLocation();
 	}
 	
 	private void loadAlertList() {
@@ -438,6 +437,8 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		// Set the origin and draw the locations
 		overlay.setOrigin(orig);
 		overlay.drawLocations();
+		overlay.enableMyLocation();
+		overlay.enableCompass();
 		
 		// Load an interstitial ad if it's time
 		AdHelper adHelper = mAdHelper;

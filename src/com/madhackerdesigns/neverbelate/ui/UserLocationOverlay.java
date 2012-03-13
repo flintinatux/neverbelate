@@ -101,7 +101,11 @@ public class UserLocationOverlay extends MyLocationOverlay {
 	@Override
 	public synchronized void onLocationChanged(Location location) {
 		super.onLocationChanged(location);
-		drawLocations(location);
+		
+		// If we are ready, then draw the locations
+		if (mDest != null && mOrig != null) {
+			drawLocations(location);
+		}
 	}
 
 	/* (non-Javadoc)
