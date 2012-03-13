@@ -31,6 +31,7 @@ public class UserLocationOverlay extends MyLocationOverlay {
 	private Context mContext;
 	private ArrayList<OverlayItem> mDest = new ArrayList<OverlayItem>();
 	private MapView mMapView;
+	private OnLocationChangedListener mOnLocationChangedListener;
 	private GeoPoint mOrig;
 	
 	/**
@@ -166,5 +167,18 @@ public class UserLocationOverlay extends MyLocationOverlay {
 		protected int getLonCenterE6() {
 			return (int) (mLonMaxE6 + mLonMinE6)/2;
 		}
+	}
+	
+	public void setOnLocationChangedListener(OnLocationChangedListener listener) {
+		mOnLocationChangedListener = listener;
+	}
+	
+	public interface OnLocationChangedListener {
+		
+		/**
+		 * @param location	The current location of the user.
+		 */
+		public void onLocationChanged(Location location);
+		
 	}
 }

@@ -5,6 +5,7 @@ import java.util.Date;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.os.Build;
 import android.preference.Preference;
 import android.util.AttributeSet;
 
@@ -52,10 +53,9 @@ public class FeedbackPreference extends Preference {
 		i.setType("text/plain");
 		i.putExtra(Intent.EXTRA_EMAIL, new String[] { res.getString(R.string.feedback_address) });
 		String subject = res.getString(R.string.feedback_subject) + (new Date().getTime()) + 
-				" (" + res.getString(R.string.version_name) + ")";
+				" (" + res.getString(R.string.version_name) + " on " + Build.MANUFACTURER + " " +
+				Build.MODEL + ")";
 		i.putExtra(Intent.EXTRA_SUBJECT, subject);
 		mContext.startActivity(Intent.createChooser(i, res.getString(R.string.feedback_menu_title)));
 	}
-
-	
 }
