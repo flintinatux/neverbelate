@@ -422,6 +422,7 @@ com.google.ads.AdRequest:
     196:197:public void setPlusOneOptOut(boolean)
     208:209:public void setKeywords(java.util.Set)
     238:239:public void setExtras(java.util.Map)
+    281:282:public void setTesting(boolean)
     385:386:public void setTestDevices(java.util.Set)
 com.google.ads.AdSize:
     38:39:public AdSize(int,int)
@@ -527,71 +528,6 @@ com.madhackerdesigns.neverbelate.provider.AlertsProvider:
     private static final int ALERT_ID
     632:632:com.madhackerdesigns.neverbelate.provider.AlertsProvider$DatabaseHelper getOpenHelperForTest()
 com.madhackerdesigns.neverbelate.service.CalendarHelper:
-    public static final java.lang.String CALENDAR_DEFAULT_SORT_ORDER
-    public static final java.lang.String DISPLAY_NAME
-    public static final java.lang.String HIDDEN
-    public static final java.lang.String LOCATION
-    public static final java.lang.String CALENDAR_NAME
-    public static final java.lang.String URL
-    public static final java.lang.String ACCESS_LEVEL
-    public static final java.lang.String COLOR
-    public static final int CONTRIBUTOR_ACCESS
-    public static final int EDITOR_ACCESS
-    public static final int FREEBUSY_ACCESS
-    public static final int NO_ACCESS
-    public static final int OVERRIDE_ACCESS
-    public static final int OWNER_ACCESS
-    public static final int READ_ACCESS
-    public static final int RESPOND_ACCESS
-    public static final int ROOT_ACCESS
-    public static final java.lang.String SELECTED
-    public static final java.lang.String SYNC_EVENTS
-    public static final java.lang.String TIMEZONE
-    public static final java.lang.String ALL_DAY
-    public static final java.lang.String CALENDAR_ID
-    public static final java.lang.String COMMENTS_URI
-    public static final java.lang.String DESCRIPTION
-    public static final java.lang.String DTEND
-    public static final java.lang.String DTSTART
-    public static final java.lang.String DURATION
-    public static final java.lang.String EVENT_LOCATION
-    public static final java.lang.String EVENT_TIMEZONE
-    public static final java.lang.String EXDATE
-    public static final java.lang.String EXRULE
-    public static final java.lang.String HAS_ALARM
-    public static final java.lang.String HAS_EXTENDED_PROPERTIES
-    public static final java.lang.String HTML_URI
-    public static final java.lang.String LAST_DATE
-    public static final java.lang.String ORIGINAL_ALL_DAY
-    public static final java.lang.String ORIGINAL_EVENT
-    public static final java.lang.String ORIGINAL_INSTANCE_TIME
-    public static final java.lang.String RDATE
-    public static final java.lang.String RRULE
-    public static final java.lang.String SELF_ATTENDEE_STATUS
-    public static final java.lang.String STATUS
-    public static final int STATUS_CANCELED
-    public static final int STATUS_CONFIRMED
-    public static final int STATUS_TENTATIVE
-    public static final java.lang.String TITLE
-    public static final java.lang.String TRANSPARENCY
-    public static final int TRANSPARENCY_OPAQUE
-    public static final int TRANSPARENCY_TRANSPARENT
-    public static final java.lang.String VISIBILITY
-    public static final int VISIBILITY_CONFIDENTIAL
-    public static final int VISIBILITY_DEFAULT
-    public static final int VISIBILITY_PRIVATE
-    public static final int VISIBILITY_PUBLIC
-    public static final java.lang.String EVENT_ID
-    public static final java.lang.String EVENT_NAME
-    public static final java.lang.String VALUE
-    public static final java.lang.String BEGIN
-    public static final java.lang.String INSTANCE_DEFAULT_SORT_ORDER
-    public static final java.lang.String END
-    public static final java.lang.String END_DAY
-    public static final java.lang.String END_MINUTE
-    public static final java.lang.String SORT_CALENDAR_VIEW
-    public static final java.lang.String START_DAY
-    public static final java.lang.String START_MINUTE
     public static final int PROJ_EVENT_ID
     public static final int PROJ_TITLE
     public static final int PROJ_ALL_DAY
@@ -600,6 +536,15 @@ com.madhackerdesigns.neverbelate.service.CalendarHelper:
     public static final int PROJ_EVENT_LOCATION
     public static final int PROJ_DESCRIPTION
     public static final int PROJ_COLOR
+com.madhackerdesigns.neverbelate.service.CalendarHelperBase:
+    public static final java.lang.String COLOR
+    public static final java.lang.String ALL_DAY
+    public static final java.lang.String DESCRIPTION
+    public static final java.lang.String EVENT_LOCATION
+    public static final java.lang.String TITLE
+    public static final java.lang.String EVENT_ID
+    public static final java.lang.String BEGIN
+    public static final java.lang.String END
 com.madhackerdesigns.neverbelate.service.NeverBeLateService:
     private static final long DELTA
     private static final float MARGIN
@@ -655,7 +600,6 @@ com.madhackerdesigns.neverbelate.settings.PreferenceHelper:
     222:222:public boolean isWarnNoLocation()
 com.madhackerdesigns.neverbelate.ui.LauncherActivity:
     private static final boolean ADMOB
-    private static final boolean ADMOB_TEST
     private static final int DLG_COMING_SOON
     private static final int DLG_QUICK_TOUR
     private static final int DLG_WHATS_NEW
@@ -699,15 +643,14 @@ com.madhackerdesigns.neverbelate.ui.RegistrationForm:
     private static final int DIALOG_THANKS
 com.madhackerdesigns.neverbelate.ui.UserLocationOverlay:
     private static final java.lang.String TOAST_MESSAGE
+com.madhackerdesigns.neverbelate.ui.UserLocationOverlay$MapBounds:
+    private static final double RATIO
 com.madhackerdesigns.neverbelate.ui.WarningDialog:
     private static final int ALERT_TOKEN
     private static final java.lang.String LOG_TAG
     private static final boolean ADMOB
-    private static final boolean ADMOB_TEST
     private static final java.lang.String PACKAGE_NAME
     public static final java.lang.String EXTRA_URI
-com.madhackerdesigns.neverbelate.ui.WarningDialog$MapBounds:
-    private static final double RATIO
 com.madhackerdesigns.neverbelate.util.AdHelper:
     private static final java.lang.String AD_HELPER_VALUES
     private static final long AD_FREQUENCY

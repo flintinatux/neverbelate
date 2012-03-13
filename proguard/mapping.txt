@@ -717,7 +717,6 @@ com.google.ads.AdRequest -> com.google.ads.ai:
     void addKeyword(java.lang.String) -> a
     void addExtra(java.lang.String,java.lang.Object) -> a
     void setLocation(android.location.Location) -> a
-    void setTesting$1385ff() -> a
     java.util.Map getRequestMap(android.content.Context) -> a
     void addTestDevice(java.lang.String) -> b
 com.google.ads.AdRequest$ErrorCode -> com.google.ads.aa:
@@ -1172,12 +1171,18 @@ com.madhackerdesigns.neverbelate.provider.AlertsProvider -> com.madhackerdesigns
 com.madhackerdesigns.neverbelate.provider.AlertsProvider$DatabaseHelper -> com.madhackerdesigns.neverbelate.provider.c:
     void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
     void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
-com.madhackerdesigns.neverbelate.service.CalendarHelper -> com.madhackerdesigns.neverbelate.service.CalendarHelper:
+com.madhackerdesigns.neverbelate.service.CalendarHelper -> com.madhackerdesigns.neverbelate.service.a:
+    android.net.Uri getInstancesUri() -> a
+    java.lang.String[] getInstancesProjection() -> b
+com.madhackerdesigns.neverbelate.service.CalendarHelperBase -> com.madhackerdesigns.neverbelate.service.CalendarHelperBase:
     java.lang.String[] INSTANCES_PROJECTION -> a
-    android.net.Uri mRemindersUri -> c
-    android.net.Uri mEventsUri -> d
-    android.net.Uri mCalendarsUri -> e
     android.net.Uri mInstancesUri -> b
+    android.net.Uri getInstancesUri() -> a
+    java.lang.String[] getInstancesProjection() -> b
+com.madhackerdesigns.neverbelate.service.CalendarHelperICS -> com.madhackerdesigns.neverbelate.service.CalendarHelperICS:
+    java.lang.String[] INSTANCES_PROJECTION -> a
+    android.net.Uri getInstancesUri() -> a
+    java.lang.String[] getInstancesProjection() -> b
 com.madhackerdesigns.neverbelate.service.LocationReceiver -> com.madhackerdesigns.neverbelate.service.LocationReceiver:
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
 com.madhackerdesigns.neverbelate.service.NeverBeLateService -> com.madhackerdesigns.neverbelate.service.NeverBeLateService:
@@ -1202,7 +1207,7 @@ com.madhackerdesigns.neverbelate.service.NeverBeLateService -> com.madhackerdesi
     android.os.IBinder onBind(android.content.Intent) -> onBind
     int[] $SWITCH_TABLE$com$madhackerdesigns$neverbelate$service$NeverBeLateService$DirectionsApiStatus() -> e
     int[] $SWITCH_TABLE$com$madhackerdesigns$neverbelate$settings$PreferenceHelper$NotificationMethod() -> f
-com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus -> com.madhackerdesigns.neverbelate.service.a:
+com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus -> com.madhackerdesigns.neverbelate.service.b:
     com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus OK -> a
     com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus NOT_FOUND -> b
     com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus ZERO_RESULTS -> c
@@ -1434,21 +1439,40 @@ com.madhackerdesigns.neverbelate.ui.TestActivity -> com.madhackerdesigns.neverbe
     com.madhackerdesigns.neverbelate.util.AdHelper mAdHelper -> a
     void onCreate(android.os.Bundle) -> onCreate
     com.madhackerdesigns.neverbelate.util.AdHelper access$0(com.madhackerdesigns.neverbelate.ui.TestActivity) -> a
-com.madhackerdesigns.neverbelate.ui.TestActivity$1 -> com.madhackerdesigns.neverbelate.ui.ae:
+com.madhackerdesigns.neverbelate.ui.TestActivity$1 -> com.madhackerdesigns.neverbelate.ui.af:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$2 -> com.madhackerdesigns.neverbelate.ui.ac:
+com.madhackerdesigns.neverbelate.ui.TestActivity$2 -> com.madhackerdesigns.neverbelate.ui.ad:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$3 -> com.madhackerdesigns.neverbelate.ui.ad:
+com.madhackerdesigns.neverbelate.ui.TestActivity$3 -> com.madhackerdesigns.neverbelate.ui.ae:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$4 -> com.madhackerdesigns.neverbelate.ui.af:
+com.madhackerdesigns.neverbelate.ui.TestActivity$4 -> com.madhackerdesigns.neverbelate.ui.ag:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
 com.madhackerdesigns.neverbelate.ui.UserLocationOverlay -> com.madhackerdesigns.neverbelate.ui.UserLocationOverlay:
     android.content.Context mContext -> a
+    java.util.ArrayList mDest -> b
+    com.google.android.maps.MapView mMapView -> c
+    com.google.android.maps.GeoPoint mOrig -> d
+    void drawLocations() -> a
+    void drawLocations(android.location.Location) -> a
+    void onLocationChanged(android.location.Location) -> onLocationChanged
     boolean onTap(com.google.android.maps.GeoPoint,com.google.android.maps.MapView) -> onTap
+    void addDestination(com.google.android.maps.GeoPoint,java.lang.String,java.lang.String) -> a
+    void setOrigin(com.google.android.maps.GeoPoint) -> a
+com.madhackerdesigns.neverbelate.ui.UserLocationOverlay$MapBounds -> com.madhackerdesigns.neverbelate.ui.ac:
+    int mLatMinE6 -> a
+    int mLatMaxE6 -> b
+    int mLonMinE6 -> c
+    int mLonMaxE6 -> d
+    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay this$0 -> e
+    void addPoint(int,int) -> a
+    int getLatSpanE6() -> a
+    int getLonSpanE6() -> b
+    int getLatCenterE6() -> c
+    int getLonCenterE6() -> d
 com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverbelate.ui.WarningDialog:
     com.madhackerdesigns.neverbelate.util.AdHelper mAdHelper -> a
     com.pontiflex.mobile.webview.sdk.IAdManager mAdManager -> b
@@ -1458,7 +1482,7 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverb
     java.util.ArrayList mEventHolders -> f
     boolean mInsistentStopped -> g
     android.widget.ViewSwitcher mSwitcher -> h
-    com.google.android.maps.MyLocationOverlay mUserLocationOverlay -> i
+    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay mUserLocationOverlay -> i
     void onCreate(android.os.Bundle) -> onCreate
     void switchToTrafficView() -> a
     void onPause() -> onPause
@@ -1471,6 +1495,7 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverb
     void access$4(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> e
     void access$5(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> f
     void access$6(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> g
+    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay access$7(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> h
 com.madhackerdesigns.neverbelate.ui.WarningDialog$1 -> com.madhackerdesigns.neverbelate.ui.aa:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.view.View) -> onClick
@@ -1497,17 +1522,6 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog$EventHolder -> com.madhackerde
     java.lang.String title -> b
     java.lang.String location -> c
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> d
-com.madhackerdesigns.neverbelate.ui.WarningDialog$MapBounds -> com.madhackerdesigns.neverbelate.ui.ag:
-    int mLatMinE6 -> a
-    int mLatMaxE6 -> b
-    int mLonMinE6 -> c
-    int mLonMaxE6 -> d
-    com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> e
-    void addPoint(int,int) -> a
-    int getLatSpanE6() -> a
-    int getLonSpanE6() -> b
-    int getLatCenterE6() -> c
-    int getLonCenterE6() -> d
 com.madhackerdesigns.neverbelate.util.AdHelper -> com.madhackerdesigns.neverbelate.util.AdHelper:
     android.content.SharedPreferences mSettings -> a
     android.content.SharedPreferences$Editor mEditor -> b

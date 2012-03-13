@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="whats_new_title">What\'s new in NeverBeLate™</string>
-    <integer name="whats_new_version">15</integer>
-    <string name="whats_new_message">Version 1.1_build-17:\n\nFixed a bug to prevent force-closes associated 
+    <integer name="whats_new_version">16</integer>
+    <string name="whats_new_message">Version 1.1_build-18:\n\nAdded experimental support for Android 4.0+ 
+        devices! If you have a device running Android 4.0 and above (ex: a Galaxy Nexus), please try it out 
+        and then send me some feedback about whether it works or not. Also solidified the traffic view design 
+        to prevent frequent force-closes when your location is slow to update.\n
+        \nVersion 1.1_build-17:\n\nFixed a bug to prevent force-closes associated 
         with a null user location (such as when all location providers are disabled). Also revised the Quick 
         Tour to make the setup process easier to understand.\n
         \nVersion 1.1_build-16:\n\nAdded the new Quick Tour! It will help you get 

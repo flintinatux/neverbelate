@@ -43,7 +43,6 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 
 	// Static constants
 	private static final boolean ADMOB = true;
-	private static final boolean ADMOB_TEST = false;
 	private static final int DLG_COMING_SOON = 0;
 	private static final int DLG_QUICK_TOUR = 1;
 	private static final int DLG_WHATS_NEW = 2;
@@ -153,7 +152,6 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 			AdView adView = (AdView) findViewById(R.id.ad_view);
 		    if (adView != null) {
 		    	AdRequest request = new AdRequest();
-				request.setTesting(ADMOB_TEST);
 				adView.loadAd(request);
 		    	Logger.d(LOG_TAG, "AdMob banner loaded.");
 		    }

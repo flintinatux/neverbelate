@@ -1,3 +1,5 @@
+com.madhackerdesigns.neverbelate.service.CalendarHelperBase
+com.madhackerdesigns.neverbelate.service.CalendarHelperICS
 com.madhackerdesigns.neverbelate.util.AdHelper
 com.madhackerdesigns.neverbelate.util.AdHelper: AdHelper(android.content.Context)
 com.pontiflex.mobile.webview.models.ResourceData
@@ -166,7 +168,6 @@ com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: void setIte
 com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: java.lang.String getAdditionalData(java.lang.String)
 com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: void setAdditionalData(java.lang.String,java.lang.String)
 com.madhackerdesigns.neverbelate.provider.AlertsContract
-com.madhackerdesigns.neverbelate.service.CalendarHelper
 com.madhackerdesigns.neverbelate.ui.EdgeScrollView
 com.madhackerdesigns.neverbelate.ui.MapOverlay
 com.madhackerdesigns.neverbelate.ui.UserLocationOverlay

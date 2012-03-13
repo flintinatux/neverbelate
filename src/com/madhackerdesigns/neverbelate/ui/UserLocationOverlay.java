@@ -29,7 +29,7 @@ public class UserLocationOverlay extends MyLocationOverlay {
 	private static final String TOAST_MESSAGE = "This is your current location";
 	
 	private Context mContext;
-	private ArrayList<OverlayItem> mDest;
+	private ArrayList<OverlayItem> mDest = new ArrayList<OverlayItem>();
 	private MapView mMapView;
 	private GeoPoint mOrig;
 	
@@ -103,7 +103,7 @@ public class UserLocationOverlay extends MyLocationOverlay {
 		super.onLocationChanged(location);
 		
 		// If we are ready, then draw the locations
-		if (mDest != null && mOrig != null) {
+		if (mDest.size() > 0 && mOrig != null) {
 			drawLocations(location);
 		}
 	}

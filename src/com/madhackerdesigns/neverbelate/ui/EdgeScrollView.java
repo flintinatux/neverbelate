@@ -17,7 +17,7 @@ public class EdgeScrollView extends ScrollView {
 	public EdgeScrollView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		setVerticalFadingEdgeEnabled(true);
-		setFadingEdgeLength(20);
+		setFadingEdgeLength(25);
 		edgeColor = context.getResources().getColor(R.color.blue_electric);
 	}
 

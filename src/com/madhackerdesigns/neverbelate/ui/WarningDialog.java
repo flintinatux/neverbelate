@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -20,7 +19,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -36,11 +34,7 @@ import com.google.ads.AdRequest;
 import com.google.ads.AdView;
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapActivity;
-import com.google.android.maps.MapController;
 import com.google.android.maps.MapView;
-import com.google.android.maps.MyLocationOverlay;
-import com.google.android.maps.Overlay;
-import com.google.android.maps.OverlayItem;
 import com.madhackerdesigns.neverbelate.R;
 import com.madhackerdesigns.neverbelate.provider.AlertsContract;
 import com.madhackerdesigns.neverbelate.provider.AlertsHelper;
@@ -63,7 +57,6 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	private static final int ALERT_TOKEN = 1;
 	private static final String LOG_TAG = "NeverBeLateWarning";
 	private static final boolean ADMOB = true;
-	private static final boolean ADMOB_TEST = false;
 	
 	// static strings for intent extra keys
 	private static final String PACKAGE_NAME = "com.madhackerdesigns.neverbelate";
@@ -148,7 +141,6 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		if (ADMOB) {
 			AdRequest request = new AdRequest();
 			if (providersEnabled) { request.setLocation(mUserLocationOverlay.getLastFix()); }
-			request.setTesting(ADMOB_TEST);
 			AdView adView = (AdView) findViewById(R.id.ad_view);
 		    adView.loadAd(request);
 		    Logger.d(LOG_TAG, "AdMob banner loaded.");
@@ -209,7 +201,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 					String unitMinutes = res.getString(R.string.unit_minutes);
 					String departureString;
 					if (departureTime > now) {
-						departureString = "in " + (int)((departureTime - now) / 60000) 
+						departureString = "in " + (int)((departureTime - now) / 60000 + 1) 
 							+ " " + unitMinutes + "!";
 					} else {
 						departureString = "NOW!";
@@ -393,7 +385,9 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		backButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
-				switchToAlertListView();
+				switchToAlertListView(); 
+				mUserLocationOverlay.disableMyLocation();
+				mUserLocationOverlay.disableCompass();
 			}
 			
 		});
