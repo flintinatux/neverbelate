@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -19,6 +20,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
+import android.graphics.drawable.Drawable;
+import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -34,7 +37,10 @@ import com.google.ads.AdRequest;
 import com.google.ads.AdView;
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapActivity;
+import com.google.android.maps.MapController;
 import com.google.android.maps.MapView;
+import com.google.android.maps.Overlay;
+import com.google.android.maps.OverlayItem;
 import com.madhackerdesigns.neverbelate.R;
 import com.madhackerdesigns.neverbelate.provider.AlertsContract;
 import com.madhackerdesigns.neverbelate.provider.AlertsHelper;
@@ -42,6 +48,7 @@ import com.madhackerdesigns.neverbelate.service.NeverBeLateService;
 import com.madhackerdesigns.neverbelate.service.ServiceCommander;
 import com.madhackerdesigns.neverbelate.service.WakefulServiceReceiver;
 import com.madhackerdesigns.neverbelate.settings.PreferenceHelper;
+import com.madhackerdesigns.neverbelate.ui.UserLocationOverlay.OnLocationChangedListener;
 import com.madhackerdesigns.neverbelate.util.AdHelper;
 import com.madhackerdesigns.neverbelate.util.Logger;
 import com.pontiflex.mobile.webview.sdk.AdManagerFactory;
@@ -72,8 +79,14 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	private AlertQueryHandler mHandler;
 	private ArrayList<EventHolder> mEventHolders = new ArrayList<EventHolder>();
 	private boolean mInsistentStopped = false;
+	private MapView mMapView;
 	private ViewSwitcher mSwitcher;
 	private UserLocationOverlay mUserLocationOverlay;
+	
+	// fields for handling locations
+	private ArrayList<OverlayItem> mDest = new ArrayList<OverlayItem>();
+	private OnLocationChangedListener mOnLocationChangedListener;
+	private GeoPoint mOrig;
 	
 	/* (non-Javadoc)
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
@@ -101,8 +114,8 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		Logger.d(LOG_TAG, "ViewSwitcher loaded.");
 		
 		// Enable the user location to the map (early, to feed the location to the AdMob banner)
-		MapView mapView = (MapView) findViewById(R.id.mapview);
-		mUserLocationOverlay = new UserLocationOverlay(this, mapView);
+		if (mMapView == null) { mMapView = (MapView) findViewById(R.id.mapview); }
+		mUserLocationOverlay = new UserLocationOverlay(this, mMapView);
 		boolean providersEnabled = mUserLocationOverlay.enableMyLocation();
 		if (providersEnabled) { 
 			Logger.d(LOG_TAG, "User location updates enabled."); 
@@ -373,7 +386,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		Logger.d(LOG_TAG, "Loading traffic view.");
 		
 		// Get mapview and add zoom controls
-		MapView mapView = (MapView) findViewById(R.id.mapview);
+		MapView mapView = mMapView;
 		if (mapView != null) { Logger.d(LOG_TAG, "MapView loaded."); }
 		mapView.setBuiltInZoomControls(true);		
 		
@@ -394,8 +407,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	
 		// Get the UserLocationOverlay to draw both flags and stay updated
 		UserLocationOverlay overlay = mUserLocationOverlay;
-		GeoPoint orig = null;
-				
+		
 		// Parse the json directions data
 		final Iterator<EventHolder> eventIterator = mEventHolders.iterator();
 		do {
@@ -409,10 +421,10 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 				
 				// If the origin is null, pull the origin coordinates
 				JSONObject leg = route.getJSONArray("legs").getJSONObject(0);
-				if (orig == null) {
+				if (mOrig == null) {
 					int latOrigE6 = (int) (1.0E6 * leg.getJSONObject("start_location").getDouble("lat"));
 					int lonOrigE6 = (int) (1.0E6 * leg.getJSONObject("start_location").getDouble("lng"));
-					orig = new GeoPoint(latOrigE6, lonOrigE6);
+					mOrig = new GeoPoint(latOrigE6, lonOrigE6);
 				}
 
 				// Get the destination coordinates from the leg
@@ -421,16 +433,29 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 				
 				// Create a GeoPoint for the destination and push onto MapOverlay
 				GeoPoint destPoint = new GeoPoint(latDestE6, lonDestE6);
-				overlay.addDestination(destPoint, eh.title, eh.location);
+				mDest.add(new OverlayItem(destPoint, eh.title, eh.location));
 			} catch (JSONException e) {
 				e.printStackTrace();
 				throw new RuntimeException(e);
 			}
 		} while (eventIterator.hasNext());
 		
-		// Set the origin and draw the locations
-		overlay.setOrigin(orig);
-		overlay.drawLocations();
+		// Create and store new OnLocationChangedListener
+		if (mOnLocationChangedListener == null) {
+			mOnLocationChangedListener = new UserLocationOverlay.OnLocationChangedListener() {
+				
+				public void onLocationChanged(Location location) {
+					// If we are ready, then draw the locations
+					if (mDest.size() > 0 && mOrig != null) {
+						drawLocations(location);
+					}
+				}
+			};
+		}
+		
+		// Set the listener and draw the initial locations
+		overlay.setOnLocationChangedListener(mOnLocationChangedListener);
+		mOnLocationChangedListener.onLocationChanged(null);
 		overlay.enableMyLocation();
 		overlay.enableCompass();
 		
@@ -447,6 +472,51 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		
 	}
 	
+	public void drawLocations(Location current) {
+		final MapView mapView = mMapView;
+		
+		// Use origin point if current is null
+		GeoPoint userLoc;
+		if (current != null) {
+			int lat = (int) (1.0E6 * current.getLatitude());
+			int lon = (int) (1.0E6 * current.getLongitude());
+			userLoc = new GeoPoint(lat, lon);
+		} else {
+			userLoc = mOrig;
+		}
+		
+		// Add the user location to the map bounds
+		MapBounds bounds = new MapBounds();
+		bounds.addPoint(userLoc.getLatitudeE6(), userLoc.getLongitudeE6());
+		
+		// Create an overlay with a blue flag for the user location
+		Drawable blueDrawable = getResources().getDrawable(R.drawable.flag_blue);
+		MapOverlay blueOverlay = new MapOverlay(this, blueDrawable);
+		blueOverlay.addOverlay(new OverlayItem(userLoc, null, null));
+		
+		// Add the blue overlay
+		List<Overlay> mapOverlays = mapView.getOverlays();
+		mapOverlays.clear();
+		mapOverlays.add(blueOverlay);
+		
+		// Always rebuild red overlay to get the bounds correct
+		Drawable redDrawable = getResources().getDrawable(R.drawable.flag_red);
+		MapOverlay redOverlay = new MapOverlay(this, redDrawable);
+		final Iterator<OverlayItem> destIterator = mDest.iterator();
+		do {
+			OverlayItem item = destIterator.next();
+			redOverlay.addOverlay(item);
+			GeoPoint dest = item.getPoint();
+			bounds.addPoint(dest.getLatitudeE6(), dest.getLongitudeE6());
+		} while (destIterator.hasNext());
+		mapOverlays.add(redOverlay); 
+		
+		// Get map controller, animate to zoom center, and set zoom span
+		final MapController mapController = mapView.getController();
+		GeoPoint zoomCenter = new GeoPoint(bounds.getLatCenterE6(), bounds.getLonCenterE6());
+		mapController.animateTo(zoomCenter);
+		mapController.zoomToSpan(bounds.getLatSpanE6(), bounds.getLonSpanE6());
+	}
 	
 	/* (non-Javadoc)
 	 * @see com.google.android.maps.MapActivity#onPause()
@@ -491,5 +561,43 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		String title;
 		String location;
 	}
-
+	
+	private class MapBounds {
+		private int mLatMinE6 = 0;
+		private int mLatMaxE6 = 0;
+		private int mLonMinE6 = 0;
+		private int mLonMaxE6 = 0;
+		private static final double RATIO = 1.25;
+		
+		protected MapBounds() {
+			super();
+		}
+		
+		protected void addPoint(int latE6, int lonE6) {
+			// Check if this latitude is the minimum
+			if (mLatMinE6 == 0 || latE6 < mLatMinE6) { mLatMinE6 = latE6; }
+			// Check if this latitude is the maximum
+			if (mLatMaxE6 == 0 || latE6 > mLatMaxE6) { mLatMaxE6 = latE6; }
+			// Check if this longitude is the minimum
+			if (mLonMinE6 == 0 || lonE6 < mLonMinE6) { mLonMinE6 = lonE6; }
+			// Check if this longitude is the maximum
+			if (mLonMaxE6 == 0 || lonE6 > mLonMaxE6) { mLonMaxE6 = lonE6; }
+		}
+		
+		protected int getLatSpanE6() {
+			return (int) Math.abs(RATIO * (mLatMaxE6 - mLatMinE6));
+		}
+		
+		protected int getLonSpanE6() {
+			return (int) Math.abs(RATIO * (mLonMaxE6 - mLonMinE6));
+		}
+		
+		protected int getLatCenterE6() {
+			return (int) (mLatMaxE6 + mLatMinE6)/2;
+		}
+		
+		protected int getLonCenterE6() {
+			return (int) (mLonMaxE6 + mLonMinE6)/2;
+		}
+	}
 }
