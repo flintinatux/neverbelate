@@ -85,7 +85,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	
 	// fields for handling locations
 	private ArrayList<OverlayItem> mDest = new ArrayList<OverlayItem>();
-	private OnLocationChangedListener mOnLocationChangedListener;
+	private OnLocationChangedListener mListener;
 	private GeoPoint mOrig;
 	
 	/* (non-Javadoc)
@@ -441,8 +441,8 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		} while (eventIterator.hasNext());
 		
 		// Create and store new OnLocationChangedListener
-		if (mOnLocationChangedListener == null) {
-			mOnLocationChangedListener = new UserLocationOverlay.OnLocationChangedListener() {
+		if (mListener == null) {
+			mListener = new UserLocationOverlay.OnLocationChangedListener() {
 				
 				public void onLocationChanged(Location location) {
 					// If we are ready, then draw the locations
@@ -454,8 +454,8 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		}
 		
 		// Set the listener and draw the initial locations
-		overlay.setOnLocationChangedListener(mOnLocationChangedListener);
-		mOnLocationChangedListener.onLocationChanged(null);
+		overlay.setOnLocationChangedListener(mListener);
+		mListener.onLocationChanged(null);
 		overlay.enableMyLocation();
 		overlay.enableCompass();
 		

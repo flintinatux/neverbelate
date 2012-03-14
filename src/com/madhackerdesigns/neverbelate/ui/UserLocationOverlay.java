@@ -20,7 +20,7 @@ public class UserLocationOverlay extends MyLocationOverlay {
 	private static final String TOAST_MESSAGE = "This is your current location";
 	
 	private Context mContext;
-	private OnLocationChangedListener mOnLocationChangedListener;
+	private OnLocationChangedListener mListener;
 	
 	/**
 	 * @param context
@@ -40,7 +40,7 @@ public class UserLocationOverlay extends MyLocationOverlay {
 		super.onLocationChanged(location);
 		
 		// Also callback to the listener
-		mOnLocationChangedListener.onLocationChanged(location);
+		if (mListener != null) { mListener.onLocationChanged(location); }
 	}
 
 	/* (non-Javadoc)
@@ -57,7 +57,7 @@ public class UserLocationOverlay extends MyLocationOverlay {
 	}
 	
 	public void setOnLocationChangedListener(OnLocationChangedListener listener) {
-		mOnLocationChangedListener = listener;
+		mListener = listener;
 	}
 	
 	public interface OnLocationChangedListener {
