@@ -68,6 +68,10 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	// static strings for intent extra keys
 	private static final String PACKAGE_NAME = "com.madhackerdesigns.neverbelate";
 	public static final String EXTRA_URI = PACKAGE_NAME + ".uri";
+	
+	// static strings for view tags
+	private static final String TAG_ALERT_LIST = "alert_list";
+	private static final String TAG_TRAFFIC_VIEW = "traffic_view";
 		
 	// fields to hold shared preferences and ad stuff
 	private AdHelper mAdHelper;
@@ -108,6 +112,8 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		ViewSwitcher switcher = (ViewSwitcher) findViewById(R.id.view_switcher);
 		View alertListView = View.inflate(this, R.layout.alert_list_view, null);
 		View trafficView = View.inflate(this, R.layout.traffic_view_layout, null);
+		alertListView.setTag(TAG_ALERT_LIST);
+		trafficView.setTag(TAG_TRAFFIC_VIEW);
 		switcher.addView(alertListView);
 		switcher.addView(trafficView);
 		mSwitcher = switcher;
@@ -538,7 +544,8 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	protected void onResume() {
 		super.onResume();
 		// Re-enable the user location
-		if (mUserLocationOverlay != null) { 
+		if (mUserLocationOverlay != null && 
+				((String) mSwitcher.getCurrentView().getTag()).equals(TAG_TRAFFIC_VIEW)) { 
 			mUserLocationOverlay.enableMyLocation();
 			mUserLocationOverlay.enableCompass();
 		}
