@@ -11,14 +11,18 @@
 	<string name="admob_id">a14d952e8939105</string>
 	
 <!-- Strings for Launcher Activity -->
+	<string name="btn_create_event_text">Create New Event</string>
 	<string name="btn_enable_text">Enable NeverBeLate™</string>
 	<string name="btn_quick_tour_text">View\nQuick Tour</string>
 	<string name="btn_configure_text">Configure Settings</string>
 	<string name="btn_share_text">Share with a Friend</string>
 	<string name="btn_video_tour_text">Watch\nVideo Tour</string>
 	<string name="content_description_logo">NeverBeLate™ White Rabbit Logo</string>
+	<string name="create_event">Create event</string>
 	<string name="dlg_coming_soon_msg">This feature is coming soon, so be sure to check back later in the Android Market for updates!</string>
 	<string name="dlg_coming_soon_title">Coming soon</string>
+	<string name="dlg_first_time_msg">It looks like this is your first time enabling NeverBeLate™. Since NeverBeLate™ is designed to be a set-it-and-forget-it style app, in most cases you will never need to change any other settings!\n\nBut just checking a box is kind of boring, isn\'t it? Click the button below to create a new event so you can see NeverBeLate™ in action for yourself. (Tip: Don\'t forget to use a searchable address for the event location!)</string>
+	<string name="dlg_first_time_title">Congratulations!</string>
 	<string name="dlg_qt_title">Check out the Quick Tour!</string>
 	<string name="dlg_qt_msg">Would you like to view the new Quick Tour? It will help you get up and running quickly, and should answer some of the questions you may have about how to make NeverBeLate™ work for you.\n\n(NOTE: if you do not view it now, you can always get back to it from the Quick Tour button on the main screen.)</string>
 	<string name="yes">Yes</string>

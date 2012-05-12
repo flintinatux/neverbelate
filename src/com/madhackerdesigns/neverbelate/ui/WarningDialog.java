@@ -192,6 +192,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		/* (non-Javadoc)
 		 * @see android.content.AsyncQueryHandler#onQueryComplete(int, java.lang.Object, android.database.Cursor)
 		 */
+		@SuppressWarnings("deprecation")
 		@Override
 		protected void onQueryComplete(int token, Object context, Cursor cursor) {
 			// Let the activity manage the cursor life-cycle
@@ -387,6 +388,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	/**
 	 * 
 	 */
+	@SuppressWarnings("deprecation")
 	private void loadTrafficView() {
 		// Log a little
 		Logger.d(LOG_TAG, "Loading traffic view.");
@@ -470,7 +472,8 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		if (adHelper.isTimeToShowAd()) {
 			adHelper.setAdShown(true);
 			mAdJustShown = true;
-			mAdManager.showAd();
+//			mAdManager.showAd();
+			mAdManager.startMultiOfferActivity();
 		} else {
 			// Otherwise, switch to the traffic view
 			switchToTrafficView();

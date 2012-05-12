@@ -44,10 +44,12 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 	// Static constants
 	private static final boolean ADMOB = true;
 	private static final int DLG_COMING_SOON = 0;
-	private static final int DLG_QUICK_TOUR = 1;
-	private static final int DLG_WHATS_NEW = 2;
+	private static final int DLG_FIRST_TIME = 1;
+	private static final int DLG_QUICK_TOUR = 2;
+	private static final int DLG_WHATS_NEW = 3;
 	private static final long FIVE_MINUTES = 5*60*1000;
 	private static final String KEY_AD_LAST_SHOWN = "app_state.ad_last_shown";
+	private static final String KEY_FIRST_TIME = "app_state.first_time";
 	private static final String KEY_QUICK_TOUR = "app_state.quick_tour";
 	private static final String KEY_WHATS_NEW = "app_state.whats_new";
     private static final String LOG_TAG = "NeverBeLateService";
@@ -71,12 +73,6 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		// Show TOS and EULA for acceptance
 		Eula.show(this);
 		
-		// TODO: If first load, download the registration letter copy.
-		// (For now, just get a static copy from the strings resources.) 
-		
-		// TODO: Present registration letter if first use.
-		// (Letter dialog will start registration activity.)
-				
 		// Set content view to launcher layout and load application resources
 		setContentView(R.layout.launcher);
 		
@@ -84,11 +80,18 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		mEnableBtn = (CheckBox) findViewById(R.id.btn_enable);
 		mEnableBtn.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
+			@SuppressWarnings("deprecation")
 			public void onCheckedChanged(CompoundButton buttonView,
 					boolean isChecked) {
 				// Change the enabled state and enforce the change
 				mPrefs.setNeverLateEnabled(isChecked);
 				sendBroadcast(new Intent(LauncherActivity.this, StartupReceiver.class));
+				
+				// If this is first time use, encourage user to create new event
+				if (! mAppState.getBoolean(KEY_FIRST_TIME, false)) {
+					mAppState.edit().putBoolean(KEY_FIRST_TIME, true).commit();
+					showDialog(DLG_FIRST_TIME);
+				}
 			}
 			
 		});
@@ -116,14 +119,15 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		});
 		
 		// Create a coming soon dialog for features not yet implemented
-		OnClickListener comingSoonListener = new OnClickListener() {
+		((Button) findViewById(R.id.btn_create_event)).setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
-				showDialog(DLG_COMING_SOON);
+				Intent intent = new Intent(Intent.ACTION_EDIT);
+				intent.setType("vnd.android.cursor.item/event");
+				startActivity(intent);
 			}
 			
-		};
-		((Button) findViewById(R.id.btn_video_tour)).setOnClickListener(comingSoonListener);
+		});
 		
 		// Point the Quick Tour button to the new Quick Tour
 		((Button) findViewById(R.id.btn_quick_tour)).setOnClickListener(new OnClickListener() {
@@ -186,6 +190,19 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 			           }
 			       });
 			break;
+		case DLG_FIRST_TIME:
+			builder.setTitle(R.string.dlg_first_time_title)
+				   .setMessage(R.string.dlg_first_time_msg)
+			       .setCancelable(true)
+			       .setPositiveButton(R.string.create_event, new DialogInterface.OnClickListener() {
+			           public void onClick(DialogInterface dialog, int id) {
+			        	   Intent intent = new Intent(Intent.ACTION_EDIT);
+			               intent.setType("vnd.android.cursor.item/event");
+			               startActivity(intent);
+			        	   dialog.cancel();
+			           }
+			       });
+			break;
 		case DLG_WHATS_NEW:
 			builder.setTitle(R.string.whats_new_title)
 				   .setMessage(R.string.whats_new_message)
@@ -201,6 +218,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 					})
 					.setOnCancelListener(new OnCancelListener() {
 					
+						@SuppressWarnings("deprecation")
 						public void onCancel(DialogInterface dialog) {
 							// Check if the QuickTour has been viewed, and challenge if not
 							boolean seenQT = mAppState.getBoolean(KEY_QUICK_TOUR, false);
@@ -267,8 +285,9 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		mEnableBtn.setChecked(mPrefs.isNeverLateEnabled());
 	}
 
+	@SuppressWarnings("deprecation")
 	public void onEulaAgreedTo() {
-		// Show either What's New or Pontiflex ad after confirmation of EULA agreement
+		// Show either What's New or Pontiflex registration after confirmation of EULA agreement
 		int previous = mAppState.getInt(KEY_WHATS_NEW, 0);
 		int current = getResources().getInteger(R.integer.whats_new_version);
 		if (previous < current) { 
@@ -281,10 +300,17 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 				AdHelper adHelper = mAdHelper;
 				if (adHelper.isTimeToShowAd()) {
 					adHelper.setAdShown(true);
-					Logger.d("Showing Pontiflex ad");
+					Logger.d("Showing Pontiflex registration form");
 					mAppState.edit().putLong(KEY_AD_LAST_SHOWN, now).commit();
+//					IAdManager adManager = AdManagerFactory.createInstance(getApplication());
+//					adManager.showAd();
+					// Initialize the Pontiflex Ad Manager
 					IAdManager adManager = AdManagerFactory.createInstance(getApplication());
-					adManager.showAd();
+					// set registration mode to ad hoc, user can skip registration
+					adManager.setRegistrationRequired(false);
+					adManager.setRegistrationMode(IAdManager.RegistrationMode.RegistrationAdHoc);
+					// when you want to show registration dialog, invoke the startRegistrationActivity method on adManager
+					adManager.startRegistrationActivity();
 				}
 				adHelper.setWarningDismissed(true);
 			}

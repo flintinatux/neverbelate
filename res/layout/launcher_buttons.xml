@@ -17,13 +17,14 @@
             android:drawableTop="@drawable/ic_menu_help"
             android:text="@string/btn_quick_tour_text" />
 
-        <Button
-            android:id="@+id/btn_configure"
-            style="@style/LauncherButton"
-            android:drawableTop="@drawable/ic_menu_preferences"
-            android:text="@string/btn_configure_text" />
+	    <Button
+	        android:id="@+id/btn_configure"
+	        style="@style/LauncherButton"
+	        android:drawableTop="@drawable/ic_menu_preferences"
+	        android:text="@string/btn_configure_text" />
+    
     </LinearLayout>
-
+    
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,10 +38,10 @@
             android:text="@string/btn_share_text" />
 
         <Button
-            android:id="@+id/btn_video_tour"
+            android:id="@+id/btn_create_event"
             style="@style/LauncherButton"
-            android:drawableTop="@drawable/ic_menu_play_clip"
-            android:text="@string/btn_video_tour_text" />
+            android:drawableTop="@drawable/ic_menu_add"
+            android:text="@string/btn_create_event_text" />
     </LinearLayout>
 
 </LinearLayout>
