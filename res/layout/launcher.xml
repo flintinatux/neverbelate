@@ -22,13 +22,11 @@
 		    android:layout_height="wrap_content" 
 		    android:layout_gravity="center_horizontal" />
 		
-		<com.google.ads.AdView
+		<LinearLayout
 			android:id="@+id/ad_view"
 			android:layout_gravity="center|bottom"
 			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			ads:adUnitId="a14d952e8939105"
-	        ads:adSize="BANNER"   />
+			android:layout_width="wrap_content" />
 	  
 	</LinearLayout>
 

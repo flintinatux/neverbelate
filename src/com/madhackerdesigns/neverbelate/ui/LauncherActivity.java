@@ -22,8 +22,10 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.google.ads.AdRequest;
+import com.google.ads.AdSize;
 import com.google.ads.AdView;
 import com.madhackerdesigns.neverbelate.Eula;
 import com.madhackerdesigns.neverbelate.R;
@@ -55,6 +57,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
     private static final String LOG_TAG = "NeverBeLateService";
     private static final boolean PONTIFLEX = true;
 	private static final String PREF_APP_STATE = "app_state";
+	private static final String MY_ID = "a14d952e8939105";
 
 	// Private fields
 	private AdHelper mAdHelper;
@@ -153,12 +156,12 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		
 		// Load up an AdMob banner
 		if (ADMOB) {
-			AdView adView = (AdView) findViewById(R.id.ad_view);
-		    if (adView != null) {
-		    	AdRequest request = new AdRequest();
-				adView.loadAd(request);
-		    	Logger.d(LOG_TAG, "AdMob banner loaded.");
-		    }
+			AdView adView = new AdView(this, AdSize.BANNER, MY_ID);
+	    	LinearLayout layout = (LinearLayout) findViewById(R.id.ad_view);
+	    	layout.addView(adView);
+	    	AdRequest adRequest = new AdRequest();
+	    	adView.loadAd(adRequest);
+	    	Logger.d(LOG_TAG, "AdMob banner loaded.");
 		}
 	}
 

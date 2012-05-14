@@ -1,23 +1,23 @@
-android.support.v4.app.BackStackRecord -> android.support.v4.app.d:
+android.support.v4.app.BackStackRecord -> android.support.v4.app.a:
     android.support.v4.app.FragmentManagerImpl mManager -> a
     android.support.v4.app.BackStackRecord$Op mHead -> b
     android.support.v4.app.BackStackRecord$Op mTail -> c
     int mNumOp -> d
-    int mEnterAnim -> n
-    int mExitAnim -> o
-    int mPopEnterAnim -> p
-    int mPopExitAnim -> q
-    int mTransition -> e
-    int mTransitionStyle -> f
-    boolean mAddToBackStack -> g
-    boolean mAllowAddToBackStack -> r
-    java.lang.String mName -> h
-    boolean mCommitted -> s
-    int mIndex -> i
-    int mBreadCrumbTitleRes -> j
-    java.lang.CharSequence mBreadCrumbTitleText -> k
-    int mBreadCrumbShortTitleRes -> l
-    java.lang.CharSequence mBreadCrumbShortTitleText -> m
+    int mEnterAnim -> e
+    int mExitAnim -> f
+    int mPopEnterAnim -> g
+    int mPopExitAnim -> h
+    int mTransition -> i
+    int mTransitionStyle -> j
+    boolean mAddToBackStack -> k
+    boolean mAllowAddToBackStack -> l
+    java.lang.String mName -> m
+    boolean mCommitted -> n
+    int mIndex -> o
+    int mBreadCrumbTitleRes -> p
+    java.lang.CharSequence mBreadCrumbTitleText -> q
+    int mBreadCrumbShortTitleRes -> r
+    java.lang.CharSequence mBreadCrumbShortTitleText -> s
     void dump$ec96877(java.lang.String,java.io.PrintWriter) -> a
     void addOp(android.support.v4.app.BackStackRecord$Op) -> a
     android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment) -> a
@@ -25,6 +25,7 @@ android.support.v4.app.BackStackRecord -> android.support.v4.app.d:
     void bumpBackStackNesting(int) -> a
     int commitAllowingStateLoss() -> a
     void run() -> run
+    void popFromBackStack$1385ff() -> b
 android.support.v4.app.BackStackRecord$Op -> android.support.v4.app.b:
     android.support.v4.app.BackStackRecord$Op next -> a
     android.support.v4.app.BackStackRecord$Op prev -> b
@@ -49,50 +50,50 @@ android.support.v4.app.BackStackState -> android.support.v4.app.BackStackState:
     android.support.v4.app.BackStackRecord instantiate(android.support.v4.app.FragmentManagerImpl) -> a
     int describeContents() -> describeContents
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
-android.support.v4.app.BackStackState$1 -> android.support.v4.app.u:
+android.support.v4.app.BackStackState$1 -> android.support.v4.app.c:
     java.lang.Object[] newArray(int) -> newArray
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
 android.support.v4.app.Fragment -> android.support.v4.app.Fragment:
-    java.util.HashMap sClassMap -> a
-    int mState -> e
-    android.view.View mAnimatingAway -> f
-    int mStateAfterAnimating -> g
-    android.os.Bundle mSavedFragmentState -> h
-    android.util.SparseArray mSavedViewState -> i
-    int mIndex -> j
-    java.lang.String mWho -> b
-    android.os.Bundle mArguments -> k
-    android.support.v4.app.Fragment mTarget -> l
-    int mTargetIndex -> m
-    int mTargetRequestCode -> n
-    boolean mAdded -> o
-    boolean mRemoving -> p
-    boolean mResumed -> q
-    boolean mFromLayout -> r
-    boolean mInLayout -> s
-    boolean mRestored -> t
-    int mBackStackNesting -> u
-    android.support.v4.app.FragmentManagerImpl mFragmentManager -> v
-    android.support.v4.app.FragmentActivity mActivity -> w
-    int mFragmentId -> x
-    int mContainerId -> y
-    java.lang.String mTag -> z
-    boolean mHidden -> A
-    boolean mDetached -> B
-    boolean mRetainInstance -> C
-    boolean mRetaining -> D
-    boolean mHasMenu -> E
-    boolean mMenuVisible -> F
-    boolean mCalled -> G
-    int mNextAnim -> H
-    android.view.ViewGroup mContainer -> I
-    android.view.View mView -> J
-    android.view.View mInnerView -> K
-    boolean mDeferStart -> L
-    boolean mUserVisibleHint -> M
-    android.support.v4.app.LoaderManagerImpl mLoaderManager -> N
-    boolean mLoadersStarted -> c
-    boolean mCheckedForLoaderManager -> d
+    java.util.HashMap sClassMap -> N
+    int mState -> a
+    android.view.View mAnimatingAway -> b
+    int mStateAfterAnimating -> c
+    android.os.Bundle mSavedFragmentState -> d
+    android.util.SparseArray mSavedViewState -> e
+    int mIndex -> f
+    java.lang.String mWho -> g
+    android.os.Bundle mArguments -> h
+    android.support.v4.app.Fragment mTarget -> i
+    int mTargetIndex -> j
+    int mTargetRequestCode -> k
+    boolean mAdded -> l
+    boolean mRemoving -> m
+    boolean mResumed -> n
+    boolean mFromLayout -> o
+    boolean mInLayout -> p
+    boolean mRestored -> q
+    int mBackStackNesting -> r
+    android.support.v4.app.FragmentManagerImpl mFragmentManager -> s
+    android.support.v4.app.FragmentActivity mActivity -> t
+    int mFragmentId -> u
+    int mContainerId -> v
+    java.lang.String mTag -> w
+    boolean mHidden -> x
+    boolean mDetached -> y
+    boolean mRetainInstance -> z
+    boolean mRetaining -> A
+    boolean mHasMenu -> B
+    boolean mMenuVisible -> C
+    boolean mCalled -> D
+    int mNextAnim -> E
+    android.view.ViewGroup mContainer -> F
+    android.view.View mView -> G
+    android.view.View mInnerView -> H
+    boolean mDeferStart -> I
+    boolean mUserVisibleHint -> J
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> K
+    boolean mLoadersStarted -> L
+    boolean mCheckedForLoaderManager -> M
     android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String) -> a
     android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String,android.os.Bundle) -> a
     void restoreViewState() -> a
@@ -101,52 +102,63 @@ android.support.v4.app.Fragment -> android.support.v4.app.Fragment:
     boolean equals(java.lang.Object) -> equals
     int hashCode() -> hashCode
     java.lang.String toString() -> toString
-    void setArguments(android.os.Bundle) -> b
+    void setArguments(android.os.Bundle) -> a
     android.os.Bundle getArguments() -> c
     void setInitialSavedState(android.support.v4.app.Fragment$SavedState) -> a
     android.support.v4.app.FragmentActivity getActivity() -> d
+    void onHiddenChanged$1385ff() -> e
     void setMenuVisibility(boolean) -> a
-    android.view.LayoutInflater getLayoutInflater$2ee30c11() -> e
-    void onInflate$423a76cd() -> f
-    void onAttach$63a22f9() -> g
-    void onCreate(android.os.Bundle) -> a
+    void onActivityResult$6eb84b52() -> f
+    android.view.LayoutInflater getLayoutInflater$2ee30c11() -> g
+    void onInflate$423a76cd() -> h
+    void onAttach$63a22f9() -> i
+    android.view.animation.Animation onCreateAnimation$24236ca7() -> j
+    void onCreate(android.os.Bundle) -> b
     android.view.View onCreateView$469ccb8a(android.view.LayoutInflater,android.view.ViewGroup) -> a
-    android.view.View getView() -> h
-    void onActivityCreated$79e5e33f() -> i
-    void onResume() -> j
+    void onViewCreated$65f1d89() -> k
+    android.view.View getView() -> l
+    void onActivityCreated$79e5e33f() -> m
+    void onResume() -> n
+    void onSaveInstanceState$79e5e33f() -> o
     void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
-    void onPause() -> k
+    void onPause() -> p
     void onLowMemory() -> onLowMemory
-    void onDestroy() -> l
-    void initState() -> m
-    void onDetach() -> n
+    void onDestroy() -> q
+    void initState() -> r
+    void onDetach() -> s
+    void onCreateOptionsMenu$761f6f96() -> t
+    void onPrepareOptionsMenu$1eec55bd() -> u
+    void onDestroyOptionsMenu() -> v
+    boolean onOptionsItemSelected$1b88ab4c() -> w
+    void onOptionsMenuClosed$1eec55bd() -> x
     void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo) -> onCreateContextMenu
-    void dump$ec96877(java.lang.String,java.io.PrintWriter) -> a
-    void performStart() -> o
-    void performStop() -> p
-    void performReallyStop() -> q
-    void performDestroyView() -> r
-android.support.v4.app.Fragment$InstantiationException -> android.support.v4.app.n:
+    boolean onContextItemSelected$1b88ab4c() -> y
+    void dump$ec96877$79f041d6(java.lang.String,java.io.PrintWriter) -> a
+    void performStart() -> z
+    void performStop() -> A
+    void performReallyStop() -> B
+    void performDestroyView() -> C
+android.support.v4.app.Fragment$InstantiationException -> android.support.v4.app.d:
 android.support.v4.app.Fragment$SavedState -> android.support.v4.app.Fragment$SavedState:
     android.os.Bundle mState -> a
     android.os.Parcelable$Creator CREATOR -> CREATOR
     int describeContents() -> describeContents
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
-android.support.v4.app.Fragment$SavedState$1 -> android.support.v4.app.m:
+android.support.v4.app.Fragment$SavedState$1 -> android.support.v4.app.e:
     java.lang.Object[] newArray(int) -> newArray
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
 android.support.v4.app.FragmentActivity -> android.support.v4.app.FragmentActivity:
     android.os.Handler mHandler -> a
     android.support.v4.app.FragmentManagerImpl mFragments -> b
-    boolean mCreated -> f
-    boolean mResumed -> g
-    boolean mStopped -> c
-    boolean mReallyStopped -> h
-    boolean mRetaining -> d
-    boolean mOptionsMenuInvalidated -> i
-    boolean mCheckedForLoaderManager -> j
-    boolean mLoadersStarted -> k
-    android.support.v4.app.HCSparseArray mAllLoaderManagers -> e
+    boolean mCreated -> c
+    boolean mResumed -> d
+    boolean mStopped -> e
+    boolean mReallyStopped -> f
+    boolean mRetaining -> g
+    boolean mOptionsMenuInvalidated -> h
+    boolean mCheckedForLoaderManager -> i
+    boolean mLoadersStarted -> j
+    android.support.v4.app.HCSparseArray mAllLoaderManagers -> k
     android.support.v4.app.LoaderManagerImpl mLoaderManager -> l
     void onActivityResult(int,int,android.content.Intent) -> onActivityResult
     void onBackPressed() -> onBackPressed
@@ -170,13 +182,15 @@ android.support.v4.app.FragmentActivity -> android.support.v4.app.FragmentActivi
     void supportInvalidateOptionsMenu() -> a
     void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> dump
     void doReallyStop(boolean) -> a
-    android.support.v4.app.FragmentManager getSupportFragmentManager() -> b
+    void onAttachFragment$65850823() -> b
+    android.support.v4.app.FragmentManager getSupportFragmentManager() -> c
     void startActivityForResult(android.content.Intent,int) -> startActivityForResult
-    android.support.v4.app.LoaderManagerImpl getLoaderManager$3d2266e4(int) -> a
-android.support.v4.app.FragmentActivity$1 -> android.support.v4.app.v:
+    void invalidateSupportFragmentIndex(int) -> a
+    android.support.v4.app.LoaderManagerImpl getLoaderManager$3d2266e4(int) -> b
+android.support.v4.app.FragmentActivity$1 -> android.support.v4.app.f:
     android.support.v4.app.FragmentActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
-android.support.v4.app.FragmentActivity$FragmentTag -> android.support.v4.app.r:
+android.support.v4.app.FragmentActivity$FragmentTag -> android.support.v4.app.g:
     int[] Fragment -> a
 android.support.v4.app.FragmentActivity$NonConfigurationInstances -> android.support.v4.app.h:
     java.lang.Object activity -> a
@@ -184,32 +198,32 @@ android.support.v4.app.FragmentActivity$NonConfigurationInstances -> android.sup
     java.util.HashMap children -> c
     java.util.ArrayList fragments -> d
     android.support.v4.app.HCSparseArray loaders -> e
-android.support.v4.app.FragmentManager -> android.support.v4.app.p:
+android.support.v4.app.FragmentManager -> android.support.v4.app.i:
     android.support.v4.app.FragmentTransaction beginTransaction() -> a
     boolean executePendingTransactions() -> b
     void putFragment(android.os.Bundle,java.lang.String,android.support.v4.app.Fragment) -> a
     android.support.v4.app.Fragment getFragment(android.os.Bundle,java.lang.String) -> a
     android.support.v4.app.Fragment$SavedState saveFragmentInstanceState(android.support.v4.app.Fragment) -> a
-android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.i:
+android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.j:
     boolean DEBUG -> a
-    boolean HONEYCOMB -> f
-    java.util.ArrayList mPendingActions -> g
-    java.lang.Runnable[] mTmpActions -> h
-    boolean mExecutingActions -> i
-    java.util.ArrayList mActive -> b
-    java.util.ArrayList mAdded -> c
-    java.util.ArrayList mAvailIndices -> j
-    java.util.ArrayList mBackStack -> k
-    java.util.ArrayList mCreatedMenus -> l
-    java.util.ArrayList mBackStackIndices -> m
-    java.util.ArrayList mAvailBackStackIndices -> n
-    java.util.ArrayList mBackStackChangeListeners -> o
-    int mCurState -> d
-    android.support.v4.app.FragmentActivity mActivity -> p
-    boolean mNeedMenuInvalidate -> q
-    boolean mStateSaved -> r
-    boolean mDestroyed -> s
-    java.lang.String mNoTransactionsBecause -> e
+    boolean HONEYCOMB -> b
+    java.util.ArrayList mPendingActions -> c
+    java.lang.Runnable[] mTmpActions -> d
+    boolean mExecutingActions -> e
+    java.util.ArrayList mActive -> f
+    java.util.ArrayList mAdded -> g
+    java.util.ArrayList mAvailIndices -> h
+    java.util.ArrayList mBackStack -> i
+    java.util.ArrayList mCreatedMenus -> j
+    java.util.ArrayList mBackStackIndices -> k
+    java.util.ArrayList mAvailBackStackIndices -> l
+    java.util.ArrayList mBackStackChangeListeners -> m
+    int mCurState -> n
+    android.support.v4.app.FragmentActivity mActivity -> o
+    boolean mNeedMenuInvalidate -> p
+    boolean mStateSaved -> q
+    boolean mDestroyed -> r
+    java.lang.String mNoTransactionsBecause -> s
     boolean mHavePendingDeferredStart -> t
     android.os.Bundle mStateBundle -> u
     android.util.SparseArray mStateArray -> v
@@ -225,13 +239,13 @@ android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.i:
     android.support.v4.app.Fragment getFragment(android.os.Bundle,java.lang.String) -> a
     android.support.v4.app.Fragment$SavedState saveFragmentInstanceState(android.support.v4.app.Fragment) -> a
     java.lang.String toString() -> toString
-    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    void dump$ec96877(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter) -> a
     android.view.animation.Animation makeOpenCloseAnimation$376f30fd(float,float,float,float) -> a
     android.view.animation.Animation makeFadeAnimation$424ea1bd(float,float) -> a
     android.view.animation.Animation loadAnimation(android.support.v4.app.Fragment,int,boolean,int) -> a
     void moveToState(android.support.v4.app.Fragment,int,int,int) -> a
     void moveToState(android.support.v4.app.Fragment) -> b
-    void moveToState$2563266(int) -> b
+    void moveToState$2563266(int) -> d
     void moveToState(int,int,int,boolean) -> a
     void startPendingDeferredFragments() -> v
     void addFragment(android.support.v4.app.Fragment,boolean) -> a
@@ -245,6 +259,7 @@ android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.i:
     void enqueueAction$574583f(java.lang.Runnable) -> a
     int allocBackStackIndex(android.support.v4.app.BackStackRecord) -> a
     void setBackStackIndex(int,android.support.v4.app.BackStackRecord) -> a
+    void freeBackStackIndex(int) -> b
     boolean execPendingActions() -> d
     void reportBackStackChanged() -> w
     void addBackStackState(android.support.v4.app.BackStackRecord) -> b
@@ -274,7 +289,7 @@ android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.i:
 android.support.v4.app.FragmentManagerImpl$1 -> android.support.v4.app.k:
     android.support.v4.app.FragmentManagerImpl this$0 -> a
     void run() -> run
-android.support.v4.app.FragmentManagerImpl$5 -> android.support.v4.app.j:
+android.support.v4.app.FragmentManagerImpl$5 -> android.support.v4.app.l:
     android.support.v4.app.Fragment val$fragment -> a
     android.support.v4.app.FragmentManagerImpl this$0 -> b
     void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
@@ -287,29 +302,29 @@ android.support.v4.app.FragmentManagerState -> android.support.v4.app.FragmentMa
     android.os.Parcelable$Creator CREATOR -> CREATOR
     int describeContents() -> describeContents
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
-android.support.v4.app.FragmentManagerState$1 -> android.support.v4.app.l:
+android.support.v4.app.FragmentManagerState$1 -> android.support.v4.app.m:
     java.lang.Object[] newArray(int) -> newArray
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
 android.support.v4.app.FragmentState -> android.support.v4.app.FragmentState:
-    java.lang.String mClassName -> c
-    int mIndex -> d
-    boolean mFromLayout -> e
-    int mFragmentId -> f
-    int mContainerId -> g
-    java.lang.String mTag -> h
-    boolean mRetainInstance -> i
-    boolean mDetached -> j
-    android.os.Bundle mArguments -> k
-    android.os.Bundle mSavedFragmentState -> a
-    android.support.v4.app.Fragment mInstance -> b
+    java.lang.String mClassName -> a
+    int mIndex -> b
+    boolean mFromLayout -> c
+    int mFragmentId -> d
+    int mContainerId -> e
+    java.lang.String mTag -> f
+    boolean mRetainInstance -> g
+    boolean mDetached -> h
+    android.os.Bundle mArguments -> i
+    android.os.Bundle mSavedFragmentState -> j
+    android.support.v4.app.Fragment mInstance -> k
     android.os.Parcelable$Creator CREATOR -> CREATOR
     android.support.v4.app.Fragment instantiate(android.support.v4.app.FragmentActivity) -> a
     int describeContents() -> describeContents
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
-android.support.v4.app.FragmentState$1 -> android.support.v4.app.t:
+android.support.v4.app.FragmentState$1 -> android.support.v4.app.n:
     java.lang.Object[] newArray(int) -> newArray
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
-android.support.v4.app.FragmentStatePagerAdapter -> android.support.v4.app.s:
+android.support.v4.app.FragmentStatePagerAdapter -> android.support.v4.app.o:
     android.support.v4.app.FragmentManager mFragmentManager -> a
     android.support.v4.app.FragmentTransaction mCurTransaction -> b
     java.util.ArrayList mSavedState -> c
@@ -319,15 +334,15 @@ android.support.v4.app.FragmentStatePagerAdapter -> android.support.v4.app.s:
     java.lang.Object instantiateItem(android.view.ViewGroup,int) -> a
     void destroyItem$30510aeb(int,java.lang.Object) -> a
     void setPrimaryItem$30510aeb(java.lang.Object) -> a
-    void finishUpdate$52bc874c() -> b
+    void finishUpdate$52bc874c() -> a
     boolean isViewFromObject(android.view.View,java.lang.Object) -> a
-    android.os.Parcelable saveState() -> c
+    android.os.Parcelable saveState() -> b
     void restoreState(android.os.Parcelable,java.lang.ClassLoader) -> a
-android.support.v4.app.FragmentTransaction -> android.support.v4.app.q:
+android.support.v4.app.FragmentTransaction -> android.support.v4.app.p:
     android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment) -> a
     android.support.v4.app.FragmentTransaction remove(android.support.v4.app.Fragment) -> a
     int commitAllowingStateLoss() -> a
-android.support.v4.app.HCSparseArray -> android.support.v4.app.e:
+android.support.v4.app.HCSparseArray -> android.support.v4.app.q:
     java.lang.Object DELETED -> a
     boolean mGarbage -> b
     int[] mKeys -> c
@@ -342,17 +357,17 @@ android.support.v4.app.HCSparseArray -> android.support.v4.app.e:
     java.lang.Object valueAt(int) -> e
     void clear() -> b
     int binarySearch$76412d8d(int[],int,int) -> a
-android.support.v4.app.LoaderManager -> android.support.v4.app.g:
+android.support.v4.app.LoaderManager -> android.support.v4.app.r:
     boolean hasRunningLoaders() -> a
-android.support.v4.app.LoaderManager$LoaderCallbacks -> android.support.v4.app.f:
+android.support.v4.app.LoaderManager$LoaderCallbacks -> android.support.v4.app.s:
     android.support.v4.content.Loader onCreateLoader$e57f803() -> a
-android.support.v4.app.LoaderManagerImpl -> android.support.v4.app.o:
+android.support.v4.app.LoaderManagerImpl -> android.support.v4.app.t:
     boolean DEBUG -> a
-    android.support.v4.app.HCSparseArray mLoaders -> d
-    android.support.v4.app.HCSparseArray mInactiveLoaders -> e
-    android.support.v4.app.FragmentActivity mActivity -> b
-    boolean mStarted -> f
-    boolean mRetaining -> c
+    android.support.v4.app.HCSparseArray mLoaders -> b
+    android.support.v4.app.HCSparseArray mInactiveLoaders -> c
+    android.support.v4.app.FragmentActivity mActivity -> d
+    boolean mStarted -> e
+    boolean mRetaining -> f
     void updateActivity(android.support.v4.app.FragmentActivity) -> a
     void doStart() -> b
     void doStop() -> c
@@ -362,35 +377,35 @@ android.support.v4.app.LoaderManagerImpl -> android.support.v4.app.o:
     void doReportStart() -> g
     void doDestroy() -> h
     java.lang.String toString() -> toString
-    void dump$ec96877(java.lang.String,java.io.PrintWriter) -> a
+    void dump$ec96877$79f041d6(java.lang.String,java.io.PrintWriter) -> a
     boolean hasRunningLoaders() -> a
-android.support.v4.app.LoaderManagerImpl$LoaderInfo -> android.support.v4.app.a:
+android.support.v4.app.LoaderManagerImpl$LoaderInfo -> android.support.v4.app.u:
     int mId -> a
-    android.os.Bundle mArgs -> l
-    android.support.v4.app.LoaderManager$LoaderCallbacks mCallbacks -> b
-    android.support.v4.content.Loader mLoader -> c
-    boolean mHaveData -> d
-    boolean mDeliveredData -> e
-    java.lang.Object mData -> f
-    boolean mStarted -> g
-    boolean mRetaining -> h
-    boolean mRetainingStarted -> i
-    boolean mReportNextStart -> j
-    boolean mDestroyed -> m
-    boolean mListenerRegistered -> k
+    android.os.Bundle mArgs -> b
+    android.support.v4.app.LoaderManager$LoaderCallbacks mCallbacks -> c
+    android.support.v4.content.Loader mLoader -> d
+    boolean mHaveData -> e
+    boolean mDeliveredData -> f
+    java.lang.Object mData -> g
+    boolean mStarted -> h
+    boolean mRetaining -> i
+    boolean mRetainingStarted -> j
+    boolean mReportNextStart -> k
+    boolean mDestroyed -> l
+    boolean mListenerRegistered -> m
     android.support.v4.app.LoaderManagerImpl$LoaderInfo mPendingLoader -> n
     android.support.v4.app.LoaderManagerImpl this$0 -> o
     void stop() -> a
     void destroy() -> b
     void callOnLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
     java.lang.String toString() -> toString
-    void dump$ec96877(java.lang.String,java.io.PrintWriter) -> a
+    void dump$ec96877$79f041d6(java.lang.String,java.io.PrintWriter) -> a
 android.support.v4.app.NoSaveStateFrameLayout -> android.support.v4.app.NoSaveStateFrameLayout:
     android.view.ViewGroup wrap(android.view.View) -> a
     void dispatchSaveInstanceState(android.util.SparseArray) -> dispatchSaveInstanceState
     void dispatchRestoreInstanceState(android.util.SparseArray) -> dispatchRestoreInstanceState
-android.support.v4.app.SuperNotCalledException -> android.support.v4.app.c:
-android.support.v4.content.Loader -> android.support.v4.b.b:
+android.support.v4.app.SuperNotCalledException -> android.support.v4.app.v:
+android.support.v4.content.Loader -> android.support.v4.a.a:
     int mId -> a
     android.support.v4.content.Loader$OnLoadCompleteListener mListener -> b
     boolean mStarted -> c
@@ -404,17 +419,17 @@ android.support.v4.content.Loader -> android.support.v4.b.b:
     void reset() -> c
     java.lang.String toString() -> toString
     void dump$ec96877(java.lang.String,java.io.PrintWriter) -> a
-android.support.v4.content.Loader$OnLoadCompleteListener -> android.support.v4.b.a:
-android.support.v4.os.ParcelableCompat -> android.support.v4.a.c:
+android.support.v4.content.Loader$OnLoadCompleteListener -> android.support.v4.a.b:
+android.support.v4.os.ParcelableCompat -> android.support.v4.b.a:
     android.os.Parcelable$Creator newCreator(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> a
-android.support.v4.os.ParcelableCompat$CompatCreator -> android.support.v4.a.d:
+android.support.v4.os.ParcelableCompat$CompatCreator -> android.support.v4.b.b:
     android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
     java.lang.Object[] newArray(int) -> newArray
-android.support.v4.os.ParcelableCompatCreatorCallbacks -> android.support.v4.a.a:
+android.support.v4.os.ParcelableCompatCreatorCallbacks -> android.support.v4.b.c:
     java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
     java.lang.Object[] newArray(int) -> a
-android.support.v4.os.ParcelableCompatCreatorHoneycombMR2 -> android.support.v4.a.b:
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2 -> android.support.v4.b.d:
     android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
     java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> createFromParcel
@@ -428,34 +443,34 @@ android.support.v4.util.LogWriter -> android.support.v4.c.b:
     void flush() -> flush
     void write(char[],int,int) -> write
     void flushBuilder() -> a
-android.support.v4.view.KeyEventCompat -> android.support.v4.view.ac:
+android.support.v4.view.KeyEventCompat -> android.support.v4.view.a:
     android.support.v4.view.KeyEventCompat$KeyEventVersionImpl IMPL -> a
     boolean hasModifiers$79c6ddc0(android.view.KeyEvent) -> a
     boolean hasNoModifiers(android.view.KeyEvent) -> b
-android.support.v4.view.KeyEventCompat$BaseKeyEventVersionImpl -> android.support.v4.view.e:
+android.support.v4.view.KeyEventCompat$BaseKeyEventVersionImpl -> android.support.v4.view.b:
     int metaStateFilterDirectionalModifiers$2e71581f(int,int,int,int) -> a
     int normalizeMetaState(int) -> c
     boolean metaStateHasModifiers$255f299(int) -> a
     boolean metaStateHasNoModifiers(int) -> b
-android.support.v4.view.KeyEventCompat$HoneycombKeyEventVersionImpl -> android.support.v4.view.p:
+android.support.v4.view.KeyEventCompat$HoneycombKeyEventVersionImpl -> android.support.v4.view.c:
     boolean metaStateHasModifiers$255f299(int) -> a
     boolean metaStateHasNoModifiers(int) -> b
-android.support.v4.view.KeyEventCompat$KeyEventVersionImpl -> android.support.v4.view.k:
+android.support.v4.view.KeyEventCompat$KeyEventVersionImpl -> android.support.v4.view.d:
     boolean metaStateHasModifiers$255f299(int) -> a
     boolean metaStateHasNoModifiers(int) -> b
-android.support.v4.view.MotionEventCompat -> android.support.v4.view.w:
+android.support.v4.view.MotionEventCompat -> android.support.v4.view.e:
     android.support.v4.view.MotionEventCompat$MotionEventVersionImpl IMPL -> a
     int getActionIndex(android.view.MotionEvent) -> a
     int findPointerIndex(android.view.MotionEvent,int) -> a
     int getPointerId(android.view.MotionEvent,int) -> b
     float getX(android.view.MotionEvent,int) -> c
     float getY(android.view.MotionEvent,int) -> d
-android.support.v4.view.MotionEventCompat$BaseMotionEventVersionImpl -> android.support.v4.view.c:
+android.support.v4.view.MotionEventCompat$BaseMotionEventVersionImpl -> android.support.v4.view.f:
     int findPointerIndex(android.view.MotionEvent,int) -> a
     int getPointerId(android.view.MotionEvent,int) -> b
     float getX(android.view.MotionEvent,int) -> c
     float getY(android.view.MotionEvent,int) -> d
-android.support.v4.view.MotionEventCompat$EclairMotionEventVersionImpl -> android.support.v4.view.v:
+android.support.v4.view.MotionEventCompat$EclairMotionEventVersionImpl -> android.support.v4.view.g:
     int findPointerIndex(android.view.MotionEvent,int) -> a
     int getPointerId(android.view.MotionEvent,int) -> b
     float getX(android.view.MotionEvent,int) -> c
@@ -465,54 +480,45 @@ android.support.v4.view.MotionEventCompat$MotionEventVersionImpl -> android.supp
     int getPointerId(android.view.MotionEvent,int) -> b
     float getX(android.view.MotionEvent,int) -> c
     float getY(android.view.MotionEvent,int) -> d
-android.support.v4.view.PagerAdapter -> android.support.v4.view.a:
+android.support.v4.view.PagerAdapter -> android.support.v4.view.i:
     android.database.DataSetObservable mObservable -> a
-    int getCount() -> a
+    int getCount() -> c
     java.lang.Object instantiateItem(android.view.ViewGroup,int) -> a
     void destroyItem$30510aeb(int,java.lang.Object) -> a
     void setPrimaryItem$30510aeb(java.lang.Object) -> a
-    void finishUpdate$52bc874c() -> b
+    void finishUpdate$52bc874c() -> a
     boolean isViewFromObject(android.view.View,java.lang.Object) -> a
-    android.os.Parcelable saveState() -> c
+    android.os.Parcelable saveState() -> b
     void restoreState(android.os.Parcelable,java.lang.ClassLoader) -> a
     void registerDataSetObserver(android.database.DataSetObserver) -> a
     void unregisterDataSetObserver(android.database.DataSetObserver) -> b
-android.support.v4.view.VelocityTrackerCompat -> android.support.v4.view.aa:
+android.support.v4.view.VelocityTrackerCompat -> android.support.v4.view.j:
     android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl IMPL -> a
     float getXVelocity(android.view.VelocityTracker,int) -> a
     float getYVelocity(android.view.VelocityTracker,int) -> b
-android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl -> android.support.v4.view.r:
+android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl -> android.support.v4.view.k:
     float getXVelocity(android.view.VelocityTracker,int) -> a
     float getYVelocity(android.view.VelocityTracker,int) -> b
-android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl -> android.support.v4.view.f:
+android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl -> android.support.v4.view.l:
     float getXVelocity(android.view.VelocityTracker,int) -> a
     float getYVelocity(android.view.VelocityTracker,int) -> b
-android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl -> android.support.v4.view.j:
+android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl -> android.support.v4.view.m:
     float getXVelocity(android.view.VelocityTracker,int) -> a
     float getYVelocity(android.view.VelocityTracker,int) -> b
-android.support.v4.view.ViewCompat -> android.support.v4.view.o:
+android.support.v4.view.ViewCompat -> android.support.v4.view.n:
     android.support.v4.view.ViewCompat$ViewCompatImpl IMPL -> a
     boolean canScrollHorizontally(android.view.View,int) -> a
     int getOverScrollMode(android.view.View) -> a
-android.support.v4.view.ViewCompat$BaseViewCompatImpl -> android.support.v4.view.ab:
+android.support.v4.view.ViewCompat$BaseViewCompatImpl -> android.support.v4.view.o:
     boolean canScrollHorizontally(android.view.View,int) -> a
     int getOverScrollMode(android.view.View) -> a
-android.support.v4.view.ViewCompat$GBViewCompatImpl -> android.support.v4.view.g:
+android.support.v4.view.ViewCompat$GBViewCompatImpl -> android.support.v4.view.p:
     int getOverScrollMode(android.view.View) -> a
 android.support.v4.view.ViewCompat$ICSViewCompatImpl -> android.support.v4.view.q:
     boolean canScrollHorizontally(android.view.View,int) -> a
-android.support.v4.view.ViewCompat$ViewCompatImpl -> android.support.v4.view.l:
+android.support.v4.view.ViewCompat$ViewCompatImpl -> android.support.v4.view.r:
     boolean canScrollHorizontally(android.view.View,int) -> a
     int getOverScrollMode(android.view.View) -> a
-android.support.v4.view.ViewConfigurationCompat -> android.support.v4.view.n:
-    android.support.v4.view.ViewConfigurationCompat$ViewConfigurationVersionImpl IMPL -> a
-    int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
-android.support.v4.view.ViewConfigurationCompat$BaseViewConfigurationVersionImpl -> android.support.v4.view.i:
-    int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
-android.support.v4.view.ViewConfigurationCompat$FroyoViewConfigurationVersionImpl -> android.support.v4.view.y:
-    int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
-android.support.v4.view.ViewConfigurationCompat$ViewConfigurationVersionImpl -> android.support.v4.view.d:
-    int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
 android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     int[] LAYOUT_ATTRS -> a
     java.util.Comparator COMPARATOR -> b
@@ -556,8 +562,8 @@ android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     int mDecorChildCount -> N
     android.support.v4.view.ViewPager$OnPageChangeListener mOnPageChangeListener -> O
     android.support.v4.view.ViewPager$OnPageChangeListener mInternalPageChangeListener -> P
-    int mScrollState -> Q
-    void initViewPager() -> g
+    android.support.v4.view.ViewPager$OnAdapterChangeListener mAdapterChangeListener -> Q
+    int mScrollState -> R
     void setScrollState(int) -> b
     void setAdapter(android.support.v4.view.PagerAdapter) -> a
     android.support.v4.view.PagerAdapter getAdapter() -> a
@@ -570,7 +576,7 @@ android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     void drawableStateChanged() -> drawableStateChanged
     void addNewItem(int,int) -> a
     void dataSetChanged() -> b
-    void populate() -> h
+    void populate() -> g
     android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
     void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
     void addView(android.view.View,int,android.view.ViewGroup$LayoutParams) -> addView
@@ -581,7 +587,7 @@ android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     void onLayout(boolean,int,int,int,int) -> onLayout
     void computeScroll() -> computeScroll
     void pageScrolled(int) -> d
-    void completeScroll() -> i
+    void completeScroll() -> h
     boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
     boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
     int determineTargetPage(int,float,int,int) -> a
@@ -592,12 +598,12 @@ android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     void fakeDragBy(float) -> a
     boolean isFakeDragging() -> e
     void onSecondaryPointerUp(android.view.MotionEvent) -> a
-    void endDrag() -> j
+    void endDrag() -> i
     void setScrollingCacheEnabled(boolean) -> a
     boolean canScroll(android.view.View,boolean,int,int,int) -> a
     boolean dispatchKeyEvent(android.view.KeyEvent) -> dispatchKeyEvent
     boolean arrowScroll(int) -> e
-    boolean pageLeft() -> k
+    boolean pageLeft() -> j
     void addFocusables(java.util.ArrayList,int,int) -> addFocusables
     void addTouchables(java.util.ArrayList) -> addTouchables
     boolean onRequestFocusInDescendants(int,android.graphics.Rect) -> onRequestFocusInDescendants
@@ -607,23 +613,24 @@ android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
     android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
     int[] access$100() -> f
-android.support.v4.view.ViewPager$1 -> android.support.v4.view.t:
+android.support.v4.view.ViewPager$1 -> android.support.v4.view.s:
     int compare(java.lang.Object,java.lang.Object) -> compare
-android.support.v4.view.ViewPager$2 -> android.support.v4.view.s:
+android.support.v4.view.ViewPager$2 -> android.support.v4.view.t:
     float getInterpolation(float) -> getInterpolation
-android.support.v4.view.ViewPager$Decor -> android.support.v4.view.z:
-android.support.v4.view.ViewPager$ItemInfo -> android.support.v4.view.x:
+android.support.v4.view.ViewPager$Decor -> android.support.v4.view.u:
+android.support.v4.view.ViewPager$ItemInfo -> android.support.v4.view.v:
     java.lang.Object object -> a
     int position -> b
     boolean scrolling -> c
 android.support.v4.view.ViewPager$LayoutParams -> android.support.v4.view.ViewPager$LayoutParams:
     boolean isDecor -> a
     int gravity -> b
-android.support.v4.view.ViewPager$OnPageChangeListener -> android.support.v4.view.u:
+android.support.v4.view.ViewPager$OnAdapterChangeListener -> android.support.v4.view.w:
+android.support.v4.view.ViewPager$OnPageChangeListener -> android.support.v4.view.x:
     void onPageScrolled(int,float,int) -> a
-    void onPageSelected(int) -> b
-    void onPageScrollStateChanged(int) -> a
-android.support.v4.view.ViewPager$PagerObserver -> android.support.v4.view.b:
+    void onPageSelected(int) -> a
+    void onPageScrollStateChanged(int) -> b
+android.support.v4.view.ViewPager$PagerObserver -> android.support.v4.view.y:
     android.support.v4.view.ViewPager this$0 -> a
     void onChanged() -> onChanged
     void onInvalidated() -> onInvalidated
@@ -634,10 +641,10 @@ android.support.v4.view.ViewPager$SavedState -> android.support.v4.view.ViewPage
     android.os.Parcelable$Creator CREATOR -> CREATOR
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
     java.lang.String toString() -> toString
-android.support.v4.view.ViewPager$SavedState$1 -> android.support.v4.view.m:
+android.support.v4.view.ViewPager$SavedState$1 -> android.support.v4.view.z:
     java.lang.Object[] newArray(int) -> a
     java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
-android.support.v4.widget.EdgeEffectCompat -> android.support.v4.widget.EdgeEffectCompat:
+android.support.v4.widget.EdgeEffectCompat -> android.support.v4.d.a:
     java.lang.Object mEdgeEffect -> a
     android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl IMPL -> b
     void setSize(int,int) -> a
@@ -646,31 +653,28 @@ android.support.v4.widget.EdgeEffectCompat -> android.support.v4.widget.EdgeEffe
     boolean onPull(float) -> a
     boolean onRelease() -> c
     boolean draw(android.graphics.Canvas) -> a
-android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl -> android.support.v4.widget.b:
-    java.lang.Object newEdgeEffect(android.content.Context) -> a
+android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl -> android.support.v4.d.b:
     void setSize(java.lang.Object,int,int) -> a
     boolean isFinished(java.lang.Object) -> a
     void finish(java.lang.Object) -> b
     boolean onPull(java.lang.Object,float) -> a
     boolean onRelease(java.lang.Object) -> c
     boolean draw(java.lang.Object,android.graphics.Canvas) -> a
-android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl -> android.support.v4.widget.a:
-    java.lang.Object newEdgeEffect(android.content.Context) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl -> android.support.v4.d.c:
     void setSize(java.lang.Object,int,int) -> a
     boolean isFinished(java.lang.Object) -> a
     void finish(java.lang.Object) -> b
     boolean onPull(java.lang.Object,float) -> a
     boolean onRelease(java.lang.Object) -> c
     boolean draw(java.lang.Object,android.graphics.Canvas) -> a
-android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl -> android.support.v4.widget.c:
-    java.lang.Object newEdgeEffect(android.content.Context) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl -> android.support.v4.d.d:
     void setSize(java.lang.Object,int,int) -> a
     boolean isFinished(java.lang.Object) -> a
     void finish(java.lang.Object) -> b
     boolean onPull(java.lang.Object,float) -> a
     boolean onRelease(java.lang.Object) -> c
     boolean draw(java.lang.Object,android.graphics.Canvas) -> a
-com.google.ads.Ad -> com.google.ads.t:
+com.google.ads.Ad -> com.google.ads.a:
 com.google.ads.AdActivity -> com.google.ads.AdActivity:
     java.lang.Object a -> a
     com.google.ads.AdActivity b -> b
@@ -702,8 +706,8 @@ com.google.ads.AdActivity -> com.google.ads.AdActivity:
     void a() -> d
     void onWindowFocusChanged(boolean) -> onWindowFocusChanged
     void onActivityResult(int,int,android.content.Intent) -> onActivityResult
-com.google.ads.AdListener -> com.google.ads.am:
-com.google.ads.AdRequest -> com.google.ads.ai:
+com.google.ads.AdListener -> com.google.ads.b:
+com.google.ads.AdRequest -> com.google.ads.c:
     com.google.ads.AdRequest$Gender a -> b
     java.lang.String b -> c
     java.util.Set c -> d
@@ -714,12 +718,10 @@ com.google.ads.AdRequest -> com.google.ads.ai:
     boolean h -> i
     java.lang.String TEST_EMULATOR -> a
     java.util.Set i -> j
-    void addKeyword(java.lang.String) -> a
     void addExtra(java.lang.String,java.lang.Object) -> a
     void setLocation(android.location.Location) -> a
     java.util.Map getRequestMap(android.content.Context) -> a
-    void addTestDevice(java.lang.String) -> b
-com.google.ads.AdRequest$ErrorCode -> com.google.ads.aa:
+com.google.ads.AdRequest$ErrorCode -> com.google.ads.d:
     com.google.ads.AdRequest$ErrorCode INVALID_REQUEST -> a
     com.google.ads.AdRequest$ErrorCode NO_FILL -> b
     com.google.ads.AdRequest$ErrorCode NETWORK_ERROR -> c
@@ -729,14 +731,14 @@ com.google.ads.AdRequest$ErrorCode -> com.google.ads.aa:
     com.google.ads.AdRequest$ErrorCode[] values() -> values
     com.google.ads.AdRequest$ErrorCode valueOf(java.lang.String) -> valueOf
     java.lang.String toString() -> toString
-com.google.ads.AdRequest$Gender -> com.google.ads.at:
+com.google.ads.AdRequest$Gender -> com.google.ads.e:
     com.google.ads.AdRequest$Gender UNKNOWN -> a
     com.google.ads.AdRequest$Gender MALE -> b
     com.google.ads.AdRequest$Gender FEMALE -> c
     com.google.ads.AdRequest$Gender[] a -> d
     com.google.ads.AdRequest$Gender[] values() -> values
     com.google.ads.AdRequest$Gender valueOf(java.lang.String) -> valueOf
-com.google.ads.AdSize -> com.google.ads.as:
+com.google.ads.AdSize -> com.google.ads.f:
     com.google.ads.AdSize BANNER -> a
     com.google.ads.AdSize IAB_MRECT -> b
     com.google.ads.AdSize IAB_BANNER -> c
@@ -747,15 +749,11 @@ com.google.ads.AdSize -> com.google.ads.as:
     int getWidth() -> a
     int getHeight() -> b
     java.lang.String toString() -> toString
-com.google.ads.AdView -> com.google.ads.AdView:
+com.google.ads.AdView -> com.google.ads.g:
     com.google.ads.d a -> a
-    void a(android.content.Context,java.lang.String,int,com.google.ads.AdSize,android.util.AttributeSet) -> a
-    void a(android.content.Context,java.lang.String,com.google.ads.AdSize,android.util.AttributeSet) -> a
-    void a(android.content.Context,android.util.AttributeSet) -> a
-    void a(android.app.Activity,com.google.ads.AdSize,java.lang.String) -> a
     void loadAd(com.google.ads.AdRequest) -> a
-com.google.ads.InterstitialAd -> com.google.ads.ao:
-com.google.ads.a -> com.google.ads.u:
+com.google.ads.InterstitialAd -> com.google.ads.h:
+com.google.ads.a -> com.google.ads.i:
     java.util.Map a -> a
     java.util.Map b -> b
     void a(com.google.ads.d,java.util.Map,android.net.Uri,android.webkit.WebView) -> a
@@ -767,24 +765,24 @@ com.google.ads.a -> com.google.ads.u:
     void a(android.webkit.WebView,java.util.Map) -> a
     void a(android.webkit.WebView) -> a
     void b(android.webkit.WebView) -> b
-com.google.ads.aa -> com.google.ads.ac:
+com.google.ads.aa -> com.google.ads.j:
     boolean a(android.content.Context) -> a
     boolean a(android.content.Intent,android.content.Context) -> a
-com.google.ads.ab -> com.google.ads.ab:
+com.google.ads.ab -> com.google.ads.k:
     void a(com.google.ads.d,java.util.HashMap,android.webkit.WebView) -> a
-com.google.ads.ab$a -> com.google.ads.aj:
+com.google.ads.ab$a -> com.google.ads.l:
     void onClick(android.content.DialogInterface,int) -> onClick
-com.google.ads.ab$b -> com.google.ads.ak:
+com.google.ads.ab$b -> com.google.ads.m:
     com.google.ads.ab$b a -> a
-    com.google.ads.ab$b b -> c
-    java.lang.String c -> b
+    com.google.ads.ab$b b -> b
+    java.lang.String c -> c
     com.google.ads.ab$b[] d -> d
     com.google.ads.ab$b[] values() -> values
     com.google.ads.ab$b valueOf(java.lang.String) -> valueOf
-com.google.ads.ab$c -> com.google.ads.al:
+com.google.ads.ab$c -> com.google.ads.n:
     com.google.ads.d a -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.google.ads.b -> com.google.ads.v:
+com.google.ads.b -> com.google.ads.o:
     com.google.ads.c a -> a
     com.google.ads.d b -> b
     boolean c -> c
@@ -796,7 +794,7 @@ com.google.ads.b -> com.google.ads.v:
     void a(boolean) -> a
     void a(java.lang.String) -> a
     void run() -> run
-com.google.ads.c -> com.google.ads.w:
+com.google.ads.c -> com.google.ads.p:
     java.lang.String a -> a
     java.lang.String b -> b
     com.google.ads.b c -> c
@@ -822,31 +820,31 @@ com.google.ads.c -> com.google.ads.w:
     void b() -> a
     void a(int) -> a
     void a(boolean) -> a
-com.google.ads.c$a -> com.google.ads.af:
-    com.google.ads.d b -> a
-    android.webkit.WebView c -> b
-    com.google.ads.b d -> c
-    com.google.ads.AdRequest$ErrorCode e -> d
-    boolean f -> e
-    com.google.ads.c a -> f
-    void run() -> run
-com.google.ads.c$b -> com.google.ads.ad:
+com.google.ads.c$a -> com.google.ads.q:
+    com.google.ads.d b -> b
+    android.webkit.WebView c -> c
+    com.google.ads.b d -> d
+    com.google.ads.AdRequest$ErrorCode e -> e
+    boolean f -> f
     com.google.ads.c a -> a
-com.google.ads.c$c -> com.google.ads.ae:
-    java.lang.String b -> a
-    java.lang.String c -> b
-    android.webkit.WebView d -> c
-    com.google.ads.c a -> d
     void run() -> run
-com.google.ads.c$d -> com.google.ads.ag:
+com.google.ads.c$b -> com.google.ads.r:
     com.google.ads.c a -> a
-com.google.ads.c$e -> com.google.ads.ah:
-    com.google.ads.d b -> a
-    java.util.LinkedList c -> b
-    int d -> c
-    com.google.ads.c a -> d
+com.google.ads.c$c -> com.google.ads.s:
+    java.lang.String b -> b
+    java.lang.String c -> c
+    android.webkit.WebView d -> d
+    com.google.ads.c a -> a
     void run() -> run
-com.google.ads.d -> com.google.ads.x:
+com.google.ads.c$d -> com.google.ads.t:
+    com.google.ads.c a -> a
+com.google.ads.c$e -> com.google.ads.u:
+    com.google.ads.d b -> b
+    java.util.LinkedList c -> c
+    int d -> d
+    com.google.ads.c a -> a
+    void run() -> run
+com.google.ads.d -> com.google.ads.v:
     java.lang.Object a -> a
     java.lang.ref.WeakReference b -> b
     com.google.ads.Ad c -> c
@@ -902,22 +900,22 @@ com.google.ads.d -> com.google.ads.x:
     void a(long) -> a
     void a(float) -> a
     void b(long) -> b
-com.google.ads.e -> com.google.ads.y:
+com.google.ads.e -> com.google.ads.w:
     java.lang.String a -> a
     java.util.HashMap b -> b
     android.os.Bundle a() -> a
     java.lang.String b() -> b
     java.util.HashMap c() -> c
-com.google.ads.f -> com.google.ads.z:
-    java.util.LinkedList b -> a
-    long c -> b
-    long d -> c
-    java.util.LinkedList e -> d
-    long f -> e
-    java.lang.String g -> f
-    boolean h -> g
-    boolean i -> h
-    java.lang.String a -> i
+com.google.ads.f -> com.google.ads.x:
+    java.util.LinkedList b -> b
+    long c -> c
+    long d -> d
+    java.util.LinkedList e -> e
+    long f -> f
+    java.lang.String g -> g
+    boolean h -> h
+    boolean i -> i
+    java.lang.String a -> a
     void a() -> a
     void b() -> b
     void c() -> c
@@ -936,10 +934,10 @@ com.google.ads.f -> com.google.ads.z:
     void o() -> o
     java.lang.String p() -> p
     void b(java.lang.String) -> b
-com.google.ads.g -> com.google.ads.o:
-    java.lang.ref.WeakReference b -> a
-    com.google.ads.h c -> b
-    android.widget.MediaController a -> c
+com.google.ads.g -> com.google.ads.y:
+    java.lang.ref.WeakReference b -> b
+    com.google.ads.h c -> c
+    android.widget.MediaController a -> a
     long d -> d
     android.widget.VideoView e -> e
     java.lang.String f -> f
@@ -955,22 +953,23 @@ com.google.ads.g -> com.google.ads.o:
     void a(android.view.MotionEvent) -> a
     void d() -> d
     void e() -> e
-com.google.ads.g$a -> com.google.ads.an:
+com.google.ads.g$a -> com.google.ads.z:
     java.lang.ref.WeakReference a -> a
     android.os.Handler b -> b
     void run() -> run
     void a() -> a
-com.google.ads.h -> com.google.ads.n:
+com.google.ads.h -> com.google.ads.aa:
     java.lang.ref.WeakReference a -> a
     com.google.ads.AdSize b -> b
-    com.google.ads.AdActivity b() -> a
+    void a() -> a
+    com.google.ads.AdActivity b() -> b
     void a(com.google.ads.AdActivity) -> a
     void loadDataWithBaseURL(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> loadDataWithBaseURL
     void loadUrl(java.lang.String) -> loadUrl
     void stopLoading() -> stopLoading
     void destroy() -> destroy
     void onMeasure(int,int) -> onMeasure
-com.google.ads.i -> com.google.ads.m:
+com.google.ads.i -> com.google.ads.ab:
     com.google.ads.d a -> a
     java.util.Map b -> b
     boolean c -> c
@@ -982,25 +981,25 @@ com.google.ads.i -> com.google.ads.m:
     void a() -> a
     void b() -> b
     void c() -> c
-com.google.ads.j -> com.google.ads.l:
+com.google.ads.j -> com.google.ads.ac:
     void a(com.google.ads.d,java.util.HashMap,android.webkit.WebView) -> a
-com.google.ads.k -> com.google.ads.k:
+com.google.ads.k -> com.google.ads.ad:
     void a(com.google.ads.d,java.util.HashMap,android.webkit.WebView) -> a
-com.google.ads.l -> com.google.ads.j:
+com.google.ads.l -> com.google.ads.ae:
     void a(com.google.ads.d,java.util.HashMap,android.webkit.WebView) -> a
-com.google.ads.m -> com.google.ads.i:
+com.google.ads.m -> com.google.ads.af:
     void a(com.google.ads.d,java.util.HashMap,android.webkit.WebView) -> a
-com.google.ads.n -> com.google.ads.h:
+com.google.ads.n -> com.google.ads.ag:
     void a(com.google.ads.d,java.util.HashMap,android.webkit.WebView) -> a
-com.google.ads.o -> com.google.ads.g:
+com.google.ads.o -> com.google.ads.ah:
     void a(com.google.ads.d,java.util.HashMap,android.webkit.WebView) -> a
-com.google.ads.p -> com.google.ads.f:
+com.google.ads.p -> com.google.ads.ai:
     void a(com.google.ads.d,java.util.HashMap,android.webkit.WebView) -> a
-com.google.ads.q -> com.google.ads.e:
+com.google.ads.q -> com.google.ads.aj:
     void a(com.google.ads.d,java.util.HashMap,android.webkit.WebView) -> a
-com.google.ads.s -> com.google.ads.d:
+com.google.ads.s -> com.google.ads.ak:
     void a(com.google.ads.d,java.util.HashMap,android.webkit.WebView) -> a
-com.google.ads.searchads.SearchAdRequest -> com.google.ads.a.b:
+com.google.ads.searchads.SearchAdRequest -> com.google.ads.a.a:
     java.lang.String a -> b
     int b -> c
     android.util.Pair c -> d
@@ -1014,7 +1013,7 @@ com.google.ads.searchads.SearchAdRequest -> com.google.ads.a.b:
     int k -> l
     java.util.Map getRequestMap(android.content.Context) -> a
     java.lang.String a(int) -> a
-com.google.ads.searchads.SearchAdRequest$BorderType -> com.google.ads.a.a:
+com.google.ads.searchads.SearchAdRequest$BorderType -> com.google.ads.a.b:
     com.google.ads.searchads.SearchAdRequest$BorderType NONE -> a
     com.google.ads.searchads.SearchAdRequest$BorderType DASHED -> b
     com.google.ads.searchads.SearchAdRequest$BorderType DOTTED -> c
@@ -1024,9 +1023,9 @@ com.google.ads.searchads.SearchAdRequest$BorderType -> com.google.ads.a.a:
     com.google.ads.searchads.SearchAdRequest$BorderType[] values() -> values
     com.google.ads.searchads.SearchAdRequest$BorderType valueOf(java.lang.String) -> valueOf
     java.lang.String toString() -> toString
-com.google.ads.t -> com.google.ads.c:
+com.google.ads.t -> com.google.ads.al:
     void a(com.google.ads.d,java.util.HashMap,android.webkit.WebView) -> a
-com.google.ads.u -> com.google.ads.b:
+com.google.ads.u -> com.google.ads.am:
     void a(com.google.ads.d,java.util.HashMap,android.webkit.WebView) -> a
 com.google.ads.util.AdUtil -> com.google.ads.util.AdUtil:
     int a -> a
@@ -1059,8 +1058,7 @@ com.google.ads.util.AdUtil -> com.google.ads.util.AdUtil:
     java.util.HashMap b(android.net.Uri) -> b
     boolean d() -> d
     void a(boolean) -> a
-    void h(android.content.Context) -> h
-    java.lang.String i(android.content.Context) -> i
+    java.lang.String i(android.content.Context) -> h
     void a(android.webkit.WebView) -> a
     void a(java.net.HttpURLConnection,android.content.Context) -> a
     java.lang.String a(java.util.Map) -> a
@@ -1068,17 +1066,17 @@ com.google.ads.util.AdUtil -> com.google.ads.util.AdUtil:
     org.json.JSONArray a(java.util.Set) -> a
 com.google.ads.util.AdUtil$UserActivityReceiver -> com.google.ads.util.AdUtil$UserActivityReceiver:
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
-com.google.ads.util.AdUtil$a -> com.google.ads.util.c:
-    com.google.ads.util.AdUtil$a a -> d
-    com.google.ads.util.AdUtil$a b -> a
-    com.google.ads.util.AdUtil$a c -> e
-    com.google.ads.util.AdUtil$a d -> b
-    com.google.ads.util.AdUtil$a e -> c
+com.google.ads.util.AdUtil$a -> com.google.ads.util.a:
+    com.google.ads.util.AdUtil$a a -> a
+    com.google.ads.util.AdUtil$a b -> b
+    com.google.ads.util.AdUtil$a c -> c
+    com.google.ads.util.AdUtil$a d -> d
+    com.google.ads.util.AdUtil$a e -> e
     com.google.ads.util.AdUtil$a f -> f
     com.google.ads.util.AdUtil$a[] g -> g
     com.google.ads.util.AdUtil$a[] values() -> values
     com.google.ads.util.AdUtil$a valueOf(java.lang.String) -> valueOf
-com.google.ads.util.a -> com.google.ads.util.d:
+com.google.ads.util.a -> com.google.ads.util.b:
     void a(java.lang.String) -> a
     void b(java.lang.String) -> b
     void a(java.lang.String,java.lang.Throwable) -> a
@@ -1088,68 +1086,68 @@ com.google.ads.util.a -> com.google.ads.util.d:
     void a(java.lang.Throwable) -> a
     void b(java.lang.String,java.lang.Throwable) -> b
     boolean a(java.lang.String,int) -> a
-com.google.ads.util.b -> com.google.ads.util.e:
+com.google.ads.util.b -> com.google.ads.util.c:
     boolean a -> a
     java.lang.String a(byte[]) -> a
-com.google.ads.util.b$a -> com.google.ads.util.b:
-    byte[] a -> d
-    int b -> e
-com.google.ads.util.b$b -> com.google.ads.util.a:
-    byte[] h -> f
-    byte[] i -> g
-    byte[] j -> h
-    int c -> i
-    int k -> j
-    boolean d -> a
-    boolean e -> b
-    boolean f -> c
-    byte[] l -> k
-    boolean g -> l
+com.google.ads.util.b$a -> com.google.ads.util.d:
+    byte[] a -> a
+    int b -> b
+com.google.ads.util.b$b -> com.google.ads.util.e:
+    byte[] h -> h
+    byte[] i -> i
+    byte[] j -> j
+    int c -> c
+    int k -> k
+    boolean d -> d
+    boolean e -> e
+    boolean f -> f
+    byte[] l -> l
+    boolean g -> g
     boolean a(byte[],int) -> a
 com.google.ads.util.c -> com.google.ads.util.f:
     int a(android.content.Context,android.util.DisplayMetrics) -> a
     int b(android.content.Context,android.util.DisplayMetrics) -> b
     int a(android.content.Context,float,int) -> a
-com.google.ads.v -> com.google.ads.a:
+com.google.ads.v -> com.google.ads.an:
     int a(java.util.HashMap,java.lang.String,int,android.util.DisplayMetrics) -> a
     void a(com.google.ads.d,java.util.HashMap,android.webkit.WebView) -> a
-com.google.ads.w -> com.google.ads.r:
+com.google.ads.w -> com.google.ads.ao:
     android.content.Context a -> a
     java.lang.String b -> b
     void run() -> run
-com.google.ads.x -> com.google.ads.s:
+com.google.ads.x -> com.google.ads.ap:
     java.lang.ref.WeakReference a -> a
     void run() -> run
-com.google.ads.y -> com.google.ads.p:
+com.google.ads.y -> com.google.ads.aq:
     android.net.Uri a -> a
     android.net.Uri b -> b
     java.lang.String[] c -> c
     java.lang.String[] d -> d
-com.google.ads.z -> com.google.ads.q:
+com.google.ads.z -> com.google.ads.ar:
     void a(android.webkit.WebView,boolean) -> a
-com.google.ads.z$a -> com.google.ads.ap:
+com.google.ads.z$a -> com.google.ads.as:
     java.lang.ref.WeakReference a -> a
     void run() -> run
-com.google.ads.z$b -> com.google.ads.aq:
+com.google.ads.z$b -> com.google.ads.at:
     java.lang.ref.WeakReference a -> a
     android.webkit.WebView b -> b
     java.lang.String c -> c
     void run() -> run
-com.google.ads.z$c -> com.google.ads.ar:
+com.google.ads.z$c -> com.google.ads.au:
     boolean a -> a
     android.webkit.WebView b -> b
     void run() -> run
-com.madhackerdesigns.neverbelate.Eula -> com.madhackerdesigns.neverbelate.d:
+com.madhackerdesigns.neverbelate.Eula -> com.madhackerdesigns.neverbelate.a:
     void show(android.app.Activity) -> a
     void display(android.app.Activity) -> b
-com.madhackerdesigns.neverbelate.Eula$1 -> com.madhackerdesigns.neverbelate.c:
+com.madhackerdesigns.neverbelate.Eula$1 -> com.madhackerdesigns.neverbelate.b:
     android.content.SharedPreferences val$preferences -> a
     android.app.Activity val$activity -> b
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.Eula$2 -> com.madhackerdesigns.neverbelate.b:
+com.madhackerdesigns.neverbelate.Eula$2 -> com.madhackerdesigns.neverbelate.c:
     android.app.Activity val$activity -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.Eula$OnEulaAgreedTo -> com.madhackerdesigns.neverbelate.a:
+com.madhackerdesigns.neverbelate.Eula$OnEulaAgreedTo -> com.madhackerdesigns.neverbelate.d:
     void onEulaAgreedTo() -> a
 com.madhackerdesigns.neverbelate.provider.AlertsContract -> com.madhackerdesigns.neverbelate.provider.AlertsContract:
 com.madhackerdesigns.neverbelate.provider.AlertsContract$Alerts -> com.madhackerdesigns.neverbelate.provider.a:
@@ -1270,13 +1268,13 @@ com.madhackerdesigns.neverbelate.settings.WebsitePreference -> com.madhackerdesi
 com.madhackerdesigns.neverbelate.ui.EdgeScrollView -> com.madhackerdesigns.neverbelate.ui.EdgeScrollView:
     int edgeColor -> a
     int getSolidColor() -> getSolidColor
-com.madhackerdesigns.neverbelate.ui.EventListAdapter -> com.madhackerdesigns.neverbelate.ui.h:
+com.madhackerdesigns.neverbelate.ui.EventListAdapter -> com.madhackerdesigns.neverbelate.ui.a:
     android.content.Context mContext -> a
     int mDateTimeFlags -> b
     java.lang.String mMinutesAway -> c
     void bindView(android.view.View,android.content.Context,android.database.Cursor) -> bindView
     android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
-com.madhackerdesigns.neverbelate.ui.EventListAdapter$ViewHolder -> com.madhackerdesigns.neverbelate.ui.z:
+com.madhackerdesigns.neverbelate.ui.EventListAdapter$ViewHolder -> com.madhackerdesigns.neverbelate.ui.b:
     android.view.View stripe -> a
     android.widget.TextView title -> b
     android.widget.TextView when -> c
@@ -1288,49 +1286,53 @@ com.madhackerdesigns.neverbelate.ui.LauncherActivity -> com.madhackerdesigns.nev
     com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> c
     android.content.SharedPreferences mAppState -> d
     void onCreate(android.os.Bundle) -> onCreate
+    void shareNeverLate() -> b
     android.app.Dialog onCreateDialog(int) -> onCreateDialog
     void onPause() -> onPause
     void onResume() -> onResume
     void onEulaAgreedTo() -> a
-    void loadHelpers() -> b
+    void loadHelpers() -> c
     com.madhackerdesigns.neverbelate.settings.PreferenceHelper access$0(com.madhackerdesigns.neverbelate.ui.LauncherActivity) -> a
     android.content.SharedPreferences access$1(com.madhackerdesigns.neverbelate.ui.LauncherActivity) -> b
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$1 -> com.madhackerdesigns.neverbelate.ui.q:
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$1 -> com.madhackerdesigns.neverbelate.ui.c:
     com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$10 -> com.madhackerdesigns.neverbelate.ui.l:
-    com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
-    void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$11 -> com.madhackerdesigns.neverbelate.ui.n:
-    com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
-    void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$12 -> com.madhackerdesigns.neverbelate.ui.m:
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$10 -> com.madhackerdesigns.neverbelate.ui.d:
     com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
     void onCancel(android.content.DialogInterface) -> onCancel
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$2 -> com.madhackerdesigns.neverbelate.ui.u:
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$11 -> com.madhackerdesigns.neverbelate.ui.e:
+    com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$12 -> com.madhackerdesigns.neverbelate.ui.f:
+    com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$13 -> com.madhackerdesigns.neverbelate.ui.g:
+    com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$2 -> com.madhackerdesigns.neverbelate.ui.h:
     com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$3 -> com.madhackerdesigns.neverbelate.ui.t:
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$3 -> com.madhackerdesigns.neverbelate.ui.i:
     com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$4 -> com.madhackerdesigns.neverbelate.ui.s:
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$4 -> com.madhackerdesigns.neverbelate.ui.j:
     com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$5 -> com.madhackerdesigns.neverbelate.ui.r:
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$5 -> com.madhackerdesigns.neverbelate.ui.k:
     com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$6 -> com.madhackerdesigns.neverbelate.ui.y:
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$6 -> com.madhackerdesigns.neverbelate.ui.l:
     com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
     boolean onLongClick(android.view.View) -> onLongClick
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$7 -> com.madhackerdesigns.neverbelate.ui.x:
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$7 -> com.madhackerdesigns.neverbelate.ui.m:
     com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$8 -> com.madhackerdesigns.neverbelate.ui.w:
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$8 -> com.madhackerdesigns.neverbelate.ui.n:
     com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.LauncherActivity$9 -> com.madhackerdesigns.neverbelate.ui.v:
+com.madhackerdesigns.neverbelate.ui.LauncherActivity$9 -> com.madhackerdesigns.neverbelate.ui.o:
     com.madhackerdesigns.neverbelate.ui.LauncherActivity this$0 -> a
-    void onCancel(android.content.DialogInterface) -> onCancel
+    void onClick(android.content.DialogInterface,int) -> onClick
 com.madhackerdesigns.neverbelate.ui.MapOverlay -> com.madhackerdesigns.neverbelate.ui.MapOverlay:
     java.util.ArrayList mOverlays -> a
     android.content.Context mContext -> b
@@ -1340,36 +1342,37 @@ com.madhackerdesigns.neverbelate.ui.MapOverlay -> com.madhackerdesigns.neverbela
     boolean onTap(int) -> onTap
     boolean notEmpty(java.lang.String) -> a
 com.madhackerdesigns.neverbelate.ui.QuickTourActivity -> com.madhackerdesigns.neverbelate.ui.QuickTourActivity:
-    int[] PAGE_LAYOUTS -> f
-    android.content.res.Resources RESOURCES -> i
-    com.madhackerdesigns.neverbelate.ui.QuickTourActivity$MyAdapter mAdapter -> j
-    android.content.Context mContext -> g
-    com.viewpagerindicator.CirclePageIndicator mIndicator -> h
-    android.support.v4.view.ViewPager mPager -> k
+    int[] PAGE_LAYOUTS -> m
+    android.content.res.Resources RESOURCES -> n
+    com.madhackerdesigns.neverbelate.ui.QuickTourActivity$MyAdapter mAdapter -> o
+    android.content.Context mContext -> p
+    com.viewpagerindicator.CirclePageIndicator mIndicator -> q
+    android.support.v4.view.ViewPager mPager -> r
     void onCreate(android.os.Bundle) -> onCreate
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity$1 -> com.madhackerdesigns.neverbelate.ui.o:
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity$1 -> com.madhackerdesigns.neverbelate.ui.p:
     com.madhackerdesigns.neverbelate.ui.QuickTourActivity this$0 -> a
-    void onPageScrollStateChanged(int) -> a
+    void onPageScrollStateChanged(int) -> b
     void onPageScrolled(int,float,int) -> a
-    void onPageSelected(int) -> b
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity$MyAdapter -> com.madhackerdesigns.neverbelate.ui.b:
-    int getCount() -> a
+    void onPageSelected(int) -> a
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity$MyAdapter -> com.madhackerdesigns.neverbelate.ui.q:
+    int getCount() -> c
     android.support.v4.app.Fragment getItem(int) -> a
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment -> com.madhackerdesigns.neverbelate.ui.p:
-    int mPosition -> O
-    com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> a
-    android.widget.TextView mSummaryText -> b
-    java.lang.String mSummaryOff -> c
-    java.lang.String mSummaryOn -> d
-    void onCreate(android.os.Bundle) -> a
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment -> com.madhackerdesigns.neverbelate.ui.r:
+    int mPosition -> R
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> N
+    android.widget.TextView mSummaryText -> O
+    java.lang.String mSummaryOff -> P
+    java.lang.String mSummaryOn -> Q
+    com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment newInstance(int) -> b
+    void onCreate(android.os.Bundle) -> b
     android.view.View onCreateView$469ccb8a(android.view.LayoutInflater,android.view.ViewGroup) -> a
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$1 -> com.madhackerdesigns.neverbelate.ui.i:
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$1 -> com.madhackerdesigns.neverbelate.ui.s:
     com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$2 -> com.madhackerdesigns.neverbelate.ui.j:
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$2 -> com.madhackerdesigns.neverbelate.ui.t:
     com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment this$1 -> a
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$3 -> com.madhackerdesigns.neverbelate.ui.k:
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$3 -> com.madhackerdesigns.neverbelate.ui.u:
     com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment this$1 -> a
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
 com.madhackerdesigns.neverbelate.ui.Registration -> com.madhackerdesigns.neverbelate.ui.Registration:
@@ -1408,71 +1411,57 @@ com.madhackerdesigns.neverbelate.ui.RegistrationForm -> com.madhackerdesigns.nev
     void access$4(com.madhackerdesigns.neverbelate.ui.RegistrationForm) -> b
     void access$5(com.madhackerdesigns.neverbelate.ui.RegistrationForm,java.lang.String) -> a
     void access$6(com.madhackerdesigns.neverbelate.ui.RegistrationForm) -> c
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$1 -> com.madhackerdesigns.neverbelate.ui.aj:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$1 -> com.madhackerdesigns.neverbelate.ui.v:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$2 -> com.madhackerdesigns.neverbelate.ui.al:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$2 -> com.madhackerdesigns.neverbelate.ui.w:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onDateSet(android.widget.DatePicker,int,int,int) -> onDateSet
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$3 -> com.madhackerdesigns.neverbelate.ui.ak:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$3 -> com.madhackerdesigns.neverbelate.ui.x:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$4 -> com.madhackerdesigns.neverbelate.ui.an:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$4 -> com.madhackerdesigns.neverbelate.ui.y:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$5 -> com.madhackerdesigns.neverbelate.ui.am:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$5 -> com.madhackerdesigns.neverbelate.ui.z:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$6 -> com.madhackerdesigns.neverbelate.ui.ap:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$6 -> com.madhackerdesigns.neverbelate.ui.aa:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$7 -> com.madhackerdesigns.neverbelate.ui.ao:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$7 -> com.madhackerdesigns.neverbelate.ui.ab:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$8 -> com.madhackerdesigns.neverbelate.ui.ai:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$8 -> com.madhackerdesigns.neverbelate.ui.ac:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$9 -> com.madhackerdesigns.neverbelate.ui.ah:
+com.madhackerdesigns.neverbelate.ui.RegistrationForm$9 -> com.madhackerdesigns.neverbelate.ui.ad:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
 com.madhackerdesigns.neverbelate.ui.TestActivity -> com.madhackerdesigns.neverbelate.ui.TestActivity:
     com.madhackerdesigns.neverbelate.util.AdHelper mAdHelper -> a
     void onCreate(android.os.Bundle) -> onCreate
     com.madhackerdesigns.neverbelate.util.AdHelper access$0(com.madhackerdesigns.neverbelate.ui.TestActivity) -> a
-com.madhackerdesigns.neverbelate.ui.TestActivity$1 -> com.madhackerdesigns.neverbelate.ui.af:
+com.madhackerdesigns.neverbelate.ui.TestActivity$1 -> com.madhackerdesigns.neverbelate.ui.ae:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$2 -> com.madhackerdesigns.neverbelate.ui.ad:
+com.madhackerdesigns.neverbelate.ui.TestActivity$2 -> com.madhackerdesigns.neverbelate.ui.af:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$3 -> com.madhackerdesigns.neverbelate.ui.ae:
+com.madhackerdesigns.neverbelate.ui.TestActivity$3 -> com.madhackerdesigns.neverbelate.ui.ag:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$4 -> com.madhackerdesigns.neverbelate.ui.ag:
+com.madhackerdesigns.neverbelate.ui.TestActivity$4 -> com.madhackerdesigns.neverbelate.ui.ah:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
 com.madhackerdesigns.neverbelate.ui.UserLocationOverlay -> com.madhackerdesigns.neverbelate.ui.UserLocationOverlay:
     android.content.Context mContext -> a
-    java.util.ArrayList mDest -> b
-    com.google.android.maps.MapView mMapView -> c
-    com.google.android.maps.GeoPoint mOrig -> d
-    void drawLocations() -> a
-    void drawLocations(android.location.Location) -> a
+    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay$OnLocationChangedListener mListener -> b
     void onLocationChanged(android.location.Location) -> onLocationChanged
     boolean onTap(com.google.android.maps.GeoPoint,com.google.android.maps.MapView) -> onTap
-    void addDestination(com.google.android.maps.GeoPoint,java.lang.String,java.lang.String) -> a
-    void setOrigin(com.google.android.maps.GeoPoint) -> a
-com.madhackerdesigns.neverbelate.ui.UserLocationOverlay$MapBounds -> com.madhackerdesigns.neverbelate.ui.ac:
-    int mLatMinE6 -> a
-    int mLatMaxE6 -> b
-    int mLonMinE6 -> c
-    int mLonMaxE6 -> d
-    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay this$0 -> e
-    void addPoint(int,int) -> a
-    int getLatSpanE6() -> a
-    int getLonSpanE6() -> b
-    int getLatCenterE6() -> c
-    int getLonCenterE6() -> d
+    void setOnLocationChangedListener(com.madhackerdesigns.neverbelate.ui.UserLocationOverlay$OnLocationChangedListener) -> a
+com.madhackerdesigns.neverbelate.ui.UserLocationOverlay$OnLocationChangedListener -> com.madhackerdesigns.neverbelate.ui.ai:
+    void onLocationChanged(android.location.Location) -> a
 com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverbelate.ui.WarningDialog:
     com.madhackerdesigns.neverbelate.util.AdHelper mAdHelper -> a
     com.pontiflex.mobile.webview.sdk.IAdManager mAdManager -> b
@@ -1481,10 +1470,15 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverb
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler mHandler -> e
     java.util.ArrayList mEventHolders -> f
     boolean mInsistentStopped -> g
-    android.widget.ViewSwitcher mSwitcher -> h
-    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay mUserLocationOverlay -> i
+    com.google.android.maps.MapView mMapView -> h
+    android.widget.ViewSwitcher mSwitcher -> i
+    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay mUserLocationOverlay -> j
+    java.util.ArrayList mDest -> k
+    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay$OnLocationChangedListener mListener -> l
+    com.google.android.maps.GeoPoint mOrig -> m
     void onCreate(android.os.Bundle) -> onCreate
     void switchToTrafficView() -> a
+    void drawLocations(android.location.Location) -> a
     void onPause() -> onPause
     void onResume() -> onResume
     boolean isRouteDisplayed() -> isRouteDisplayed
@@ -1496,32 +1490,49 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverb
     void access$5(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> f
     void access$6(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> g
     com.madhackerdesigns.neverbelate.ui.UserLocationOverlay access$7(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> h
-com.madhackerdesigns.neverbelate.ui.WarningDialog$1 -> com.madhackerdesigns.neverbelate.ui.aa:
+    java.util.ArrayList access$8(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> i
+    com.google.android.maps.GeoPoint access$9(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> j
+com.madhackerdesigns.neverbelate.ui.WarningDialog$1 -> com.madhackerdesigns.neverbelate.ui.aj:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$2 -> com.madhackerdesigns.neverbelate.ui.ab:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$2 -> com.madhackerdesigns.neverbelate.ui.ak:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler -> com.madhackerdesigns.neverbelate.ui.c:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$3 -> com.madhackerdesigns.neverbelate.ui.al:
+    com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
+    void onLocationChanged(android.location.Location) -> a
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler -> com.madhackerdesigns.neverbelate.ui.am:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onQueryComplete(int,java.lang.Object,android.database.Cursor) -> onQueryComplete
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$1 -> com.madhackerdesigns.neverbelate.ui.g:
+    com.madhackerdesigns.neverbelate.ui.WarningDialog access$0(com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler) -> a
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$1 -> com.madhackerdesigns.neverbelate.ui.an:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$2 -> com.madhackerdesigns.neverbelate.ui.f:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$2 -> com.madhackerdesigns.neverbelate.ui.ao:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$3 -> com.madhackerdesigns.neverbelate.ui.e:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$3 -> com.madhackerdesigns.neverbelate.ui.ap:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$4 -> com.madhackerdesigns.neverbelate.ui.d:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$4 -> com.madhackerdesigns.neverbelate.ui.aq:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$EventHolder -> com.madhackerdesigns.neverbelate.ui.a:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$EventHolder -> com.madhackerdesigns.neverbelate.ui.ar:
     java.lang.String json -> a
     java.lang.String title -> b
     java.lang.String location -> c
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> d
+com.madhackerdesigns.neverbelate.ui.WarningDialog$MapBounds -> com.madhackerdesigns.neverbelate.ui.as:
+    int mLatMinE6 -> b
+    int mLatMaxE6 -> c
+    int mLonMinE6 -> d
+    int mLonMaxE6 -> e
+    com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
+    void addPoint(int,int) -> a
+    int getLatSpanE6() -> a
+    int getLonSpanE6() -> b
+    int getLatCenterE6() -> c
+    int getLonCenterE6() -> d
 com.madhackerdesigns.neverbelate.util.AdHelper -> com.madhackerdesigns.neverbelate.util.AdHelper:
     android.content.SharedPreferences mSettings -> a
     android.content.SharedPreferences$Editor mEditor -> b
@@ -1530,11 +1541,15 @@ com.madhackerdesigns.neverbelate.util.AdHelper -> com.madhackerdesigns.neverbela
     void setAdShown$1385ff() -> c
     void setWarningDismissed$1385ff() -> d
 com.madhackerdesigns.neverbelate.util.Logger -> com.madhackerdesigns.neverbelate.util.Logger:
+    int d(java.lang.String) -> a
+    int d(java.lang.String,java.lang.String) -> a
 com.madhackerdesigns.neverbelate.util.NetUtils -> com.madhackerdesigns.neverbelate.util.NetUtils:
     java.io.InputStream OpenHttpConnection(java.lang.String) -> b
     java.lang.String DownloadText(java.lang.String) -> a
 com.pontiflex.mobile.webview.models.ResourceData -> com.pontiflex.mobile.webview.models.ResourceData:
-com.pontiflex.mobile.webview.sdk.AdConfig -> com.pontiflex.mobile.webview.sdk.d:
+    java.lang.String getResourceData(java.lang.String) -> a
+    void setResourceData(java.lang.String,java.lang.String) -> a
+com.pontiflex.mobile.webview.sdk.AdConfig -> com.pontiflex.mobile.webview.sdk.a:
     com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode DefaultRegistrationMode -> a
     int launchInterval -> b
     boolean withRegistration -> c
@@ -1548,22 +1563,21 @@ com.pontiflex.mobile.webview.sdk.AdConfig -> com.pontiflex.mobile.webview.sdk.d:
     java.lang.String themeName -> k
     java.util.List styles -> l
     int getLaunchInterval() -> a
-    void setLaunchInterval$13462e() -> b
-    boolean isWithRegistration() -> c
-    void setWithRegistration(boolean) -> a
+    boolean isWithRegistration() -> b
+    void setWithRegistration$1385ff() -> c
     boolean isShowOnFirstLaunch() -> d
-    void setShowOnFirstLaunch$1385ff() -> e
-    boolean isAllowReadDeviceData() -> f
-    java.lang.String getDefaultLocale() -> g
-    boolean isRegistrationRequired() -> h
+    boolean isAllowReadDeviceData() -> e
+    java.lang.String getDefaultLocale() -> f
+    boolean isRegistrationRequired() -> g
+    void setRegistrationRequired$1385ff() -> h
     boolean isShowAdAfterRegistration() -> i
     com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode getRegistrationMode() -> j
     void setRegistrationMode(com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode) -> a
     boolean isWithSingleOffer() -> k
-    void setWithSingleOffer(boolean) -> b
+    void setWithSingleOffer$1385ff() -> l
     void setFromSharedPreferences(android.content.SharedPreferences,android.content.SharedPreferences$Editor) -> a
     void saveToSharedPreferences(android.content.SharedPreferences$Editor) -> a
-    org.json.JSONArray getStylesJson() -> l
+    org.json.JSONArray getStylesJson() -> m
 com.pontiflex.mobile.webview.sdk.AdManager -> com.pontiflex.mobile.webview.sdk.b:
     com.pontiflex.mobile.webview.sdk.AdManager instance -> a
     com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment environment -> b
@@ -1581,33 +1595,39 @@ com.pontiflex.mobile.webview.sdk.AdManager -> com.pontiflex.mobile.webview.sdk.b
     com.pontiflex.mobile.webview.sdk.AdManager getAdManagerInstance(android.app.Application) -> c
     boolean isAllowReadDeviceData() -> a
     java.lang.String getDefaultLocale() -> b
-    boolean isRegistrationRequired() -> c
-    boolean isShowingMultiAdView() -> d
+    void setRegistrationMode(com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode) -> a
+    void setRegistrationRequired$1385ff() -> c
+    boolean isRegistrationRequired() -> d
+    boolean isShowingMultiAdView() -> e
     void commitStorageChanges(com.pontiflex.mobile.webview.utilities.RegistrationStorage) -> a
     java.lang.String getRegistrationData(java.lang.String) -> a
-    void clearRegistrationStorage() -> e
-    boolean hasValidRegistrationData() -> f
+    void clearRegistrationStorage() -> f
+    boolean hasValidRegistrationData() -> g
+    void startRegistrationActivity() -> h
+    void startMultiOfferActivity() -> i
     void startRegistrationActivity(android.app.Activity) -> a
+    void startMultiOfferActivity$63a22f9() -> p
     void startSingleOfferActivity(android.app.Activity) -> b
-    android.content.Context getContext() -> g
-    boolean isOnline() -> n
-    int getLaunchCount() -> o
-    com.pontiflex.mobile.webview.utilities.RegistrationStorage getRegistrationStorage() -> h
-    android.content.SharedPreferences getSharedPreferences() -> p
-    android.content.SharedPreferences$Editor getSharedPreferencesEditor() -> q
-    com.pontiflex.mobile.webview.utilities.AppInfo getAppInfo() -> i
+    android.content.Context getContext() -> j
+    void launchActivityAfterMillis$70a4cbd4$3ef676ad(boolean) -> b
+    boolean isOnline() -> q
+    boolean shouldLaunchOnInterval(int,boolean) -> a
+    int getLaunchCount() -> r
+    com.pontiflex.mobile.webview.utilities.RegistrationStorage getRegistrationStorage() -> k
+    android.content.SharedPreferences getSharedPreferences() -> s
+    android.content.SharedPreferences$Editor getSharedPreferencesEditor() -> t
+    com.pontiflex.mobile.webview.utilities.AppInfo getAppInfo() -> l
     void setAppInfo(com.pontiflex.mobile.webview.utilities.AppInfo) -> a
     void setResourceInitializationInProgress(boolean) -> a
-    void showAd() -> j
     void showAd(com.pontiflex.mobile.webview.sdk.IAdConfig) -> a
-    com.pontiflex.mobile.webview.sdk.IAdConfig getAdConfig() -> k
-    boolean isInitialized() -> l
-    boolean checkInitializationSuccess() -> m
+    com.pontiflex.mobile.webview.sdk.IAdConfig getAdConfig() -> m
+    boolean isInitialized() -> n
+    boolean checkInitializationSuccess() -> o
     boolean access$002$44c29966(com.pontiflex.mobile.webview.sdk.AdManager) -> a
-com.pontiflex.mobile.webview.sdk.AdManager$1 -> com.pontiflex.mobile.webview.sdk.h:
+com.pontiflex.mobile.webview.sdk.AdManager$1 -> com.pontiflex.mobile.webview.sdk.c:
     com.pontiflex.mobile.webview.sdk.AdManager this$0 -> a
     void run() -> run
-com.pontiflex.mobile.webview.sdk.AdManager$2 -> com.pontiflex.mobile.webview.sdk.f:
+com.pontiflex.mobile.webview.sdk.AdManager$2 -> com.pontiflex.mobile.webview.sdk.d:
     boolean val$isRegistration -> a
     android.app.Activity val$context -> b
     com.pontiflex.mobile.webview.sdk.AdManager this$0 -> c
@@ -1620,31 +1640,33 @@ com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment -> com.pontiflex.mobi
     com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment[] $VALUES -> e
     com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment[] values() -> values
     com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment valueOf(java.lang.String) -> valueOf
-com.pontiflex.mobile.webview.sdk.IAdConfig -> com.pontiflex.mobile.webview.sdk.g:
+com.pontiflex.mobile.webview.sdk.IAdConfig -> com.pontiflex.mobile.webview.sdk.f:
     int getLaunchInterval() -> a
-    void setLaunchInterval$13462e() -> b
-    boolean isWithRegistration() -> c
-    void setWithRegistration(boolean) -> a
+    boolean isWithRegistration() -> b
+    void setWithRegistration$1385ff() -> c
     boolean isWithSingleOffer() -> k
-    void setWithSingleOffer(boolean) -> b
+    void setWithSingleOffer$1385ff() -> l
     boolean isShowOnFirstLaunch() -> d
-    void setShowOnFirstLaunch$1385ff() -> e
-    boolean isAllowReadDeviceData() -> f
-    java.lang.String getDefaultLocale() -> g
-    boolean isRegistrationRequired() -> h
+    boolean isAllowReadDeviceData() -> e
+    java.lang.String getDefaultLocale() -> f
+    boolean isRegistrationRequired() -> g
+    void setRegistrationRequired$1385ff() -> h
     boolean isShowAdAfterRegistration() -> i
     com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode getRegistrationMode() -> j
     void setRegistrationMode(com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode) -> a
     void saveToSharedPreferences(android.content.SharedPreferences$Editor) -> a
     void setFromSharedPreferences(android.content.SharedPreferences,android.content.SharedPreferences$Editor) -> a
-com.pontiflex.mobile.webview.sdk.IAdManager -> com.pontiflex.mobile.webview.sdk.c:
+com.pontiflex.mobile.webview.sdk.IAdManager -> com.pontiflex.mobile.webview.sdk.g:
+    void setRegistrationMode(com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode) -> a
+    void setRegistrationRequired$1385ff() -> c
     java.lang.String getRegistrationData(java.lang.String) -> a
-    void clearRegistrationStorage() -> e
-    boolean hasValidRegistrationData() -> f
-    void showAd() -> j
+    void clearRegistrationStorage() -> f
+    boolean hasValidRegistrationData() -> g
+    void startRegistrationActivity() -> h
+    void startMultiOfferActivity() -> i
     void showAd(com.pontiflex.mobile.webview.sdk.IAdConfig) -> a
-    com.pontiflex.mobile.webview.sdk.IAdConfig getAdConfig() -> k
-com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode -> com.pontiflex.mobile.webview.sdk.a:
+    com.pontiflex.mobile.webview.sdk.IAdConfig getAdConfig() -> m
+com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode -> com.pontiflex.mobile.webview.sdk.h:
     com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode RegistrationAtLaunch -> a
     com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode RegistrationAfterIntervalInLaunches -> b
     com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode RegistrationAdHoc -> c
@@ -1654,43 +1676,66 @@ com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode -> com.pontiflex.mo
 com.pontiflex.mobile.webview.sdk.IPflexJSInterface -> com.pontiflex.mobile.webview.sdk.IPflexJSInterface:
 com.pontiflex.mobile.webview.sdk.activities.BaseActivity -> com.pontiflex.mobile.webview.sdk.activities.BaseActivity:
     android.webkit.WebView webView -> a
-    com.pontiflex.mobile.webview.utilities.PackageHelper helper -> d
-    com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface jsStorageInterface -> e
-    android.app.ProgressDialog progressDialog -> f
-    android.app.AlertDialog jsConfirmAlertDialog -> b
-    android.webkit.JsResult jsResult -> c
+    com.pontiflex.mobile.webview.utilities.PackageHelper helper -> b
+    com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface jsStorageInterface -> c
+    android.app.ProgressDialog progressDialog -> d
+    android.app.AlertDialog jsConfirmAlertDialog -> e
+    android.webkit.JsResult jsResult -> f
     com.pontiflex.mobile.webview.utilities.RegistrationStorage stateStorage -> g
     com.pontiflex.mobile.webview.utilities.RegistrationStorage additionalDataStorage -> h
     com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface resourceInterface -> i
     void onCreate(android.os.Bundle) -> onCreate
-    void startProgressDialog() -> b
-    void cancelProgressDialog() -> c
-    void cancelAlertDialog() -> d
-    void setUpViews() -> a
-    com.pontiflex.mobile.webview.utilities.RegistrationStorage getStateStorage() -> e
-    com.pontiflex.mobile.webview.utilities.RegistrationStorage getAdditionalDataStorage() -> f
-    com.pontiflex.mobile.webview.models.ResourceData getResourceDataStorage(java.lang.String) -> a
+    void startProgressDialog() -> a
+    void cancelProgressDialog() -> b
+    void cancelAlertDialog() -> c
+    void setUpViews() -> d
+    void initializeData() -> e
+    com.pontiflex.mobile.webview.utilities.RegistrationStorage getStateStorage() -> o
+    com.pontiflex.mobile.webview.utilities.RegistrationStorage getAdditionalDataStorage() -> p
+    com.pontiflex.mobile.webview.models.ResourceData getResourceDataStorage(java.lang.String) -> g
+    java.lang.String getStateData(java.lang.String) -> a
+    void clearStateData(java.lang.String) -> b
+    void saveStateData(java.lang.String,java.lang.String) -> a
+    java.lang.String getAdditionalData(java.lang.String) -> c
+    void saveAdditionalData(java.lang.String,java.lang.String) -> b
     void commitSateStorageChanges(com.pontiflex.mobile.webview.utilities.RegistrationStorage) -> a
-    java.lang.String getAllRegistrationData() -> g
+    void addRegistrationData(java.lang.String,java.lang.String) -> c
+    void addAllRegistrationData(java.lang.String) -> d
+    java.lang.String getRegistrationData(java.lang.String) -> e
+    java.lang.String getAllRegistrationData() -> f
+    void clearRegistrationData() -> g
+    boolean hasValidRegistrationData() -> h
+    boolean isOnline() -> i
     void onDestroy() -> onDestroy
     void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
-    java.lang.String getAppInfoJsonContent() -> h
-    android.webkit.WebView setUpWebview() -> i
+    java.lang.String getAppInfoJsonContent() -> j
+    java.lang.String getDeviceData(java.lang.String) -> f
+    android.webkit.WebView setUpWebview() -> k
+    java.lang.String getAppName(android.content.Context) -> a
+    java.lang.String getAppVersionCode(android.content.Context) -> b
+    java.lang.String getAppVersionName(android.content.Context) -> c
+    int getOsVersionCode$faab21a() -> l
+    java.lang.String getUserAgent(android.content.Context) -> d
+    java.lang.String getLocale(android.content.Context) -> e
+    java.lang.String getPostalCode() -> m
     boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void asyncHttpRequest(java.lang.String,boolean,java.util.Map) -> a
     void doUpdateResourcesCallBack(java.lang.String,boolean,java.lang.String) -> a
-    java.lang.String getResourceData(java.lang.String,java.lang.String) -> a
+    java.lang.String getResourceData(java.lang.String,java.lang.String) -> d
     void setResourceData(java.lang.String,java.lang.String,java.lang.String) -> a
     java.lang.String getResourceContent(java.lang.String,boolean,java.lang.String) -> b
-com.pontiflex.mobile.webview.sdk.activities.BaseActivity$1 -> com.pontiflex.mobile.webview.sdk.activities.t:
+    java.lang.String getBasePath() -> n
+com.pontiflex.mobile.webview.sdk.activities.BaseActivity$1 -> com.pontiflex.mobile.webview.sdk.activities.a:
     com.pontiflex.mobile.webview.sdk.activities.BaseActivity this$0 -> a
     void run() -> run
-com.pontiflex.mobile.webview.sdk.activities.BaseActivity$2 -> com.pontiflex.mobile.webview.sdk.activities.u:
+com.pontiflex.mobile.webview.sdk.activities.BaseActivity$2 -> com.pontiflex.mobile.webview.sdk.activities.b:
     com.pontiflex.mobile.webview.sdk.activities.BaseActivity this$0 -> a
     void run() -> run
 com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity -> com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity:
-    void setUpViews() -> a
+    void initializeData() -> e
+    void setUpViews() -> d
     void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface -> com.pontiflex.mobile.webview.sdk.activities.a:
+com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface -> com.pontiflex.mobile.webview.sdk.activities.c:
     com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
     java.lang.String getDeviceData(java.lang.String) -> getDeviceData
     java.lang.String getAllDeviceData() -> getAllDeviceData
@@ -1700,7 +1745,7 @@ com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface -> com.pontif
     int getScreenDensity() -> getScreenDensity
     int getScreenSize() -> getScreenSize
     java.lang.String getDeviceConfig() -> getDeviceConfig
-com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface -> com.pontiflex.mobile.webview.sdk.activities.s:
+com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface -> com.pontiflex.mobile.webview.sdk.activities.d:
     com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
     android.webkit.WebView innerWebView -> b
     void showKeyboard() -> showKeyboard
@@ -1714,7 +1759,7 @@ com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface -> com.pontiflex.mo
     void cancelProgressDialog() -> cancelProgressDialog
     java.lang.String getBasePath() -> getBasePath
     void asyncHttpRequest(java.lang.String,boolean,java.lang.String) -> asyncHttpRequest
-com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface -> com.pontiflex.mobile.webview.sdk.activities.c:
+com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface -> com.pontiflex.mobile.webview.sdk.activities.e:
     com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
     java.lang.String getResourceData(java.lang.String,java.lang.String) -> getResourceData
     void setResourceData(java.lang.String,java.lang.String,java.lang.String) -> setResourceData
@@ -1722,13 +1767,13 @@ com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface -> com.pont
     void updateResource(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> updateResource
     void updateResourceCallback(java.lang.String,boolean,java.lang.String) -> updateResourceCallback
     com.pontiflex.mobile.webview.sdk.activities.BaseActivity access$000(com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface) -> access$000
-com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface$UpdateResourceRunnable -> com.pontiflex.mobile.webview.sdk.activities.r:
+com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface$UpdateResourceRunnable -> com.pontiflex.mobile.webview.sdk.activities.f:
     java.lang.String resourceKey -> a
     boolean updateSuccessful -> b
     java.lang.String newVersionCode -> c
     com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface this$0 -> d
     void run() -> run
-com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface -> com.pontiflex.mobile.webview.sdk.activities.q:
+com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface -> com.pontiflex.mobile.webview.sdk.activities.g:
     com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
     android.webkit.WebView innerWebView -> b
     boolean hasValidRegistrationData() -> hasValidRegistrationData
@@ -1744,7 +1789,7 @@ com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface -> com.ponti
     void setItem(java.lang.String,java.lang.String) -> setItem
     java.lang.String getAdditionalData(java.lang.String) -> getAdditionalData
     void setAdditionalData(java.lang.String,java.lang.String) -> setAdditionalData
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface -> com.pontiflex.mobile.webview.sdk.activities.p:
+com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface -> com.pontiflex.mobile.webview.sdk.activities.h:
     com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
     java.lang.String getAppName() -> getAppName
     java.lang.String getAppVersionCode() -> getAppVersionCode
@@ -1755,7 +1800,7 @@ com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface -> com.ponti
     java.lang.String getPostalCode() -> getPostalCode
     int getOsVersionCode() -> getOsVersionCode
     java.lang.String getNativeVersionConfig() -> getNativeVersionConfig
-com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient -> com.pontiflex.mobile.webview.sdk.activities.b:
+com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient -> com.pontiflex.mobile.webview.sdk.activities.i:
     com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
     boolean onJsAlert(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsResult) -> onJsAlert
     boolean onJsConfirm(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsResult) -> onJsConfirm
@@ -1763,32 +1808,32 @@ com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient -> com.pontifle
     void onProgressChanged(android.webkit.WebView,int) -> onProgressChanged
     void onReceivedTitle(android.webkit.WebView,java.lang.String) -> onReceivedTitle
     void onConsoleMessage(java.lang.String,int,java.lang.String) -> onConsoleMessage
-com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$1 -> com.pontiflex.mobile.webview.sdk.activities.k:
+com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$1 -> com.pontiflex.mobile.webview.sdk.activities.j:
     android.webkit.JsResult val$result -> a
     com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient this$0 -> b
     void onClick(android.content.DialogInterface,int) -> onClick
-com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$2 -> com.pontiflex.mobile.webview.sdk.activities.g:
+com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$2 -> com.pontiflex.mobile.webview.sdk.activities.k:
     com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient this$0 -> a
     boolean onKey(android.content.DialogInterface,int,android.view.KeyEvent) -> onKey
-com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$3 -> com.pontiflex.mobile.webview.sdk.activities.h:
+com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$3 -> com.pontiflex.mobile.webview.sdk.activities.l:
     android.webkit.JsResult val$result -> a
     com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient this$0 -> b
     void onClick(android.content.DialogInterface,int) -> onClick
-com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$4 -> com.pontiflex.mobile.webview.sdk.activities.e:
+com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$4 -> com.pontiflex.mobile.webview.sdk.activities.m:
     com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient this$0 -> a
     boolean onKey(android.content.DialogInterface,int,android.view.KeyEvent) -> onKey
-com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$5 -> com.pontiflex.mobile.webview.sdk.activities.f:
+com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$5 -> com.pontiflex.mobile.webview.sdk.activities.n:
     android.webkit.JsPromptResult val$result -> a
     com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient this$0 -> b
     void onClick(android.content.DialogInterface,int) -> onClick
-com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$6 -> com.pontiflex.mobile.webview.sdk.activities.i:
+com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$6 -> com.pontiflex.mobile.webview.sdk.activities.o:
     android.webkit.JsPromptResult val$result -> a
     com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient this$0 -> b
     void onClick(android.content.DialogInterface,int) -> onClick
-com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$7 -> com.pontiflex.mobile.webview.sdk.activities.j:
+com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient$7 -> com.pontiflex.mobile.webview.sdk.activities.p:
     com.pontiflex.mobile.webview.sdk.activities.PflexWebChromeClient this$0 -> a
     boolean onKey(android.content.DialogInterface,int,android.view.KeyEvent) -> onKey
-com.pontiflex.mobile.webview.sdk.activities.PflexWebViewClient -> com.pontiflex.mobile.webview.sdk.activities.d:
+com.pontiflex.mobile.webview.sdk.activities.PflexWebViewClient -> com.pontiflex.mobile.webview.sdk.activities.q:
     com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
     boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
     void onReceivedError(android.webkit.WebView,int,java.lang.String,java.lang.String) -> onReceivedError
@@ -1803,23 +1848,24 @@ com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity -> com.p
     void startMultiOfferActivity() -> b
     void startShowAd() -> c
     void clearRegistrationData() -> d
-com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$1 -> com.pontiflex.mobile.webview.sdk.activities.o:
+com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$1 -> com.pontiflex.mobile.webview.sdk.activities.r:
     com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$2 -> com.pontiflex.mobile.webview.sdk.activities.n:
+com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$2 -> com.pontiflex.mobile.webview.sdk.activities.s:
     com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$3 -> com.pontiflex.mobile.webview.sdk.activities.m:
+com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$3 -> com.pontiflex.mobile.webview.sdk.activities.t:
     com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$4 -> com.pontiflex.mobile.webview.sdk.activities.l:
+com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity$4 -> com.pontiflex.mobile.webview.sdk.activities.u:
     com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity this$0 -> a
     void onClick(android.view.View) -> onClick
 com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity -> com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity:
-    void setUpViews() -> a
+    void setUpViews() -> d
     void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
 com.pontiflex.mobile.webview.sdk.activities.SignUpActivity -> com.pontiflex.mobile.webview.sdk.activities.SignUpActivity:
-com.pontiflex.mobile.webview.utilities.AppInfo -> com.pontiflex.mobile.webview.utilities.n:
+    void initializeData() -> e
+com.pontiflex.mobile.webview.utilities.AppInfo -> com.pontiflex.mobile.webview.a.a:
     java.util.Comparator fieldsComparator -> a
     com.pontiflex.mobile.webview.utilities.AppInfo createAppInfo(android.content.Context) -> a
     com.pontiflex.mobile.webview.utilities.AppInfo createAppInfo(android.content.Context,java.lang.String) -> a
@@ -1831,10 +1877,10 @@ com.pontiflex.mobile.webview.utilities.AppInfo -> com.pontiflex.mobile.webview.u
     java.lang.String getPostalCodeFieldName() -> c
     java.lang.String getAgeRangeFieldName() -> d
     java.lang.String getCountryFieldName() -> e
-com.pontiflex.mobile.webview.utilities.AppInfo$1 -> com.pontiflex.mobile.webview.utilities.j:
+com.pontiflex.mobile.webview.utilities.AppInfo$1 -> com.pontiflex.mobile.webview.a.b:
     int compare(org.json.JSONObject,org.json.JSONObject) -> a
     int compare(java.lang.Object,java.lang.Object) -> compare
-com.pontiflex.mobile.webview.utilities.DeviceHelper -> com.pontiflex.mobile.webview.utilities.e:
+com.pontiflex.mobile.webview.utilities.DeviceHelper -> com.pontiflex.mobile.webview.a.c:
     java.lang.String getAllDeviceData(android.content.Context) -> a
     java.lang.String getDeviceData(android.content.Context,java.lang.String) -> a
     java.lang.String getDeviceSetupPhone(android.content.Context) -> b
@@ -1846,11 +1892,11 @@ com.pontiflex.mobile.webview.utilities.DeviceHelper -> com.pontiflex.mobile.webv
     int getScreenDensity(android.app.Activity) -> d
     int getScreenSize(android.app.Activity) -> e
     java.lang.String getDeviceConfig(android.app.Activity) -> f
-com.pontiflex.mobile.webview.utilities.FieldValidator -> com.pontiflex.mobile.webview.utilities.f:
+com.pontiflex.mobile.webview.utilities.FieldValidator -> com.pontiflex.mobile.webview.a.d:
     java.util.ArrayList errors -> a
     boolean isValid$6e64a65d(java.lang.String,java.lang.String,java.lang.String[]) -> a
     void addError(java.lang.String) -> a
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry -> com.pontiflex.mobile.webview.utilities.b:
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry -> com.pontiflex.mobile.webview.a.e:
     java.util.List registry -> a
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry _instance -> b
     java.lang.String baseHtmlResourcesPath -> c
@@ -1866,16 +1912,16 @@ com.pontiflex.mobile.webview.utilities.HtmlPageRegistry -> com.pontiflex.mobile.
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity getScreenDensity(android.app.Activity) -> e
     boolean isRegistryEmpty() -> a
     java.lang.String getBaseHtmlResourcesPath() -> b
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page -> com.pontiflex.mobile.webview.utilities.a:
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page -> com.pontiflex.mobile.webview.a.f:
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page registration -> a
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page multioffer -> b
-    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page privacy -> d
-    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page privacylist -> e
-    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page singleoffer -> c
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page privacy -> c
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page privacylist -> d
+    com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page singleoffer -> e
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page[] $VALUES -> f
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page[] values() -> values
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page valueOf(java.lang.String) -> valueOf
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity -> com.pontiflex.mobile.webview.utilities.o:
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity -> com.pontiflex.mobile.webview.a.g:
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity ldpi -> a
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity mdpi -> b
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity hdpi -> c
@@ -1884,14 +1930,14 @@ com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity -> com.pon
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity[] $VALUES -> f
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity[] values() -> values
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity valueOf(java.lang.String) -> valueOf
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation -> com.pontiflex.mobile.webview.utilities.i:
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation -> com.pontiflex.mobile.webview.a.h:
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation portrait -> a
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation landscape -> b
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation DEFAULT -> c
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation[] $VALUES -> d
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation[] values() -> values
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation valueOf(java.lang.String) -> valueOf
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize -> com.pontiflex.mobile.webview.utilities.p:
+com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize -> com.pontiflex.mobile.webview.a.i:
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize small -> a
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize normal -> b
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize large -> c
@@ -1900,15 +1946,15 @@ com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize -> com.pontif
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize[] $VALUES -> f
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize[] values() -> values
     com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize valueOf(java.lang.String) -> valueOf
-com.pontiflex.mobile.webview.utilities.HttpAsyncTask -> com.pontiflex.mobile.webview.utilities.q:
+com.pontiflex.mobile.webview.utilities.HttpAsyncTask -> com.pontiflex.mobile.webview.a.j:
     com.pontiflex.mobile.webview.utilities.HttpAsyncTask$HttpAsyncTaskDelegate delegate -> a
     void onCancelled() -> onCancelled
     void onPreExecute() -> onPreExecute
     java.lang.Integer doInBackground(java.lang.Object[]) -> a
     void onPostExecute(java.lang.Object) -> onPostExecute
     java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-com.pontiflex.mobile.webview.utilities.HttpAsyncTask$HttpAsyncTaskDelegate -> com.pontiflex.mobile.webview.utilities.h:
-com.pontiflex.mobile.webview.utilities.PackageHelper -> com.pontiflex.mobile.webview.utilities.m:
+com.pontiflex.mobile.webview.utilities.HttpAsyncTask$HttpAsyncTaskDelegate -> com.pontiflex.mobile.webview.a.k:
+com.pontiflex.mobile.webview.utilities.PackageHelper -> com.pontiflex.mobile.webview.a.l:
     com.pontiflex.mobile.webview.utilities.PackageHelper instance -> a
     java.lang.String baseHtmlResourcesPath -> b
     com.pontiflex.mobile.webview.utilities.PackageHelper getInstance$6d2771a6() -> a
@@ -1918,7 +1964,7 @@ com.pontiflex.mobile.webview.utilities.PackageHelper -> com.pontiflex.mobile.web
     void fillPaths(java.io.File,java.lang.String,java.util.List) -> a
     java.lang.String convertStreamToString(java.io.InputStream) -> a
     java.util.Properties parsePontiflexStrings(java.io.InputStream,java.util.Properties) -> a
-com.pontiflex.mobile.webview.utilities.PontiflexStringsHandler -> com.pontiflex.mobile.webview.utilities.k:
+com.pontiflex.mobile.webview.utilities.PontiflexStringsHandler -> com.pontiflex.mobile.webview.a.m:
     java.lang.String currentString -> a
     java.lang.StringBuffer currentValue -> b
     java.util.Properties props -> c
@@ -1926,29 +1972,28 @@ com.pontiflex.mobile.webview.utilities.PontiflexStringsHandler -> com.pontiflex.
     void characters(char[],int,int) -> characters
     void endElement(java.lang.String,java.lang.String,java.lang.String) -> endElement
     void startElement(java.lang.String,java.lang.String,java.lang.String,org.xml.sax.Attributes) -> startElement
-com.pontiflex.mobile.webview.utilities.RegistrationStorage -> com.pontiflex.mobile.webview.utilities.RegistrationStorage:
+com.pontiflex.mobile.webview.utilities.RegistrationStorage -> com.pontiflex.mobile.webview.a.n:
     java.lang.String keystoreFilename -> a
     java.util.Properties keystore -> b
     java.lang.String seed -> c
-    void put(java.lang.String,java.lang.String) -> a
-    java.lang.String get(java.lang.String) -> a
-    void remove(java.lang.String) -> b
+    void put(java.lang.String,java.lang.String) -> b
+    java.lang.String get(java.lang.String) -> b
+    void remove(java.lang.String) -> c
     java.util.Set keys() -> a
     void clear(android.content.Context) -> a
     boolean commit(android.content.Context) -> b
-    void setupKeystore(android.content.Context) -> c
     void initializeKeystore() -> b
-    boolean writeKeystore(android.content.Context) -> d
-    java.lang.String encrypt(java.lang.String) -> c
+    boolean writeKeystore(android.content.Context) -> c
+    java.lang.String encrypt(java.lang.String) -> a
     java.lang.String decrypt(java.lang.String) -> d
     java.lang.String xxcrypt(java.lang.String,boolean) -> a
     byte[] toByte(java.lang.String) -> e
     java.lang.String toHex(byte[]) -> a
-com.pontiflex.mobile.webview.utilities.UpdateResourceTask -> com.pontiflex.mobile.webview.utilities.c:
+com.pontiflex.mobile.webview.utilities.UpdateResourceTask -> com.pontiflex.mobile.webview.a.o:
     com.pontiflex.mobile.webview.sdk.activities.BaseActivity baseActivity -> a
     java.lang.Boolean doInBackground(java.lang.Object[]) -> a
     java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-com.pontiflex.mobile.webview.utilities.UpdateResourceUtil -> com.pontiflex.mobile.webview.utilities.g:
+com.pontiflex.mobile.webview.utilities.UpdateResourceUtil -> com.pontiflex.mobile.webview.a.p:
     java.util.HashMap RESOURCES_MAP -> a
     java.util.List RESOURCES_INSIDE_JAR -> b
     java.util.List VERSIONED_RESOURCES -> c
@@ -1967,8 +2012,8 @@ com.pontiflex.mobile.webview.utilities.UpdateResourceUtil -> com.pontiflex.mobil
     boolean checkVersion(android.content.Context,java.lang.String) -> b
     boolean compareVersion(java.lang.String,java.lang.String) -> c
     void closeStreams(java.io.InputStream,java.io.FileOutputStream,java.io.FileWriter) -> a
-com.pontiflex.mobile.webview.utilities.UpdateResourceUtil$1 -> com.pontiflex.mobile.webview.utilities.l:
-com.pontiflex.mobile.webview.utilities.VersionHelper -> com.pontiflex.mobile.webview.utilities.d:
+com.pontiflex.mobile.webview.utilities.UpdateResourceUtil$1 -> com.pontiflex.mobile.webview.a.q:
+com.pontiflex.mobile.webview.utilities.VersionHelper -> com.pontiflex.mobile.webview.a.r:
     com.pontiflex.mobile.webview.utilities.VersionHelper instance -> a
     java.util.Properties stringCache -> b
     com.pontiflex.mobile.webview.utilities.VersionHelper getInstance$784e20d4() -> a
@@ -2007,9 +2052,9 @@ com.viewpagerindicator.CirclePageIndicator -> com.viewpagerindicator.CirclePageI
     boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
     void setViewPager(android.support.v4.view.ViewPager) -> a
     void updatePageSize() -> b
-    void onPageScrollStateChanged(int) -> a
+    void onPageScrollStateChanged(int) -> b
     void onPageScrolled(int,float,int) -> a
-    void onPageSelected(int) -> b
+    void onPageSelected(int) -> a
     void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener) -> a
     void onMeasure(int,int) -> onMeasure
     int measureLong(int) -> c
@@ -2020,47 +2065,10 @@ com.viewpagerindicator.CirclePageIndicator$SavedState -> com.viewpagerindicator.
     int currentPage -> a
     android.os.Parcelable$Creator CREATOR -> CREATOR
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
-com.viewpagerindicator.CirclePageIndicator$SavedState$1 -> com.viewpagerindicator.f:
+com.viewpagerindicator.CirclePageIndicator$SavedState$1 -> com.viewpagerindicator.a:
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
     java.lang.Object[] newArray(int) -> newArray
-com.viewpagerindicator.PageIndicator -> com.viewpagerindicator.i:
-com.viewpagerindicator.R -> com.viewpagerindicator.j:
-com.viewpagerindicator.R$attr -> com.viewpagerindicator.g:
-    int vpiCirclePageIndicatorStyle -> a
-    int vpiTitlePageIndicatorStyle -> b
-com.viewpagerindicator.R$bool -> com.viewpagerindicator.c:
-    int default_circle_indicator_centered -> a
-    int default_circle_indicator_snap -> b
-    int default_title_indicator_selected_bold -> c
-com.viewpagerindicator.R$color -> com.viewpagerindicator.a:
-    int default_circle_indicator_fill_color -> a
-    int default_circle_indicator_page_color -> b
-    int default_circle_indicator_stroke_color -> c
-    int default_title_indicator_footer_color -> d
-    int default_title_indicator_selected_color -> e
-    int default_title_indicator_text_color -> f
-com.viewpagerindicator.R$dimen -> com.viewpagerindicator.d:
-    int default_circle_indicator_radius -> a
-    int default_circle_indicator_stroke_width -> b
-    int default_title_indicator_clip_padding -> c
-    int default_title_indicator_footer_indicator_height -> d
-    int default_title_indicator_footer_indicator_underline_padding -> e
-    int default_title_indicator_footer_line_height -> f
-    int default_title_indicator_footer_padding -> g
-    int default_title_indicator_text_size -> h
-    int default_title_indicator_title_padding -> i
-    int default_title_indicator_top_padding -> j
-com.viewpagerindicator.R$integer -> com.viewpagerindicator.l:
-    int default_circle_indicator_orientation -> a
-    int default_title_indicator_footer_indicator_style -> b
-com.viewpagerindicator.R$style -> com.viewpagerindicator.b:
-    int Widget_CirclePageIndicator -> a
-    int Widget_TitlePageIndicator -> b
-com.viewpagerindicator.R$styleable -> com.viewpagerindicator.h:
-    int[] CirclePageIndicator -> a
-    int[] TitlePageIndicator -> b
-    int[] ViewPagerIndicator -> c
-    int[] com_google_ads_AdView -> d
+com.viewpagerindicator.PageIndicator -> com.viewpagerindicator.b:
 com.viewpagerindicator.TitlePageIndicator -> com.viewpagerindicator.TitlePageIndicator:
     android.support.v4.view.ViewPager mViewPager -> a
     android.support.v4.view.ViewPager$OnPageChangeListener mListener -> b
@@ -2087,27 +2095,28 @@ com.viewpagerindicator.TitlePageIndicator -> com.viewpagerindicator.TitlePageInd
     float mLastMotionX -> w
     int mActivePointerId -> x
     boolean mIsDragging -> y
-    int[] $SWITCH_TABLE$com$viewpagerindicator$TitlePageIndicator$IndicatorStyle -> z
+    com.viewpagerindicator.TitlePageIndicator$OnCenterItemClickListener mCenterItemClickListener -> z
+    int[] $SWITCH_TABLE$com$viewpagerindicator$TitlePageIndicator$IndicatorStyle -> A
     void onDraw(android.graphics.Canvas) -> onDraw
     boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
     void clipViewOnTheRight(android.graphics.RectF,float,int) -> a
     void clipViewOnTheLeft(android.graphics.RectF,float,int) -> b
-    void onPageScrollStateChanged(int) -> a
+    void onPageScrollStateChanged(int) -> b
     void onPageScrolled(int,float,int) -> a
-    void onPageSelected(int) -> b
+    void onPageSelected(int) -> a
     void onMeasure(int,int) -> onMeasure
     void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
     android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
     int[] $SWITCH_TABLE$com$viewpagerindicator$TitlePageIndicator$IndicatorStyle() -> a
-com.viewpagerindicator.TitlePageIndicator$IndicatorStyle -> com.viewpagerindicator.m:
+com.viewpagerindicator.TitlePageIndicator$IndicatorStyle -> com.viewpagerindicator.c:
     com.viewpagerindicator.TitlePageIndicator$IndicatorStyle None -> a
     com.viewpagerindicator.TitlePageIndicator$IndicatorStyle Triangle -> b
     com.viewpagerindicator.TitlePageIndicator$IndicatorStyle Underline -> c
     int value -> d
     com.viewpagerindicator.TitlePageIndicator$IndicatorStyle[] ENUM$VALUES -> e
-    com.viewpagerindicator.TitlePageIndicator$IndicatorStyle fromValue(int) -> a
     com.viewpagerindicator.TitlePageIndicator$IndicatorStyle[] values() -> values
     com.viewpagerindicator.TitlePageIndicator$IndicatorStyle valueOf(java.lang.String) -> valueOf
+com.viewpagerindicator.TitlePageIndicator$OnCenterItemClickListener -> com.viewpagerindicator.d:
 com.viewpagerindicator.TitlePageIndicator$SavedState -> com.viewpagerindicator.TitlePageIndicator$SavedState:
     int currentPage -> a
     android.os.Parcelable$Creator CREATOR -> CREATOR
@@ -2115,5 +2124,5 @@ com.viewpagerindicator.TitlePageIndicator$SavedState -> com.viewpagerindicator.T
 com.viewpagerindicator.TitlePageIndicator$SavedState$1 -> com.viewpagerindicator.e:
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
     java.lang.Object[] newArray(int) -> newArray
-com.viewpagerindicator.TitleProvider -> com.viewpagerindicator.k:
+com.viewpagerindicator.TitleProvider -> com.viewpagerindicator.f:
     java.lang.String getTitle$47921032() -> a

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="whats_new_title">What\'s new in NeverBeLate™</string>
-    <integer name="whats_new_version">16</integer>
-    <string name="whats_new_message">Version 1.1_build-18:\n\nAdded experimental support for Android 4.0+ 
+    <integer name="whats_new_version">17</integer>
+    <string name="whats_new_message">Version 1.1_build-19:\n\nAdded a Create New Event shortcut button to the 
+        launcher screen.\n
+        \nVersion 1.1_build-18:\n\nAdded experimental support for Android 4.0+ 
         devices! If you have a device running Android 4.0 and above (ex: a Galaxy Nexus), please try it out 
         and then send me some feedback about whether it works or not. Also solidified the traffic view design 
         to prevent frequent force-closes when your location is slow to update.\n
