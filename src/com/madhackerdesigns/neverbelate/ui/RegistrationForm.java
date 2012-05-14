@@ -58,43 +58,6 @@ public class RegistrationForm extends Activity {
 		// Initialize the Registration data
 		mRegistration = new Registration(getApplicationContext());
 		
-		// Add birthdate selection dialog
-		mBirthdateButton = (Button) findViewById(R.id.btn_birthdate);
-		mBirthdateButton.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View arg0) {
-				showDialog(DIALOG_DATE);
-			}
-			
-		});
-		
-		// Initialize the OnDateSetListener
-		mDateSetListener = new DatePickerDialog.OnDateSetListener() {
-
-			public void onDateSet(DatePicker view, int year, int monthOfYear,
-					int dayOfMonth) {
-				mYear = year;
-                mMonth = monthOfYear;
-                mDay = dayOfMonth;
-                mBirthdateSet = true;
-                updateBirthdateButton();
-			}
-			
-		};
-		
-		// Set the OnClick behavior of the gender radio buttons
-		OnClickListener genderListener = new OnClickListener() {
-
-			public void onClick(View v) {
-				mGender = (String) ((RadioButton) v).getText();
-			}
-			
-		};
-		RadioButton btnRadioMale = (RadioButton) findViewById(R.id.btn_radio_male);
-		RadioButton btnRadioFemale = (RadioButton) findViewById(R.id.btn_radio_female);
-		btnRadioMale.setOnClickListener(genderListener);
-		btnRadioFemale.setOnClickListener(genderListener);
-		
 		// Set the OnClick behavior of the decline text
 		TextView declineText = (TextView) findViewById(R.id.decline_text);
 		declineText.setOnClickListener(new OnClickListener() {
@@ -119,7 +82,6 @@ public class RegistrationForm extends Activity {
 
 	private void registerUser() {
 		// Pull registration data from form
-		String betaCode = (String) ((TextView) findViewById(R.id.beta_code)).getText();
 		String firstName = (String) ((TextView) findViewById(R.id.first_name)).getText();
 		String lastName = (String) ((TextView) findViewById(R.id.last_name)).getText();
 		long birthdate = (new GregorianCalendar(mYear, mMonth, mDay)).getTimeInMillis();
@@ -144,8 +106,7 @@ public class RegistrationForm extends Activity {
 		}
 		
 		// Remind user to complete form if he didn't.
-		if ( 	betaCode.equals("") || 		// TODO: Test that this corresponds to an incomplete form.
-				firstName.equals("") || 
+		if ( 	firstName.equals("") || 
 				lastName.equals("") ||
 				! mBirthdateSet || 
 				zipCode == 0 ||
@@ -161,7 +122,6 @@ public class RegistrationForm extends Activity {
 		
 		// If registration succeeds, permanently store the data.
 		Registration reg = mRegistration;
-		reg.setBetaCode(betaCode);
 		reg.setFirstName(firstName);
 		reg.setLastName(lastName);
 		reg.setBirthdate(birthdate);

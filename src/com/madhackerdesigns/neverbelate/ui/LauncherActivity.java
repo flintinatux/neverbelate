@@ -156,12 +156,14 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		
 		// Load up an AdMob banner
 		if (ADMOB) {
-			AdView adView = new AdView(this, AdSize.BANNER, MY_ID);
-	    	LinearLayout layout = (LinearLayout) findViewById(R.id.ad_view);
-	    	layout.addView(adView);
-	    	AdRequest adRequest = new AdRequest();
-	    	adView.loadAd(adRequest);
-	    	Logger.d(LOG_TAG, "AdMob banner loaded.");
+			LinearLayout layout = (LinearLayout) findViewById(R.id.ad_view);
+			if (layout != null) {
+				AdView adView = new AdView(this, AdSize.BANNER, MY_ID);
+		    	layout.addView(adView);
+		    	AdRequest adRequest = new AdRequest();
+		    	adView.loadAd(adRequest);
+		    	Logger.d(LOG_TAG, "AdMob banner loaded.");
+			}
 		}
 	}
 

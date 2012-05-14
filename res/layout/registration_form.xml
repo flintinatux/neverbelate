@@ -13,107 +13,68 @@
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
 		android:padding="10dip"
-		android:text="@string/reg_copy_default" />
+		android:text="@string/reg_copy_default"
+		android:textSize="12sp" />
 		
-	<TableLayout
-		android:background="@color/white"
-		android:isScrollContainer="true"
-		android:layout_height="wrap_content"
+	<ScrollView 
+	    android:background="@color/white"
+		android:layout_height="0dp"
 		android:layout_weight="1"
-		android:layout_width="fill_parent"
-		android:paddingTop="5dip"
-		android:stretchColumns="1" >
+		android:layout_width="fill_parent" >
+	    
+		<TableLayout
+			android:background="@color/white"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:paddingTop="5dip"
+			android:stretchColumns="1" >
+		
+			<TableRow>
+				<TextView
+					style="@style/RegLabelFont"
+					android:text="@string/first_name" />
+				<EditText
+					android:id="@+id/first_name"
+					android:hint="@string/first_name_hint"
+					android:inputType="textPersonName"
+					style="@style/RegEditText" />
+			</TableRow>
+		
+			<TableRow>
+				<TextView
+					style="@style/RegLabelFont"
+					android:text="@string/last_name" />
+				<EditText
+					android:id="@+id/last_name"
+					android:hint="@string/last_name_hint"
+					android:inputType="textPersonName"
+					style="@style/RegEditText" />
+			</TableRow>
+		
+			<TableRow>
+				<TextView
+					style="@style/RegLabelFont"
+					android:text="@string/email" />
+				<EditText
+					android:id="@+id/email"
+					android:hint="@string/email_hint"
+					android:inputType="textEmailAddress"
+					style="@style/RegEditText" />
+			</TableRow>
 	
-		<TableRow>
-			<TextView
-				style="@style/RegLabelFont"
-				android:text="@string/beta_code" />
-			<EditText
-				android:id="@+id/beta_code"
-				android:hint="@string/beta_code_hint"
-				style="@style/RegEditText" />
-		</TableRow>
+			<TableRow>
+				<TextView
+					style="@style/RegLabelFont"
+					android:text="@string/zip_code" />
+				<EditText
+					android:id="@+id/zip_code"
+					android:inputType="number"
+					android:hint="@string/zip_code_hint"
+					style="@style/RegEditText" />
+			</TableRow>
+		</TableLayout>
 	
-<!--		<TableRow>-->
-<!--			<TextView-->
-<!--				android:id="@+id/no_code_link"-->
-<!--				android:layout_height="wrap_content"-->
-<!--				android:layout_width="wrap_content"-->
-<!--				android:text="@string/no_code" />-->
-<!--		</TableRow>-->
-	
-		<TableRow>
-			<TextView
-				style="@style/RegLabelFont"
-				android:text="@string/first_name" />
-			<EditText
-				android:id="@+id/first_name"
-				android:hint="@string/first_name_hint"
-				style="@style/RegEditText" />
-		</TableRow>
-	
-		<TableRow>
-			<TextView
-				style="@style/RegLabelFont"
-				android:text="@string/last_name" />
-			<EditText
-				android:id="@+id/last_name"
-				android:hint="@string/last_name_hint"
-				style="@style/RegEditText" />
-		</TableRow>
-	
-		<TableRow>
-			<TextView
-				style="@style/RegLabelFont"
-				android:text="@string/birthdate" />
-			<Button
-				android:id="@+id/btn_birthdate"
-				android:layout_height="wrap_content"
-				android:layout_width="wrap_content"
-				android:text="@string/btn_birthdate_text" />
-		</TableRow>
-<!--	-->
-<!--		<TableRow>-->
-<!--			<TextView-->
-<!--				style="@style/RegLabelFont"-->
-<!--				android:text="@string/email" />-->
-<!--			<EditText-->
-<!--				android:id="@+id/email"-->
-<!--				android:hint="@string/email_hint"-->
-<!--				android:layout_height="wrap_content"-->
-<!--				android:layout_width="wrap_content" />-->
-<!--		</TableRow>-->
-<!--	-->
-		<TableRow>
-			<TextView
-				style="@style/RegLabelFont"
-				android:text="@string/zip_code" />
-			<EditText
-				android:id="@+id/zip_code"
-				android:inputType="number"
-				android:hint="@string/zip_code_hint"
-				style="@style/RegEditText" />
-		</TableRow>
-	
-		<TableRow>
-			<TextView
-				style="@style/RegLabelFont"
-				android:text="@string/gender" />
-			<RadioGroup
-				android:layout_height="wrap_content"
-				android:layout_width="wrap_content"
-				android:orientation="horizontal" >
-				<RadioButton
-					android:id="@+id/btn_radio_male"
-					android:text="@string/male"
-					style="@style/GenderButton" />
-				<RadioButton
-					android:id="@+id/btn_radio_female"
-					android:text="@string/female"
-					style="@style/GenderButton" />
-			</RadioGroup>
-		</TableRow>
-	</TableLayout>
+	</ScrollView>
 	
 	<TextView
 		android:background="@color/white"
@@ -125,12 +86,6 @@
 		android:text="@string/privacy_link_text"
 		android:textColor="@color/black"
 		android:textSize="12sp" />
-	
-<!--	<TextView-->
-<!--		android:id="@+id/signup_copy"-->
-<!--		android:layout_height="wrap_content"-->
-<!--		android:layout_width="fill_parent"-->
-<!--		android:text="@string/signup_copy" />-->
 	
 	<LinearLayout 
 		android:background="@color/black"
