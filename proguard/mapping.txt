@@ -751,6 +751,8 @@ com.google.ads.AdSize -> com.google.ads.f:
     java.lang.String toString() -> toString
 com.google.ads.AdView -> com.google.ads.g:
     com.google.ads.d a -> a
+    void a$631c4895(android.content.Context,java.lang.String,com.google.ads.AdSize) -> a
+    void a(android.app.Activity,com.google.ads.AdSize,java.lang.String) -> a
     void loadAd(com.google.ads.AdRequest) -> a
 com.google.ads.InterstitialAd -> com.google.ads.h:
 com.google.ads.a -> com.google.ads.i:
@@ -1058,7 +1060,8 @@ com.google.ads.util.AdUtil -> com.google.ads.util.AdUtil:
     java.util.HashMap b(android.net.Uri) -> b
     boolean d() -> d
     void a(boolean) -> a
-    java.lang.String i(android.content.Context) -> h
+    void h(android.content.Context) -> h
+    java.lang.String i(android.content.Context) -> i
     void a(android.webkit.WebView) -> a
     void a(java.net.HttpURLConnection,android.content.Context) -> a
     java.lang.String a(java.util.Map) -> a
@@ -1387,71 +1390,54 @@ com.madhackerdesigns.neverbelate.ui.Registration -> com.madhackerdesigns.neverbe
     android.content.SharedPreferences mSettings -> i
     android.content.SharedPreferences$Editor mEditor -> j
     void commit() -> a
-    void setBetaCode(java.lang.String) -> a
     void setBirthdate(long) -> a
     void setGender(int) -> a
-    void setFirstName(java.lang.String) -> b
-    void setLastName(java.lang.String) -> c
+    void setFirstName(java.lang.String) -> a
+    void setLastName(java.lang.String) -> b
     void setZipCode(int) -> b
 com.madhackerdesigns.neverbelate.ui.RegistrationForm -> com.madhackerdesigns.neverbelate.ui.RegistrationForm:
-    android.widget.Button mBirthdateButton -> a
-    boolean mBirthdateSet -> b
-    int mYear -> c
-    int mMonth -> d
-    int mDay -> e
-    android.app.DatePickerDialog$OnDateSetListener mDateSetListener -> f
-    com.madhackerdesigns.neverbelate.ui.Registration mRegistration -> g
-    java.lang.String mGender -> h
+    boolean mBirthdateSet -> a
+    int mYear -> b
+    int mMonth -> c
+    int mDay -> d
+    android.app.DatePickerDialog$OnDateSetListener mDateSetListener -> e
+    com.madhackerdesigns.neverbelate.ui.Registration mRegistration -> f
+    java.lang.String mGender -> g
     void onCreate(android.os.Bundle) -> onCreate
     android.app.Dialog onCreateDialog(int) -> onCreateDialog
-    void access$0(com.madhackerdesigns.neverbelate.ui.RegistrationForm,int) -> a
-    void access$1(com.madhackerdesigns.neverbelate.ui.RegistrationForm,int) -> b
-    void access$2(com.madhackerdesigns.neverbelate.ui.RegistrationForm,int) -> c
-    void access$3$796f51fc(com.madhackerdesigns.neverbelate.ui.RegistrationForm) -> a
-    void access$4(com.madhackerdesigns.neverbelate.ui.RegistrationForm) -> b
-    void access$5(com.madhackerdesigns.neverbelate.ui.RegistrationForm,java.lang.String) -> a
-    void access$6(com.madhackerdesigns.neverbelate.ui.RegistrationForm) -> c
+    void access$0(com.madhackerdesigns.neverbelate.ui.RegistrationForm) -> a
 com.madhackerdesigns.neverbelate.ui.RegistrationForm$1 -> com.madhackerdesigns.neverbelate.ui.v:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.view.View) -> onClick
 com.madhackerdesigns.neverbelate.ui.RegistrationForm$2 -> com.madhackerdesigns.neverbelate.ui.w:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
-    void onDateSet(android.widget.DatePicker,int,int,int) -> onDateSet
+    void onClick(android.view.View) -> onClick
 com.madhackerdesigns.neverbelate.ui.RegistrationForm$3 -> com.madhackerdesigns.neverbelate.ui.x:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
-    void onClick(android.view.View) -> onClick
+    void onClick(android.content.DialogInterface,int) -> onClick
 com.madhackerdesigns.neverbelate.ui.RegistrationForm$4 -> com.madhackerdesigns.neverbelate.ui.y:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
-    void onClick(android.view.View) -> onClick
+    void onClick(android.content.DialogInterface,int) -> onClick
 com.madhackerdesigns.neverbelate.ui.RegistrationForm$5 -> com.madhackerdesigns.neverbelate.ui.z:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
-    void onClick(android.view.View) -> onClick
+    void onClick(android.content.DialogInterface,int) -> onClick
 com.madhackerdesigns.neverbelate.ui.RegistrationForm$6 -> com.madhackerdesigns.neverbelate.ui.aa:
-    com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
-    void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$7 -> com.madhackerdesigns.neverbelate.ui.ab:
-    com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
-    void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$8 -> com.madhackerdesigns.neverbelate.ui.ac:
-    com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
-    void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.RegistrationForm$9 -> com.madhackerdesigns.neverbelate.ui.ad:
     com.madhackerdesigns.neverbelate.ui.RegistrationForm this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
 com.madhackerdesigns.neverbelate.ui.TestActivity -> com.madhackerdesigns.neverbelate.ui.TestActivity:
     com.madhackerdesigns.neverbelate.util.AdHelper mAdHelper -> a
     void onCreate(android.os.Bundle) -> onCreate
     com.madhackerdesigns.neverbelate.util.AdHelper access$0(com.madhackerdesigns.neverbelate.ui.TestActivity) -> a
-com.madhackerdesigns.neverbelate.ui.TestActivity$1 -> com.madhackerdesigns.neverbelate.ui.ae:
+com.madhackerdesigns.neverbelate.ui.TestActivity$1 -> com.madhackerdesigns.neverbelate.ui.ab:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$2 -> com.madhackerdesigns.neverbelate.ui.af:
+com.madhackerdesigns.neverbelate.ui.TestActivity$2 -> com.madhackerdesigns.neverbelate.ui.ac:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$3 -> com.madhackerdesigns.neverbelate.ui.ag:
+com.madhackerdesigns.neverbelate.ui.TestActivity$3 -> com.madhackerdesigns.neverbelate.ui.ad:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$4 -> com.madhackerdesigns.neverbelate.ui.ah:
+com.madhackerdesigns.neverbelate.ui.TestActivity$4 -> com.madhackerdesigns.neverbelate.ui.ae:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
 com.madhackerdesigns.neverbelate.ui.UserLocationOverlay -> com.madhackerdesigns.neverbelate.ui.UserLocationOverlay:
@@ -1460,7 +1446,7 @@ com.madhackerdesigns.neverbelate.ui.UserLocationOverlay -> com.madhackerdesigns.
     void onLocationChanged(android.location.Location) -> onLocationChanged
     boolean onTap(com.google.android.maps.GeoPoint,com.google.android.maps.MapView) -> onTap
     void setOnLocationChangedListener(com.madhackerdesigns.neverbelate.ui.UserLocationOverlay$OnLocationChangedListener) -> a
-com.madhackerdesigns.neverbelate.ui.UserLocationOverlay$OnLocationChangedListener -> com.madhackerdesigns.neverbelate.ui.ai:
+com.madhackerdesigns.neverbelate.ui.UserLocationOverlay$OnLocationChangedListener -> com.madhackerdesigns.neverbelate.ui.af:
     void onLocationChanged(android.location.Location) -> a
 com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverbelate.ui.WarningDialog:
     com.madhackerdesigns.neverbelate.util.AdHelper mAdHelper -> a
@@ -1492,37 +1478,37 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverb
     com.madhackerdesigns.neverbelate.ui.UserLocationOverlay access$7(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> h
     java.util.ArrayList access$8(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> i
     com.google.android.maps.GeoPoint access$9(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> j
-com.madhackerdesigns.neverbelate.ui.WarningDialog$1 -> com.madhackerdesigns.neverbelate.ui.aj:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$1 -> com.madhackerdesigns.neverbelate.ui.ag:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$2 -> com.madhackerdesigns.neverbelate.ui.ak:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$2 -> com.madhackerdesigns.neverbelate.ui.ah:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$3 -> com.madhackerdesigns.neverbelate.ui.al:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$3 -> com.madhackerdesigns.neverbelate.ui.ai:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onLocationChanged(android.location.Location) -> a
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler -> com.madhackerdesigns.neverbelate.ui.am:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler -> com.madhackerdesigns.neverbelate.ui.aj:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onQueryComplete(int,java.lang.Object,android.database.Cursor) -> onQueryComplete
     com.madhackerdesigns.neverbelate.ui.WarningDialog access$0(com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler) -> a
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$1 -> com.madhackerdesigns.neverbelate.ui.an:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$1 -> com.madhackerdesigns.neverbelate.ui.ak:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$2 -> com.madhackerdesigns.neverbelate.ui.ao:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$2 -> com.madhackerdesigns.neverbelate.ui.al:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$3 -> com.madhackerdesigns.neverbelate.ui.ap:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$3 -> com.madhackerdesigns.neverbelate.ui.am:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$4 -> com.madhackerdesigns.neverbelate.ui.aq:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$4 -> com.madhackerdesigns.neverbelate.ui.an:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$EventHolder -> com.madhackerdesigns.neverbelate.ui.ar:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$EventHolder -> com.madhackerdesigns.neverbelate.ui.ao:
     java.lang.String json -> a
     java.lang.String title -> b
     java.lang.String location -> c
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> d
-com.madhackerdesigns.neverbelate.ui.WarningDialog$MapBounds -> com.madhackerdesigns.neverbelate.ui.as:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$MapBounds -> com.madhackerdesigns.neverbelate.ui.ap:
     int mLatMinE6 -> b
     int mLatMaxE6 -> c
     int mLonMinE6 -> d

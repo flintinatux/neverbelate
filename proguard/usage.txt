@@ -486,16 +486,10 @@ com.google.ads.AdRequest:
 com.google.ads.AdSize:
     38:39:public AdSize(int,int)
 com.google.ads.AdView:
-    78:87:public AdView(android.app.Activity,com.google.ads.AdSize,java.lang.String)
     100:103:public AdView(android.content.Context,android.util.AttributeSet)
     118:119:public AdView(android.content.Context,android.util.AttributeSet,int)
-    138:171:private void a(android.content.Context,java.lang.String,int,com.google.ads.AdSize,android.util.AttributeSet)
-    189:198:private boolean a(android.content.Context,com.google.ads.AdSize,android.util.AttributeSet)
-    218:227:private boolean b(android.content.Context,com.google.ads.AdSize,android.util.AttributeSet)
     237:238:public void destroy()
-    257:273:private void a(android.content.Context,java.lang.String,com.google.ads.AdSize,android.util.AttributeSet)
     286:440:private void a(android.content.Context,android.util.AttributeSet)
-    451:467:private void a(android.app.Activity,com.google.ads.AdSize,java.lang.String)
     478:482:public boolean isReady()
     523:524:public void setAdListener(com.google.ads.AdListener)
     535:536:public void stopLoading()
@@ -519,14 +513,11 @@ com.google.ads.aa:
 com.google.ads.c:
     371:387:final void a()
 com.google.ads.d:
-    146:211:public d(android.app.Activity,com.google.ads.Ad,com.google.ads.AdSize,java.lang.String,boolean)
     276:279:public final synchronized void b()
     464:464:public final synchronized boolean o()
     748:749:public final synchronized void a(com.google.ads.AdListener)
     777:778:public final synchronized void y()
     809:816:public final synchronized void z()
-com.google.ads.f:
-    91:95:f()
 com.google.ads.searchads.SearchAdRequest:
     88:89:public void setQuery(java.lang.String)
     98:104:public void setBackgroundColor(int)
@@ -541,13 +532,10 @@ com.google.ads.searchads.SearchAdRequest:
     202:203:public void setBorderThickness(int)
 com.google.ads.util.AdUtil:
     152:154:private AdUtil()
-    701:713:public static void h(android.content.Context)
 com.google.ads.util.a:
     19:21:private a()
 com.google.ads.util.c:
     26:28:private c()
-com.google.ads.x:
-    30:32:public x(com.google.ads.d)
 com.google.ads.y:
     11:11:public y()
 com.google.ads.z:
@@ -710,6 +698,7 @@ com.madhackerdesigns.neverbelate.ui.EdgeScrollView:
     18:22:public EdgeScrollView(android.content.Context,android.util.AttributeSet,int)
 com.madhackerdesigns.neverbelate.ui.LauncherActivity:
     private static final boolean ADMOB
+    private static final java.lang.String ADMOB_ID
     private static final int DLG_COMING_SOON
     private static final int DLG_FIRST_TIME
     private static final int DLG_QUICK_TOUR
@@ -739,6 +728,7 @@ com.madhackerdesigns.neverbelate.ui.Registration:
     protected static final int GENDER_UNKNOWN
     private static final java.lang.String REGISTRATION_DATA
     86:86:protected java.lang.String getBetaCode()
+    93:94:protected void setBetaCode(java.lang.String)
     100:100:protected long getBirthdate()
     114:115:public void setEmail(java.lang.String)
     121:121:public java.lang.String getEmail()
@@ -749,10 +739,12 @@ com.madhackerdesigns.neverbelate.ui.Registration:
     177:178:protected void setPromoCode(java.lang.String)
     184:184:protected int getZipCode()
 com.madhackerdesigns.neverbelate.ui.RegistrationForm:
+    private android.widget.Button mBirthdateButton
     private static final int DIALOG_DATE
     private static final int DIALOG_DECLINE
     private static final int DIALOG_INCOMPLETE
     private static final int DIALOG_THANKS
+    137:139:private void updateBirthdateButton()
 com.madhackerdesigns.neverbelate.ui.UserLocationOverlay:
     private static final java.lang.String TOAST_MESSAGE
 com.madhackerdesigns.neverbelate.ui.WarningDialog:

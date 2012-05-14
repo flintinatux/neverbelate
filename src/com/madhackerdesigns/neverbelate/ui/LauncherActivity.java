@@ -45,6 +45,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 
 	// Static constants
 	private static final boolean ADMOB = true;
+	private static final String ADMOB_ID = "a14d952e8939105";
 	private static final int DLG_COMING_SOON = 0;
 	private static final int DLG_FIRST_TIME = 1;
 	private static final int DLG_QUICK_TOUR = 2;
@@ -57,7 +58,6 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
     private static final String LOG_TAG = "NeverBeLateService";
     private static final boolean PONTIFLEX = true;
 	private static final String PREF_APP_STATE = "app_state";
-	private static final String MY_ID = "a14d952e8939105";
 
 	// Private fields
 	private AdHelper mAdHelper;
@@ -158,7 +158,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		if (ADMOB) {
 			LinearLayout layout = (LinearLayout) findViewById(R.id.ad_view);
 			if (layout != null) {
-				AdView adView = new AdView(this, AdSize.BANNER, MY_ID);
+				AdView adView = new AdView(this, AdSize.BANNER, ADMOB_ID);
 		    	layout.addView(adView);
 		    	AdRequest adRequest = new AdRequest();
 		    	adView.loadAd(adRequest);
