@@ -193,20 +193,56 @@ android.support.v4.app.LoaderManagerImpl:
     boolean mCreatingLoader
     485:488:private android.support.v4.app.LoaderManagerImpl$LoaderInfo createLoader(int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
     494:499:private android.support.v4.app.LoaderManagerImpl$LoaderInfo createAndInstallLoader(int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
-    504:511:void installLoader(android.support.v4.app.LoaderManagerImpl$LoaderInfo)
     539:561:public android.support.v4.content.Loader initLoader(int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
     589:643:public android.support.v4.content.Loader restartLoader(int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
     654:674:public void destroyLoader(int)
     682:693:public android.support.v4.content.Loader getLoader(int)
 android.support.v4.app.LoaderManagerImpl$LoaderInfo:
     225:229:public LoaderManagerImpl$LoaderInfo(android.support.v4.app.LoaderManagerImpl,int,android.os.Bundle,android.support.v4.app.LoaderManager$LoaderCallbacks)
-    359:412:public void onLoadComplete(android.support.v4.content.Loader,java.lang.Object)
 android.support.v4.app.NavUtils
-android.support.v4.app.NotificationCompat
-android.support.v4.app.NotificationCompat$Builder
-android.support.v4.app.NotificationCompat$NotificationCompatImpl
-android.support.v4.app.NotificationCompat$NotificationCompatImplBase
-android.support.v4.app.NotificationCompat$NotificationCompatImplHoneycomb
+android.support.v4.app.NotificationCompat:
+    public static final int FLAG_HIGH_PRIORITY
+    29:75:public NotificationCompat()
+    29:29:static synthetic android.support.v4.app.NotificationCompat$NotificationCompatImpl access$000()
+android.support.v4.app.NotificationCompat$Builder:
+    java.lang.CharSequence mContentTitle
+    java.lang.CharSequence mContentText
+    android.app.PendingIntent mContentIntent
+    android.app.PendingIntent mFullScreenIntent
+    android.widget.RemoteViews mTickerView
+    android.graphics.Bitmap mLargeIcon
+    java.lang.CharSequence mContentInfo
+    int mNumber
+    113:114:public android.support.v4.app.NotificationCompat$Builder setWhen(long)
+    125:126:public android.support.v4.app.NotificationCompat$Builder setSmallIcon(int)
+    140:142:public android.support.v4.app.NotificationCompat$Builder setSmallIcon(int,int)
+    149:150:public android.support.v4.app.NotificationCompat$Builder setContentTitle(java.lang.CharSequence)
+    157:158:public android.support.v4.app.NotificationCompat$Builder setContentText(java.lang.CharSequence)
+    167:168:public android.support.v4.app.NotificationCompat$Builder setNumber(int)
+    175:176:public android.support.v4.app.NotificationCompat$Builder setContentInfo(java.lang.CharSequence)
+    195:196:public android.support.v4.app.NotificationCompat$Builder setContent(android.widget.RemoteViews)
+    208:209:public android.support.v4.app.NotificationCompat$Builder setContentIntent(android.app.PendingIntent)
+    220:221:public android.support.v4.app.NotificationCompat$Builder setDeleteIntent(android.app.PendingIntent)
+    238:240:public android.support.v4.app.NotificationCompat$Builder setFullScreenIntent(android.app.PendingIntent,boolean)
+    248:249:public android.support.v4.app.NotificationCompat$Builder setTicker(java.lang.CharSequence)
+    258:260:public android.support.v4.app.NotificationCompat$Builder setTicker(java.lang.CharSequence,android.widget.RemoteViews)
+    267:268:public android.support.v4.app.NotificationCompat$Builder setLargeIcon(android.graphics.Bitmap)
+    275:277:public android.support.v4.app.NotificationCompat$Builder setSound(android.net.Uri)
+    287:289:public android.support.v4.app.NotificationCompat$Builder setSound(android.net.Uri,int)
+    299:300:public android.support.v4.app.NotificationCompat$Builder setVibrate(long[])
+    309:315:public android.support.v4.app.NotificationCompat$Builder setLights(int,int,int)
+    330:331:public android.support.v4.app.NotificationCompat$Builder setOngoing(boolean)
+    339:340:public android.support.v4.app.NotificationCompat$Builder setOnlyAlertOnce(boolean)
+    350:351:public android.support.v4.app.NotificationCompat$Builder setAutoCancel(boolean)
+    365:369:public android.support.v4.app.NotificationCompat$Builder setDefaults(int)
+    373:378:private void setFlag(int,boolean)
+    385:385:public android.app.Notification getNotification()
+android.support.v4.app.NotificationCompat$NotificationCompatImpl:
+    public abstract android.app.Notification getNotification(android.support.v4.app.NotificationCompat$Builder)
+android.support.v4.app.NotificationCompat$NotificationCompatImplBase:
+    48:51:public android.app.Notification getNotification(android.support.v4.app.NotificationCompat$Builder)
+android.support.v4.app.NotificationCompat$NotificationCompatImplHoneycomb:
+    57:57:public android.app.Notification getNotification(android.support.v4.app.NotificationCompat$Builder)
 android.support.v4.app.NotificationCompatHoneycomb
 android.support.v4.app.ServiceCompat
 android.support.v4.app.ShareCompat
@@ -221,41 +257,49 @@ android.support.v4.app.TaskStackBuilder$TaskStackBuilderImpl
 android.support.v4.app.TaskStackBuilder$TaskStackBuilderImplBase
 android.support.v4.app.TaskStackBuilder$TaskStackBuilderImplHoneycomb
 android.support.v4.app.TaskStackBuilderHoneycomb
-android.support.v4.content.AsyncTaskLoader
-android.support.v4.content.AsyncTaskLoader$LoadTask
-android.support.v4.content.CursorLoader
+android.support.v4.content.AsyncTaskLoader:
+    static final java.lang.String TAG
+    static final boolean DEBUG
+    103:107:public void setUpdateThrottle(long)
+    254:262:public void waitForLoader()
+android.support.v4.content.AsyncTaskLoader$LoadTask:
+    40:40:static synthetic java.util.concurrent.CountDownLatch access$000(android.support.v4.content.AsyncTaskLoader$LoadTask)
+android.support.v4.content.CursorLoader:
+    107:114:public CursorLoader(android.content.Context,android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)
+    163:163:public android.net.Uri getUri()
+    167:168:public void setUri(android.net.Uri)
+    171:171:public java.lang.String[] getProjection()
+    175:176:public void setProjection(java.lang.String[])
+    179:179:public java.lang.String getSelection()
+    183:184:public void setSelection(java.lang.String)
+    187:187:public java.lang.String[] getSelectionArgs()
+    191:192:public void setSelectionArgs(java.lang.String[])
+    195:195:public java.lang.String getSortOrder()
+    199:200:public void setSortOrder(java.lang.String)
 android.support.v4.content.IntentCompat
 android.support.v4.content.Loader:
-    android.content.Context mContext
-    90:92:public Loader(android.content.Context)
-    102:105:public void deliverResult(java.lang.Object)
-    111:111:public android.content.Context getContext()
     118:118:public int getId()
-    157:157:public boolean isStarted()
-    166:166:public boolean isAbandoned()
-    175:175:public boolean isReset()
-    217:218:public void forceLoad()
-    225:225:protected void onForceLoad()
     261:263:public void abandon()
     275:275:protected void onAbandon()
-    312:314:public boolean takeContentChanged()
-    326:334:public void onContentChanged()
-android.support.v4.content.Loader$ForceLoadContentObserver
-android.support.v4.content.Loader$OnLoadCompleteListener:
-    public abstract void onLoadComplete(android.support.v4.content.Loader,java.lang.Object)
 android.support.v4.content.LocalBroadcastManager
 android.support.v4.content.LocalBroadcastManager$1
 android.support.v4.content.LocalBroadcastManager$BroadcastRecord
 android.support.v4.content.LocalBroadcastManager$ReceiverRecord
-android.support.v4.content.ModernAsyncTask
-android.support.v4.content.ModernAsyncTask$1
-android.support.v4.content.ModernAsyncTask$2
-android.support.v4.content.ModernAsyncTask$3
-android.support.v4.content.ModernAsyncTask$4
-android.support.v4.content.ModernAsyncTask$AsyncTaskResult
-android.support.v4.content.ModernAsyncTask$InternalHandler
-android.support.v4.content.ModernAsyncTask$Status
-android.support.v4.content.ModernAsyncTask$WorkerRunnable
+android.support.v4.content.ModernAsyncTask:
+    private static final java.lang.String LOG_TAG
+    private static final int CORE_POOL_SIZE
+    private static final int MAXIMUM_POOL_SIZE
+    private static final int KEEP_ALIVE
+    private static final int MESSAGE_POST_RESULT
+    private static final int MESSAGE_POST_PROGRESS
+    106:107:public static void init()
+    111:112:public static void setDefaultExecutor(java.util.concurrent.Executor)
+    169:169:public final android.support.v4.content.ModernAsyncTask$Status getStatus()
+    321:321:public final java.lang.Object get()
+    341:341:public final java.lang.Object get(long,java.util.concurrent.TimeUnit)
+    371:371:public final varargs android.support.v4.content.ModernAsyncTask execute(java.lang.Object[])
+    433:434:public static void execute(java.lang.Runnable)
+    451:455:protected final varargs void publishProgress(java.lang.Object[])
 android.support.v4.content.pm.ActivityInfoCompat
 android.support.v4.database.DatabaseUtilsCompat
 android.support.v4.os.ParcelableCompat:
@@ -265,7 +309,13 @@ android.support.v4.os.ParcelableCompatCreatorHoneycombMR2Stub:
 android.support.v4.util.DebugUtils:
     25:25:public DebugUtils()
 android.support.v4.util.LruCache
-android.support.v4.util.TimeUtils
+android.support.v4.util.TimeUtils:
+    public static final int HUNDRED_DAY_FIELD_LEN
+    private static final int SECONDS_PER_MINUTE
+    private static final int SECONDS_PER_HOUR
+    private static final int SECONDS_PER_DAY
+    27:27:public TimeUtils()
+    148:152:public static void formatDuration(long,java.lang.StringBuilder)
 android.support.v4.view.AccessibilityDelegateCompat
 android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateIcsImpl
 android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateIcsImpl$1
@@ -314,10 +364,10 @@ android.support.v4.view.PagerAdapter:
     public static final int POSITION_UNCHANGED
     public static final int POSITION_NONE
     276:277:public void notifyDataSetChanged()
-    297:297:public java.lang.CharSequence getPageTitle(int)
-android.support.v4.view.PagerTitleStrip
-android.support.v4.view.PagerTitleStrip$1
-android.support.v4.view.PagerTitleStrip$PageListener
+android.support.v4.view.PagerTitleStrip:
+    private static final java.lang.String TAG
+    private static final int SIDE_ALPHA
+    private static final int TEXT_SPACING
 android.support.v4.view.VelocityTrackerCompat:
     25:51:public VelocityTrackerCompat()
 android.support.v4.view.VelocityTrackerCompatHoneycomb:
@@ -365,11 +415,10 @@ android.support.v4.view.ViewCompatICS:
     42:43:public static void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
     46:47:public static void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
     50:51:public static void onInitializeAccessibilityNodeInfo(android.view.View,java.lang.Object)
-android.support.v4.view.ViewConfigurationCompat
-android.support.v4.view.ViewConfigurationCompat$BaseViewConfigurationVersionImpl
-android.support.v4.view.ViewConfigurationCompat$FroyoViewConfigurationVersionImpl
-android.support.v4.view.ViewConfigurationCompat$ViewConfigurationVersionImpl
-android.support.v4.view.ViewConfigurationCompatFroyo
+android.support.v4.view.ViewConfigurationCompat:
+    25:46:public ViewConfigurationCompat()
+android.support.v4.view.ViewConfigurationCompatFroyo:
+    24:24:ViewConfigurationCompatFroyo()
 android.support.v4.view.ViewGroupCompat
 android.support.v4.view.ViewGroupCompat$ViewGroupCompatIcsImpl
 android.support.v4.view.ViewGroupCompat$ViewGroupCompatImpl
@@ -386,12 +435,6 @@ android.support.v4.view.ViewPager:
     public static final int SCROLL_STATE_IDLE
     public static final int SCROLL_STATE_DRAGGING
     public static final int SCROLL_STATE_SETTLING
-    271:273:public ViewPager(android.content.Context)
-    276:278:public ViewPager(android.content.Context,android.util.AttributeSet)
-    281:295:void initViewPager()
-    374:375:void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener)
-    401:401:public int getCurrentItem()
-    472:474:android.support.v4.view.ViewPager$OnPageChangeListener setInternalPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
     485:485:public int getOffscreenPageLimit()
     506:515:public void setOffscreenPageLimit(int)
     526:533:public void setPageMargin(int)
@@ -431,20 +474,15 @@ android.support.v4.widget.CursorAdapter$MyDataSetObserver
 android.support.v4.widget.CursorFilter
 android.support.v4.widget.CursorFilter$CursorFilterClient
 android.support.v4.widget.EdgeEffectCompat:
-    132:134:public EdgeEffectCompat(android.content.Context)
     204:204:public boolean onAbsorb(int)
 android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl:
-    60:60:public java.lang.Object newEdgeEffect(android.content.Context)
     82:82:public boolean onAbsorb(java.lang.Object,int)
 android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl:
-    92:92:public java.lang.Object newEdgeEffect(android.content.Context)
     116:116:public boolean onAbsorb(java.lang.Object,int)
 android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl:
-    public abstract java.lang.Object newEdgeEffect(android.content.Context)
     public abstract boolean onAbsorb(java.lang.Object,int)
 android.support.v4.widget.EdgeEffectCompatIcs:
     28:28:EdgeEffectCompatIcs()
-    30:30:public static java.lang.Object newEdgeEffect(android.content.Context)
     57:58:public static boolean onAbsorb(java.lang.Object,int)
 android.support.v4.widget.ResourceCursorAdapter
 android.support.v4.widget.SearchViewCompat
@@ -474,72 +512,164 @@ com.google.ads.AdActivity:
 com.google.ads.AdRequest:
     public static final java.lang.String VERSION
     public static final java.lang.String LOGTAG
-    173:174:public void setGender(com.google.ads.AdRequest$Gender)
-    184:185:public void setBirthday(java.lang.String)
-    196:197:public void setPlusOneOptOut(boolean)
-    208:209:public void setKeywords(java.util.Set)
-    221:226:public void addKeyword(java.lang.String)
-    238:239:public void setExtras(java.util.Map)
-    281:282:public void setTesting(boolean)
-    368:373:public void addTestDevice(java.lang.String)
-    385:386:public void setTestDevices(java.util.Set)
+    226:227:public com.google.ads.AdRequest setGender(com.google.ads.AdRequest$Gender)
+    235:235:public com.google.ads.AdRequest$Gender getGender()
+    248:260:public com.google.ads.AdRequest setBirthday(java.lang.String)
+    269:275:public com.google.ads.AdRequest setBirthday(java.util.Date)
+    285:291:public com.google.ads.AdRequest setBirthday(java.util.Calendar)
+    299:299:public java.util.Date getBirthday()
+    307:308:public com.google.ads.AdRequest clearBirthday()
+    325:326:public com.google.ads.AdRequest setPlusOneOptOut(boolean)
+    339:339:public boolean getPlusOneOptOut()
+    365:370:public com.google.ads.AdRequest addKeyword(java.lang.String)
+    383:388:public com.google.ads.AdRequest addKeywords(java.util.Set)
+    399:403:public java.util.Set getKeywords()
+    413:417:private synchronized com.google.ads.mediation.admob.AdMobAdapterExtras a()
+    432:433:public com.google.ads.AdRequest setExtras(java.util.Map)
+    450:456:public com.google.ads.AdRequest addExtra(java.lang.String,java.lang.Object)
+    483:484:public com.google.ads.AdRequest removeNetworkExtras(java.lang.Class)
+    507:508:public com.google.ads.AdRequest setMediationExtras(java.util.Map)
+    522:527:public com.google.ads.AdRequest addMediationExtra(java.lang.String,java.lang.Object)
+    547:547:public android.location.Location getLocation()
+    562:563:public com.google.ads.AdRequest setTesting(boolean)
+    673:678:public com.google.ads.AdRequest addTestDevice(java.lang.String)
 com.google.ads.AdSize:
-    38:39:public AdSize(int,int)
+    public static final int FULL_WIDTH
+    public static final int AUTO_HEIGHT
+    public static final int LANDSCAPE_AD_HEIGHT
+    public static final int PORTRAIT_AD_HEIGHT
+    public static final int LARGE_AD_HEIGHT
+    142:151:public AdSize(int,int)
+    268:268:public int getWidthInPixels(android.content.Context)
+    278:278:public int getHeightInPixels(android.content.Context)
+    294:294:public boolean isSizeAppropriate(int,int)
+    317:336:public varargs com.google.ads.AdSize findBestSize(com.google.ads.AdSize[])
 com.google.ads.AdView:
-    100:103:public AdView(android.content.Context,android.util.AttributeSet)
-    118:119:public AdView(android.content.Context,android.util.AttributeSet,int)
-    237:238:public void destroy()
-    286:440:private void a(android.content.Context,android.util.AttributeSet)
-    478:482:public boolean isReady()
-    523:524:public void setAdListener(com.google.ads.AdListener)
-    535:536:public void stopLoading()
+    263:264:public void destroy()
+    483:487:public boolean isReady()
+    534:535:public void setAdListener(com.google.ads.AdListener)
+    546:549:public void stopLoading()
 com.google.ads.InterstitialAd:
-    private com.google.ads.d a
-    73:74:public InterstitialAd(android.app.Activity,java.lang.String)
-    88:91:public InterstitialAd(android.app.Activity,java.lang.String,boolean)
-    100:100:public boolean isReady()
-    112:113:public void loadAd(com.google.ads.AdRequest)
-    122:135:public void show()
-    146:147:public void setAdListener(com.google.ads.AdListener)
-    156:157:public void stopLoading()
-com.google.ads.R
-com.google.ads.R$attr
-com.google.ads.R$id
-com.google.ads.R$layout
-com.google.ads.a:
-    79:81:private a()
-com.google.ads.aa:
-    18:18:public aa()
-com.google.ads.c:
-    371:387:final void a()
-com.google.ads.d:
-    276:279:public final synchronized void b()
-    464:464:public final synchronized boolean o()
-    748:749:public final synchronized void a(com.google.ads.AdListener)
-    777:778:public final synchronized void y()
-    809:816:public final synchronized void z()
+    private com.google.ads.internal.d a
+    private com.google.ads.m b
+    86:87:public InterstitialAd(android.app.Activity,java.lang.String)
+    101:105:public InterstitialAd(android.app.Activity,java.lang.String,boolean)
+    114:114:public boolean isReady()
+    126:127:public void loadAd(com.google.ads.AdRequest)
+    136:137:public void show()
+    148:149:public void setAdListener(com.google.ads.AdListener)
+    158:159:public void stopLoading()
+com.google.ads.e:
+    112:122:public void b()
+    199:205:private boolean a(com.google.ads.h,java.lang.String)
+    211:222:public void a(com.google.ads.h,boolean)
+    227:241:public void a(com.google.ads.h,android.view.View)
+    245:254:public void a(com.google.ads.h)
+    258:267:public void b(com.google.ads.h)
+    271:280:public void c(com.google.ads.h)
+    291:300:public boolean c()
+    462:464:private com.google.ads.h e()
+    51:51:static synthetic com.google.ads.h c(com.google.ads.e)
+com.google.ads.e$2
+com.google.ads.e$3
+com.google.ads.e$4
+com.google.ads.e$5
+com.google.ads.e$6
+com.google.ads.f:
+    79:79:public java.util.List e()
+com.google.ads.h:
+    118:118:public com.google.ads.f a()
+    202:228:public synchronized void f()
+    255:255:synchronized com.google.ads.mediation.MediationAdapter h()
+    262:262:com.google.ads.e i()
+    266:267:synchronized void a(android.view.View)
+com.google.ads.h$2
+com.google.ads.internal.c:
+    433:449:protected void a()
+com.google.ads.internal.d:
+    284:292:public synchronized void b()
+    487:487:public synchronized boolean q()
+    668:672:public synchronized void a(com.google.ads.f,boolean)
+    797:808:private void b(com.google.ads.f,java.lang.Boolean)
+    988:1017:public synchronized void y()
+    1026:1035:public synchronized void z()
+    1139:1139:public java.lang.Boolean C()
+com.google.ads.j:
+    private boolean b
+    32:64:public void onReceivedAd(com.google.ads.mediation.MediationBannerAdapter)
+    70:82:public void onFailedToReceiveAd(com.google.ads.mediation.MediationBannerAdapter,com.google.ads.AdRequest$ErrorCode)
+    87:90:public void onPresentScreen(com.google.ads.mediation.MediationBannerAdapter)
+    94:97:public void onDismissScreen(com.google.ads.mediation.MediationBannerAdapter)
+    101:104:public void onLeaveApplication(com.google.ads.mediation.MediationBannerAdapter)
+    108:112:public void onClick(com.google.ads.mediation.MediationBannerAdapter)
+com.google.ads.k:
+    27:38:public void onReceivedAd(com.google.ads.mediation.MediationInterstitialAdapter)
+    43:56:public void onFailedToReceiveAd(com.google.ads.mediation.MediationInterstitialAdapter,com.google.ads.AdRequest$ErrorCode)
+    61:64:public void onPresentScreen(com.google.ads.mediation.MediationInterstitialAdapter)
+    69:72:public void onDismissScreen(com.google.ads.mediation.MediationInterstitialAdapter)
+    76:79:public void onLeaveApplication(com.google.ads.mediation.MediationInterstitialAdapter)
+com.google.ads.mediation.EmptyNetworkExtras
+com.google.ads.mediation.MediationAdRequest:
+    53:53:public com.google.ads.AdRequest$Gender getGender()
+    60:60:public java.util.Date getBirthday()
+    68:82:public java.lang.Integer getAgeInYears()
+    89:93:public java.util.Set getKeywords()
+    101:105:public android.location.Location getLocation()
+    115:115:public boolean isTesting()
+com.google.ads.mediation.MediationBannerAdapter:
+    public abstract android.view.View getBannerView()
+com.google.ads.mediation.MediationBannerListener:
+    public abstract void onReceivedAd(com.google.ads.mediation.MediationBannerAdapter)
+    public abstract void onFailedToReceiveAd(com.google.ads.mediation.MediationBannerAdapter,com.google.ads.AdRequest$ErrorCode)
+    public abstract void onPresentScreen(com.google.ads.mediation.MediationBannerAdapter)
+    public abstract void onDismissScreen(com.google.ads.mediation.MediationBannerAdapter)
+    public abstract void onLeaveApplication(com.google.ads.mediation.MediationBannerAdapter)
+    public abstract void onClick(com.google.ads.mediation.MediationBannerAdapter)
+com.google.ads.mediation.MediationInterstitialAdapter:
+    public abstract void showInterstitial()
+com.google.ads.mediation.MediationInterstitialListener:
+    public abstract void onReceivedAd(com.google.ads.mediation.MediationInterstitialAdapter)
+    public abstract void onFailedToReceiveAd(com.google.ads.mediation.MediationInterstitialAdapter,com.google.ads.AdRequest$ErrorCode)
+    public abstract void onPresentScreen(com.google.ads.mediation.MediationInterstitialAdapter)
+    public abstract void onDismissScreen(com.google.ads.mediation.MediationInterstitialAdapter)
+    public abstract void onLeaveApplication(com.google.ads.mediation.MediationInterstitialAdapter)
+com.google.ads.mediation.admob.AdMobAdapter
+com.google.ads.mediation.admob.AdMobAdapter$1
+com.google.ads.mediation.admob.AdMobAdapter$a
+com.google.ads.mediation.admob.AdMobAdapter$b
+com.google.ads.mediation.admob.AdMobAdapterExtras:
+    29:36:public AdMobAdapterExtras(com.google.ads.mediation.admob.AdMobAdapterExtras)
+    49:50:public com.google.ads.mediation.admob.AdMobAdapterExtras setPlusOneOptOut(boolean)
+    78:79:public com.google.ads.mediation.admob.AdMobAdapterExtras setUseExactAdSize(boolean)
+    89:89:public boolean getUseExactAdSize()
+    115:119:public com.google.ads.mediation.admob.AdMobAdapterExtras setExtras(java.util.Map)
+    145:146:public com.google.ads.mediation.admob.AdMobAdapterExtras addExtra(java.lang.String,java.lang.Object)
+com.google.ads.mediation.admob.AdMobAdapterServerParameters
+com.google.ads.mediation.customevent.CustomEventAdapter
+com.google.ads.mediation.customevent.CustomEventAdapter$a
+com.google.ads.mediation.customevent.CustomEventAdapter$b
+com.google.ads.mediation.customevent.CustomEventBanner
+com.google.ads.mediation.customevent.CustomEventBannerListener
+com.google.ads.mediation.customevent.CustomEventInterstitial
+com.google.ads.mediation.customevent.CustomEventInterstitialListener
+com.google.ads.mediation.customevent.CustomEventListener
+com.google.ads.mediation.customevent.CustomEventServerParameters
 com.google.ads.searchads.SearchAdRequest:
-    88:89:public void setQuery(java.lang.String)
-    98:104:public void setBackgroundColor(int)
-    116:122:public void setBackgroundGradient(int,int)
-    132:133:public void setHeaderTextColor(int)
-    143:144:public void setDescriptionTextColor(int)
-    154:155:public void setAnchorTextColor(int)
-    163:164:public void setFontFace(java.lang.String)
-    173:174:public void setHeaderTextSize(int)
-    184:185:public void setBorderColor(int)
-    192:193:public void setBorderType(com.google.ads.searchads.SearchAdRequest$BorderType)
-    202:203:public void setBorderThickness(int)
-com.google.ads.util.AdUtil:
-    152:154:private AdUtil()
+    90:91:public void setQuery(java.lang.String)
+    100:107:public void setBackgroundColor(int)
+    119:126:public void setBackgroundGradient(int,int)
+    136:137:public void setHeaderTextColor(int)
+    147:148:public void setDescriptionTextColor(int)
+    158:159:public void setAnchorTextColor(int)
+    167:168:public void setFontFace(java.lang.String)
+    177:178:public void setHeaderTextSize(int)
+    188:189:public void setBorderColor(int)
+    196:197:public void setBorderType(com.google.ads.searchads.SearchAdRequest$BorderType)
+    206:207:public void setBorderThickness(int)
+    214:215:public void setCustomChannels(java.lang.String)
 com.google.ads.util.a:
-    19:21:private a()
-com.google.ads.util.c:
-    26:28:private c()
-com.google.ads.y:
-    11:11:public y()
-com.google.ads.z:
-    156:158:private z()
+    37:38:public static void a(boolean)
+    53:55:public static void a(java.lang.Object)
 com.madhackerdesigns.neverbelate.BuildConfig
 com.madhackerdesigns.neverbelate.Eula:
     private static final java.lang.String PREFERENCE_EULA_ACCEPTED
@@ -639,14 +769,6 @@ com.madhackerdesigns.neverbelate.service.StartupReceiver:
     private static final int REQUEST_CODE
 com.madhackerdesigns.neverbelate.service.WakefulServiceReceiver:
     private static final java.lang.String LOG_TAG
-com.madhackerdesigns.neverbelate.settings.EulaPreference:
-    20:22:public EulaPreference(android.content.Context,android.util.AttributeSet,int)
-    29:31:public EulaPreference(android.content.Context,android.util.AttributeSet)
-    37:39:public EulaPreference(android.content.Context)
-com.madhackerdesigns.neverbelate.settings.FeedbackPreference:
-    24:26:public FeedbackPreference(android.content.Context,android.util.AttributeSet,int)
-    33:35:public FeedbackPreference(android.content.Context,android.util.AttributeSet)
-    41:43:public FeedbackPreference(android.content.Context)
 com.madhackerdesigns.neverbelate.settings.PreferenceHelper:
     private static final java.lang.String DEFAULT_ADVANCE_WARNING
     private static final boolean DEFAULT_AVOID_HIGHWAYS
@@ -685,17 +807,6 @@ com.madhackerdesigns.neverbelate.settings.PreferenceHelper:
     184:184:public boolean isTosAccepted()
     193:194:public boolean setTosAccepted(boolean)
     222:222:public boolean isWarnNoLocation()
-com.madhackerdesigns.neverbelate.settings.PrivacyPreference:
-    21:23:public PrivacyPreference(android.content.Context,android.util.AttributeSet,int)
-    30:32:public PrivacyPreference(android.content.Context,android.util.AttributeSet)
-    38:40:public PrivacyPreference(android.content.Context)
-com.madhackerdesigns.neverbelate.settings.WebsitePreference:
-    21:23:public WebsitePreference(android.content.Context,android.util.AttributeSet,int)
-    30:32:public WebsitePreference(android.content.Context,android.util.AttributeSet)
-    38:40:public WebsitePreference(android.content.Context)
-com.madhackerdesigns.neverbelate.ui.EdgeScrollView:
-    14:15:public EdgeScrollView(android.content.Context,android.util.AttributeSet)
-    18:22:public EdgeScrollView(android.content.Context,android.util.AttributeSet,int)
 com.madhackerdesigns.neverbelate.ui.LauncherActivity:
     private static final boolean ADMOB
     private static final java.lang.String ADMOB_ID
@@ -957,7 +1068,6 @@ com.pontiflex.mobile.webview.utilities.PackageHelper:
 com.pontiflex.mobile.webview.utilities.RegistrationStorage:
     public static final java.lang.String DefaultKeystoreFilename
     private static final java.lang.String HEX
-    30:32:public RegistrationStorage(android.content.Context)
     77:77:public boolean isEmpty()
 com.pontiflex.mobile.webview.utilities.UpdateResourceUtil:
     static final java.lang.String RES_PATH
@@ -978,9 +1088,6 @@ com.viewpagerindicator.CirclePageIndicator:
     public static final int HORIZONTAL
     public static final int VERTICAL
     private static final int INVALID_POINTER
-    67:68:public CirclePageIndicator(android.content.Context)
-    71:72:public CirclePageIndicator(android.content.Context,android.util.AttributeSet)
-    75:110:public CirclePageIndicator(android.content.Context,android.util.AttributeSet,int)
     114:116:public void setCentered(boolean)
     119:119:public boolean isCentered()
     123:125:public void setPageColor(int)
@@ -1004,32 +1111,145 @@ com.viewpagerindicator.PageIndicator:
     public abstract void setCurrentItem(int)
     public abstract void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
     public abstract void notifyDataSetChanged()
-com.viewpagerindicator.R
+com.viewpagerindicator.R:
+    10:10:public R()
 com.viewpagerindicator.R$anim
 com.viewpagerindicator.R$array
-com.viewpagerindicator.R$attr
-com.viewpagerindicator.R$bool
-com.viewpagerindicator.R$color
-com.viewpagerindicator.R$dimen
+com.viewpagerindicator.R$attr:
+    public static final int adSize
+    public static final int adUnitId
+    public static final int centered
+    public static final int clipPadding
+    public static final int fillColor
+    public static final int footerColor
+    public static final int footerIndicatorHeight
+    public static final int footerIndicatorStyle
+    public static final int footerIndicatorUnderlinePadding
+    public static final int footerLineHeight
+    public static final int footerPadding
+    public static final int orientation
+    public static final int pageColor
+    public static final int radius
+    public static final int selectedBold
+    public static final int selectedColor
+    public static final int snap
+    public static final int strokeColor
+    public static final int strokeWidth
+    public static final int textColor
+    public static final int textSize
+    public static final int titlePadding
+    public static final int topPadding
+    public static final int vpiTabPageIndicatorStyle
+    public static final int vpiTabTextStyle
+    29:29:public R$attr()
+com.viewpagerindicator.R$bool:
+    public static final int default_avoid_highways
+    public static final int default_avoid_tolls
+    public static final int default_insistent
+    public static final int default_neverlate_enabled
+    public static final int default_only_marked_locations
+    public static final int default_tos_accepted
+    public static final int default_vibrate
+    public static final int default_warn_no_location
+    294:294:public R$bool()
+com.viewpagerindicator.R$color:
+    public static final int black
+    public static final int blue
+    public static final int blue_electric
+    public static final int blue_light
+    public static final int edit_event_separator
+    public static final int event_info_label_color
+    public static final int grey_dark
+    public static final int grey_light
+    public static final int red_dark
+    public static final int vpi__background_holo_dark
+    public static final int vpi__background_holo_light
+    public static final int vpi__bright_foreground_disabled_holo_dark
+    public static final int vpi__bright_foreground_disabled_holo_light
+    public static final int vpi__bright_foreground_holo_dark
+    public static final int vpi__bright_foreground_holo_light
+    public static final int vpi__bright_foreground_inverse_holo_dark
+    public static final int vpi__bright_foreground_inverse_holo_light
+    public static final int vpi__dark_theme
+    public static final int vpi__light_theme
+    public static final int white
+    307:307:public R$color()
+com.viewpagerindicator.R$dimen:
+    335:335:public R$dimen()
 com.viewpagerindicator.R$drawable
 com.viewpagerindicator.R$id
-com.viewpagerindicator.R$integer
+com.viewpagerindicator.R$integer:
+    public static final int whats_new_version
+    444:444:public R$integer()
 com.viewpagerindicator.R$layout
 com.viewpagerindicator.R$string
-com.viewpagerindicator.R$style
-com.viewpagerindicator.R$styleable
+com.viewpagerindicator.R$style:
+    public static final int ButtonBar
+    public static final int EditEventSeparator
+    public static final int GenderButton
+    public static final int LargeBlackText
+    public static final int LauncherButton
+    public static final int MediumBlackText
+    public static final int QuickTourHeader
+    public static final int QuickTourHeaderPadded
+    public static final int QuickTourMessage
+    public static final int QuickTourMessagePadded
+    public static final int QuickTourPage
+    public static final int QuickTourPageNoPad
+    public static final int RegEditText
+    public static final int RegLabelFont
+    public static final int SettingsInstructions
+    public static final int SmallBlackText
+    public static final int TextAppearance_EditEvent
+    public static final int TextAppearance_EditEvent_Value
+    public static final int TextAppearance_TabPageIndicator
+    public static final int Theme_PageIndicatorDefaults
+    public static final int Widget
+    public static final int Widget_TabPageIndicator
+    public static final int Widget_TabPageIndicator_Text
+    636:636:public R$style()
+com.viewpagerindicator.R$styleable:
+    public static final int CirclePageIndicator_centered
+    public static final int CirclePageIndicator_fillColor
+    public static final int CirclePageIndicator_orientation
+    public static final int CirclePageIndicator_pageColor
+    public static final int CirclePageIndicator_radius
+    public static final int CirclePageIndicator_snap
+    public static final int CirclePageIndicator_strokeColor
+    public static final int CirclePageIndicator_strokeWidth
+    public static final int TitlePageIndicator_clipPadding
+    public static final int TitlePageIndicator_footerColor
+    public static final int TitlePageIndicator_footerIndicatorHeight
+    public static final int TitlePageIndicator_footerIndicatorStyle
+    public static final int TitlePageIndicator_footerIndicatorUnderlinePadding
+    public static final int TitlePageIndicator_footerLineHeight
+    public static final int TitlePageIndicator_footerPadding
+    public static final int TitlePageIndicator_selectedBold
+    public static final int TitlePageIndicator_selectedColor
+    public static final int TitlePageIndicator_textColor
+    public static final int TitlePageIndicator_textSize
+    public static final int TitlePageIndicator_titlePadding
+    public static final int TitlePageIndicator_topPadding
+    public static final int ViewPagerIndicator_vpiCirclePageIndicatorStyle
+    public static final int ViewPagerIndicator_vpiTabPageIndicatorStyle
+    public static final int ViewPagerIndicator_vpiTabTextStyle
+    public static final int ViewPagerIndicator_vpiTitlePageIndicatorStyle
+    public static final int com_google_ads_AdView_adSize
+    public static final int com_google_ads_AdView_adUnitId
+    668:668:public R$styleable()
 com.viewpagerindicator.R$xml
-com.viewpagerindicator.TabPageIndicator
-com.viewpagerindicator.TabPageIndicator$1
-com.viewpagerindicator.TabPageIndicator$2
-com.viewpagerindicator.TabPageIndicator$TabView
+com.viewpagerindicator.TabPageIndicator:
+    129:135:private void addTab(java.lang.String,int)
+    161:171:public void setViewPager(android.support.v4.view.ViewPager)
+    174:185:public void notifyDataSetChanged()
+    189:191:public void setViewPager(android.support.v4.view.ViewPager,int)
+    212:213:public void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
+com.viewpagerindicator.TabPageIndicator$TabView:
+    224:229:public void init(com.viewpagerindicator.TabPageIndicator,java.lang.String,int)
 com.viewpagerindicator.TitlePageIndicator:
     private static final float SELECTION_FADE_PERCENTAGE
     private static final float BOLD_FADE_PERCENTAGE
     private static final int INVALID_POINTER
-    126:127:public TitlePageIndicator(android.content.Context)
-    130:131:public TitlePageIndicator(android.content.Context,android.util.AttributeSet)
-    134:182:public TitlePageIndicator(android.content.Context,android.util.AttributeSet,int)
     186:186:public int getFooterColor()
     190:193:public void setFooterColor(int)
     196:196:public float getFooterLineHeight()
@@ -1061,5 +1281,3 @@ com.viewpagerindicator.TitlePageIndicator:
     656:657:public void notifyDataSetChanged()
     665:666:public void setOnCenterItemClickListener(com.viewpagerindicator.TitlePageIndicator$OnCenterItemClickListener)
     712:713:public void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
-com.viewpagerindicator.TitlePageIndicator$IndicatorStyle:
-    83:88:public static com.viewpagerindicator.TitlePageIndicator$IndicatorStyle fromValue(int)
