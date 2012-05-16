@@ -5,6 +5,9 @@
 	<string name="beta_code_hint">ABCD1234</string>
 	<string name="birthdate">Birthdate</string>
 	<string name="btn_birthdate_text">Click to select date</string>
+	<string name="btn_opt-in_text">Also register for the biweekly Mad Hacker Newsletter</string>
+	<string name="country">Country</string>
+	<string name="country_prompt">Select your country</string>
 	<string name="decline_text">I\'ll do it later.</string>
 	<string name="email">Email</string>
 	<string name="email_hint">john.doe@example.com</string>
@@ -16,16 +19,16 @@
 	<string name="last_name_hint">Doe</string>
 	<string name="male">male</string>
 	<string name="no_code">(I don\'t have one...)</string>
-	<string name="privacy_link_text">(Privacy Policy)</string>
-	<string name="reg_copy_default">Thanks for downloading NeverBeLate™! Register your copy of NeverBeLate™ below to signup for my free small business and productivity newsletter.</string>
+	<string name="privacy_link_text">Privacy Policy</string>
+	<string name="reg_copy_default">Thanks for downloading NeverBeLate™! Please register your copy of this app below before continuing.</string>
 	<string name="register">Register now!</string>
 	<string name="reg_form_title">Register for NeverBeLate™</string>
 	<string name="signup_copy">Oops! Did you forget to signup for a beta account on the NeverBeLate™ 
 		website? You will need to do that first before completing this registration. Signup takes 
 		less than 30 seconds and only requires a valid email address at which you can receive your 
 		beta account code. Click the button below to go directly to the signup page!</string>
-	<string name="zip_code">Zip code</string>
-	<string name="zip_code_hint">90210</string>
+	<string name="postal_code">Postal code</string>
+	<string name="postal_code_hint">90210</string>
 	
 <!--DIALOG VALUES-->
 
@@ -66,7 +69,7 @@
 		<item name="android:layout_width">wrap_content</item>
 		<item name="android:padding">10dip</item>
 		<item name="android:textColor">@color/black</item>
-		<item name="android:textSize">16sp</item>
+		<item name="android:textSize">14sp</item>
 	</style>
 	
 	<style name="RegEditText" parent="@android:style/Widget.EditText">
@@ -74,7 +77,7 @@
 		<item name="android:layout_width">wrap_content</item>
 		<item name="android:layout_marginRight">3dip</item>
 		<item name="android:padding">10dip</item>
-		<item name="android:textSize">16sp</item>
+		<item name="android:textSize">14sp</item>
 	</style>
 
 </resources>

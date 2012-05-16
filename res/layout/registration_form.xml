@@ -16,7 +16,7 @@
 		android:text="@string/reg_copy_default"
 		android:textSize="12sp" />
 		
-	<ScrollView 
+	<com.madhackerdesigns.neverbelate.ui.EdgeScrollView 
 	    android:background="@color/white"
 		android:layout_height="0dp"
 		android:layout_weight="1"
@@ -65,16 +65,38 @@
 			<TableRow>
 				<TextView
 					style="@style/RegLabelFont"
-					android:text="@string/zip_code" />
+					android:text="@string/country" />
+				<Button
+					android:id="@+id/btn_country"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:prompt="@string/country_prompt"
+					android:textSize="14sp"
+					style="@android:style/Widget.Spinner" />
+			</TableRow>
+	
+			<TableRow>
+				<TextView
+					style="@style/RegLabelFont"
+					android:text="@string/postal_code" />
 				<EditText
 					android:id="@+id/zip_code"
 					android:inputType="number"
-					android:hint="@string/zip_code_hint"
+					android:hint="@string/postal_code_hint"
 					style="@style/RegEditText" />
 			</TableRow>
+			
+<!-- 			<CheckBox -->
+<!-- 			    android:id="@+id/btn_opt-in" -->
+<!-- 			    android:columns="2" -->
+<!-- 			    android:layout_height="wrap_content" -->
+<!-- 			    android:layout_width="wrap_content" -->
+<!-- 			    android:text="@string/btn_opt-in_text" -->
+<!-- 			    android:textColor="@color/black" -->
+<!-- 			    android:textSize="12sp" /> -->
 		</TableLayout>
 	
-	</ScrollView>
+	</com.madhackerdesigns.neverbelate.ui.EdgeScrollView>
 	
 	<TextView
 		android:background="@color/white"
@@ -82,10 +104,10 @@
 		android:gravity="center"
 		android:layout_height="wrap_content"
 		android:layout_width="fill_parent"
-		android:padding="4dip"
+		android:padding="6dip"
 		android:text="@string/privacy_link_text"
-		android:textColor="@color/black"
-		android:textSize="12sp" />
+		android:textColor="@color/blue"
+		android:textSize="10sp" />
 	
 	<LinearLayout 
 		android:background="@color/black"

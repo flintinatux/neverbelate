@@ -3,23 +3,15 @@
  */
 package com.madhackerdesigns.neverbelate.ui;
 
-import java.util.GregorianCalendar;
-
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.DatePickerDialog;
-import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.text.format.DateUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.DatePicker;
-import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.madhackerdesigns.neverbelate.R;
@@ -34,10 +26,9 @@ public class RegistrationForm extends Activity {
 	private Registration mRegistration;
 	
 	// Unique dialog id's
-	private static final int DIALOG_DATE = 0;
-    private static final int DIALOG_DECLINE = 1;
-    private static final int DIALOG_INCOMPLETE = 2;
-	private static final int DIALOG_THANKS = 3;
+	private static final int DIALOG_DECLINE = 0;
+    private static final int DIALOG_INCOMPLETE = 1;
+	private static final int DIALOG_THANKS = 2;
     
 	/* (non-Javadoc)
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
@@ -50,6 +41,16 @@ public class RegistrationForm extends Activity {
 		
 		// Initialize the Registration data
 		mRegistration = new Registration(getApplicationContext());
+		
+		// Set the behavior of the country "spinner"
+		Button btnCountry = (Button) findViewById(R.id.btn_country);
+		btnCountry.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				// TODO: Show country select dialog and disable zipcode if needed
+			}
+			
+		});
 		
 		// Set the OnClick behavior of the decline text
 		TextView declineText = (TextView) findViewById(R.id.decline_text);
@@ -77,14 +78,15 @@ public class RegistrationForm extends Activity {
 		// Pull registration data from form
 		String firstName = (String) ((TextView) findViewById(R.id.first_name)).getText();
 		String lastName = (String) ((TextView) findViewById(R.id.last_name)).getText();
+		String email = (String) ((TextView) findViewById(R.id.email)).getText();
+		// TODO: String countryCode
 		String zipCode = (String) ((TextView) findViewById(R.id.zip_code)).getText();
 		
 		// Remind user to complete form if he didn't.
-		if ( 	firstName.equals("") || 
-				lastName.equals("") ||
-				! mBirthdateSet || 
-				zipCode == 0 ||
-				gender == Registration.GENDER_UNKNOWN ) {
+		if ( 	isEmpty(firstName) || 
+				isEmpty(lastName) ||
+				isEmpty(email) ||
+				isEmpty(zipCode) ) {		// TODO: isEmpty(countryCode)
 			
 			// Show reminder dialog and return.
 			showDialog(DIALOG_INCOMPLETE);
@@ -92,24 +94,18 @@ public class RegistrationForm extends Activity {
 			
 		}
 		
-		// TODO: Attempt upload to registration server.
-		
-		// If registration succeeds, permanently store the data.
+		// If registration validates, permanently store the data.
 		Registration reg = mRegistration;
 		reg.setFirstName(firstName);
 		reg.setLastName(lastName);
-		reg.setBirthdate(birthdate);
+		reg.setEmail(email);
 		reg.setZipCode(zipCode);
-		reg.setGender(gender);
-		reg.commit();
+		// TODO: Add reg.setCountryCode(country)
+		
+		// TODO: Insert reg data into Pontiflex 
 		
 		// Then say thanks and pass them on to the main launcher screen
 		showDialog(DIALOG_THANKS);
-	}
-
-	private void updateBirthdateButton() {
-		String month = DateUtils.getMonthString(mMonth, DateUtils.LENGTH_MEDIUM);
-		mBirthdateButton.setText(month + " " + mDay + ", " + mYear);
 	}
 
 	/* (non-Javadoc)
@@ -119,10 +115,6 @@ public class RegistrationForm extends Activity {
 	protected Dialog onCreateDialog(int id) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		switch (id) {
-	    case DIALOG_DATE:
-	        return new DatePickerDialog(this,
-	                    mDateSetListener,
-	                    mYear, mMonth, mDay);
 	    case DIALOG_DECLINE:
 	    	// Ask user if they really want to decline registration.
 	    	builder.setTitle(R.string.dialog_decline_title)
@@ -170,6 +162,10 @@ public class RegistrationForm extends Activity {
 	    	return builder.create();
 	    }
 	    return null;
+	}
+	
+	private boolean isEmpty (String s) {
+		return (s == null || s.length() == 0);
 	}
 	
 	
