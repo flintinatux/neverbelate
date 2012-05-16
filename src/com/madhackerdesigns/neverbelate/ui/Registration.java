@@ -6,16 +6,16 @@ import android.content.SharedPreferences;
 public class Registration {
 
 	// SharedPreference keys for registration data
-	private static final String EMAIL = "email";
-	private static final String FIRST_NAME = "first_name";
-	private static final String LAST_NAME = "last_name";
-	private static final String REGISTERED = "registered";
-	private static final String ZIP_CODE = "zip_code";
+	private static final String COUNTRY_CODE = "reg.country_code";
+	private static final String EMAIL = "reg.email";
+	private static final String FIRST_NAME = "reg.first_name";
+	private static final String LAST_NAME = "reg.last_name";
+	private static final String REGISTERED = "reg.registered";
+	private static final String ZIP_CODE = "reg.zip_code";
 	
 	// SharedPreferences stuff
 	private static final String REGISTRATION_DATA = "registration_data";
 	private SharedPreferences mSettings;
-	
 	
 	/**
 	 * @param applicationContext 
@@ -24,6 +24,20 @@ public class Registration {
 	public Registration(Context applicationContext) {
 		// Load the Registration values and editor 
 		mSettings = applicationContext.getSharedPreferences(REGISTRATION_DATA, Context.MODE_PRIVATE);
+	}
+
+	/**
+	 * @return the 2-letter country code
+	 */
+	protected String getCountryCode() {
+		return mSettings.getString(COUNTRY_CODE, "");
+	}
+	
+	/**
+	 * @param countryCode the 2-letter country code to set
+	 */
+	protected void setCountryCode(String countryCode) {
+		mSettings.edit().putString(COUNTRY_CODE, countryCode);
 	}
 
 	/**

@@ -31,14 +31,7 @@ import com.madhackerdesigns.neverbelate.R;
 public class RegistrationForm extends Activity {
 
 	// Member fields for the Registration Form
-	private Button mBirthdateButton;
-	private boolean mBirthdateSet = false;
-	private int mYear = 1980;
-    private int mMonth = 1;
-    private int mDay = 1;
-	private OnDateSetListener mDateSetListener;
 	private Registration mRegistration;
-	private String mGender;
 	
 	// Unique dialog id's
 	private static final int DIALOG_DATE = 0;
@@ -84,26 +77,7 @@ public class RegistrationForm extends Activity {
 		// Pull registration data from form
 		String firstName = (String) ((TextView) findViewById(R.id.first_name)).getText();
 		String lastName = (String) ((TextView) findViewById(R.id.last_name)).getText();
-		long birthdate = (new GregorianCalendar(mYear, mMonth, mDay)).getTimeInMillis();
-		int zipCode = 0;
-		try {
-			zipCode = Integer.parseInt((String) ((TextView) findViewById(R.id.zip_code)).getText());
-		} catch (NumberFormatException e) {
-			// TODO: Will this catch an empty string in the zipCode field?
-		}
-		
-		// Decide on gender.
-		Resources res = getResources();
-		String male = res.getString(R.string.male);
-		String female = res.getString(R.string.female);
-		int gender;
-		if (mGender.equals(male)) {
-			gender = Registration.GENDER_MALE;
-		} else if (mGender.equals(female)) {
-			gender = Registration.GENDER_FEMALE;
-		} else {
-			gender = Registration.GENDER_UNKNOWN;
-		}
+		String zipCode = (String) ((TextView) findViewById(R.id.zip_code)).getText();
 		
 		// Remind user to complete form if he didn't.
 		if ( 	firstName.equals("") || 
