@@ -1,5 +1,6 @@
 android.support.v4.app.BackStackState
 android.support.v4.app.BackStackState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.DialogFragment
 android.support.v4.app.Fragment$SavedState
 android.support.v4.app.Fragment$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v4.app.FragmentActivity
@@ -7,16 +8,7 @@ android.support.v4.app.FragmentManagerState
 android.support.v4.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
 android.support.v4.app.FragmentState
 android.support.v4.app.FragmentState: android.os.Parcelable$Creator CREATOR
-android.support.v4.app.NoSaveStateFrameLayout
-android.support.v4.app.NoSaveStateFrameLayout: NoSaveStateFrameLayout(android.content.Context)
-android.support.v4.app.NotificationCompat$Builder
-android.support.v4.app.NotificationCompat$Builder: NotificationCompat$Builder(android.content.Context)
-android.support.v4.content.AsyncTaskLoader
-android.support.v4.content.AsyncTaskLoader: AsyncTaskLoader(android.content.Context)
-android.support.v4.content.CursorLoader
-android.support.v4.content.CursorLoader: CursorLoader(android.content.Context)
-android.support.v4.content.Loader
-android.support.v4.content.Loader: Loader(android.content.Context)
+android.support.v4.app.ListFragment
 android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status[] values()
 android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status valueOf(java.lang.String)
 android.support.v4.view.PagerTitleStrip
@@ -25,13 +17,20 @@ android.support.v4.view.PagerTitleStrip: PagerTitleStrip(android.content.Context
 android.support.v4.view.ViewPager
 android.support.v4.view.ViewPager: ViewPager(android.content.Context)
 android.support.v4.view.ViewPager: ViewPager(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.ViewPager: void setAdapter(android.support.v4.view.PagerAdapter)
+android.support.v4.view.ViewPager: void setCurrentItem(int)
+android.support.v4.view.ViewPager: void setCurrentItem(int,boolean)
+android.support.v4.view.ViewPager: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
+android.support.v4.view.ViewPager: void setOffscreenPageLimit(int)
+android.support.v4.view.ViewPager: void setPageMargin(int)
+android.support.v4.view.ViewPager: void setPageMarginDrawable(android.graphics.drawable.Drawable)
+android.support.v4.view.ViewPager: void setPageMarginDrawable(int)
 android.support.v4.view.ViewPager$LayoutParams
 android.support.v4.view.ViewPager$LayoutParams: ViewPager$LayoutParams(android.content.Context,android.util.AttributeSet)
 android.support.v4.view.ViewPager$SavedState
 android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREATOR
-android.support.v4.widget.EdgeEffectCompat
-android.support.v4.widget.EdgeEffectCompat: EdgeEffectCompat(android.content.Context)
 com.google.ads.AdActivity
+com.google.ads.AdActivity: void onClick(android.view.View)
 com.google.ads.AdRequest$ErrorCode: com.google.ads.AdRequest$ErrorCode[] values()
 com.google.ads.AdRequest$ErrorCode: com.google.ads.AdRequest$ErrorCode valueOf(java.lang.String)
 com.google.ads.AdRequest$Gender: com.google.ads.AdRequest$Gender[] values()
@@ -39,8 +38,15 @@ com.google.ads.AdRequest$Gender: com.google.ads.AdRequest$Gender valueOf(java.la
 com.google.ads.AdView
 com.google.ads.AdView: AdView(android.content.Context,android.util.AttributeSet)
 com.google.ads.AdView: AdView(android.content.Context,android.util.AttributeSet,int)
+com.google.ads.AdView: void setAdListener(com.google.ads.AdListener)
 com.google.ads.ag$b: com.google.ads.ag$b[] values()
 com.google.ads.ag$b: com.google.ads.ag$b valueOf(java.lang.String)
+com.google.ads.internal.AdVideoView
+com.google.ads.internal.AdVideoView: void setMediaControllerEnabled(boolean)
+com.google.ads.internal.AdVideoView: void setSrc(java.lang.String)
+com.google.ads.internal.AdWebView
+com.google.ads.internal.AdWebView: void setAdActivity(com.google.ads.AdActivity)
+com.google.ads.internal.AdWebView: void setIsExpandedMraid(boolean)
 com.google.ads.searchads.SearchAdRequest$BorderType: com.google.ads.searchads.SearchAdRequest$BorderType[] values()
 com.google.ads.searchads.SearchAdRequest$BorderType: com.google.ads.searchads.SearchAdRequest$BorderType valueOf(java.lang.String)
 com.google.ads.util.AdUtil$UserActivityReceiver
@@ -48,6 +54,404 @@ com.google.ads.util.AdUtil$a: com.google.ads.util.AdUtil$a[] values()
 com.google.ads.util.AdUtil$a: com.google.ads.util.AdUtil$a valueOf(java.lang.String)
 com.google.ads.util.b$a: com.google.ads.util.b$a[] values()
 com.google.ads.util.b$a: com.google.ads.util.b$a valueOf(java.lang.String)
+com.madhackerdesigns.neverbelate.R$anim: int slide_down
+com.madhackerdesigns.neverbelate.R$anim: int slide_left
+com.madhackerdesigns.neverbelate.R$anim: int slide_up
+com.madhackerdesigns.neverbelate.R$array: int freq_entries_15
+com.madhackerdesigns.neverbelate.R$array: int freq_entries_5
+com.madhackerdesigns.neverbelate.R$array: int freq_values
+com.madhackerdesigns.neverbelate.R$array: int hours_entries
+com.madhackerdesigns.neverbelate.R$array: int hours_values
+com.madhackerdesigns.neverbelate.R$array: int minutes_entries
+com.madhackerdesigns.neverbelate.R$array: int minutes_values
+com.madhackerdesigns.neverbelate.R$array: int notify_entries
+com.madhackerdesigns.neverbelate.R$array: int notify_values
+com.madhackerdesigns.neverbelate.R$array: int travel_mode_entries
+com.madhackerdesigns.neverbelate.R$array: int travel_mode_values
+com.madhackerdesigns.neverbelate.R$attr: int adSize
+com.madhackerdesigns.neverbelate.R$attr: int adUnitId
+com.madhackerdesigns.neverbelate.R$attr: int centered
+com.madhackerdesigns.neverbelate.R$attr: int clipPadding
+com.madhackerdesigns.neverbelate.R$attr: int fillColor
+com.madhackerdesigns.neverbelate.R$attr: int footerColor
+com.madhackerdesigns.neverbelate.R$attr: int footerIndicatorHeight
+com.madhackerdesigns.neverbelate.R$attr: int footerIndicatorStyle
+com.madhackerdesigns.neverbelate.R$attr: int footerIndicatorUnderlinePadding
+com.madhackerdesigns.neverbelate.R$attr: int footerLineHeight
+com.madhackerdesigns.neverbelate.R$attr: int footerPadding
+com.madhackerdesigns.neverbelate.R$attr: int orientation
+com.madhackerdesigns.neverbelate.R$attr: int pageColor
+com.madhackerdesigns.neverbelate.R$attr: int radius
+com.madhackerdesigns.neverbelate.R$attr: int selectedBold
+com.madhackerdesigns.neverbelate.R$attr: int selectedColor
+com.madhackerdesigns.neverbelate.R$attr: int snap
+com.madhackerdesigns.neverbelate.R$attr: int strokeColor
+com.madhackerdesigns.neverbelate.R$attr: int strokeWidth
+com.madhackerdesigns.neverbelate.R$attr: int textColor
+com.madhackerdesigns.neverbelate.R$attr: int textSize
+com.madhackerdesigns.neverbelate.R$attr: int titlePadding
+com.madhackerdesigns.neverbelate.R$attr: int topPadding
+com.madhackerdesigns.neverbelate.R$attr: int vpiCirclePageIndicatorStyle
+com.madhackerdesigns.neverbelate.R$attr: int vpiTabPageIndicatorStyle
+com.madhackerdesigns.neverbelate.R$attr: int vpiTabTextStyle
+com.madhackerdesigns.neverbelate.R$attr: int vpiTitlePageIndicatorStyle
+com.madhackerdesigns.neverbelate.R$bool: int default_avoid_highways
+com.madhackerdesigns.neverbelate.R$bool: int default_avoid_tolls
+com.madhackerdesigns.neverbelate.R$bool: int default_circle_indicator_centered
+com.madhackerdesigns.neverbelate.R$bool: int default_circle_indicator_snap
+com.madhackerdesigns.neverbelate.R$bool: int default_insistent
+com.madhackerdesigns.neverbelate.R$bool: int default_neverlate_enabled
+com.madhackerdesigns.neverbelate.R$bool: int default_only_marked_locations
+com.madhackerdesigns.neverbelate.R$bool: int default_title_indicator_selected_bold
+com.madhackerdesigns.neverbelate.R$bool: int default_tos_accepted
+com.madhackerdesigns.neverbelate.R$bool: int default_vibrate
+com.madhackerdesigns.neverbelate.R$bool: int default_warn_no_location
+com.madhackerdesigns.neverbelate.R$color: int black
+com.madhackerdesigns.neverbelate.R$color: int blue
+com.madhackerdesigns.neverbelate.R$color: int blue_electric
+com.madhackerdesigns.neverbelate.R$color: int blue_light
+com.madhackerdesigns.neverbelate.R$color: int default_circle_indicator_fill_color
+com.madhackerdesigns.neverbelate.R$color: int default_circle_indicator_page_color
+com.madhackerdesigns.neverbelate.R$color: int default_circle_indicator_stroke_color
+com.madhackerdesigns.neverbelate.R$color: int default_title_indicator_footer_color
+com.madhackerdesigns.neverbelate.R$color: int default_title_indicator_selected_color
+com.madhackerdesigns.neverbelate.R$color: int default_title_indicator_text_color
+com.madhackerdesigns.neverbelate.R$color: int edit_event_separator
+com.madhackerdesigns.neverbelate.R$color: int event_info_label_color
+com.madhackerdesigns.neverbelate.R$color: int grey_dark
+com.madhackerdesigns.neverbelate.R$color: int grey_light
+com.madhackerdesigns.neverbelate.R$color: int red_dark
+com.madhackerdesigns.neverbelate.R$color: int vpi__background_holo_dark
+com.madhackerdesigns.neverbelate.R$color: int vpi__background_holo_light
+com.madhackerdesigns.neverbelate.R$color: int vpi__bright_foreground_disabled_holo_dark
+com.madhackerdesigns.neverbelate.R$color: int vpi__bright_foreground_disabled_holo_light
+com.madhackerdesigns.neverbelate.R$color: int vpi__bright_foreground_holo_dark
+com.madhackerdesigns.neverbelate.R$color: int vpi__bright_foreground_holo_light
+com.madhackerdesigns.neverbelate.R$color: int vpi__bright_foreground_inverse_holo_dark
+com.madhackerdesigns.neverbelate.R$color: int vpi__bright_foreground_inverse_holo_light
+com.madhackerdesigns.neverbelate.R$color: int vpi__dark_theme
+com.madhackerdesigns.neverbelate.R$color: int vpi__light_theme
+com.madhackerdesigns.neverbelate.R$color: int white
+com.madhackerdesigns.neverbelate.R$dimen: int default_circle_indicator_radius
+com.madhackerdesigns.neverbelate.R$dimen: int default_circle_indicator_stroke_width
+com.madhackerdesigns.neverbelate.R$dimen: int default_title_indicator_clip_padding
+com.madhackerdesigns.neverbelate.R$dimen: int default_title_indicator_footer_indicator_height
+com.madhackerdesigns.neverbelate.R$dimen: int default_title_indicator_footer_indicator_underline_padding
+com.madhackerdesigns.neverbelate.R$dimen: int default_title_indicator_footer_line_height
+com.madhackerdesigns.neverbelate.R$dimen: int default_title_indicator_footer_padding
+com.madhackerdesigns.neverbelate.R$dimen: int default_title_indicator_text_size
+com.madhackerdesigns.neverbelate.R$dimen: int default_title_indicator_title_padding
+com.madhackerdesigns.neverbelate.R$dimen: int default_title_indicator_top_padding
+com.madhackerdesigns.neverbelate.R$drawable: int btn_default_disabled_focused_holo_dark
+com.madhackerdesigns.neverbelate.R$drawable: int btn_default_disabled_holo_dark
+com.madhackerdesigns.neverbelate.R$drawable: int btn_default_focused_holo_dark
+com.madhackerdesigns.neverbelate.R$drawable: int btn_default_green
+com.madhackerdesigns.neverbelate.R$drawable: int btn_default_green_normal
+com.madhackerdesigns.neverbelate.R$drawable: int btn_default_holo_dark
+com.madhackerdesigns.neverbelate.R$drawable: int btn_default_normal_holo_dark
+com.madhackerdesigns.neverbelate.R$drawable: int btn_default_pressed_holo_dark
+com.madhackerdesigns.neverbelate.R$drawable: int event_border
+com.madhackerdesigns.neverbelate.R$drawable: int event_shadow_bottom
+com.madhackerdesigns.neverbelate.R$drawable: int event_shadow_top
+com.madhackerdesigns.neverbelate.R$drawable: int event_tab
+com.madhackerdesigns.neverbelate.R$drawable: int flag_blue
+com.madhackerdesigns.neverbelate.R$drawable: int flag_red
+com.madhackerdesigns.neverbelate.R$drawable: int ic_launcher_rabbit3
+com.madhackerdesigns.neverbelate.R$drawable: int ic_menu_add
+com.madhackerdesigns.neverbelate.R$drawable: int ic_menu_help
+com.madhackerdesigns.neverbelate.R$drawable: int ic_menu_my_calendar
+com.madhackerdesigns.neverbelate.R$drawable: int ic_menu_preferences
+com.madhackerdesigns.neverbelate.R$drawable: int ic_menu_share
+com.madhackerdesigns.neverbelate.R$drawable: int ic_stat_notify_rabbit2
+com.madhackerdesigns.neverbelate.R$drawable: int ic_stat_notify_rabbit3
+com.madhackerdesigns.neverbelate.R$drawable: int main_logo
+com.madhackerdesigns.neverbelate.R$drawable: int vpi__tab_indicator
+com.madhackerdesigns.neverbelate.R$drawable: int vpi__tab_selected_focused_holo
+com.madhackerdesigns.neverbelate.R$drawable: int vpi__tab_selected_holo
+com.madhackerdesigns.neverbelate.R$drawable: int vpi__tab_selected_pressed_holo
+com.madhackerdesigns.neverbelate.R$drawable: int vpi__tab_unselected_focused_holo
+com.madhackerdesigns.neverbelate.R$drawable: int vpi__tab_unselected_holo
+com.madhackerdesigns.neverbelate.R$drawable: int vpi__tab_unselected_pressed_holo
+com.madhackerdesigns.neverbelate.R$id: int BANNER
+com.madhackerdesigns.neverbelate.R$id: int IAB_BANNER
+com.madhackerdesigns.neverbelate.R$id: int IAB_LEADERBOARD
+com.madhackerdesigns.neverbelate.R$id: int IAB_MRECT
+com.madhackerdesigns.neverbelate.R$id: int ad_view
+com.madhackerdesigns.neverbelate.R$id: int back_button
+com.madhackerdesigns.neverbelate.R$id: int btn_configure
+com.madhackerdesigns.neverbelate.R$id: int btn_create_event
+com.madhackerdesigns.neverbelate.R$id: int btn_enable
+com.madhackerdesigns.neverbelate.R$id: int btn_quick_tour
+com.madhackerdesigns.neverbelate.R$id: int btn_register
+com.madhackerdesigns.neverbelate.R$id: int btn_share
+com.madhackerdesigns.neverbelate.R$id: int checkbox
+com.madhackerdesigns.neverbelate.R$id: int copyright_text
+com.madhackerdesigns.neverbelate.R$id: int decline_text
+com.madhackerdesigns.neverbelate.R$id: int departure_window
+com.madhackerdesigns.neverbelate.R$id: int dismiss_button
+com.madhackerdesigns.neverbelate.R$id: int email
+com.madhackerdesigns.neverbelate.R$id: int event_location
+com.madhackerdesigns.neverbelate.R$id: int event_time
+com.madhackerdesigns.neverbelate.R$id: int event_title
+com.madhackerdesigns.neverbelate.R$id: int first_name
+com.madhackerdesigns.neverbelate.R$id: int horizontal
+com.madhackerdesigns.neverbelate.R$id: int icon
+com.madhackerdesigns.neverbelate.R$id: int indicator
+com.madhackerdesigns.neverbelate.R$id: int last_name
+com.madhackerdesigns.neverbelate.R$id: int list_view
+com.madhackerdesigns.neverbelate.R$id: int location
+com.madhackerdesigns.neverbelate.R$id: int logo
+com.madhackerdesigns.neverbelate.R$id: int mapview
+com.madhackerdesigns.neverbelate.R$id: int none
+com.madhackerdesigns.neverbelate.R$id: int pager
+com.madhackerdesigns.neverbelate.R$id: int pr_app_version
+com.madhackerdesigns.neverbelate.R$id: int pr_eula
+com.madhackerdesigns.neverbelate.R$id: int pr_privacy
+com.madhackerdesigns.neverbelate.R$id: int pr_send_feedback
+com.madhackerdesigns.neverbelate.R$id: int pr_settings_instructions
+com.madhackerdesigns.neverbelate.R$id: int pr_website
+com.madhackerdesigns.neverbelate.R$id: int pref_marked_locations
+com.madhackerdesigns.neverbelate.R$id: int privacy_link
+com.madhackerdesigns.neverbelate.R$id: int qt_finish_button
+com.madhackerdesigns.neverbelate.R$id: int reg_copy
+com.madhackerdesigns.neverbelate.R$id: int reset_ad_helper_button
+com.madhackerdesigns.neverbelate.R$id: int reset_alert_list_button
+com.madhackerdesigns.neverbelate.R$id: int settings_button
+com.madhackerdesigns.neverbelate.R$id: int snooze_button
+com.madhackerdesigns.neverbelate.R$id: int summary
+com.madhackerdesigns.neverbelate.R$id: int test_button
+com.madhackerdesigns.neverbelate.R$id: int text
+com.madhackerdesigns.neverbelate.R$id: int title
+com.madhackerdesigns.neverbelate.R$id: int traffic_button
+com.madhackerdesigns.neverbelate.R$id: int travel_time
+com.madhackerdesigns.neverbelate.R$id: int triangle
+com.madhackerdesigns.neverbelate.R$id: int tv_skip_tour
+com.madhackerdesigns.neverbelate.R$id: int underline
+com.madhackerdesigns.neverbelate.R$id: int vertical
+com.madhackerdesigns.neverbelate.R$id: int vertical_separator
+com.madhackerdesigns.neverbelate.R$id: int vertical_stripe
+com.madhackerdesigns.neverbelate.R$id: int view_switcher
+com.madhackerdesigns.neverbelate.R$id: int warning_text
+com.madhackerdesigns.neverbelate.R$id: int where_row
+com.madhackerdesigns.neverbelate.R$id: int widget_frame
+com.madhackerdesigns.neverbelate.R$id: int zip_code
+com.madhackerdesigns.neverbelate.R$integer: int default_circle_indicator_orientation
+com.madhackerdesigns.neverbelate.R$integer: int default_title_indicator_footer_indicator_style
+com.madhackerdesigns.neverbelate.R$integer: int whats_new_version
+com.madhackerdesigns.neverbelate.R$layout: int alert_list_view
+com.madhackerdesigns.neverbelate.R$layout: int departure_window_layout
+com.madhackerdesigns.neverbelate.R$layout: int event_list_item
+com.madhackerdesigns.neverbelate.R$layout: int launcher
+com.madhackerdesigns.neverbelate.R$layout: int launcher_buttons
+com.madhackerdesigns.neverbelate.R$layout: int launcher_logo_enable
+com.madhackerdesigns.neverbelate.R$layout: int preference
+com.madhackerdesigns.neverbelate.R$layout: int preference_widget_checkbox
+com.madhackerdesigns.neverbelate.R$layout: int qt_page_0
+com.madhackerdesigns.neverbelate.R$layout: int qt_page_1
+com.madhackerdesigns.neverbelate.R$layout: int qt_page_2
+com.madhackerdesigns.neverbelate.R$layout: int qt_page_3
+com.madhackerdesigns.neverbelate.R$layout: int qt_page_4
+com.madhackerdesigns.neverbelate.R$layout: int qt_page_5
+com.madhackerdesigns.neverbelate.R$layout: int quick_tour
+com.madhackerdesigns.neverbelate.R$layout: int registration_form
+com.madhackerdesigns.neverbelate.R$layout: int test_activity
+com.madhackerdesigns.neverbelate.R$layout: int traffic_view_layout
+com.madhackerdesigns.neverbelate.R$layout: int vpi__tab
+com.madhackerdesigns.neverbelate.R$layout: int warning_dialog
+com.madhackerdesigns.neverbelate.R$layout: int whats_new_test
+com.madhackerdesigns.neverbelate.R$string: int admob_id
+com.madhackerdesigns.neverbelate.R$string: int advance_warning_title
+com.madhackerdesigns.neverbelate.R$string: int alerts_contract_authority
+com.madhackerdesigns.neverbelate.R$string: int app_name
+com.madhackerdesigns.neverbelate.R$string: int app_title
+com.madhackerdesigns.neverbelate.R$string: int app_version
+com.madhackerdesigns.neverbelate.R$string: int away_text
+com.madhackerdesigns.neverbelate.R$string: int base_task
+com.madhackerdesigns.neverbelate.R$string: int beta_code
+com.madhackerdesigns.neverbelate.R$string: int beta_code_hint
+com.madhackerdesigns.neverbelate.R$string: int birthdate
+com.madhackerdesigns.neverbelate.R$string: int btn_birthdate_text
+com.madhackerdesigns.neverbelate.R$string: int btn_configure_text
+com.madhackerdesigns.neverbelate.R$string: int btn_create_event_text
+com.madhackerdesigns.neverbelate.R$string: int btn_enable_text
+com.madhackerdesigns.neverbelate.R$string: int btn_quick_tour_text
+com.madhackerdesigns.neverbelate.R$string: int btn_share_text
+com.madhackerdesigns.neverbelate.R$string: int btn_video_tour_text
+com.madhackerdesigns.neverbelate.R$string: int content_description_logo
+com.madhackerdesigns.neverbelate.R$string: int content_text
+com.madhackerdesigns.neverbelate.R$string: int content_title
+com.madhackerdesigns.neverbelate.R$string: int create_event
+com.madhackerdesigns.neverbelate.R$string: int decline_text
+com.madhackerdesigns.neverbelate.R$string: int default_advance_warning
+com.madhackerdesigns.neverbelate.R$string: int default_copyright_text
+com.madhackerdesigns.neverbelate.R$string: int default_departure_window
+com.madhackerdesigns.neverbelate.R$string: int default_early_arrival
+com.madhackerdesigns.neverbelate.R$string: int default_event_location
+com.madhackerdesigns.neverbelate.R$string: int default_event_time
+com.madhackerdesigns.neverbelate.R$string: int default_event_title
+com.madhackerdesigns.neverbelate.R$string: int default_location_freq
+com.madhackerdesigns.neverbelate.R$string: int default_lookahead_window
+com.madhackerdesigns.neverbelate.R$string: int default_notification_method
+com.madhackerdesigns.neverbelate.R$string: int default_snooze_duration
+com.madhackerdesigns.neverbelate.R$string: int default_travel_mode
+com.madhackerdesigns.neverbelate.R$string: int default_travel_time
+com.madhackerdesigns.neverbelate.R$string: int default_traveltime_freq
+com.madhackerdesigns.neverbelate.R$string: int departure_time
+com.madhackerdesigns.neverbelate.R$string: int dialog_decline_btn_no
+com.madhackerdesigns.neverbelate.R$string: int dialog_decline_btn_yes
+com.madhackerdesigns.neverbelate.R$string: int dialog_decline_message
+com.madhackerdesigns.neverbelate.R$string: int dialog_decline_title
+com.madhackerdesigns.neverbelate.R$string: int dialog_incomplete_btn_ok
+com.madhackerdesigns.neverbelate.R$string: int dialog_incomplete_message
+com.madhackerdesigns.neverbelate.R$string: int dialog_incomplete_title
+com.madhackerdesigns.neverbelate.R$string: int dialog_thanks_btn_ok
+com.madhackerdesigns.neverbelate.R$string: int dialog_thanks_message
+com.madhackerdesigns.neverbelate.R$string: int dialog_thanks_title
+com.madhackerdesigns.neverbelate.R$string: int dismiss_all_button_text
+com.madhackerdesigns.neverbelate.R$string: int dismiss_button_text
+com.madhackerdesigns.neverbelate.R$string: int dlg_coming_soon_msg
+com.madhackerdesigns.neverbelate.R$string: int dlg_coming_soon_title
+com.madhackerdesigns.neverbelate.R$string: int dlg_first_time_msg
+com.madhackerdesigns.neverbelate.R$string: int dlg_first_time_title
+com.madhackerdesigns.neverbelate.R$string: int dlg_qt_msg
+com.madhackerdesigns.neverbelate.R$string: int dlg_qt_title
+com.madhackerdesigns.neverbelate.R$string: int email
+com.madhackerdesigns.neverbelate.R$string: int email_hint
+com.madhackerdesigns.neverbelate.R$string: int eula_accept
+com.madhackerdesigns.neverbelate.R$string: int eula_refuse
+com.madhackerdesigns.neverbelate.R$string: int eula_text
+com.madhackerdesigns.neverbelate.R$string: int eula_title
+com.madhackerdesigns.neverbelate.R$string: int feedback_address
+com.madhackerdesigns.neverbelate.R$string: int feedback_menu_title
+com.madhackerdesigns.neverbelate.R$string: int feedback_subject
+com.madhackerdesigns.neverbelate.R$string: int female
+com.madhackerdesigns.neverbelate.R$string: int first_name
+com.madhackerdesigns.neverbelate.R$string: int first_name_hint
+com.madhackerdesigns.neverbelate.R$string: int gender
+com.madhackerdesigns.neverbelate.R$string: int last_name
+com.madhackerdesigns.neverbelate.R$string: int last_name_hint
+com.madhackerdesigns.neverbelate.R$string: int loading_text
+com.madhackerdesigns.neverbelate.R$string: int male
+com.madhackerdesigns.neverbelate.R$string: int maps_data
+com.madhackerdesigns.neverbelate.R$string: int minutes_early
+com.madhackerdesigns.neverbelate.R$string: int more_text
+com.madhackerdesigns.neverbelate.R$string: int no
+com.madhackerdesigns.neverbelate.R$string: int no_code
+com.madhackerdesigns.neverbelate.R$string: int ok
+com.madhackerdesigns.neverbelate.R$string: int on_time
+com.madhackerdesigns.neverbelate.R$string: int pr_marked_events_summary_off
+com.madhackerdesigns.neverbelate.R$string: int pr_marked_events_summary_on
+com.madhackerdesigns.neverbelate.R$string: int pr_marked_events_title
+com.madhackerdesigns.neverbelate.R$string: int privacy_link_text
+com.madhackerdesigns.neverbelate.R$string: int privacy_title
+com.madhackerdesigns.neverbelate.R$string: int qt_enable_header
+com.madhackerdesigns.neverbelate.R$string: int qt_enable_message_1
+com.madhackerdesigns.neverbelate.R$string: int qt_enable_message_2
+com.madhackerdesigns.neverbelate.R$string: int qt_final_header
+com.madhackerdesigns.neverbelate.R$string: int qt_final_message_1
+com.madhackerdesigns.neverbelate.R$string: int qt_final_message_2
+com.madhackerdesigns.neverbelate.R$string: int qt_finish_button
+com.madhackerdesigns.neverbelate.R$string: int qt_intro_header
+com.madhackerdesigns.neverbelate.R$string: int qt_intro_message
+com.madhackerdesigns.neverbelate.R$string: int qt_marked_header
+com.madhackerdesigns.neverbelate.R$string: int qt_marked_message_1
+com.madhackerdesigns.neverbelate.R$string: int qt_marked_message_2
+com.madhackerdesigns.neverbelate.R$string: int qt_sample_location
+com.madhackerdesigns.neverbelate.R$string: int qt_searchable_header
+com.madhackerdesigns.neverbelate.R$string: int qt_searchable_message_1
+com.madhackerdesigns.neverbelate.R$string: int qt_searchable_message_2
+com.madhackerdesigns.neverbelate.R$string: int qt_skip_tour
+com.madhackerdesigns.neverbelate.R$string: int qt_traffic_header
+com.madhackerdesigns.neverbelate.R$string: int qt_traffic_message_1
+com.madhackerdesigns.neverbelate.R$string: int qt_traffic_message_2
+com.madhackerdesigns.neverbelate.R$string: int qt_where
+com.madhackerdesigns.neverbelate.R$string: int reg_copy_default
+com.madhackerdesigns.neverbelate.R$string: int reg_form_title
+com.madhackerdesigns.neverbelate.R$string: int register
+com.madhackerdesigns.neverbelate.R$string: int reset_ad_helper_button_text
+com.madhackerdesigns.neverbelate.R$string: int reset_alert_list_button_text
+com.madhackerdesigns.neverbelate.R$string: int send_feedback
+com.madhackerdesigns.neverbelate.R$string: int send_feedback_title
+com.madhackerdesigns.neverbelate.R$string: int settings_button_text
+com.madhackerdesigns.neverbelate.R$string: int settings_instructions
+com.madhackerdesigns.neverbelate.R$string: int settings_instructions_title
+com.madhackerdesigns.neverbelate.R$string: int share_menu_title
+com.madhackerdesigns.neverbelate.R$string: int share_message
+com.madhackerdesigns.neverbelate.R$string: int share_subject
+com.madhackerdesigns.neverbelate.R$string: int signup_copy
+com.madhackerdesigns.neverbelate.R$string: int snooze_all_button_text
+com.madhackerdesigns.neverbelate.R$string: int snooze_button_text
+com.madhackerdesigns.neverbelate.R$string: int test_button_text
+com.madhackerdesigns.neverbelate.R$string: int test_text
+com.madhackerdesigns.neverbelate.R$string: int ticker_text
+com.madhackerdesigns.neverbelate.R$string: int traffic_button_text
+com.madhackerdesigns.neverbelate.R$string: int unit_minutes
+com.madhackerdesigns.neverbelate.R$string: int untitled_event
+com.madhackerdesigns.neverbelate.R$string: int version_name
+com.madhackerdesigns.neverbelate.R$string: int warning_text
+com.madhackerdesigns.neverbelate.R$string: int website_title
+com.madhackerdesigns.neverbelate.R$string: int whats_new_message
+com.madhackerdesigns.neverbelate.R$string: int whats_new_title
+com.madhackerdesigns.neverbelate.R$string: int yes
+com.madhackerdesigns.neverbelate.R$string: int zip_code
+com.madhackerdesigns.neverbelate.R$string: int zip_code_hint
+com.madhackerdesigns.neverbelate.R$style: int ButtonBar
+com.madhackerdesigns.neverbelate.R$style: int EditEventSeparator
+com.madhackerdesigns.neverbelate.R$style: int GenderButton
+com.madhackerdesigns.neverbelate.R$style: int LargeBlackText
+com.madhackerdesigns.neverbelate.R$style: int LauncherButton
+com.madhackerdesigns.neverbelate.R$style: int MediumBlackText
+com.madhackerdesigns.neverbelate.R$style: int QuickTourHeader
+com.madhackerdesigns.neverbelate.R$style: int QuickTourHeaderPadded
+com.madhackerdesigns.neverbelate.R$style: int QuickTourMessage
+com.madhackerdesigns.neverbelate.R$style: int QuickTourMessagePadded
+com.madhackerdesigns.neverbelate.R$style: int QuickTourPage
+com.madhackerdesigns.neverbelate.R$style: int QuickTourPageNoPad
+com.madhackerdesigns.neverbelate.R$style: int RegEditText
+com.madhackerdesigns.neverbelate.R$style: int RegLabelFont
+com.madhackerdesigns.neverbelate.R$style: int SettingsInstructions
+com.madhackerdesigns.neverbelate.R$style: int SmallBlackText
+com.madhackerdesigns.neverbelate.R$style: int TextAppearance_EditEvent
+com.madhackerdesigns.neverbelate.R$style: int TextAppearance_EditEvent_Value
+com.madhackerdesigns.neverbelate.R$style: int TextAppearance_TabPageIndicator
+com.madhackerdesigns.neverbelate.R$style: int Theme_PageIndicatorDefaults
+com.madhackerdesigns.neverbelate.R$style: int Widget
+com.madhackerdesigns.neverbelate.R$style: int Widget_CirclePageIndicator
+com.madhackerdesigns.neverbelate.R$style: int Widget_TabPageIndicator
+com.madhackerdesigns.neverbelate.R$style: int Widget_TabPageIndicator_Text
+com.madhackerdesigns.neverbelate.R$style: int Widget_TitlePageIndicator
+com.madhackerdesigns.neverbelate.R$styleable: int[] CirclePageIndicator
+com.madhackerdesigns.neverbelate.R$styleable: int CirclePageIndicator_centered
+com.madhackerdesigns.neverbelate.R$styleable: int CirclePageIndicator_fillColor
+com.madhackerdesigns.neverbelate.R$styleable: int CirclePageIndicator_orientation
+com.madhackerdesigns.neverbelate.R$styleable: int CirclePageIndicator_pageColor
+com.madhackerdesigns.neverbelate.R$styleable: int CirclePageIndicator_radius
+com.madhackerdesigns.neverbelate.R$styleable: int CirclePageIndicator_snap
+com.madhackerdesigns.neverbelate.R$styleable: int CirclePageIndicator_strokeColor
+com.madhackerdesigns.neverbelate.R$styleable: int CirclePageIndicator_strokeWidth
+com.madhackerdesigns.neverbelate.R$styleable: int[] TitlePageIndicator
+com.madhackerdesigns.neverbelate.R$styleable: int TitlePageIndicator_clipPadding
+com.madhackerdesigns.neverbelate.R$styleable: int TitlePageIndicator_footerColor
+com.madhackerdesigns.neverbelate.R$styleable: int TitlePageIndicator_footerIndicatorHeight
+com.madhackerdesigns.neverbelate.R$styleable: int TitlePageIndicator_footerIndicatorStyle
+com.madhackerdesigns.neverbelate.R$styleable: int TitlePageIndicator_footerIndicatorUnderlinePadding
+com.madhackerdesigns.neverbelate.R$styleable: int TitlePageIndicator_footerLineHeight
+com.madhackerdesigns.neverbelate.R$styleable: int TitlePageIndicator_footerPadding
+com.madhackerdesigns.neverbelate.R$styleable: int TitlePageIndicator_selectedBold
+com.madhackerdesigns.neverbelate.R$styleable: int TitlePageIndicator_selectedColor
+com.madhackerdesigns.neverbelate.R$styleable: int TitlePageIndicator_textColor
+com.madhackerdesigns.neverbelate.R$styleable: int TitlePageIndicator_textSize
+com.madhackerdesigns.neverbelate.R$styleable: int TitlePageIndicator_titlePadding
+com.madhackerdesigns.neverbelate.R$styleable: int TitlePageIndicator_topPadding
+com.madhackerdesigns.neverbelate.R$styleable: int[] ViewPagerIndicator
+com.madhackerdesigns.neverbelate.R$styleable: int ViewPagerIndicator_vpiCirclePageIndicatorStyle
+com.madhackerdesigns.neverbelate.R$styleable: int ViewPagerIndicator_vpiTabPageIndicatorStyle
+com.madhackerdesigns.neverbelate.R$styleable: int ViewPagerIndicator_vpiTabTextStyle
+com.madhackerdesigns.neverbelate.R$styleable: int ViewPagerIndicator_vpiTitlePageIndicatorStyle
+com.madhackerdesigns.neverbelate.R$styleable: int[] com_google_ads_AdView
+com.madhackerdesigns.neverbelate.R$styleable: int com_google_ads_AdView_adSize
+com.madhackerdesigns.neverbelate.R$styleable: int com_google_ads_AdView_adUnitId
+com.madhackerdesigns.neverbelate.R$xml: int settings
 com.madhackerdesigns.neverbelate.provider.AlertsContract
 com.madhackerdesigns.neverbelate.provider.AlertsProvider
 com.madhackerdesigns.neverbelate.service.CalendarHelperBase
@@ -62,42 +466,31 @@ com.madhackerdesigns.neverbelate.service.WakefulServiceReceiver
 com.madhackerdesigns.neverbelate.settings.EulaPreference
 com.madhackerdesigns.neverbelate.settings.EulaPreference: EulaPreference(android.content.Context,android.util.AttributeSet,int)
 com.madhackerdesigns.neverbelate.settings.EulaPreference: EulaPreference(android.content.Context,android.util.AttributeSet)
-com.madhackerdesigns.neverbelate.settings.EulaPreference: EulaPreference(android.content.Context)
 com.madhackerdesigns.neverbelate.settings.FeedbackPreference
 com.madhackerdesigns.neverbelate.settings.FeedbackPreference: FeedbackPreference(android.content.Context,android.util.AttributeSet,int)
 com.madhackerdesigns.neverbelate.settings.FeedbackPreference: FeedbackPreference(android.content.Context,android.util.AttributeSet)
-com.madhackerdesigns.neverbelate.settings.FeedbackPreference: FeedbackPreference(android.content.Context)
 com.madhackerdesigns.neverbelate.settings.NeverBeLateSettings
-com.madhackerdesigns.neverbelate.settings.PreferenceHelper
-com.madhackerdesigns.neverbelate.settings.PreferenceHelper: PreferenceHelper(android.content.Context)
 com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod: com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod[] values()
 com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod: com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod valueOf(java.lang.String)
 com.madhackerdesigns.neverbelate.settings.PrivacyPreference
 com.madhackerdesigns.neverbelate.settings.PrivacyPreference: PrivacyPreference(android.content.Context,android.util.AttributeSet,int)
 com.madhackerdesigns.neverbelate.settings.PrivacyPreference: PrivacyPreference(android.content.Context,android.util.AttributeSet)
-com.madhackerdesigns.neverbelate.settings.PrivacyPreference: PrivacyPreference(android.content.Context)
 com.madhackerdesigns.neverbelate.settings.WebsitePreference
 com.madhackerdesigns.neverbelate.settings.WebsitePreference: WebsitePreference(android.content.Context,android.util.AttributeSet,int)
 com.madhackerdesigns.neverbelate.settings.WebsitePreference: WebsitePreference(android.content.Context,android.util.AttributeSet)
-com.madhackerdesigns.neverbelate.settings.WebsitePreference: WebsitePreference(android.content.Context)
 com.madhackerdesigns.neverbelate.ui.EdgeScrollView
 com.madhackerdesigns.neverbelate.ui.EdgeScrollView: EdgeScrollView(android.content.Context,android.util.AttributeSet)
 com.madhackerdesigns.neverbelate.ui.EdgeScrollView: EdgeScrollView(android.content.Context,android.util.AttributeSet,int)
 com.madhackerdesigns.neverbelate.ui.LauncherActivity
 com.madhackerdesigns.neverbelate.ui.MapOverlay
 com.madhackerdesigns.neverbelate.ui.QuickTourActivity
-com.madhackerdesigns.neverbelate.ui.Registration
-com.madhackerdesigns.neverbelate.ui.Registration: Registration(android.content.Context)
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment
 com.madhackerdesigns.neverbelate.ui.RegistrationForm
 com.madhackerdesigns.neverbelate.ui.TestActivity
 com.madhackerdesigns.neverbelate.ui.UserLocationOverlay
 com.madhackerdesigns.neverbelate.ui.WarningDialog
-com.madhackerdesigns.neverbelate.util.AdHelper
-com.madhackerdesigns.neverbelate.util.AdHelper: AdHelper(android.content.Context)
 com.madhackerdesigns.neverbelate.util.Logger
 com.madhackerdesigns.neverbelate.util.NetUtils
-com.pontiflex.mobile.webview.models.ResourceData
-com.pontiflex.mobile.webview.models.ResourceData: ResourceData(android.content.Context)
 com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment: com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment[] values()
 com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment: com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment valueOf(java.lang.String)
 com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode: com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode[] values()
@@ -168,23 +561,453 @@ com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation: com.p
 com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation valueOf(java.lang.String)
 com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize[] values()
 com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize valueOf(java.lang.String)
-com.pontiflex.mobile.webview.utilities.RegistrationStorage
-com.pontiflex.mobile.webview.utilities.RegistrationStorage: RegistrationStorage(android.content.Context)
 com.viewpagerindicator.CirclePageIndicator
 com.viewpagerindicator.CirclePageIndicator: CirclePageIndicator(android.content.Context)
 com.viewpagerindicator.CirclePageIndicator: CirclePageIndicator(android.content.Context,android.util.AttributeSet)
 com.viewpagerindicator.CirclePageIndicator: CirclePageIndicator(android.content.Context,android.util.AttributeSet,int)
+com.viewpagerindicator.CirclePageIndicator: void setCentered(boolean)
+com.viewpagerindicator.CirclePageIndicator: void setPageColor(int)
+com.viewpagerindicator.CirclePageIndicator: void setFillColor(int)
+com.viewpagerindicator.CirclePageIndicator: void setOrientation(int)
+com.viewpagerindicator.CirclePageIndicator: void setStrokeColor(int)
+com.viewpagerindicator.CirclePageIndicator: void setStrokeWidth(float)
+com.viewpagerindicator.CirclePageIndicator: void setRadius(float)
+com.viewpagerindicator.CirclePageIndicator: void setSnap(boolean)
+com.viewpagerindicator.CirclePageIndicator: void setViewPager(android.support.v4.view.ViewPager)
+com.viewpagerindicator.CirclePageIndicator: void setViewPager(android.support.v4.view.ViewPager,int)
+com.viewpagerindicator.CirclePageIndicator: void setCurrentItem(int)
+com.viewpagerindicator.CirclePageIndicator: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
 com.viewpagerindicator.CirclePageIndicator$SavedState
 com.viewpagerindicator.CirclePageIndicator$SavedState: android.os.Parcelable$Creator CREATOR
+com.viewpagerindicator.R$anim: int slide_down
+com.viewpagerindicator.R$anim: int slide_left
+com.viewpagerindicator.R$anim: int slide_up
+com.viewpagerindicator.R$array: int freq_entries_15
+com.viewpagerindicator.R$array: int freq_entries_5
+com.viewpagerindicator.R$array: int freq_values
+com.viewpagerindicator.R$array: int hours_entries
+com.viewpagerindicator.R$array: int hours_values
+com.viewpagerindicator.R$array: int minutes_entries
+com.viewpagerindicator.R$array: int minutes_values
+com.viewpagerindicator.R$array: int notify_entries
+com.viewpagerindicator.R$array: int notify_values
+com.viewpagerindicator.R$array: int travel_mode_entries
+com.viewpagerindicator.R$array: int travel_mode_values
+com.viewpagerindicator.R$attr: int adSize
+com.viewpagerindicator.R$attr: int adUnitId
+com.viewpagerindicator.R$attr: int centered
+com.viewpagerindicator.R$attr: int clipPadding
+com.viewpagerindicator.R$attr: int fillColor
+com.viewpagerindicator.R$attr: int footerColor
+com.viewpagerindicator.R$attr: int footerIndicatorHeight
+com.viewpagerindicator.R$attr: int footerIndicatorStyle
+com.viewpagerindicator.R$attr: int footerIndicatorUnderlinePadding
+com.viewpagerindicator.R$attr: int footerLineHeight
+com.viewpagerindicator.R$attr: int footerPadding
+com.viewpagerindicator.R$attr: int orientation
+com.viewpagerindicator.R$attr: int pageColor
+com.viewpagerindicator.R$attr: int radius
+com.viewpagerindicator.R$attr: int selectedBold
+com.viewpagerindicator.R$attr: int selectedColor
+com.viewpagerindicator.R$attr: int snap
+com.viewpagerindicator.R$attr: int strokeColor
+com.viewpagerindicator.R$attr: int strokeWidth
+com.viewpagerindicator.R$attr: int textColor
+com.viewpagerindicator.R$attr: int textSize
+com.viewpagerindicator.R$attr: int titlePadding
+com.viewpagerindicator.R$attr: int topPadding
+com.viewpagerindicator.R$attr: int vpiCirclePageIndicatorStyle
+com.viewpagerindicator.R$attr: int vpiTabPageIndicatorStyle
+com.viewpagerindicator.R$attr: int vpiTabTextStyle
+com.viewpagerindicator.R$attr: int vpiTitlePageIndicatorStyle
+com.viewpagerindicator.R$bool: int default_avoid_highways
+com.viewpagerindicator.R$bool: int default_avoid_tolls
+com.viewpagerindicator.R$bool: int default_circle_indicator_centered
+com.viewpagerindicator.R$bool: int default_circle_indicator_snap
+com.viewpagerindicator.R$bool: int default_insistent
+com.viewpagerindicator.R$bool: int default_neverlate_enabled
+com.viewpagerindicator.R$bool: int default_only_marked_locations
+com.viewpagerindicator.R$bool: int default_title_indicator_selected_bold
+com.viewpagerindicator.R$bool: int default_tos_accepted
+com.viewpagerindicator.R$bool: int default_vibrate
+com.viewpagerindicator.R$bool: int default_warn_no_location
+com.viewpagerindicator.R$color: int black
+com.viewpagerindicator.R$color: int blue
+com.viewpagerindicator.R$color: int blue_electric
+com.viewpagerindicator.R$color: int blue_light
+com.viewpagerindicator.R$color: int default_circle_indicator_fill_color
+com.viewpagerindicator.R$color: int default_circle_indicator_page_color
+com.viewpagerindicator.R$color: int default_circle_indicator_stroke_color
+com.viewpagerindicator.R$color: int default_title_indicator_footer_color
+com.viewpagerindicator.R$color: int default_title_indicator_selected_color
+com.viewpagerindicator.R$color: int default_title_indicator_text_color
+com.viewpagerindicator.R$color: int edit_event_separator
+com.viewpagerindicator.R$color: int event_info_label_color
+com.viewpagerindicator.R$color: int grey_dark
+com.viewpagerindicator.R$color: int grey_light
+com.viewpagerindicator.R$color: int red_dark
+com.viewpagerindicator.R$color: int vpi__background_holo_dark
+com.viewpagerindicator.R$color: int vpi__background_holo_light
+com.viewpagerindicator.R$color: int vpi__bright_foreground_disabled_holo_dark
+com.viewpagerindicator.R$color: int vpi__bright_foreground_disabled_holo_light
+com.viewpagerindicator.R$color: int vpi__bright_foreground_holo_dark
+com.viewpagerindicator.R$color: int vpi__bright_foreground_holo_light
+com.viewpagerindicator.R$color: int vpi__bright_foreground_inverse_holo_dark
+com.viewpagerindicator.R$color: int vpi__bright_foreground_inverse_holo_light
+com.viewpagerindicator.R$color: int vpi__dark_theme
+com.viewpagerindicator.R$color: int vpi__light_theme
+com.viewpagerindicator.R$color: int white
+com.viewpagerindicator.R$dimen: int default_circle_indicator_radius
+com.viewpagerindicator.R$dimen: int default_circle_indicator_stroke_width
+com.viewpagerindicator.R$dimen: int default_title_indicator_clip_padding
+com.viewpagerindicator.R$dimen: int default_title_indicator_footer_indicator_height
+com.viewpagerindicator.R$dimen: int default_title_indicator_footer_indicator_underline_padding
+com.viewpagerindicator.R$dimen: int default_title_indicator_footer_line_height
+com.viewpagerindicator.R$dimen: int default_title_indicator_footer_padding
+com.viewpagerindicator.R$dimen: int default_title_indicator_text_size
+com.viewpagerindicator.R$dimen: int default_title_indicator_title_padding
+com.viewpagerindicator.R$dimen: int default_title_indicator_top_padding
+com.viewpagerindicator.R$drawable: int btn_default_disabled_focused_holo_dark
+com.viewpagerindicator.R$drawable: int btn_default_disabled_holo_dark
+com.viewpagerindicator.R$drawable: int btn_default_focused_holo_dark
+com.viewpagerindicator.R$drawable: int btn_default_green
+com.viewpagerindicator.R$drawable: int btn_default_green_normal
+com.viewpagerindicator.R$drawable: int btn_default_holo_dark
+com.viewpagerindicator.R$drawable: int btn_default_normal_holo_dark
+com.viewpagerindicator.R$drawable: int btn_default_pressed_holo_dark
+com.viewpagerindicator.R$drawable: int event_border
+com.viewpagerindicator.R$drawable: int event_shadow_bottom
+com.viewpagerindicator.R$drawable: int event_shadow_top
+com.viewpagerindicator.R$drawable: int event_tab
+com.viewpagerindicator.R$drawable: int flag_blue
+com.viewpagerindicator.R$drawable: int flag_red
+com.viewpagerindicator.R$drawable: int ic_launcher_rabbit3
+com.viewpagerindicator.R$drawable: int ic_menu_add
+com.viewpagerindicator.R$drawable: int ic_menu_help
+com.viewpagerindicator.R$drawable: int ic_menu_my_calendar
+com.viewpagerindicator.R$drawable: int ic_menu_preferences
+com.viewpagerindicator.R$drawable: int ic_menu_share
+com.viewpagerindicator.R$drawable: int ic_stat_notify_rabbit2
+com.viewpagerindicator.R$drawable: int ic_stat_notify_rabbit3
+com.viewpagerindicator.R$drawable: int main_logo
+com.viewpagerindicator.R$drawable: int vpi__tab_indicator
+com.viewpagerindicator.R$drawable: int vpi__tab_selected_focused_holo
+com.viewpagerindicator.R$drawable: int vpi__tab_selected_holo
+com.viewpagerindicator.R$drawable: int vpi__tab_selected_pressed_holo
+com.viewpagerindicator.R$drawable: int vpi__tab_unselected_focused_holo
+com.viewpagerindicator.R$drawable: int vpi__tab_unselected_holo
+com.viewpagerindicator.R$drawable: int vpi__tab_unselected_pressed_holo
+com.viewpagerindicator.R$id: int BANNER
+com.viewpagerindicator.R$id: int IAB_BANNER
+com.viewpagerindicator.R$id: int IAB_LEADERBOARD
+com.viewpagerindicator.R$id: int IAB_MRECT
+com.viewpagerindicator.R$id: int ad_view
+com.viewpagerindicator.R$id: int back_button
+com.viewpagerindicator.R$id: int btn_configure
+com.viewpagerindicator.R$id: int btn_create_event
+com.viewpagerindicator.R$id: int btn_enable
+com.viewpagerindicator.R$id: int btn_quick_tour
+com.viewpagerindicator.R$id: int btn_register
+com.viewpagerindicator.R$id: int btn_share
+com.viewpagerindicator.R$id: int checkbox
+com.viewpagerindicator.R$id: int copyright_text
+com.viewpagerindicator.R$id: int decline_text
+com.viewpagerindicator.R$id: int departure_window
+com.viewpagerindicator.R$id: int dismiss_button
+com.viewpagerindicator.R$id: int email
+com.viewpagerindicator.R$id: int event_location
+com.viewpagerindicator.R$id: int event_time
+com.viewpagerindicator.R$id: int event_title
+com.viewpagerindicator.R$id: int first_name
+com.viewpagerindicator.R$id: int horizontal
+com.viewpagerindicator.R$id: int icon
+com.viewpagerindicator.R$id: int indicator
+com.viewpagerindicator.R$id: int last_name
+com.viewpagerindicator.R$id: int list_view
+com.viewpagerindicator.R$id: int location
+com.viewpagerindicator.R$id: int logo
+com.viewpagerindicator.R$id: int mapview
+com.viewpagerindicator.R$id: int none
+com.viewpagerindicator.R$id: int pager
+com.viewpagerindicator.R$id: int pr_app_version
+com.viewpagerindicator.R$id: int pr_eula
+com.viewpagerindicator.R$id: int pr_privacy
+com.viewpagerindicator.R$id: int pr_send_feedback
+com.viewpagerindicator.R$id: int pr_settings_instructions
+com.viewpagerindicator.R$id: int pr_website
+com.viewpagerindicator.R$id: int pref_marked_locations
+com.viewpagerindicator.R$id: int privacy_link
+com.viewpagerindicator.R$id: int qt_finish_button
+com.viewpagerindicator.R$id: int reg_copy
+com.viewpagerindicator.R$id: int reset_ad_helper_button
+com.viewpagerindicator.R$id: int reset_alert_list_button
+com.viewpagerindicator.R$id: int settings_button
+com.viewpagerindicator.R$id: int snooze_button
+com.viewpagerindicator.R$id: int summary
+com.viewpagerindicator.R$id: int test_button
+com.viewpagerindicator.R$id: int text
+com.viewpagerindicator.R$id: int title
+com.viewpagerindicator.R$id: int traffic_button
+com.viewpagerindicator.R$id: int travel_time
+com.viewpagerindicator.R$id: int triangle
+com.viewpagerindicator.R$id: int tv_skip_tour
+com.viewpagerindicator.R$id: int underline
+com.viewpagerindicator.R$id: int vertical
+com.viewpagerindicator.R$id: int vertical_separator
+com.viewpagerindicator.R$id: int vertical_stripe
+com.viewpagerindicator.R$id: int view_switcher
+com.viewpagerindicator.R$id: int warning_text
+com.viewpagerindicator.R$id: int where_row
+com.viewpagerindicator.R$id: int widget_frame
+com.viewpagerindicator.R$id: int zip_code
+com.viewpagerindicator.R$integer: int default_circle_indicator_orientation
+com.viewpagerindicator.R$integer: int default_title_indicator_footer_indicator_style
+com.viewpagerindicator.R$integer: int whats_new_version
+com.viewpagerindicator.R$layout: int alert_list_view
+com.viewpagerindicator.R$layout: int departure_window_layout
+com.viewpagerindicator.R$layout: int event_list_item
+com.viewpagerindicator.R$layout: int launcher
+com.viewpagerindicator.R$layout: int launcher_buttons
+com.viewpagerindicator.R$layout: int launcher_logo_enable
+com.viewpagerindicator.R$layout: int preference
+com.viewpagerindicator.R$layout: int preference_widget_checkbox
+com.viewpagerindicator.R$layout: int qt_page_0
+com.viewpagerindicator.R$layout: int qt_page_1
+com.viewpagerindicator.R$layout: int qt_page_2
+com.viewpagerindicator.R$layout: int qt_page_3
+com.viewpagerindicator.R$layout: int qt_page_4
+com.viewpagerindicator.R$layout: int qt_page_5
+com.viewpagerindicator.R$layout: int quick_tour
+com.viewpagerindicator.R$layout: int registration_form
+com.viewpagerindicator.R$layout: int test_activity
+com.viewpagerindicator.R$layout: int traffic_view_layout
+com.viewpagerindicator.R$layout: int vpi__tab
+com.viewpagerindicator.R$layout: int warning_dialog
+com.viewpagerindicator.R$layout: int whats_new_test
+com.viewpagerindicator.R$string: int admob_id
+com.viewpagerindicator.R$string: int advance_warning_title
+com.viewpagerindicator.R$string: int alerts_contract_authority
+com.viewpagerindicator.R$string: int app_name
+com.viewpagerindicator.R$string: int app_title
+com.viewpagerindicator.R$string: int app_version
+com.viewpagerindicator.R$string: int away_text
+com.viewpagerindicator.R$string: int base_task
+com.viewpagerindicator.R$string: int beta_code
+com.viewpagerindicator.R$string: int beta_code_hint
+com.viewpagerindicator.R$string: int birthdate
+com.viewpagerindicator.R$string: int btn_birthdate_text
+com.viewpagerindicator.R$string: int btn_configure_text
+com.viewpagerindicator.R$string: int btn_create_event_text
+com.viewpagerindicator.R$string: int btn_enable_text
+com.viewpagerindicator.R$string: int btn_quick_tour_text
+com.viewpagerindicator.R$string: int btn_share_text
+com.viewpagerindicator.R$string: int btn_video_tour_text
+com.viewpagerindicator.R$string: int content_description_logo
+com.viewpagerindicator.R$string: int content_text
+com.viewpagerindicator.R$string: int content_title
+com.viewpagerindicator.R$string: int create_event
+com.viewpagerindicator.R$string: int decline_text
+com.viewpagerindicator.R$string: int default_advance_warning
+com.viewpagerindicator.R$string: int default_copyright_text
+com.viewpagerindicator.R$string: int default_departure_window
+com.viewpagerindicator.R$string: int default_early_arrival
+com.viewpagerindicator.R$string: int default_event_location
+com.viewpagerindicator.R$string: int default_event_time
+com.viewpagerindicator.R$string: int default_event_title
+com.viewpagerindicator.R$string: int default_location_freq
+com.viewpagerindicator.R$string: int default_lookahead_window
+com.viewpagerindicator.R$string: int default_notification_method
+com.viewpagerindicator.R$string: int default_snooze_duration
+com.viewpagerindicator.R$string: int default_travel_mode
+com.viewpagerindicator.R$string: int default_travel_time
+com.viewpagerindicator.R$string: int default_traveltime_freq
+com.viewpagerindicator.R$string: int departure_time
+com.viewpagerindicator.R$string: int dialog_decline_btn_no
+com.viewpagerindicator.R$string: int dialog_decline_btn_yes
+com.viewpagerindicator.R$string: int dialog_decline_message
+com.viewpagerindicator.R$string: int dialog_decline_title
+com.viewpagerindicator.R$string: int dialog_incomplete_btn_ok
+com.viewpagerindicator.R$string: int dialog_incomplete_message
+com.viewpagerindicator.R$string: int dialog_incomplete_title
+com.viewpagerindicator.R$string: int dialog_thanks_btn_ok
+com.viewpagerindicator.R$string: int dialog_thanks_message
+com.viewpagerindicator.R$string: int dialog_thanks_title
+com.viewpagerindicator.R$string: int dismiss_all_button_text
+com.viewpagerindicator.R$string: int dismiss_button_text
+com.viewpagerindicator.R$string: int dlg_coming_soon_msg
+com.viewpagerindicator.R$string: int dlg_coming_soon_title
+com.viewpagerindicator.R$string: int dlg_first_time_msg
+com.viewpagerindicator.R$string: int dlg_first_time_title
+com.viewpagerindicator.R$string: int dlg_qt_msg
+com.viewpagerindicator.R$string: int dlg_qt_title
+com.viewpagerindicator.R$string: int email
+com.viewpagerindicator.R$string: int email_hint
+com.viewpagerindicator.R$string: int eula_accept
+com.viewpagerindicator.R$string: int eula_refuse
+com.viewpagerindicator.R$string: int eula_text
+com.viewpagerindicator.R$string: int eula_title
+com.viewpagerindicator.R$string: int feedback_address
+com.viewpagerindicator.R$string: int feedback_menu_title
+com.viewpagerindicator.R$string: int feedback_subject
+com.viewpagerindicator.R$string: int female
+com.viewpagerindicator.R$string: int first_name
+com.viewpagerindicator.R$string: int first_name_hint
+com.viewpagerindicator.R$string: int gender
+com.viewpagerindicator.R$string: int last_name
+com.viewpagerindicator.R$string: int last_name_hint
+com.viewpagerindicator.R$string: int loading_text
+com.viewpagerindicator.R$string: int male
+com.viewpagerindicator.R$string: int maps_data
+com.viewpagerindicator.R$string: int minutes_early
+com.viewpagerindicator.R$string: int more_text
+com.viewpagerindicator.R$string: int no
+com.viewpagerindicator.R$string: int no_code
+com.viewpagerindicator.R$string: int ok
+com.viewpagerindicator.R$string: int on_time
+com.viewpagerindicator.R$string: int pr_marked_events_summary_off
+com.viewpagerindicator.R$string: int pr_marked_events_summary_on
+com.viewpagerindicator.R$string: int pr_marked_events_title
+com.viewpagerindicator.R$string: int privacy_link_text
+com.viewpagerindicator.R$string: int privacy_title
+com.viewpagerindicator.R$string: int qt_enable_header
+com.viewpagerindicator.R$string: int qt_enable_message_1
+com.viewpagerindicator.R$string: int qt_enable_message_2
+com.viewpagerindicator.R$string: int qt_final_header
+com.viewpagerindicator.R$string: int qt_final_message_1
+com.viewpagerindicator.R$string: int qt_final_message_2
+com.viewpagerindicator.R$string: int qt_finish_button
+com.viewpagerindicator.R$string: int qt_intro_header
+com.viewpagerindicator.R$string: int qt_intro_message
+com.viewpagerindicator.R$string: int qt_marked_header
+com.viewpagerindicator.R$string: int qt_marked_message_1
+com.viewpagerindicator.R$string: int qt_marked_message_2
+com.viewpagerindicator.R$string: int qt_sample_location
+com.viewpagerindicator.R$string: int qt_searchable_header
+com.viewpagerindicator.R$string: int qt_searchable_message_1
+com.viewpagerindicator.R$string: int qt_searchable_message_2
+com.viewpagerindicator.R$string: int qt_skip_tour
+com.viewpagerindicator.R$string: int qt_traffic_header
+com.viewpagerindicator.R$string: int qt_traffic_message_1
+com.viewpagerindicator.R$string: int qt_traffic_message_2
+com.viewpagerindicator.R$string: int qt_where
+com.viewpagerindicator.R$string: int reg_copy_default
+com.viewpagerindicator.R$string: int reg_form_title
+com.viewpagerindicator.R$string: int register
+com.viewpagerindicator.R$string: int reset_ad_helper_button_text
+com.viewpagerindicator.R$string: int reset_alert_list_button_text
+com.viewpagerindicator.R$string: int send_feedback
+com.viewpagerindicator.R$string: int send_feedback_title
+com.viewpagerindicator.R$string: int settings_button_text
+com.viewpagerindicator.R$string: int settings_instructions
+com.viewpagerindicator.R$string: int settings_instructions_title
+com.viewpagerindicator.R$string: int share_menu_title
+com.viewpagerindicator.R$string: int share_message
+com.viewpagerindicator.R$string: int share_subject
+com.viewpagerindicator.R$string: int signup_copy
+com.viewpagerindicator.R$string: int snooze_all_button_text
+com.viewpagerindicator.R$string: int snooze_button_text
+com.viewpagerindicator.R$string: int test_button_text
+com.viewpagerindicator.R$string: int test_text
+com.viewpagerindicator.R$string: int ticker_text
+com.viewpagerindicator.R$string: int traffic_button_text
+com.viewpagerindicator.R$string: int unit_minutes
+com.viewpagerindicator.R$string: int untitled_event
+com.viewpagerindicator.R$string: int version_name
+com.viewpagerindicator.R$string: int warning_text
+com.viewpagerindicator.R$string: int website_title
+com.viewpagerindicator.R$string: int whats_new_message
+com.viewpagerindicator.R$string: int whats_new_title
+com.viewpagerindicator.R$string: int yes
+com.viewpagerindicator.R$string: int zip_code
+com.viewpagerindicator.R$string: int zip_code_hint
+com.viewpagerindicator.R$style: int ButtonBar
+com.viewpagerindicator.R$style: int EditEventSeparator
+com.viewpagerindicator.R$style: int GenderButton
+com.viewpagerindicator.R$style: int LargeBlackText
+com.viewpagerindicator.R$style: int LauncherButton
+com.viewpagerindicator.R$style: int MediumBlackText
+com.viewpagerindicator.R$style: int QuickTourHeader
+com.viewpagerindicator.R$style: int QuickTourHeaderPadded
+com.viewpagerindicator.R$style: int QuickTourMessage
+com.viewpagerindicator.R$style: int QuickTourMessagePadded
+com.viewpagerindicator.R$style: int QuickTourPage
+com.viewpagerindicator.R$style: int QuickTourPageNoPad
+com.viewpagerindicator.R$style: int RegEditText
+com.viewpagerindicator.R$style: int RegLabelFont
+com.viewpagerindicator.R$style: int SettingsInstructions
+com.viewpagerindicator.R$style: int SmallBlackText
+com.viewpagerindicator.R$style: int TextAppearance_EditEvent
+com.viewpagerindicator.R$style: int TextAppearance_EditEvent_Value
+com.viewpagerindicator.R$style: int TextAppearance_TabPageIndicator
+com.viewpagerindicator.R$style: int Theme_PageIndicatorDefaults
+com.viewpagerindicator.R$style: int Widget
+com.viewpagerindicator.R$style: int Widget_CirclePageIndicator
+com.viewpagerindicator.R$style: int Widget_TabPageIndicator
+com.viewpagerindicator.R$style: int Widget_TabPageIndicator_Text
+com.viewpagerindicator.R$style: int Widget_TitlePageIndicator
+com.viewpagerindicator.R$styleable: int[] CirclePageIndicator
+com.viewpagerindicator.R$styleable: int CirclePageIndicator_centered
+com.viewpagerindicator.R$styleable: int CirclePageIndicator_fillColor
+com.viewpagerindicator.R$styleable: int CirclePageIndicator_orientation
+com.viewpagerindicator.R$styleable: int CirclePageIndicator_pageColor
+com.viewpagerindicator.R$styleable: int CirclePageIndicator_radius
+com.viewpagerindicator.R$styleable: int CirclePageIndicator_snap
+com.viewpagerindicator.R$styleable: int CirclePageIndicator_strokeColor
+com.viewpagerindicator.R$styleable: int CirclePageIndicator_strokeWidth
+com.viewpagerindicator.R$styleable: int[] TitlePageIndicator
+com.viewpagerindicator.R$styleable: int TitlePageIndicator_clipPadding
+com.viewpagerindicator.R$styleable: int TitlePageIndicator_footerColor
+com.viewpagerindicator.R$styleable: int TitlePageIndicator_footerIndicatorHeight
+com.viewpagerindicator.R$styleable: int TitlePageIndicator_footerIndicatorStyle
+com.viewpagerindicator.R$styleable: int TitlePageIndicator_footerIndicatorUnderlinePadding
+com.viewpagerindicator.R$styleable: int TitlePageIndicator_footerLineHeight
+com.viewpagerindicator.R$styleable: int TitlePageIndicator_footerPadding
+com.viewpagerindicator.R$styleable: int TitlePageIndicator_selectedBold
+com.viewpagerindicator.R$styleable: int TitlePageIndicator_selectedColor
+com.viewpagerindicator.R$styleable: int TitlePageIndicator_textColor
+com.viewpagerindicator.R$styleable: int TitlePageIndicator_textSize
+com.viewpagerindicator.R$styleable: int TitlePageIndicator_titlePadding
+com.viewpagerindicator.R$styleable: int TitlePageIndicator_topPadding
+com.viewpagerindicator.R$styleable: int[] ViewPagerIndicator
+com.viewpagerindicator.R$styleable: int ViewPagerIndicator_vpiCirclePageIndicatorStyle
+com.viewpagerindicator.R$styleable: int ViewPagerIndicator_vpiTabPageIndicatorStyle
+com.viewpagerindicator.R$styleable: int ViewPagerIndicator_vpiTabTextStyle
+com.viewpagerindicator.R$styleable: int ViewPagerIndicator_vpiTitlePageIndicatorStyle
+com.viewpagerindicator.R$styleable: int[] com_google_ads_AdView
+com.viewpagerindicator.R$styleable: int com_google_ads_AdView_adSize
+com.viewpagerindicator.R$styleable: int com_google_ads_AdView_adUnitId
+com.viewpagerindicator.R$xml: int settings
 com.viewpagerindicator.TabPageIndicator
 com.viewpagerindicator.TabPageIndicator: TabPageIndicator(android.content.Context)
 com.viewpagerindicator.TabPageIndicator: TabPageIndicator(android.content.Context,android.util.AttributeSet)
+com.viewpagerindicator.TabPageIndicator: void setViewPager(android.support.v4.view.ViewPager)
+com.viewpagerindicator.TabPageIndicator: void setViewPager(android.support.v4.view.ViewPager,int)
+com.viewpagerindicator.TabPageIndicator: void setCurrentItem(int)
+com.viewpagerindicator.TabPageIndicator: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
 com.viewpagerindicator.TabPageIndicator$TabView
 com.viewpagerindicator.TabPageIndicator$TabView: TabPageIndicator$TabView(android.content.Context,android.util.AttributeSet)
 com.viewpagerindicator.TitlePageIndicator
 com.viewpagerindicator.TitlePageIndicator: TitlePageIndicator(android.content.Context)
 com.viewpagerindicator.TitlePageIndicator: TitlePageIndicator(android.content.Context,android.util.AttributeSet)
 com.viewpagerindicator.TitlePageIndicator: TitlePageIndicator(android.content.Context,android.util.AttributeSet,int)
+com.viewpagerindicator.TitlePageIndicator: void setFooterColor(int)
+com.viewpagerindicator.TitlePageIndicator: void setFooterLineHeight(float)
+com.viewpagerindicator.TitlePageIndicator: void setFooterIndicatorHeight(float)
+com.viewpagerindicator.TitlePageIndicator: void setFooterIndicatorPadding(float)
+com.viewpagerindicator.TitlePageIndicator: void setFooterIndicatorStyle(com.viewpagerindicator.TitlePageIndicator$IndicatorStyle)
+com.viewpagerindicator.TitlePageIndicator: void setSelectedColor(int)
+com.viewpagerindicator.TitlePageIndicator: void setSelectedBold(boolean)
+com.viewpagerindicator.TitlePageIndicator: void setTextColor(int)
+com.viewpagerindicator.TitlePageIndicator: void setTextSize(float)
+com.viewpagerindicator.TitlePageIndicator: void setTitlePadding(float)
+com.viewpagerindicator.TitlePageIndicator: void setTopPadding(float)
+com.viewpagerindicator.TitlePageIndicator: void setClipPadding(float)
+com.viewpagerindicator.TitlePageIndicator: void setTypeface(android.graphics.Typeface)
+com.viewpagerindicator.TitlePageIndicator: void setViewPager(android.support.v4.view.ViewPager)
+com.viewpagerindicator.TitlePageIndicator: void setViewPager(android.support.v4.view.ViewPager,int)
+com.viewpagerindicator.TitlePageIndicator: void setOnCenterItemClickListener(com.viewpagerindicator.TitlePageIndicator$OnCenterItemClickListener)
+com.viewpagerindicator.TitlePageIndicator: void setCurrentItem(int)
+com.viewpagerindicator.TitlePageIndicator: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
 com.viewpagerindicator.TitlePageIndicator$IndicatorStyle: com.viewpagerindicator.TitlePageIndicator$IndicatorStyle[] values()
 com.viewpagerindicator.TitlePageIndicator$IndicatorStyle: com.viewpagerindicator.TitlePageIndicator$IndicatorStyle valueOf(java.lang.String)
 com.viewpagerindicator.TitlePageIndicator$SavedState
