@@ -800,37 +800,25 @@ com.madhackerdesigns.neverbelate.ui.LauncherActivity:
 com.madhackerdesigns.neverbelate.ui.MapOverlay:
     35:37:public void clearOverlays()
 com.madhackerdesigns.neverbelate.ui.Registration:
-    private java.lang.String email
-    private static final java.lang.String BETA_CODE
-    private static final java.lang.String BIRTHDATE
-    private static final java.lang.String GENDER
+    private static final java.lang.String COUNTRY_CODE
+    private static final java.lang.String EMAIL
     private static final java.lang.String FIRST_NAME
     private static final java.lang.String LAST_NAME
-    private static final java.lang.String PROMO_CODE
     private static final java.lang.String REGISTERED
     private static final java.lang.String ZIP_CODE
-    protected static final int GENDER_MALE
-    protected static final int GENDER_FEMALE
-    protected static final int GENDER_UNKNOWN
     private static final java.lang.String REGISTRATION_DATA
-    86:86:protected java.lang.String getBetaCode()
-    93:94:protected void setBetaCode(java.lang.String)
-    100:100:protected long getBirthdate()
-    114:115:public void setEmail(java.lang.String)
-    121:121:public java.lang.String getEmail()
-    128:128:protected int getGender()
-    142:142:protected java.lang.String getFirstName()
-    156:156:protected java.lang.String getLastName()
-    170:170:protected java.lang.String getPromoCode()
-    177:178:protected void setPromoCode(java.lang.String)
-    184:184:protected int getZipCode()
+    33:33:protected java.lang.String getCountryCode()
+    40:41:protected void setCountryCode(java.lang.String)
+    47:47:protected java.lang.String getEmail()
+    61:61:protected java.lang.String getFirstName()
+    75:75:protected java.lang.String getLastName()
+    89:89:protected boolean isRegistered()
+    96:97:protected void setRegistered(boolean)
+    103:103:protected java.lang.String getZipCode()
 com.madhackerdesigns.neverbelate.ui.RegistrationForm:
-    private android.widget.Button mBirthdateButton
-    private static final int DIALOG_DATE
     private static final int DIALOG_DECLINE
     private static final int DIALOG_INCOMPLETE
     private static final int DIALOG_THANKS
-    137:139:private void updateBirthdateButton()
 com.madhackerdesigns.neverbelate.ui.UserLocationOverlay:
     private static final java.lang.String TOAST_MESSAGE
 com.madhackerdesigns.neverbelate.ui.WarningDialog:
@@ -1094,14 +1082,14 @@ com.viewpagerindicator.R$dimen:
 com.viewpagerindicator.R$drawable
 com.viewpagerindicator.R$id
 com.viewpagerindicator.R$integer:
-    444:444:public R$integer()
+    445:445:public R$integer()
 com.viewpagerindicator.R$layout:
-    449:449:public R$layout()
+    450:450:public R$layout()
 com.viewpagerindicator.R$string
 com.viewpagerindicator.R$style:
-    636:636:public R$style()
+    640:640:public R$style()
 com.viewpagerindicator.R$styleable:
-    668:668:public R$styleable()
+    672:672:public R$styleable()
 com.viewpagerindicator.R$xml
 com.viewpagerindicator.TitlePageIndicator:
     private static final float SELECTION_FADE_PERCENTAGE

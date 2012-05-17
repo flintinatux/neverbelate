@@ -34,7 +34,7 @@
 	<string name="share_subject">Check out NeverBeLate™ for Android!</string>
     
 <!-- Strings for Test Activity -->
-    <string name="reset_ad_helper_button_text">Reset AdHelper values</string>
+    <string name="btn_reg_form_text">Registration form</string>
     <string name="reset_alert_list_button_text">Reset alert list</string>
     <string name="settings_button_text">Configure NeverBeLate™ settings</string>
     <string name="test_text">Click the button below to test the app:</string>

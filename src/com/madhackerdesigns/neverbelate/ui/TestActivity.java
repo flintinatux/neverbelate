@@ -76,12 +76,12 @@ public class TestActivity extends Activity implements ServiceCommander {
 		});
 		
 		// Setup the Reset AdHelper button
-		Button resetAdHelperButton = (Button) findViewById(R.id.reset_ad_helper_button);
-		resetAdHelperButton.setOnClickListener(new OnClickListener() {
+		Button btnRegForm = (Button) findViewById(R.id.btn_reg_form);
+		btnRegForm.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
 				// Reset the AdHelper values
-				mAdHelper.initFirstTimeUser();
+				startActivity(new Intent(getApplicationContext(), RegistrationForm.class));
 			}
 			
 		});

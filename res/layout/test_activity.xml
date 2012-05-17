@@ -33,10 +33,10 @@
 		android:text="@string/reset_alert_list_button_text" />
 
 	<Button
-		android:id="@+id/reset_ad_helper_button"
+		android:id="@+id/btn_reg_form"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:padding="20dip"
-		android:text="@string/reset_ad_helper_button_text" />
+		android:text="@string/btn_reg_form_text" />
 
 </LinearLayout>

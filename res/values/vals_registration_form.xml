@@ -5,7 +5,7 @@
 	<string name="beta_code_hint">ABCD1234</string>
 	<string name="birthdate">Birthdate</string>
 	<string name="btn_birthdate_text">Click to select date</string>
-	<string name="btn_opt-in_text">Also register for the biweekly Mad Hacker Newsletter</string>
+	<string name="btn_optin_text">Also register for the biweekly Mad Hacker Newsletter</string>
 	<string name="country">Country</string>
 	<string name="country_prompt">Select your country</string>
 	<string name="decline_text">I\'ll do it later.</string>

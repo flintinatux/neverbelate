@@ -16,7 +16,7 @@
 		android:text="@string/reg_copy_default"
 		android:textSize="12sp" />
 		
-	<com.madhackerdesigns.neverbelate.ui.EdgeScrollView 
+	<ScrollView 
 	    android:background="@color/white"
 		android:layout_height="0dp"
 		android:layout_weight="1"
@@ -71,6 +71,7 @@
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
 					android:prompt="@string/country_prompt"
+					android:text="United States"
 					android:textSize="14sp"
 					style="@android:style/Widget.Spinner" />
 			</TableRow>
@@ -87,16 +88,16 @@
 			</TableRow>
 			
 <!-- 			<CheckBox -->
-<!-- 			    android:id="@+id/btn_opt-in" -->
+<!-- 			    android:id="@+id/btn_optin" -->
 <!-- 			    android:columns="2" -->
 <!-- 			    android:layout_height="wrap_content" -->
 <!-- 			    android:layout_width="wrap_content" -->
-<!-- 			    android:text="@string/btn_opt-in_text" -->
+<!-- 			    android:text="@string/btn_optin_text" -->
 <!-- 			    android:textColor="@color/black" -->
 <!-- 			    android:textSize="12sp" /> -->
 		</TableLayout>
 	
-	</com.madhackerdesigns.neverbelate.ui.EdgeScrollView>
+	</ScrollView>
 	
 	<TextView
 		android:background="@color/white"

@@ -1,8 +1,25 @@
-/**
- * 
- */
+/*
+* Copyright (C) 2007 The Android Open Source Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+
 package com.madhackerdesigns.neverbelate.ui;
 
+import java.util.regex.Pattern;
+
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -29,6 +46,18 @@ public class RegistrationForm extends Activity {
 	private static final int DIALOG_DECLINE = 0;
     private static final int DIALOG_INCOMPLETE = 1;
 	private static final int DIALOG_THANKS = 2;
+	
+	// Email regex pattern (borrowed from Android API 8+)
+	public static final Pattern EMAIL_PATTERN
+	        = Pattern.compile(
+	            "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
+	            "\\@" +
+	            "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+	            "(" +
+	            "\\." +
+	            "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+	            ")+"
+	        );
     
 	/* (non-Javadoc)
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
@@ -42,6 +71,18 @@ public class RegistrationForm extends Activity {
 		// Initialize the Registration data
 		mRegistration = new Registration(getApplicationContext());
 		
+		// Pre-pop user's email address
+		String userEmail = "";
+		Account[] accounts = AccountManager.get(this).getAccounts();
+		for (Account account : accounts) {
+		    if (EMAIL_PATTERN.matcher(account.name).matches()) {
+		        // Just go ahead and use the first match
+		    	userEmail = account.name;
+		    	break;
+		    }
+		}
+		((TextView) findViewById(R.id.email)).setText(userEmail);
+		
 		// Set the behavior of the country "spinner"
 		Button btnCountry = (Button) findViewById(R.id.btn_country);
 		btnCountry.setOnClickListener(new OnClickListener() {
@@ -51,6 +92,9 @@ public class RegistrationForm extends Activity {
 			}
 			
 		});
+		
+		// TODO: Reverse geocode the user's location
+		
 		
 		// Set the OnClick behavior of the decline text
 		TextView declineText = (TextView) findViewById(R.id.decline_text);

@@ -179,9 +179,11 @@ com.madhackerdesigns.neverbelate.R$id: int IAB_MRECT
 com.madhackerdesigns.neverbelate.R$id: int ad_view
 com.madhackerdesigns.neverbelate.R$id: int back_button
 com.madhackerdesigns.neverbelate.R$id: int btn_configure
+com.madhackerdesigns.neverbelate.R$id: int btn_country
 com.madhackerdesigns.neverbelate.R$id: int btn_create_event
 com.madhackerdesigns.neverbelate.R$id: int btn_enable
 com.madhackerdesigns.neverbelate.R$id: int btn_quick_tour
+com.madhackerdesigns.neverbelate.R$id: int btn_reg_form
 com.madhackerdesigns.neverbelate.R$id: int btn_register
 com.madhackerdesigns.neverbelate.R$id: int btn_share
 com.madhackerdesigns.neverbelate.R$id: int checkbox
@@ -214,7 +216,6 @@ com.madhackerdesigns.neverbelate.R$id: int pref_marked_locations
 com.madhackerdesigns.neverbelate.R$id: int privacy_link
 com.madhackerdesigns.neverbelate.R$id: int qt_finish_button
 com.madhackerdesigns.neverbelate.R$id: int reg_copy
-com.madhackerdesigns.neverbelate.R$id: int reset_ad_helper_button
 com.madhackerdesigns.neverbelate.R$id: int reset_alert_list_button
 com.madhackerdesigns.neverbelate.R$id: int settings_button
 com.madhackerdesigns.neverbelate.R$id: int snooze_button
@@ -274,12 +275,16 @@ com.madhackerdesigns.neverbelate.R$string: int btn_birthdate_text
 com.madhackerdesigns.neverbelate.R$string: int btn_configure_text
 com.madhackerdesigns.neverbelate.R$string: int btn_create_event_text
 com.madhackerdesigns.neverbelate.R$string: int btn_enable_text
+com.madhackerdesigns.neverbelate.R$string: int btn_optin_text
 com.madhackerdesigns.neverbelate.R$string: int btn_quick_tour_text
+com.madhackerdesigns.neverbelate.R$string: int btn_reg_form_text
 com.madhackerdesigns.neverbelate.R$string: int btn_share_text
 com.madhackerdesigns.neverbelate.R$string: int btn_video_tour_text
 com.madhackerdesigns.neverbelate.R$string: int content_description_logo
 com.madhackerdesigns.neverbelate.R$string: int content_text
 com.madhackerdesigns.neverbelate.R$string: int content_title
+com.madhackerdesigns.neverbelate.R$string: int country
+com.madhackerdesigns.neverbelate.R$string: int country_prompt
 com.madhackerdesigns.neverbelate.R$string: int create_event
 com.madhackerdesigns.neverbelate.R$string: int decline_text
 com.madhackerdesigns.neverbelate.R$string: int default_advance_warning
@@ -339,6 +344,8 @@ com.madhackerdesigns.neverbelate.R$string: int no
 com.madhackerdesigns.neverbelate.R$string: int no_code
 com.madhackerdesigns.neverbelate.R$string: int ok
 com.madhackerdesigns.neverbelate.R$string: int on_time
+com.madhackerdesigns.neverbelate.R$string: int postal_code
+com.madhackerdesigns.neverbelate.R$string: int postal_code_hint
 com.madhackerdesigns.neverbelate.R$string: int pr_marked_events_summary_off
 com.madhackerdesigns.neverbelate.R$string: int pr_marked_events_summary_on
 com.madhackerdesigns.neverbelate.R$string: int pr_marked_events_title
@@ -368,7 +375,6 @@ com.madhackerdesigns.neverbelate.R$string: int qt_where
 com.madhackerdesigns.neverbelate.R$string: int reg_copy_default
 com.madhackerdesigns.neverbelate.R$string: int reg_form_title
 com.madhackerdesigns.neverbelate.R$string: int register
-com.madhackerdesigns.neverbelate.R$string: int reset_ad_helper_button_text
 com.madhackerdesigns.neverbelate.R$string: int reset_alert_list_button_text
 com.madhackerdesigns.neverbelate.R$string: int send_feedback
 com.madhackerdesigns.neverbelate.R$string: int send_feedback_title
@@ -393,8 +399,6 @@ com.madhackerdesigns.neverbelate.R$string: int website_title
 com.madhackerdesigns.neverbelate.R$string: int whats_new_message
 com.madhackerdesigns.neverbelate.R$string: int whats_new_title
 com.madhackerdesigns.neverbelate.R$string: int yes
-com.madhackerdesigns.neverbelate.R$string: int zip_code
-com.madhackerdesigns.neverbelate.R$string: int zip_code_hint
 com.madhackerdesigns.neverbelate.R$style: int ButtonBar
 com.madhackerdesigns.neverbelate.R$style: int EditEventSeparator
 com.madhackerdesigns.neverbelate.R$style: int GenderButton
@@ -704,9 +708,11 @@ com.viewpagerindicator.R$id: int IAB_MRECT
 com.viewpagerindicator.R$id: int ad_view
 com.viewpagerindicator.R$id: int back_button
 com.viewpagerindicator.R$id: int btn_configure
+com.viewpagerindicator.R$id: int btn_country
 com.viewpagerindicator.R$id: int btn_create_event
 com.viewpagerindicator.R$id: int btn_enable
 com.viewpagerindicator.R$id: int btn_quick_tour
+com.viewpagerindicator.R$id: int btn_reg_form
 com.viewpagerindicator.R$id: int btn_register
 com.viewpagerindicator.R$id: int btn_share
 com.viewpagerindicator.R$id: int checkbox
@@ -739,7 +745,6 @@ com.viewpagerindicator.R$id: int pref_marked_locations
 com.viewpagerindicator.R$id: int privacy_link
 com.viewpagerindicator.R$id: int qt_finish_button
 com.viewpagerindicator.R$id: int reg_copy
-com.viewpagerindicator.R$id: int reset_ad_helper_button
 com.viewpagerindicator.R$id: int reset_alert_list_button
 com.viewpagerindicator.R$id: int settings_button
 com.viewpagerindicator.R$id: int snooze_button
@@ -799,12 +804,16 @@ com.viewpagerindicator.R$string: int btn_birthdate_text
 com.viewpagerindicator.R$string: int btn_configure_text
 com.viewpagerindicator.R$string: int btn_create_event_text
 com.viewpagerindicator.R$string: int btn_enable_text
+com.viewpagerindicator.R$string: int btn_optin_text
 com.viewpagerindicator.R$string: int btn_quick_tour_text
+com.viewpagerindicator.R$string: int btn_reg_form_text
 com.viewpagerindicator.R$string: int btn_share_text
 com.viewpagerindicator.R$string: int btn_video_tour_text
 com.viewpagerindicator.R$string: int content_description_logo
 com.viewpagerindicator.R$string: int content_text
 com.viewpagerindicator.R$string: int content_title
+com.viewpagerindicator.R$string: int country
+com.viewpagerindicator.R$string: int country_prompt
 com.viewpagerindicator.R$string: int create_event
 com.viewpagerindicator.R$string: int decline_text
 com.viewpagerindicator.R$string: int default_advance_warning
@@ -864,6 +873,8 @@ com.viewpagerindicator.R$string: int no
 com.viewpagerindicator.R$string: int no_code
 com.viewpagerindicator.R$string: int ok
 com.viewpagerindicator.R$string: int on_time
+com.viewpagerindicator.R$string: int postal_code
+com.viewpagerindicator.R$string: int postal_code_hint
 com.viewpagerindicator.R$string: int pr_marked_events_summary_off
 com.viewpagerindicator.R$string: int pr_marked_events_summary_on
 com.viewpagerindicator.R$string: int pr_marked_events_title
@@ -893,7 +904,6 @@ com.viewpagerindicator.R$string: int qt_where
 com.viewpagerindicator.R$string: int reg_copy_default
 com.viewpagerindicator.R$string: int reg_form_title
 com.viewpagerindicator.R$string: int register
-com.viewpagerindicator.R$string: int reset_ad_helper_button_text
 com.viewpagerindicator.R$string: int reset_alert_list_button_text
 com.viewpagerindicator.R$string: int send_feedback
 com.viewpagerindicator.R$string: int send_feedback_title
@@ -918,8 +928,6 @@ com.viewpagerindicator.R$string: int website_title
 com.viewpagerindicator.R$string: int whats_new_message
 com.viewpagerindicator.R$string: int whats_new_title
 com.viewpagerindicator.R$string: int yes
-com.viewpagerindicator.R$string: int zip_code
-com.viewpagerindicator.R$string: int zip_code_hint
 com.viewpagerindicator.R$style: int ButtonBar
 com.viewpagerindicator.R$style: int EditEventSeparator
 com.viewpagerindicator.R$style: int GenderButton
