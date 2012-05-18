@@ -29,6 +29,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.Location;
 import android.location.LocationManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -99,25 +100,8 @@ public class RegistrationForm extends Activity {
 			
 		});
 		
-		// TODO: Reverse geocode the user's location
-		LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-		List<String> providers = lm.getAllProviders();
-		Location loc = null;
-		for (String provider : providers) {
-			// Just roll through location providers until we get one
-			loc = lm.getLastKnownLocation(provider);
-			if (loc != null) { break; }
-		}
-		try {
-			GeoCodeResult result = (new GeoCoder()).reverseGeoCode(loc.getLatitude(), loc.getLongitude());
-			// TODO: Set country code if available
-			// TODO: Disable zip code field if zip code not used in that country
-			((TextView) findViewById(R.id.zip_code)).setText(result.getZipCode());
-		} catch (Exception e) {
-			// Fail quietly
-			e.printStackTrace();
-			Logger.d("Prepop of country and zip codes failed.");
-		}
+		// Pre-pop the country code and zip code
+		(new PrepopZipCodeTask()).execute();
 		
 		// Set the OnClick behavior of the decline text
 		TextView declineText = (TextView) findViewById(R.id.decline_text);
@@ -229,6 +213,48 @@ public class RegistrationForm extends Activity {
 	    	return builder.create();
 	    }
 	    return null;
+	}
+	
+	private class PrepopZipCodeTask extends AsyncTask<Object, Object, GeoCodeResult> {
+
+		/* (non-Javadoc)
+		 * @see android.os.AsyncTask#doInBackground(Params[])
+		 */
+		@Override
+		protected GeoCodeResult doInBackground(Object... params) {
+			try {
+				// Reverse geocode the user's location
+				LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+				List<String> providers = lm.getAllProviders();
+				Location loc = null;
+				for (String provider : providers) {
+					// Just roll through location providers until we get one
+					loc = lm.getLastKnownLocation(provider);
+					if (loc != null) { break; }
+				}
+				return (new GeoCoder()).reverseGeoCode(loc.getLatitude(), loc.getLongitude());
+			} catch (Exception e) {
+				e.printStackTrace();
+				Logger.d("Prepop of country and zip codes failed.");
+				return null;
+			}
+		}
+
+		/* (non-Javadoc)
+		 * @see android.os.AsyncTask#onPostExecute(java.lang.Object)
+		 */
+		@Override
+		protected void onPostExecute(GeoCodeResult result) {
+			try {
+				// TODO: Set country code if available
+				// TODO: Disable zip code field if zip code not used in that country
+				((TextView) findViewById(R.id.zip_code)).setText(result.getZipCode());
+			} catch (Exception e) {
+				e.printStackTrace();
+				Logger.d("Prepop of country and zip codes failed.");
+			}
+		}
+		
 	}
 	
 	private boolean isEmpty (String s) {

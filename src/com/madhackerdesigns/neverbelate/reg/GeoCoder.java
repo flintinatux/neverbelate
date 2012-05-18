@@ -7,7 +7,7 @@ import com.madhackerdesigns.neverbelate.util.HttpRetriever;
 
 public class GeoCoder {
 	
-	private static final String YAHOO_API_BASE_URL = "http://where.yahooapis.com/geocode?q=%1$s,+%2$s&gflags=J&appid=[yourappidhere]";
+	private static final String YAHOO_API_BASE_URL = "http://where.yahooapis.com/geocode?q=%1$s,+%2$s&flags=J&gflags=R&appid=lt2qlf34";
 	
 	private HttpRetriever httpRetriever = new HttpRetriever();
 	
