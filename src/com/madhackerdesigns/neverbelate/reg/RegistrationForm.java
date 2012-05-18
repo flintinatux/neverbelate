@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.madhackerdesigns.neverbelate.ui;
+package com.madhackerdesigns.neverbelate.reg;
 
 import java.util.regex.Pattern;
 
@@ -32,6 +32,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.madhackerdesigns.neverbelate.R;
+import com.madhackerdesigns.neverbelate.ui.LauncherActivity;
 
 /**
  * @author flintinatux
@@ -120,11 +121,11 @@ public class RegistrationForm extends Activity {
 
 	private void registerUser() {
 		// Pull registration data from form
-		String firstName = (String) ((TextView) findViewById(R.id.first_name)).getText();
-		String lastName = (String) ((TextView) findViewById(R.id.last_name)).getText();
-		String email = (String) ((TextView) findViewById(R.id.email)).getText();
+		String firstName = (String) ((TextView) findViewById(R.id.first_name)).getText().toString();
+		String lastName = (String) ((TextView) findViewById(R.id.last_name)).getText().toString();
+		String email = (String) ((TextView) findViewById(R.id.email)).getText().toString();
 		// TODO: String countryCode
-		String zipCode = (String) ((TextView) findViewById(R.id.zip_code)).getText();
+		String zipCode = (String) ((TextView) findViewById(R.id.zip_code)).getText().toString();
 		
 		// Remind user to complete form if he didn't.
 		if ( 	isEmpty(firstName) || 

@@ -67,7 +67,7 @@
 <activity android:name="com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity" android:stateNotNeeded="true" android:excludeFromRecents="true" android:taskAffinity=""/>
 <activity android:name="com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity" android:configChanges="keyboardHidden" android:stateNotNeeded="true" android:excludeFromRecents="true" android:taskAffinity=""/>
 <activity android:name=".ui.QuickTourActivity" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
-<activity android:name=".ui.RegistrationForm"></activity>
+<activity android:name=".reg.RegistrationForm" android:theme="@android:style/Theme.NoTitleBar"></activity>
 </application>
     
 </manifest> 

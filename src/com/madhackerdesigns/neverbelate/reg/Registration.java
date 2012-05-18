@@ -1,4 +1,4 @@
-package com.madhackerdesigns.neverbelate.ui;
+package com.madhackerdesigns.neverbelate.reg;
 
 import android.content.Context;
 import android.content.SharedPreferences;

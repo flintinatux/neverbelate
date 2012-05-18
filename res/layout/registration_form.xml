@@ -14,10 +14,11 @@
 		android:layout_width="wrap_content"
 		android:padding="10dip"
 		android:text="@string/reg_copy_default"
-		android:textSize="12sp" />
+		android:textSize="14sp" />
 		
 	<ScrollView 
 	    android:background="@color/white"
+	    android:isScrollContainer="false"
 		android:layout_height="0dp"
 		android:layout_weight="1"
 		android:layout_width="fill_parent" >
@@ -35,7 +36,6 @@
 					android:text="@string/first_name" />
 				<EditText
 					android:id="@+id/first_name"
-					android:hint="@string/first_name_hint"
 					android:inputType="textPersonName"
 					style="@style/RegEditText" />
 			</TableRow>
@@ -46,7 +46,6 @@
 					android:text="@string/last_name" />
 				<EditText
 					android:id="@+id/last_name"
-					android:hint="@string/last_name_hint"
 					android:inputType="textPersonName"
 					style="@style/RegEditText" />
 			</TableRow>
@@ -57,7 +56,6 @@
 					android:text="@string/email" />
 				<EditText
 					android:id="@+id/email"
-					android:hint="@string/email_hint"
 					android:inputType="textEmailAddress"
 					style="@style/RegEditText" />
 			</TableRow>
@@ -83,7 +81,6 @@
 				<EditText
 					android:id="@+id/zip_code"
 					android:inputType="number"
-					android:hint="@string/postal_code_hint"
 					style="@style/RegEditText" />
 			</TableRow>
 			

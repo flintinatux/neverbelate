@@ -13,6 +13,7 @@ import android.widget.Button;
 
 import com.madhackerdesigns.neverbelate.R;
 import com.madhackerdesigns.neverbelate.provider.AlertsContract;
+import com.madhackerdesigns.neverbelate.reg.RegistrationForm;
 import com.madhackerdesigns.neverbelate.service.NeverBeLateService;
 import com.madhackerdesigns.neverbelate.service.ServiceCommander;
 import com.madhackerdesigns.neverbelate.settings.NeverBeLateSettings;

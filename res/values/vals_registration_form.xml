@@ -20,7 +20,7 @@
 	<string name="male">male</string>
 	<string name="no_code">(I don\'t have one...)</string>
 	<string name="privacy_link_text">Privacy Policy</string>
-	<string name="reg_copy_default">Thanks for downloading NeverBeLate™! Please register your copy of this app below before continuing.</string>
+	<string name="reg_copy_default">Thanks for downloading NeverBeLate™! Please register your copy of the app before continuing.</string>
 	<string name="register">Register now!</string>
 	<string name="reg_form_title">Register for NeverBeLate™</string>
 	<string name="signup_copy">Oops! Did you forget to signup for a beta account on the NeverBeLate™ 
@@ -33,18 +33,17 @@
 <!--DIALOG VALUES-->
 
 	<string name="dialog_decline_title">Wait!</string>
-	<string name="dialog_decline_message">Participation in the NeverBeLate™ beta program requires a completed
-		registration. If you leave the registration form now, you can still come back and complete it later
-		to unlock this beta version. Are you sure you want to leave now?</string>
-	<string name="dialog_decline_btn_no">No, I want to register now.</string>
-	<string name="dialog_decline_btn_yes">Yes, but I\'ll come back later.</string>
+	<string name="dialog_decline_message">You have not completed registering your copy of NeverBeLate™! Click 
+	    \"Continue\" below to finish the registration process.</string>
+	<string name="dialog_decline_btn_no">Continue</string>
+	<string name="dialog_decline_btn_yes">Cancel</string>
 	
 	<string name="dialog_incomplete_title">Oops!</string>
-	<string name="dialog_incomplete_message">All fields of the form must be complete to register for the 
-		NeverLate beta program.</string>
+	<string name="dialog_incomplete_message">Please complete all fields of the form to register your copy 
+	    of NeverBeLate™.</string>
 	<string name="dialog_incomplete_btn_ok">Go back</string>
 	
-	<string name="dialog_thanks_title">Thanks!</string>
+	<string name="dialog_thanks_title">Hey, thanks!</string>
 	<string name="dialog_thanks_message">You have successfully registered for the NeverBeLate™ beta program! 
 		You are now a part of an exclusive team dedicated to making the most out of NeverBeLate™\'s simple but
 		powerful features. Your thoughtful reviews and input will ensure that future users of this app will
