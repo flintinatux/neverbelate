@@ -310,12 +310,12 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 //					IAdManager adManager = AdManagerFactory.createInstance(getApplication());
 //					adManager.showAd();
 					// Initialize the Pontiflex Ad Manager
-					IAdManager adManager = AdManagerFactory.createInstance(getApplication());
-					// set registration mode to ad hoc, user can skip registration
-					adManager.setRegistrationRequired(false);
-					adManager.setRegistrationMode(IAdManager.RegistrationMode.RegistrationAdHoc);
-					// when you want to show registration dialog, invoke the startRegistrationActivity method on adManager
-					adManager.startRegistrationActivity();
+//					IAdManager adManager = AdManagerFactory.createInstance(getApplication());
+//					// set registration mode to ad hoc, user can skip registration
+//					adManager.setRegistrationRequired(false);
+//					adManager.setRegistrationMode(IAdManager.RegistrationMode.RegistrationAdHoc);
+//					// when you want to show registration dialog, invoke the startRegistrationActivity method on adManager
+//					adManager.startRegistrationActivity();
 				}
 				adHelper.setWarningDismissed(true);
 			}

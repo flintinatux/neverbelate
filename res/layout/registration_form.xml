@@ -68,19 +68,20 @@
 					android:id="@+id/btn_country"
 					android:layout_height="wrap_content"
 					android:layout_width="wrap_content"
-					android:prompt="@string/country_prompt"
-					android:text="United States"
+					android:text="@string/country_prompt"
 					android:textSize="14sp"
 					style="@android:style/Widget.Spinner" />
 			</TableRow>
 	
 			<TableRow>
 				<TextView
+					android:id="@+id/zip_code_label"
 					style="@style/RegLabelFont"
-					android:text="@string/postal_code" />
+					android:text="@string/zip_code" />
 				<EditText
 					android:id="@+id/zip_code"
 					android:inputType="number"
+					android:hint="@string/postal_code_hint"
 					style="@style/RegEditText" />
 			</TableRow>
 			

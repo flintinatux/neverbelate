@@ -29,6 +29,7 @@
 		beta account code. Click the button below to go directly to the signup page!</string>
 	<string name="postal_code">Postal code</string>
 	<string name="postal_code_hint">90210</string>
+	<string name="zip_code">Zip code</string>
 	
 <!--DIALOG VALUES-->
 
@@ -76,7 +77,7 @@
 		<item name="android:layout_width">wrap_content</item>
 		<item name="android:layout_marginRight">3dip</item>
 		<item name="android:padding">10dip</item>
-		<item name="android:textSize">14sp</item>
+		<item name="android:textSize">16sp</item>
 	</style>
 
 </resources>

@@ -27,6 +27,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.AsyncTask;
@@ -47,6 +48,9 @@ import com.madhackerdesigns.neverbelate.util.Logger;
 public class RegistrationForm extends Activity {
 
 	// Member fields for the Registration Form
+	private Button mBtnCountry;
+	private String mCountryCode;
+	private CountriesDB mDB;
 	private Registration mRegistration;
 	
 	// Unique dialog id's
@@ -75,8 +79,10 @@ public class RegistrationForm extends Activity {
 		setContentView(R.layout.registration_form);
 		setTitle(R.string.reg_form_title);
 		
-		// Initialize the Registration data
-		mRegistration = new Registration(getApplicationContext());
+		// Initialize the Registration and countries data
+		Context context = getApplicationContext();
+		mRegistration = new Registration(context);
+		mDB = new CountriesDB(context);
 		
 		// Pre-pop user's email address
 		String userEmail = "";
@@ -91,8 +97,8 @@ public class RegistrationForm extends Activity {
 		((TextView) findViewById(R.id.email)).setText(userEmail);
 		
 		// Set the behavior of the country "spinner"
-		Button btnCountry = (Button) findViewById(R.id.btn_country);
-		btnCountry.setOnClickListener(new OnClickListener() {
+		mBtnCountry = (Button) findViewById(R.id.btn_country);
+		mBtnCountry.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
 				// TODO: Show country select dialog and disable zipcode if needed
@@ -245,16 +251,38 @@ public class RegistrationForm extends Activity {
 		 */
 		@Override
 		protected void onPostExecute(GeoCodeResult result) {
+			Cursor c = null;
 			try {
-				// TODO: Set country code if available
-				// TODO: Disable zip code field if zip code not used in that country
-				((TextView) findViewById(R.id.zip_code)).setText(result.getZipCode());
+				// Set country code if available
+				mCountryCode = result.getCountryCode();
+				
+				// Find the country for that code
+				c = mDB.getCountryByCode(mCountryCode);
+				if (c.moveToFirst()) {
+					// Set the country name as the button text
+					mBtnCountry.setText(c.getString(CountriesDB.PROJ_NAME));
+					
+					TextView zipField = (TextView) findViewById(R.id.zip_code);
+					if (c.getInt(CountriesDB.PROJ_ZIP) == 1) {
+						// Change name of zip field if not in US
+						if (! mCountryCode.equals("US")) {
+							((TextView) findViewById(R.id.zip_code_label)).setText(R.string.postal_code);
+						}
+						// Set the zip code if needed and available
+						zipField.setText(result.getZipCode());
+					} else {
+						// Hide the zip field if not needed
+						zipField.setVisibility(View.GONE);
+					}
+				}
 			} catch (Exception e) {
 				e.printStackTrace();
 				Logger.d("Prepop of country and zip codes failed.");
+			} finally {
+				// Close cursor
+				c.close();
 			}
 		}
-		
 	}
 	
 	private boolean isEmpty (String s) {
