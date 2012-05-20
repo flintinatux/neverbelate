@@ -12,13 +12,15 @@ public class CountriesDB extends SQLiteAssetHelper {
 	private static final String DATABASE_NAME = "countries";
 	private static final int DATABASE_VERSION = 1;
 	
+	protected static final String ID = "_id";
 	protected static final String NAME = "name";
 	protected static final String CODE = "code";
 	protected static final String ZIP = "zip";
-	protected static final String[] PROJECTION = { NAME, CODE, ZIP };
-	protected static final int PROJ_NAME = 0;
-	protected static final int PROJ_CODE = 1;
-	protected static final int PROJ_ZIP = 2;
+	protected static final String[] PROJECTION = { ID, NAME, CODE, ZIP };
+	protected static final int PROJ_ID = 0;
+	protected static final int PROJ_NAME = 1;
+	protected static final int PROJ_CODE = 2;
+	protected static final int PROJ_ZIP = 3;
 
 	public CountriesDB(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);	
