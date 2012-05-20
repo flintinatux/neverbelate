@@ -298,14 +298,19 @@ public class RegistrationForm extends Activity {
 			// Set the country name as the button text
 			mBtnCountry.setText(c.getString(CountriesDB.PROJ_NAME));
 			
+			TextView zipLabel = (TextView) findViewById(R.id.zip_code_label);
+			TextView zipField = (TextView) findViewById(R.id.zip_code);
 			if (c.getInt(CountriesDB.PROJ_ZIP) == 1) {
 				// Change name of zip field if not in US
 				if (! mCountryCode.equals("US")) {
-					((TextView) findViewById(R.id.zip_code_label)).setText(R.string.postal_code);
+					zipLabel.setText(R.string.postal_code);
 				}
+				zipLabel.setVisibility(View.VISIBLE);
+				zipField.setVisibility(View.VISIBLE);
 			} else {
 				// Hide the zip field if not needed
-				((TextView) findViewById(R.id.zip_code)).setVisibility(View.GONE);
+				zipLabel.setVisibility(View.GONE);
+				zipField.setVisibility(View.GONE);
 			}
 		}
 		c.close();
