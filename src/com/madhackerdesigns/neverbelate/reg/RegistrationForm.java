@@ -184,14 +184,13 @@ public class RegistrationForm extends Activity {
 			mCountryCursor = mDB.getCountries();
 			builder.setTitle(R.string.country_prompt)
 				.setAdapter(
-					new CountryListAdapter(context, android.R.layout.simple_list_item_1, mCountryCursor, false), 
+					new CountryListAdapter(context, R.layout.country_list_item, mCountryCursor, false), 
 					new DialogInterface.OnClickListener() {
 
 						public void onClick(DialogInterface dialog, int which) {
 							Cursor c = mCountryCursor;
 							c.moveToPosition(which);
 							String code = c.getString(CountriesDB.PROJ_CODE);
-//							c.close();
 							setCountryCode(code);
 							dialog.cancel();
 						}
