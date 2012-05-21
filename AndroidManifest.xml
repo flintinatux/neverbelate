@@ -56,10 +56,6 @@
     </intent-filter>
 </activity>
 <activity android:name=".ui.LauncherActivity">
-    <intent-filter>
-        <action android:name="android.intent.action.MAIN"/>
-        <category android:name="android.intent.category.LAUNCHER"/>
-        </intent-filter>
         </activity>
 <receiver android:name=".service.WakefulServiceReceiver" android:process=":remote"/>
 <provider android:name=".provider.AlertsProvider" android:authorities="com.madhackerdesigns.neverbelate.provider.AlertsContract" android:exported="false" />
@@ -67,7 +63,12 @@
 <activity android:name="com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity" android:stateNotNeeded="true" android:excludeFromRecents="true" android:taskAffinity=""/>
 <activity android:name="com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity" android:configChanges="keyboardHidden" android:stateNotNeeded="true" android:excludeFromRecents="true" android:taskAffinity=""/>
 <activity android:name=".ui.QuickTourActivity" android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
-<activity android:name=".reg.RegistrationForm" android:theme="@android:style/Theme.NoTitleBar"></activity>
+<activity android:name=".reg.RegistrationForm" android:theme="@android:style/Theme.NoTitleBar">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+    </intent-filter>
+</activity>
 </application>
     
 </manifest> 

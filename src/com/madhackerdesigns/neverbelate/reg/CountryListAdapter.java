@@ -35,11 +35,9 @@ public class CountryListAdapter extends ResourceCursorAdapter {
 		
 		// Harvest the data from the cursor
 		String name = cursor.getString(CountriesDB.PROJ_NAME);
-		String code = cursor.getString(CountriesDB.PROJ_CODE);
 		
 		// Set the country name
 		holder.name.setText(name);
-		holder.code = code;
 	}
 
 	/* (non-Javadoc)
@@ -66,7 +64,6 @@ public class CountryListAdapter extends ResourceCursorAdapter {
 
 	protected static class ViewHolder {
 		TextView name;
-		String code;
 	}
 
 }

@@ -34,16 +34,14 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.madhackerdesigns.neverbelate.R;
-import com.madhackerdesigns.neverbelate.reg.CountryListAdapter.ViewHolder;
 import com.madhackerdesigns.neverbelate.ui.LauncherActivity;
 import com.madhackerdesigns.neverbelate.util.Logger;
+import com.pontiflex.mobile.webview.sdk.AdManagerFactory;
+import com.pontiflex.mobile.webview.sdk.IAdManager;
 
 /**
  * @author flintinatux
@@ -81,14 +79,21 @@ public class RegistrationForm extends Activity {
 	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.registration_form);
-		setTitle(R.string.reg_form_title);
-		
 		// Initialize the Registration and countries data
 		Context context = getApplicationContext();
 		mRegistration = new Registration(context);
 		mDB = new CountriesDB(context);
+		
+		// If already registered, send user on to LauncherActivity
+		if (mRegistration.isRegistered()) {
+			bypassRegistration();
+			return;
+		}
+		
+		// Initialize the activity
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.registration_form);
+		setTitle(R.string.reg_form_title);
 		
 		// Pre-pop user's email address
 		String userEmail = "";
@@ -106,6 +111,7 @@ public class RegistrationForm extends Activity {
 		mBtnCountry = (Button) findViewById(R.id.btn_country);
 		mBtnCountry.setOnClickListener(new OnClickListener() {
 
+			@SuppressWarnings("deprecation")
 			public void onClick(View v) {
 				// Show country select dialog
 				showDialog(DIALOG_COUNTRY);
@@ -120,6 +126,7 @@ public class RegistrationForm extends Activity {
 		TextView declineText = (TextView) findViewById(R.id.decline_text);
 		declineText.setOnClickListener(new OnClickListener() {
 
+			@SuppressWarnings("deprecation")
 			public void onClick(View v) {
 				showDialog(DIALOG_DECLINE);
 			}
@@ -138,19 +145,26 @@ public class RegistrationForm extends Activity {
 		
 	} 
 
+	private void bypassRegistration() {
+		Intent i = new Intent(getApplicationContext(), LauncherActivity.class);
+		startActivity(i);
+		RegistrationForm.this.finish();
+	}
+
+	@SuppressWarnings("deprecation")
 	private void registerUser() {
 		// Pull registration data from form
 		String firstName = (String) ((TextView) findViewById(R.id.first_name)).getText().toString();
 		String lastName = (String) ((TextView) findViewById(R.id.last_name)).getText().toString();
 		String email = (String) ((TextView) findViewById(R.id.email)).getText().toString();
-		// TODO: String countryCode
 		String zipCode = (String) ((TextView) findViewById(R.id.zip_code)).getText().toString();
 		
 		// Remind user to complete form if he didn't.
 		if ( 	isEmpty(firstName) || 
 				isEmpty(lastName) ||
 				isEmpty(email) ||
-				isEmpty(zipCode) ) {		// TODO: isEmpty(countryCode)
+				isEmpty(mCountryCode) ||
+				isEmpty(zipCode) ) {
 			
 			// Show reminder dialog and return.
 			showDialog(DIALOG_INCOMPLETE);
@@ -164,9 +178,20 @@ public class RegistrationForm extends Activity {
 		reg.setLastName(lastName);
 		reg.setEmail(email);
 		reg.setZipCode(zipCode);
-		// TODO: Add reg.setCountryCode(country)
+		reg.setCountryCode(mCountryCode);
+		reg.setRegistered(true);
 		
-		// TODO: Insert reg data into Pontiflex 
+		// Insert reg data into Pontiflex
+		// Initialize the Pontiflex Ad Manager
+		IAdManager adManager = AdManagerFactory.createInstance(getApplication());
+		// set registration mode to ad hoc, user can skip registration
+		adManager.setRegistrationRequired(false);
+		adManager.setRegistrationMode(IAdManager.RegistrationMode.RegistrationAdHoc);
+		// Write data into the Ad Manager registration storage
+		adManager.setRegistrationData("first_name", firstName);
+		adManager.setRegistrationData("last_name", lastName);
+		adManager.setRegistrationData("email", email);
+		adManager.setRegistrationData("postal_code", zipCode);
 		
 		// Then say thanks and pass them on to the main launcher screen
 		showDialog(DIALOG_THANKS);
@@ -204,7 +229,8 @@ public class RegistrationForm extends Activity {
 	    		.setPositiveButton(R.string.dialog_decline_btn_yes, new DialogInterface.OnClickListener() {
 					
 					public void onClick(DialogInterface dialog, int which) {
-						RegistrationForm.this.finish();
+						bypassRegistration();
+						dialog.cancel();
 					}
 					
 				})
@@ -231,13 +257,13 @@ public class RegistrationForm extends Activity {
 	    case DIALOG_THANKS:
 	    	// Thank the user for registering and pass them on to the main activity
 	    	builder.setTitle(R.string.dialog_thanks_title)
+	    		.setCancelable(false)
 	    		.setMessage(R.string.dialog_thanks_message)
 	    		.setNeutralButton(R.string.dialog_thanks_btn_ok, new DialogInterface.OnClickListener() {
 					
 					public void onClick(DialogInterface dialog, int which) {
-						Intent i = new Intent(getApplicationContext(), LauncherActivity.class);
-						startActivity(i);
-						RegistrationForm.this.finish();
+						bypassRegistration();
+						dialog.cancel();
 					}
 					
 				});
