@@ -51,8 +51,6 @@ import com.madhackerdesigns.neverbelate.settings.PreferenceHelper;
 import com.madhackerdesigns.neverbelate.ui.UserLocationOverlay.OnLocationChangedListener;
 import com.madhackerdesigns.neverbelate.util.AdHelper;
 import com.madhackerdesigns.neverbelate.util.Logger;
-import com.pontiflex.mobile.sdk.AdManagerFactory;
-import com.pontiflex.mobile.sdk.IAdManager;
 
 /**
  * @author flintinatux
@@ -75,7 +73,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		
 	// fields to hold shared preferences and ad stuff
 	private AdHelper mAdHelper;
-	private IAdManager mAdManager;
+//	private IAdManager mAdManager;
 	private boolean mAdJustShown = false;
 	private PreferenceHelper mPrefs;
 	
@@ -105,7 +103,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		// Load the preferences and Pontiflex IAdManager
 		Context applicationContext = getApplicationContext();
 		mAdHelper = new AdHelper(applicationContext);
-		mAdManager = AdManagerFactory.createInstance(getApplication());
+//		mAdManager = AdManagerFactory.createInstance(getApplication());
 		mPrefs = new PreferenceHelper(applicationContext);
 		
 		// Grab the view switcher, inflate and add the departure window and traffic views
@@ -388,7 +386,6 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	/**
 	 * 
 	 */
-	@SuppressWarnings("deprecation")
 	private void loadTrafficView() {
 		// Log a little
 		Logger.d(LOG_TAG, "Loading traffic view.");
@@ -467,17 +464,17 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		overlay.enableMyLocation();
 		overlay.enableCompass();
 		
-		// Load an interstitial ad if it's time
-		AdHelper adHelper = mAdHelper;
-		if (adHelper.isTimeToShowAd()) {
-			adHelper.setAdShown(true);
-			mAdJustShown = true;
-//			mAdManager.showAd();
-			mAdManager.startMultiOfferActivity();
-		} else {
+//		// Load an interstitial ad if it's time
+//		AdHelper adHelper = mAdHelper;
+//		if (adHelper.isTimeToShowAd()) {
+//			adHelper.setAdShown(true);
+//			mAdJustShown = true;
+////			mAdManager.showAd();
+//			mAdManager.startMultiOfferActivity();
+//		} else {
 			// Otherwise, switch to the traffic view
-			switchToTrafficView();
-		}
+		switchToTrafficView();
+//		}
 		
 	}
 	

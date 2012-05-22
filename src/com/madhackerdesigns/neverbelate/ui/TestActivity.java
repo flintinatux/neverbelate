@@ -16,10 +16,7 @@ import com.madhackerdesigns.neverbelate.provider.AlertsContract;
 import com.madhackerdesigns.neverbelate.reg.RegistrationForm;
 import com.madhackerdesigns.neverbelate.service.NeverBeLateService;
 import com.madhackerdesigns.neverbelate.service.ServiceCommander;
-import com.madhackerdesigns.neverbelate.settings.NeverBeLateSettings;
 import com.madhackerdesigns.neverbelate.util.AdHelper;
-import com.pontiflex.mobile.sdk.AdManagerFactory;
-import com.pontiflex.mobile.sdk.IAdManager;
 
 /**
  * @author flintinatux
@@ -27,8 +24,6 @@ import com.pontiflex.mobile.sdk.IAdManager;
  */
 public class TestActivity extends Activity implements ServiceCommander {
 
-	private AdHelper mAdHelper;
-	
 	/* (non-Javadoc)
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
 	 */
@@ -37,8 +32,7 @@ public class TestActivity extends Activity implements ServiceCommander {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.test_activity);
 		
-		// Load up a new AdHelper
-		mAdHelper = new AdHelper(getApplicationContext());
+		new AdHelper(getApplicationContext());
 		
 		// Grab the test button and add some action
 		Button testButton = (Button) findViewById(R.id.test_button);
@@ -66,16 +60,16 @@ public class TestActivity extends Activity implements ServiceCommander {
 			
 		});
 		
-		// Setup the Settings button
-		Button btnMultioffer = (Button) findViewById(R.id.btn_multioffer);
-		btnMultioffer.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View v) {
-				IAdManager adManager = AdManagerFactory.createInstance(getApplication());
-				adManager.startMultiOfferActivity();
-			}
-			
-		});
+//		// Setup the Settings button
+//		Button btnMultioffer = (Button) findViewById(R.id.btn_multioffer);
+//		btnMultioffer.setOnClickListener(new OnClickListener() {
+//
+//			public void onClick(View v) {
+//				IAdManager adManager = AdManagerFactory.createInstance(getApplication());
+//				adManager.startMultiOfferActivity();
+//			}
+//			
+//		});
 		
 		// Setup the Reset AdHelper button
 		Button btnRegForm = (Button) findViewById(R.id.btn_reg_form);

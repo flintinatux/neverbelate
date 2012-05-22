@@ -445,6 +445,7 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 		return alertIntent.setFlags(flags);
 	}
 	
+	@SuppressWarnings("deprecation")
 	private void notifyUser(boolean outLoud) {
 		// Cancel any existing notification first
 		mNotificationManager.cancel(NOTIFICATION_ID);

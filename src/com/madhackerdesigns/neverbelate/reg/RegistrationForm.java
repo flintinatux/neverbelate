@@ -32,6 +32,9 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.ContactsContract.CommonDataKinds.Email;
+import android.provider.ContactsContract.CommonDataKinds.StructuredName;
+import android.provider.ContactsContract.Data;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -40,8 +43,6 @@ import android.widget.TextView;
 import com.madhackerdesigns.neverbelate.R;
 import com.madhackerdesigns.neverbelate.ui.LauncherActivity;
 import com.madhackerdesigns.neverbelate.util.Logger;
-import com.pontiflex.mobile.sdk.AdManagerFactory;
-import com.pontiflex.mobile.sdk.IAdManager;
 
 /**
  * @author flintinatux
@@ -181,17 +182,17 @@ public class RegistrationForm extends Activity {
 		reg.setCountryCode(mCountryCode);
 		reg.setRegistered(true);
 		
-		// Insert reg data into Pontiflex
-		// Initialize the Pontiflex Ad Manager
-		IAdManager adManager = AdManagerFactory.createInstance(getApplication());
-		// set registration mode to ad hoc, user can skip registration
-		adManager.setRegistrationRequired(false);
-		adManager.setRegistrationMode(IAdManager.RegistrationMode.RegistrationAdHoc);
-		// Write data into the Ad Manager registration storage
-		adManager.setRegistrationData("first_name", firstName);
-		adManager.setRegistrationData("last_name", lastName);
-		adManager.setRegistrationData("email", email);
-		adManager.setRegistrationData("postal_code", zipCode);
+//		// Insert reg data into Pontiflex
+//		// Initialize the Pontiflex Ad Manager
+//		IAdManager adManager = AdManagerFactory.createInstance(getApplication());
+//		// set registration mode to ad hoc, user can skip registration
+//		adManager.setRegistrationRequired(false);
+//		adManager.setRegistrationMode(IAdManager.RegistrationMode.RegistrationAdHoc);
+//		// Write data into the Ad Manager registration storage
+//		adManager.setRegistrationData("first_name", firstName);
+//		adManager.setRegistrationData("last_name", lastName);
+//		adManager.setRegistrationData("email", email);
+//		adManager.setRegistrationData("postal_code", zipCode);
 		
 		// Then say thanks and pass them on to the main launcher screen
 		showDialog(DIALOG_THANKS);
@@ -272,11 +273,39 @@ public class RegistrationForm extends Activity {
 	    return null;
 	}
 	
+	private class PrepopNames extends AsyncTask<String, Object, NameResult> {
+
+		@Override
+		protected NameResult doInBackground(String... emails) {
+			NameResult result = new NameResult();
+			String[] projection = new String[] { Data._ID, Data.DISPLAY_NAME, 
+					StructuredName.GIVEN_NAME, StructuredName.FAMILY_NAME };
+			String selection = Email.ADDRESS + "=? AND " + Data.MIMETYPE + "=?";
+			String[] selectionArgs = new String[] { emails[0], Email.CONTENT_ITEM_TYPE };
+			Cursor c = getContentResolver().query(
+					Data.CONTENT_URI, 
+					projection, 
+					selection, 
+					selectionArgs, 
+					null);
+			if (c.moveToFirst()) {
+				result.displayName = c.getString(1);
+				result.givenName = c.getString(2);
+				result.familyName = c.getString(3);
+			}
+			return result;
+		}
+
+		@Override
+		protected void onPostExecute(NameResult result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+		}
+		
+	}
+	
 	private class PrepopZipCodeTask extends AsyncTask<Object, Object, GeoCodeResult> {
 
-		/* (non-Javadoc)
-		 * @see android.os.AsyncTask#doInBackground(Params[])
-		 */
 		@Override
 		protected GeoCodeResult doInBackground(Object... params) {
 			try {
@@ -297,9 +326,6 @@ public class RegistrationForm extends Activity {
 			}
 		}
 
-		/* (non-Javadoc)
-		 * @see android.os.AsyncTask#onPostExecute(java.lang.Object)
-		 */
 		@Override
 		protected void onPostExecute(GeoCodeResult result) {
 			try {
@@ -339,6 +365,12 @@ public class RegistrationForm extends Activity {
 			}
 		}
 		c.close();
+	}
+	
+	private class NameResult {
+		String displayName;
+		String givenName;
+		String familyName;
 	}
 	
 	private boolean isEmpty (String s) {
