@@ -34,7 +34,7 @@
 	<string name="share_subject">Check out NeverBeLate™ for Android!</string>
     
 <!-- Strings for Test Activity -->
-    <string name="btn_multioffer_text">Show multioffer ad</string>
+    <string name="btn_clear_reg_text">Clear stored registration</string>
     <string name="btn_reg_form_text">Registration form</string>
     <string name="reset_alert_list_button_text">Reset alert list</string>
     <string name="settings_button_text">Configure NeverBeLate™ settings</string>

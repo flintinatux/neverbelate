@@ -26,11 +26,11 @@
 		android:text="@string/reset_alert_list_button_text" />
 
 	<Button
-		android:id="@+id/btn_multioffer"
+		android:id="@+id/btn_clear_reg"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:padding="20dip"
-		android:text="@string/btn_multioffer_text" />
+		android:text="@string/btn_clear_reg_text" />
 		
 	<Button
 		android:id="@+id/btn_reg_form"

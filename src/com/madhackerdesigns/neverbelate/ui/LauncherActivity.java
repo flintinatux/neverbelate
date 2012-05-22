@@ -9,7 +9,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
@@ -44,14 +43,14 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 	// Static constants
 	private static final boolean ADMOB = true;
 	private static final String ADMOB_ID = "a14d952e8939105";
-	private static final int DLG_COMING_SOON = 0;
+//	private static final int DLG_COMING_SOON = 0;
 	private static final int DLG_FIRST_TIME = 1;
 	private static final int DLG_QUICK_TOUR = 2;
 	private static final int DLG_WHATS_NEW = 3;
 	private static final long FIVE_MINUTES = 5*60*1000;
 	private static final String KEY_AD_LAST_SHOWN = "app_state.ad_last_shown";
 	private static final String KEY_FIRST_TIME = "app_state.first_time";
-	private static final String KEY_QUICK_TOUR = "app_state.quick_tour";
+//	private static final String KEY_QUICK_TOUR = "app_state.quick_tour";
 	private static final String KEY_WHATS_NEW = "app_state.whats_new";
     private static final String LOG_TAG = "NeverBeLateService";
     private static final boolean PONTIFLEX = true;
@@ -66,22 +65,34 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 	/* (non-Javadoc)
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
 	 */
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {		
 		super.onCreate(savedInstanceState);
 		loadHelpers();
 		
 		// Show TOS and EULA for acceptance
-		Eula.show(this);
+//		Eula.show(this);
 		
 		// Set content view to launcher layout and load application resources
 		setContentView(R.layout.launcher);
+		
+		// Show What's New dialog or Quick Tour if time
+		int previous = mAppState.getInt(KEY_WHATS_NEW, 0);
+		int current = getResources().getInteger(R.integer.whats_new_version);
+		if (previous == 0) { 
+			Logger.d("Showing Quick Tour dialog");
+			showDialog(DLG_QUICK_TOUR);
+		} else if (previous < current) {
+			Logger.d("Showing Whats new dialog");
+			showDialog(DLG_WHATS_NEW);
+		}
+		mAppState.edit().putInt(KEY_WHATS_NEW, current).commit();
 		
 		// Setup the Enable checkbox
 		mEnableBtn = (CheckBox) findViewById(R.id.btn_enable);
 		mEnableBtn.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
-			@SuppressWarnings("deprecation")
 			public void onCheckedChanged(CompoundButton buttonView,
 					boolean isChecked) {
 				// Change the enabled state and enforce the change
@@ -183,82 +194,34 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		
 		switch (id) {
-		case DLG_COMING_SOON:
-			builder.setTitle(R.string.dlg_coming_soon_title)
-				   .setMessage(R.string.dlg_coming_soon_msg)
-			       .setCancelable(true)
-			       .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-			           public void onClick(DialogInterface dialog, int id) {
-			                dialog.cancel();
-			           }
-			       });
-			break;
 		case DLG_FIRST_TIME:
 			builder.setTitle(R.string.dlg_first_time_title)
 				   .setMessage(R.string.dlg_first_time_msg)
-			       .setCancelable(true)
+			       .setCancelable(false)
 			       .setPositiveButton(R.string.create_event, new DialogInterface.OnClickListener() {
 			           public void onClick(DialogInterface dialog, int id) {
 			        	   Intent intent = new Intent(Intent.ACTION_EDIT);
 			               intent.setType("vnd.android.cursor.item/event");
 			               startActivity(intent);
-			        	   dialog.cancel();
 			           }
 			       });
 			break;
 		case DLG_WHATS_NEW:
 			builder.setTitle(R.string.whats_new_title)
 				   .setMessage(R.string.whats_new_message)
-				   .setCancelable(true)
-				   .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-					
-						public void onClick(DialogInterface dialog, int which) {
-							// Store the new version of What's new as shown and dismiss dialog
-							int current = getResources().getInteger(R.integer.whats_new_version);
-							mAppState.edit().putInt(KEY_WHATS_NEW, current).commit();
-							dialog.cancel();
-						}
-					})
-					.setOnCancelListener(new OnCancelListener() {
-					
-						@SuppressWarnings("deprecation")
-						public void onCancel(DialogInterface dialog) {
-							// Check if the QuickTour has been viewed, and challenge if not
-							boolean seenQT = mAppState.getBoolean(KEY_QUICK_TOUR, false);
-							if (!seenQT) {
-								showDialog(DLG_QUICK_TOUR);
-							}
-						}
-						
-					});
+				   .setPositiveButton(R.string.ok, null);
 			break;
 		case DLG_QUICK_TOUR:
 			builder.setTitle(R.string.dlg_qt_title)
 				   .setMessage(R.string.dlg_qt_msg)
-				   .setCancelable(true)
 				   .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
 					
 						public void onClick(DialogInterface dialog, int which) {
-							// Mark QT as seen, and then start the QT activity
-							mAppState.edit().putBoolean(KEY_QUICK_TOUR, true).commit();
+							// Start the QT activity
 							startActivity(new Intent(LauncherActivity.this, QuickTourActivity.class));
 						}
 				   })
-				   .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
-						
-						public void onClick(DialogInterface dialog, int which) {
-							// Still mark as seen to not annoy the user
-							mAppState.edit().putBoolean(KEY_QUICK_TOUR, true).commit();
-						}
-				   })
-				   .setOnCancelListener(new OnCancelListener() {
-
-						public void onCancel(DialogInterface dialog) {
-							// Still mark as seen to not annoy the user
-							mAppState.edit().putBoolean(KEY_QUICK_TOUR, true).commit();
-						}
-					   
-				   });
+				   .setNegativeButton(R.string.no, null);
 		}
 		
 		return builder.create();
@@ -305,15 +268,8 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 					adHelper.setAdShown(true);
 					Logger.d("Showing Pontiflex registration form");
 					mAppState.edit().putLong(KEY_AD_LAST_SHOWN, now).commit();
-//					IAdManager adManager = AdManagerFactory.createInstance(getApplication());
-//					adManager.showAd();
-					// Initialize the Pontiflex Ad Manager
-//					IAdManager adManager = AdManagerFactory.createInstance(getApplication());
-//					// set registration mode to ad hoc, user can skip registration
-//					adManager.setRegistrationRequired(false);
-//					adManager.setRegistrationMode(IAdManager.RegistrationMode.RegistrationAdHoc);
-//					// when you want to show registration dialog, invoke the startRegistrationActivity method on adManager
-//					adManager.startRegistrationActivity();
+
+					// PLACEHOLDER: Can add a full screen ad here.
 				}
 				adHelper.setWarningDismissed(true);
 			}

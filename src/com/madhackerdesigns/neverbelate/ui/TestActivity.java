@@ -13,6 +13,7 @@ import android.widget.Button;
 
 import com.madhackerdesigns.neverbelate.R;
 import com.madhackerdesigns.neverbelate.provider.AlertsContract;
+import com.madhackerdesigns.neverbelate.reg.Registration;
 import com.madhackerdesigns.neverbelate.reg.RegistrationForm;
 import com.madhackerdesigns.neverbelate.service.NeverBeLateService;
 import com.madhackerdesigns.neverbelate.service.ServiceCommander;
@@ -43,7 +44,6 @@ public class TestActivity extends Activity implements ServiceCommander {
 				Context context = getApplicationContext();
 				Intent serviceIntent = new Intent(context, NeverBeLateService.class);
 				serviceIntent.putExtra(EXTRA_SERVICE_COMMAND, CHECK_TRAVEL_TIMES);
-//				NeverBeLateService.sendWakefulWork(context, serviceIntent);
 				startService(serviceIntent);
 			}
 			
@@ -60,16 +60,16 @@ public class TestActivity extends Activity implements ServiceCommander {
 			
 		});
 		
-//		// Setup the Settings button
-//		Button btnMultioffer = (Button) findViewById(R.id.btn_multioffer);
-//		btnMultioffer.setOnClickListener(new OnClickListener() {
-//
-//			public void onClick(View v) {
-//				IAdManager adManager = AdManagerFactory.createInstance(getApplication());
-//				adManager.startMultiOfferActivity();
-//			}
-//			
-//		});
+		// Setup the Clear registration button
+		Button btnMultioffer = (Button) findViewById(R.id.btn_clear_reg);
+		btnMultioffer.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				// Clear the stored registration values
+				(new Registration(getApplicationContext())).clearStoredRegistration();
+			}
+			
+		});
 		
 		// Setup the Reset AdHelper button
 		Button btnRegForm = (Button) findViewById(R.id.btn_reg_form);
@@ -81,10 +81,6 @@ public class TestActivity extends Activity implements ServiceCommander {
 			}
 			
 		});
-		
-		// Initialize the Pontiflex AdManager
-//		IAdManager adManager = AdManagerFactory.createInstance(getApplication());
-		
 		
 	}
 

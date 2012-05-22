@@ -26,7 +26,7 @@ public class Registration {
 		mSettings = applicationContext.getSharedPreferences(REGISTRATION_DATA, Context.MODE_PRIVATE);
 	}
 	
-	public void clearRegistration() {
+	public void clearStoredRegistration() {
 		this.setCountryCode("");
 		this.setEmail("");
 		this.setFirstName("");
