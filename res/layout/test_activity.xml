@@ -19,19 +19,19 @@
 		android:text="@string/test_button_text" />
 		
 	<Button
-		android:id="@+id/settings_button"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:padding="20dip"
-		android:text="@string/settings_button_text" />
-		
-	<Button
 		android:id="@+id/reset_alert_list_button"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:padding="20dip"
 		android:text="@string/reset_alert_list_button_text" />
 
+	<Button
+		android:id="@+id/btn_multioffer"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="20dip"
+		android:text="@string/btn_multioffer_text" />
+		
 	<Button
 		android:id="@+id/btn_reg_form"
 		android:layout_width="fill_parent"

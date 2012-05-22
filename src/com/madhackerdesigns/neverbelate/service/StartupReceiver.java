@@ -2,13 +2,13 @@ package com.madhackerdesigns.neverbelate.service;
 
 import java.util.Calendar;
 
-import com.madhackerdesigns.neverbelate.settings.PreferenceHelper;
-
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+
+import com.madhackerdesigns.neverbelate.settings.PreferenceHelper;
 
 public class StartupReceiver extends BroadcastReceiver {
 	

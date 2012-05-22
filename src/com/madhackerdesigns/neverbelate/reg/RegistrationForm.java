@@ -40,8 +40,8 @@ import android.widget.TextView;
 import com.madhackerdesigns.neverbelate.R;
 import com.madhackerdesigns.neverbelate.ui.LauncherActivity;
 import com.madhackerdesigns.neverbelate.util.Logger;
-import com.pontiflex.mobile.webview.sdk.AdManagerFactory;
-import com.pontiflex.mobile.webview.sdk.IAdManager;
+import com.pontiflex.mobile.sdk.AdManagerFactory;
+import com.pontiflex.mobile.sdk.IAdManager;
 
 /**
  * @author flintinatux

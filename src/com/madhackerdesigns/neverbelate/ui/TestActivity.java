@@ -18,6 +18,8 @@ import com.madhackerdesigns.neverbelate.service.NeverBeLateService;
 import com.madhackerdesigns.neverbelate.service.ServiceCommander;
 import com.madhackerdesigns.neverbelate.settings.NeverBeLateSettings;
 import com.madhackerdesigns.neverbelate.util.AdHelper;
+import com.pontiflex.mobile.sdk.AdManagerFactory;
+import com.pontiflex.mobile.sdk.IAdManager;
 
 /**
  * @author flintinatux
@@ -53,18 +55,6 @@ public class TestActivity extends Activity implements ServiceCommander {
 			
 		});
 		
-		// Setup the Settings button
-		Button settingsButton = (Button) findViewById(R.id.settings_button);
-		settingsButton.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View v) {
-				// Send user to the Settings menu
-				Intent intent = new Intent(getApplicationContext(), NeverBeLateSettings.class);
-	        	startActivity(intent);
-			}
-			
-		});
-		
 		// Setup the Reset alert list button
 		Button resetAlertListButton = (Button) findViewById(R.id.reset_alert_list_button);
 		resetAlertListButton.setOnClickListener(new OnClickListener() {
@@ -72,6 +62,17 @@ public class TestActivity extends Activity implements ServiceCommander {
 			public void onClick(View v) {
 				// Delete all AlertsProvider entries
 				getContentResolver().delete(AlertsContract.Alerts.CONTENT_URI, null, null);
+			}
+			
+		});
+		
+		// Setup the Settings button
+		Button btnMultioffer = (Button) findViewById(R.id.btn_multioffer);
+		btnMultioffer.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				IAdManager adManager = AdManagerFactory.createInstance(getApplication());
+				adManager.startMultiOfferActivity();
 			}
 			
 		});

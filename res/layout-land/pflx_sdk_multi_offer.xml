@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:fillViewport="true">
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="4dp">
+		<LinearLayout
+			style="@style/PontiflexLandscapePadding"
+			android:id="@+id/pflx_multi_offers_layout"
+			android:orientation="vertical"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="4dp">
+		</LinearLayout>
+		<include android:id="@+id/pflx_multi_privacy_policy"
+			layout="@layout/pflx_sdk_privacy_text"/>
+		<include android:id="@+id/footer"
+			layout="@layout/pflx_sdk_dialog_footer"/>
+	</LinearLayout>
+</ScrollView>

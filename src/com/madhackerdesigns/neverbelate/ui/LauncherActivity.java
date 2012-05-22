@@ -34,8 +34,6 @@ import com.madhackerdesigns.neverbelate.settings.NeverBeLateSettings;
 import com.madhackerdesigns.neverbelate.settings.PreferenceHelper;
 import com.madhackerdesigns.neverbelate.util.AdHelper;
 import com.madhackerdesigns.neverbelate.util.Logger;
-import com.pontiflex.mobile.webview.sdk.AdManagerFactory;
-import com.pontiflex.mobile.webview.sdk.IAdManager;
 
 /**
  * @author smccormack

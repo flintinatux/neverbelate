@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ 	android:layout_width="fill_parent"
+ 	android:layout_height="fill_parent">
+ 	<LinearLayout
+ 		style="@style/PontiflexLandscapePadding"
+		android:id="@+id/listview_layout"
+		android:layout_above="@+id/button_layout"
+	 	android:layout_width="fill_parent"
+	 	android:layout_height="wrap_content"
+		android:layout_alignParentTop="true">
+	 	<ListView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:choiceMode="singleChoice"
+			android:id="@id/android:list"/>
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:id="@id/android:empty"
+			android:gravity="center_vertical|center_horizontal"/>
+	</LinearLayout>
+	<LinearLayout
+		android:id="@id/button_layout"
+		style="@style/PontiflexLandscapePadding"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true">
+		<Button
+			android:id="@+id/pflx_policy_list_select_button"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"/>
+	</LinearLayout>
+</RelativeLayout>
