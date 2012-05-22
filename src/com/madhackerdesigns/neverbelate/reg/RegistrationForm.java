@@ -24,6 +24,7 @@ import android.accounts.AccountManager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -80,6 +81,8 @@ public class RegistrationForm extends Activity {
 	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
 		// Initialize the Registration and countries data
 		Context context = getApplicationContext();
 		mRegistration = new Registration(context);
@@ -92,7 +95,6 @@ public class RegistrationForm extends Activity {
 		}
 		
 		// Initialize the activity
-		super.onCreate(savedInstanceState);
 		setContentView(R.layout.registration_form);
 		setTitle(R.string.reg_form_title);
 		
@@ -107,6 +109,7 @@ public class RegistrationForm extends Activity {
 		    }
 		}
 		((TextView) findViewById(R.id.email)).setText(userEmail);
+		(new PrepopNames()).execute(userEmail);
 		
 		// Set the behavior of the country "spinner"
 		mBtnCountry = (Button) findViewById(R.id.btn_country);
@@ -277,29 +280,46 @@ public class RegistrationForm extends Activity {
 
 		@Override
 		protected NameResult doInBackground(String... emails) {
+			// Query for the user's name in the Contacts
 			NameResult result = new NameResult();
-			String[] projection = new String[] { Data._ID, Data.DISPLAY_NAME, 
-					StructuredName.GIVEN_NAME, StructuredName.FAMILY_NAME };
-			String selection = Email.ADDRESS + "=? AND " + Data.MIMETYPE + "=?";
-			String[] selectionArgs = new String[] { emails[0], Email.CONTENT_ITEM_TYPE };
-			Cursor c = getContentResolver().query(
+			ContentResolver cr = getContentResolver();
+			Cursor c = cr.query(
 					Data.CONTENT_URI, 
-					projection, 
-					selection, 
-					selectionArgs, 
+					new String[] { Data._ID, Data.DISPLAY_NAME }, 
+					Email.ADDRESS + "=? AND " + Data.MIMETYPE + "=?", 
+					new String[] { emails[0], Email.CONTENT_ITEM_TYPE }, 
 					null);
 			if (c.moveToFirst()) {
 				result.displayName = c.getString(1);
-				result.givenName = c.getString(2);
-				result.familyName = c.getString(3);
+				c.close();
+				c = cr.query(
+						Data.CONTENT_URI, 
+						new String[] { Data._ID, StructuredName.GIVEN_NAME, StructuredName.FAMILY_NAME }, 
+						StructuredName.DISPLAY_NAME + "=? AND " + Data.MIMETYPE + "=?", 
+						new String[] { result.displayName, StructuredName.CONTENT_ITEM_TYPE }, 
+						null);
+				if (c.moveToFirst()) {
+					result.givenName = c.getString(1);
+					result.familyName = c.getString(2);
+					c.close();
+				}
+				return result;
+			} else { 
+				return null;
 			}
-			return result;
+			
 		}
 
 		@Override
 		protected void onPostExecute(NameResult result) {
-			// TODO Auto-generated method stub
-			super.onPostExecute(result);
+			// Prepop the user's name
+			try {
+				((TextView) findViewById(R.id.first_name)).setText(result.givenName);
+				((TextView) findViewById(R.id.last_name)).setText(result.familyName);
+			} catch (Exception e) {
+				e.printStackTrace();
+				Logger.d("Pre-pop of user's first and last name failed.");
+			}
 		}
 		
 	}

@@ -25,6 +25,15 @@ public class Registration {
 		// Load the Registration values and editor 
 		mSettings = applicationContext.getSharedPreferences(REGISTRATION_DATA, Context.MODE_PRIVATE);
 	}
+	
+	public void clearRegistration() {
+		this.setCountryCode("");
+		this.setEmail("");
+		this.setFirstName("");
+		this.setLastName("");
+		this.setZipCode("");
+		this.setRegistered(false);
+	}
 
 	/**
 	 * @return the 2-letter country code
@@ -36,8 +45,8 @@ public class Registration {
 	/**
 	 * @param countryCode the 2-letter country code to set
 	 */
-	protected void setCountryCode(String countryCode) {
-		mSettings.edit().putString(COUNTRY_CODE, countryCode);
+	protected boolean setCountryCode(String countryCode) {
+		return mSettings.edit().putString(COUNTRY_CODE, countryCode).commit();
 	}
 
 	/**
@@ -50,8 +59,8 @@ public class Registration {
 	/**
 	 * @param email the email to set
 	 */
-	protected void setEmail(String email) {
-		mSettings.edit().putString(EMAIL, email);
+	protected boolean setEmail(String email) {
+		return mSettings.edit().putString(EMAIL, email).commit();
 	}
 
 	/**
@@ -64,8 +73,8 @@ public class Registration {
 	/**
 	 * @param firstName the firstName to set
 	 */
-	protected void setFirstName(String firstName) {
-		mSettings.edit().putString(FIRST_NAME, firstName);
+	protected boolean setFirstName(String firstName) {
+		return mSettings.edit().putString(FIRST_NAME, firstName).commit();
 	}
 
 	/**
@@ -78,8 +87,8 @@ public class Registration {
 	/**
 	 * @param lastName the lastName to set
 	 */
-	protected void setLastName(String lastName) {
-		mSettings.edit().putString(LAST_NAME, lastName);
+	protected boolean setLastName(String lastName) {
+		return mSettings.edit().putString(LAST_NAME, lastName).commit();
 	}
 
 	/**
@@ -92,8 +101,8 @@ public class Registration {
 	/**
 	 * @param registered true if registration is completed
 	 */
-	protected void setRegistered(boolean registered) {
-		mSettings.edit().putBoolean(REGISTERED, registered);
+	protected boolean setRegistered(boolean registered) {
+		return mSettings.edit().putBoolean(REGISTERED, registered).commit();
 	}
 
 	/**
@@ -106,8 +115,8 @@ public class Registration {
 	/**
 	 * @param zipCode the zipCode to set
 	 */
-	protected void setZipCode(String zipCode) {
-		mSettings.edit().putString(ZIP_CODE, zipCode);
+	protected boolean setZipCode(String zipCode) {
+		return mSettings.edit().putString(ZIP_CODE, zipCode).commit();
 	}
 	
 }
