@@ -16,6 +16,7 @@
 
 package com.madhackerdesigns.neverbelate.reg;
 
+import java.util.Date;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -86,12 +87,20 @@ public class RegistrationForm extends Activity {
 		// Initialize the Registration and countries data
 		Context context = getApplicationContext();
 		mRegistration = new Registration(context);
+		Registration reg = mRegistration;
 		mDB = new CountriesDB(context);
 		
-		// If already registered, send user on to LauncherActivity
-		if (mRegistration.isRegistered()) {
+		// Check for last register challenge
+		long lastChallenge = reg.getLastChallenge();
+		long now = new Date().getTime();
+		
+		// If already registered, or already asked today, send user on to LauncherActivity
+		if (reg.isRegistered() || now < (lastChallenge + 24*60*60*1000)) {
 			bypassRegistration();
 			return;
+		} else {
+			// Store now as the last challenge
+			reg.setLastChallenge(now);
 		}
 		
 		// Initialize the activity

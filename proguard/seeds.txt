@@ -178,6 +178,7 @@ com.madhackerdesigns.neverbelate.R$id: int IAB_LEADERBOARD
 com.madhackerdesigns.neverbelate.R$id: int IAB_MRECT
 com.madhackerdesigns.neverbelate.R$id: int ad_view
 com.madhackerdesigns.neverbelate.R$id: int back_button
+com.madhackerdesigns.neverbelate.R$id: int btn_clear_reg
 com.madhackerdesigns.neverbelate.R$id: int btn_configure
 com.madhackerdesigns.neverbelate.R$id: int btn_country
 com.madhackerdesigns.neverbelate.R$id: int btn_create_event
@@ -217,7 +218,6 @@ com.madhackerdesigns.neverbelate.R$id: int privacy_link
 com.madhackerdesigns.neverbelate.R$id: int qt_finish_button
 com.madhackerdesigns.neverbelate.R$id: int reg_copy
 com.madhackerdesigns.neverbelate.R$id: int reset_alert_list_button
-com.madhackerdesigns.neverbelate.R$id: int settings_button
 com.madhackerdesigns.neverbelate.R$id: int snooze_button
 com.madhackerdesigns.neverbelate.R$id: int summary
 com.madhackerdesigns.neverbelate.R$id: int test_button
@@ -236,10 +236,12 @@ com.madhackerdesigns.neverbelate.R$id: int warning_text
 com.madhackerdesigns.neverbelate.R$id: int where_row
 com.madhackerdesigns.neverbelate.R$id: int widget_frame
 com.madhackerdesigns.neverbelate.R$id: int zip_code
+com.madhackerdesigns.neverbelate.R$id: int zip_code_label
 com.madhackerdesigns.neverbelate.R$integer: int default_circle_indicator_orientation
 com.madhackerdesigns.neverbelate.R$integer: int default_title_indicator_footer_indicator_style
 com.madhackerdesigns.neverbelate.R$integer: int whats_new_version
 com.madhackerdesigns.neverbelate.R$layout: int alert_list_view
+com.madhackerdesigns.neverbelate.R$layout: int country_list_item
 com.madhackerdesigns.neverbelate.R$layout: int departure_window_layout
 com.madhackerdesigns.neverbelate.R$layout: int event_list_item
 com.madhackerdesigns.neverbelate.R$layout: int launcher
@@ -272,6 +274,7 @@ com.madhackerdesigns.neverbelate.R$string: int beta_code
 com.madhackerdesigns.neverbelate.R$string: int beta_code_hint
 com.madhackerdesigns.neverbelate.R$string: int birthdate
 com.madhackerdesigns.neverbelate.R$string: int btn_birthdate_text
+com.madhackerdesigns.neverbelate.R$string: int btn_clear_reg_text
 com.madhackerdesigns.neverbelate.R$string: int btn_configure_text
 com.madhackerdesigns.neverbelate.R$string: int btn_create_event_text
 com.madhackerdesigns.neverbelate.R$string: int btn_enable_text
@@ -384,7 +387,6 @@ com.madhackerdesigns.neverbelate.R$string: int settings_instructions_title
 com.madhackerdesigns.neverbelate.R$string: int share_menu_title
 com.madhackerdesigns.neverbelate.R$string: int share_message
 com.madhackerdesigns.neverbelate.R$string: int share_subject
-com.madhackerdesigns.neverbelate.R$string: int signup_copy
 com.madhackerdesigns.neverbelate.R$string: int snooze_all_button_text
 com.madhackerdesigns.neverbelate.R$string: int snooze_button_text
 com.madhackerdesigns.neverbelate.R$string: int test_button_text
@@ -399,6 +401,7 @@ com.madhackerdesigns.neverbelate.R$string: int website_title
 com.madhackerdesigns.neverbelate.R$string: int whats_new_message
 com.madhackerdesigns.neverbelate.R$string: int whats_new_title
 com.madhackerdesigns.neverbelate.R$string: int yes
+com.madhackerdesigns.neverbelate.R$string: int zip_code
 com.madhackerdesigns.neverbelate.R$style: int ButtonBar
 com.madhackerdesigns.neverbelate.R$style: int EditEventSeparator
 com.madhackerdesigns.neverbelate.R$style: int GenderButton
@@ -458,6 +461,7 @@ com.madhackerdesigns.neverbelate.R$styleable: int com_google_ads_AdView_adUnitId
 com.madhackerdesigns.neverbelate.R$xml: int settings
 com.madhackerdesigns.neverbelate.provider.AlertsContract
 com.madhackerdesigns.neverbelate.provider.AlertsProvider
+com.madhackerdesigns.neverbelate.reg.RegistrationForm
 com.madhackerdesigns.neverbelate.service.CalendarHelperBase
 com.madhackerdesigns.neverbelate.service.CalendarHelperICS
 com.madhackerdesigns.neverbelate.service.LocationReceiver
@@ -489,82 +493,11 @@ com.madhackerdesigns.neverbelate.ui.LauncherActivity
 com.madhackerdesigns.neverbelate.ui.MapOverlay
 com.madhackerdesigns.neverbelate.ui.QuickTourActivity
 com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment
-com.madhackerdesigns.neverbelate.ui.RegistrationForm
 com.madhackerdesigns.neverbelate.ui.TestActivity
 com.madhackerdesigns.neverbelate.ui.UserLocationOverlay
 com.madhackerdesigns.neverbelate.ui.WarningDialog
 com.madhackerdesigns.neverbelate.util.Logger
 com.madhackerdesigns.neverbelate.util.NetUtils
-com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment: com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment[] values()
-com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment: com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment valueOf(java.lang.String)
-com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode: com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode[] values()
-com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode: com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode valueOf(java.lang.String)
-com.pontiflex.mobile.webview.sdk.IPflexJSInterface
-com.pontiflex.mobile.webview.sdk.activities.BaseActivity
-com.pontiflex.mobile.webview.sdk.activities.MultiOfferActivity
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: PflexDeviceJSInterface(com.pontiflex.mobile.webview.sdk.activities.BaseActivity)
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: java.lang.String getDeviceData(java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: java.lang.String getAllDeviceData()
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: int getScreenOrientation()
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: int getScreenWidth()
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: int getScreenHeight()
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: int getScreenDensity()
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: int getScreenSize()
-com.pontiflex.mobile.webview.sdk.activities.PflexDeviceJSInterface: java.lang.String getDeviceConfig()
-com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: PflexJSInterface(com.pontiflex.mobile.webview.sdk.activities.BaseActivity,android.webkit.WebView)
-com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: void showKeyboard()
-com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: void finishActivity()
-com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: void logMessage(java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: boolean isOnline()
-com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: java.lang.String initializeData()
-com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: java.lang.String getAppInfoJsonContent()
-com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: java.lang.String getLocale()
-com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: void startProgressDialog()
-com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: void cancelProgressDialog()
-com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: java.lang.String getBasePath()
-com.pontiflex.mobile.webview.sdk.activities.PflexJSInterface: void asyncHttpRequest(java.lang.String,boolean,java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: PflexResourceJSInterface(com.pontiflex.mobile.webview.sdk.activities.BaseActivity)
-com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: java.lang.String getResourceData(java.lang.String,java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: void setResourceData(java.lang.String,java.lang.String,java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: java.lang.String getResourceContent(java.lang.String,java.lang.String,java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: void updateResource(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: void updateResourceCallback(java.lang.String,boolean,java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface: com.pontiflex.mobile.webview.sdk.activities.BaseActivity access$000(com.pontiflex.mobile.webview.sdk.activities.PflexResourceJSInterface)
-com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: PflexStorageJSInterface(com.pontiflex.mobile.webview.sdk.activities.BaseActivity,android.webkit.WebView)
-com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: boolean hasValidRegistrationData()
-com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: void addRegistrationData(java.lang.String,java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: void addAllRegistrationData(java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: java.lang.String getRegistrationData(java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: java.lang.String getAllRegistrationData()
-com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: void clearRegistrationData()
-com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: void saveState()
-com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: void clearState()
-com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: java.lang.String getItem(java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: void removeItem(java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: void setItem(java.lang.String,java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: java.lang.String getAdditionalData(java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexStorageJSInterface: void setAdditionalData(java.lang.String,java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: PflexVersionJSInterface(com.pontiflex.mobile.webview.sdk.activities.BaseActivity)
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getAppName()
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getAppVersionCode()
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getAppVersionName()
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getOsVersion()
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getUserAgent()
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getLocale()
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getPostalCode()
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: int getOsVersionCode()
-com.pontiflex.mobile.webview.sdk.activities.PflexVersionJSInterface: java.lang.String getNativeVersionConfig()
-com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity
-com.pontiflex.mobile.webview.sdk.activities.RegistrationActivity
-com.pontiflex.mobile.webview.sdk.activities.SignUpActivity
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page[] values()
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page valueOf(java.lang.String)
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity[] values()
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenDensity valueOf(java.lang.String)
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation[] values()
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenOrientation valueOf(java.lang.String)
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize[] values()
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize: com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$ScreenSize valueOf(java.lang.String)
 com.viewpagerindicator.CirclePageIndicator
 com.viewpagerindicator.CirclePageIndicator: CirclePageIndicator(android.content.Context)
 com.viewpagerindicator.CirclePageIndicator: CirclePageIndicator(android.content.Context,android.util.AttributeSet)
@@ -707,6 +640,7 @@ com.viewpagerindicator.R$id: int IAB_LEADERBOARD
 com.viewpagerindicator.R$id: int IAB_MRECT
 com.viewpagerindicator.R$id: int ad_view
 com.viewpagerindicator.R$id: int back_button
+com.viewpagerindicator.R$id: int btn_clear_reg
 com.viewpagerindicator.R$id: int btn_configure
 com.viewpagerindicator.R$id: int btn_country
 com.viewpagerindicator.R$id: int btn_create_event
@@ -746,7 +680,6 @@ com.viewpagerindicator.R$id: int privacy_link
 com.viewpagerindicator.R$id: int qt_finish_button
 com.viewpagerindicator.R$id: int reg_copy
 com.viewpagerindicator.R$id: int reset_alert_list_button
-com.viewpagerindicator.R$id: int settings_button
 com.viewpagerindicator.R$id: int snooze_button
 com.viewpagerindicator.R$id: int summary
 com.viewpagerindicator.R$id: int test_button
@@ -765,10 +698,12 @@ com.viewpagerindicator.R$id: int warning_text
 com.viewpagerindicator.R$id: int where_row
 com.viewpagerindicator.R$id: int widget_frame
 com.viewpagerindicator.R$id: int zip_code
+com.viewpagerindicator.R$id: int zip_code_label
 com.viewpagerindicator.R$integer: int default_circle_indicator_orientation
 com.viewpagerindicator.R$integer: int default_title_indicator_footer_indicator_style
 com.viewpagerindicator.R$integer: int whats_new_version
 com.viewpagerindicator.R$layout: int alert_list_view
+com.viewpagerindicator.R$layout: int country_list_item
 com.viewpagerindicator.R$layout: int departure_window_layout
 com.viewpagerindicator.R$layout: int event_list_item
 com.viewpagerindicator.R$layout: int launcher
@@ -801,6 +736,7 @@ com.viewpagerindicator.R$string: int beta_code
 com.viewpagerindicator.R$string: int beta_code_hint
 com.viewpagerindicator.R$string: int birthdate
 com.viewpagerindicator.R$string: int btn_birthdate_text
+com.viewpagerindicator.R$string: int btn_clear_reg_text
 com.viewpagerindicator.R$string: int btn_configure_text
 com.viewpagerindicator.R$string: int btn_create_event_text
 com.viewpagerindicator.R$string: int btn_enable_text
@@ -913,7 +849,6 @@ com.viewpagerindicator.R$string: int settings_instructions_title
 com.viewpagerindicator.R$string: int share_menu_title
 com.viewpagerindicator.R$string: int share_message
 com.viewpagerindicator.R$string: int share_subject
-com.viewpagerindicator.R$string: int signup_copy
 com.viewpagerindicator.R$string: int snooze_all_button_text
 com.viewpagerindicator.R$string: int snooze_button_text
 com.viewpagerindicator.R$string: int test_button_text
@@ -928,6 +863,7 @@ com.viewpagerindicator.R$string: int website_title
 com.viewpagerindicator.R$string: int whats_new_message
 com.viewpagerindicator.R$string: int whats_new_title
 com.viewpagerindicator.R$string: int yes
+com.viewpagerindicator.R$string: int zip_code
 com.viewpagerindicator.R$style: int ButtonBar
 com.viewpagerindicator.R$style: int EditEventSeparator
 com.viewpagerindicator.R$style: int GenderButton

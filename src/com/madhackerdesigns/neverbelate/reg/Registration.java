@@ -9,6 +9,7 @@ public class Registration {
 	private static final String COUNTRY_CODE = "reg.country_code";
 	private static final String EMAIL = "reg.email";
 	private static final String FIRST_NAME = "reg.first_name";
+	private static final String LAST_CHALLENGE= "reg.last_challenge";
 	private static final String LAST_NAME = "reg.last_name";
 	private static final String REGISTERED = "reg.registered";
 	private static final String ZIP_CODE = "reg.zip_code";
@@ -30,6 +31,7 @@ public class Registration {
 		this.setCountryCode("");
 		this.setEmail("");
 		this.setFirstName("");
+		this.setLastChallenge(0);
 		this.setLastName("");
 		this.setZipCode("");
 		this.setRegistered(false);
@@ -75,6 +77,20 @@ public class Registration {
 	 */
 	protected boolean setFirstName(String firstName) {
 		return mSettings.edit().putString(FIRST_NAME, firstName).commit();
+	}
+
+	/**
+	 * @return the lastChallenge
+	 */
+	protected long getLastChallenge() {
+		return mSettings.getLong(LAST_CHALLENGE, 0);
+	}
+
+	/**
+	 * @param lastNamChallenge the lastNamChallenge to set
+	 */
+	protected boolean setLastChallenge(long lastNamChallenge) {
+		return mSettings.edit().putLong(LAST_CHALLENGE, lastNamChallenge).commit();
 	}
 
 	/**

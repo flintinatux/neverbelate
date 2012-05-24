@@ -642,6 +642,10 @@ com.madhackerdesigns.neverbelate.Eula:
     private static final java.lang.String PREFERENCE_EULA_ACCEPTED
     private static final java.lang.String PREFERENCES_EULA
     31:31:public Eula()
+    54:85:public static void show(android.app.Activity)
+    104:105:private static void accept(android.content.SharedPreferences)
+    103:103:static synthetic void access$0(android.content.SharedPreferences)
+com.madhackerdesigns.neverbelate.Eula$1
 com.madhackerdesigns.neverbelate.R
 com.madhackerdesigns.neverbelate.R$anim
 com.madhackerdesigns.neverbelate.R$array
@@ -703,6 +707,38 @@ com.madhackerdesigns.neverbelate.provider.AlertsProvider:
     private static final int ALERTS
     private static final int ALERT_ID
     632:632:com.madhackerdesigns.neverbelate.provider.AlertsProvider$DatabaseHelper getOpenHelperForTest()
+com.madhackerdesigns.neverbelate.reg.CountriesDB:
+    private static final java.lang.String DATABASE_NAME
+    private static final int DATABASE_VERSION
+    protected static final java.lang.String ID
+    protected static final java.lang.String NAME
+    protected static final java.lang.String CODE
+    protected static final java.lang.String ZIP
+    protected static final int PROJ_ID
+    protected static final int PROJ_NAME
+    protected static final int PROJ_CODE
+    protected static final int PROJ_ZIP
+com.madhackerdesigns.neverbelate.reg.GeoCoder:
+    private static final java.lang.String YAHOO_API_BASE_URL
+com.madhackerdesigns.neverbelate.reg.Registration:
+    private static final java.lang.String COUNTRY_CODE
+    private static final java.lang.String EMAIL
+    private static final java.lang.String FIRST_NAME
+    private static final java.lang.String LAST_CHALLENGE
+    private static final java.lang.String LAST_NAME
+    private static final java.lang.String REGISTERED
+    private static final java.lang.String ZIP_CODE
+    private static final java.lang.String REGISTRATION_DATA
+    44:44:protected java.lang.String getCountryCode()
+    58:58:protected java.lang.String getEmail()
+    72:72:protected java.lang.String getFirstName()
+    100:100:protected java.lang.String getLastName()
+    128:128:protected java.lang.String getZipCode()
+com.madhackerdesigns.neverbelate.reg.RegistrationForm:
+    private static final int DIALOG_COUNTRY
+    private static final int DIALOG_DECLINE
+    private static final int DIALOG_INCOMPLETE
+    private static final int DIALOG_THANKS
 com.madhackerdesigns.neverbelate.service.CalendarHelper:
     public static final int PROJ_EVENT_ID
     public static final int PROJ_TITLE
@@ -785,40 +821,18 @@ com.madhackerdesigns.neverbelate.settings.WebsitePreference:
 com.madhackerdesigns.neverbelate.ui.LauncherActivity:
     private static final boolean ADMOB
     private static final java.lang.String ADMOB_ID
-    private static final int DLG_COMING_SOON
     private static final int DLG_FIRST_TIME
     private static final int DLG_QUICK_TOUR
     private static final int DLG_WHATS_NEW
     private static final long FIVE_MINUTES
     private static final java.lang.String KEY_AD_LAST_SHOWN
     private static final java.lang.String KEY_FIRST_TIME
-    private static final java.lang.String KEY_QUICK_TOUR
     private static final java.lang.String KEY_WHATS_NEW
     private static final java.lang.String LOG_TAG
     private static final boolean PONTIFLEX
     private static final java.lang.String PREF_APP_STATE
 com.madhackerdesigns.neverbelate.ui.MapOverlay:
     35:37:public void clearOverlays()
-com.madhackerdesigns.neverbelate.ui.Registration:
-    private static final java.lang.String COUNTRY_CODE
-    private static final java.lang.String EMAIL
-    private static final java.lang.String FIRST_NAME
-    private static final java.lang.String LAST_NAME
-    private static final java.lang.String REGISTERED
-    private static final java.lang.String ZIP_CODE
-    private static final java.lang.String REGISTRATION_DATA
-    33:33:protected java.lang.String getCountryCode()
-    40:41:protected void setCountryCode(java.lang.String)
-    47:47:protected java.lang.String getEmail()
-    61:61:protected java.lang.String getFirstName()
-    75:75:protected java.lang.String getLastName()
-    89:89:protected boolean isRegistered()
-    96:97:protected void setRegistered(boolean)
-    103:103:protected java.lang.String getZipCode()
-com.madhackerdesigns.neverbelate.ui.RegistrationForm:
-    private static final int DIALOG_DECLINE
-    private static final int DIALOG_INCOMPLETE
-    private static final int DIALOG_THANKS
 com.madhackerdesigns.neverbelate.ui.UserLocationOverlay:
     private static final java.lang.String TOAST_MESSAGE
 com.madhackerdesigns.neverbelate.ui.WarningDialog:
@@ -874,180 +888,9 @@ com.madhackerdesigns.neverbelate.util.Logger:
     69:69:public static int w(java.lang.String,java.lang.String)
     74:74:public static int w(java.lang.String,java.lang.Throwable)
     79:79:public static int w(java.lang.String,java.lang.String,java.lang.Throwable)
-com.pontiflex.mobile.webview.models.ResourceData:
-    private static final java.lang.String defaultFileName
-    34:35:public void removeResourceData(java.lang.String)
-com.pontiflex.mobile.webview.sdk.AdConfig:
-    public static final int DefaultRegistrationInterval
-    public static final boolean DefaultRegistrationRequired
-    public static final boolean DefaultShowAdAfterRegistration
-    public static final boolean DefaultAllowReadDeviceData
-    public static final java.lang.String DefautlDefaultLocale
-    public static final boolean DefaultWithRegistration
-    public static final boolean DefaultWithSingleOffer
-    public static final boolean DefaultShowOnFirstLaunch
-    50:50:public static com.pontiflex.mobile.webview.sdk.IAdConfig createInstance()
-    64:65:public void setLaunchInterval(int)
-    84:85:public void setShowOnFirstLaunch(boolean)
-    94:95:public void setAllowReadDeviceData(boolean)
-    105:114:public void setDefaultLocale(java.lang.String)
-    119:128:private java.util.Locale parseLocale(java.lang.String)
-    134:145:private boolean isValid(java.util.Locale)
-    151:151:public java.lang.String getThemeName()
-    156:157:public void setThemeName(java.lang.String)
-    161:161:public java.util.List getStyles()
-    166:167:public void setStyles(java.util.List)
-    186:187:public void setShowAdAferRegistration(boolean)
-    208:209:public boolean addStyle(java.util.Map)
-com.pontiflex.mobile.webview.sdk.AdConfigFactory
-com.pontiflex.mobile.webview.sdk.AdManager:
-    public static final int DefaultAdRefreshIntervalMs
-    public static final java.lang.String LeadPostUrlStringKey
-    private static final java.lang.String AppInfoPflxAdUrl
-    private static final java.lang.String AppInfoPid
-    private static final java.lang.String AppInfoSubSourceId
-    private static final java.lang.String AdPath
-    private static final java.lang.String JsonPath
-    private static final java.lang.String DefaultAppInfoName
-    private static final java.lang.String KeystoreFilename
-    99:106:public static com.pontiflex.mobile.webview.sdk.IAdManager createInstance(android.app.Application,java.lang.String)
-    110:122:protected static com.pontiflex.mobile.webview.sdk.IAdManager createInstance(android.app.Application,com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment,boolean)
-    177:179:public void setAllowReadDeviceData(boolean)
-    186:188:public void setDefaultLocale(java.lang.String)
-    211:211:public com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode getRegistrationMode()
-    224:229:public void setRegistrationInterval(int)
-    232:232:public int getRegistrationInterval()
-    236:238:public void setShowingMultiAdView(boolean)
-    248:274:public boolean setRegistrationData(java.util.Map)
-    281:308:public boolean setRegistrationData(java.lang.String,java.lang.String)
-    441:441:public com.pontiflex.mobile.webview.utilities.PackageHelper getPkgHelper()
-    472:472:public boolean isOffline()
-    476:476:public int getRefreshIntervalMillis()
-    514:516:public java.lang.String getAdHostString()
-    520:520:public java.lang.String getAdUrl()
-    524:537:public java.lang.String getAdUrl(int)
-    547:547:public java.util.Iterator getRegistrationKeysIterator()
-    578:579:public void setEnvironment(com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment)
-    582:582:public com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment getEnvironment()
-    586:586:public static java.lang.String getKeystoreFilename()
-    590:590:public static java.lang.String getDefaultAppInfoName()
-    594:594:public com.pontiflex.mobile.webview.utilities.VersionHelper getVersionHelper()
-    610:610:public java.lang.String getSdkVersionCode()
-    618:618:public java.lang.String getSdkVersionName()
-    626:631:public void showAd()
-    638:643:public void showAd(android.app.Activity)
-    711:712:public void setAdConfig(com.pontiflex.mobile.webview.sdk.IAdConfig)
-    719:735:public void setAdConfig(com.pontiflex.mobile.webview.sdk.IAdConfig,android.app.Activity)
-com.pontiflex.mobile.webview.sdk.AdManagerFactory:
-    7:7:public AdManagerFactory()
-    13:13:public static com.pontiflex.mobile.webview.sdk.IAdManager createInstance(android.app.Application,com.pontiflex.mobile.webview.sdk.AdManager$PflxEnvironment)
-com.pontiflex.mobile.webview.sdk.IAdConfig:
-    public abstract void setLaunchInterval(int)
-    public abstract void setShowOnFirstLaunch(boolean)
-    public abstract void setAllowReadDeviceData(boolean)
-    public abstract void setDefaultLocale(java.lang.String)
-    public abstract java.lang.String getThemeName()
-    public abstract void setThemeName(java.lang.String)
-    public abstract boolean addStyle(java.util.Map)
-    public abstract void setShowAdAferRegistration(boolean)
-com.pontiflex.mobile.webview.sdk.IAdManager:
-    public static final int SHOW_AD_REQUEST
-    public abstract com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode getRegistrationMode()
-    public abstract void setRegistrationMode(com.pontiflex.mobile.webview.sdk.IAdManager$RegistrationMode,android.app.Activity)
-    public abstract boolean isRegistrationRequired()
-    public abstract void setRegistrationInterval(int)
-    public abstract int getRegistrationInterval()
-    public abstract void setShowingMultiAdView(boolean)
-    public abstract boolean isShowingMultiAdView()
-    public abstract boolean setRegistrationData(java.util.Map)
-    public abstract boolean setRegistrationData(java.lang.String,java.lang.String)
-    public abstract void startRegistrationActivity(android.app.Activity)
-    public abstract void startMultiOfferActivity(android.app.Activity)
-    public abstract void showAd()
-    public abstract void showAd(android.app.Activity)
-    public abstract void showAd(com.pontiflex.mobile.webview.sdk.IAdConfig,android.app.Activity)
-    public abstract boolean isInitialized()
-    public abstract void setAllowReadDeviceData(boolean)
-    public abstract void setDefaultLocale(java.lang.String)
-    public abstract void setAdConfig(com.pontiflex.mobile.webview.sdk.IAdConfig)
-    public abstract void setAdConfig(com.pontiflex.mobile.webview.sdk.IAdConfig,android.app.Activity)
-    public abstract java.lang.String getSdkVersionCode()
-    public abstract java.lang.String getSdkVersionName()
-com.pontiflex.mobile.webview.sdk.activities.BaseActivity:
-    private static final long PROGRESS_DIALOG_TIMEOUT_MILLIS
-    private static final java.lang.String StateKeystoreFilename
-    private static final java.lang.String AdditionalDataStorageFileName
-    135:138:protected void setProgressDialogProgress(int)
-    191:193:public void clearAdditionalData(java.lang.String)
-com.pontiflex.mobile.webview.sdk.activities.PontiflexWebviewSDKActivity:
-    79:82:private void setRegistrationAdHoc()
-    86:91:private void showRegistrationAfterLaunchCount(int)
-    95:99:private void showRegistrationAtLaunch()
-    103:108:private void showAdAfterLaunchCount(int)
-    112:116:private void showAdAtLaunch()
-    120:127:private void prefillRegistrationData()
-com.pontiflex.mobile.webview.utilities.AppInfo:
-    private static final java.lang.String AppInfoFileName
-    117:121:public java.lang.String getSubSourceId()
-    126:130:public java.lang.Integer getPid()
-    134:138:public int getFieldCount()
-    153:160:public java.lang.String getOfferString(java.lang.String)
-    184:191:public java.lang.String getDisplayNameForFieldNamed(java.lang.String)
-    211:229:public org.json.JSONObject findOrderedField(int)
-    235:253:public java.lang.String getNameOfOrderedField(int)
-com.pontiflex.mobile.webview.utilities.DeviceHelper:
-    30:30:public DeviceHelper()
-com.pontiflex.mobile.webview.utilities.FieldValidator:
-    private static final java.lang.String ValidationRequired
-    private static final java.lang.String ValidationPostalCode
-    private static final java.lang.String ValidationEmail
-    private static final java.lang.String ValidationCountry
-    79:79:public boolean hasErrors()
-    83:85:public java.util.List getErrors()
-com.pontiflex.mobile.webview.utilities.HtmlPageRegistry:
-    86:103:private java.lang.String getHtml(java.io.InputStream)
-    117:117:public java.lang.String getRegistrationHtml(android.app.Activity,boolean)
-    130:130:public java.lang.String getMultiOfferHtml(android.app.Activity,boolean)
-    143:143:public java.lang.String getPrivacyHtml(android.app.Activity,boolean)
-    156:156:public java.lang.String getPrivacyListHtml(android.app.Activity,boolean)
-    210:210:public java.lang.String getPrivacyHtmlPath(android.app.Activity,boolean)
-    224:224:public java.lang.String getPrivacyListHtmlPath(android.app.Activity,boolean)
-    229:237:protected java.lang.String getHtml(android.app.Activity,boolean,com.pontiflex.mobile.webview.utilities.HtmlPageRegistry$Page)
-    466:469:protected void clearRegistry()
-com.pontiflex.mobile.webview.utilities.PackageHelper:
-    private static final int BUFFERED_READER_SIZE
-    private static final java.lang.String PontiflexSdkVersionBasename
-    private static final java.lang.String RES_PATH
-    private static final java.lang.String OLD_RES_PATH
-    private static final java.lang.String RES_JS_CLIENT
-    60:60:public int getLayoutId(java.lang.String,android.content.Context)
-    64:64:public int getDrawableId(java.lang.String,android.content.Context)
-    68:68:public int getItemId(java.lang.String,android.content.Context)
-    72:75:public int getIdentifier(java.lang.String,java.lang.String,android.content.Context)
-    79:84:public java.util.jar.JarInputStream getJarInputStream(android.content.Context)
-    152:164:public java.io.InputStream getHtmlResource(java.lang.String,android.content.Context)
-    168:180:private java.io.InputStream getJarResource(java.util.jar.JarInputStream,java.lang.String)
-    212:225:public java.util.Properties loadPontiflexSdkVersion(android.content.Context)
-com.pontiflex.mobile.webview.utilities.RegistrationStorage:
-    public static final java.lang.String DefaultKeystoreFilename
-    private static final java.lang.String HEX
-    30:32:public RegistrationStorage(android.content.Context)
-    77:77:public boolean isEmpty()
-com.pontiflex.mobile.webview.utilities.UpdateResourceUtil:
-    static final java.lang.String RES_PATH
-    static final java.lang.String TEMP_RES_PATH
-    static final java.lang.String PontiflexSdkVersionBasename
-    static final java.lang.String versionCodeSuffix
-    static final java.lang.String lastUpdatedDateSuffix
-    private static final java.lang.String RES_JS_CLIENT
-    36:36:public UpdateResourceUtil()
-com.pontiflex.mobile.webview.utilities.VersionHelper:
-    45:52:private java.lang.String getFromStringCache(android.content.Context,java.lang.String)
-    63:67:public java.lang.String getPflxAdVersion(android.content.Context)
-    76:80:public java.lang.String getPflxAdSdkVersion(android.content.Context)
-    90:94:public java.lang.String getPflxSdkVersionCode(android.content.Context)
-    103:106:public java.lang.String getPflxSdkVersionName(android.content.Context)
-    179:183:public java.lang.String getAppUri(android.content.Context)
+com.readystatesoftware.sqliteasset.SQLiteAssetHelper:
+    private static final java.lang.String ASSET_DB_PATH
+    315:316:public void setForcedUpgradeVersion(int)
 com.viewpagerindicator.CirclePageIndicator:
     public static final int HORIZONTAL
     public static final int VERTICAL
@@ -1082,14 +925,14 @@ com.viewpagerindicator.R$dimen:
 com.viewpagerindicator.R$drawable
 com.viewpagerindicator.R$id
 com.viewpagerindicator.R$integer:
-    445:445:public R$integer()
+    446:446:public R$integer()
 com.viewpagerindicator.R$layout:
-    450:450:public R$layout()
+    451:451:public R$layout()
 com.viewpagerindicator.R$string
 com.viewpagerindicator.R$style:
-    640:640:public R$style()
+    643:643:public R$style()
 com.viewpagerindicator.R$styleable:
-    672:672:public R$styleable()
+    675:675:public R$styleable()
 com.viewpagerindicator.R$xml
 com.viewpagerindicator.TitlePageIndicator:
     private static final float SELECTION_FADE_PERCENTAGE

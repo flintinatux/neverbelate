@@ -23,10 +23,6 @@
 	<string name="reg_copy_default">Thanks for downloading NeverBeLate™! Please register your copy of the app before continuing.</string>
 	<string name="register">Register now!</string>
 	<string name="reg_form_title">Register for NeverBeLate™</string>
-	<string name="signup_copy">Oops! Did you forget to signup for a beta account on the NeverBeLate™ 
-		website? You will need to do that first before completing this registration. Signup takes 
-		less than 30 seconds and only requires a valid email address at which you can receive your 
-		beta account code. Click the button below to go directly to the signup page!</string>
 	<string name="postal_code">Postal code</string>
 	<string name="postal_code_hint">90210</string>
 	<string name="zip_code">Zip code</string>
@@ -45,12 +41,9 @@
 	<string name="dialog_incomplete_btn_ok">Go back</string>
 	
 	<string name="dialog_thanks_title">Hey, thanks!</string>
-	<string name="dialog_thanks_message">You have successfully registered for the NeverBeLate™ beta program! 
-		You are now a part of an exclusive team dedicated to making the most out of NeverBeLate™\'s simple but
-		powerful features. Your thoughtful reviews and input will ensure that future users of this app will
-		enjoy a (hopefully!) bug-free user experience. Thanks in advance for your time and effort!\n\n
-		TIP #1: I recommend checking out the Quick Tutorial on the main screen to help you get started.</string>
-	<string name="dialog_thanks_btn_ok">Let\'s get started!</string>
+	<string name="dialog_thanks_message">You have successfully registered your copy of NeverBeLate™.
+		You should receive a confirmation email shortly. Now click \"Continue\" below to get started!</string>
+	<string name="dialog_thanks_btn_ok">Continue</string>
 	
 <!--STYLES-->
 	
