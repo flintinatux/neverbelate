@@ -20,6 +20,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.regex.Pattern;
 
+import rsg.mailchimp.api.MailChimpApiException;
+import rsg.mailchimp.api.lists.ListMethods;
+import rsg.mailchimp.api.lists.MergeFieldListUtil;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.Activity;
@@ -64,6 +67,14 @@ public class RegistrationForm extends Activity {
 	private static final int DIALOG_DECLINE = 1;
     private static final int DIALOG_INCOMPLETE = 2;
 	private static final int DIALOG_THANKS = 3;
+	
+	// MailChimp API Key
+	private static final String CHIMP_KEY = "e90156d7f938908942aacc1e4c01c829-us5";
+	private static final String LIST_ID = "13993";
+	private static final String FLD_FIRST_NAME = "FNAME";
+	private static final String FLD_LAST_NAME = "LNAME";
+	private static final String FLD_COUNTRY = "COUNTRY";
+	private static final String FLD_ZIP_CODE = "ZIP";
 	
 	// Email regex pattern (borrowed from Android API 8+)
 	public static final Pattern EMAIL_PATTERN
@@ -186,6 +197,7 @@ public class RegistrationForm extends Activity {
 		}
 		
 		// If registration validates, permanently store the data.
+		// TODO: Collapse these into one edit() call on the SharedPreference
 		Registration reg = mRegistration;
 		reg.setFirstName(firstName);
 		reg.setLastName(lastName);
@@ -194,17 +206,19 @@ public class RegistrationForm extends Activity {
 		reg.setCountryCode(mCountryCode);
 		reg.setRegistered(true);
 		
-//		// Insert reg data into Pontiflex
-//		// Initialize the Pontiflex Ad Manager
-//		IAdManager adManager = AdManagerFactory.createInstance(getApplication());
-//		// set registration mode to ad hoc, user can skip registration
-//		adManager.setRegistrationRequired(false);
-//		adManager.setRegistrationMode(IAdManager.RegistrationMode.RegistrationAdHoc);
-//		// Write data into the Ad Manager registration storage
-//		adManager.setRegistrationData("first_name", firstName);
-//		adManager.setRegistrationData("last_name", lastName);
-//		adManager.setRegistrationData("email", email);
-//		adManager.setRegistrationData("postal_code", zipCode);
+		// TODO: Push data up to MailChimp
+		ListMethods listMonkey = new ListMethods(CHIMP_KEY);
+		MergeFieldListUtil merges = new MergeFieldListUtil();
+		merges.addField(FLD_FIRST_NAME, firstName);
+		merges.addField(FLD_LAST_NAME, lastName);
+		merges.addField(FLD_COUNTRY, mCountryCode);
+		merges.addField(FLD_ZIP_CODE, zipCode);
+		try {
+			listMonkey.listSubscribe(LIST_ID, email, merges);
+		} catch (MailChimpApiException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		// Then say thanks and pass them on to the main launcher screen
 		showDialog(DIALOG_THANKS);
