@@ -20,6 +20,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.regex.Pattern;
 
+import rsg.mailchimp.api.Constants.EmailType;
 import rsg.mailchimp.api.MailChimpApiException;
 import rsg.mailchimp.api.lists.ListMethods;
 import rsg.mailchimp.api.lists.MergeFieldListUtil;
@@ -70,7 +71,7 @@ public class RegistrationForm extends Activity {
 	
 	// MailChimp API Key
 	private static final String CHIMP_KEY = "e90156d7f938908942aacc1e4c01c829-us5";
-	private static final String LIST_ID = "13993";
+	private static final String LIST_ID = "2ef5cacb61";
 	private static final String FLD_FIRST_NAME = "FNAME";
 	private static final String FLD_LAST_NAME = "LNAME";
 	private static final String FLD_COUNTRY = "COUNTRY";
@@ -181,13 +182,14 @@ public class RegistrationForm extends Activity {
 		String firstName = (String) ((TextView) findViewById(R.id.first_name)).getText().toString();
 		String lastName = (String) ((TextView) findViewById(R.id.last_name)).getText().toString();
 		String email = (String) ((TextView) findViewById(R.id.email)).getText().toString();
+		String countryCode = mCountryCode;
 		String zipCode = (String) ((TextView) findViewById(R.id.zip_code)).getText().toString();
 		
 		// Remind user to complete form if he didn't.
 		if ( 	isEmpty(firstName) || 
 				isEmpty(lastName) ||
 				isEmpty(email) ||
-				isEmpty(mCountryCode) ||
+				isEmpty(countryCode) ||
 				isEmpty(zipCode) ) {
 			
 			// Show reminder dialog and return.
@@ -202,8 +204,8 @@ public class RegistrationForm extends Activity {
 		reg.setFirstName(firstName);
 		reg.setLastName(lastName);
 		reg.setEmail(email);
+		reg.setCountryCode(countryCode);
 		reg.setZipCode(zipCode);
-		reg.setCountryCode(mCountryCode);
 		reg.setRegistered(true);
 		
 		// TODO: Push data up to MailChimp
@@ -211,13 +213,16 @@ public class RegistrationForm extends Activity {
 		MergeFieldListUtil merges = new MergeFieldListUtil();
 		merges.addField(FLD_FIRST_NAME, firstName);
 		merges.addField(FLD_LAST_NAME, lastName);
-		merges.addField(FLD_COUNTRY, mCountryCode);
+		merges.addField(FLD_COUNTRY, countryCode);
 		merges.addField(FLD_ZIP_CODE, zipCode);
 		try {
-			listMonkey.listSubscribe(LIST_ID, email, merges);
+			boolean success = listMonkey.listSubscribe(LIST_ID, email, merges, EmailType.mobile,
+					true, true, false, false);
+			if (success) { Logger.d("MailChimp subscribe successful."); }
 		} catch (MailChimpApiException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Logger.e("MailChimp", "Exception subscribing person: " + e.getMessage());
+			// message = "Signup failed: " + e.getMessage();
+			// TODO: Do something to reschedule registration
 		}
 		
 		// Then say thanks and pass them on to the main launcher screen
