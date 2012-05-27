@@ -211,15 +211,18 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 			switch (token) {
 			case ALERT_TOKEN:
 				if (cursor.moveToFirst()) {
-					// Store away the event information
-					EventHolder eh = new EventHolder();
-					eh.json = cursor.getString(AlertsHelper.PROJ_JSON);
-					eh.title = cursor.getString(AlertsHelper.PROJ_TITLE);
-					eh.location = cursor.getString(AlertsHelper.PROJ_LOCATION);
-					mEventHolders.add(eh);
+					do {
+						// Store away the event information
+						EventHolder eh = new EventHolder();
+						eh.json = cursor.getString(AlertsHelper.PROJ_JSON);
+						eh.title = cursor.getString(AlertsHelper.PROJ_TITLE);
+						eh.location = cursor.getString(AlertsHelper.PROJ_LOCATION);
+						mEventHolders.add(eh);
+					} while (cursor.moveToNext());
 					
 					// Calculate the departure window.  Note that first row in cursor should be
 					// the first upcoming event instance, since it is sorted by begin time, ascending.
+					cursor.moveToFirst();
 					long begin = cursor.getLong(AlertsHelper.PROJ_BEGIN);
 					long duration = cursor.getLong(AlertsHelper.PROJ_DURATION);
 					TextView departureWindow = (TextView) findViewById(R.id.departure_window);
