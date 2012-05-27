@@ -5,18 +5,22 @@ package com.madhackerdesigns.neverbelate.ui;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.AlarmManager;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.PendingIntent;
 import android.content.AsyncQueryHandler;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
@@ -28,6 +32,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -63,13 +68,17 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	private static final String LOG_TAG = "NeverBeLateWarning";
 	private static final boolean ADMOB = true;
 	
-	// static strings for intent extra keys
+	// static strings for intent stuff
 	private static final String PACKAGE_NAME = "com.madhackerdesigns.neverbelate";
 	public static final String EXTRA_URI = PACKAGE_NAME + ".uri";
+	private static final String MAPS_URL = "http://maps.google.com/maps";
 	
 	// static strings for view tags
 	private static final String TAG_ALERT_LIST = "alert_list";
 	private static final String TAG_TRAFFIC_VIEW = "traffic_view";
+	
+	// Dialog id's
+	private static final int DLG_NAV = 0;
 		
 	// fields to hold shared preferences and ad stuff
 	private AdHelper mAdHelper;
@@ -80,6 +89,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	// other fields
 	private AlertQueryHandler mHandler;
 	private ArrayList<EventHolder> mEventHolders = new ArrayList<EventHolder>();
+	private List<String> mDestList = new ArrayList<String>();
 	private boolean mInsistentStopped = false;
 	private MapView mMapView;
 	private ViewSwitcher mSwitcher;
@@ -235,18 +245,12 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 					});
 					
 					// Load the copyrights
-					HashMap<String, String> hash = new HashMap<String, String>();
-					String copyrightString = "";
-					String copyrights;
+					Set<String> copyrights = new HashSet<String>();
 					do {
-						copyrights = cursor.getString(AlertsHelper.PROJ_COPYRIGHTS);
-						if (hash.isEmpty()) {
-							copyrightString += copyrights;
-						} else if (! hash.containsKey(copyrights)) {
-							hash.put(copyrights, copyrights);
-							copyrightString += " | " + copyrights;	
-						}
+						copyrights.add(cursor.getString(AlertsHelper.PROJ_COPYRIGHTS));
 					} while (cursor.moveToNext());
+					String copyrightString = "";
+					
 					TextView copyrightText = (TextView) findViewById(R.id.copyright_text);
 					copyrightText.setText(copyrightString);
 					
@@ -409,6 +413,23 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 			}
 			
 		});
+		
+		// Add the Navigate button
+		Button btnNav = (Button) findViewById(R.id.btn_nav);
+		btnNav.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				ArrayList<EventHolder> eventHolders = mEventHolders;
+				if (eventHolders.size() == 1) {
+					// If only one event location, immediately send intent
+					startNavigation(eventHolders.get(0).location);
+				} else if (eventHolders.size() >= 2) {
+					// If two or more locations, ask user to choose first
+					showDialog(DLG_NAV);
+				}
+			}
+			
+		});
 	
 		// Get the UserLocationOverlay to draw both flags and stay updated
 		UserLocationOverlay overlay = mUserLocationOverlay;
@@ -524,6 +545,42 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		mapController.zoomToSpan(bounds.getLatSpanE6(), bounds.getLonSpanE6());
 	}
 	
+	private void startNavigation(String dest) {
+		Uri.Builder b = Uri.parse(MAPS_URL).buildUpon();
+		b.appendQueryParameter("daddr", dest);
+		Intent intent = new Intent(android.content.Intent.ACTION_VIEW, b.build());
+		intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
+		startActivity(intent);
+	}
+	
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreateDialog(int)
+	 */
+	@Override
+	protected Dialog onCreateDialog(int id) {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		Context context = getApplicationContext();
+		
+		switch (id) {
+		case DLG_NAV:
+			for (EventHolder eh : mEventHolders) {
+				mDestList.add(eh.location);
+			}
+			builder.setTitle(R.string.dlg_nav_title)
+				   .setAdapter(new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, mDestList), 
+						   new DialogInterface.OnClickListener() {
+							
+						public void onClick(DialogInterface dialog, int which) {
+							// Pull out the selected destination and send nav intent
+							startNavigation(mDestList.get(which));
+						}
+					});
+			break;
+		}
+		
+		return builder.create();
+	}
+
 	/* (non-Javadoc)
 	 * @see com.google.android.maps.MapActivity#onPause()
 	 */

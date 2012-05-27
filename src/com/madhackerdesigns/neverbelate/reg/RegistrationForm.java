@@ -20,10 +20,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.regex.Pattern;
 
-import rsg.mailchimp.api.Constants.EmailType;
-import rsg.mailchimp.api.MailChimpApiException;
-import rsg.mailchimp.api.lists.ListMethods;
-import rsg.mailchimp.api.lists.MergeFieldListUtil;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.Activity;
@@ -69,13 +65,13 @@ public class RegistrationForm extends Activity {
     private static final int DIALOG_INCOMPLETE = 2;
 	private static final int DIALOG_THANKS = 3;
 	
-	// MailChimp API Key
-	private static final String CHIMP_KEY = "e90156d7f938908942aacc1e4c01c829-us5";
-	private static final String LIST_ID = "2ef5cacb61";
-	private static final String FLD_FIRST_NAME = "FNAME";
-	private static final String FLD_LAST_NAME = "LNAME";
-	private static final String FLD_COUNTRY = "COUNTRY";
-	private static final String FLD_ZIP_CODE = "ZIP";
+//	// MailChimp API Key
+//	private static final String CHIMP_KEY = "e90156d7f938908942aacc1e4c01c829-us5";
+//	private static final String LIST_ID = "2ef5cacb61";
+//	private static final String FLD_FIRST_NAME = "FNAME";
+//	private static final String FLD_LAST_NAME = "LNAME";
+//	private static final String FLD_COUNTRY = "COUNTRY";
+//	private static final String FLD_ZIP_CODE = "ZIP";
 	
 	// Email regex pattern (borrowed from Android API 8+)
 	public static final Pattern EMAIL_PATTERN
@@ -208,22 +204,22 @@ public class RegistrationForm extends Activity {
 		reg.setZipCode(zipCode);
 		reg.setRegistered(true);
 		
-		// TODO: Push data up to MailChimp
-		ListMethods listMonkey = new ListMethods(CHIMP_KEY);
-		MergeFieldListUtil merges = new MergeFieldListUtil();
-		merges.addField(FLD_FIRST_NAME, firstName);
-		merges.addField(FLD_LAST_NAME, lastName);
-		merges.addField(FLD_COUNTRY, countryCode);
-		merges.addField(FLD_ZIP_CODE, zipCode);
-		try {
-			boolean success = listMonkey.listSubscribe(LIST_ID, email, merges, EmailType.mobile,
-					true, true, false, false);
-			if (success) { Logger.d("MailChimp subscribe successful."); }
-		} catch (MailChimpApiException e) {
-			Logger.e("MailChimp", "Exception subscribing person: " + e.getMessage());
-			// message = "Signup failed: " + e.getMessage();
-			// TODO: Do something to reschedule registration
-		}
+//		// TODO: Push data up to MailChimp
+//		ListMethods listMonkey = new ListMethods(CHIMP_KEY);
+//		MergeFieldListUtil merges = new MergeFieldListUtil();
+//		merges.addField(FLD_FIRST_NAME, firstName);
+//		merges.addField(FLD_LAST_NAME, lastName);
+//		merges.addField(FLD_COUNTRY, countryCode);
+//		merges.addField(FLD_ZIP_CODE, zipCode);
+//		try {
+//			boolean success = listMonkey.listSubscribe(LIST_ID, email, merges, EmailType.mobile,
+//					true, true, false, false);
+//			if (success) { Logger.d("MailChimp subscribe successful."); }
+//		} catch (MailChimpApiException e) {
+//			Logger.e("MailChimp", "Exception subscribing person: " + e.getMessage());
+//			// message = "Signup failed: " + e.getMessage();
+//			// TODO: Do something to reschedule registration
+//		}
 		
 		// Then say thanks and pass them on to the main launcher screen
 		showDialog(DIALOG_THANKS);
@@ -342,8 +338,12 @@ public class RegistrationForm extends Activity {
 		protected void onPostExecute(NameResult result) {
 			// Prepop the user's name
 			try {
-				((TextView) findViewById(R.id.first_name)).setText(result.givenName);
-				((TextView) findViewById(R.id.last_name)).setText(result.familyName);
+				// Make sure they aren't email addresses first
+				if (! EMAIL_PATTERN.matcher(result.givenName).matches()
+						&& ! EMAIL_PATTERN.matcher(result.familyName).matches()) {
+					((TextView) findViewById(R.id.first_name)).setText(result.givenName);
+					((TextView) findViewById(R.id.last_name)).setText(result.familyName);
+				}
 			} catch (Exception e) {
 				e.printStackTrace();
 				Logger.d("Pre-pop of user's first and last name failed.");

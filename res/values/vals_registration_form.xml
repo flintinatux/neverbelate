@@ -42,7 +42,7 @@
 	
 	<string name="dialog_thanks_title">Hey, thanks!</string>
 	<string name="dialog_thanks_message">You have successfully registered your copy of NeverBeLate™.
-		You should receive a confirmation email shortly. Now click \"Continue\" below to get started!</string>
+		Now click \"Continue\" below to get started!</string>
 	<string name="dialog_thanks_btn_ok">Continue</string>
 	
 <!--STYLES-->

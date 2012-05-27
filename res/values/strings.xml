@@ -5,7 +5,7 @@
     <string name="app_title">NeverBeLate™ Settings</string>
     <string name="app_version">App version</string>
     <string name="base_task">com.madhackerdesigns.neverbelate.base_task</string>
-    <string name="version_name">build-19</string>
+    <string name="version_name">build-21</string>
 
 <!-- Admob Publisher ID -->
 	<string name="admob_id">a14d952e8939105</string>
@@ -48,6 +48,7 @@
 <!-- Strings for WarningDialog -->
     <string name="advance_warning_title">NeverBeLate™ Advance Warning</string>
     <string name="away_text">away</string>
+    <string name="btn_nav_text">Navigate</string>
     <string name="departure_time">Departure time</string>
     <string name="dismiss_button_text">Dismiss</string>
     <string name="dismiss_all_button_text">Dismiss all</string>
@@ -57,6 +58,7 @@
     <string name="default_event_time">2:00pm - 3:00pm</string>
     <string name="default_event_title">Default Event Title</string>
     <string name="default_travel_time">25 min\naway</string>
+    <string name="dlg_nav_title">Choose your destination</string>
     <string name="maps_data">Maps data</string>
     <string name="minutes_early">minutes early</string>
     <string name="on_time">on time</string>

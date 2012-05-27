@@ -2188,13 +2188,14 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverb
     com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> c
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler mHandler -> d
     java.util.ArrayList mEventHolders -> e
-    boolean mInsistentStopped -> f
-    com.google.android.maps.MapView mMapView -> g
-    android.widget.ViewSwitcher mSwitcher -> h
-    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay mUserLocationOverlay -> i
-    java.util.ArrayList mDest -> j
-    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay$OnLocationChangedListener mListener -> k
-    com.google.android.maps.GeoPoint mOrig -> l
+    java.util.List mDestList -> f
+    boolean mInsistentStopped -> g
+    com.google.android.maps.MapView mMapView -> h
+    android.widget.ViewSwitcher mSwitcher -> i
+    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay mUserLocationOverlay -> j
+    java.util.ArrayList mDest -> k
+    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay$OnLocationChangedListener mListener -> l
+    com.google.android.maps.GeoPoint mOrig -> m
     void onCreate(android.os.Bundle) -> onCreate
     void loadAlertList() -> a
     void snoozeAlert() -> b
@@ -2204,6 +2205,8 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverb
     void switchToTrafficView() -> f
     void loadTrafficView() -> g
     void drawLocations(android.location.Location) -> a
+    void startNavigation(java.lang.String) -> a
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
     void onPause() -> onPause
     void onResume() -> onResume
     boolean isRouteDisplayed() -> isRouteDisplayed
@@ -2215,8 +2218,10 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverb
     void access$5(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> f
     void access$6(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> g
     com.madhackerdesigns.neverbelate.ui.UserLocationOverlay access$7(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> h
-    java.util.ArrayList access$8(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> i
-    com.google.android.maps.GeoPoint access$9(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> j
+    void access$8(com.madhackerdesigns.neverbelate.ui.WarningDialog,java.lang.String) -> a
+    java.util.ArrayList access$9(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> i
+    com.google.android.maps.GeoPoint access$10(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> j
+    java.util.List access$11(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> k
 com.madhackerdesigns.neverbelate.ui.WarningDialog$1 -> com.madhackerdesigns.neverbelate.ui.u:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.view.View) -> onClick
@@ -2225,29 +2230,35 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog$2 -> com.madhackerdesigns.neve
     void onClick(android.view.View) -> onClick
 com.madhackerdesigns.neverbelate.ui.WarningDialog$3 -> com.madhackerdesigns.neverbelate.ui.w:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.madhackerdesigns.neverbelate.ui.WarningDialog$4 -> com.madhackerdesigns.neverbelate.ui.x:
+    com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onLocationChanged(android.location.Location) -> a
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler -> com.madhackerdesigns.neverbelate.ui.x:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$5 -> com.madhackerdesigns.neverbelate.ui.y:
+    com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler -> com.madhackerdesigns.neverbelate.ui.z:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onQueryComplete(int,java.lang.Object,android.database.Cursor) -> onQueryComplete
     com.madhackerdesigns.neverbelate.ui.WarningDialog access$0(com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler) -> a
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$1 -> com.madhackerdesigns.neverbelate.ui.y:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$1 -> com.madhackerdesigns.neverbelate.ui.aa:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$2 -> com.madhackerdesigns.neverbelate.ui.z:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$2 -> com.madhackerdesigns.neverbelate.ui.ab:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$3 -> com.madhackerdesigns.neverbelate.ui.aa:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$3 -> com.madhackerdesigns.neverbelate.ui.ac:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$4 -> com.madhackerdesigns.neverbelate.ui.ab:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$4 -> com.madhackerdesigns.neverbelate.ui.ad:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$EventHolder -> com.madhackerdesigns.neverbelate.ui.ac:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$EventHolder -> com.madhackerdesigns.neverbelate.ui.ae:
     java.lang.String json -> a
     java.lang.String title -> b
     java.lang.String location -> c
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> d
-com.madhackerdesigns.neverbelate.ui.WarningDialog$MapBounds -> com.madhackerdesigns.neverbelate.ui.ad:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$MapBounds -> com.madhackerdesigns.neverbelate.ui.af:
     int mLatMinE6 -> b
     int mLatMaxE6 -> c
     int mLonMinE6 -> d
@@ -2634,3 +2645,68 @@ com.viewpagerindicator.TitlePageIndicator$SavedState$1 -> com.viewpagerindicator
     java.lang.Object[] newArray(int) -> newArray
 com.viewpagerindicator.TitleProvider -> com.viewpagerindicator.q:
     java.lang.String getTitle(int) -> a
+org.xmlrpc.android.Base64Coder -> a.a.a.a:
+    char[] map1 -> a
+    byte[] map2 -> b
+    char[] encode(byte[]) -> a
+    char[] encode(byte[],int) -> a
+    byte[] decode(java.lang.String) -> a
+    byte[] decode(char[]) -> a
+org.xmlrpc.android.IXMLRPCSerializer -> a.a.a.b:
+    void serialize(org.xmlpull.v1.XmlSerializer,java.lang.Object) -> a
+    java.lang.Object deserialize(org.xmlpull.v1.XmlPullParser) -> a
+org.xmlrpc.android.XMLRPCClient -> a.a.a.c:
+    org.apache.http.client.HttpClient client -> c
+    org.apache.http.client.methods.HttpPost postMethod -> d
+    org.apache.http.params.HttpParams httpParams -> e
+    java.lang.Object callEx(java.lang.String,java.lang.Object[]) -> a
+    java.lang.String methodCall(java.lang.String,java.lang.Object[]) -> b
+org.xmlrpc.android.XMLRPCCommon -> a.a.a.d:
+    org.xmlpull.v1.XmlSerializer serializer -> a
+    org.xmlrpc.android.IXMLRPCSerializer iXMLRPCSerializer -> b
+    void serializeParams(java.lang.Object[]) -> a
+org.xmlrpc.android.XMLRPCException -> a.a.a.e:
+org.xmlrpc.android.XMLRPCFault -> a.a.a.f:
+    java.lang.String faultString -> a
+    int faultCode -> b
+org.xmlrpc.android.XMLRPCSerializable -> a.a.a.g:
+    java.lang.Object getSerializable() -> a
+org.xmlrpc.android.XMLRPCSerializer -> a.a.a.h:
+    java.text.SimpleDateFormat dateFormat -> a
+    void serialize(org.xmlpull.v1.XmlSerializer,java.lang.Object) -> a
+    java.lang.Object deserialize(org.xmlpull.v1.XmlPullParser) -> a
+rsg.mailchimp.api.Constants -> rsg.mailchimp.a.a:
+    java.text.SimpleDateFormat TIME_FMT -> a
+rsg.mailchimp.api.Constants$EmailType -> rsg.mailchimp.a.b:
+    rsg.mailchimp.api.Constants$EmailType html -> a
+    rsg.mailchimp.api.Constants$EmailType text -> b
+    rsg.mailchimp.api.Constants$EmailType mobile -> c
+    rsg.mailchimp.api.Constants$EmailType[] ENUM$VALUES -> d
+    rsg.mailchimp.api.Constants$EmailType[] values() -> values
+    rsg.mailchimp.api.Constants$EmailType valueOf(java.lang.String) -> valueOf
+rsg.mailchimp.api.MailChimpApi -> rsg.mailchimp.a.c:
+    java.text.MessageFormat API_URL -> b
+    java.lang.String apiKey -> a
+    java.lang.String endpointUrl -> c
+    rsg.mailchimp.api.MailChimpApiException buildMailChimpException(org.xmlrpc.android.XMLRPCException) -> a
+    java.lang.Object callMethod(java.lang.String,java.lang.Object[]) -> a
+    org.xmlrpc.android.XMLRPCClient getClient() -> a
+    java.lang.String parseDataCenter(java.lang.String) -> a
+rsg.mailchimp.api.MailChimpApiException -> rsg.mailchimp.a.d:
+rsg.mailchimp.api.lists.ListMethods -> rsg.mailchimp.a.a.a:
+    boolean listSubscribe(java.lang.String,java.lang.String,rsg.mailchimp.api.lists.MergeFieldListUtil) -> a
+    boolean listSubscribe(java.lang.String,java.lang.String,rsg.mailchimp.api.lists.MergeFieldListUtil,rsg.mailchimp.api.Constants$EmailType,java.lang.Boolean,java.lang.Boolean,java.lang.Boolean,java.lang.Boolean) -> a
+rsg.mailchimp.api.lists.MergeFieldListUtil -> rsg.mailchimp.a.a.b:
+    void addDateField(java.lang.String,java.util.Date) -> a
+    void addField(java.lang.String,java.lang.Object) -> a
+    java.lang.Object getSerializable() -> a
+    void addEmail(java.lang.String) -> a
+rsg.mailchimp.gui.Subscribe -> rsg.mailchimp.gui.Subscribe:
+    void onCreate(android.os.Bundle) -> onCreate
+    void onClick(android.view.View) -> onClick
+    void addToList(java.lang.String,android.app.ProgressDialog) -> a
+    void access$0(rsg.mailchimp.gui.Subscribe,java.lang.String,android.app.ProgressDialog) -> a
+rsg.mailchimp.gui.Subscribe$1 -> rsg.mailchimp.gui.a:
+    rsg.mailchimp.gui.Subscribe this$0 -> a
+    android.app.ProgressDialog val$dialog -> b
+    void run() -> run

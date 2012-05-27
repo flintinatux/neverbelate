@@ -16,5 +16,13 @@
 		android:layout_margin="6dip"
 		android:layout_width="wrap_content"
 		android:text="@string/departure_time"  />
+
+	<Button
+		android:id="@+id/btn_nav"
+		android:layout_gravity="bottom|right"
+		android:layout_height="wrap_content"
+		android:layout_margin="6dip"
+		android:layout_width="wrap_content"
+		android:text="@string/btn_nav_text"  />
 	
 </FrameLayout>

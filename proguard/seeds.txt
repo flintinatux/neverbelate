@@ -183,6 +183,7 @@ com.madhackerdesigns.neverbelate.R$id: int btn_configure
 com.madhackerdesigns.neverbelate.R$id: int btn_country
 com.madhackerdesigns.neverbelate.R$id: int btn_create_event
 com.madhackerdesigns.neverbelate.R$id: int btn_enable
+com.madhackerdesigns.neverbelate.R$id: int btn_nav
 com.madhackerdesigns.neverbelate.R$id: int btn_quick_tour
 com.madhackerdesigns.neverbelate.R$id: int btn_reg_form
 com.madhackerdesigns.neverbelate.R$id: int btn_register
@@ -278,6 +279,7 @@ com.madhackerdesigns.neverbelate.R$string: int btn_clear_reg_text
 com.madhackerdesigns.neverbelate.R$string: int btn_configure_text
 com.madhackerdesigns.neverbelate.R$string: int btn_create_event_text
 com.madhackerdesigns.neverbelate.R$string: int btn_enable_text
+com.madhackerdesigns.neverbelate.R$string: int btn_nav_text
 com.madhackerdesigns.neverbelate.R$string: int btn_optin_text
 com.madhackerdesigns.neverbelate.R$string: int btn_quick_tour_text
 com.madhackerdesigns.neverbelate.R$string: int btn_reg_form_text
@@ -321,6 +323,7 @@ com.madhackerdesigns.neverbelate.R$string: int dlg_coming_soon_msg
 com.madhackerdesigns.neverbelate.R$string: int dlg_coming_soon_title
 com.madhackerdesigns.neverbelate.R$string: int dlg_first_time_msg
 com.madhackerdesigns.neverbelate.R$string: int dlg_first_time_title
+com.madhackerdesigns.neverbelate.R$string: int dlg_nav_title
 com.madhackerdesigns.neverbelate.R$string: int dlg_qt_msg
 com.madhackerdesigns.neverbelate.R$string: int dlg_qt_title
 com.madhackerdesigns.neverbelate.R$string: int email
@@ -645,6 +648,7 @@ com.viewpagerindicator.R$id: int btn_configure
 com.viewpagerindicator.R$id: int btn_country
 com.viewpagerindicator.R$id: int btn_create_event
 com.viewpagerindicator.R$id: int btn_enable
+com.viewpagerindicator.R$id: int btn_nav
 com.viewpagerindicator.R$id: int btn_quick_tour
 com.viewpagerindicator.R$id: int btn_reg_form
 com.viewpagerindicator.R$id: int btn_register
@@ -740,6 +744,7 @@ com.viewpagerindicator.R$string: int btn_clear_reg_text
 com.viewpagerindicator.R$string: int btn_configure_text
 com.viewpagerindicator.R$string: int btn_create_event_text
 com.viewpagerindicator.R$string: int btn_enable_text
+com.viewpagerindicator.R$string: int btn_nav_text
 com.viewpagerindicator.R$string: int btn_optin_text
 com.viewpagerindicator.R$string: int btn_quick_tour_text
 com.viewpagerindicator.R$string: int btn_reg_form_text
@@ -783,6 +788,7 @@ com.viewpagerindicator.R$string: int dlg_coming_soon_msg
 com.viewpagerindicator.R$string: int dlg_coming_soon_title
 com.viewpagerindicator.R$string: int dlg_first_time_msg
 com.viewpagerindicator.R$string: int dlg_first_time_title
+com.viewpagerindicator.R$string: int dlg_nav_title
 com.viewpagerindicator.R$string: int dlg_qt_msg
 com.viewpagerindicator.R$string: int dlg_qt_title
 com.viewpagerindicator.R$string: int email
@@ -956,3 +962,23 @@ com.viewpagerindicator.TitlePageIndicator$IndicatorStyle: com.viewpagerindicator
 com.viewpagerindicator.TitlePageIndicator$IndicatorStyle: com.viewpagerindicator.TitlePageIndicator$IndicatorStyle valueOf(java.lang.String)
 com.viewpagerindicator.TitlePageIndicator$SavedState
 com.viewpagerindicator.TitlePageIndicator$SavedState: android.os.Parcelable$Creator CREATOR
+rsg.mailchimp.api.Constants$CampaignStatus: rsg.mailchimp.api.Constants$CampaignStatus[] values()
+rsg.mailchimp.api.Constants$CampaignStatus: rsg.mailchimp.api.Constants$CampaignStatus valueOf(java.lang.String)
+rsg.mailchimp.api.Constants$CampaignType: rsg.mailchimp.api.Constants$CampaignType[] values()
+rsg.mailchimp.api.Constants$CampaignType: rsg.mailchimp.api.Constants$CampaignType valueOf(java.lang.String)
+rsg.mailchimp.api.Constants$EmailType: rsg.mailchimp.api.Constants$EmailType[] values()
+rsg.mailchimp.api.Constants$EmailType: rsg.mailchimp.api.Constants$EmailType valueOf(java.lang.String)
+rsg.mailchimp.api.Constants$InterestGroupType: rsg.mailchimp.api.Constants$InterestGroupType[] values()
+rsg.mailchimp.api.Constants$InterestGroupType: rsg.mailchimp.api.Constants$InterestGroupType valueOf(java.lang.String)
+rsg.mailchimp.api.Constants$MergeFieldType: rsg.mailchimp.api.Constants$MergeFieldType[] values()
+rsg.mailchimp.api.Constants$MergeFieldType: rsg.mailchimp.api.Constants$MergeFieldType valueOf(java.lang.String)
+rsg.mailchimp.api.Constants$SubscribeStatus: rsg.mailchimp.api.Constants$SubscribeStatus[] values()
+rsg.mailchimp.api.Constants$SubscribeStatus: rsg.mailchimp.api.Constants$SubscribeStatus valueOf(java.lang.String)
+rsg.mailchimp.api.campaigns.CampaignOptions$TrackingOptions: rsg.mailchimp.api.campaigns.CampaignOptions$TrackingOptions[] values()
+rsg.mailchimp.api.campaigns.CampaignOptions$TrackingOptions: rsg.mailchimp.api.campaigns.CampaignOptions$TrackingOptions valueOf(java.lang.String)
+rsg.mailchimp.api.data.AccountDetails$PlanType: rsg.mailchimp.api.data.AccountDetails$PlanType[] values()
+rsg.mailchimp.api.data.AccountDetails$PlanType: rsg.mailchimp.api.data.AccountDetails$PlanType valueOf(java.lang.String)
+rsg.mailchimp.api.data.ChimpChatter$Type: rsg.mailchimp.api.data.ChimpChatter$Type[] values()
+rsg.mailchimp.api.data.ChimpChatter$Type: rsg.mailchimp.api.data.ChimpChatter$Type valueOf(java.lang.String)
+rsg.mailchimp.gui.Subscribe
+rsg.mailchimp.gui.Subscribe: void onClick(android.view.View)
