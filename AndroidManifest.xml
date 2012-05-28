@@ -68,6 +68,19 @@
         <category android:name="android.intent.category.LAUNCHER"/>
     </intent-filter>
 </activity>
+<activity android:name=".ui.CreateNewEvent">
+    <intent-filter android:label="Create new event">
+	    <action android:name="android.intent.action.VIEW" />
+	    <category android:name="android.intent.category.DEFAULT" />
+	    <data android:mimeType="vnd.android.cursor.item/postal-address_v2" />
+	</intent-filter>
+	<intent-filter android:label="Create new event">
+	    <action android:name="android.intent.action.VIEW"/>
+	    <category android:name="android.intent.category.DEFAULT"/>
+	    <category android:name="android.intent.category.BROWSABLE"/>
+	    <data android:scheme="geo"/>
+	</intent-filter>
+</activity>
     
 </application>
     
