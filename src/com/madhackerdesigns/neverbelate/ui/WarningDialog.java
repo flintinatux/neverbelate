@@ -28,6 +28,7 @@ import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -88,6 +89,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	
 	// other fields
 	private AlertQueryHandler mHandler;
+	private Cursor mEventCursor;
 	private ArrayList<EventHolder> mEventHolders = new ArrayList<EventHolder>();
 	private List<String> mDestList = new ArrayList<String>();
 	private boolean mInsistentStopped = false;
@@ -205,6 +207,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		protected void onQueryComplete(int token, Object context, Cursor cursor) {
 			// Let the activity manage the cursor life-cycle
 			startManagingCursor(cursor);
+			mEventCursor = cursor;
 			Logger.d(LOG_TAG, "Query returned...");
 			
 			// Now fill in the content of the WarningDialog
@@ -250,10 +253,9 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 					// Load the copyrights
 					Set<String> copyrights = new HashSet<String>();
 					do {
-						copyrights.add(cursor.getString(AlertsHelper.PROJ_COPYRIGHTS));
+						copyrights.add(cursor.getString(AlertsHelper.PROJ_COPYRIGHTS)); 
 					} while (cursor.moveToNext());
-					String copyrightString = "";
-					
+					String copyrightString = TextUtils.join(" | ", copyrights);
 					TextView copyrightText = (TextView) findViewById(R.id.copyright_text);
 					copyrightText.setText(copyrightString);
 					
@@ -421,6 +423,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		Button btnNav = (Button) findViewById(R.id.btn_nav);
 		btnNav.setOnClickListener(new OnClickListener() {
 
+			@SuppressWarnings("deprecation")
 			public void onClick(View v) {
 				ArrayList<EventHolder> eventHolders = mEventHolders;
 				if (eventHolders.size() == 1) {
@@ -570,7 +573,8 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 				mDestList.add(eh.location);
 			}
 			builder.setTitle(R.string.dlg_nav_title)
-				   .setAdapter(new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, mDestList), 
+//				   .setAdapter(new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, mDestList), 
+				   .setAdapter(new EventListAdapter(context, R.layout.event_list_item, mEventCursor, true),
 						   new DialogInterface.OnClickListener() {
 							
 						public void onClick(DialogInterface dialog, int which) {
