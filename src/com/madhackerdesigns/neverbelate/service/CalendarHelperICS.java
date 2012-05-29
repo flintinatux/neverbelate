@@ -18,6 +18,16 @@ public class CalendarHelperICS extends CalendarHelper {
 	
 	
 	@Override
+	public String getEventLocationColumn() {
+		return CalendarContract.Events.EVENT_LOCATION;
+	}
+
+	@Override
+	public String getHasAlarmColumn() {
+		return CalendarContract.Events.HAS_ALARM;
+	}
+
+	@Override
 	public Uri getInstancesUri() {
 		return CalendarContract.Instances.CONTENT_URI;
 	}

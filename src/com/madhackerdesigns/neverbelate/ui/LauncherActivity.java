@@ -28,6 +28,7 @@ import com.google.ads.AdSize;
 import com.google.ads.AdView;
 import com.madhackerdesigns.neverbelate.Eula;
 import com.madhackerdesigns.neverbelate.R;
+import com.madhackerdesigns.neverbelate.service.CalendarHelper;
 import com.madhackerdesigns.neverbelate.service.StartupReceiver;
 import com.madhackerdesigns.neverbelate.settings.NeverBeLateSettings;
 import com.madhackerdesigns.neverbelate.settings.PreferenceHelper;
@@ -134,8 +135,10 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		((Button) findViewById(R.id.btn_create_event)).setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
+				CalendarHelper ch = CalendarHelper.createHelper();
 				Intent intent = new Intent(Intent.ACTION_EDIT);
 				intent.setType("vnd.android.cursor.item/event");
+				intent.putExtra(ch.getHasAlarmColumn(), 0);
 				startActivity(intent);
 			}
 			

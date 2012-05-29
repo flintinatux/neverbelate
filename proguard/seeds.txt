@@ -489,6 +489,7 @@ com.madhackerdesigns.neverbelate.settings.PrivacyPreference: PrivacyPreference(a
 com.madhackerdesigns.neverbelate.settings.WebsitePreference
 com.madhackerdesigns.neverbelate.settings.WebsitePreference: WebsitePreference(android.content.Context,android.util.AttributeSet,int)
 com.madhackerdesigns.neverbelate.settings.WebsitePreference: WebsitePreference(android.content.Context,android.util.AttributeSet)
+com.madhackerdesigns.neverbelate.ui.CreateNewEvent
 com.madhackerdesigns.neverbelate.ui.EdgeScrollView
 com.madhackerdesigns.neverbelate.ui.EdgeScrollView: EdgeScrollView(android.content.Context,android.util.AttributeSet)
 com.madhackerdesigns.neverbelate.ui.EdgeScrollView: EdgeScrollView(android.content.Context,android.util.AttributeSet,int)

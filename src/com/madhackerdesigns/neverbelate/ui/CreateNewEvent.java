@@ -2,11 +2,14 @@ package com.madhackerdesigns.neverbelate.ui;
 
 import android.app.Activity;
 import android.content.ContentResolver;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract.CommonDataKinds.StructuredPostal;
 import android.text.TextUtils;
 
+import com.madhackerdesigns.neverbelate.service.CalendarHelper;
 import com.madhackerdesigns.neverbelate.util.Logger;
 
 public class CreateNewEvent extends Activity {
@@ -26,19 +29,33 @@ public class CreateNewEvent extends Activity {
 		
 		// Determine the scheme of the Uri
 		String scheme = data.getScheme();
-		String destination;
+		String destination = "";
 		if (scheme.equals("geo")) {
 			// geo:0,0?q=Cartersville%2C GA  30120-8232
 			destination = data.getQuery().substring(2);
 		} else if (scheme.equals("content")) {
 			// content://com.android.contacts/data/2316
 			ContentResolver cr = getContentResolver();
-			Cursor cursor = cr.query(data, null, null, null, null);
-			String log = "Cursor columns are " + TextUtils.join(", ", cursor.getColumnNames());
-			Logger.v(LOG_TAG, log);
+			String[] projection = new String[] { StructuredPostal._ID, StructuredPostal.FORMATTED_ADDRESS };
+			Cursor cursor = cr.query(data, projection, null, null, null);
+			if (cursor.moveToFirst()) {
+				destination = cursor.getString(1);
+			}
 		}
 		
-		// Finish for now
+		// If we somehow didn't catch the destination, then die nicely
+		if (TextUtils.isEmpty(destination)) { finish(); }
+		
+		// Create new event with given destination
+		Logger.v(LOG_TAG, "Creating new event for location: " + destination);
+		CalendarHelper ch = CalendarHelper.createHelper();
+		Intent intent = new Intent(Intent.ACTION_EDIT);
+		intent.setType("vnd.android.cursor.item/event");
+		intent.putExtra(ch.getEventLocationColumn(), "*" + destination);  // TODO: Check user pref for mark
+		intent.putExtra(ch.getHasAlarmColumn(), 0);
+		startActivity(intent);
+		
+		// Now finish to get out of the way
 		finish();
 	}
 

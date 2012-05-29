@@ -753,6 +753,7 @@ com.madhackerdesigns.neverbelate.service.CalendarHelperBase:
     public static final java.lang.String ALL_DAY
     public static final java.lang.String DESCRIPTION
     public static final java.lang.String EVENT_LOCATION
+    public static final java.lang.String HAS_ALARM
     public static final java.lang.String TITLE
     public static final java.lang.String EVENT_ID
     public static final java.lang.String BEGIN
@@ -818,6 +819,8 @@ com.madhackerdesigns.neverbelate.settings.PrivacyPreference:
     38:40:public PrivacyPreference(android.content.Context)
 com.madhackerdesigns.neverbelate.settings.WebsitePreference:
     38:40:public WebsitePreference(android.content.Context)
+com.madhackerdesigns.neverbelate.ui.CreateNewEvent:
+    private static final java.lang.String LOG_TAG
 com.madhackerdesigns.neverbelate.ui.LauncherActivity:
     private static final boolean ADMOB
     private static final java.lang.String ADMOB_ID
@@ -885,7 +888,6 @@ com.madhackerdesigns.neverbelate.util.Logger:
     46:46:public static int i(java.lang.String,java.lang.String,java.lang.Throwable)
     51:51:public static boolean isLoggable(java.lang.String,int)
     55:55:public static int println(int,java.lang.String,java.lang.String)
-    59:59:public static int v(java.lang.String,java.lang.String)
     64:64:public static int v(java.lang.String,java.lang.String,java.lang.Throwable)
     69:69:public static int w(java.lang.String,java.lang.String)
     74:74:public static int w(java.lang.String,java.lang.Throwable)

@@ -42,7 +42,7 @@ public class CalendarHelperBase extends CalendarHelper {
 //		public static final String EVENT_TIMEZONE = "eventTimezone";
 //		public static final String EXDATE = "exdate";
 //		public static final String EXRULE = "exrule";
-//		public static final String HAS_ALARM = "hasAlarm";
+		public static final String HAS_ALARM = "hasAlarm";
 //		public static final String HAS_EXTENDED_PROPERTIES = "hasExtendedProperties";
 //		public static final String HTML_URI = "htmlUri";
 //		public static final String LAST_DATE = "lastDate";
@@ -115,6 +115,16 @@ public class CalendarHelperBase extends CalendarHelper {
 		mInstancesUri = Uri.parse(String.format("content://%s/instances/when",contentProvider));
 	}
 	
+	@Override
+	public String getEventLocationColumn() {
+		return EVENT_LOCATION;
+	}
+
+	@Override
+	public String getHasAlarmColumn() {
+		return HAS_ALARM;
+	}
+
 	@Override
 	public Uri getInstancesUri() {
 		return mInstancesUri;

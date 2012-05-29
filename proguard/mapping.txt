@@ -1961,18 +1961,24 @@ com.madhackerdesigns.neverbelate.reg.RegistrationForm$PrepopZipCodeTask -> com.m
     void onPostExecute(java.lang.Object) -> onPostExecute
     java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
 com.madhackerdesigns.neverbelate.service.CalendarHelper -> com.madhackerdesigns.neverbelate.service.a:
-    android.net.Uri getInstancesUri() -> a
-    java.lang.String[] getInstancesProjection() -> b
-    com.madhackerdesigns.neverbelate.service.CalendarHelper createHelper() -> c
+    java.lang.String getEventLocationColumn() -> a
+    java.lang.String getHasAlarmColumn() -> b
+    android.net.Uri getInstancesUri() -> c
+    java.lang.String[] getInstancesProjection() -> d
+    com.madhackerdesigns.neverbelate.service.CalendarHelper createHelper() -> e
 com.madhackerdesigns.neverbelate.service.CalendarHelperBase -> com.madhackerdesigns.neverbelate.service.CalendarHelperBase:
     java.lang.String[] INSTANCES_PROJECTION -> a
     android.net.Uri mInstancesUri -> b
-    android.net.Uri getInstancesUri() -> a
-    java.lang.String[] getInstancesProjection() -> b
+    java.lang.String getEventLocationColumn() -> a
+    java.lang.String getHasAlarmColumn() -> b
+    android.net.Uri getInstancesUri() -> c
+    java.lang.String[] getInstancesProjection() -> d
 com.madhackerdesigns.neverbelate.service.CalendarHelperICS -> com.madhackerdesigns.neverbelate.service.CalendarHelperICS:
     java.lang.String[] INSTANCES_PROJECTION -> a
-    android.net.Uri getInstancesUri() -> a
-    java.lang.String[] getInstancesProjection() -> b
+    java.lang.String getEventLocationColumn() -> a
+    java.lang.String getHasAlarmColumn() -> b
+    android.net.Uri getInstancesUri() -> c
+    java.lang.String[] getInstancesProjection() -> d
 com.madhackerdesigns.neverbelate.service.LocationReceiver -> com.madhackerdesigns.neverbelate.service.LocationReceiver:
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
 com.madhackerdesigns.neverbelate.service.NeverBeLateService -> com.madhackerdesigns.neverbelate.service.NeverBeLateService:
@@ -2063,6 +2069,8 @@ com.madhackerdesigns.neverbelate.settings.WebsitePreference -> com.madhackerdesi
     android.net.Uri WESBITE_URI -> a
     android.content.Context mContext -> b
     void onClick() -> onClick
+com.madhackerdesigns.neverbelate.ui.CreateNewEvent -> com.madhackerdesigns.neverbelate.ui.CreateNewEvent:
+    void onCreate(android.os.Bundle) -> onCreate
 com.madhackerdesigns.neverbelate.ui.EdgeScrollView -> com.madhackerdesigns.neverbelate.ui.EdgeScrollView:
     int edgeColor -> a
     int getSolidColor() -> getSolidColor
@@ -2187,15 +2195,16 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverb
     boolean mAdJustShown -> b
     com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> c
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler mHandler -> d
-    java.util.ArrayList mEventHolders -> e
-    java.util.List mDestList -> f
-    boolean mInsistentStopped -> g
-    com.google.android.maps.MapView mMapView -> h
-    android.widget.ViewSwitcher mSwitcher -> i
-    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay mUserLocationOverlay -> j
-    java.util.ArrayList mDest -> k
-    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay$OnLocationChangedListener mListener -> l
-    com.google.android.maps.GeoPoint mOrig -> m
+    android.database.Cursor mEventCursor -> e
+    java.util.ArrayList mEventHolders -> f
+    java.util.List mDestList -> g
+    boolean mInsistentStopped -> h
+    com.google.android.maps.MapView mMapView -> i
+    android.widget.ViewSwitcher mSwitcher -> j
+    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay mUserLocationOverlay -> k
+    java.util.ArrayList mDest -> l
+    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay$OnLocationChangedListener mListener -> m
+    com.google.android.maps.GeoPoint mOrig -> n
     void onCreate(android.os.Bundle) -> onCreate
     void loadAlertList() -> a
     void snoozeAlert() -> b
@@ -2210,18 +2219,19 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverb
     void onPause() -> onPause
     void onResume() -> onResume
     boolean isRouteDisplayed() -> isRouteDisplayed
-    java.util.ArrayList access$0(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> a
-    void access$1(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> b
-    com.madhackerdesigns.neverbelate.settings.PreferenceHelper access$2(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> c
-    void access$3(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> d
-    void access$4(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> e
-    void access$5(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> f
-    void access$6(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> g
-    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay access$7(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> h
-    void access$8(com.madhackerdesigns.neverbelate.ui.WarningDialog,java.lang.String) -> a
-    java.util.ArrayList access$9(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> i
-    com.google.android.maps.GeoPoint access$10(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> j
-    java.util.List access$11(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> k
+    void access$0(com.madhackerdesigns.neverbelate.ui.WarningDialog,android.database.Cursor) -> a
+    java.util.ArrayList access$1(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> a
+    void access$2(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> b
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper access$3(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> c
+    void access$4(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> d
+    void access$5(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> e
+    void access$6(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> f
+    void access$7(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> g
+    com.madhackerdesigns.neverbelate.ui.UserLocationOverlay access$8(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> h
+    void access$9(com.madhackerdesigns.neverbelate.ui.WarningDialog,java.lang.String) -> a
+    java.util.ArrayList access$10(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> i
+    com.google.android.maps.GeoPoint access$11(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> j
+    java.util.List access$12(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> k
 com.madhackerdesigns.neverbelate.ui.WarningDialog$1 -> com.madhackerdesigns.neverbelate.ui.u:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.view.View) -> onClick
@@ -2283,6 +2293,7 @@ com.madhackerdesigns.neverbelate.util.HttpRetriever -> com.madhackerdesigns.neve
 com.madhackerdesigns.neverbelate.util.Logger -> com.madhackerdesigns.neverbelate.util.Logger:
     int d(java.lang.String) -> a
     int d(java.lang.String,java.lang.String) -> a
+    int v(java.lang.String,java.lang.String) -> b
 com.madhackerdesigns.neverbelate.util.NetUtils -> com.madhackerdesigns.neverbelate.util.NetUtils:
     java.io.InputStream OpenHttpConnection(java.lang.String) -> a
     java.lang.String DownloadText(java.lang.String) -> b

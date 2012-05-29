@@ -21,6 +21,8 @@ public abstract class CalendarHelper {
 	public static final int PROJ_DESCRIPTION = 6;
 	public static final int PROJ_COLOR = 7;
 
+	public abstract String getEventLocationColumn();
+	public abstract String getHasAlarmColumn();
 	public abstract Uri getInstancesUri();
 	public abstract String[] getInstancesProjection();
 
