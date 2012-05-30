@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 
 public class PrivacyPreference extends Preference {
 
-	private static final Uri WESBITE_URI = Uri.parse("http://www.madhackerdesigns.com/privacy_policy.html");
+	private static final Uri WESBITE_URI = Uri.parse("http://www.madhackerdesigns.com/content/privacy_policy.html");
 	
 	private Context mContext;
 	

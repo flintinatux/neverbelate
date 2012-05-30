@@ -1,32 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="whats_new_title">What\'s new in NeverBeLate™</string>
-    <integer name="whats_new_version">17</integer>
-    <string name="whats_new_message">Version 1.1_build-19:\n\nAdded a Create New Event shortcut button to the 
-        launcher screen.\n
-        \nVersion 1.1_build-18:\n\nAdded experimental support for Android 4.0+ 
-        devices! If you have a device running Android 4.0 and above (ex: a Galaxy Nexus), please try it out 
-        and then send me some feedback about whether it works or not. Also solidified the traffic view design 
-        to prevent frequent force-closes when your location is slow to update.\n
-        \nVersion 1.1_build-17:\n\nFixed a bug to prevent force-closes associated 
-        with a null user location (such as when all location providers are disabled). Also revised the Quick 
-        Tour to make the setup process easier to understand.\n
-        \nVersion 1.1_build-16:\n\nAdded the new Quick Tour! It will help you get 
-        up and running quickly, and should answer some of the questions you may have about how to make 
-        NeverBeLate™ work for you.\n
-        \nVersion 1.0_build-15:\n\nMade the launcher screen scrollable to support 
-        devices with smaller screens. If you have a small-screen device, and you find that another feature in 
-        NeverBeLate™ does not fit properly on your screen, please send me some feedback to let me know!\n
-        \nVersion 1.0_build-14:\n\nAdjusted the warning dialog text to include the early
-        arrival parameter set by the user, and reduced the number of ads shown at the launcher screen.\n
-        \nVersion 1.0_build-13:\n\nAdded a new Early Arrival parameter to the Settings
-        menu. Set it for how early you wish to arrive at your destination, and NeverBeLate™ will account
-        for that extra time when determining what time to alert you for your next event. The default Early Arrival
-        value is five minutes.\n
-        \nVersion 1.0_build-12:\n\nAdded the ability to mark events for NeverBeLate™
-        to find by placing an asterisk or star (*) at the beginning of the event location. For example,
-        \"*221b Baker Street, London, UK\" or \"*Houston, TX\". Now if a coworker invites you to a meeting 
-        with a location of \"Conference Room 4b\", NeverBeLate™ will just ignore that event and will not 
-        warn you incorrectly. To enable marked events, simply check the box labeled \"Only marked events\"
-        in the Settings menu. Then start placing an asterisk or star (*) at the beginning of your searchable event locations.</string>
+    <string name="whats_new_title">What\'s new in NeverBeLate</string>
+    <integer name="whats_new_version">21</integer>
+    <string name="whats_new_message">- One-click Navigation from the Traffic View (AWESOME!)
+        \n- New \"Create new event\" button on main screen
+        \n- Can recognize addresses in emails and webpages to create new events
+        \n- Bug fixes to handle multiple consecutive events nicely</string>
 </resources>

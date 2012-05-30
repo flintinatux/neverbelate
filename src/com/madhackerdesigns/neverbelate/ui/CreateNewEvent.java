@@ -10,6 +10,7 @@ import android.provider.ContactsContract.CommonDataKinds.StructuredPostal;
 import android.text.TextUtils;
 
 import com.madhackerdesigns.neverbelate.service.CalendarHelper;
+import com.madhackerdesigns.neverbelate.settings.PreferenceHelper;
 import com.madhackerdesigns.neverbelate.util.Logger;
 
 public class CreateNewEvent extends Activity {
@@ -46,12 +47,18 @@ public class CreateNewEvent extends Activity {
 		// If we somehow didn't catch the destination, then die nicely
 		if (TextUtils.isEmpty(destination)) { finish(); }
 		
+		// Add star if marked events used
+		PreferenceHelper prefs = new PreferenceHelper(this);
+		if (prefs.isOnlyMarkedLocations()) {
+			destination = "*" + destination;
+		}
+		
 		// Create new event with given destination
 		Logger.v(LOG_TAG, "Creating new event for location: " + destination);
 		CalendarHelper ch = CalendarHelper.createHelper();
 		Intent intent = new Intent(Intent.ACTION_EDIT);
 		intent.setType("vnd.android.cursor.item/event");
-		intent.putExtra(ch.getEventLocationColumn(), "*" + destination);  // TODO: Check user pref for mark
+		intent.putExtra(ch.getEventLocationColumn(), destination);
 		intent.putExtra(ch.getHasAlarmColumn(), 0);
 		startActivity(intent);
 		
