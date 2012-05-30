@@ -4,7 +4,7 @@
 <!-- Strings for TOS and EULA Dialog -->
 	<string name="eula_accept">Accept</string>
 	<string name="eula_refuse">Refuse</string>
-	<string name="eula_title">NeverBeLate™ EULA</string>
+	<string name="eula_title">NeverBeLate EULA</string>
 	
 <!-- 	<string name="eula_text">In a nutshell, the creator of this software is not responsible for any harm -->
 <!-- 	    that may come to you while operating this software. Or for the software functioning as intended. -->
@@ -16,7 +16,7 @@
 \n
 <b>1.  LICENSE.</b>\n
 \n
-Mad Hacker Designs, LLC grants you a non-exclusive, non-transferable license to install and use the machine executable, byte-code version of NeverBeLate™ for Android, together with related documentation and updates thereto (the "Software") made available by Mad Hacker Designs, LLC solely for the purpose of using the Software in accordance with the accompanying electronic documentation.  You may use the Software for your own personal or internal business use and not in the operation of a service bureau or for the benefit of any other person or entity, including but not limited to, in connection with the development of another software program.  You may make one copy of the Software only for backup purposes, provided that all copyright and other proprietary notices are maintained on the copy of the Software.\n
+Mad Hacker Designs, LLC grants you a non-exclusive, non-transferable license to install and use the machine executable, byte-code version of NeverBeLate for Android, together with related documentation and updates thereto (the "Software") made available by Mad Hacker Designs, LLC solely for the purpose of using the Software in accordance with the accompanying electronic documentation.  You may use the Software for your own personal or internal business use and not in the operation of a service bureau or for the benefit of any other person or entity, including but not limited to, in connection with the development of another software program.  You may make one copy of the Software only for backup purposes, provided that all copyright and other proprietary notices are maintained on the copy of the Software.\n
 \n
 <b>2.  RESTRICTIONS.</b>\n 
 \n

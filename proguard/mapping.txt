@@ -1909,16 +1909,18 @@ com.madhackerdesigns.neverbelate.reg.RegistrationForm -> com.madhackerdesigns.ne
     com.madhackerdesigns.neverbelate.reg.CountriesDB mDB -> e
     com.madhackerdesigns.neverbelate.reg.Registration mRegistration -> f
     java.util.regex.Pattern EMAIL_PATTERN -> a
+    android.net.Uri WESBITE_URI -> g
     void onCreate(android.os.Bundle) -> onCreate
-    void bypassRegistration() -> a
-    void registerUser() -> b
+    void bypassRegistration() -> b
+    void registerUser() -> c
     android.app.Dialog onCreateDialog(int) -> onCreateDialog
     void setCountryCode(java.lang.String) -> a
     boolean isEmpty(java.lang.String) -> b
     void access$0(com.madhackerdesigns.neverbelate.reg.RegistrationForm,java.lang.String) -> a
-    void access$1(com.madhackerdesigns.neverbelate.reg.RegistrationForm) -> a
-    android.database.Cursor access$2(com.madhackerdesigns.neverbelate.reg.RegistrationForm) -> b
-    void access$3(com.madhackerdesigns.neverbelate.reg.RegistrationForm) -> c
+    android.net.Uri access$1() -> a
+    void access$2(com.madhackerdesigns.neverbelate.reg.RegistrationForm) -> a
+    android.database.Cursor access$3(com.madhackerdesigns.neverbelate.reg.RegistrationForm) -> b
+    void access$4(com.madhackerdesigns.neverbelate.reg.RegistrationForm) -> c
 com.madhackerdesigns.neverbelate.reg.RegistrationForm$1 -> com.madhackerdesigns.neverbelate.reg.g:
     com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
     void onClick(android.view.View) -> onClick
@@ -1930,7 +1932,7 @@ com.madhackerdesigns.neverbelate.reg.RegistrationForm$3 -> com.madhackerdesigns.
     void onClick(android.view.View) -> onClick
 com.madhackerdesigns.neverbelate.reg.RegistrationForm$4 -> com.madhackerdesigns.neverbelate.reg.j:
     com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
-    void onClick(android.content.DialogInterface,int) -> onClick
+    void onClick(android.view.View) -> onClick
 com.madhackerdesigns.neverbelate.reg.RegistrationForm$5 -> com.madhackerdesigns.neverbelate.reg.k:
     com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
@@ -1943,18 +1945,21 @@ com.madhackerdesigns.neverbelate.reg.RegistrationForm$7 -> com.madhackerdesigns.
 com.madhackerdesigns.neverbelate.reg.RegistrationForm$8 -> com.madhackerdesigns.neverbelate.reg.n:
     com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.reg.RegistrationForm$NameResult -> com.madhackerdesigns.neverbelate.reg.o:
+com.madhackerdesigns.neverbelate.reg.RegistrationForm$9 -> com.madhackerdesigns.neverbelate.reg.o:
+    com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.madhackerdesigns.neverbelate.reg.RegistrationForm$NameResult -> com.madhackerdesigns.neverbelate.reg.p:
     java.lang.String displayName -> a
     java.lang.String givenName -> b
     java.lang.String familyName -> c
     com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> d
-com.madhackerdesigns.neverbelate.reg.RegistrationForm$PrepopNames -> com.madhackerdesigns.neverbelate.reg.p:
+com.madhackerdesigns.neverbelate.reg.RegistrationForm$PrepopNames -> com.madhackerdesigns.neverbelate.reg.q:
     com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
     com.madhackerdesigns.neverbelate.reg.RegistrationForm$NameResult doInBackground(java.lang.String[]) -> a
     void onPostExecute(com.madhackerdesigns.neverbelate.reg.RegistrationForm$NameResult) -> a
     void onPostExecute(java.lang.Object) -> onPostExecute
     java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-com.madhackerdesigns.neverbelate.reg.RegistrationForm$PrepopZipCodeTask -> com.madhackerdesigns.neverbelate.reg.q:
+com.madhackerdesigns.neverbelate.reg.RegistrationForm$PrepopZipCodeTask -> com.madhackerdesigns.neverbelate.reg.r:
     com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
     com.madhackerdesigns.neverbelate.reg.GeoCodeResult doInBackground(java.lang.Object[]) -> a
     void onPostExecute(com.madhackerdesigns.neverbelate.reg.GeoCodeResult) -> a

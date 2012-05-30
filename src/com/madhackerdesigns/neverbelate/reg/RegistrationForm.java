@@ -32,6 +32,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.ContactsContract.CommonDataKinds.Email;
@@ -84,6 +85,8 @@ public class RegistrationForm extends Activity {
 	            "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
 	            ")+"
 	        );
+	
+	private static final Uri WESBITE_URI = Uri.parse("http://www.madhackerdesigns.com/content/privacy_policy.html");
     
 	/* (non-Javadoc)
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
@@ -142,6 +145,19 @@ public class RegistrationForm extends Activity {
 		
 		// Pre-pop the country code and zip code
 		(new PrepopZipCodeTask()).execute();
+		
+		// Setup the privacy policy link
+		TextView privacyLink = (TextView) findViewById(R.id.privacy_link);
+		privacyLink.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				// Launch the website
+				Intent intent = new Intent(Intent.ACTION_VIEW, WESBITE_URI);
+				intent.addCategory(Intent.CATEGORY_BROWSABLE);
+				startActivity(intent);
+			}
+			
+		});
 		
 		// Set the OnClick behavior of the decline text
 		TextView declineText = (TextView) findViewById(R.id.decline_text);

@@ -2,8 +2,8 @@
 <resources>
     <string name="whats_new_title">What\'s new in NeverBeLate</string>
     <integer name="whats_new_version">21</integer>
-    <string name="whats_new_message">- One-click Navigation from the Traffic View (AWESOME!)
-        \n- New \"Create new event\" button on main screen
-        \n- Can recognize addresses in emails and webpages to create new events
-        \n- Bug fixes to handle multiple consecutive events nicely</string>
+    <string name="whats_new_message">1. Powerful new one-click Navigation from the Traffic View.
+        \n\n2. Handy new \"Create new event\" button on main screen.
+        \n\n3. Now can recognize addresses in emails and webpages to create new events.
+        \n\n4. Several bug fixes to stop force-closes and handle multiple consecutive events nicely.</string>
 </resources>

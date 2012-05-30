@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string name="qt_intro_header">Thanks for installing NeverBeLate™!</string>
+    <string name="qt_intro_header">Thanks for installing NeverBeLate!</string>
     <string name="qt_intro_message">Congratulations on the first step toward taking control of your schedule 
         and eliminating lateness in your professional and personal life.\n\nThis quick tour is simple 
         to use: swipe left and right to move between pages, and swipe up and down to scroll.\n\nNow swipe 
         to the next page to get started!</string>
     <string name="qt_skip_tour">... or skip the tour.</string>
     
-    <string name="qt_enable_header">Enabling NeverBeLate™</string>
-    <string name="qt_enable_message_1">Turning on the NeverBeLate™ Advance Warning system is simple. On the main
+    <string name="qt_enable_header">Enabling NeverBeLate</string>
+    <string name="qt_enable_message_1">Turning on the NeverBeLate Advance Warning system is simple. On the main
         screen you will find a checkbox just the like the one below. Just check the box, and then rest easy knowing
-        that NeverBeLate™ is working behind the scenes to keep you on time to all of your events.</string>
-    <string name="qt_enable_message_2">Well, there is actually one more thing that NeverBeLate™ needs to
+        that NeverBeLate is working behind the scenes to keep you on time to all of your events.</string>
+    <string name="qt_enable_message_2">Well, there is actually one more thing that NeverBeLate needs to
         work properly. Swipe to the next page to learn what it is!</string>
     
     <string name="qt_searchable_header">An Event with a Searchable Address</string>
-    <string name="qt_searchable_message_1">To add an event for NeverBeLate™ to warn you about, first go 
+    <string name="qt_searchable_message_1">To add an event for NeverBeLate to warn you about, first go 
         to your favorite calendar app.  It may be labeled just \"Calendar\" in your app drawer. Then create a new 
         event for your next appointment.  In the \"Where\" or \"Location\" field of the new event, enter a 
         searchable address.\n\nThe simplest definition for a searchable address is one that you can 
-        search for in Google Maps. When you create a new event in your favorite calendar app, NeverBeLate™ 
+        search for in Google Maps. When you create a new event in your favorite calendar app, NeverBeLate 
         needs the event location to be a searchable address so that it can determine travel distances and 
         times correctly. Good examples are \"221b Baker Street, London, UK\", or if you\'re in a hurry, 
         just \"Atlanta, GA\" or even \"77059\". A good tradeoff between accuracy and speed of entry is to 
         enter just the street address and the postal code, as shown in the example below.</string>
     <string name="qt_where">Where</string>
     <string name="qt_sample_location">30 Rockefeller, 10112</string>
-    <string name="qt_searchable_message_2">When you save the event, you are done! NeverBeLate™ will find 
+    <string name="qt_searchable_message_2">When you save the event, you are done! NeverBeLate will find 
         your event automatically, and use the location that you entered to help it decide when you should 
-        leave to arrive on time. If you leave the location field of an event empty, NeverBeLate™ will simply 
+        leave to arrive on time. If you leave the location field of an event empty, NeverBeLate will simply 
         ignore it. Looks pretty easy, doesn\'t it?</string>
     
     <string name="qt_marked_header">Marked Events</string>
     <string name="qt_marked_message_1">\"But what if I want to use both general locations and searchable 
         addresses in my calendar?\" Now you can! A new marked events feature has been added to help tell 
-        NeverBeLate™ which events you want it to find. Enabling marked events is simple: look in the Settings 
+        NeverBeLate which events you want it to find. Enabling marked events is simple: look in the Settings 
         menu to find the \"Only marked events\" option shown below, and check the box.</string>
     <string name="qt_marked_message_2">Then start placing an asterisk or star (*) at the beginning of your 
-        searchable event locations, just like this: \"*Atlanta, GA\". NeverBeLate™ will then only look for 
+        searchable event locations, just like this: \"*Atlanta, GA\". NeverBeLate will then only look for 
         the marked events, and will ignore the rest. Next time a coworker invites you to a meeting in 
-        \"Joe\'s office\" (not a searchable address), NeverBeLate™ won\'t incorrectly warn you that \"Joe\'s 
+        \"Joe\'s office\" (not a searchable address), NeverBeLate won\'t incorrectly warn you that \"Joe\'s 
         office\" is 895 minutes away!</string>
     
     <string name="qt_traffic_header">Check the Traffic</string>
-    <string name="qt_traffic_message_1">One of the most powerful features of NeverBeLate™ is the instant opportunity
+    <string name="qt_traffic_message_1">One of the most powerful features of NeverBeLate is the instant opportunity
         to check the traffic between where you are now and where you need to be. When an Advance Warning 
         dialog pops up to warn you that it is time to leave for your next event, you will see a large green 
         button just like the one below.</string>
@@ -54,13 +54,13 @@
         to leave as soon as possible!</string>
     
     <string name="qt_final_header">Just the Beginning</string>
-    <string name="qt_final_message_1">These few steps cover just the basics of putting NeverBeLate™ to work for 
+    <string name="qt_final_message_1">These few steps cover just the basics of putting NeverBeLate to work for 
         you. I challenge you to explore the settings menu to discover new ways to adjust the performance of 
-        NeverBeLate™ to fit your lifestyle and travel needs. You can adjust the travel method, the early arrival 
+        NeverBeLate to fit your lifestyle and travel needs. You can adjust the travel method, the early arrival 
         time, and your preferred notification method, just to name a few.</string>
     <string name="qt_final_message_2">A good productivity app should help you get more done with less effort. 
-        NeverBeLate™ is designed to be an indispensable tool that blends with your favorite calendar app 
+        NeverBeLate is designed to be an indispensable tool that blends with your favorite calendar app 
         and makes sticking to your schedule an effortless task. Test it for yourself: go create a test event 
-        in your calendar, and let NeverBeLate™ take care of the reminder!</string>
+        in your calendar, and let NeverBeLate take care of the reminder!</string>
     <string name="qt_finish_button">Done</string>
 </resources>

@@ -20,9 +20,9 @@
 	<string name="male">male</string>
 	<string name="no_code">(I don\'t have one...)</string>
 	<string name="privacy_link_text">Privacy Policy</string>
-	<string name="reg_copy_default">Thanks for downloading NeverBeLate™! Please register your copy of the app before continuing.</string>
+	<string name="reg_copy_default">Thanks for downloading NeverBeLate! Please register your copy of the app before continuing.</string>
 	<string name="register">Register now!</string>
-	<string name="reg_form_title">Register for NeverBeLate™</string>
+	<string name="reg_form_title">Register for NeverBeLate</string>
 	<string name="postal_code">Postal code</string>
 	<string name="postal_code_hint">90210</string>
 	<string name="zip_code">Zip code</string>
@@ -30,18 +30,18 @@
 <!--DIALOG VALUES-->
 
 	<string name="dialog_decline_title">Wait!</string>
-	<string name="dialog_decline_message">You have not completed registering your copy of NeverBeLate™! Click 
+	<string name="dialog_decline_message">You have not completed registering your copy of NeverBeLate! Click 
 	    \"Continue\" below to finish the registration process.</string>
 	<string name="dialog_decline_btn_no">Continue</string>
 	<string name="dialog_decline_btn_yes">Cancel</string>
 	
 	<string name="dialog_incomplete_title">Oops!</string>
 	<string name="dialog_incomplete_message">Please complete all fields of the form to register your copy 
-	    of NeverBeLate™.</string>
+	    of NeverBeLate.</string>
 	<string name="dialog_incomplete_btn_ok">Go back</string>
 	
 	<string name="dialog_thanks_title">Hey, thanks!</string>
-	<string name="dialog_thanks_message">You have successfully registered your copy of NeverBeLate™.
+	<string name="dialog_thanks_message">You have successfully registered your copy of NeverBeLate.
 		Now click \"Continue\" below to get started!</string>
 	<string name="dialog_thanks_btn_ok">Continue</string>
 	
