@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract.CommonDataKinds.StructuredPostal;
 import android.text.TextUtils;
+import android.widget.Toast;
 
 import com.madhackerdesigns.neverbelate.service.CalendarHelper;
 import com.madhackerdesigns.neverbelate.settings.PreferenceHelper;
@@ -30,10 +31,17 @@ public class CreateNewEvent extends Activity {
 		
 		// Determine the scheme of the Uri
 		String scheme = data.getScheme();
+		String host = data.getHost();
 		String destination = "";
-		if (scheme.equals("geo")) {
-			// geo:0,0?q=Cartersville%2C GA  30120-8232
-			destination = data.getQuery().substring(2);
+		if (scheme.equals("geo") || host.equals("maps.google.com")) {
+			try {
+				// geo:0,0?q=Cartersville%2C GA  30120-8232
+				// http://maps.google.com/maps?q=500 Townpark Lane%2C Suite 275%2C Kennesaw%2C GA 30144-5509
+				destination = data.getQuery().substring(2);
+			} catch (IndexOutOfBoundsException e) {
+				e.printStackTrace();
+				Toast.makeText(this, "Oops! No location found.", Toast.LENGTH_SHORT).show();
+			}
 		} else if (scheme.equals("content")) {
 			// content://com.android.contacts/data/2316
 			ContentResolver cr = getContentResolver();

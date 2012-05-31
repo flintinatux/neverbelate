@@ -80,6 +80,12 @@
 	    <category android:name="android.intent.category.BROWSABLE"/>
 	    <data android:scheme="geo"/>
 	</intent-filter>
+	<intent-filter android:label="Create new event">
+	    <action android:name="android.intent.action.VIEW"/>
+	    <category android:name="android.intent.category.DEFAULT"/>
+	    <category android:name="android.intent.category.BROWSABLE"/>
+	    <data android:scheme="http" android:host="maps.google.com"/>
+	</intent-filter>
 </activity>
     
 </application>
