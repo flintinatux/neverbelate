@@ -185,6 +185,7 @@ com.madhackerdesigns.neverbelate.R$id: int btn_create_event
 com.madhackerdesigns.neverbelate.R$id: int btn_enable
 com.madhackerdesigns.neverbelate.R$id: int btn_nav
 com.madhackerdesigns.neverbelate.R$id: int btn_quick_tour
+com.madhackerdesigns.neverbelate.R$id: int btn_rate_dlg
 com.madhackerdesigns.neverbelate.R$id: int btn_reg_form
 com.madhackerdesigns.neverbelate.R$id: int btn_register
 com.madhackerdesigns.neverbelate.R$id: int btn_share
@@ -282,6 +283,7 @@ com.madhackerdesigns.neverbelate.R$string: int btn_enable_text
 com.madhackerdesigns.neverbelate.R$string: int btn_nav_text
 com.madhackerdesigns.neverbelate.R$string: int btn_optin_text
 com.madhackerdesigns.neverbelate.R$string: int btn_quick_tour_text
+com.madhackerdesigns.neverbelate.R$string: int btn_rate_dlg_text
 com.madhackerdesigns.neverbelate.R$string: int btn_reg_form_text
 com.madhackerdesigns.neverbelate.R$string: int btn_share_text
 com.madhackerdesigns.neverbelate.R$string: int btn_video_tour_text
@@ -326,6 +328,8 @@ com.madhackerdesigns.neverbelate.R$string: int dlg_first_time_title
 com.madhackerdesigns.neverbelate.R$string: int dlg_nav_title
 com.madhackerdesigns.neverbelate.R$string: int dlg_qt_msg
 com.madhackerdesigns.neverbelate.R$string: int dlg_qt_title
+com.madhackerdesigns.neverbelate.R$string: int dlg_rate_msg
+com.madhackerdesigns.neverbelate.R$string: int dlg_rate_title
 com.madhackerdesigns.neverbelate.R$string: int email
 com.madhackerdesigns.neverbelate.R$string: int email_hint
 com.madhackerdesigns.neverbelate.R$string: int eula_accept
@@ -341,7 +345,6 @@ com.madhackerdesigns.neverbelate.R$string: int first_name_hint
 com.madhackerdesigns.neverbelate.R$string: int gender
 com.madhackerdesigns.neverbelate.R$string: int last_name
 com.madhackerdesigns.neverbelate.R$string: int last_name_hint
-com.madhackerdesigns.neverbelate.R$string: int loading_text
 com.madhackerdesigns.neverbelate.R$string: int male
 com.madhackerdesigns.neverbelate.R$string: int maps_data
 com.madhackerdesigns.neverbelate.R$string: int minutes_early
@@ -378,6 +381,7 @@ com.madhackerdesigns.neverbelate.R$string: int qt_traffic_header
 com.madhackerdesigns.neverbelate.R$string: int qt_traffic_message_1
 com.madhackerdesigns.neverbelate.R$string: int qt_traffic_message_2
 com.madhackerdesigns.neverbelate.R$string: int qt_where
+com.madhackerdesigns.neverbelate.R$string: int rate_it
 com.madhackerdesigns.neverbelate.R$string: int reg_copy_default
 com.madhackerdesigns.neverbelate.R$string: int reg_form_title
 com.madhackerdesigns.neverbelate.R$string: int register
@@ -651,6 +655,7 @@ com.viewpagerindicator.R$id: int btn_create_event
 com.viewpagerindicator.R$id: int btn_enable
 com.viewpagerindicator.R$id: int btn_nav
 com.viewpagerindicator.R$id: int btn_quick_tour
+com.viewpagerindicator.R$id: int btn_rate_dlg
 com.viewpagerindicator.R$id: int btn_reg_form
 com.viewpagerindicator.R$id: int btn_register
 com.viewpagerindicator.R$id: int btn_share
@@ -748,6 +753,7 @@ com.viewpagerindicator.R$string: int btn_enable_text
 com.viewpagerindicator.R$string: int btn_nav_text
 com.viewpagerindicator.R$string: int btn_optin_text
 com.viewpagerindicator.R$string: int btn_quick_tour_text
+com.viewpagerindicator.R$string: int btn_rate_dlg_text
 com.viewpagerindicator.R$string: int btn_reg_form_text
 com.viewpagerindicator.R$string: int btn_share_text
 com.viewpagerindicator.R$string: int btn_video_tour_text
@@ -792,6 +798,8 @@ com.viewpagerindicator.R$string: int dlg_first_time_title
 com.viewpagerindicator.R$string: int dlg_nav_title
 com.viewpagerindicator.R$string: int dlg_qt_msg
 com.viewpagerindicator.R$string: int dlg_qt_title
+com.viewpagerindicator.R$string: int dlg_rate_msg
+com.viewpagerindicator.R$string: int dlg_rate_title
 com.viewpagerindicator.R$string: int email
 com.viewpagerindicator.R$string: int email_hint
 com.viewpagerindicator.R$string: int eula_accept
@@ -807,7 +815,6 @@ com.viewpagerindicator.R$string: int first_name_hint
 com.viewpagerindicator.R$string: int gender
 com.viewpagerindicator.R$string: int last_name
 com.viewpagerindicator.R$string: int last_name_hint
-com.viewpagerindicator.R$string: int loading_text
 com.viewpagerindicator.R$string: int male
 com.viewpagerindicator.R$string: int maps_data
 com.viewpagerindicator.R$string: int minutes_early
@@ -844,6 +851,7 @@ com.viewpagerindicator.R$string: int qt_traffic_header
 com.viewpagerindicator.R$string: int qt_traffic_message_1
 com.viewpagerindicator.R$string: int qt_traffic_message_2
 com.viewpagerindicator.R$string: int qt_where
+com.viewpagerindicator.R$string: int rate_it
 com.viewpagerindicator.R$string: int reg_copy_default
 com.viewpagerindicator.R$string: int reg_form_title
 com.viewpagerindicator.R$string: int register

@@ -91,6 +91,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	private PreferenceHelper mPrefs;
 	private static final String PREF_ALERT_STATS = "alert_stats";
 	private static final String KEY_ALERT_COUNT = "alert_stats.alert_count";
+	private static final String KEY_RATED_ALREADY = "alert_stats.rated_already";
 	
 	// other fields
 	private AlertQueryHandler mHandler;
@@ -304,8 +305,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 					public void onClick(View v) {
 						// Snooze the alert, and finish the activity
 						snoozeAlert();
-						showRateDialog();
-						finish();
+						showRateDialogAndFinish();
 					}
 					
 				});
@@ -328,8 +328,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 				public void onClick(View v) {
 					// For now, to dismiss, cancel notification and finish
 					dismissAlert();
-					showRateDialog();
-					finish();
+					showRateDialogAndFinish();
 				}
 				
 			});
@@ -378,12 +377,20 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		startService(cancelIntent);
 	}
 	
-	private void showRateDialog() {
-		SharedPreferences alertStatus = getSharedPreferences(PREF_ALERT_STATS, Activity.MODE_PRIVATE);
-		long count = alertStatus.getLong(KEY_ALERT_COUNT, 1);
-		alertStatus.edit().putLong(KEY_ALERT_COUNT, ++count).commit();
-		if (count % 10 == 0) {
-			showDialog(DLG_RATE);
+	@SuppressWarnings("deprecation")
+	private void showRateDialogAndFinish() {
+		SharedPreferences alertStats = getSharedPreferences(PREF_ALERT_STATS, Activity.MODE_PRIVATE);
+		if (! alertStats.getBoolean(KEY_RATED_ALREADY, false)) {
+			long count = alertStats.getLong(KEY_ALERT_COUNT, 1);
+			alertStats.edit().putLong(KEY_ALERT_COUNT, ++count).commit();
+			// Show rate dialog after every 8 alerts shown
+			if (count % 8 == 0) {
+				showDialog(DLG_RATE);
+			} else {
+				finish();
+			}
+		} else {
+			finish();
 		}
 	}
 	
@@ -607,11 +614,18 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 					
 						public void onClick(DialogInterface dialog, int which) {
 							// Send user to app details page
+							SharedPreferences alertStats = getSharedPreferences(PREF_ALERT_STATS, Activity.MODE_PRIVATE);
+							alertStats.edit().putBoolean(KEY_RATED_ALREADY, true).commit();
 							startActivity(new Intent(Intent.ACTION_VIEW, APP_DETAILS_URI));
+							finish();
 						}
-						
 					})
-					.setNegativeButton(R.string.decline_text, null);
+					.setNegativeButton(R.string.decline_text, new DialogInterface.OnClickListener() {
+						
+						public void onClick(DialogInterface dialog, int which) {
+							finish();
+						}
+					});
 			break;
 		}
 		

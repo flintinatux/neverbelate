@@ -848,6 +848,10 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog:
     private static final java.lang.String TAG_ALERT_LIST
     private static final java.lang.String TAG_TRAFFIC_VIEW
     private static final int DLG_NAV
+    private static final int DLG_RATE
+    private static final java.lang.String PREF_ALERT_STATS
+    private static final java.lang.String KEY_ALERT_COUNT
+    private static final java.lang.String KEY_RATED_ALREADY
 com.madhackerdesigns.neverbelate.ui.WarningDialog$MapBounds:
     private static final double RATIO
 com.madhackerdesigns.neverbelate.util.AdHelper:
@@ -929,14 +933,14 @@ com.viewpagerindicator.R$dimen:
 com.viewpagerindicator.R$drawable
 com.viewpagerindicator.R$id
 com.viewpagerindicator.R$integer:
-    447:447:public R$integer()
+    448:448:public R$integer()
 com.viewpagerindicator.R$layout:
-    452:452:public R$layout()
+    453:453:public R$layout()
 com.viewpagerindicator.R$string
 com.viewpagerindicator.R$style:
-    646:646:public R$style()
+    650:650:public R$style()
 com.viewpagerindicator.R$styleable:
-    678:678:public R$styleable()
+    682:682:public R$styleable()
 com.viewpagerindicator.R$xml
 com.viewpagerindicator.TitlePageIndicator:
     private static final float SELECTION_FADE_PERCENTAGE

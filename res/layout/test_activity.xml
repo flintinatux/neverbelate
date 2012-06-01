@@ -38,5 +38,12 @@
 		android:layout_height="wrap_content"
 		android:padding="20dip"
 		android:text="@string/btn_reg_form_text" />
+		
+	<Button
+		android:id="@+id/btn_rate_dlg"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="20dip"
+		android:text="@string/btn_rate_dlg_text" />
 
 </LinearLayout>

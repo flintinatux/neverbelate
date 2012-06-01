@@ -56,7 +56,7 @@
         <action android:name="android.intent.action.MAIN"></action>
     </intent-filter>
 </activity>
-<activity android:name=".ui.LauncherActivity">
+<activity android:name=".ui.LauncherActivity" android:launchMode="singleTask">
         </activity>
 <receiver android:name=".service.WakefulServiceReceiver" android:process=":remote"/>
 <provider android:name=".provider.AlertsProvider" android:authorities="com.madhackerdesigns.neverbelate.provider.AlertsContract" android:exported="false" />
