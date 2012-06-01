@@ -200,14 +200,14 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		case DLG_FIRST_TIME:
 			builder.setTitle(R.string.dlg_first_time_title)
 				   .setMessage(R.string.dlg_first_time_msg)
-			       .setCancelable(false)
 			       .setPositiveButton(R.string.create_event, new DialogInterface.OnClickListener() {
 			           public void onClick(DialogInterface dialog, int id) {
 			        	   Intent intent = new Intent(Intent.ACTION_EDIT);
 			               intent.setType("vnd.android.cursor.item/event");
 			               startActivity(intent);
 			           }
-			       });
+			       })
+			       .setNegativeButton(R.string.decline_text, null);
 			break;
 		case DLG_WHATS_NEW:
 			builder.setTitle(R.string.whats_new_title)

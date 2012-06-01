@@ -5,7 +5,7 @@
     <string name="app_title">NeverBeLate Settings</string>
     <string name="app_version">App version</string>
     <string name="base_task">com.madhackerdesigns.neverbelate.base_task</string>
-    <string name="version_name">build-21</string>
+    <string name="version_name">build-22</string>
 
 <!-- Admob Publisher ID -->
 	<string name="admob_id">a14d952e8939105</string>
@@ -59,6 +59,11 @@
     <string name="default_event_title">Default Event Title</string>
     <string name="default_travel_time">25 min\naway</string>
     <string name="dlg_nav_title">Choose your destination</string>
+    <string name="dlg_rate_title">Please rate my app!</string>
+    <string name="dlg_rate_msg">It looks like you are getting lots of use out of NeverBeLate\'s
+        Advance Warning system! Please do me a favor, and take the next 15 seconds to rate my app
+        so that others can see how much you like it.</string>
+    <string name="rate_it">Rate it now</string>
     <string name="maps_data">Maps data</string>
     <string name="minutes_early">minutes early</string>
     <string name="on_time">on time</string>

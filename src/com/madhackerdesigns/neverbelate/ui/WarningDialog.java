@@ -13,6 +13,7 @@ import java.util.Set;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -22,6 +23,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
@@ -33,7 +35,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -71,6 +72,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	
 	// static strings for intent stuff
 	private static final String PACKAGE_NAME = "com.madhackerdesigns.neverbelate";
+	private static final Uri APP_DETAILS_URI = Uri.parse("market://details?id=" + PACKAGE_NAME);
 	public static final String EXTRA_URI = PACKAGE_NAME + ".uri";
 	private static final String MAPS_URL = "http://maps.google.com/maps";
 	
@@ -80,12 +82,15 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	
 	// Dialog id's
 	private static final int DLG_NAV = 0;
+	private static final int DLG_RATE = 1;
 		
 	// fields to hold shared preferences and ad stuff
 	private AdHelper mAdHelper;
 //	private IAdManager mAdManager;
 	private boolean mAdJustShown = false;
 	private PreferenceHelper mPrefs;
+	private static final String PREF_ALERT_STATS = "alert_stats";
+	private static final String KEY_ALERT_COUNT = "alert_stats.alert_count";
 	
 	// other fields
 	private AlertQueryHandler mHandler;
@@ -299,6 +304,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 					public void onClick(View v) {
 						// Snooze the alert, and finish the activity
 						snoozeAlert();
+						showRateDialog();
 						finish();
 					}
 					
@@ -322,6 +328,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 				public void onClick(View v) {
 					// For now, to dismiss, cancel notification and finish
 					dismissAlert();
+					showRateDialog();
 					finish();
 				}
 				
@@ -369,6 +376,15 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		Intent cancelIntent = new Intent(context, NeverBeLateService.class);
 		cancelIntent.putExtra(EXTRA_SERVICE_COMMAND, DISMISS);
 		startService(cancelIntent);
+	}
+	
+	private void showRateDialog() {
+		SharedPreferences alertStatus = getSharedPreferences(PREF_ALERT_STATS, Activity.MODE_PRIVATE);
+		long count = alertStatus.getLong(KEY_ALERT_COUNT, 1);
+		alertStatus.edit().putLong(KEY_ALERT_COUNT, ++count).commit();
+		if (count % 10 == 0) {
+			showDialog(DLG_RATE);
+		}
 	}
 	
 	private void stopInsistentAlarm() {
@@ -582,6 +598,20 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 							startNavigation(mDestList.get(which));
 						}
 					});
+			break;
+		case DLG_RATE:
+			// Build a "rate my app" dialog
+			builder.setTitle(R.string.dlg_rate_title)
+				   .setMessage(R.string.dlg_rate_msg)
+				   .setPositiveButton(R.string.rate_it, new DialogInterface.OnClickListener() {
+					
+						public void onClick(DialogInterface dialog, int which) {
+							// Send user to app details page
+							startActivity(new Intent(Intent.ACTION_VIEW, APP_DETAILS_URI));
+						}
+						
+					})
+					.setNegativeButton(R.string.decline_text, null);
 			break;
 		}
 		
