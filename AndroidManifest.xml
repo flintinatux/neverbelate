@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.madhackerdesigns.neverbelate"
-    android:versionCode="22"
+    android:versionCode="23"
     android:versionName="@string/version_name">
     
     <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="15" />
@@ -72,7 +72,7 @@
     <intent-filter android:label="Create new event">
 	    <action android:name="android.intent.action.VIEW" />
 	    <category android:name="android.intent.category.DEFAULT" />
-	    <data android:mimeType="vnd.android.cursor.item/postal-address_v2" />
+		<data android:mimeType="vnd.android.cursor.item/postal-address_v2" />
 	</intent-filter>
 	<intent-filter android:label="Create new event">
 	    <action android:name="android.intent.action.VIEW"/>
@@ -86,6 +86,16 @@
 	    <category android:name="android.intent.category.BROWSABLE"/>
 	    <data android:scheme="http" android:host="maps.google.com"/>
 	</intent-filter>
+<!-- 	<intent-filter android:label="Create new event"> -->
+<!-- 	    <action android:name="android.intent.action.INSERT"/> -->
+<!-- 	    <category android:name="android.intent.category.DEFAULT"/> -->
+<!-- 	    <data android:scheme="content" android:host="contacts" android:path="people" /> -->
+<!-- 	</intent-filter> -->
+<!-- 	<intent-filter android:label="Create new event"> -->
+<!-- 	    <action android:name="android.intent.action.INSERT"/> -->
+<!-- 	    <category android:name="android.intent.category.DEFAULT"/> -->
+<!-- 	    <data android:scheme="content" android:host="com.android.contacts" android:path="contacts" /> -->
+<!-- 	</intent-filter> -->
 </activity>
     
 </application>

@@ -24,6 +24,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
@@ -33,9 +36,11 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
@@ -80,6 +85,10 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	private static final String TAG_ALERT_LIST = "alert_list";
 	private static final String TAG_TRAFFIC_VIEW = "traffic_view";
 	
+	// Maps API keys
+	private static final String MAPS_API_DEBUG = "09UCTg-5fHNGM1co-a60SYy42aJanoXio4xB0oQ";
+	private static final String MAPS_API_PRODUCTION = "09UCTg-5fHNFjWw-FcMUvJPaLH_YTUiHB5gh1Kg";
+	
 	// Dialog id's
 	private static final int DLG_NAV = 0;
 	private static final int DLG_RATE = 1;
@@ -111,6 +120,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	/* (non-Javadoc)
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
 	 */
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -135,8 +145,21 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		mSwitcher = switcher;
 		Logger.d(LOG_TAG, "ViewSwitcher loaded.");
 		
+		if (mMapView == null) {
+			// Inflate the MapView, and pass correct API key based on debug mode
+			boolean debugMode = false;
+			try {
+				PackageInfo pinfo = getPackageManager().getPackageInfo(PACKAGE_NAME, 0);
+				debugMode = (pinfo.applicationInfo.flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0;
+			} catch (NameNotFoundException e) {
+				e.printStackTrace();
+			}
+			LinearLayout layout = (LinearLayout) findViewById(R.id.mapview);
+			mMapView = new MapView(this, debugMode ? MAPS_API_DEBUG : MAPS_API_PRODUCTION);
+			layout.addView(mMapView, LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
+		}
+		
 		// Enable the user location to the map (early, to feed the location to the AdMob banner)
-		if (mMapView == null) { mMapView = (MapView) findViewById(R.id.mapview); }
 		mUserLocationOverlay = new UserLocationOverlay(this, mMapView);
 		boolean providersEnabled = mUserLocationOverlay.enableMyLocation();
 		if (providersEnabled) { 

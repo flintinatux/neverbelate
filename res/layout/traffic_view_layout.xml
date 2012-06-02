@@ -2,12 +2,17 @@
 <FrameLayout
 	xmlns:android="http://schemas.android.com/apk/res/android" >
 
-	<com.google.android.maps.MapView
-		android:id="@+id/mapview"
-		android:layout_height="fill_parent"
-		android:layout_width="fill_parent"
-		android:clickable="true"
-		android:apiKey="09UCTg-5fHNFjWw-FcMUvJPaLH_YTUiHB5gh1Kg" />
+<!-- 	<com.google.android.maps.MapView -->
+<!-- 		android:id="@+id/mapview" -->
+<!-- 		android:layout_height="fill_parent" -->
+<!-- 		android:layout_width="fill_parent" -->
+<!-- 		android:clickable="true" -->
+<!-- 		android:apiKey="09UCTg-5fHNFjWw-FcMUvJPaLH_YTUiHB5gh1Kg" /> -->
+
+	<LinearLayout 
+	    android:id="@+id/mapview"
+	    android:layout_height="fill_parent"
+	    android:layout_width="fill_parent" />
 
 	<Button
 		android:id="@+id/back_button"
