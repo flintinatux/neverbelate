@@ -33,6 +33,7 @@ import com.madhackerdesigns.neverbelate.service.StartupReceiver;
 import com.madhackerdesigns.neverbelate.settings.NeverBeLateSettings;
 import com.madhackerdesigns.neverbelate.settings.PreferenceHelper;
 import com.madhackerdesigns.neverbelate.util.AdHelper;
+import com.madhackerdesigns.neverbelate.util.BuildMode;
 import com.madhackerdesigns.neverbelate.util.Logger;
 
 /**
@@ -42,7 +43,6 @@ import com.madhackerdesigns.neverbelate.util.Logger;
 public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 
 	// Static constants
-	private static final boolean ADMOB = true;
 	private static final String ADMOB_ID = "a14d952e8939105";
 //	private static final int DLG_COMING_SOON = 0;
 	private static final int DLG_FIRST_TIME = 1;
@@ -131,7 +131,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 			
 		});
 		
-		// Create a coming soon dialog for features not yet implemented
+		// Load the Create New Event button
 		((Button) findViewById(R.id.btn_create_event)).setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
@@ -167,7 +167,7 @@ public class LauncherActivity extends Activity implements Eula.OnEulaAgreedTo {
 		});
 		
 		// Load up an AdMob banner
-		if (ADMOB) {
+		if (! BuildMode.isDebug(getApplicationContext())) {
 			LinearLayout layout = (LinearLayout) findViewById(R.id.ad_view);
 			if (layout != null) {
 				AdView adView = new AdView(this, AdSize.BANNER, ADMOB_ID);

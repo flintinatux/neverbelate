@@ -24,9 +24,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
@@ -62,6 +59,7 @@ import com.madhackerdesigns.neverbelate.service.WakefulServiceReceiver;
 import com.madhackerdesigns.neverbelate.settings.PreferenceHelper;
 import com.madhackerdesigns.neverbelate.ui.UserLocationOverlay.OnLocationChangedListener;
 import com.madhackerdesigns.neverbelate.util.AdHelper;
+import com.madhackerdesigns.neverbelate.util.BuildMode;
 import com.madhackerdesigns.neverbelate.util.Logger;
 
 /**
@@ -73,7 +71,6 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	// private static tokens
 	private static final int ALERT_TOKEN = 1;
 	private static final String LOG_TAG = "NeverBeLateWarning";
-	private static final boolean ADMOB = true;
 	
 	// static strings for intent stuff
 	private static final String PACKAGE_NAME = "com.madhackerdesigns.neverbelate";
@@ -147,15 +144,8 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		
 		if (mMapView == null) {
 			// Inflate the MapView, and pass correct API key based on debug mode
-			boolean debugMode = false;
-			try {
-				PackageInfo pinfo = getPackageManager().getPackageInfo(PACKAGE_NAME, 0);
-				debugMode = (pinfo.applicationInfo.flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0;
-			} catch (NameNotFoundException e) {
-				e.printStackTrace();
-			}
 			LinearLayout layout = (LinearLayout) findViewById(R.id.mapview);
-			mMapView = new MapView(this, debugMode ? MAPS_API_DEBUG : MAPS_API_PRODUCTION);
+			mMapView = new MapView(this, BuildMode.isDebug(applicationContext) ? MAPS_API_DEBUG : MAPS_API_PRODUCTION);
 			layout.addView(mMapView, LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
 		}
 		
@@ -196,7 +186,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		Logger.d(LOG_TAG, "Traffic button added.");
 		
 		// Load up an AdMob banner
-		if (ADMOB) {
+		if (! BuildMode.isDebug(applicationContext)) {
 			AdRequest request = new AdRequest();
 			if (providersEnabled) { request.setLocation(mUserLocationOverlay.getLastFix()); }
 			AdView adView = (AdView) findViewById(R.id.ad_view);
