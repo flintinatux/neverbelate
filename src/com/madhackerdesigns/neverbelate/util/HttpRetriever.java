@@ -12,11 +12,11 @@ import android.util.Log;
 
 public class HttpRetriever {
 	
-	private final String TAG = getClass().getSimpleName();
+	private final static String TAG = "HttpRetriever";
 
-	private DefaultHttpClient client = new DefaultHttpClient();
+	private static DefaultHttpClient client = new DefaultHttpClient();
 
-	public String retrieve(String url) {
+	public static String retrieve(String url) {
 
 		HttpGet get = new HttpGet(url);
 

@@ -9,12 +9,12 @@ public class GeoCoder {
 	
 	private static final String YAHOO_API_BASE_URL = "http://where.yahooapis.com/geocode?q=%1$s,+%2$s&flags=J&gflags=R&appid=lt2qlf34";
 	
-	private HttpRetriever httpRetriever = new HttpRetriever();
+//	private HttpRetriever httpRetriever = new HttpRetriever();
 	
 	public GeoCodeResult reverseGeoCode(double latitude, double longitude) {
 		
 		String url = String.format(YAHOO_API_BASE_URL, String.valueOf(latitude), String.valueOf(longitude));		
-		String response = httpRetriever.retrieve(url);
+		String response = HttpRetriever.retrieve(url);
 		return parseJsonResponse(response);
 		
 	}

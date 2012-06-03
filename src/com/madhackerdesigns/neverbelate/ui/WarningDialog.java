@@ -148,6 +148,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 			LinearLayout layout = (LinearLayout) findViewById(R.id.mapview);
 			mMapView = new MapView(this, BuildMode.isDebug(applicationContext) ? MAPS_API_DEBUG : MAPS_API_PRODUCTION);
 			layout.addView(mMapView, LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
+			mMapView.setClickable(true);
 		}
 		
 		// Enable the user location to the map (early, to feed the location to the AdMob banner)

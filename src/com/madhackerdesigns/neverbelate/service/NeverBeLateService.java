@@ -38,8 +38,8 @@ import com.madhackerdesigns.neverbelate.provider.AlertsContract;
 import com.madhackerdesigns.neverbelate.provider.AlertsHelper;
 import com.madhackerdesigns.neverbelate.settings.PreferenceHelper;
 import com.madhackerdesigns.neverbelate.ui.WarningDialog;
+import com.madhackerdesigns.neverbelate.util.HttpRetriever;
 import com.madhackerdesigns.neverbelate.util.Logger;
-import com.madhackerdesigns.neverbelate.util.NetUtils;
 
 /**
  * @author flintinatux
@@ -294,7 +294,7 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 				NetworkInfo netInfo = cm.getActiveNetworkInfo();
 				if (netInfo != null && netInfo.isConnected()) {
 					Logger.d(LOG_TAG, "Network available, attempting to download new directions.");
-					json = NetUtils.DownloadText(url);
+					json = HttpRetriever.retrieve(url);
 				} else if (alertCursor.moveToFirst()) {
 					Logger.d(LOG_TAG, "Network not available, falling back to previous archived directions.");
 					json = alertCursor.getString(AlertsHelper.PROJ_JSON);
