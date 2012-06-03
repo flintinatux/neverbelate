@@ -98,6 +98,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	private static final String PREF_ALERT_STATS = "alert_stats";
 	private static final String KEY_ALERT_COUNT = "alert_stats.alert_count";
 	private static final String KEY_RATED_ALREADY = "alert_stats.rated_already";
+	private static final String KEY_ALERT_STEP = "alert_stats.alert_step";
 	
 	// other fields
 	private AlertQueryHandler mHandler;
@@ -293,8 +294,6 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 						}
 						
 					});
-				} else {
-					// TODO: Do something else safe.  This really shouldn't happen, though.
 				}
 			}
 			
@@ -383,7 +382,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		// Tell the AdHelper that this warning has been dismissed
 		mAdHelper.setWarningDismissed(true);
 		
-		// Ask the Service to just DISMISS the alert, which marks the alert as DISMISSED. Duh.
+		// Ask the Service to just DISMISS the alert.
 		Context context = getApplicationContext();
 		Intent cancelIntent = new Intent(context, NeverBeLateService.class);
 		cancelIntent.putExtra(EXTRA_SERVICE_COMMAND, DISMISS);
@@ -396,8 +395,10 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		if (! alertStats.getBoolean(KEY_RATED_ALREADY, false)) {
 			long count = alertStats.getLong(KEY_ALERT_COUNT, 1);
 			alertStats.edit().putLong(KEY_ALERT_COUNT, ++count).commit();
-			// Show rate dialog after every 8 alerts shown
-			if (count % 8 == 0) {
+			// Show rate dialog after first 4, then every 8 alerts shown
+			int step = alertStats.getInt(KEY_ALERT_STEP, 4);
+			if (count % step == 0) {
+				if (step == 4) { alertStats.edit().putInt(KEY_ALERT_STEP, 8).commit(); }
 				showDialog(DLG_RATE);
 			} else {
 				finish();
@@ -409,7 +410,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 	
 	private void stopInsistentAlarm() {
 		Logger.d(LOG_TAG, "Stopping insistent alarm.");
-		if (!mInsistentStopped) {
+		if (mPrefs.isInsistent() && !mInsistentStopped) {
 			mInsistentStopped = true;
 			Context context = getApplicationContext();
 			Intent i = new Intent(context, NeverBeLateService.class);
