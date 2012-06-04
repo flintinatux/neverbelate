@@ -49,7 +49,7 @@
     <string name="advance_warning_title">NeverBeLate Advance Warning</string>
     <string name="away_text">away</string>
     <string name="btn_nav_text">Navigate</string>
-    <string name="departure_time">Departure time</string>
+    <string name="departure_time">Departure</string>
     <string name="dismiss_button_text">Dismiss</string>
     <string name="dismiss_all_button_text">Dismiss all</string>
     <string name="default_copyright_text">Map data from Google</string>
