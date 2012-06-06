@@ -822,7 +822,6 @@ com.madhackerdesigns.neverbelate.settings.WebsitePreference:
 com.madhackerdesigns.neverbelate.ui.CreateNewEvent:
     private static final java.lang.String LOG_TAG
 com.madhackerdesigns.neverbelate.ui.LauncherActivity:
-    private static final boolean ADMOB
     private static final java.lang.String ADMOB_ID
     private static final int DLG_FIRST_TIME
     private static final int DLG_QUICK_TOUR
@@ -841,17 +840,19 @@ com.madhackerdesigns.neverbelate.ui.UserLocationOverlay:
 com.madhackerdesigns.neverbelate.ui.WarningDialog:
     private static final int ALERT_TOKEN
     private static final java.lang.String LOG_TAG
-    private static final boolean ADMOB
     private static final java.lang.String PACKAGE_NAME
     public static final java.lang.String EXTRA_URI
     private static final java.lang.String MAPS_URL
     private static final java.lang.String TAG_ALERT_LIST
     private static final java.lang.String TAG_TRAFFIC_VIEW
+    private static final java.lang.String MAPS_API_DEBUG
+    private static final java.lang.String MAPS_API_PRODUCTION
     private static final int DLG_NAV
     private static final int DLG_RATE
     private static final java.lang.String PREF_ALERT_STATS
     private static final java.lang.String KEY_ALERT_COUNT
     private static final java.lang.String KEY_RATED_ALREADY
+    private static final java.lang.String KEY_ALERT_STEP
 com.madhackerdesigns.neverbelate.ui.WarningDialog$MapBounds:
     private static final double RATIO
 com.madhackerdesigns.neverbelate.util.AdHelper:
@@ -880,6 +881,11 @@ com.madhackerdesigns.neverbelate.util.AdHelper:
     91:97:public boolean isTimeToRegister()
     129:133:public void setRegistered(boolean)
     137:150:public void setRegistrationRequested(boolean)
+com.madhackerdesigns.neverbelate.util.BuildMode:
+    8:8:public BuildMode()
+com.madhackerdesigns.neverbelate.util.HttpRetriever:
+    private static final java.lang.String TAG
+    13:13:public HttpRetriever()
 com.madhackerdesigns.neverbelate.util.Logger:
     private static final boolean LOGGING
     private static final java.lang.String LOG_TAG
@@ -933,14 +939,14 @@ com.viewpagerindicator.R$dimen:
 com.viewpagerindicator.R$drawable
 com.viewpagerindicator.R$id
 com.viewpagerindicator.R$integer:
-    448:448:public R$integer()
+    454:454:public R$integer()
 com.viewpagerindicator.R$layout:
-    453:453:public R$layout()
+    459:459:public R$layout()
 com.viewpagerindicator.R$string
 com.viewpagerindicator.R$style:
-    650:650:public R$style()
+    656:656:public R$style()
 com.viewpagerindicator.R$styleable:
-    682:682:public R$styleable()
+    689:689:public R$styleable()
 com.viewpagerindicator.R$xml
 com.viewpagerindicator.TitlePageIndicator:
     private static final float SELECTION_FADE_PERCENTAGE

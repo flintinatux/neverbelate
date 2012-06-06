@@ -150,6 +150,13 @@ com.madhackerdesigns.neverbelate.R$drawable: int btn_default_green_normal
 com.madhackerdesigns.neverbelate.R$drawable: int btn_default_holo_dark
 com.madhackerdesigns.neverbelate.R$drawable: int btn_default_normal_holo_dark
 com.madhackerdesigns.neverbelate.R$drawable: int btn_default_pressed_holo_dark
+com.madhackerdesigns.neverbelate.R$drawable: int btn_default_small
+com.madhackerdesigns.neverbelate.R$drawable: int btn_default_small_normal
+com.madhackerdesigns.neverbelate.R$drawable: int btn_default_small_normal_disable
+com.madhackerdesigns.neverbelate.R$drawable: int btn_default_small_normal_disable_focused
+com.madhackerdesigns.neverbelate.R$drawable: int btn_default_small_pressed
+com.madhackerdesigns.neverbelate.R$drawable: int btn_default_small_selected
+com.madhackerdesigns.neverbelate.R$drawable: int device_access_time
 com.madhackerdesigns.neverbelate.R$drawable: int event_border
 com.madhackerdesigns.neverbelate.R$drawable: int event_shadow_bottom
 com.madhackerdesigns.neverbelate.R$drawable: int event_shadow_top
@@ -159,11 +166,10 @@ com.madhackerdesigns.neverbelate.R$drawable: int flag_red
 com.madhackerdesigns.neverbelate.R$drawable: int ic_launcher_rabbit3
 com.madhackerdesigns.neverbelate.R$drawable: int ic_menu_add
 com.madhackerdesigns.neverbelate.R$drawable: int ic_menu_help
-com.madhackerdesigns.neverbelate.R$drawable: int ic_menu_my_calendar
 com.madhackerdesigns.neverbelate.R$drawable: int ic_menu_preferences
 com.madhackerdesigns.neverbelate.R$drawable: int ic_menu_share
-com.madhackerdesigns.neverbelate.R$drawable: int ic_stat_notify_rabbit2
 com.madhackerdesigns.neverbelate.R$drawable: int ic_stat_notify_rabbit3
+com.madhackerdesigns.neverbelate.R$drawable: int location_directions
 com.madhackerdesigns.neverbelate.R$drawable: int main_logo
 com.madhackerdesigns.neverbelate.R$drawable: int vpi__tab_indicator
 com.madhackerdesigns.neverbelate.R$drawable: int vpi__tab_selected_focused_holo
@@ -414,6 +420,7 @@ com.madhackerdesigns.neverbelate.R$style: int EditEventSeparator
 com.madhackerdesigns.neverbelate.R$style: int GenderButton
 com.madhackerdesigns.neverbelate.R$style: int LargeBlackText
 com.madhackerdesigns.neverbelate.R$style: int LauncherButton
+com.madhackerdesigns.neverbelate.R$style: int MapViewButton
 com.madhackerdesigns.neverbelate.R$style: int MediumBlackText
 com.madhackerdesigns.neverbelate.R$style: int QuickTourHeader
 com.madhackerdesigns.neverbelate.R$style: int QuickTourHeaderPadded
@@ -505,7 +512,6 @@ com.madhackerdesigns.neverbelate.ui.TestActivity
 com.madhackerdesigns.neverbelate.ui.UserLocationOverlay
 com.madhackerdesigns.neverbelate.ui.WarningDialog
 com.madhackerdesigns.neverbelate.util.Logger
-com.madhackerdesigns.neverbelate.util.NetUtils
 com.viewpagerindicator.CirclePageIndicator
 com.viewpagerindicator.CirclePageIndicator: CirclePageIndicator(android.content.Context)
 com.viewpagerindicator.CirclePageIndicator: CirclePageIndicator(android.content.Context,android.util.AttributeSet)
@@ -620,6 +626,13 @@ com.viewpagerindicator.R$drawable: int btn_default_green_normal
 com.viewpagerindicator.R$drawable: int btn_default_holo_dark
 com.viewpagerindicator.R$drawable: int btn_default_normal_holo_dark
 com.viewpagerindicator.R$drawable: int btn_default_pressed_holo_dark
+com.viewpagerindicator.R$drawable: int btn_default_small
+com.viewpagerindicator.R$drawable: int btn_default_small_normal
+com.viewpagerindicator.R$drawable: int btn_default_small_normal_disable
+com.viewpagerindicator.R$drawable: int btn_default_small_normal_disable_focused
+com.viewpagerindicator.R$drawable: int btn_default_small_pressed
+com.viewpagerindicator.R$drawable: int btn_default_small_selected
+com.viewpagerindicator.R$drawable: int device_access_time
 com.viewpagerindicator.R$drawable: int event_border
 com.viewpagerindicator.R$drawable: int event_shadow_bottom
 com.viewpagerindicator.R$drawable: int event_shadow_top
@@ -629,11 +642,10 @@ com.viewpagerindicator.R$drawable: int flag_red
 com.viewpagerindicator.R$drawable: int ic_launcher_rabbit3
 com.viewpagerindicator.R$drawable: int ic_menu_add
 com.viewpagerindicator.R$drawable: int ic_menu_help
-com.viewpagerindicator.R$drawable: int ic_menu_my_calendar
 com.viewpagerindicator.R$drawable: int ic_menu_preferences
 com.viewpagerindicator.R$drawable: int ic_menu_share
-com.viewpagerindicator.R$drawable: int ic_stat_notify_rabbit2
 com.viewpagerindicator.R$drawable: int ic_stat_notify_rabbit3
+com.viewpagerindicator.R$drawable: int location_directions
 com.viewpagerindicator.R$drawable: int main_logo
 com.viewpagerindicator.R$drawable: int vpi__tab_indicator
 com.viewpagerindicator.R$drawable: int vpi__tab_selected_focused_holo
@@ -884,6 +896,7 @@ com.viewpagerindicator.R$style: int EditEventSeparator
 com.viewpagerindicator.R$style: int GenderButton
 com.viewpagerindicator.R$style: int LargeBlackText
 com.viewpagerindicator.R$style: int LauncherButton
+com.viewpagerindicator.R$style: int MapViewButton
 com.viewpagerindicator.R$style: int MediumBlackText
 com.viewpagerindicator.R$style: int QuickTourHeader
 com.viewpagerindicator.R$style: int QuickTourHeaderPadded

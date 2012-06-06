@@ -18,13 +18,13 @@
 
 	<Button
 		android:id="@+id/back_button"
-        android:drawableLeft="@drawable/ic_menu_recent_history"
+        android:drawableLeft="@drawable/device_access_time"
 		android:layout_gravity="bottom|left"
 		style="@style/MapViewButton"  />
 
 	<Button
 		android:id="@+id/btn_nav"
-        android:drawableRight="@drawable/ic_menu_send"
+        android:drawableRight="@drawable/location_directions"
 		android:layout_gravity="bottom|right"
 		style="@style/MapViewButton"  />
 	

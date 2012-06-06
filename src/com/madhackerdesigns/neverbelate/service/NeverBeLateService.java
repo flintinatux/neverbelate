@@ -119,19 +119,15 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 		switch (task) {
 		case CLEAR_ALL:
 			// Clear all alerts
-			// TODO: Report with Flurry
 		case DISMISS:
 			// Dismiss all alerts
-			// TODO: Report with Flurry
 			dismissAllAlerts();
 		case SNOOZE:
 			// Snooze the notification
-			// TODO: Report with Flurry
 			mNotificationManager.cancel(NOTIFICATION_ID);
 			break;
 		case CHECK_TRAVEL_TIMES:	
 			// Check for travel times for upcoming event instances
-			// TODO: Report with Flurry
 			checkTravelTimes();
 			break;
 		case NOTIFY:
@@ -659,7 +655,6 @@ public class NeverBeLateService extends IntentService implements ServiceCommande
 	 */
 	@Override
 	public IBinder onBind(Intent intent) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	

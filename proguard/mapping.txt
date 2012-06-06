@@ -1887,7 +1887,6 @@ com.madhackerdesigns.neverbelate.reg.GeoCodeResult -> com.madhackerdesigns.never
     void setZipCode(java.lang.String) -> b
     java.lang.String toString() -> toString
 com.madhackerdesigns.neverbelate.reg.GeoCoder -> com.madhackerdesigns.neverbelate.reg.e:
-    com.madhackerdesigns.neverbelate.util.HttpRetriever httpRetriever -> a
     com.madhackerdesigns.neverbelate.reg.GeoCodeResult reverseGeoCode(double,double) -> a
     com.madhackerdesigns.neverbelate.reg.GeoCodeResult parseJsonResponse(java.lang.String) -> a
 com.madhackerdesigns.neverbelate.reg.Registration -> com.madhackerdesigns.neverbelate.reg.f:
@@ -2304,17 +2303,16 @@ com.madhackerdesigns.neverbelate.util.AdHelper -> com.madhackerdesigns.neverbela
     boolean isTimeToShowAd() -> b
     void setAdShown(boolean) -> a
     void setWarningDismissed(boolean) -> b
-com.madhackerdesigns.neverbelate.util.HttpRetriever -> com.madhackerdesigns.neverbelate.util.b:
-    java.lang.String TAG -> a
-    org.apache.http.impl.client.DefaultHttpClient client -> b
+com.madhackerdesigns.neverbelate.util.BuildMode -> com.madhackerdesigns.neverbelate.util.b:
+    java.lang.Boolean DEBUG -> a
+    boolean isDebug(android.content.Context) -> a
+com.madhackerdesigns.neverbelate.util.HttpRetriever -> com.madhackerdesigns.neverbelate.util.c:
+    org.apache.http.impl.client.DefaultHttpClient client -> a
     java.lang.String retrieve(java.lang.String) -> a
 com.madhackerdesigns.neverbelate.util.Logger -> com.madhackerdesigns.neverbelate.util.Logger:
     int d(java.lang.String) -> a
     int d(java.lang.String,java.lang.String) -> a
     int v(java.lang.String,java.lang.String) -> b
-com.madhackerdesigns.neverbelate.util.NetUtils -> com.madhackerdesigns.neverbelate.util.NetUtils:
-    java.io.InputStream OpenHttpConnection(java.lang.String) -> a
-    java.lang.String DownloadText(java.lang.String) -> b
 com.readystatesoftware.sqliteasset.SQLiteAssetException -> com.a.a.a:
 com.readystatesoftware.sqliteasset.SQLiteAssetHelper -> com.a.a.b:
     java.lang.String TAG -> a
@@ -2505,6 +2503,7 @@ com.viewpagerindicator.R$style -> com.viewpagerindicator.j:
     int GenderButton -> GenderButton
     int LargeBlackText -> LargeBlackText
     int LauncherButton -> LauncherButton
+    int MapViewButton -> MapViewButton
     int MediumBlackText -> MediumBlackText
     int QuickTourHeader -> QuickTourHeader
     int QuickTourHeaderPadded -> QuickTourHeaderPadded
