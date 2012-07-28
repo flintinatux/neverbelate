@@ -160,7 +160,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 		
 		// Adjust the warning text to include early arrival if set
 		final Long earlyArrival = mPrefs.getEarlyArrival() / 60000;
-		if (!earlyArrival.equals(new Long(0))) {
+		if (!earlyArrival.equals(Long.valueOf(0))) {
 			final TextView tv_warningText = (TextView) findViewById(R.id.warning_text);
 			final Resources res = getResources();
 			String warningText = res.getString(R.string.warning_text);
@@ -309,7 +309,7 @@ public class WarningDialog extends MapActivity implements ServiceCommander {
 			}
 			
 			// Enable or disable snooze per user preference
-			if (mPrefs.getSnoozeDuration().equals(new Long(0))) {
+			if (mPrefs.getSnoozeDuration().equals(Long.valueOf(0))) {
 				snoozeButton.setVisibility(View.GONE);
 				Logger.d(LOG_TAG, "Snooze button disabled.");
 			} else {

@@ -14,8 +14,6 @@ import android.widget.Button;
 
 import com.madhackerdesigns.neverbelate.R;
 import com.madhackerdesigns.neverbelate.provider.AlertsContract;
-import com.madhackerdesigns.neverbelate.reg.Registration;
-import com.madhackerdesigns.neverbelate.reg.RegistrationForm;
 import com.madhackerdesigns.neverbelate.service.NeverBeLateService;
 import com.madhackerdesigns.neverbelate.service.ServiceCommander;
 import com.madhackerdesigns.neverbelate.util.AdHelper;
@@ -61,27 +59,27 @@ public class TestActivity extends Activity implements ServiceCommander {
 			
 		});
 		
-		// Setup the Clear registration button
-		Button btnMultioffer = (Button) findViewById(R.id.btn_clear_reg);
-		btnMultioffer.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View v) {
-				// Clear the stored registration values
-				(new Registration(getApplicationContext())).clearStoredRegistration();
-			}
-			
-		});
-		
-		// Setup the Reset AdHelper button
-		Button btnRegForm = (Button) findViewById(R.id.btn_reg_form);
-		btnRegForm.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View v) {
-				// Reset the AdHelper values
-				startActivity(new Intent(getApplicationContext(), RegistrationForm.class));
-			}
-			
-		});
+//		// Setup the Clear registration button
+//		Button btnMultioffer = (Button) findViewById(R.id.btn_clear_reg);
+//		btnMultioffer.setOnClickListener(new OnClickListener() {
+//
+//			public void onClick(View v) {
+//				// Clear the stored registration values
+//				(new Registration(getApplicationContext())).clearStoredRegistration();
+//			}
+//			
+//		});
+//		
+//		// Setup the Reset AdHelper button
+//		Button btnRegForm = (Button) findViewById(R.id.btn_reg_form);
+//		btnRegForm.setOnClickListener(new OnClickListener() {
+//
+//			public void onClick(View v) {
+//				// Reset the AdHelper values
+//				startActivity(new Intent(getApplicationContext(), RegistrationForm.class));
+//			}
+//			
+//		});
 		
 		// Setup the Rate dialog test button
 		Button btnRateDlg = (Button) findViewById(R.id.btn_rate_dlg);

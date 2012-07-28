@@ -18,7 +18,7 @@
 	<string name="last_name">Last name</string>
 	<string name="last_name_hint">Doe</string>
 	<string name="male">male</string>
-	<string name="no_code">(I don\'t have one...)</string>
+	<string name="no_code">(I don\'t have one&#8230;)</string>
 	<string name="privacy_link_text">Privacy Policy</string>
 	<string name="reg_copy_default">Thanks for downloading NeverBeLate! Please register your copy of the app before continuing.</string>
 	<string name="register">Register now!</string>

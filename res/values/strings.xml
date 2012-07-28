@@ -5,7 +5,7 @@
     <string name="app_title">NeverBeLate Settings</string>
     <string name="app_version">App version</string>
     <string name="base_task">com.madhackerdesigns.neverbelate.base_task</string>
-    <string name="version_name">build-26</string>
+    <string name="version_name">build-28</string>
 
 <!-- Admob Publisher ID -->
 	<string name="admob_id">a14d952e8939105</string>
@@ -35,7 +35,7 @@
 <!-- Strings for Test Activity -->
     <string name="btn_clear_reg_text">Clear stored registration</string>
     <string name="btn_reg_form_text">Registration form</string>
-    <string name="btn_rate_dlg_text">Test \"Rate my app\" dialog</string>
+    <string name="btn_rate_dlg_text">Test \"Rate our app\" dialog</string>
     <string name="reset_alert_list_button_text">Reset alert list</string>
     <string name="settings_button_text">Configure NeverBeLate settings</string>
     <string name="test_text">Click the button below to test the app:</string>
@@ -59,9 +59,9 @@
     <string name="default_event_title">Default Event Title</string>
     <string name="default_travel_time">25 min\naway</string>
     <string name="dlg_nav_title">Choose your destination</string>
-    <string name="dlg_rate_title">Please rate my app!</string>
+    <string name="dlg_rate_title">Please rate our app!</string>
     <string name="dlg_rate_msg">It looks like you are getting lots of use out of NeverBeLate. That\'s exciting!
-        \n\nPlease do me a favor, and take the next 14 seconds to rate my app so that others can see how much
+        \n\nPlease do us a favor, and take the next 14 seconds to rate our app so that others can see how much
         you like it.</string>
     <string name="rate_it">Rate it now!</string>
     <string name="maps_data">Maps data</string>

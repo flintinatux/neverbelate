@@ -1,55 +1,53 @@
 android.support.v4.app.BackStackState
 android.support.v4.app.BackStackState: android.os.Parcelable$Creator CREATOR
-android.support.v4.app.DialogFragment
 android.support.v4.app.Fragment$SavedState
 android.support.v4.app.Fragment$SavedState: android.os.Parcelable$Creator CREATOR
-android.support.v4.app.FragmentActivity
+android.support.v4.app.FragmentActivity: FragmentActivity()
 android.support.v4.app.FragmentManagerState
 android.support.v4.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
 android.support.v4.app.FragmentState
 android.support.v4.app.FragmentState: android.os.Parcelable$Creator CREATOR
-android.support.v4.app.ListFragment
 android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status[] values()
 android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status valueOf(java.lang.String)
-android.support.v4.view.PagerTitleStrip
-android.support.v4.view.PagerTitleStrip: PagerTitleStrip(android.content.Context)
-android.support.v4.view.PagerTitleStrip: PagerTitleStrip(android.content.Context,android.util.AttributeSet)
 android.support.v4.view.ViewPager
 android.support.v4.view.ViewPager: ViewPager(android.content.Context)
 android.support.v4.view.ViewPager: ViewPager(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.ViewPager: void setScrollState(int)
 android.support.v4.view.ViewPager: void setAdapter(android.support.v4.view.PagerAdapter)
+android.support.v4.view.ViewPager: android.support.v4.view.PagerAdapter getAdapter()
+android.support.v4.view.ViewPager: void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener)
 android.support.v4.view.ViewPager: void setCurrentItem(int)
-android.support.v4.view.ViewPager: void setCurrentItem(int,boolean)
+android.support.v4.view.ViewPager: int getCurrentItem()
 android.support.v4.view.ViewPager: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
+android.support.v4.view.ViewPager: int getOffscreenPageLimit()
 android.support.v4.view.ViewPager: void setOffscreenPageLimit(int)
 android.support.v4.view.ViewPager: void setPageMargin(int)
+android.support.v4.view.ViewPager: int getPageMargin()
 android.support.v4.view.ViewPager: void setPageMarginDrawable(android.graphics.drawable.Drawable)
 android.support.v4.view.ViewPager: void setPageMarginDrawable(int)
-android.support.v4.view.ViewPager$LayoutParams
-android.support.v4.view.ViewPager$LayoutParams: ViewPager$LayoutParams(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.ViewPager: void setScrollingCacheEnabled(boolean)
 android.support.v4.view.ViewPager$SavedState
 android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREATOR
 com.google.ads.AdActivity
+com.google.ads.AdActivity: AdActivity()
 com.google.ads.AdActivity: void onClick(android.view.View)
 com.google.ads.AdRequest$ErrorCode: com.google.ads.AdRequest$ErrorCode[] values()
 com.google.ads.AdRequest$ErrorCode: com.google.ads.AdRequest$ErrorCode valueOf(java.lang.String)
 com.google.ads.AdRequest$Gender: com.google.ads.AdRequest$Gender[] values()
 com.google.ads.AdRequest$Gender: com.google.ads.AdRequest$Gender valueOf(java.lang.String)
 com.google.ads.AdView
+com.google.ads.AdView: AdView(android.app.Activity,com.google.ads.AdSize,java.lang.String)
 com.google.ads.AdView: AdView(android.content.Context,android.util.AttributeSet)
 com.google.ads.AdView: AdView(android.content.Context,android.util.AttributeSet,int)
 com.google.ads.AdView: void setAdListener(com.google.ads.AdListener)
 com.google.ads.ag$b: com.google.ads.ag$b[] values()
 com.google.ads.ag$b: com.google.ads.ag$b valueOf(java.lang.String)
-com.google.ads.internal.AdVideoView
 com.google.ads.internal.AdVideoView: void setMediaControllerEnabled(boolean)
 com.google.ads.internal.AdVideoView: void setSrc(java.lang.String)
-com.google.ads.internal.AdWebView
 com.google.ads.internal.AdWebView: void setAdActivity(com.google.ads.AdActivity)
 com.google.ads.internal.AdWebView: void setIsExpandedMraid(boolean)
 com.google.ads.searchads.SearchAdRequest$BorderType: com.google.ads.searchads.SearchAdRequest$BorderType[] values()
 com.google.ads.searchads.SearchAdRequest$BorderType: com.google.ads.searchads.SearchAdRequest$BorderType valueOf(java.lang.String)
-com.google.ads.util.AdUtil$UserActivityReceiver
 com.google.ads.util.AdUtil$a: com.google.ads.util.AdUtil$a[] values()
 com.google.ads.util.AdUtil$a: com.google.ads.util.AdUtil$a valueOf(java.lang.String)
 com.google.ads.util.b$a: com.google.ads.util.b$a[] values()
@@ -184,7 +182,6 @@ com.madhackerdesigns.neverbelate.R$id: int IAB_LEADERBOARD
 com.madhackerdesigns.neverbelate.R$id: int IAB_MRECT
 com.madhackerdesigns.neverbelate.R$id: int ad_view
 com.madhackerdesigns.neverbelate.R$id: int back_button
-com.madhackerdesigns.neverbelate.R$id: int btn_clear_reg
 com.madhackerdesigns.neverbelate.R$id: int btn_configure
 com.madhackerdesigns.neverbelate.R$id: int btn_country
 com.madhackerdesigns.neverbelate.R$id: int btn_create_event
@@ -192,7 +189,6 @@ com.madhackerdesigns.neverbelate.R$id: int btn_enable
 com.madhackerdesigns.neverbelate.R$id: int btn_nav
 com.madhackerdesigns.neverbelate.R$id: int btn_quick_tour
 com.madhackerdesigns.neverbelate.R$id: int btn_rate_dlg
-com.madhackerdesigns.neverbelate.R$id: int btn_reg_form
 com.madhackerdesigns.neverbelate.R$id: int btn_register
 com.madhackerdesigns.neverbelate.R$id: int btn_share
 com.madhackerdesigns.neverbelate.R$id: int checkbox
@@ -220,7 +216,6 @@ com.madhackerdesigns.neverbelate.R$id: int pr_eula
 com.madhackerdesigns.neverbelate.R$id: int pr_privacy
 com.madhackerdesigns.neverbelate.R$id: int pr_send_feedback
 com.madhackerdesigns.neverbelate.R$id: int pr_settings_instructions
-com.madhackerdesigns.neverbelate.R$id: int pr_website
 com.madhackerdesigns.neverbelate.R$id: int pref_marked_locations
 com.madhackerdesigns.neverbelate.R$id: int privacy_link
 com.madhackerdesigns.neverbelate.R$id: int qt_finish_button
@@ -475,42 +470,51 @@ com.madhackerdesigns.neverbelate.R$styleable: int com_google_ads_AdView_adUnitId
 com.madhackerdesigns.neverbelate.R$xml: int settings
 com.madhackerdesigns.neverbelate.provider.AlertsContract
 com.madhackerdesigns.neverbelate.provider.AlertsProvider
-com.madhackerdesigns.neverbelate.reg.RegistrationForm
+com.madhackerdesigns.neverbelate.provider.AlertsProvider: AlertsProvider()
 com.madhackerdesigns.neverbelate.service.CalendarHelperBase
 com.madhackerdesigns.neverbelate.service.CalendarHelperICS
-com.madhackerdesigns.neverbelate.service.LocationReceiver
 com.madhackerdesigns.neverbelate.service.NeverBeLateService
+com.madhackerdesigns.neverbelate.service.NeverBeLateService: NeverBeLateService()
 com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus: com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus[] values()
 com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus: com.madhackerdesigns.neverbelate.service.NeverBeLateService$DirectionsApiStatus valueOf(java.lang.String)
 com.madhackerdesigns.neverbelate.service.StartupReceiver
+com.madhackerdesigns.neverbelate.service.StartupReceiver: StartupReceiver()
 com.madhackerdesigns.neverbelate.service.TravelTimeReceiver
+com.madhackerdesigns.neverbelate.service.TravelTimeReceiver: TravelTimeReceiver()
 com.madhackerdesigns.neverbelate.service.WakefulServiceReceiver
+com.madhackerdesigns.neverbelate.service.WakefulServiceReceiver: WakefulServiceReceiver()
 com.madhackerdesigns.neverbelate.settings.EulaPreference
 com.madhackerdesigns.neverbelate.settings.EulaPreference: EulaPreference(android.content.Context,android.util.AttributeSet,int)
 com.madhackerdesigns.neverbelate.settings.EulaPreference: EulaPreference(android.content.Context,android.util.AttributeSet)
+com.madhackerdesigns.neverbelate.settings.EulaPreference: EulaPreference(android.content.Context)
 com.madhackerdesigns.neverbelate.settings.FeedbackPreference
 com.madhackerdesigns.neverbelate.settings.FeedbackPreference: FeedbackPreference(android.content.Context,android.util.AttributeSet,int)
 com.madhackerdesigns.neverbelate.settings.FeedbackPreference: FeedbackPreference(android.content.Context,android.util.AttributeSet)
+com.madhackerdesigns.neverbelate.settings.FeedbackPreference: FeedbackPreference(android.content.Context)
 com.madhackerdesigns.neverbelate.settings.NeverBeLateSettings
+com.madhackerdesigns.neverbelate.settings.NeverBeLateSettings: NeverBeLateSettings()
 com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod: com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod[] values()
 com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod: com.madhackerdesigns.neverbelate.settings.PreferenceHelper$NotificationMethod valueOf(java.lang.String)
 com.madhackerdesigns.neverbelate.settings.PrivacyPreference
 com.madhackerdesigns.neverbelate.settings.PrivacyPreference: PrivacyPreference(android.content.Context,android.util.AttributeSet,int)
 com.madhackerdesigns.neverbelate.settings.PrivacyPreference: PrivacyPreference(android.content.Context,android.util.AttributeSet)
-com.madhackerdesigns.neverbelate.settings.WebsitePreference
-com.madhackerdesigns.neverbelate.settings.WebsitePreference: WebsitePreference(android.content.Context,android.util.AttributeSet,int)
-com.madhackerdesigns.neverbelate.settings.WebsitePreference: WebsitePreference(android.content.Context,android.util.AttributeSet)
+com.madhackerdesigns.neverbelate.settings.PrivacyPreference: PrivacyPreference(android.content.Context)
 com.madhackerdesigns.neverbelate.ui.CreateNewEvent
+com.madhackerdesigns.neverbelate.ui.CreateNewEvent: CreateNewEvent()
 com.madhackerdesigns.neverbelate.ui.EdgeScrollView
 com.madhackerdesigns.neverbelate.ui.EdgeScrollView: EdgeScrollView(android.content.Context,android.util.AttributeSet)
 com.madhackerdesigns.neverbelate.ui.EdgeScrollView: EdgeScrollView(android.content.Context,android.util.AttributeSet,int)
+com.madhackerdesigns.neverbelate.ui.EdgeScrollView: int getSolidColor()
 com.madhackerdesigns.neverbelate.ui.LauncherActivity
+com.madhackerdesigns.neverbelate.ui.LauncherActivity: LauncherActivity()
 com.madhackerdesigns.neverbelate.ui.MapOverlay
 com.madhackerdesigns.neverbelate.ui.QuickTourActivity
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity: QuickTourActivity()
 com.madhackerdesigns.neverbelate.ui.TestActivity
+com.madhackerdesigns.neverbelate.ui.TestActivity: TestActivity()
 com.madhackerdesigns.neverbelate.ui.UserLocationOverlay
 com.madhackerdesigns.neverbelate.ui.WarningDialog
+com.madhackerdesigns.neverbelate.ui.WarningDialog: WarningDialog()
 com.madhackerdesigns.neverbelate.util.Logger
 com.viewpagerindicator.CirclePageIndicator
 com.viewpagerindicator.CirclePageIndicator: CirclePageIndicator(android.content.Context)
@@ -518,14 +522,19 @@ com.viewpagerindicator.CirclePageIndicator: CirclePageIndicator(android.content.
 com.viewpagerindicator.CirclePageIndicator: CirclePageIndicator(android.content.Context,android.util.AttributeSet,int)
 com.viewpagerindicator.CirclePageIndicator: void setCentered(boolean)
 com.viewpagerindicator.CirclePageIndicator: void setPageColor(int)
+com.viewpagerindicator.CirclePageIndicator: int getPageColor()
 com.viewpagerindicator.CirclePageIndicator: void setFillColor(int)
+com.viewpagerindicator.CirclePageIndicator: int getFillColor()
 com.viewpagerindicator.CirclePageIndicator: void setOrientation(int)
+com.viewpagerindicator.CirclePageIndicator: int getOrientation()
 com.viewpagerindicator.CirclePageIndicator: void setStrokeColor(int)
+com.viewpagerindicator.CirclePageIndicator: int getStrokeColor()
 com.viewpagerindicator.CirclePageIndicator: void setStrokeWidth(float)
+com.viewpagerindicator.CirclePageIndicator: float getStrokeWidth()
 com.viewpagerindicator.CirclePageIndicator: void setRadius(float)
+com.viewpagerindicator.CirclePageIndicator: float getRadius()
 com.viewpagerindicator.CirclePageIndicator: void setSnap(boolean)
 com.viewpagerindicator.CirclePageIndicator: void setViewPager(android.support.v4.view.ViewPager)
-com.viewpagerindicator.CirclePageIndicator: void setViewPager(android.support.v4.view.ViewPager,int)
 com.viewpagerindicator.CirclePageIndicator: void setCurrentItem(int)
 com.viewpagerindicator.CirclePageIndicator: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
 com.viewpagerindicator.CirclePageIndicator$SavedState
@@ -660,7 +669,6 @@ com.viewpagerindicator.R$id: int IAB_LEADERBOARD
 com.viewpagerindicator.R$id: int IAB_MRECT
 com.viewpagerindicator.R$id: int ad_view
 com.viewpagerindicator.R$id: int back_button
-com.viewpagerindicator.R$id: int btn_clear_reg
 com.viewpagerindicator.R$id: int btn_configure
 com.viewpagerindicator.R$id: int btn_country
 com.viewpagerindicator.R$id: int btn_create_event
@@ -668,7 +676,6 @@ com.viewpagerindicator.R$id: int btn_enable
 com.viewpagerindicator.R$id: int btn_nav
 com.viewpagerindicator.R$id: int btn_quick_tour
 com.viewpagerindicator.R$id: int btn_rate_dlg
-com.viewpagerindicator.R$id: int btn_reg_form
 com.viewpagerindicator.R$id: int btn_register
 com.viewpagerindicator.R$id: int btn_share
 com.viewpagerindicator.R$id: int checkbox
@@ -696,7 +703,6 @@ com.viewpagerindicator.R$id: int pr_eula
 com.viewpagerindicator.R$id: int pr_privacy
 com.viewpagerindicator.R$id: int pr_send_feedback
 com.viewpagerindicator.R$id: int pr_settings_instructions
-com.viewpagerindicator.R$id: int pr_website
 com.viewpagerindicator.R$id: int pref_marked_locations
 com.viewpagerindicator.R$id: int privacy_link
 com.viewpagerindicator.R$id: int qt_finish_button
@@ -949,34 +955,38 @@ com.viewpagerindicator.R$styleable: int[] com_google_ads_AdView
 com.viewpagerindicator.R$styleable: int com_google_ads_AdView_adSize
 com.viewpagerindicator.R$styleable: int com_google_ads_AdView_adUnitId
 com.viewpagerindicator.R$xml: int settings
-com.viewpagerindicator.TabPageIndicator
-com.viewpagerindicator.TabPageIndicator: TabPageIndicator(android.content.Context)
-com.viewpagerindicator.TabPageIndicator: TabPageIndicator(android.content.Context,android.util.AttributeSet)
 com.viewpagerindicator.TabPageIndicator: void setViewPager(android.support.v4.view.ViewPager)
-com.viewpagerindicator.TabPageIndicator: void setViewPager(android.support.v4.view.ViewPager,int)
 com.viewpagerindicator.TabPageIndicator: void setCurrentItem(int)
 com.viewpagerindicator.TabPageIndicator: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
 com.viewpagerindicator.TabPageIndicator$TabView
 com.viewpagerindicator.TabPageIndicator$TabView: TabPageIndicator$TabView(android.content.Context,android.util.AttributeSet)
-com.viewpagerindicator.TitlePageIndicator
-com.viewpagerindicator.TitlePageIndicator: TitlePageIndicator(android.content.Context)
-com.viewpagerindicator.TitlePageIndicator: TitlePageIndicator(android.content.Context,android.util.AttributeSet)
-com.viewpagerindicator.TitlePageIndicator: TitlePageIndicator(android.content.Context,android.util.AttributeSet,int)
+com.viewpagerindicator.TabPageIndicator$TabView: int getIndex()
+com.viewpagerindicator.TitlePageIndicator: int getFooterColor()
 com.viewpagerindicator.TitlePageIndicator: void setFooterColor(int)
+com.viewpagerindicator.TitlePageIndicator: float getFooterLineHeight()
 com.viewpagerindicator.TitlePageIndicator: void setFooterLineHeight(float)
+com.viewpagerindicator.TitlePageIndicator: float getFooterIndicatorHeight()
 com.viewpagerindicator.TitlePageIndicator: void setFooterIndicatorHeight(float)
+com.viewpagerindicator.TitlePageIndicator: float getFooterIndicatorPadding()
 com.viewpagerindicator.TitlePageIndicator: void setFooterIndicatorPadding(float)
+com.viewpagerindicator.TitlePageIndicator: com.viewpagerindicator.TitlePageIndicator$IndicatorStyle getFooterIndicatorStyle()
 com.viewpagerindicator.TitlePageIndicator: void setFooterIndicatorStyle(com.viewpagerindicator.TitlePageIndicator$IndicatorStyle)
+com.viewpagerindicator.TitlePageIndicator: int getSelectedColor()
 com.viewpagerindicator.TitlePageIndicator: void setSelectedColor(int)
 com.viewpagerindicator.TitlePageIndicator: void setSelectedBold(boolean)
+com.viewpagerindicator.TitlePageIndicator: int getTextColor()
 com.viewpagerindicator.TitlePageIndicator: void setTextColor(int)
+com.viewpagerindicator.TitlePageIndicator: float getTextSize()
 com.viewpagerindicator.TitlePageIndicator: void setTextSize(float)
+com.viewpagerindicator.TitlePageIndicator: float getTitlePadding()
 com.viewpagerindicator.TitlePageIndicator: void setTitlePadding(float)
+com.viewpagerindicator.TitlePageIndicator: float getTopPadding()
 com.viewpagerindicator.TitlePageIndicator: void setTopPadding(float)
+com.viewpagerindicator.TitlePageIndicator: float getClipPadding()
 com.viewpagerindicator.TitlePageIndicator: void setClipPadding(float)
 com.viewpagerindicator.TitlePageIndicator: void setTypeface(android.graphics.Typeface)
+com.viewpagerindicator.TitlePageIndicator: android.graphics.Typeface getTypeface()
 com.viewpagerindicator.TitlePageIndicator: void setViewPager(android.support.v4.view.ViewPager)
-com.viewpagerindicator.TitlePageIndicator: void setViewPager(android.support.v4.view.ViewPager,int)
 com.viewpagerindicator.TitlePageIndicator: void setOnCenterItemClickListener(com.viewpagerindicator.TitlePageIndicator$OnCenterItemClickListener)
 com.viewpagerindicator.TitlePageIndicator: void setCurrentItem(int)
 com.viewpagerindicator.TitlePageIndicator: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
@@ -1002,5 +1012,4 @@ rsg.mailchimp.api.data.AccountDetails$PlanType: rsg.mailchimp.api.data.AccountDe
 rsg.mailchimp.api.data.AccountDetails$PlanType: rsg.mailchimp.api.data.AccountDetails$PlanType valueOf(java.lang.String)
 rsg.mailchimp.api.data.ChimpChatter$Type: rsg.mailchimp.api.data.ChimpChatter$Type[] values()
 rsg.mailchimp.api.data.ChimpChatter$Type: rsg.mailchimp.api.data.ChimpChatter$Type valueOf(java.lang.String)
-rsg.mailchimp.gui.Subscribe
 rsg.mailchimp.gui.Subscribe: void onClick(android.view.View)

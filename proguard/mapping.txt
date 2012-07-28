@@ -26,12 +26,11 @@ android.support.v4.app.BackStackRecord -> android.support.v4.app.b:
     void doAddOp(int,android.support.v4.app.Fragment,java.lang.String,int) -> a
     android.support.v4.app.FragmentTransaction remove(android.support.v4.app.Fragment) -> a
     void bumpBackStackNesting(int) -> a
-    int commit() -> a
-    int commitAllowingStateLoss() -> b
+    int commitAllowingStateLoss() -> a
     int commitInternal(boolean) -> a
     void run() -> run
     void popFromBackStack(boolean) -> b
-    java.lang.String getName() -> c
+    java.lang.String getName() -> b
 android.support.v4.app.BackStackRecord$Op -> android.support.v4.app.c:
     android.support.v4.app.BackStackRecord$Op next -> a
     android.support.v4.app.BackStackRecord$Op prev -> b
@@ -61,118 +60,96 @@ android.support.v4.app.BackStackState$1 -> android.support.v4.app.d:
     android.support.v4.app.BackStackState[] newArray(int) -> a
     java.lang.Object[] newArray(int) -> newArray
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
-android.support.v4.app.DialogFragment -> android.support.v4.app.DialogFragment:
-    int mStyle -> a
-    int mTheme -> b
-    boolean mCancelable -> c
-    boolean mShowsDialog -> d
-    int mBackStackId -> e
-    android.app.Dialog mDialog -> f
-    boolean mDestroyed -> g
-    boolean mRemoved -> h
-    void dismissInternal(boolean) -> a
-    int getTheme() -> a
-    void onCreate(android.os.Bundle) -> a
-    android.view.LayoutInflater getLayoutInflater(android.os.Bundle) -> b
-    android.app.Dialog onCreateDialog(android.os.Bundle) -> c
-    void onCancel(android.content.DialogInterface) -> onCancel
-    void onDismiss(android.content.DialogInterface) -> onDismiss
-    void onActivityCreated(android.os.Bundle) -> d
-    void onStart() -> b
-    void onSaveInstanceState(android.os.Bundle) -> e
-    void onStop() -> c
-    void onDestroyView() -> d
 android.support.v4.app.Fragment -> android.support.v4.app.Fragment:
-    java.util.HashMap sClassMap -> a
-    int mState -> i
-    android.view.View mAnimatingAway -> j
-    int mStateAfterAnimating -> k
-    android.os.Bundle mSavedFragmentState -> l
-    android.util.SparseArray mSavedViewState -> m
-    int mIndex -> n
-    java.lang.String mWho -> o
-    android.os.Bundle mArguments -> p
-    android.support.v4.app.Fragment mTarget -> q
-    int mTargetIndex -> r
-    int mTargetRequestCode -> s
-    boolean mAdded -> t
-    boolean mRemoving -> u
-    boolean mResumed -> v
-    boolean mFromLayout -> w
-    boolean mInLayout -> x
-    boolean mRestored -> y
-    int mBackStackNesting -> z
-    android.support.v4.app.FragmentManagerImpl mFragmentManager -> A
-    android.support.v4.app.FragmentActivity mActivity -> B
-    int mFragmentId -> C
-    int mContainerId -> D
-    java.lang.String mTag -> E
-    boolean mHidden -> F
-    boolean mDetached -> G
-    boolean mRetainInstance -> H
-    boolean mRetaining -> I
-    boolean mHasMenu -> J
-    boolean mMenuVisible -> K
-    boolean mCalled -> L
-    int mNextAnim -> M
-    android.view.ViewGroup mContainer -> N
-    android.view.View mView -> O
-    android.view.View mInnerView -> P
-    boolean mDeferStart -> Q
-    boolean mUserVisibleHint -> R
-    android.support.v4.app.LoaderManagerImpl mLoaderManager -> S
-    boolean mLoadersStarted -> T
-    boolean mCheckedForLoaderManager -> U
+    java.util.HashMap sClassMap -> N
+    int mState -> a
+    android.view.View mAnimatingAway -> b
+    int mStateAfterAnimating -> c
+    android.os.Bundle mSavedFragmentState -> d
+    android.util.SparseArray mSavedViewState -> e
+    int mIndex -> f
+    java.lang.String mWho -> g
+    android.os.Bundle mArguments -> h
+    android.support.v4.app.Fragment mTarget -> i
+    int mTargetIndex -> j
+    int mTargetRequestCode -> k
+    boolean mAdded -> l
+    boolean mRemoving -> m
+    boolean mResumed -> n
+    boolean mFromLayout -> o
+    boolean mInLayout -> p
+    boolean mRestored -> q
+    int mBackStackNesting -> r
+    android.support.v4.app.FragmentManagerImpl mFragmentManager -> s
+    android.support.v4.app.FragmentActivity mActivity -> t
+    int mFragmentId -> u
+    int mContainerId -> v
+    java.lang.String mTag -> w
+    boolean mHidden -> x
+    boolean mDetached -> y
+    boolean mRetainInstance -> z
+    boolean mRetaining -> A
+    boolean mHasMenu -> B
+    boolean mMenuVisible -> C
+    boolean mCalled -> D
+    int mNextAnim -> E
+    android.view.ViewGroup mContainer -> F
+    android.view.View mView -> G
+    android.view.View mInnerView -> H
+    boolean mDeferStart -> I
+    boolean mUserVisibleHint -> J
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> K
+    boolean mLoadersStarted -> L
+    boolean mCheckedForLoaderManager -> M
     android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String) -> a
     android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String,android.os.Bundle) -> a
-    void restoreViewState() -> e
+    void restoreViewState() -> a
     void setIndex(int) -> a
-    boolean isInBackStack() -> f
+    boolean isInBackStack() -> b
     boolean equals(java.lang.Object) -> equals
     int hashCode() -> hashCode
     java.lang.String toString() -> toString
-    void setArguments(android.os.Bundle) -> f
-    android.os.Bundle getArguments() -> g
+    void setArguments(android.os.Bundle) -> a
+    android.os.Bundle getArguments() -> c
     void setInitialSavedState(android.support.v4.app.Fragment$SavedState) -> a
-    android.support.v4.app.FragmentActivity getActivity() -> h
-    android.support.v4.app.FragmentManager getFragmentManager() -> i
-    boolean isAdded() -> j
-    boolean isHidden() -> k
-    void onHiddenChanged(boolean) -> b
-    void setMenuVisibility(boolean) -> c
+    android.support.v4.app.FragmentActivity getActivity() -> d
+    boolean isAdded() -> e
+    boolean isHidden() -> f
+    void onHiddenChanged(boolean) -> a
+    void setMenuVisibility(boolean) -> b
     void onActivityResult(int,int,android.content.Intent) -> a
     android.view.LayoutInflater getLayoutInflater(android.os.Bundle) -> b
     void onInflate(android.app.Activity,android.util.AttributeSet,android.os.Bundle) -> a
     void onAttach(android.app.Activity) -> a
     android.view.animation.Animation onCreateAnimation(int,boolean,int) -> a
-    void onCreate(android.os.Bundle) -> a
+    void onCreate(android.os.Bundle) -> c
     android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
     void onViewCreated(android.view.View,android.os.Bundle) -> a
-    android.view.View getView() -> l
+    android.view.View getView() -> g
     void onActivityCreated(android.os.Bundle) -> d
-    void onStart() -> b
-    void onResume() -> m
+    void onStart() -> h
+    void onResume() -> i
     void onSaveInstanceState(android.os.Bundle) -> e
     void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
-    void onPause() -> n
-    void onStop() -> c
+    void onPause() -> j
+    void onStop() -> k
     void onLowMemory() -> onLowMemory
-    void onDestroyView() -> d
-    void onDestroy() -> o
-    void initState() -> p
-    void onDetach() -> q
+    void onDestroyView() -> l
+    void onDestroy() -> m
+    void initState() -> n
+    void onDetach() -> o
     void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
     void onPrepareOptionsMenu(android.view.Menu) -> a
-    void onDestroyOptionsMenu() -> r
+    void onDestroyOptionsMenu() -> p
     boolean onOptionsItemSelected(android.view.MenuItem) -> a
     void onOptionsMenuClosed(android.view.Menu) -> b
     void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo) -> onCreateContextMenu
     boolean onContextItemSelected(android.view.MenuItem) -> b
     void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
-    void performStart() -> s
-    void performStop() -> t
-    void performReallyStop() -> u
-    void performDestroyView() -> v
+    void performStart() -> q
+    void performStop() -> r
+    void performReallyStop() -> s
+    void performDestroyView() -> t
 android.support.v4.app.Fragment$InstantiationException -> android.support.v4.app.e:
 android.support.v4.app.Fragment$SavedState -> android.support.v4.app.Fragment$SavedState:
     android.os.Bundle mState -> a
@@ -184,7 +161,7 @@ android.support.v4.app.Fragment$SavedState$1 -> android.support.v4.app.f:
     android.support.v4.app.Fragment$SavedState[] newArray(int) -> a
     java.lang.Object[] newArray(int) -> newArray
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
-android.support.v4.app.FragmentActivity -> android.support.v4.app.FragmentActivity:
+android.support.v4.app.FragmentActivity -> android.support.v4.app.g:
     android.os.Handler mHandler -> a
     android.support.v4.app.FragmentManagerImpl mFragments -> b
     boolean mCreated -> c
@@ -226,27 +203,26 @@ android.support.v4.app.FragmentActivity -> android.support.v4.app.FragmentActivi
     void startActivityForResult(android.content.Intent,int) -> startActivityForResult
     void invalidateSupportFragmentIndex(int) -> a
     android.support.v4.app.LoaderManagerImpl getLoaderManager(int,boolean,boolean) -> a
-android.support.v4.app.FragmentActivity$1 -> android.support.v4.app.g:
+android.support.v4.app.FragmentActivity$1 -> android.support.v4.app.h:
     android.support.v4.app.FragmentActivity this$0 -> a
     void handleMessage(android.os.Message) -> handleMessage
-android.support.v4.app.FragmentActivity$FragmentTag -> android.support.v4.app.h:
+android.support.v4.app.FragmentActivity$FragmentTag -> android.support.v4.app.i:
     int[] Fragment -> a
-android.support.v4.app.FragmentActivity$NonConfigurationInstances -> android.support.v4.app.i:
+android.support.v4.app.FragmentActivity$NonConfigurationInstances -> android.support.v4.app.j:
     java.lang.Object activity -> a
     java.lang.Object custom -> b
     java.util.HashMap children -> c
     java.util.ArrayList fragments -> d
     android.support.v4.app.HCSparseArray loaders -> e
-android.support.v4.app.FragmentManager -> android.support.v4.app.j:
+android.support.v4.app.FragmentManager -> android.support.v4.app.k:
     android.support.v4.app.FragmentTransaction beginTransaction() -> a
     boolean executePendingTransactions() -> b
-    void popBackStack(int,int) -> a
     void putFragment(android.os.Bundle,java.lang.String,android.support.v4.app.Fragment) -> a
     android.support.v4.app.Fragment getFragment(android.os.Bundle,java.lang.String) -> a
     android.support.v4.app.Fragment$SavedState saveFragmentInstanceState(android.support.v4.app.Fragment) -> a
-android.support.v4.app.FragmentManager$OnBackStackChangedListener -> android.support.v4.app.k:
+android.support.v4.app.FragmentManager$OnBackStackChangedListener -> android.support.v4.app.l:
     void onBackStackChanged() -> a
-android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.l:
+android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.m:
     boolean DEBUG -> a
     boolean HONEYCOMB -> b
     java.util.ArrayList mPendingActions -> c
@@ -277,7 +253,6 @@ android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.l:
     android.support.v4.app.FragmentTransaction beginTransaction() -> a
     boolean executePendingTransactions() -> b
     boolean popBackStackImmediate() -> c
-    void popBackStack(int,int) -> a
     void putFragment(android.os.Bundle,java.lang.String,android.support.v4.app.Fragment) -> a
     android.support.v4.app.Fragment getFragment(android.os.Bundle,java.lang.String) -> a
     android.support.v4.app.Fragment$SavedState saveFragmentInstanceState(android.support.v4.app.Fragment) -> a
@@ -335,13 +310,8 @@ android.support.v4.app.FragmentManagerImpl -> android.support.v4.app.l:
     void dispatchOptionsMenuClosed(android.view.Menu) -> b
     int reverseTransit(int) -> c
     int transitToStyleIndex(int,boolean) -> b
-android.support.v4.app.FragmentManagerImpl$1 -> android.support.v4.app.m:
+android.support.v4.app.FragmentManagerImpl$1 -> android.support.v4.app.n:
     android.support.v4.app.FragmentManagerImpl this$0 -> a
-    void run() -> run
-android.support.v4.app.FragmentManagerImpl$4 -> android.support.v4.app.n:
-    int val$id -> a
-    int val$flags -> b
-    android.support.v4.app.FragmentManagerImpl this$0 -> c
     void run() -> run
 android.support.v4.app.FragmentManagerImpl$5 -> android.support.v4.app.o:
     android.support.v4.app.Fragment val$fragment -> a
@@ -400,8 +370,7 @@ android.support.v4.app.FragmentStatePagerAdapter -> android.support.v4.app.r:
 android.support.v4.app.FragmentTransaction -> android.support.v4.app.s:
     android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment) -> a
     android.support.v4.app.FragmentTransaction remove(android.support.v4.app.Fragment) -> a
-    int commit() -> a
-    int commitAllowingStateLoss() -> b
+    int commitAllowingStateLoss() -> a
 android.support.v4.app.HCSparseArray -> android.support.v4.app.t:
     java.lang.Object DELETED -> a
     boolean mGarbage -> b
@@ -422,38 +391,13 @@ android.support.v4.app.HCSparseArray -> android.support.v4.app.t:
     int binarySearch(int[],int,int,int) -> a
     int idealByteArraySize(int) -> g
     int idealIntArraySize(int) -> h
-android.support.v4.app.ListFragment -> android.support.v4.app.ListFragment:
-    android.os.Handler mHandler -> V
-    java.lang.Runnable mRequestFocus -> W
-    android.widget.AdapterView$OnItemClickListener mOnClickListener -> X
-    android.widget.ListAdapter mAdapter -> a
-    android.widget.ListView mList -> b
-    android.view.View mEmptyView -> c
-    android.widget.TextView mStandardEmptyView -> d
-    android.view.View mProgressContainer -> e
-    android.view.View mListContainer -> f
-    java.lang.CharSequence mEmptyText -> g
-    boolean mListShown -> h
-    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
-    void onViewCreated(android.view.View,android.os.Bundle) -> a
-    void onDestroyView() -> d
-    void onListItemClick(android.widget.ListView,android.view.View,int,long) -> a
-    void setListAdapter(android.widget.ListAdapter) -> a
-    void setListShown(boolean,boolean) -> a
-    void ensureList() -> a
-android.support.v4.app.ListFragment$1 -> android.support.v4.app.u:
-    android.support.v4.app.ListFragment this$0 -> a
-    void run() -> run
-android.support.v4.app.ListFragment$2 -> android.support.v4.app.v:
-    android.support.v4.app.ListFragment this$0 -> a
-    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-android.support.v4.app.LoaderManager -> android.support.v4.app.w:
+android.support.v4.app.LoaderManager -> android.support.v4.app.u:
     boolean hasRunningLoaders() -> a
-android.support.v4.app.LoaderManager$LoaderCallbacks -> android.support.v4.app.x:
+android.support.v4.app.LoaderManager$LoaderCallbacks -> android.support.v4.app.v:
     android.support.v4.content.Loader onCreateLoader(int,android.os.Bundle) -> a
     void onLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
     void onLoaderReset(android.support.v4.content.Loader) -> a
-android.support.v4.app.LoaderManagerImpl -> android.support.v4.app.y:
+android.support.v4.app.LoaderManagerImpl -> android.support.v4.app.w:
     boolean DEBUG -> a
     android.support.v4.app.HCSparseArray mLoaders -> b
     android.support.v4.app.HCSparseArray mInactiveLoaders -> c
@@ -471,7 +415,7 @@ android.support.v4.app.LoaderManagerImpl -> android.support.v4.app.y:
     java.lang.String toString() -> toString
     void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
     boolean hasRunningLoaders() -> a
-android.support.v4.app.LoaderManagerImpl$LoaderInfo -> android.support.v4.app.z:
+android.support.v4.app.LoaderManagerImpl$LoaderInfo -> android.support.v4.app.x:
     int mId -> a
     android.os.Bundle mArgs -> b
     android.support.v4.app.LoaderManager$LoaderCallbacks mCallbacks -> c
@@ -496,11 +440,11 @@ android.support.v4.app.LoaderManagerImpl$LoaderInfo -> android.support.v4.app.z:
     void callOnLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
     java.lang.String toString() -> toString
     void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
-android.support.v4.app.NoSaveStateFrameLayout -> android.support.v4.app.aa:
+android.support.v4.app.NoSaveStateFrameLayout -> android.support.v4.app.y:
     android.view.ViewGroup wrap(android.view.View) -> a
     void dispatchSaveInstanceState(android.util.SparseArray) -> dispatchSaveInstanceState
     void dispatchRestoreInstanceState(android.util.SparseArray) -> dispatchRestoreInstanceState
-android.support.v4.app.SuperNotCalledException -> android.support.v4.app.ab:
+android.support.v4.app.SuperNotCalledException -> android.support.v4.app.z:
 android.support.v4.content.Loader -> android.support.v4.a.a:
     int mId -> a
     android.support.v4.content.Loader$OnLoadCompleteListener mListener -> b
@@ -609,80 +553,50 @@ android.support.v4.view.PagerAdapter -> android.support.v4.view.k:
     int getItemPosition(java.lang.Object) -> a
     void registerDataSetObserver(android.database.DataSetObserver) -> a
     void unregisterDataSetObserver(android.database.DataSetObserver) -> b
-    java.lang.CharSequence getPageTitle(int) -> b
-android.support.v4.view.PagerTitleStrip -> android.support.v4.view.PagerTitleStrip:
-    android.support.v4.view.ViewPager mPager -> a
-    android.widget.TextView mPrevText -> b
-    android.widget.TextView mCurrText -> c
-    android.widget.TextView mNextText -> d
-    int mLastKnownCurrentPage -> e
-    float mLastKnownPositionOffset -> f
-    int mScaledTextSpacing -> g
-    boolean mUpdatingText -> h
-    boolean mUpdatingPositions -> i
-    android.support.v4.view.PagerTitleStrip$PageListener mPageListener -> j
-    int[] ATTRS -> k
-    void onAttachedToWindow() -> onAttachedToWindow
-    void onDetachedFromWindow() -> onDetachedFromWindow
-    void updateText(int,android.support.v4.view.PagerAdapter) -> a
-    void requestLayout() -> requestLayout
-    void updateAdapter(android.support.v4.view.PagerAdapter,android.support.v4.view.PagerAdapter) -> a
-    void updateTextPositions(int,float) -> a
-    void onMeasure(int,int) -> onMeasure
-    void onLayout(boolean,int,int,int,int) -> onLayout
-android.support.v4.view.PagerTitleStrip$1 -> android.support.v4.view.l:
-android.support.v4.view.PagerTitleStrip$PageListener -> android.support.v4.view.m:
-    int mScrollState -> b
-    android.support.v4.view.PagerTitleStrip this$0 -> a
-    void onPageScrolled(int,float,int) -> a
-    void onPageSelected(int) -> a
-    void onPageScrollStateChanged(int) -> b
-    void onAdapterChanged(android.support.v4.view.PagerAdapter,android.support.v4.view.PagerAdapter) -> a
-    void onChanged() -> onChanged
-android.support.v4.view.VelocityTrackerCompat -> android.support.v4.view.n:
+android.support.v4.view.VelocityTrackerCompat -> android.support.v4.view.l:
     android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl IMPL -> a
     float getXVelocity(android.view.VelocityTracker,int) -> a
     float getYVelocity(android.view.VelocityTracker,int) -> b
-android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl -> android.support.v4.view.o:
+android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl -> android.support.v4.view.m:
     float getXVelocity(android.view.VelocityTracker,int) -> a
     float getYVelocity(android.view.VelocityTracker,int) -> b
-android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl -> android.support.v4.view.p:
+android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl -> android.support.v4.view.n:
     float getXVelocity(android.view.VelocityTracker,int) -> a
     float getYVelocity(android.view.VelocityTracker,int) -> b
-android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl -> android.support.v4.view.q:
+android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl -> android.support.v4.view.o:
     float getXVelocity(android.view.VelocityTracker,int) -> a
     float getYVelocity(android.view.VelocityTracker,int) -> b
-android.support.v4.view.VelocityTrackerCompatHoneycomb -> android.support.v4.view.r:
+android.support.v4.view.VelocityTrackerCompatHoneycomb -> android.support.v4.view.p:
     float getXVelocity(android.view.VelocityTracker,int) -> a
     float getYVelocity(android.view.VelocityTracker,int) -> b
-android.support.v4.view.ViewCompat -> android.support.v4.view.s:
+android.support.v4.view.ViewCompat -> android.support.v4.view.q:
     android.support.v4.view.ViewCompat$ViewCompatImpl IMPL -> a
     boolean canScrollHorizontally(android.view.View,int) -> a
     int getOverScrollMode(android.view.View) -> a
-android.support.v4.view.ViewCompat$BaseViewCompatImpl -> android.support.v4.view.t:
+android.support.v4.view.ViewCompat$BaseViewCompatImpl -> android.support.v4.view.r:
     boolean canScrollHorizontally(android.view.View,int) -> a
     int getOverScrollMode(android.view.View) -> a
-android.support.v4.view.ViewCompat$GBViewCompatImpl -> android.support.v4.view.u:
+android.support.v4.view.ViewCompat$GBViewCompatImpl -> android.support.v4.view.s:
     int getOverScrollMode(android.view.View) -> a
-android.support.v4.view.ViewCompat$ICSViewCompatImpl -> android.support.v4.view.v:
+android.support.v4.view.ViewCompat$ICSViewCompatImpl -> android.support.v4.view.t:
     boolean canScrollHorizontally(android.view.View,int) -> a
-android.support.v4.view.ViewCompat$ViewCompatImpl -> android.support.v4.view.w:
+android.support.v4.view.ViewCompat$ViewCompatImpl -> android.support.v4.view.u:
     boolean canScrollHorizontally(android.view.View,int) -> a
     int getOverScrollMode(android.view.View) -> a
-android.support.v4.view.ViewCompatGingerbread -> android.support.v4.view.x:
+android.support.v4.view.ViewCompatGingerbread -> android.support.v4.view.v:
     int getOverScrollMode(android.view.View) -> a
-android.support.v4.view.ViewCompatICS -> android.support.v4.view.y:
+android.support.v4.view.ViewCompatICS -> android.support.v4.view.w:
     boolean canScrollHorizontally(android.view.View,int) -> a
-android.support.v4.view.ViewConfigurationCompat -> android.support.v4.view.z:
+android.support.v4.view.ViewConfigurationCompat -> android.support.v4.view.x:
     android.support.v4.view.ViewConfigurationCompat$ViewConfigurationVersionImpl IMPL -> a
     int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
-android.support.v4.view.ViewConfigurationCompat$BaseViewConfigurationVersionImpl -> android.support.v4.view.aa:
+android.support.v4.view.ViewConfigurationCompat$BaseViewConfigurationVersionImpl -> android.support.v4.view.y:
     int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
-android.support.v4.view.ViewConfigurationCompat$FroyoViewConfigurationVersionImpl -> android.support.v4.view.ab:
+android.support.v4.view.ViewConfigurationCompat$FroyoViewConfigurationVersionImpl -> android.support.v4.view.z:
     int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
-android.support.v4.view.ViewConfigurationCompat$ViewConfigurationVersionImpl -> android.support.v4.view.ac:
+android.support.v4.view.ViewConfigurationCompat$ViewConfigurationVersionImpl -> android.support.v4.view.aa:
     int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
-android.support.v4.view.ViewConfigurationCompatFroyo -> android.support.v4.view.ad:
+android.support.v4.view.ViewConfigurationCompatFroyo -> android.support.v4.view.ab:
     int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
 android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     int[] LAYOUT_ATTRS -> a
@@ -730,20 +644,21 @@ android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     android.support.v4.view.ViewPager$OnAdapterChangeListener mAdapterChangeListener -> Q
     int mScrollState -> R
     void initViewPager() -> a
-    void setScrollState(int) -> b
+    void setScrollState(int) -> setScrollState
     void setAdapter(android.support.v4.view.PagerAdapter) -> setAdapter
-    void removeNonDecorViews() -> l
-    android.support.v4.view.PagerAdapter getAdapter() -> b
-    void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener) -> a
+    void removeNonDecorViews() -> j
+    android.support.v4.view.PagerAdapter getAdapter() -> getAdapter
+    void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener) -> setOnAdapterChangeListener
     void setCurrentItem(int) -> setCurrentItem
-    void setCurrentItem(int,boolean) -> setCurrentItem
-    int getCurrentItem() -> c
+    void setCurrentItem(int,boolean) -> a
+    int getCurrentItem() -> getCurrentItem
     void setCurrentItemInternal(int,boolean,boolean) -> a
     void setCurrentItemInternal(int,boolean,boolean,int) -> a
     void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener) -> setOnPageChangeListener
-    android.support.v4.view.ViewPager$OnPageChangeListener setInternalPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener) -> a
+    int getOffscreenPageLimit() -> getOffscreenPageLimit
     void setOffscreenPageLimit(int) -> setOffscreenPageLimit
     void setPageMargin(int) -> setPageMargin
+    int getPageMargin() -> getPageMargin
     void setPageMarginDrawable(android.graphics.drawable.Drawable) -> setPageMarginDrawable
     void setPageMarginDrawable(int) -> setPageMarginDrawable
     boolean verifyDrawable(android.graphics.drawable.Drawable) -> verifyDrawable
@@ -751,8 +666,8 @@ android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     float distanceInfluenceForSnapDuration(float) -> a
     void smoothScrollTo(int,int,int) -> a
     void addNewItem(int,int) -> a
-    void dataSetChanged() -> d
-    void populate() -> e
+    void dataSetChanged() -> b
+    void populate() -> c
     android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
     void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
     void addView(android.view.View,int,android.view.ViewGroup$LayoutParams) -> addView
@@ -764,27 +679,27 @@ android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     void recomputeScrollPosition(int,int,int,int) -> a
     void onLayout(boolean,int,int,int,int) -> onLayout
     void computeScroll() -> computeScroll
-    void pageScrolled(int) -> c
+    void pageScrolled(int) -> b
     void onPageScrolled(int,float,int) -> a
-    void completeScroll() -> m
+    void completeScroll() -> k
     boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
     boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
     int determineTargetPage(int,float,int,int) -> a
     void draw(android.graphics.Canvas) -> draw
     void onDraw(android.graphics.Canvas) -> onDraw
-    boolean beginFakeDrag() -> f
-    void endFakeDrag() -> g
+    boolean beginFakeDrag() -> d
+    void endFakeDrag() -> e
     void fakeDragBy(float) -> b
-    boolean isFakeDragging() -> h
+    boolean isFakeDragging() -> f
     void onSecondaryPointerUp(android.view.MotionEvent) -> a
-    void endDrag() -> n
-    void setScrollingCacheEnabled(boolean) -> a
+    void endDrag() -> l
+    void setScrollingCacheEnabled(boolean) -> setScrollingCacheEnabled
     boolean canScroll(android.view.View,boolean,int,int,int) -> a
     boolean dispatchKeyEvent(android.view.KeyEvent) -> dispatchKeyEvent
     boolean executeKeyEvent(android.view.KeyEvent) -> a
     boolean arrowScroll(int) -> a
-    boolean pageLeft() -> i
-    boolean pageRight() -> j
+    boolean pageLeft() -> g
+    boolean pageRight() -> h
     void addFocusables(java.util.ArrayList,int,int) -> addFocusables
     void addTouchables(java.util.ArrayList) -> addTouchables
     boolean onRequestFocusInDescendants(int,android.graphics.Rect) -> onRequestFocusInDescendants
@@ -793,27 +708,27 @@ android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
     android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams) -> generateLayoutParams
     boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
     android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
-    int[] access$100() -> k
-android.support.v4.view.ViewPager$1 -> android.support.v4.view.ae:
+    int[] access$100() -> i
+android.support.v4.view.ViewPager$1 -> android.support.v4.view.ac:
     int compare(android.support.v4.view.ViewPager$ItemInfo,android.support.v4.view.ViewPager$ItemInfo) -> a
     int compare(java.lang.Object,java.lang.Object) -> compare
-android.support.v4.view.ViewPager$2 -> android.support.v4.view.af:
+android.support.v4.view.ViewPager$2 -> android.support.v4.view.ad:
     float getInterpolation(float) -> getInterpolation
-android.support.v4.view.ViewPager$Decor -> android.support.v4.view.ag:
-android.support.v4.view.ViewPager$ItemInfo -> android.support.v4.view.ah:
+android.support.v4.view.ViewPager$Decor -> android.support.v4.view.ae:
+android.support.v4.view.ViewPager$ItemInfo -> android.support.v4.view.af:
     java.lang.Object object -> a
     int position -> b
     boolean scrolling -> c
-android.support.v4.view.ViewPager$LayoutParams -> android.support.v4.view.ViewPager$LayoutParams:
+android.support.v4.view.ViewPager$LayoutParams -> android.support.v4.view.ag:
     boolean isDecor -> a
     int gravity -> b
-android.support.v4.view.ViewPager$OnAdapterChangeListener -> android.support.v4.view.ai:
+android.support.v4.view.ViewPager$OnAdapterChangeListener -> android.support.v4.view.ah:
     void onAdapterChanged(android.support.v4.view.PagerAdapter,android.support.v4.view.PagerAdapter) -> a
-android.support.v4.view.ViewPager$OnPageChangeListener -> android.support.v4.view.aj:
+android.support.v4.view.ViewPager$OnPageChangeListener -> android.support.v4.view.ai:
     void onPageScrolled(int,float,int) -> a
     void onPageSelected(int) -> a
     void onPageScrollStateChanged(int) -> b
-android.support.v4.view.ViewPager$PagerObserver -> android.support.v4.view.ak:
+android.support.v4.view.ViewPager$PagerObserver -> android.support.v4.view.aj:
     android.support.v4.view.ViewPager this$0 -> a
     void onChanged() -> onChanged
     void onInvalidated() -> onInvalidated
@@ -824,7 +739,7 @@ android.support.v4.view.ViewPager$SavedState -> android.support.v4.view.ViewPage
     android.os.Parcelable$Creator CREATOR -> CREATOR
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
     java.lang.String toString() -> toString
-android.support.v4.view.ViewPager$SavedState$1 -> android.support.v4.view.al:
+android.support.v4.view.ViewPager$SavedState$1 -> android.support.v4.view.ak:
     android.support.v4.view.ViewPager$SavedState createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> b
     android.support.v4.view.ViewPager$SavedState[] newArray(int) -> b
     java.lang.Object[] newArray(int) -> a
@@ -1191,7 +1106,7 @@ com.google.ads.i -> com.google.ads.ah:
     void a(java.lang.String,java.lang.Throwable) -> a
     void a(com.google.ads.mediation.MediationAdapter) -> a
 com.google.ads.i$a -> com.google.ads.ai:
-com.google.ads.internal.AdVideoView -> com.google.ads.internal.AdVideoView:
+com.google.ads.internal.AdVideoView -> com.google.ads.a.a:
     com.google.ads.internal.a b -> b
     java.lang.ref.WeakReference c -> c
     com.google.ads.internal.AdWebView d -> d
@@ -1212,12 +1127,12 @@ com.google.ads.internal.AdVideoView -> com.google.ads.internal.AdVideoView:
     void a(android.view.MotionEvent) -> a
     void e() -> e
     void f() -> f
-com.google.ads.internal.AdVideoView$a -> com.google.ads.internal.a:
+com.google.ads.internal.AdVideoView$a -> com.google.ads.a.b:
     java.lang.ref.WeakReference a -> a
     android.os.Handler b -> b
     void run() -> run
     void a() -> a
-com.google.ads.internal.AdWebView -> com.google.ads.internal.AdWebView:
+com.google.ads.internal.AdWebView -> com.google.ads.a.c:
     java.lang.ref.WeakReference a -> a
     com.google.ads.AdSize b -> b
     boolean c -> c
@@ -1230,10 +1145,10 @@ com.google.ads.internal.AdWebView -> com.google.ads.internal.AdWebView:
     void destroy() -> destroy
     void onMeasure(int,int) -> onMeasure
     void setIsExpandedMraid(boolean) -> setIsExpandedMraid
-com.google.ads.internal.AdWebView$1 -> com.google.ads.internal.b:
+com.google.ads.internal.AdWebView$1 -> com.google.ads.a.d:
     com.google.ads.internal.AdWebView a -> a
     void onDownloadStart(java.lang.String,java.lang.String,java.lang.String,java.lang.String,long) -> onDownloadStart
-com.google.ads.internal.a -> com.google.ads.internal.c:
+com.google.ads.internal.a -> com.google.ads.a.e:
     com.google.ads.internal.a d -> d
     com.google.ads.util.f a -> a
     java.util.Map b -> b
@@ -1249,17 +1164,17 @@ com.google.ads.internal.a -> com.google.ads.internal.c:
     void a(android.webkit.WebView) -> a
     void b(android.webkit.WebView) -> b
     com.google.ads.internal.a a() -> a
-com.google.ads.internal.a$1 -> com.google.ads.internal.d:
-com.google.ads.internal.a$2 -> com.google.ads.internal.e:
+com.google.ads.internal.a$1 -> com.google.ads.a.f:
+com.google.ads.internal.a$2 -> com.google.ads.a.g:
     com.google.ads.internal.a a() -> a
     java.lang.Object b() -> b
-com.google.ads.internal.a$3 -> com.google.ads.internal.f:
-com.google.ads.internal.b -> com.google.ads.internal.g:
+com.google.ads.internal.a$3 -> com.google.ads.a.h:
+com.google.ads.internal.b -> com.google.ads.a.i:
     boolean a -> a
     void a(java.lang.String) -> a
     void b(java.lang.String) -> b
     java.lang.String c(java.lang.String) -> c
-com.google.ads.internal.c -> com.google.ads.internal.h:
+com.google.ads.internal.c -> com.google.ads.a.j:
     java.lang.String a -> a
     java.lang.String b -> b
     java.lang.String c -> c
@@ -1302,35 +1217,35 @@ com.google.ads.internal.c -> com.google.ads.internal.h:
     void a(int) -> a
     void c(boolean) -> c
     com.google.ads.internal.d a(com.google.ads.internal.c) -> a
-com.google.ads.internal.c$1 -> com.google.ads.internal.i:
+com.google.ads.internal.c$1 -> com.google.ads.a.k:
     com.google.ads.c a -> a
     com.google.ads.internal.c b -> b
     void run() -> run
-com.google.ads.internal.c$a -> com.google.ads.internal.j:
+com.google.ads.internal.c$a -> com.google.ads.a.l:
     com.google.ads.internal.d a -> a
     android.webkit.WebView b -> b
     com.google.ads.internal.f c -> c
     com.google.ads.AdRequest$ErrorCode d -> d
     boolean e -> e
     void run() -> run
-com.google.ads.internal.c$b -> com.google.ads.internal.k:
+com.google.ads.internal.c$b -> com.google.ads.a.m:
     com.google.ads.internal.c a -> a
-com.google.ads.internal.c$c -> com.google.ads.internal.l:
+com.google.ads.internal.c$c -> com.google.ads.a.n:
     java.lang.String b -> b
     java.lang.String c -> c
     android.webkit.WebView d -> d
     com.google.ads.internal.c a -> a
     void run() -> run
-com.google.ads.internal.c$d -> com.google.ads.internal.m:
+com.google.ads.internal.c$d -> com.google.ads.a.o:
     com.google.ads.internal.c a -> a
-com.google.ads.internal.c$e -> com.google.ads.internal.n:
+com.google.ads.internal.c$e -> com.google.ads.a.p:
     com.google.ads.internal.d a -> a
     java.util.LinkedList b -> b
     int c -> c
     boolean d -> d
     java.lang.String e -> e
     void run() -> run
-com.google.ads.internal.d -> com.google.ads.internal.o:
+com.google.ads.internal.d -> com.google.ads.a.q:
     java.lang.Object a -> a
     com.google.ads.m b -> b
     com.google.ads.internal.c c -> c
@@ -1399,14 +1314,14 @@ com.google.ads.internal.d -> com.google.ads.internal.o:
     void b(java.lang.String) -> b
     void a(java.util.LinkedList) -> a
     void b(boolean) -> b
-com.google.ads.internal.e -> com.google.ads.internal.p:
+com.google.ads.internal.e -> com.google.ads.a.r:
     java.lang.String a -> a
     java.util.HashMap b -> b
     java.util.HashMap a(java.io.Serializable) -> a
     android.os.Bundle a() -> a
     java.lang.String b() -> b
     java.util.HashMap c() -> c
-com.google.ads.internal.f -> com.google.ads.internal.q:
+com.google.ads.internal.f -> com.google.ads.a.s:
     com.google.ads.internal.c a -> a
     com.google.ads.internal.d b -> b
     com.google.ads.internal.f$a c -> c
@@ -1432,11 +1347,11 @@ com.google.ads.internal.f -> com.google.ads.internal.q:
     void run() -> run
     void b() -> b
     void a(android.content.Context,java.net.HttpURLConnection) -> a
-com.google.ads.internal.f$1 -> com.google.ads.internal.r:
+com.google.ads.internal.f$1 -> com.google.ads.a.t:
     java.net.HttpURLConnection a(java.net.URL) -> a
-com.google.ads.internal.f$a -> com.google.ads.internal.s:
+com.google.ads.internal.f$a -> com.google.ads.a.u:
     java.net.HttpURLConnection a(java.net.URL) -> a
-com.google.ads.internal.g -> com.google.ads.internal.t:
+com.google.ads.internal.g -> com.google.ads.a.v:
     java.util.LinkedList b -> b
     long c -> c
     long d -> d
@@ -1466,7 +1381,7 @@ com.google.ads.internal.g -> com.google.ads.internal.t:
     java.lang.String p() -> p
     void b(java.lang.String) -> b
     long q() -> q
-com.google.ads.internal.h -> com.google.ads.internal.u:
+com.google.ads.internal.h -> com.google.ads.a.w:
     com.google.ads.AdSize b -> b
     boolean c -> c
     com.google.ads.internal.h a -> a
@@ -1474,7 +1389,7 @@ com.google.ads.internal.h -> com.google.ads.internal.u:
     com.google.ads.internal.h a(com.google.ads.AdSize) -> a
     boolean a() -> a
     com.google.ads.AdSize b() -> b
-com.google.ads.internal.i -> com.google.ads.internal.v:
+com.google.ads.internal.i -> com.google.ads.a.x:
     com.google.ads.internal.a c -> c
     com.google.ads.internal.d a -> a
     java.util.Map d -> d
@@ -1490,19 +1405,19 @@ com.google.ads.internal.i -> com.google.ads.internal.v:
     void b(boolean) -> b
     void c(boolean) -> c
     void d(boolean) -> d
-com.google.ads.internal.j -> com.google.ads.internal.w:
+com.google.ads.internal.j -> com.google.ads.a.y:
     byte[] a -> a
     android.view.ViewGroup a(android.app.Activity,com.google.ads.internal.d) -> a
-com.google.ads.internal.j$a -> com.google.ads.internal.x:
+com.google.ads.internal.j$a -> com.google.ads.a.z:
     android.gesture.GestureStore a -> a
     android.app.Activity b -> b
     com.google.ads.internal.d c -> c
     void onGesturePerformed(android.gesture.GestureOverlayView,android.gesture.Gesture) -> onGesturePerformed
     android.app.Activity a(com.google.ads.internal.j$a) -> a
-com.google.ads.internal.j$a$1 -> com.google.ads.internal.y:
+com.google.ads.internal.j$a$1 -> com.google.ads.a.aa:
     com.google.ads.internal.j$a a -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.google.ads.internal.j$a$2 -> com.google.ads.internal.z:
+com.google.ads.internal.j$a$2 -> com.google.ads.a.ab:
     java.lang.String a -> a
     com.google.ads.internal.j$a b -> b
     void onClick(android.content.DialogInterface,int) -> onClick
@@ -1538,29 +1453,29 @@ com.google.ads.m -> com.google.ads.an:
     boolean a() -> a
     boolean b() -> b
     com.google.ads.m a(com.google.ads.Ad,java.lang.String,android.app.Activity,android.view.ViewGroup,com.google.ads.AdSize) -> a
-com.google.ads.mediation.MediationAdRequest -> com.google.ads.a.a:
+com.google.ads.mediation.MediationAdRequest -> com.google.ads.b.a:
     com.google.ads.AdRequest a -> a
     boolean b -> b
     boolean c -> c
-com.google.ads.mediation.MediationAdapter -> com.google.ads.a.b:
+com.google.ads.mediation.MediationAdapter -> com.google.ads.b.b:
     void destroy() -> a
     java.lang.Class getAdditionalParametersType() -> b
     java.lang.Class getServerParametersType() -> c
-com.google.ads.mediation.MediationBannerAdapter -> com.google.ads.a.c:
+com.google.ads.mediation.MediationBannerAdapter -> com.google.ads.b.c:
     void requestBannerAd(com.google.ads.mediation.MediationBannerListener,android.app.Activity,com.google.ads.mediation.MediationServerParameters,com.google.ads.AdSize,com.google.ads.mediation.MediationAdRequest,com.google.ads.mediation.NetworkExtras) -> a
-com.google.ads.mediation.MediationBannerListener -> com.google.ads.a.d:
-com.google.ads.mediation.MediationInterstitialAdapter -> com.google.ads.a.e:
+com.google.ads.mediation.MediationBannerListener -> com.google.ads.b.d:
+com.google.ads.mediation.MediationInterstitialAdapter -> com.google.ads.b.e:
     void requestInterstitialAd(com.google.ads.mediation.MediationInterstitialListener,android.app.Activity,com.google.ads.mediation.MediationServerParameters,com.google.ads.mediation.MediationAdRequest,com.google.ads.mediation.NetworkExtras) -> a
-com.google.ads.mediation.MediationInterstitialListener -> com.google.ads.a.f:
-com.google.ads.mediation.MediationServerParameters -> com.google.ads.a.g:
+com.google.ads.mediation.MediationInterstitialListener -> com.google.ads.b.f:
+com.google.ads.mediation.MediationServerParameters -> com.google.ads.b.g:
     void load(java.util.Map) -> a
     void a() -> a
-com.google.ads.mediation.MediationServerParameters$MappingException -> com.google.ads.a.h:
-com.google.ads.mediation.MediationServerParameters$Parameter -> com.google.ads.a.i:
+com.google.ads.mediation.MediationServerParameters$MappingException -> com.google.ads.b.h:
+com.google.ads.mediation.MediationServerParameters$Parameter -> com.google.ads.b.i:
     java.lang.String name() -> a
     boolean required() -> b
-com.google.ads.mediation.NetworkExtras -> com.google.ads.a.j:
-com.google.ads.mediation.admob.AdMobAdapterExtras -> com.google.ads.a.a.a:
+com.google.ads.mediation.NetworkExtras -> com.google.ads.b.j:
+com.google.ads.mediation.admob.AdMobAdapterExtras -> com.google.ads.b.a.a:
     boolean a -> a
     boolean b -> b
     java.util.Map c -> c
@@ -1582,7 +1497,7 @@ com.google.ads.r -> com.google.ads.as:
 com.google.ads.s -> com.google.ads.at:
     void a(com.google.ads.internal.d,java.util.HashMap,android.webkit.WebView) -> a
     java.lang.Runnable a(java.lang.String,android.webkit.WebView) -> a
-com.google.ads.searchads.SearchAdRequest -> com.google.ads.b.a:
+com.google.ads.searchads.SearchAdRequest -> com.google.ads.c.a:
     java.lang.String a -> b
     int b -> c
     int c -> d
@@ -1598,7 +1513,7 @@ com.google.ads.searchads.SearchAdRequest -> com.google.ads.b.a:
     java.lang.String m -> n
     java.util.Map getRequestMap(android.content.Context) -> a
     java.lang.String a(int) -> a
-com.google.ads.searchads.SearchAdRequest$BorderType -> com.google.ads.b.b:
+com.google.ads.searchads.SearchAdRequest$BorderType -> com.google.ads.c.b:
     com.google.ads.searchads.SearchAdRequest$BorderType NONE -> a
     com.google.ads.searchads.SearchAdRequest$BorderType DASHED -> b
     com.google.ads.searchads.SearchAdRequest$BorderType DOTTED -> c
@@ -1612,7 +1527,7 @@ com.google.ads.t -> com.google.ads.au:
     void a(com.google.ads.internal.d,java.util.HashMap,android.webkit.WebView) -> a
 com.google.ads.u -> com.google.ads.av:
     void a(com.google.ads.internal.d,java.util.HashMap,android.webkit.WebView) -> a
-com.google.ads.util.AdUtil -> com.google.ads.util.AdUtil:
+com.google.ads.util.AdUtil -> com.google.ads.d.a:
     int a -> a
     java.lang.Boolean b -> b
     java.lang.String c -> c
@@ -1655,9 +1570,9 @@ com.google.ads.util.AdUtil -> com.google.ads.util.AdUtil:
     java.lang.String a(java.util.Map) -> a
     org.json.JSONObject b(java.util.Map) -> b
     org.json.JSONArray a(java.util.Set) -> a
-com.google.ads.util.AdUtil$UserActivityReceiver -> com.google.ads.util.AdUtil$UserActivityReceiver:
+com.google.ads.util.AdUtil$UserActivityReceiver -> com.google.ads.d.b:
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
-com.google.ads.util.AdUtil$a -> com.google.ads.util.a:
+com.google.ads.util.AdUtil$a -> com.google.ads.d.c:
     com.google.ads.util.AdUtil$a a -> a
     com.google.ads.util.AdUtil$a b -> b
     com.google.ads.util.AdUtil$a c -> c
@@ -1667,7 +1582,7 @@ com.google.ads.util.AdUtil$a -> com.google.ads.util.a:
     com.google.ads.util.AdUtil$a[] g -> g
     com.google.ads.util.AdUtil$a[] values() -> values
     com.google.ads.util.AdUtil$a valueOf(java.lang.String) -> valueOf
-com.google.ads.util.a -> com.google.ads.util.b:
+com.google.ads.util.a -> com.google.ads.d.d:
     boolean a -> a
     void a(boolean,java.lang.String) -> a
     void b(boolean) -> a
@@ -1676,8 +1591,8 @@ com.google.ads.util.a -> com.google.ads.util.b:
     void a(java.lang.Object,java.lang.Object) -> a
     void a(java.lang.String) -> a
     void c(boolean,java.lang.String) -> c
-com.google.ads.util.a$a -> com.google.ads.util.c:
-com.google.ads.util.b -> com.google.ads.util.d:
+com.google.ads.util.a$a -> com.google.ads.d.e:
+com.google.ads.util.b -> com.google.ads.d.f:
     com.google.ads.util.b$b a -> a
     int b -> b
     void a(com.google.ads.util.b$a,java.lang.String) -> a
@@ -1693,7 +1608,7 @@ com.google.ads.util.b -> com.google.ads.util.d:
     void d(java.lang.String,java.lang.Throwable) -> d
     boolean a(java.lang.String,int) -> a
     boolean a(int) -> a
-com.google.ads.util.b$a -> com.google.ads.util.e:
+com.google.ads.util.b$a -> com.google.ads.d.g:
     com.google.ads.util.b$a a -> a
     com.google.ads.util.b$a b -> b
     com.google.ads.util.b$a c -> c
@@ -1703,9 +1618,9 @@ com.google.ads.util.b$a -> com.google.ads.util.e:
     com.google.ads.util.b$a[] g -> g
     com.google.ads.util.b$a[] values() -> values
     com.google.ads.util.b$a valueOf(java.lang.String) -> valueOf
-com.google.ads.util.b$b -> com.google.ads.util.f:
+com.google.ads.util.b$b -> com.google.ads.d.h:
     void a(com.google.ads.util.b$a,java.lang.String,java.lang.Throwable) -> a
-com.google.ads.util.c -> com.google.ads.util.g:
+com.google.ads.util.c -> com.google.ads.d.i:
     boolean a -> a
     byte[] a(java.lang.String) -> a
     byte[] a(byte[],int) -> a
@@ -1713,17 +1628,17 @@ com.google.ads.util.c -> com.google.ads.util.g:
     java.lang.String b(byte[],int) -> b
     byte[] c(byte[],int) -> c
     byte[] b(byte[],int,int,int) -> b
-com.google.ads.util.c$a -> com.google.ads.util.h:
+com.google.ads.util.c$a -> com.google.ads.d.j:
     byte[] a -> a
     int b -> b
-com.google.ads.util.c$b -> com.google.ads.util.i:
+com.google.ads.util.c$b -> com.google.ads.d.k:
     int[] c -> c
     int[] d -> d
     int e -> e
     int f -> f
     int[] g -> g
     boolean a(byte[],int,int,boolean) -> a
-com.google.ads.util.c$c -> com.google.ads.util.j:
+com.google.ads.util.c$c -> com.google.ads.d.l:
     byte[] h -> h
     byte[] i -> i
     byte[] j -> j
@@ -1735,7 +1650,7 @@ com.google.ads.util.c$c -> com.google.ads.util.j:
     byte[] l -> l
     boolean g -> g
     boolean a(byte[],int,int,boolean) -> a
-com.google.ads.util.d -> com.google.ads.util.k:
+com.google.ads.util.d -> com.google.ads.d.m:
     java.lang.String a -> a
     java.lang.String b -> b
     java.lang.String c -> c
@@ -1744,19 +1659,19 @@ com.google.ads.util.d -> com.google.ads.util.k:
     boolean equals(java.lang.Object) -> equals
     boolean a(java.lang.String,java.lang.String) -> a
     int hashCode() -> hashCode
-com.google.ads.util.e -> com.google.ads.util.l:
+com.google.ads.util.e -> com.google.ads.d.n:
     int a(android.content.Context,android.util.DisplayMetrics) -> a
     int b(android.content.Context,android.util.DisplayMetrics) -> b
     int a(android.content.Context,float,int) -> a
-com.google.ads.util.f -> com.google.ads.util.m:
+com.google.ads.util.f -> com.google.ads.d.o:
     java.lang.Object b() -> b
-com.google.ads.util.g -> com.google.ads.util.n:
+com.google.ads.util.g -> com.google.ads.d.p:
     void a(android.webkit.WebSettings,com.google.ads.m) -> a
     void a(android.view.View) -> a
     void a(android.view.Window) -> a
-com.google.ads.util.g$1 -> com.google.ads.util.o:
+com.google.ads.util.g$1 -> com.google.ads.d.q:
     int[] a -> a
-com.google.ads.util.g$a -> com.google.ads.util.p:
+com.google.ads.util.g$a -> com.google.ads.d.r:
     com.google.ads.m a -> a
     void onCloseWindow(android.webkit.WebView) -> onCloseWindow
     boolean onConsoleMessage(android.webkit.ConsoleMessage) -> onConsoleMessage
@@ -1770,32 +1685,32 @@ com.google.ads.util.g$a -> com.google.ads.util.p:
     boolean a(android.webkit.WebView,java.lang.String,java.lang.String,java.lang.String,android.webkit.JsResult,android.webkit.JsPromptResult,boolean) -> a
     void a(android.app.AlertDialog$Builder,java.lang.String,android.webkit.JsResult) -> a
     void a(android.app.AlertDialog$Builder,android.content.Context,java.lang.String,java.lang.String,android.webkit.JsPromptResult) -> a
-com.google.ads.util.g$a$1 -> com.google.ads.util.q:
+com.google.ads.util.g$a$1 -> com.google.ads.d.s:
     android.webkit.JsResult a -> a
     void onCancel(android.content.DialogInterface) -> onCancel
-com.google.ads.util.g$a$2 -> com.google.ads.util.r:
+com.google.ads.util.g$a$2 -> com.google.ads.d.t:
     android.webkit.JsResult a -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.google.ads.util.g$a$3 -> com.google.ads.util.s:
+com.google.ads.util.g$a$3 -> com.google.ads.d.u:
     android.webkit.JsResult a -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.google.ads.util.g$a$4 -> com.google.ads.util.t:
+com.google.ads.util.g$a$4 -> com.google.ads.d.v:
     android.webkit.JsPromptResult a -> a
     void onCancel(android.content.DialogInterface) -> onCancel
-com.google.ads.util.g$a$5 -> com.google.ads.util.u:
+com.google.ads.util.g$a$5 -> com.google.ads.d.w:
     android.webkit.JsPromptResult a -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.google.ads.util.g$a$6 -> com.google.ads.util.v:
+com.google.ads.util.g$a$6 -> com.google.ads.d.x:
     android.webkit.JsPromptResult a -> a
     android.widget.EditText b -> b
     void onClick(android.content.DialogInterface,int) -> onClick
-com.google.ads.util.g$b -> com.google.ads.util.w:
+com.google.ads.util.g$b -> com.google.ads.d.y:
     android.webkit.WebResourceResponse shouldInterceptRequest(android.webkit.WebView,java.lang.String) -> shouldInterceptRequest
     android.webkit.WebResourceResponse a(java.lang.String,android.content.Context) -> a
-com.google.ads.util.h -> com.google.ads.util.x:
-com.google.ads.util.h$a -> com.google.ads.util.y:
+com.google.ads.util.h -> com.google.ads.d.z:
+com.google.ads.util.h$a -> com.google.ads.d.aa:
     void onShowCustomView(android.view.View,int,android.webkit.WebChromeClient$CustomViewCallback) -> onShowCustomView
-com.google.ads.util.i -> com.google.ads.util.z:
+com.google.ads.util.i -> com.google.ads.d.ab:
     java.lang.Object a -> a
     int b -> b
     java.util.HashMap c -> c
@@ -1805,23 +1720,23 @@ com.google.ads.util.i -> com.google.ads.util.z:
     java.lang.String toString() -> toString
     void a(com.google.ads.util.i$a) -> a
     void a(com.google.ads.util.i,com.google.ads.util.i$a) -> a
-com.google.ads.util.i$1 -> com.google.ads.util.aa:
-com.google.ads.util.i$a -> com.google.ads.util.ab:
+com.google.ads.util.i$1 -> com.google.ads.d.ac:
+com.google.ads.util.i$a -> com.google.ads.d.ad:
     java.lang.Object a -> a
     java.lang.String b -> b
     com.google.ads.util.i c -> c
     java.lang.String toString() -> toString
-com.google.ads.util.i$b -> com.google.ads.util.ac:
+com.google.ads.util.i$b -> com.google.ads.d.ae:
     com.google.ads.util.i d -> d
     java.lang.Object a() -> a
     java.lang.String toString() -> toString
-com.google.ads.util.i$c -> com.google.ads.util.ad:
+com.google.ads.util.i$c -> com.google.ads.d.af:
     boolean e -> e
     com.google.ads.util.i d -> d
     java.lang.Object a() -> a
     void a(java.lang.Object) -> a
     java.lang.String toString() -> toString
-com.google.ads.util.i$d -> com.google.ads.util.ae:
+com.google.ads.util.i$d -> com.google.ads.d.ag:
     com.google.ads.util.i d -> d
     java.lang.Object a() -> a
     java.lang.String toString() -> toString
@@ -1867,103 +1782,6 @@ com.madhackerdesigns.neverbelate.provider.AlertsProvider -> com.madhackerdesigns
 com.madhackerdesigns.neverbelate.provider.AlertsProvider$DatabaseHelper -> com.madhackerdesigns.neverbelate.provider.c:
     void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
     void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
-com.madhackerdesigns.neverbelate.reg.CountriesDB -> com.madhackerdesigns.neverbelate.reg.a:
-    java.lang.String[] PROJECTION -> a
-    android.database.Cursor getCountries() -> a
-    android.database.Cursor getCountries(java.lang.String,java.lang.String[]) -> a
-    android.database.Cursor getCountryByCode(java.lang.String) -> a
-com.madhackerdesigns.neverbelate.reg.CountryListAdapter -> com.madhackerdesigns.neverbelate.reg.b:
-    android.content.Context mContext -> a
-    void bindView(android.view.View,android.content.Context,android.database.Cursor) -> bindView
-    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
-com.madhackerdesigns.neverbelate.reg.CountryListAdapter$ViewHolder -> com.madhackerdesigns.neverbelate.reg.c:
-    android.widget.TextView name -> a
-com.madhackerdesigns.neverbelate.reg.GeoCodeResult -> com.madhackerdesigns.neverbelate.reg.d:
-    java.lang.String countryCode -> a
-    java.lang.String zipCode -> b
-    java.lang.String getCountryCode() -> a
-    void setCountryCode(java.lang.String) -> a
-    java.lang.String getZipCode() -> b
-    void setZipCode(java.lang.String) -> b
-    java.lang.String toString() -> toString
-com.madhackerdesigns.neverbelate.reg.GeoCoder -> com.madhackerdesigns.neverbelate.reg.e:
-    com.madhackerdesigns.neverbelate.reg.GeoCodeResult reverseGeoCode(double,double) -> a
-    com.madhackerdesigns.neverbelate.reg.GeoCodeResult parseJsonResponse(java.lang.String) -> a
-com.madhackerdesigns.neverbelate.reg.Registration -> com.madhackerdesigns.neverbelate.reg.f:
-    android.content.SharedPreferences mSettings -> a
-    void clearStoredRegistration() -> a
-    boolean setCountryCode(java.lang.String) -> a
-    boolean setEmail(java.lang.String) -> b
-    boolean setFirstName(java.lang.String) -> c
-    long getLastChallenge() -> b
-    boolean setLastChallenge(long) -> a
-    boolean setLastName(java.lang.String) -> d
-    boolean isRegistered() -> c
-    boolean setRegistered(boolean) -> a
-    boolean setZipCode(java.lang.String) -> e
-com.madhackerdesigns.neverbelate.reg.RegistrationForm -> com.madhackerdesigns.neverbelate.reg.RegistrationForm:
-    android.widget.Button mBtnCountry -> b
-    java.lang.String mCountryCode -> c
-    android.database.Cursor mCountryCursor -> d
-    com.madhackerdesigns.neverbelate.reg.CountriesDB mDB -> e
-    com.madhackerdesigns.neverbelate.reg.Registration mRegistration -> f
-    java.util.regex.Pattern EMAIL_PATTERN -> a
-    android.net.Uri WESBITE_URI -> g
-    void onCreate(android.os.Bundle) -> onCreate
-    void bypassRegistration() -> b
-    void registerUser() -> c
-    android.app.Dialog onCreateDialog(int) -> onCreateDialog
-    void setCountryCode(java.lang.String) -> a
-    boolean isEmpty(java.lang.String) -> b
-    void access$0(com.madhackerdesigns.neverbelate.reg.RegistrationForm,java.lang.String) -> a
-    android.net.Uri access$1() -> a
-    void access$2(com.madhackerdesigns.neverbelate.reg.RegistrationForm) -> a
-    android.database.Cursor access$3(com.madhackerdesigns.neverbelate.reg.RegistrationForm) -> b
-    void access$4(com.madhackerdesigns.neverbelate.reg.RegistrationForm) -> c
-com.madhackerdesigns.neverbelate.reg.RegistrationForm$1 -> com.madhackerdesigns.neverbelate.reg.g:
-    com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
-    void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.reg.RegistrationForm$2 -> com.madhackerdesigns.neverbelate.reg.h:
-    com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
-    void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.reg.RegistrationForm$3 -> com.madhackerdesigns.neverbelate.reg.i:
-    com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
-    void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.reg.RegistrationForm$4 -> com.madhackerdesigns.neverbelate.reg.j:
-    com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
-    void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.reg.RegistrationForm$5 -> com.madhackerdesigns.neverbelate.reg.k:
-    com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
-    void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.reg.RegistrationForm$6 -> com.madhackerdesigns.neverbelate.reg.l:
-    com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
-    void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.reg.RegistrationForm$7 -> com.madhackerdesigns.neverbelate.reg.m:
-    com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
-    void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.reg.RegistrationForm$8 -> com.madhackerdesigns.neverbelate.reg.n:
-    com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
-    void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.reg.RegistrationForm$9 -> com.madhackerdesigns.neverbelate.reg.o:
-    com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
-    void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.reg.RegistrationForm$NameResult -> com.madhackerdesigns.neverbelate.reg.p:
-    java.lang.String displayName -> a
-    java.lang.String givenName -> b
-    java.lang.String familyName -> c
-    com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> d
-com.madhackerdesigns.neverbelate.reg.RegistrationForm$PrepopNames -> com.madhackerdesigns.neverbelate.reg.q:
-    com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
-    com.madhackerdesigns.neverbelate.reg.RegistrationForm$NameResult doInBackground(java.lang.String[]) -> a
-    void onPostExecute(com.madhackerdesigns.neverbelate.reg.RegistrationForm$NameResult) -> a
-    void onPostExecute(java.lang.Object) -> onPostExecute
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-com.madhackerdesigns.neverbelate.reg.RegistrationForm$PrepopZipCodeTask -> com.madhackerdesigns.neverbelate.reg.r:
-    com.madhackerdesigns.neverbelate.reg.RegistrationForm this$0 -> a
-    com.madhackerdesigns.neverbelate.reg.GeoCodeResult doInBackground(java.lang.Object[]) -> a
-    void onPostExecute(com.madhackerdesigns.neverbelate.reg.GeoCodeResult) -> a
-    void onPostExecute(java.lang.Object) -> onPostExecute
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
 com.madhackerdesigns.neverbelate.service.CalendarHelper -> com.madhackerdesigns.neverbelate.service.a:
     java.lang.String getEventLocationColumn() -> a
     java.lang.String getHasAlarmColumn() -> b
@@ -1983,8 +1801,6 @@ com.madhackerdesigns.neverbelate.service.CalendarHelperICS -> com.madhackerdesig
     java.lang.String getHasAlarmColumn() -> b
     android.net.Uri getInstancesUri() -> c
     java.lang.String[] getInstancesProjection() -> d
-com.madhackerdesigns.neverbelate.service.LocationReceiver -> com.madhackerdesigns.neverbelate.service.LocationReceiver:
-    void onReceive(android.content.Context,android.content.Intent) -> onReceive
 com.madhackerdesigns.neverbelate.service.NeverBeLateService -> com.madhackerdesigns.neverbelate.service.NeverBeLateService:
     long[] VIBRATE_PATTERN -> a
     android.content.ContentResolver mContentResolver -> b
@@ -2069,10 +1885,6 @@ com.madhackerdesigns.neverbelate.settings.PrivacyPreference -> com.madhackerdesi
     android.net.Uri WESBITE_URI -> a
     android.content.Context mContext -> b
     void onClick() -> onClick
-com.madhackerdesigns.neverbelate.settings.WebsitePreference -> com.madhackerdesigns.neverbelate.settings.WebsitePreference:
-    android.net.Uri WESBITE_URI -> a
-    android.content.Context mContext -> b
-    void onClick() -> onClick
 com.madhackerdesigns.neverbelate.ui.CreateNewEvent -> com.madhackerdesigns.neverbelate.ui.CreateNewEvent:
     void onCreate(android.os.Bundle) -> onCreate
 com.madhackerdesigns.neverbelate.ui.EdgeScrollView -> com.madhackerdesigns.neverbelate.ui.EdgeScrollView:
@@ -2153,40 +1965,34 @@ com.madhackerdesigns.neverbelate.ui.QuickTourActivity$1 -> com.madhackerdesigns.
 com.madhackerdesigns.neverbelate.ui.QuickTourActivity$MyAdapter -> com.madhackerdesigns.neverbelate.ui.l:
     int getCount() -> b
     android.support.v4.app.Fragment getItem(int) -> a
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment -> com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment:
-    int mPosition -> e
-    com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> a
-    android.widget.TextView mSummaryText -> b
-    java.lang.String mSummaryOff -> c
-    java.lang.String mSummaryOn -> d
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment -> com.madhackerdesigns.neverbelate.ui.m:
+    int mPosition -> R
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper mPrefs -> N
+    android.widget.TextView mSummaryText -> O
+    java.lang.String mSummaryOff -> P
+    java.lang.String mSummaryOn -> Q
     com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment newInstance(int) -> b
-    void onCreate(android.os.Bundle) -> a
+    void onCreate(android.os.Bundle) -> c
     android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
     void inflateMarkedEventsPref(android.view.ViewGroup) -> a
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$1 -> com.madhackerdesigns.neverbelate.ui.m:
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$1 -> com.madhackerdesigns.neverbelate.ui.n:
     com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$2 -> com.madhackerdesigns.neverbelate.ui.n:
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$2 -> com.madhackerdesigns.neverbelate.ui.o:
     com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment this$1 -> a
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$3 -> com.madhackerdesigns.neverbelate.ui.o:
+com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment$3 -> com.madhackerdesigns.neverbelate.ui.p:
     com.madhackerdesigns.neverbelate.ui.QuickTourActivity$PageFragment this$1 -> a
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
 com.madhackerdesigns.neverbelate.ui.TestActivity -> com.madhackerdesigns.neverbelate.ui.TestActivity:
     void onCreate(android.os.Bundle) -> onCreate
-com.madhackerdesigns.neverbelate.ui.TestActivity$1 -> com.madhackerdesigns.neverbelate.ui.p:
+com.madhackerdesigns.neverbelate.ui.TestActivity$1 -> com.madhackerdesigns.neverbelate.ui.q:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$2 -> com.madhackerdesigns.neverbelate.ui.q:
+com.madhackerdesigns.neverbelate.ui.TestActivity$2 -> com.madhackerdesigns.neverbelate.ui.r:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$3 -> com.madhackerdesigns.neverbelate.ui.r:
-    com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
-    void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$4 -> com.madhackerdesigns.neverbelate.ui.s:
-    com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
-    void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.TestActivity$5 -> com.madhackerdesigns.neverbelate.ui.t:
+com.madhackerdesigns.neverbelate.ui.TestActivity$3 -> com.madhackerdesigns.neverbelate.ui.s:
     com.madhackerdesigns.neverbelate.ui.TestActivity this$0 -> a
     void onClick(android.view.View) -> onClick
 com.madhackerdesigns.neverbelate.ui.UserLocationOverlay -> com.madhackerdesigns.neverbelate.ui.UserLocationOverlay:
@@ -2195,7 +2001,7 @@ com.madhackerdesigns.neverbelate.ui.UserLocationOverlay -> com.madhackerdesigns.
     void onLocationChanged(android.location.Location) -> onLocationChanged
     boolean onTap(com.google.android.maps.GeoPoint,com.google.android.maps.MapView) -> onTap
     void setOnLocationChangedListener(com.madhackerdesigns.neverbelate.ui.UserLocationOverlay$OnLocationChangedListener) -> a
-com.madhackerdesigns.neverbelate.ui.UserLocationOverlay$OnLocationChangedListener -> com.madhackerdesigns.neverbelate.ui.u:
+com.madhackerdesigns.neverbelate.ui.UserLocationOverlay$OnLocationChangedListener -> com.madhackerdesigns.neverbelate.ui.t:
     void onLocationChanged(android.location.Location) -> a
 com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverbelate.ui.WarningDialog:
     android.net.Uri APP_DETAILS_URI -> a
@@ -2230,8 +2036,8 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverb
     boolean isRouteDisplayed() -> isRouteDisplayed
     void access$0(com.madhackerdesigns.neverbelate.ui.WarningDialog,android.database.Cursor) -> a
     java.util.ArrayList access$1(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> a
-    void access$2(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> b
-    com.madhackerdesigns.neverbelate.settings.PreferenceHelper access$3(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> c
+    com.madhackerdesigns.neverbelate.settings.PreferenceHelper access$2(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> b
+    void access$3(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> c
     void access$4(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> d
     void access$5(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> e
     void access$6(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> f
@@ -2243,49 +2049,49 @@ com.madhackerdesigns.neverbelate.ui.WarningDialog -> com.madhackerdesigns.neverb
     com.google.android.maps.GeoPoint access$12(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> k
     java.util.List access$13(com.madhackerdesigns.neverbelate.ui.WarningDialog) -> l
     android.net.Uri access$14() -> a
-com.madhackerdesigns.neverbelate.ui.WarningDialog$1 -> com.madhackerdesigns.neverbelate.ui.v:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$1 -> com.madhackerdesigns.neverbelate.ui.u:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$2 -> com.madhackerdesigns.neverbelate.ui.w:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$2 -> com.madhackerdesigns.neverbelate.ui.v:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$3 -> com.madhackerdesigns.neverbelate.ui.x:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$3 -> com.madhackerdesigns.neverbelate.ui.w:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$4 -> com.madhackerdesigns.neverbelate.ui.y:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$4 -> com.madhackerdesigns.neverbelate.ui.x:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onLocationChanged(android.location.Location) -> a
-com.madhackerdesigns.neverbelate.ui.WarningDialog$5 -> com.madhackerdesigns.neverbelate.ui.z:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$5 -> com.madhackerdesigns.neverbelate.ui.y:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$6 -> com.madhackerdesigns.neverbelate.ui.aa:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$6 -> com.madhackerdesigns.neverbelate.ui.z:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$7 -> com.madhackerdesigns.neverbelate.ui.ab:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$7 -> com.madhackerdesigns.neverbelate.ui.aa:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler -> com.madhackerdesigns.neverbelate.ui.ac:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler -> com.madhackerdesigns.neverbelate.ui.ab:
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> a
     void onQueryComplete(int,java.lang.Object,android.database.Cursor) -> onQueryComplete
     com.madhackerdesigns.neverbelate.ui.WarningDialog access$0(com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler) -> a
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$1 -> com.madhackerdesigns.neverbelate.ui.ad:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$1 -> com.madhackerdesigns.neverbelate.ui.ac:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$2 -> com.madhackerdesigns.neverbelate.ui.ae:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$2 -> com.madhackerdesigns.neverbelate.ui.ad:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$3 -> com.madhackerdesigns.neverbelate.ui.af:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$3 -> com.madhackerdesigns.neverbelate.ui.ae:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$4 -> com.madhackerdesigns.neverbelate.ui.ag:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler$4 -> com.madhackerdesigns.neverbelate.ui.af:
     com.madhackerdesigns.neverbelate.ui.WarningDialog$AlertQueryHandler this$1 -> a
     void onClick(android.view.View) -> onClick
-com.madhackerdesigns.neverbelate.ui.WarningDialog$EventHolder -> com.madhackerdesigns.neverbelate.ui.ah:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$EventHolder -> com.madhackerdesigns.neverbelate.ui.ag:
     java.lang.String json -> a
     java.lang.String title -> b
     java.lang.String location -> c
     com.madhackerdesigns.neverbelate.ui.WarningDialog this$0 -> d
-com.madhackerdesigns.neverbelate.ui.WarningDialog$MapBounds -> com.madhackerdesigns.neverbelate.ui.ai:
+com.madhackerdesigns.neverbelate.ui.WarningDialog$MapBounds -> com.madhackerdesigns.neverbelate.ui.ah:
     int mLatMinE6 -> b
     int mLatMaxE6 -> c
     int mLonMinE6 -> d
@@ -2313,32 +2119,6 @@ com.madhackerdesigns.neverbelate.util.Logger -> com.madhackerdesigns.neverbelate
     int d(java.lang.String) -> a
     int d(java.lang.String,java.lang.String) -> a
     int v(java.lang.String,java.lang.String) -> b
-com.readystatesoftware.sqliteasset.SQLiteAssetException -> com.a.a.a:
-com.readystatesoftware.sqliteasset.SQLiteAssetHelper -> com.a.a.b:
-    java.lang.String TAG -> a
-    android.content.Context mContext -> b
-    java.lang.String mName -> c
-    android.database.sqlite.SQLiteDatabase$CursorFactory mFactory -> d
-    int mNewVersion -> e
-    android.database.sqlite.SQLiteDatabase mDatabase -> f
-    boolean mIsInitializing -> g
-    java.lang.String mDatabasePath -> h
-    java.lang.String mArchivePath -> i
-    java.lang.String mUpgradePathFormat -> j
-    int mForcedUpgradeVersion -> k
-    android.database.sqlite.SQLiteDatabase getWritableDatabase() -> getWritableDatabase
-    android.database.sqlite.SQLiteDatabase getReadableDatabase() -> getReadableDatabase
-    void close() -> close
-    void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
-    void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
-    android.database.sqlite.SQLiteDatabase createOrOpenDatabase(boolean) -> a
-    android.database.sqlite.SQLiteDatabase returnDatabase() -> a
-    void copyDatabaseFromAssets() -> b
-    java.io.InputStream getUpgradeSQLStream(int,int) -> a
-    void getUpgradeFilePaths(int,int,int,java.util.ArrayList) -> a
-    void writeExtractedFileToDisk(java.util.zip.ZipInputStream,java.io.OutputStream) -> a
-    java.util.zip.ZipInputStream getFileFromZip(java.io.InputStream) -> a
-    java.lang.String convertStreamToString(java.io.InputStream) -> b
 com.viewpagerindicator.CirclePageIndicator -> com.viewpagerindicator.CirclePageIndicator:
     float mRadius -> a
     android.graphics.Paint mPaintPageFill -> b
@@ -2360,17 +2140,22 @@ com.viewpagerindicator.CirclePageIndicator -> com.viewpagerindicator.CirclePageI
     boolean mIsDragging -> r
     void setCentered(boolean) -> setCentered
     void setPageColor(int) -> setPageColor
+    int getPageColor() -> getPageColor
     void setFillColor(int) -> setFillColor
+    int getFillColor() -> getFillColor
     void setOrientation(int) -> setOrientation
+    int getOrientation() -> getOrientation
     void setStrokeColor(int) -> setStrokeColor
+    int getStrokeColor() -> getStrokeColor
     void setStrokeWidth(float) -> setStrokeWidth
+    float getStrokeWidth() -> getStrokeWidth
     void setRadius(float) -> setRadius
+    float getRadius() -> getRadius
     void setSnap(boolean) -> setSnap
     void onDraw(android.graphics.Canvas) -> onDraw
     boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
     void setViewPager(android.support.v4.view.ViewPager) -> setViewPager
     void updatePageSize() -> a
-    void setViewPager(android.support.v4.view.ViewPager,int) -> setViewPager
     void setCurrentItem(int) -> setCurrentItem
     void onPageScrollStateChanged(int) -> b
     void onPageScrolled(int,float,int) -> a
@@ -2575,14 +2360,9 @@ com.viewpagerindicator.TabPageIndicator -> com.viewpagerindicator.TabPageIndicat
     void onPageSelected(int) -> a
     void setViewPager(android.support.v4.view.ViewPager) -> setViewPager
     void notifyDataSetChanged() -> a
-    void setViewPager(android.support.v4.view.ViewPager,int) -> setViewPager
     void setCurrentItem(int) -> setCurrentItem
     void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener) -> setOnPageChangeListener
-    android.support.v4.view.ViewPager access$0(com.viewpagerindicator.TabPageIndicator) -> a
-com.viewpagerindicator.TabPageIndicator$1 -> com.viewpagerindicator.l:
-    com.viewpagerindicator.TabPageIndicator this$0 -> a
-    void onClick(android.view.View) -> onClick
-com.viewpagerindicator.TabPageIndicator$2 -> com.viewpagerindicator.m:
+com.viewpagerindicator.TabPageIndicator$2 -> com.viewpagerindicator.l:
     com.viewpagerindicator.TabPageIndicator this$0 -> a
     android.view.View val$tabView -> b
     void run() -> run
@@ -2591,7 +2371,7 @@ com.viewpagerindicator.TabPageIndicator$TabView -> com.viewpagerindicator.TabPag
     int mIndex -> b
     void init(com.viewpagerindicator.TabPageIndicator,java.lang.String,int) -> a
     void onMeasure(int,int) -> onMeasure
-    int getIndex() -> a
+    int getIndex() -> getIndex
 com.viewpagerindicator.TitlePageIndicator -> com.viewpagerindicator.TitlePageIndicator:
     android.support.v4.view.ViewPager mViewPager -> a
     android.support.v4.view.ViewPager$OnPageChangeListener mListener -> b
@@ -2620,19 +2400,31 @@ com.viewpagerindicator.TitlePageIndicator -> com.viewpagerindicator.TitlePageInd
     boolean mIsDragging -> y
     com.viewpagerindicator.TitlePageIndicator$OnCenterItemClickListener mCenterItemClickListener -> z
     int[] $SWITCH_TABLE$com$viewpagerindicator$TitlePageIndicator$IndicatorStyle -> A
+    int getFooterColor() -> getFooterColor
     void setFooterColor(int) -> setFooterColor
+    float getFooterLineHeight() -> getFooterLineHeight
     void setFooterLineHeight(float) -> setFooterLineHeight
+    float getFooterIndicatorHeight() -> getFooterIndicatorHeight
     void setFooterIndicatorHeight(float) -> setFooterIndicatorHeight
+    float getFooterIndicatorPadding() -> getFooterIndicatorPadding
     void setFooterIndicatorPadding(float) -> setFooterIndicatorPadding
+    com.viewpagerindicator.TitlePageIndicator$IndicatorStyle getFooterIndicatorStyle() -> getFooterIndicatorStyle
     void setFooterIndicatorStyle(com.viewpagerindicator.TitlePageIndicator$IndicatorStyle) -> setFooterIndicatorStyle
+    int getSelectedColor() -> getSelectedColor
     void setSelectedColor(int) -> setSelectedColor
     void setSelectedBold(boolean) -> setSelectedBold
+    int getTextColor() -> getTextColor
     void setTextColor(int) -> setTextColor
+    float getTextSize() -> getTextSize
     void setTextSize(float) -> setTextSize
+    float getTitlePadding() -> getTitlePadding
     void setTitlePadding(float) -> setTitlePadding
+    float getTopPadding() -> getTopPadding
     void setTopPadding(float) -> setTopPadding
+    float getClipPadding() -> getClipPadding
     void setClipPadding(float) -> setClipPadding
     void setTypeface(android.graphics.Typeface) -> setTypeface
+    android.graphics.Typeface getTypeface() -> getTypeface
     void onDraw(android.graphics.Canvas) -> onDraw
     boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
     void clipViewOnTheRight(android.graphics.RectF,float,int) -> a
@@ -2640,7 +2432,6 @@ com.viewpagerindicator.TitlePageIndicator -> com.viewpagerindicator.TitlePageInd
     java.util.ArrayList calculateAllBounds(android.graphics.Paint) -> a
     android.graphics.RectF calcBounds(int,android.graphics.Paint) -> a
     void setViewPager(android.support.v4.view.ViewPager) -> setViewPager
-    void setViewPager(android.support.v4.view.ViewPager,int) -> setViewPager
     void setOnCenterItemClickListener(com.viewpagerindicator.TitlePageIndicator$OnCenterItemClickListener) -> setOnCenterItemClickListener
     void setCurrentItem(int) -> setCurrentItem
     void onPageScrollStateChanged(int) -> b
@@ -2651,90 +2442,24 @@ com.viewpagerindicator.TitlePageIndicator -> com.viewpagerindicator.TitlePageInd
     void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
     android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
     int[] $SWITCH_TABLE$com$viewpagerindicator$TitlePageIndicator$IndicatorStyle() -> a
-com.viewpagerindicator.TitlePageIndicator$IndicatorStyle -> com.viewpagerindicator.n:
+com.viewpagerindicator.TitlePageIndicator$IndicatorStyle -> com.viewpagerindicator.m:
     com.viewpagerindicator.TitlePageIndicator$IndicatorStyle None -> a
     com.viewpagerindicator.TitlePageIndicator$IndicatorStyle Triangle -> b
     com.viewpagerindicator.TitlePageIndicator$IndicatorStyle Underline -> c
     int value -> d
     com.viewpagerindicator.TitlePageIndicator$IndicatorStyle[] ENUM$VALUES -> e
-    com.viewpagerindicator.TitlePageIndicator$IndicatorStyle fromValue(int) -> a
     com.viewpagerindicator.TitlePageIndicator$IndicatorStyle[] values() -> values
     com.viewpagerindicator.TitlePageIndicator$IndicatorStyle valueOf(java.lang.String) -> valueOf
-com.viewpagerindicator.TitlePageIndicator$OnCenterItemClickListener -> com.viewpagerindicator.o:
+com.viewpagerindicator.TitlePageIndicator$OnCenterItemClickListener -> com.viewpagerindicator.n:
     void onCenterItemClick(int) -> a
 com.viewpagerindicator.TitlePageIndicator$SavedState -> com.viewpagerindicator.TitlePageIndicator$SavedState:
     int currentPage -> a
     android.os.Parcelable$Creator CREATOR -> CREATOR
     void writeToParcel(android.os.Parcel,int) -> writeToParcel
-com.viewpagerindicator.TitlePageIndicator$SavedState$1 -> com.viewpagerindicator.p:
+com.viewpagerindicator.TitlePageIndicator$SavedState$1 -> com.viewpagerindicator.o:
     com.viewpagerindicator.TitlePageIndicator$SavedState createFromParcel(android.os.Parcel) -> a
     com.viewpagerindicator.TitlePageIndicator$SavedState[] newArray(int) -> a
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
     java.lang.Object[] newArray(int) -> newArray
-com.viewpagerindicator.TitleProvider -> com.viewpagerindicator.q:
+com.viewpagerindicator.TitleProvider -> com.viewpagerindicator.p:
     java.lang.String getTitle(int) -> a
-org.xmlrpc.android.Base64Coder -> a.a.a.a:
-    char[] map1 -> a
-    byte[] map2 -> b
-    char[] encode(byte[]) -> a
-    char[] encode(byte[],int) -> a
-    byte[] decode(java.lang.String) -> a
-    byte[] decode(char[]) -> a
-org.xmlrpc.android.IXMLRPCSerializer -> a.a.a.b:
-    void serialize(org.xmlpull.v1.XmlSerializer,java.lang.Object) -> a
-    java.lang.Object deserialize(org.xmlpull.v1.XmlPullParser) -> a
-org.xmlrpc.android.XMLRPCClient -> a.a.a.c:
-    org.apache.http.client.HttpClient client -> c
-    org.apache.http.client.methods.HttpPost postMethod -> d
-    org.apache.http.params.HttpParams httpParams -> e
-    java.lang.Object callEx(java.lang.String,java.lang.Object[]) -> a
-    java.lang.String methodCall(java.lang.String,java.lang.Object[]) -> b
-org.xmlrpc.android.XMLRPCCommon -> a.a.a.d:
-    org.xmlpull.v1.XmlSerializer serializer -> a
-    org.xmlrpc.android.IXMLRPCSerializer iXMLRPCSerializer -> b
-    void serializeParams(java.lang.Object[]) -> a
-org.xmlrpc.android.XMLRPCException -> a.a.a.e:
-org.xmlrpc.android.XMLRPCFault -> a.a.a.f:
-    java.lang.String faultString -> a
-    int faultCode -> b
-org.xmlrpc.android.XMLRPCSerializable -> a.a.a.g:
-    java.lang.Object getSerializable() -> a
-org.xmlrpc.android.XMLRPCSerializer -> a.a.a.h:
-    java.text.SimpleDateFormat dateFormat -> a
-    void serialize(org.xmlpull.v1.XmlSerializer,java.lang.Object) -> a
-    java.lang.Object deserialize(org.xmlpull.v1.XmlPullParser) -> a
-rsg.mailchimp.api.Constants -> rsg.mailchimp.a.a:
-    java.text.SimpleDateFormat TIME_FMT -> a
-rsg.mailchimp.api.Constants$EmailType -> rsg.mailchimp.a.b:
-    rsg.mailchimp.api.Constants$EmailType html -> a
-    rsg.mailchimp.api.Constants$EmailType text -> b
-    rsg.mailchimp.api.Constants$EmailType mobile -> c
-    rsg.mailchimp.api.Constants$EmailType[] ENUM$VALUES -> d
-    rsg.mailchimp.api.Constants$EmailType[] values() -> values
-    rsg.mailchimp.api.Constants$EmailType valueOf(java.lang.String) -> valueOf
-rsg.mailchimp.api.MailChimpApi -> rsg.mailchimp.a.c:
-    java.text.MessageFormat API_URL -> b
-    java.lang.String apiKey -> a
-    java.lang.String endpointUrl -> c
-    rsg.mailchimp.api.MailChimpApiException buildMailChimpException(org.xmlrpc.android.XMLRPCException) -> a
-    java.lang.Object callMethod(java.lang.String,java.lang.Object[]) -> a
-    org.xmlrpc.android.XMLRPCClient getClient() -> a
-    java.lang.String parseDataCenter(java.lang.String) -> a
-rsg.mailchimp.api.MailChimpApiException -> rsg.mailchimp.a.d:
-rsg.mailchimp.api.lists.ListMethods -> rsg.mailchimp.a.a.a:
-    boolean listSubscribe(java.lang.String,java.lang.String,rsg.mailchimp.api.lists.MergeFieldListUtil) -> a
-    boolean listSubscribe(java.lang.String,java.lang.String,rsg.mailchimp.api.lists.MergeFieldListUtil,rsg.mailchimp.api.Constants$EmailType,java.lang.Boolean,java.lang.Boolean,java.lang.Boolean,java.lang.Boolean) -> a
-rsg.mailchimp.api.lists.MergeFieldListUtil -> rsg.mailchimp.a.a.b:
-    void addDateField(java.lang.String,java.util.Date) -> a
-    void addField(java.lang.String,java.lang.Object) -> a
-    java.lang.Object getSerializable() -> a
-    void addEmail(java.lang.String) -> a
-rsg.mailchimp.gui.Subscribe -> rsg.mailchimp.gui.Subscribe:
-    void onCreate(android.os.Bundle) -> onCreate
-    void onClick(android.view.View) -> onClick
-    void addToList(java.lang.String,android.app.ProgressDialog) -> a
-    void access$0(rsg.mailchimp.gui.Subscribe,java.lang.String,android.app.ProgressDialog) -> a
-rsg.mailchimp.gui.Subscribe$1 -> rsg.mailchimp.gui.a:
-    rsg.mailchimp.gui.Subscribe this$0 -> a
-    android.app.ProgressDialog val$dialog -> b
-    void run() -> run

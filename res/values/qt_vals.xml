@@ -6,7 +6,7 @@
         and eliminating lateness in your professional and personal life.\n\nThis quick tour is simple 
         to use: swipe left and right to move between pages, and swipe up and down to scroll.\n\nNow swipe 
         to the next page to get started!</string>
-    <string name="qt_skip_tour">... or skip the tour.</string>
+    <string name="qt_skip_tour">&#8230; or skip the tour.</string>
     
     <string name="qt_enable_header">Enabling NeverBeLate</string>
     <string name="qt_enable_message_1">Turning on the NeverBeLate Advance Warning system is simple. On the main
@@ -55,7 +55,7 @@
     
     <string name="qt_final_header">Just the Beginning</string>
     <string name="qt_final_message_1">These few steps cover just the basics of putting NeverBeLate to work for 
-        you. I challenge you to explore the settings menu to discover new ways to adjust the performance of 
+        you. Explore the settings menu to discover new ways to adjust the performance of 
         NeverBeLate to fit your lifestyle and travel needs. You can adjust the travel method, the early arrival 
         time, and your preferred notification method, just to name a few.</string>
     <string name="qt_final_message_2">A good productivity app should help you get more done with less effort. 
